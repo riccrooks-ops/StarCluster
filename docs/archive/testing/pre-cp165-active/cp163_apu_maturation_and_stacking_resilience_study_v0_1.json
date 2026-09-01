@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "star-cluster-cp163-apu-maturation-stacking-resilience-v0.1",
+  "checkpoint": 163,
+  "acceptedBaselineCheckpoint": 162,
+  "pendingFinalizationBaselineId": "CP160-PF4",
+  "matrixPath": "docs/design/player_technology/technology_research_execution_baseline_pending_finalization_v0_4.json",
+  "masterSeed": 16320260830,
+  "jobsDefault": 24,
+  "researchQuestion": "With the Main Reactor fixed at 6 Space and centered on PF4 -1/PF4/PF4 +1, when should the 2-Space Auxiliary Power Unit mature from +1 to +2 Operational TP, is a late +3 TP step viable, and does unrestricted APU stacking remain self-limiting in both power economics and distributed-power resilience?",
+  "namingPolicy": {
+    "userFacingName": "Auxiliary Power Unit",
+    "abbreviation": "APU",
+    "cp162LegacyResearchName": "Auxiliary Reactor",
+    "legacyCoreOnlyApuCatalogEntryFrozen": true,
+    "authorityNamingReconciliationDeferred": true
+  },
+  "mainReactorSpace": 6,
+  "mainReactorOffsetsFromPf4": [-1, 0, 1],
+  "apuSpace": 2,
+  "apuAvailability": "TL1+",
+  "apuTrajectories": [
+    {"id": "APU_FLAT_1", "label": "Flat +1", "operationalTpByTl": [1,1,1,1,1,1,1,1,1]},
+    {"id": "APU_MATURE_TL5", "label": "Mature at TL5", "operationalTpByTl": [1,1,1,1,2,2,2,2,2]},
+    {"id": "APU_MATURE_TL6", "label": "Mature at TL6", "operationalTpByTl": [1,1,1,1,1,2,2,2,2]},
+    {"id": "APU_MATURE_TL7", "label": "Mature at TL7", "operationalTpByTl": [1,1,1,1,1,1,2,2,2]},
+    {"id": "APU_MATURE_TL8", "label": "Mature at TL8", "operationalTpByTl": [1,1,1,1,1,1,1,2,2]}
+  ],
+  "latePlus3BoundaryProbes": [
+    {"tl": 8, "apuTp": 3},
+    {"tl": 9, "apuTp": 3}
+  ],
+  "stackingPolicy": {
+    "installationCountCapImposed": false,
+    "screenEveryLegalCountStatic": true,
+    "stochasticAndCombatTiers": [1,2,3,"MAX"],
+    "purpose": "Keep unrestricted stacking legal during calibration. A count cap may be recommended only if the fixed 2-Space economics or distributed-power resilience create an exploit."
+  },
+  "resiliencePolicy": {
+    "apuFlexibleTpWhenDegraded": 0,
+    "singleUnitFailureIsIndependent": true,
+    "fullIntegratedComponentDamageExecutionDeferred": true,
+    "purpose": "Measure deterministic retained-power consequences of losing one or more independent APU units without inventing new higher-TL degraded-output mechanics before the Operational trajectory is selected."
+  },
+  "stochasticDoctrines": ["OFFENSE", "EW_CONTEST", "MISSILE_DEFENSE", "DAMAGE_CRISIS", "PURSUIT_BURST", "MIXED"],
+  "stochasticTurnSamplesPerVariant": 5000,
+  "combatTrialsPerCell": 2000,
+  "combatWeaponFamilies": ["K", "E", "M"],
+  "combatComparison": "Matched legal one-Main-Reactor carrier with N 2-Space APUs versus the identical carrier with zero APUs, mirrored. Only candidate Operational APU TP differs in the research combat kernel; remaining Space is mission/noncombat capacity.",
+  "interpretationPolicy": {
+    "automaticPromotion": false,
+    "productionAuthorityChanged": false,
+    "conceptChanged": false,
+    "tuningAllowed": false,
+    "noTargetWinRate": true,
+    "noUniversalUtilizationTarget": true,
+    "balanceMeansDistinctViableChoices": true,
+    "mainReactorSixSpaceFrozenForThisPass": true,
+    "apuTwoSpaceFrozenForThisPass": true,
+    "mainReactorLocalOffsetsRetained": true,
+    "unrestrictedApuStackingMustRemainExplicitlyScreened": true,
+    "countCapMayBeRecommendedOnlyIfEconomicsOrResilienceFailToBoundStacking": true,
+    "apuMustRemainGranularSupplementNotMainReactorReplacement": true,
+    "maturationTimingMustBeEvidenceDriven": true,
+    "playerBaseCruiserAndBroadLegalEnvelopeBothRetained": true
+  },
+  "expectedStudyProducts": [
+    "APU trajectory ledger for flat +1 and TL5/TL6/TL7/TL8 +2 maturation",
+    "sparse 2-Space/+3 TP late boundary probes at TL8 and TL9",
+    "PF4-1/PF4/PF4+1 interaction surfaces at fixed 6-Space Main Reactor",
+    "exact legal unrestricted APU stack support at fixed 2-Space footprint",
+    "player-base-cruiser APU fit limits by TL",
+    "deterministic independent-unit failure/resilience surface",
+    "stochastic doctrine response for 1/2/3/MAX APU stacks",
+    "matched full-map combat response for the unique TL-local APU outputs",
+    "trajectory-level stochastic and combat summaries without automatic promotion"
+  ]
+}

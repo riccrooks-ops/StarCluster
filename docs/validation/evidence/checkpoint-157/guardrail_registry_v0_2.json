@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "star-cluster-balance-research-guardrails-v0.2",
+  "checkpoint": 157,
+  "principles": [
+    {
+      "id": "BALANCE_NOT_EQUALITY",
+      "rule": "Balance means diverse strategically viable competitive choices, not numerical equality. Temporary leadership and TL/context swings are allowed; persistent dominance/obsolescence are failures."
+    },
+    {
+      "id": "NO_GLOBAL_PDS_50",
+      "rule": "Never optimize K-PDS, E-PDS and AMM toward 50% at every TL or minimize inter-family win-rate variance as a global objective."
+    },
+    {
+      "id": "MISSILE_NON_PDS_THREAT",
+      "rule": "Preserve the intentional lopsided GP/Swarmer threat against ships that decline PDS; PDS buys counterplay rather than erasing missile identity."
+    },
+    {
+      "id": "PDS_IDENTITIES",
+      "rule": "K-PDS = sustained/simple kinetic defense; E-PDS = TP-flexible RC with Strain-producing overcharge and safe maturation; AMM = finite specialized interceptor with unique RC3 range-1 window."
+    },
+    {
+      "id": "E_MAIN_IDENTITY",
+      "rule": "Energy Low conserves TP / supports main-as-PDS reserve, Standard is routine, Overload is reserved Strain-consuming burst; K and Missile mains do not receive generic offensive overload."
+    },
+    {
+      "id": "TECH_COHERENCE",
+      "rule": "Select technology-valid whole-TL ladders. Capability cannot regress without explicit rationale; quiet TLs and leapfrogging are allowed."
+    },
+    {
+      "id": "PARETO_MULTI_OBJECTIVE",
+      "rule": "Use Pareto/viability and sensitivity/interaction evidence; do not collapse design quality to one outcome metric."
+    },
+    {
+      "id": "REUSE_CLOSED_SURFACES",
+      "rule": "A closed response surface may be reopened only if a later mechanics/economic change is shown to materially invalidate the prior environment. The reopening checkpoint must cite that dependency break explicitly."
+    },
+    {
+      "id": "EVIDENCE_BEFORE_PROMOTION",
+      "rule": "Research candidates remain separate from numerical authority until an explicit promotion checkpoint reconciles dependencies and updates authority files."
+    },
+    {
+      "id": "AMMO_ENDURANCE",
+      "rule": "K/AMM ammunition is primarily endurance/logistics, not a fine per-TL balance knob. K should support several ordinary combats; AMM may exhaust in a single extended missile-heavy combat."
+    },
+    {
+      "id": "TP_LAST",
+      "rule": "Final Reactor/TP supply tuning occurs only after main, defense and AUX demand surfaces are stabilized."
+    },
+    {
+      "id": "PLAYER_KISS_RESEARCH_RICH",
+      "rule": "Player-facing mechanics stay KISS; the research engine may use broad multivariate statistics, interactions and Pareto analysis."
+    },
+    {
+      "id": "RESEARCH_EXECUTION_BASELINE_REQUIRED",
+      "rule": "Every post-CP157 substantive balance study must load CP157-PF1 (or an explicitly superseding pending-finalization research baseline) through the canonical research baseline loader. Raw production v0.9 is historical/control only."
+    },
+    {
+      "id": "NO_STALE_NUMERICAL_MIX",
+      "rule": "A substantive study must fail preflight if any field governed by the pending-finalization baseline silently falls back to an older production or checkpoint value. Any intentional exception must be named as a controlled alternate with provenance."
+    },
+    {
+      "id": "PENDING_FINALIZATION_IS_EXECUTION_AUTHORITY",
+      "rule": "Pending-finalization promotion changes research execution authority, not final production authority. Selected values are the default for future studies until explicitly superseded; viable alternatives remain preserved."
+    }
+  ],
+  "failureConditions": [
+    "global equality target introduced",
+    "closed surface silently reswept",
+    "technology-invalid sawtooth ladder selected",
+    "family persistently dominated across TL/context space",
+    "provisional candidate silently written to authority",
+    "future pass changes a frozen dependency without declaring the invalidation",
+    "substantive pass loads raw v0.9 instead of current research execution baseline",
+    "pending-finalization field silently falls back to stale value",
+    "selected research baseline changed without explicit supersession/provenance"
+  ]
+}

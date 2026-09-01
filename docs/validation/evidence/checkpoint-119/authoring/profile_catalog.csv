@@ -1,0 +1,11 @@
+family,profile_id,classification,study_tls,role,damage,spen,apen,accuracy_delta,guidance_delta,packets,pds_intercept_penalty_pp
+Energy,energy-native,reference,"1,2,3,4,5,6,7,8,9",Native CP109 Energy profile with ordinary power/output doctrine.,mode-driven,native,native,0,0,1,0
+Missile,gp-current,reference,"1,2,3,4,5,6,7,8,9",Current CP109 D5/SP1/AP2 GP Missile reference.,native,native,native,0,0,1,0
+Missile,missile-working-fission-d6,working_integration_candidate,"3,4","Working TL3-TL4 GP yield candidate; yield only, no penetration creep.",6,1,2,0,0,1,0
+Missile,missile-working-fusion-d7,working_integration_candidate,"5,6","Working TL5-TL6 GP yield candidate; yield only, no penetration creep.",7,1,2,0,0,1,0
+Missile,missile-working-antimatter-d8,working_integration_candidate,"7,8,9","Working TL7+ GP yield candidate used for advanced/endpoint validation; yield only, no penetration creep.",8,1,2,0,0,1,0
+Missile,swarmer-early-tl2,working_swarmer_branch,"2,3","TL2 introduction candidate: one Flight, one terminal roll, two D2 internal packets, +10 guidance, modest PDS saturation.",2,0,0,0,10,2,10
+Missile,swarmer-mid,working_swarmer_branch,"4,5",TL4-TL5 maturation candidate: two D3 packets with bounded coverage/PDS-saturation improvement.,3,0,0,0,10,2,10
+Missile,swarmer-mature,working_swarmer_branch,"6,7,8,9","TL6+ mature branch candidate: two D4 packets, +15 guidance, stronger but bounded PDS saturation; endpoint relevance may naturally fade.",4,0,0,0,15,2,15
+Kinetic,gp-current,reference,"1,2,3,4,5,6,7,8,9",Current CP109 contemporary Kinetic projectile reference.,native,native,native,0,0,1,0
+Kinetic,kinetic-working-smart-plus5,working_automatic_progression_candidate,"4,5,6,7,8,9",Restrained automatic smart-projectile schedule: +5 accuracy relative to the current same-TL projectile from TL4 onward; no selectable ammo mode and no DAM/SPEN/APEN change.,native,native,native,5,0,1,0

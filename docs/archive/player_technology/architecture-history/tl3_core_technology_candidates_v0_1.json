@@ -1,0 +1,205 @@
+{
+  "schemaVersion": "star-cluster-tl3-core-technology-candidates-v1",
+  "id": "tl3-core-technology-candidates-v0_1",
+  "status": "initial_conceptual_candidates",
+  "purpose": "Initial TL3 maturation/integration candidates for the core technology table. These values express agreed design direction and are not yet production or combat-consumer authority.",
+  "scope": "Computing, Sensors/EW, Power, Shields, Armor, and held weapon-penetration state. TL3 weapon-family, PDS, STL/FTL, and broader Auxiliary progression remain deliberately incomplete.",
+  "researchOwnership": {
+    "tacticalComputer": "Computing / Fire Control",
+    "sensor": "Sensors / EW",
+    "ecm": "Sensors / EW",
+    "eccm": "Sensors / EW",
+    "powerReactor": "Power / Reactor",
+    "shield": "Defensive Systems / Shields",
+    "armor": "Defensive Systems / Armor"
+  },
+  "tl2Anchors": {
+    "tacticalComputer": {
+      "ordinaryTargetingAssistanceOperationalPp": 12,
+      "approximateTrackPenaltyPp": -25,
+      "evasiveCompensationPp": 0
+    },
+    "sensor": {
+      "discriminationResistance": 1,
+      "passiveFirm": 1,
+      "passiveApproximate": 3,
+      "normalActiveFirm": 3,
+      "normalActiveApproximate": 4,
+      "normalActiveTp": 1,
+      "overloadFirm": 4,
+      "overloadApproximate": 5,
+      "overloadAdditionalTp": 1
+    },
+    "ecm": {
+      "normalRatingCeiling": 2,
+      "fullStrengthNormalTp": 2,
+      "installationSpace": 1
+    },
+    "eccm": {
+      "normalRatingCeiling": 2,
+      "fullStrengthNormalTp": 2,
+      "installationSpace": 1
+    },
+    "powerReactor": {
+      "technologyRole": "Early Practical Fusion",
+      "installationSpace": 6,
+      "operationalTacticalPower": 6
+    },
+    "shield": {
+      "installationSpace": 3,
+      "shieldCapacity": 3,
+      "shieldArmor": 0
+    },
+    "armor": {
+      "installationSpace": 0,
+      "armorProtection": 0,
+      "armorIntegrity": 5
+    }
+  },
+  "tl3Candidates": {
+    "tacticalComputer": {
+      "id": "tl3-tactical-computer-evasive-integration",
+      "technologyRole": "Mature integrated fire control",
+      "ordinaryTargetingAssistanceOperationalPp": 12,
+      "approximateTrackPenaltyPp": -25,
+      "evasiveCompensationPp": 5,
+      "installationSpace": 3,
+      "status": "conceptual_candidate",
+      "notes": "Evasive Compensation offsets only the ship's own Evasive-posture firing penalty to a minimum residual penalty of zero; excess compensation never becomes a positive accuracy bonus."
+    },
+    "sensor": {
+      "id": "tl3-sensor-dual-active-mode",
+      "technologyRole": "Mature phased-aperture / active-mode integration",
+      "discriminationResistance": 1,
+      "installationSpace": 3,
+      "passiveFirm": 1,
+      "passiveApproximate": 3,
+      "normalActiveModes": [
+        {
+          "id": "low",
+          "firm": 3,
+          "approximate": 4,
+          "tacticalPower": 1,
+          "strain": 0
+        },
+        {
+          "id": "high",
+          "firm": 4,
+          "approximate": 5,
+          "tacticalPower": 2,
+          "strain": 0
+        }
+      ],
+      "overloadBeyondHighActive": "deferred_not_promoted",
+      "status": "conceptual_candidate",
+      "notes": "High Active normalizes the current overload-level reach as a deliberate higher-power mode without Strain; it does not automatically extend the envelope beyond 4/5."
+    },
+    "ecm": {
+      "id": "tl3-ecm2-efficient",
+      "technologyRole": "Mature rating-2 electronic countermeasures",
+      "normalRatingCeiling": 2,
+      "fullStrengthNormalTp": 1,
+      "installationSpace": 1,
+      "sameTypeRatingsAdditive": false,
+      "sameTypeResolution": "highest_applicable_functional_rating",
+      "overload": "deferred_not_promoted",
+      "status": "conceptual_candidate",
+      "notes": "Maturation improves normal power efficiency without raising the rating ceiling."
+    },
+    "eccm": {
+      "id": "tl3-eccm2-efficient",
+      "technologyRole": "Mature rating-2 counter-jamming",
+      "normalRatingCeiling": 2,
+      "fullStrengthNormalTp": 1,
+      "installationSpace": 1,
+      "sameTypeRatingsAdditive": false,
+      "sameTypeResolution": "highest_applicable_functional_rating",
+      "overload": "deferred_not_promoted",
+      "status": "conceptual_candidate",
+      "notes": "Maturation improves normal power efficiency without increasing discrimination strength or sensor reach."
+    },
+    "powerReactor": {
+      "id": "tl3-mature-compact-fusion",
+      "technologyRole": "Mature Compact Fusion",
+      "installationSpace": 5,
+      "operationalTacticalPower": 6,
+      "degradedTacticalPowerHeld": 3,
+      "disabledEmergencyTacticalPowerHeld": 1,
+      "destroyedTacticalPowerHeld": 0,
+      "status": "conceptual_candidate",
+      "notes": "Raw Operational output remains 6 TP while the Main Reactor footprint falls from 6 to 5 Space. Condition mapping, overload, storage, auxiliary generation, and reliability receive no new benefit in this candidate."
+    },
+    "shield": {
+      "id": "tl3-shield-hardener-integration",
+      "technologyRole": "Mature shield integration with optional powered hardening",
+      "primaryShield": {
+        "installationSpace": 3,
+        "shieldCapacity": 3,
+        "baseRecharge": 1,
+        "tacticalRechargePerPower": 1,
+        "tacticalRechargePowerCap": 2,
+        "shieldArmor": 0
+      },
+      "shieldHardener": {
+        "installationSpace": 1,
+        "normalShieldArmor": 1,
+        "sustainedTacticalPower": 1,
+        "stacking": "nonstacking_normal_operation",
+        "overload": "deferred_not_promoted",
+        "externalPowerTlPrerequisite": null,
+        "notes": "Owned by Shields TL3. Any legal installed power architecture may supply the 1 TP; no arbitrary Power-TL gate is imposed."
+      },
+      "status": "conceptual_candidate"
+    },
+    "armor": {
+      "id": "tl3-composite-protection",
+      "technologyRole": "Mature composite protection",
+      "installationSpace": 0,
+      "armorProtection": 1,
+      "armorIntegrity": 5,
+      "status": "conceptual_candidate",
+      "notes": "TL3 adds actual Protection while holding TL2 Integrity. This naturally exposes the AP1 breakpoint to existing family-specific APEN values."
+    }
+  },
+  "weaponPenetrationHeld": {
+    "kinetic": {
+      "shieldPenetration": 1,
+      "armorPenetration": 1,
+      "note": "Hold TL2 Kinetic penetration candidate initially; AP1 armor now creates a natural breakpoint for broader cross-TL testing."
+    },
+    "energy": {
+      "shieldPenetration": 1,
+      "armorPenetration": 1,
+      "note": "No automatic TL3 penetration increase."
+    },
+    "missile": {
+      "shieldPenetration": 1,
+      "armorPenetration": 2,
+      "note": "No automatic TL3 penetration increase; future Missile progression should remain seeker/guidance/propulsion/payload oriented where appropriate."
+    }
+  },
+  "progressionSemantics": {
+    "rawStatGrowthRequiredEveryTl": false,
+    "sameSpaceTransitionRequired": false,
+    "spaceChangingProgressionMustReportReleasedOrConsumedSpace": true,
+    "capabilityUnlocksMayBeSeparateComponents": true,
+    "tl3CoreIsCompleteShipPackage": false
+  },
+  "deferredOutsideThisPackage": [
+    "TL3 main-weapon family progression beyond held penetration references",
+    "TL3 PDS progression",
+    "TL3 STL and FTL progression",
+    "broader TL3 Auxiliary catalog progression beyond the Shield Hardener",
+    "TL3 production initiative changes",
+    "automatic combat-balance promotion"
+  ],
+  "guardrails": [
+    "Higher TL may improve capability, efficiency, footprint, integration, or operating modes rather than every primary statistic.",
+    "Sensor reach and discrimination remain separate; High Active is a visible powered mode and does not manufacture Firm outside its physical envelope.",
+    "ECM/ECCM ratings remain non-additive across redundant same-type installations.",
+    "Shield Hardener SA is a separate powered support effect and does not silently increase the primary shield generator's base Shield Armor.",
+    "Armor Protection and Armor Integrity remain separate and retain APEN counterplay.",
+    "Legacy reactors remain stackable where normal construction rules permit; TL3 miniaturization competes through real Space opportunity cost rather than anti-stacking rules.",
+    "No automatic promotion occurs from table registration alone."
+  ]
+}

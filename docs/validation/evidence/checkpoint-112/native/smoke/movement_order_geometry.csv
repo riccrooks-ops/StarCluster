@@ -1,0 +1,13 @@
+tl,side_a_build,side_b_build,start_range,variants,side_a_win_afirst,side_a_win_bfirst,movement_order_swing_pp,mean_min_range,mean_turns
+7,tl7-kinetic-dual-main,tl7-missile-dual-main,4,2,0.0,0.0,0.0,2.0,3.5
+7,tl7-kinetic-dual-main,tl7-missile-dual-main,6,2,0.0,0.0,0.0,4.0,4.5
+7,tl7-kinetic-dual-main,tl7-missile-dual-main,8,2,0.0,1.0,100.0,6.0,3.0
+7,tl7-kinetic-dual-main,tl7-missile-dual-main,10,2,0.0,1.0,100.0,0.0,4.0
+7,tl7-kinetic-dual-reactor,tl7-missile-dual-reactor,4,2,0.0,1.0,100.0,2.0,6.0
+7,tl7-kinetic-dual-reactor,tl7-missile-dual-reactor,6,2,0.0,1.0,100.0,4.0,6.0
+7,tl7-kinetic-dual-reactor,tl7-missile-dual-reactor,8,2,0.0,0.0,0.0,6.0,7.0
+7,tl7-kinetic-dual-reactor,tl7-missile-dual-reactor,10,2,0.0,0.0,0.0,0.0,10.0
+9,tl9-kinetic-dual-main,tl9-missile-dual-main,4,2,0.0,1.0,100.0,2.0,3.0
+9,tl9-kinetic-dual-main,tl9-missile-dual-main,6,2,0.0,1.0,100.0,4.0,3.0
+9,tl9-kinetic-dual-main,tl9-missile-dual-main,8,2,0.0,0.0,0.0,6.0,3.5
+9,tl9-kinetic-dual-main,tl9-missile-dual-main,10,2,0.0,1.0,100.0,8.0,4.0

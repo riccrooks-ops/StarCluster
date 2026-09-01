@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": 71,
+  "normal": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 27,
+    "trialsAtDefault": 270000,
+    "deterministicSensorEwRows": 924,
+    "required": true,
+    "smokeTrials": 27,
+    "totalTrialExecutions": 270027
+  },
+  "deepCalibration": {
+    "stageCount": 30,
+    "monteCarloVariantCount": 1571,
+    "trialsAtDefault": 15710000,
+    "requiredByDefault": false,
+    "smokeTrials": 27,
+    "totalTrialExecutions": 15710027
+  },
+  "blockingBalanceTargets": false,
+  "productionControls": {
+    "reactorOutput": 5,
+    "ecmNormalPowerCost": 1,
+    "eccmNormalPowerCost": 1,
+    "startingFuel": 100,
+    "movementFuelPerHex": 2,
+    "evasiveManeuverFuelCost": 1,
+    "tacticalMapRadius": 5,
+    "sensorRangesPromotedByCheckpoint71": false,
+    "ecmPowerCostChangedByCheckpoint71": false,
+    "degradedFireImplementedByCheckpoint71": false
+  },
+  "studyControls": {
+    "sensorEnvelope": "Balanced-0 Passive 1/3; Active 3/4; Overload 4/5",
+    "sensorDiscriminationResistance": 0,
+    "pointBlankBurnThroughResistance": 1,
+    "ecmNormalRating": 1,
+    "ecmNormalPowerCost": 1,
+    "eccmNormalRating": 1,
+    "eccmNormalPowerCost": 1,
+    "operationalVariants": 18,
+    "pointBlankVariants": 9,
+    "sameHexLosUnoccludable": true,
+    "sameHexBurnThroughEnabled": true,
+    "staticNetEwRangePenalty": 0,
+    "pairedToCheckpoint70Cost1Seeds": true
+  },
+  "nativeAcceptanceDependencyContract": {
+    "allowedBaselineDependencies": [
+      "PowerShell",
+      "pinned .NET SDK"
+    ],
+    "blockedInterpreters": [
+      "python",
+      "python3",
+      "py"
+    ],
+    "precheckRequired": true
+  },
+  "mustAlwaysRunStageIds": [
+    "deterministic",
+    "tl1-phase-a",
+    "tl1-phase-b",
+    "tl1-installation-space-envelope",
+    "tl1-sensor-ew-foundation",
+    "tl1-sensor-discrimination-burnthrough-preflight",
+    "tl1-sensor-discrimination-burnthrough-smoke",
+    "tl1-sensor-discrimination-burnthrough",
+    "auxiliary-resource-endurance",
+    "checkpoint-53-resource-semantics-lock",
+    "runner-self-tests"
+  ],
+  "notes": [
+    "Checkpoint 70a is the accepted implementation/validation baseline.",
+    "CP70a showed ECM Tactical Power cost alone does not solve TL1 point-blank Firm-track denial.",
+    "CP71 retains ECM/ECCM rating 1 at 1 TP and introduces intrinsic Sensor Discrimination Resistance plus same-hex burn-through.",
+    "TL1 Sensor Discrimination Resistance is 0; same-hex Burn-through Resistance is +1; greater ranges receive no burn-through in this first study.",
+    "Degraded fire is documented as a future weapon-specific trait but is not implemented in CP71.",
+    "The 27-variant one-trial smoke must pass before the 270,000-trial substantive stage."
+  ]
+}

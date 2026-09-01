@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "star-cluster-cp144-engage-adaptive-policy-parity-v0.1",
+  "ownMaximumWeaponRange": 6,
+  "cases": [
+    {"id":"inside-envelope-hold-near","currentRange":1,"lastTrack":null,"lastTrackRange":null,"ownDemonstrated":null,"opponentDemonstrated":null,"expectedOrder":"MaintainPreferredRange","expectedDesiredRange":1,"expectedPythonReasonClass":"envelope_hold"},
+    {"id":"inside-envelope-hold-mid","currentRange":4,"lastTrack":null,"lastTrackRange":null,"ownDemonstrated":null,"opponentDemonstrated":null,"expectedOrder":"MaintainPreferredRange","expectedDesiredRange":4,"expectedPythonReasonClass":"envelope_hold"},
+    {"id":"inside-envelope-firm-hold","currentRange":3,"lastTrack":"Firm","lastTrackRange":3,"ownDemonstrated":null,"opponentDemonstrated":null,"expectedOrder":"MaintainPreferredRange","expectedDesiredRange":3,"expectedPythonReasonClass":"envelope_hold"},
+    {"id":"outside-envelope-close","currentRange":8,"lastTrack":null,"lastTrackRange":null,"ownDemonstrated":null,"opponentDemonstrated":null,"expectedOrder":"Close","expectedDesiredRange":6,"expectedPythonReasonClass":"envelope"},
+    {"id":"track-failure-close","currentRange":2,"lastTrack":"Approximate","lastTrackRange":2,"ownDemonstrated":null,"opponentDemonstrated":null,"expectedOrder":"Close","expectedDesiredRange":1,"expectedPythonReasonClass":"track_close"},
+    {"id":"track-failure-close-from-farther-current-range","currentRange":4,"lastTrack":"Approximate","lastTrackRange":2,"ownDemonstrated":null,"opponentDemonstrated":null,"expectedOrder":"Close","expectedDesiredRange":1,"expectedPythonReasonClass":"track_close"},
+    {"id":"demonstrated-standoff-open","currentRange":4,"lastTrack":null,"lastTrackRange":null,"ownDemonstrated":5,"opponentDemonstrated":3,"expectedOrder":"Open","expectedDesiredRange":5,"expectedPythonReasonClass":"standoff"},
+    {"id":"demonstrated-standoff-close","currentRange":6,"lastTrack":null,"lastTrackRange":null,"ownDemonstrated":5,"opponentDemonstrated":3,"expectedOrder":"Close","expectedDesiredRange":5,"expectedPythonReasonClass":"standoff"},
+    {"id":"demonstrated-standoff-hold","currentRange":5,"lastTrack":null,"lastTrackRange":null,"ownDemonstrated":5,"opponentDemonstrated":3,"expectedOrder":"MaintainPreferredRange","expectedDesiredRange":5,"expectedPythonReasonClass":"standoff"},
+    {"id":"no-one-sided-standoff-when-opponent-equal","currentRange":4,"lastTrack":null,"lastTrackRange":null,"ownDemonstrated":5,"opponentDemonstrated":5,"expectedOrder":"MaintainPreferredRange","expectedDesiredRange":4,"expectedPythonReasonClass":"envelope_hold"}
+  ]
+}

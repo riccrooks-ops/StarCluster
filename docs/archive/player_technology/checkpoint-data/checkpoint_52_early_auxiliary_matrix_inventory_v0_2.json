@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-52-early-auxiliary-matrix-inventory-v0_2",
+  "checkpoint": 52,
+  "normalAuxCapacity": {
+    "1": 1,
+    "2": 1
+  },
+  "runtimeMatrixSubfamilies": [
+    "aux_ablative_armor",
+    "aux_amm_pds",
+    "aux_combat_battery",
+    "aux_energy_pds",
+    "aux_evasive_maneuver_system",
+    "aux_kinetic_magazine_expansion",
+    "aux_kinetic_pds",
+    "aux_missile_magazine_expansion",
+    "aux_power_capacitor"
+  ],
+  "architectureLegalNotInCombatMatrix": [
+    {
+      "id": "aux_apu",
+      "displayName": "Auxiliary Power Unit",
+      "entryTl": 1,
+      "reason": "strategic/noncombat or current integrated-runner mechanics not implemented; do not assign a fake zero-value combat profile"
+    },
+    {
+      "id": "aux_active_sensor_array",
+      "displayName": "Active Sensor Array",
+      "entryTl": 1,
+      "reason": "strategic/noncombat or current integrated-runner mechanics not implemented; do not assign a fake zero-value combat profile"
+    },
+    {
+      "id": "aux_ecm_suite",
+      "displayName": "Electronic Countermeasures Suite",
+      "entryTl": 1,
+      "reason": "strategic/noncombat or current integrated-runner mechanics not implemented; do not assign a fake zero-value combat profile"
+    },
+    {
+      "id": "aux_eccm_suite",
+      "displayName": "Electronic Counter-Countermeasures Suite",
+      "entryTl": 1,
+      "reason": "strategic/noncombat or current integrated-runner mechanics not implemented; do not assign a fake zero-value combat profile"
+    },
+    {
+      "id": "aux_laboratory_module",
+      "displayName": "Laboratory Module",
+      "entryTl": 1,
+      "reason": "strategic/noncombat or current integrated-runner mechanics not implemented; do not assign a fake zero-value combat profile"
+    },
+    {
+      "id": "aux_mining_module",
+      "displayName": "Mining Module",
+      "entryTl": 1,
+      "reason": "strategic/noncombat or current integrated-runner mechanics not implemented; do not assign a fake zero-value combat profile"
+    },
+    {
+      "id": "aux_cargo_expansion",
+      "displayName": "Cargo Expansion Module",
+      "entryTl": 1,
+      "reason": "strategic/noncombat or current integrated-runner mechanics not implemented; do not assign a fake zero-value combat profile"
+    },
+    {
+      "id": "aux_communications_relay",
+      "displayName": "Tactical Communications Relay",
+      "entryTl": 2,
+      "reason": "strategic/noncombat or current integrated-runner mechanics not implemented; do not assign a fake zero-value combat profile"
+    }
+  ],
+  "policy": "The main battle matrix retains only modeled combat-relevant one-capacity candidates. Stateful resource semantics are enabled only in the new Checkpoint 52 study; campaign endurance components also receive a separate resource-stress study."
+}

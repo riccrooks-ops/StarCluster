@@ -1,0 +1,534 @@
+{
+  "schemaVersion": "star-cluster-weapon-family-payload-space-v0.2",
+  "checkpoint": 115,
+  "acceptedBaseline": 114,
+  "purpose": "Refine Kinetic ammunition and Missile warhead characteristic space while preserving asymmetric weapon-family identity and testing contemporary GP maturation against distinct defense archetypes.",
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "automaticPromotion": false,
+  "masterSeed": 115041337,
+  "trialsPerVariant": 2000,
+  "authoringTrialsPerVariant": 20,
+  "missileStudyTls": [
+    4,
+    5,
+    7,
+    9
+  ],
+  "kineticStudyTls": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "energyReferenceTls": [
+    4,
+    5,
+    7,
+    9
+  ],
+  "targetFixtures": [
+    {
+      "id": "shield-heavy-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "legal_build",
+      "role": "Shield + Hardener + Energy PDS defense package; exposes anti-Shield and full-layer performance."
+    },
+    {
+      "id": "shield-isolated-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "legal_build",
+      "removePds": true,
+      "role": "Shield + Hardener without PDS so interception cannot mask payload-vs-Shield behavior."
+    },
+    {
+      "id": "shield-overmatch-fixture",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "controlled_fixture",
+      "removePds": true,
+      "shieldCapacityDelta": 6,
+      "shieldRechargeBonus": 1,
+      "role": "Controlled high-sustain Shield fixture (+6 capacity, +1 extra base recharge) used only to test whether anti-Shield specialists have a niche beyond normal legal defenses."
+    },
+    {
+      "id": "balanced-layered-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "balanced",
+      "classification": "legal_build",
+      "role": "Balanced legal layered defense without specialist PDS/Hardener concentration."
+    },
+    {
+      "id": "armor-exposed-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "legal_build",
+      "removeShield": true,
+      "removePds": true,
+      "removeHardener": true,
+      "role": "Legal exact-fill no-Shield control exposing contemporary Armor/Hull directly."
+    },
+    {
+      "id": "pds-heavy-legal",
+      "baseFamily": "Missile",
+      "baseArchetype": "missile-defense",
+      "classification": "legal_build",
+      "role": "AMM/PDS-heavy legal target retaining layered Shield/Armor defenses."
+    },
+    {
+      "id": "armor-heavy-fixture",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "controlled_fixture",
+      "removeShield": true,
+      "removePds": true,
+      "removeHardener": true,
+      "armorProtectionDelta": 1,
+      "armorIntegrityDelta": 4,
+      "role": "Controlled non-promotion fixture that exaggerates Armor to expose penetrator niches."
+    },
+    {
+      "id": "light-fixture",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "controlled_fixture",
+      "removeShield": true,
+      "removePds": true,
+      "removeHardener": true,
+      "armorProtectionOverride": 0,
+      "armorIntegrityOverride": 2,
+      "role": "Controlled lightly protected fixture for saturation/coverage behavior; not a legal-build balance gate."
+    }
+  ],
+  "missileProfiles": [
+    {
+      "id": "gp-current",
+      "family": "Missile",
+      "role": "Current CP109 D5/SP1/AP2 GP control retained as a legacy baseline.",
+      "studyTls": [
+        4,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-fission-gp-a",
+      "family": "Missile",
+      "generation": "fission",
+      "damage": 6,
+      "spen": 1,
+      "apen": 2,
+      "role": "Fission-era GP: modest yield increase.",
+      "studyTls": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "missile-fission-gp-b",
+      "family": "Missile",
+      "generation": "fission",
+      "damage": 6,
+      "spen": 2,
+      "apen": 2,
+      "role": "Fission-era GP: penetration-weighted alternative.",
+      "studyTls": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "missile-fission-gp-c",
+      "family": "Missile",
+      "generation": "fission",
+      "damage": 7,
+      "spen": 1,
+      "apen": 2,
+      "role": "Fission-era GP: higher-yield alternative.",
+      "studyTls": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "missile-fusion-gp-a",
+      "family": "Missile",
+      "generation": "fusion",
+      "damage": 7,
+      "spen": 1,
+      "apen": 2,
+      "role": "Fusion GP: yield-first lower envelope.",
+      "studyTls": [
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-fusion-gp-b",
+      "family": "Missile",
+      "generation": "fusion",
+      "damage": 7,
+      "spen": 2,
+      "apen": 3,
+      "role": "Fusion GP: balanced yield and layered penetration.",
+      "studyTls": [
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-fusion-gp-c",
+      "family": "Missile",
+      "generation": "fusion",
+      "damage": 8,
+      "spen": 2,
+      "apen": 3,
+      "role": "Fusion GP: higher-yield envelope near the existing branch seed.",
+      "studyTls": [
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-antimatter-gp-a",
+      "family": "Missile",
+      "generation": "antimatter",
+      "damage": 8,
+      "spen": 2,
+      "apen": 3,
+      "role": "Antimatter GP: conservative lower envelope.",
+      "studyTls": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-antimatter-gp-b",
+      "family": "Missile",
+      "generation": "antimatter",
+      "damage": 9,
+      "spen": 3,
+      "apen": 3,
+      "role": "Antimatter GP: stronger yield plus Shield penetration.",
+      "studyTls": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-antimatter-gp-c",
+      "family": "Missile",
+      "generation": "antimatter",
+      "damage": 10,
+      "spen": 3,
+      "apen": 4,
+      "role": "Antimatter GP: upper characteristic-space anchor matching the existing qualitative branch seed.",
+      "studyTls": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-shaped",
+      "family": "Missile",
+      "damage": 5,
+      "spen": 1,
+      "apen": 3,
+      "role": "Armor-specialist shaped/penetrator control.",
+      "studyTls": [
+        4,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-shield-pressure",
+      "family": "Missile",
+      "damage": 3,
+      "spen": 1,
+      "apen": 0,
+      "shieldBonusDamage": 4,
+      "role": "Shield-capacity pressure specialist with intentionally weak structural follow-through.",
+      "studyTls": [
+        4,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-shield-recharge",
+      "family": "Missile",
+      "damage": 4,
+      "spen": 1,
+      "apen": 0,
+      "rechargeSuppression": 4,
+      "role": "Shield-recharge suppression specialist with intentionally weak structural follow-through.",
+      "studyTls": [
+        4,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-shield-armor",
+      "family": "Missile",
+      "damage": 4,
+      "spen": 1,
+      "apen": 0,
+      "shieldArmorReduction": 1,
+      "role": "Shield-Armor reduction specialist with intentionally weak structural follow-through.",
+      "studyTls": [
+        4,
+        5,
+        7,
+        9
+      ]
+    }
+  ],
+  "contemporaryGpByTl": {
+    "4": [
+      "missile-fission-gp-a",
+      "missile-fission-gp-b",
+      "missile-fission-gp-c"
+    ],
+    "5": [
+      "missile-fusion-gp-a",
+      "missile-fusion-gp-b",
+      "missile-fusion-gp-c"
+    ],
+    "7": [
+      "missile-antimatter-gp-a",
+      "missile-antimatter-gp-b",
+      "missile-antimatter-gp-c"
+    ],
+    "9": [
+      "missile-antimatter-gp-a",
+      "missile-antimatter-gp-b",
+      "missile-antimatter-gp-c"
+    ]
+  },
+  "specialistPairingIds": [
+    "missile-shield-pressure",
+    "missile-shield-recharge",
+    "missile-shield-armor"
+  ],
+  "adaptivePairingIds": [
+    "missile-shield-pressure",
+    "missile-shield-recharge"
+  ],
+  "kineticProfiles": [
+    {
+      "id": "gp-current",
+      "family": "Kinetic",
+      "role": "Current Kinetic package control.",
+      "studyTls": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-smart-plus5",
+      "family": "Kinetic",
+      "accuracyDelta": 5,
+      "role": "Automatic smart-projectile lower accuracy envelope.",
+      "studyTls": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-smart-plus10",
+      "family": "Kinetic",
+      "accuracyDelta": 10,
+      "role": "Automatic smart-projectile upper accuracy anchor matching the existing branch seed.",
+      "studyTls": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-dense-a",
+      "family": "Kinetic",
+      "damageDelta": -1,
+      "apenDelta": 1,
+      "role": "Dense penetrator: mild damage-for-APEN trade.",
+      "studyTls": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-dense-b",
+      "family": "Kinetic",
+      "damageDelta": -1,
+      "spenDelta": -1,
+      "apenDelta": 2,
+      "role": "Dense penetrator: stronger Armor specialization at explicit Shield cost.",
+      "studyTls": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-saturation-a",
+      "family": "Kinetic",
+      "damage": 3,
+      "spen": 1,
+      "apen": 0,
+      "packets": 2,
+      "accuracyDelta": 10,
+      "role": "Two smaller packets plus +10 ACC to represent broader hit coverage.",
+      "studyTls": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-saturation-b",
+      "family": "Kinetic",
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 3,
+      "accuracyDelta": 15,
+      "role": "Three very small packets plus +15 ACC; extreme coverage/low-penetration envelope.",
+      "studyTls": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-saturation-c",
+      "family": "Kinetic",
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "accuracyDelta": 20,
+      "role": "High-coverage +20 ACC envelope with intentionally weak penetration.",
+      "studyTls": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-tandem-a",
+      "family": "Kinetic",
+      "accuracyDelta": 5,
+      "orderedPackets": [
+        {
+          "damage": 3,
+          "spen": 2,
+          "apen": 0
+        },
+        {
+          "damage": 3,
+          "spen": 0,
+          "apen": 2
+        }
+      ],
+      "role": "One attack-package hit roll; Shield-facing precursor resolves before Armor-facing penetrator.",
+      "studyTls": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-tandem-b",
+      "family": "Kinetic",
+      "accuracyDelta": 5,
+      "orderedPackets": [
+        {
+          "damage": 2,
+          "spen": 2,
+          "apen": 0
+        },
+        {
+          "damage": 4,
+          "spen": 0,
+          "apen": 3
+        }
+      ],
+      "role": "More polarized tandem package: small Shield precursor followed by heavier Armor penetrator.",
+      "studyTls": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-tandem-b-reverse",
+      "family": "Kinetic",
+      "accuracyDelta": 5,
+      "orderedPackets": [
+        {
+          "damage": 4,
+          "spen": 0,
+          "apen": 3
+        },
+        {
+          "damage": 2,
+          "spen": 2,
+          "apen": 0
+        }
+      ],
+      "role": "Sequencing control for tandem-b; same packet budget in reverse order.",
+      "studyTls": [
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  ],
+  "inferenceRules": [
+    "Weapon families are not expected to perform equally against every defense; the study seeks coherent niches and meaningful costs rather than convergence toward universal 50-percent matchups.",
+    "Kinetic candidates should be evaluated especially against Armor-exposed/Armor-heavy targets, while poor Shield-heavy performance can be healthy family identity rather than automatic imbalance.",
+    "Energy reference lanes are controls for family identity, not a target that Kinetic or Missile candidates must numerically match.",
+    "Missile GP warheads may mature by energetic generation; specialist warheads should coexist with contemporary GP payloads and should not be required to rescue an obsolete GP packet.",
+    "Normal Kinetic/Missile variants use generic magazine accounting; rare exotic individually tracked ammunition is outside CP115.",
+    "Kinetic saturation retains one battery attack roll; increased coverage is represented by an accuracy bonus, while a successful attack package may resolve multiple smaller packets.",
+    "Ordered/tandem Kinetic packets resolve sequentially within one attack package and one hit roll; CP115 does not introduce extra attacks per battery.",
+    "Controlled target fixtures exist only to expose characteristic niches and are never legal-build or production-promotion gates.",
+    "Adaptive Missile pairing may use only observer-safe Firm-track combat assessment and never hidden Shield/Armor values.",
+    "No CP115 outcome automatically changes CP109/CP110 numbers, Concept rules, Storyboard technology placement, or production C#/Godot runtime."
+  ]
+}

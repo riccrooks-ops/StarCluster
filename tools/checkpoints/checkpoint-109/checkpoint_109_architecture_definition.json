@@ -1,0 +1,30 @@
+{
+  "checkpointId": "109",
+  "acceptedBaseline": "108",
+  "title": "Whole-Ladder Candidate Numerical Technology Matrix",
+  "kind": "numerical_design_only",
+  "contractImplementation": "python_stdlib",
+  "powerShellLauncher": true,
+  "productionRuntime": "C# / Godot",
+  "pythonAllowedForTestingSimulationAndCheckpointValidation": true,
+  "pythonRequiredByProductionRuntime": false,
+  "wholeLadderNumericalCandidateBuilt": true,
+  "existingProductionRuntimeValuesChanged": false,
+  "simulationOrCalibrationRun": false,
+  "declaredTrials": 0,
+  "stages": [],
+  "expected": {
+    "visibleDisciplines": 10,
+    "sourceLineages": 32,
+    "storyboardBeats": 214,
+    "ideas": 136,
+    "foundationDomains": 20,
+    "optionalSupportCandidates": 35,
+    "profileFamilies": 16,
+    "profileRows": 144,
+    "branchNumericalCandidates": 31,
+    "hardExternalPrerequisiteCandidates": 16,
+    "standardSparseGateCandidates": 4,
+    "calibrationTrials": 0
+  }
+}

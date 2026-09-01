@@ -1,0 +1,279 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-ai-doctrine-evidence-draft-schema-v0-1",
+  "title": "Star Cluster AI Doctrine Evidence Draft Schema v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "checkpoint",
+    "studyId",
+    "studyResultSha256",
+    "trialsPerVariant",
+    "isSmoke",
+    "registryVersion",
+    "registrySha256",
+    "promotionAutomatic",
+    "humanReviewRequired",
+    "acceptedBaselineDoctrineId",
+    "acceptedBaselineCheckpoint",
+    "acceptedBaselineEvidenceIds",
+    "acceptedBaselineEvidenceResultSha256",
+    "acceptedDoctrineIds",
+    "candidateDoctrineIds",
+    "dependencyIds",
+    "capturePurpose",
+    "reviewQuestions",
+    "doctrineSummaries",
+    "contexts"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-ai-doctrine-evidence-draft-v1"
+    },
+    "checkpoint": {
+      "const": "73"
+    },
+    "studyId": {
+      "const": "tl1-itc15-ew-ai-doctrine"
+    },
+    "studyResultSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "trialsPerVariant": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "isSmoke": {
+      "type": "boolean"
+    },
+    "registryVersion": {
+      "const": "0.1"
+    },
+    "registrySha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "promotionAutomatic": {
+      "const": false
+    },
+    "humanReviewRequired": {
+      "const": true
+    },
+    "acceptedBaselineDoctrineId": {
+      "const": "tl1-ew-reactive-eccm-v1"
+    },
+    "acceptedDoctrineIds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "candidateDoctrineIds": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "tl1-ew-always-ecm-reactive-eccm-v1",
+          "tl1-ew-preserve-offense-v1",
+          "tl1-ew-preserve-combat-package-v1"
+        ]
+      }
+    },
+    "dependencyIds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "capturePurpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewQuestions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "doctrineSummaries": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "doctrineId",
+          "registryStatus",
+          "ecmHeuristic",
+          "eccmHeuristic",
+          "usesHiddenEnemyRatings",
+          "variantCount",
+          "meanEcmPowerPerShip",
+          "meanEccmPowerPerShip",
+          "meanActiveSensorPowerPerShip",
+          "meanPowerDenials",
+          "meanTrackDenials",
+          "meanPdsAttempts",
+          "meanDirectShots",
+          "meanMissileLaunches",
+          "meanUnresolvedPercent",
+          "meanTurns"
+        ],
+        "properties": {
+          "doctrineId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "registryStatus": {
+            "enum": [
+              "control",
+              "experimental",
+              "accepted",
+              "superseded"
+            ]
+          },
+          "ecmHeuristic": {
+            "type": "string",
+            "minLength": 1
+          },
+          "eccmHeuristic": {
+            "type": "string",
+            "minLength": 1
+          },
+          "usesHiddenEnemyRatings": {
+            "const": false
+          },
+          "variantCount": {
+            "const": 6
+          },
+          "meanEcmPowerPerShip": {
+            "type": "number",
+            "minimum": 0
+          },
+          "meanEccmPowerPerShip": {
+            "type": "number",
+            "minimum": 0
+          },
+          "meanActiveSensorPowerPerShip": {
+            "type": "number",
+            "minimum": 0
+          },
+          "meanPowerDenials": {
+            "type": "number",
+            "minimum": 0
+          },
+          "meanTrackDenials": {
+            "type": "number",
+            "minimum": 0
+          },
+          "meanPdsAttempts": {
+            "type": "number",
+            "minimum": 0
+          },
+          "meanDirectShots": {
+            "type": "number",
+            "minimum": 0
+          },
+          "meanMissileLaunches": {
+            "type": "number",
+            "minimum": 0
+          },
+          "meanUnresolvedPercent": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "meanTurns": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "contexts": {
+      "type": "array",
+      "minItems": 24,
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": [
+          "variantId",
+          "comparisonGroup",
+          "doctrineId",
+          "sideAFamily",
+          "sideBFamily",
+          "movementOrder",
+          "trialErrors"
+        ],
+        "properties": {
+          "variantId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "comparisonGroup": {
+            "type": "string",
+            "minLength": 1
+          },
+          "doctrineId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sideAFamily": {
+            "enum": [
+              "Kinetic",
+              "Energy",
+              "Missile"
+            ]
+          },
+          "sideBFamily": {
+            "enum": [
+              "Kinetic",
+              "Energy",
+              "Missile"
+            ]
+          },
+          "movementOrder": {
+            "enum": [
+              "SideAFirst",
+              "SideBFirst",
+              "Simultaneous"
+            ]
+          },
+          "trialErrors": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "acceptedBaselineCheckpoint": {
+      "const": "72"
+    },
+    "acceptedBaselineEvidenceIds": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "const": "cp72-reactive-eccm-accepted"
+      }
+    },
+    "acceptedBaselineEvidenceResultSha256": {
+      "const": "cb30e4d3800a0474aaed0447390cd18542962915676cd710bd28db23b5cc4f04"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "star-cluster-cp127-main-subsystem-stabilization-v0.1",
+  "checkpoint": 127,
+  "title": "Main-Subsystem TL Stabilization and Baseline Consolidation Study",
+  "status": "candidate",
+  "acceptedEvidenceCheckpoint": 126,
+  "acceptedReferenceBaseline": 123,
+  "acceptedInstrumentationBaseline": 124,
+  "acceptedImplementationBaseline": 122,
+  "sourceMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_4.json",
+  "cp126NativeArchive": "docs/validation/evidence/checkpoint-127/CP126_NATIVE_RESULTS_ORIGINAL.zip",
+  "cp126NativeArchiveSha256": "a82e8e1f98f9af5589666d091f4773cd3f98b881c82c108a7da7ab2d1c74edb0",
+  "shipTechnologyPolicy": "pure_same_tl_components_per_ship",
+  "mixedTlShipsExecuted": false,
+  "automaticPromotion": false,
+  "balanceValidated": false,
+  "pairingSeed": 12520260816,
+  "masterSeed": 12720260817,
+  "substantiveTrialsPerVariant": 100,
+  "recommendedJobs": 24,
+  "movementInvariants": {
+    "stlStandardMove": "Drive TL",
+    "operationalMissileMove": "Missile Drive TL + 1"
+  },
+  "ftlStrategicLadder": [1, 2, 3, 4, 4, 6, 7, 9, 12],
+  "candidateChangeSet": {
+    "numericLeafChangesFromCp123": 9,
+    "stl": {"TL5": 5, "TL8": 8, "TL9": 9},
+    "missileMove": {"TL5": 6, "TL8": 9, "TL9": 10},
+    "tl8EnergyDamage": {"low": 7, "standard": 10, "high": 12},
+    "otherMainSubsystemNumericLeavesChanged": false,
+    "auxiliaryNumericalStabilizationDeferred": true
+  },
+  "symmetryGate": {
+    "blocking": true,
+    "casesPerTl": 5,
+    "trialsPerCase": 25,
+    "expectedComparisons": 2250,
+    "expectedCombatExecutions": 4500,
+    "requireZeroMismatches": true
+  },
+  "finalBaselineLanes": ["adjacent_population", "matched_composition", "late_missile_geometry"],
+  "tl5Tl6Ablations": [
+    {"id":"hold_hull","description":"Hold TL6 Hull durability at TL5 while keeping the matched-composition envelope fixed.","overrides":[{"profile":"hull","tl":6,"field":"hullPoints","value":27}]},
+    {"id":"hold_armor","description":"Hold TL6 passive Armor AP/AI at TL5.","overrides":[{"profile":"armor","tl":6,"field":"ap","value":3},{"profile":"armor","tl":6,"field":"ai","value":12}]},
+    {"id":"hold_stl","description":"Hold TL6 tactical STL Move at TL5 to isolate the restored 5-to-6 movement step.","overrides":[{"profile":"stl","tl":6,"field":"move","value":5}]},
+    {"id":"hold_computer","description":"Hold TL6 combat-relevant computer integration at TL5.","overrides":[{"profile":"computer","tl":6,"field":"degradedTargetingPp","value":8},{"profile":"computer","tl":6,"field":"evasiveCompensationPp","value":5}]},
+    {"id":"hold_sensor","description":"Hold TL6 Sensor range/discrimination package at TL5.","overrides":[{"profile":"sensor","tl":6,"field":"passiveFirm","value":2},{"profile":"sensor","tl":6,"field":"passiveApprox","value":4},{"profile":"sensor","tl":6,"field":"activeLowFirm","value":4},{"profile":"sensor","tl":6,"field":"activeLowApprox","value":5},{"profile":"sensor","tl":6,"field":"activeHighFirm","value":5},{"profile":"sensor","tl":6,"field":"activeHighApprox","value":6},{"profile":"sensor","tl":6,"field":"dr","value":2}]},
+    {"id":"hold_shield","description":"Hold TL6 Shield Capacity/recharge at TL5.","overrides":[{"profile":"shield","tl":6,"field":"capacity","value":9},{"profile":"shield","tl":6,"field":"baseRecharge","value":3}]},
+    {"id":"hold_kinetic","description":"Hold TL6 Kinetic performance axes at TL5 while retaining TL6 installation footprint.","overrides":[{"profile":"kinetic_main","tl":6,"field":"accuracyPp","value":25},{"profile":"kinetic_main","tl":6,"field":"damage","value":10},{"profile":"kinetic_main","tl":6,"field":"apen","value":3},{"profile":"kinetic_main","tl":6,"field":"range","value":5}]},
+    {"id":"hold_energy","description":"Hold TL6 Energy combat performance axes at TL5 while retaining TL6 installation footprint.","overrides":[{"profile":"energy_main","tl":6,"field":"accuracyPp","value":30},{"profile":"energy_main","tl":6,"field":"lowDamage","value":5},{"profile":"energy_main","tl":6,"field":"standardDamage","value":8},{"profile":"energy_main","tl":6,"field":"highDamage","value":10},{"profile":"energy_main","tl":6,"field":"spen","value":3},{"profile":"energy_main","tl":6,"field":"range","value":7}]},
+    {"id":"hold_missile","description":"Hold TL6 Missile delivery/guidance performance at the corrected TL5 movement invariant and TL5 range/guidance.","overrides":[{"profile":"missile_delivery","tl":6,"field":"missileMove","value":6},{"profile":"missile_delivery","tl":6,"field":"range","value":9},{"profile":"missile_guidance","tl":6,"field":"guidanceBaseHit","value":60}]}
+  ],
+  "tl8EnergyFactorial": [
+    {"id":"candidate_damage_apen3","damage":"7/10/12","apen":3,"overrides":[]},
+    {"id":"cp126_damage_apen3","damage":"8/11/13","apen":3,"overrides":[{"profile":"energy_main","tl":8,"field":"lowDamage","value":8},{"profile":"energy_main","tl":8,"field":"standardDamage","value":11},{"profile":"energy_main","tl":8,"field":"highDamage","value":13}]},
+    {"id":"candidate_damage_apen2","damage":"7/10/12","apen":2,"overrides":[{"profile":"energy_main","tl":8,"field":"apen","value":2}]},
+    {"id":"cp126_damage_apen2","damage":"8/11/13","apen":2,"overrides":[{"profile":"energy_main","tl":8,"field":"lowDamage","value":8},{"profile":"energy_main","tl":8,"field":"standardDamage","value":11},{"profile":"energy_main","tl":8,"field":"highDamage","value":13},{"profile":"energy_main","tl":8,"field":"apen","value":2}]}
+  ],
+  "interpretationBoundary": {
+    "adjacentTlWinRatesAreTargets": false,
+    "strongEraOrMaturationStepsMayRemain": true,
+    "reopenMainValueOnlyForConcreteEvidence": true,
+    "mostAuxiliaryProgressionDeferred": true,
+    "internalCriticalDamageSimulated": false
+  },
+  "expected": {
+    "legalBuilds": 9427,
+    "finalBaselineTasks": 18646,
+    "finalBaselineVariants": 74584,
+    "tl5Tl6AblationSampleTasks": 120,
+    "tl5Tl6AblationConditions": 9,
+    "tl5Tl6AblationVariants": 4320,
+    "tl8EnergySampleTasks": 120,
+    "tl8EnergyConditions": 4,
+    "tl8EnergyVariants": 7680,
+    "generatedVariants": 86584,
+    "pipelineSmokeTrials": 86584,
+    "substantiveTrials": 8658400,
+    "telemetryMetrics": 61
+  }
+}

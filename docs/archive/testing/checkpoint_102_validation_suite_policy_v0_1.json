@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-102-validation-suite-policy-v0_1",
+  "checkpoint": 102,
+  "status": "candidate_pending_native_acceptance",
+  "mustAlwaysRun": {
+    "nativeDependencyPrecheck": true,
+    "repositoryContract": true,
+    "manifestAndPowerShellSyntax": true,
+    "pinnedSdk": true,
+    "warningsAsErrorsBuild": true,
+    "unitTests": true,
+    "deterministicAndMechanicsGates": true,
+    "acceptedCp99ExactEdgePreflightRegression": true,
+    "acceptedCp99ExactEdgeGenerationRegression": true,
+    "cp102V7ConstructionConsumerPreflight": true,
+    "cp102V7TransitionConsumerPreflight": true,
+    "cp102V7TransitionGeneration": true,
+    "cp102GeneratedActualConsumerPreflight": true,
+    "cp102GeneratedOneTrialFullPipelineSmoke": true,
+    "runnerSelfTests": true,
+    "repositoryOnlyThenFullSameTreeSequence": true,
+    "newSubstantiveMonteCarloStudy": false
+  },
+  "acceptedBaseline": {
+    "checkpoint": 101,
+    "checkpointDefinitionSha256": "31c6fe641a562005af325034c925d76f7339f97827d21cad5989052a4872cba3",
+    "checkpointManifestSha256": "674912367de56d5dd3775f2535bc768b636dbd625c0583362c3df024ee5d1fab",
+    "nativeResultsZipSha256": "6320c62576097aed1f7f3060011f174d880cda5ead28576cf19d5fa14408f5d7",
+    "xunitTests": 876,
+    "runnerStages": 10,
+    "scenarioRunnerSelfTests": 63,
+    "stochasticExecutions": 0
+  },
+  "acceptedExecutableCrossProgression": {
+    "foundation": "v0.8",
+    "legalBuilds": 11776,
+    "progressionLegalEdges": 37184,
+    "exactEdgeStrata": 181,
+    "logicalPairings": 362,
+    "generatedVariants": 724,
+    "mandatorySensor": true,
+    "retainedUnderAcceptedCheckpoint": 101
+  },
+  "authorityBoundary": {
+    "cp101Tl3ValuesChanged": false,
+    "technologyPromotionAutomatic": false,
+    "balanceCalibrationPerformed": false,
+    "initiativeRuleChange": false,
+    "detailedMissileNavigationSensorProfileInvented": false,
+    "tl3CombatConsumerEnabledAfterImplementation": true
+  },
+  "cp102V7": {
+    "constructionEnvelope": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v0_9.json",
+    "transitionSmoke": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_0.json",
+    "runtimeProfiles": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl3-standard-runtime-profiles-v0_4.json",
+    "constructionRawCombinations": 221184,
+    "constructionLegalBuilds": 51264,
+    "constructionExactFillBuilds": 10752,
+    "transitionRawCombinations": 43008,
+    "transitionLegalBuilds": 38400,
+    "progressionLegalEdges": 220416,
+    "registeredTransitions": 16,
+    "logicalPairings": 16,
+    "movementOrderGeometries": 2,
+    "generatedSmokeVariants": 32,
+    "trialsPerVariant": 1,
+    "totalSmokeTrials": 32
+  },
+  "preflight": {
+    "acceptedCp101ProvenanceAndFreeze": true,
+    "cp101Tl3RegistryHashFrozen": true,
+    "cp99V6FoundationHashFrozen": true,
+    "v7SchemaAndTypedProgressionSemantics": true,
+    "variableHullCapacityAndSpaceDeltaArithmetic": true,
+    "optionalShieldHardenerCompatibility": true,
+    "mandatoryMainReactorSensor": true,
+    "dualMainDualReactorIllegal": true,
+    "ewRedundancyNonAdditive": true,
+    "runtimeFieldOwnership": true,
+    "actualConsumerDeserializer": true,
+    "checkpointExecutionArithmetic": true,
+    "powerShell51TypeTokenAudit": true,
+    "crossTlProgressionEdgeMemberSurface": true,
+    "integratedGeneratedStudyRegistrationSurface": true,
+    "zeroCostWeaponSpendSemantics": true,
+    "trialExceptionStackTraceDiagnostics": true
+  },
+  "expected": {
+    "xunitTests": 876,
+    "runnerStages": 15,
+    "scenarioRunnerSelfTests": 70,
+    "totalTrialExecutions": 32
+  },
+  "deepCalibration": {
+    "applicable": false,
+    "aliasUsesSameBoundedWorkload": true
+  },
+  "purpose": "Native acceptance for executable TL3 consumer integration. The 32 one-trial variants are pipeline smoke only and are not balance evidence."
+}

@@ -1,0 +1,252 @@
+{
+  "schemaVersion": "star-cluster-architecture-runtime-profile-catalog-v1",
+  "id": "tl1-tl3-standard-runtime-profiles-v0_5",
+  "checkpoint": 122,
+  "status": "checkpoint122_canonical_x2_damage_domain_migration",
+  "baselineSha256": "generated canonical x2 successor; verified by CP122 contract",
+  "policy": {
+    "tl1MustEqualFrozenBaseline": true,
+    "legacyTl2ProductionPreserved": true,
+    "cp102Tl2IntegrationReferenceNotPromotion": true,
+    "tl3ExecutableCandidateNotCalibrated": true,
+    "tl3AutomaticPromotion": false,
+    "higherTlGeneration": false,
+    "historicalSourceProfilesPreserved": true,
+    "pointDomainExactlyDoubled": true,
+    "nonPointDomainUnchanged": true,
+    "balanceChangeIntended": false,
+    "productionDamageControlHullPerRepairKit": 1,
+    "criticalCadenceMigrationDeferred": true
+  },
+  "profiles": [
+    {
+      "id": "tl1-production",
+      "label": "TL1 Production Control",
+      "technologyLevel": 1,
+      "source": "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_4.csv",
+      "defense": {
+        "hull": 24,
+        "armorIntegrity": 8,
+        "armorProtection": 0,
+        "shieldCapacity": 4,
+        "shieldBaseRecharge": 2,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 5,
+        "targetingBonus": 10,
+        "effectivePdsChance": 45,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 2
+      },
+      "movement": {
+        "shipMove": 1,
+        "missileMove": 2
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 8,
+          "shieldPenetration": 2,
+          "armorPenetration": 0,
+          "accuracyBonus": 20,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 6,
+          "shieldPenetration": 2,
+          "armorPenetration": 2,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 10,
+          "shieldPenetration": 2,
+          "armorPenetration": 4,
+          "accuracyBonus": 0,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      }
+    },
+    {
+      "id": "tl2-production",
+      "label": "Accepted TL2 Standard Combat Profile",
+      "technologyLevel": 2,
+      "source": "Canonical CP122 x2 migration of: src/StarCluster.ScenarioRunner/Scenarios/AuxiliaryTechnology/tl2-accepted-standard-combat-profile-v0_1.json",
+      "defense": {
+        "hull": 24,
+        "armorIntegrity": 10,
+        "armorProtection": 0,
+        "shieldCapacity": 4,
+        "shieldBaseRecharge": 2,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 8,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 23,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 6,
+          "shieldPenetration": 2,
+          "armorPenetration": 2,
+          "accuracyBonus": 28,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 10,
+          "shieldPenetration": 2,
+          "armorPenetration": 4,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl2-cp102-integration-reference",
+      "label": "CP102 TL2 Integration Reference",
+      "technologyLevel": 2,
+      "source": "Canonical CP122 x2 migration of: CP102 binding of current TL2 architecture values; not a promotion of the legacy tl2-production profile.",
+      "defense": {
+        "hull": 24,
+        "armorIntegrity": 10,
+        "armorProtection": 0,
+        "shieldCapacity": 6,
+        "shieldBaseRecharge": 2,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 25,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 8,
+          "shieldPenetration": 2,
+          "armorPenetration": 2,
+          "accuracyBonus": 20,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 6,
+          "shieldPenetration": 2,
+          "armorPenetration": 2,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 10,
+          "shieldPenetration": 2,
+          "armorPenetration": 4,
+          "accuracyBonus": 0,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      }
+    },
+    {
+      "id": "tl3-cp102-executable-candidate",
+      "label": "CP102 TL3 Executable Candidate",
+      "technologyLevel": 3,
+      "source": "Canonical CP122 x2 migration of: docs/archive/player_technology/pre-cp165-active/tl3_base_technology_candidates_v0_2.json; scalar standard-mode bridge with build/variant overrides for TL3 capabilities.",
+      "defense": {
+        "hull": 24,
+        "armorIntegrity": 10,
+        "armorProtection": 2,
+        "shieldCapacity": 6,
+        "shieldBaseRecharge": 2,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 25,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 3,
+        "missileMove": 4
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 8,
+          "shieldPenetration": 2,
+          "armorPenetration": 2,
+          "accuracyBonus": 20,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 0,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 6,
+          "shieldPenetration": 2,
+          "armorPenetration": 2,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 10,
+          "shieldPenetration": 2,
+          "armorPenetration": 4,
+          "accuracyBonus": 0,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      }
+    }
+  ],
+  "damagePointScale": 2
+}

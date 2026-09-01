@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "star-cluster-telemetry-instrumentation-contract-v0.2",
+  "checkpoint": 126,
+  "status": "candidate",
+  "inherits": "docs/design/testing/telemetry_instrumentation_contract_v0_1.json",
+  "baseMetrics": 47,
+  "fullMapMetrics": 14,
+  "totalMetrics": 61,
+  "purpose": "Extend the accepted CP124 raw telemetry contract with full finite-System-Map, Adaptive Engage, and actual missile-pursuit observables while preserving raw ownership semantics.",
+  "fullMapAdditions": [
+    {"metric":"search_moves","dimension":"movement","owner":"actor","kind":"raw_counter"},
+    {"metric":"adaptive_close_orders","dimension":"tactics","owner":"actor","kind":"raw_counter"},
+    {"metric":"adaptive_open_orders","dimension":"tactics","owner":"actor","kind":"raw_counter"},
+    {"metric":"adaptive_maintain_orders","dimension":"tactics","owner":"actor","kind":"raw_counter"},
+    {"metric":"adaptive_standoff_orders","dimension":"tactics","owner":"actor","kind":"raw_counter"},
+    {"metric":"boundary_end_moves","dimension":"movement","owner":"actor","kind":"raw_counter"},
+    {"metric":"contact_established_turn","dimension":"information","owner":"observer","kind":"raw_turn"},
+    {"metric":"missile_movement_hexes","dimension":"missile_geometry","owner":"attacker","kind":"raw_counter"},
+    {"metric":"missile_reroutes","dimension":"missile_geometry","owner":"attacker","kind":"raw_counter"},
+    {"metric":"missile_target_movement_reroutes","dimension":"missile_geometry","owner":"attacker","kind":"raw_counter"},
+    {"metric":"missile_range_exhausted","dimension":"missile_geometry","owner":"attacker","kind":"raw_counter"},
+    {"metric":"maximum_missile_distance_traveled","dimension":"missile_geometry","owner":"attacker","kind":"raw_quantity"},
+    {"metric":"maximum_own_attack_range","dimension":"tactics","owner":"actor","kind":"raw_quantity"},
+    {"metric":"maximum_observed_opponent_attack_range","dimension":"tactics","owner":"observer","kind":"raw_quantity"}
+  ],
+  "ownershipNotes": [
+    "Missile launches and missile movement/range-exhaustion telemetry belong to the attacker/owner.",
+    "Terminal arrivals, guidance attempts, missile hits, PDS attempts/intercepts, and received damage remain target/defender telemetry under the inherited CP124 contract.",
+    "Adaptive-order counters belong to the moving actor; observed opponent attack range belongs to the observer's tactical blackboard.",
+    "Derived rates are non-authoritative and must remain reconstructible from raw counters."
+  ]
+}

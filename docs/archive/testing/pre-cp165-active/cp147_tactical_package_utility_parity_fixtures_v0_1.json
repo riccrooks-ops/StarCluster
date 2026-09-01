@@ -1,0 +1,297 @@
+{
+  "schemaVersion": "star-cluster-cp147-tactical-package-utility-parity-v0.1",
+  "checkpoint": 147,
+  "purpose": "Shared C#/Python deterministic selector contract. Utility inputs are current-state research-policy values, not promoted component statistics.",
+  "cases": [
+    {
+      "id": "higher-total-utility-wins",
+      "spendableTacticalPower": 5,
+      "candidates": [
+        {
+          "id": "direct",
+          "tacticalPower": 4,
+          "offenseUtilityMilli": 3000,
+          "defenseUtilityMilli": 0,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        },
+        {
+          "id": "defend",
+          "tacticalPower": 4,
+          "offenseUtilityMilli": 0,
+          "defenseUtilityMilli": 3500,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 1,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        }
+      ],
+      "expectedSelectedId": "defend"
+    },
+    {
+      "id": "infeasible-package-is-filtered",
+      "spendableTacticalPower": 4,
+      "candidates": [
+        {
+          "id": "too-expensive",
+          "tacticalPower": 5,
+          "offenseUtilityMilli": 9000,
+          "defenseUtilityMilli": 0,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        },
+        {
+          "id": "feasible",
+          "tacticalPower": 4,
+          "offenseUtilityMilli": 2500,
+          "defenseUtilityMilli": 0,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        }
+      ],
+      "expectedSelectedId": "feasible"
+    },
+    {
+      "id": "exact-total-favors-offense",
+      "spendableTacticalPower": 5,
+      "candidates": [
+        {
+          "id": "direct",
+          "tacticalPower": 5,
+          "offenseUtilityMilli": 3000,
+          "defenseUtilityMilli": 1000,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        },
+        {
+          "id": "defense",
+          "tacticalPower": 5,
+          "offenseUtilityMilli": 2000,
+          "defenseUtilityMilli": 2000,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 1,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        }
+      ],
+      "expectedSelectedId": "direct"
+    },
+    {
+      "id": "exact-offense-favors-defense",
+      "spendableTacticalPower": 5,
+      "candidates": [
+        {
+          "id": "base",
+          "tacticalPower": 5,
+          "offenseUtilityMilli": 2500,
+          "defenseUtilityMilli": 500,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        },
+        {
+          "id": "pds",
+          "tacticalPower": 5,
+          "offenseUtilityMilli": 2500,
+          "defenseUtilityMilli": 700,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 1,
+          "activeSensor": true,
+          "firmTrack": true
+        }
+      ],
+      "expectedSelectedId": "pds"
+    },
+    {
+      "id": "funded-main-breaks-exact-utility-tie",
+      "spendableTacticalPower": 5,
+      "candidates": [
+        {
+          "id": "no-main",
+          "tacticalPower": 4,
+          "offenseUtilityMilli": 2000,
+          "defenseUtilityMilli": 1000,
+          "fundedMainBanks": 0,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 1,
+          "activeSensor": true,
+          "firmTrack": true
+        },
+        {
+          "id": "main",
+          "tacticalPower": 5,
+          "offenseUtilityMilli": 2000,
+          "defenseUtilityMilli": 1000,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        }
+      ],
+      "expectedSelectedId": "main"
+    },
+    {
+      "id": "active-sensor-breaks-exact-tie",
+      "spendableTacticalPower": 4,
+      "candidates": [
+        {
+          "id": "passive",
+          "tacticalPower": 4,
+          "offenseUtilityMilli": 2000,
+          "defenseUtilityMilli": 1000,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": false,
+          "firmTrack": true
+        },
+        {
+          "id": "active",
+          "tacticalPower": 4,
+          "offenseUtilityMilli": 2000,
+          "defenseUtilityMilli": 1000,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        }
+      ],
+      "expectedSelectedId": "active"
+    },
+    {
+      "id": "firm-track-breaks-exact-tie",
+      "spendableTacticalPower": 4,
+      "candidates": [
+        {
+          "id": "approx",
+          "tacticalPower": 4,
+          "offenseUtilityMilli": 2000,
+          "defenseUtilityMilli": 1000,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": false
+        },
+        {
+          "id": "firm",
+          "tacticalPower": 4,
+          "offenseUtilityMilli": 2000,
+          "defenseUtilityMilli": 1000,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        }
+      ],
+      "expectedSelectedId": "firm"
+    },
+    {
+      "id": "fewer-held-banks-breaks-exact-tie",
+      "spendableTacticalPower": 4,
+      "candidates": [
+        {
+          "id": "held",
+          "tacticalPower": 4,
+          "offenseUtilityMilli": 2000,
+          "defenseUtilityMilli": 1000,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 1,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        },
+        {
+          "id": "direct",
+          "tacticalPower": 4,
+          "offenseUtilityMilli": 2000,
+          "defenseUtilityMilli": 1000,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        }
+      ],
+      "expectedSelectedId": "direct"
+    },
+    {
+      "id": "lower-power-breaks-exact-tie",
+      "spendableTacticalPower": 5,
+      "candidates": [
+        {
+          "id": "cost5",
+          "tacticalPower": 5,
+          "offenseUtilityMilli": 2000,
+          "defenseUtilityMilli": 1000,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        },
+        {
+          "id": "cost4",
+          "tacticalPower": 4,
+          "offenseUtilityMilli": 2000,
+          "defenseUtilityMilli": 1000,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        }
+      ],
+      "expectedSelectedId": "cost4"
+    },
+    {
+      "id": "identifier-is-final-deterministic-tie-break",
+      "spendableTacticalPower": 5,
+      "candidates": [
+        {
+          "id": "alpha",
+          "tacticalPower": 4,
+          "offenseUtilityMilli": 2000,
+          "defenseUtilityMilli": 1000,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        },
+        {
+          "id": "beta",
+          "tacticalPower": 4,
+          "offenseUtilityMilli": 2000,
+          "defenseUtilityMilli": 1000,
+          "fundedMainBanks": 1,
+          "heldMainBanks": 0,
+          "pdsReactionCapacity": 0,
+          "activeSensor": true,
+          "firmTrack": true
+        }
+      ],
+      "expectedSelectedId": "beta"
+    }
+  ]
+}

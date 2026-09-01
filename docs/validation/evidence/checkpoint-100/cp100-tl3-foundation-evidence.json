@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "star-cluster-cp100-retained-executable-foundation-evidence-v1",
+  "checkpoint": 100,
+  "status": "native_accepted",
+  "acceptedDefinitionSha256": "4d9420008706b2970151159d4041a2b3ad81bad145b8985a1583416f82d54c13",
+  "acceptedManifestSha256": "e8104cc761e0807414ccf278a7bd9813cdd3ea99cfd5f58dab9ae7cce16faaf6",
+  "build": {
+    "cleanExecuted": true,
+    "succeeded": true,
+    "warnings": 0,
+    "errors": 0,
+    "elapsedSeconds": 6.3075233
+  },
+  "tests": {
+    "succeeded": true,
+    "total": 876,
+    "passed": 876,
+    "failed": 0,
+    "skipped": 0,
+    "elapsedSeconds": 2.0289034999999997,
+    "trxPath": "out/checkpoint-100/test-results/checkpoint-tests.trx"
+  },
+  "aggregates": {
+    "configuredRunnerStages": 10,
+    "runnerStagesPassed": 10,
+    "runnerStagesFailed": 0,
+    "deterministicCases": 7,
+    "mechanicsCases": 90,
+    "variants": 0,
+    "trials": 0,
+    "selfTests": 63,
+    "failedGates": 0
+  },
+  "retainedCp99Foundation": {
+    "studyId": "cross-tl-build-permutation-foundation-v0_8",
+    "studySha256": "148f4aadda8d65891a961a6e981c77c67e4e28a00359f0ad476e2e257f5be944",
+    "generatedStudySha256": "f41cd6473bbe5987c417038c881b35731456c82557194e0b656eab5a41469ec4",
+    "rawCombinationCount": 82944,
+    "legalBuildCount": 11776,
+    "exactFillBuildCount": 2944,
+    "nearFillBuildCount": 6656,
+    "underfilledBuildCount": 2176,
+    "logicalPairingCount": 362,
+    "geometryCount": 2,
+    "generatedVariantCount": 724,
+    "failedGateCount": 0
+  },
+  "interpretation": "CP100 native acceptance validates the TL3 core technology/documentation foundation while preserving CP99 foundation v0.8 as the executable TL1/TL2 consumer. CP100 ran no substantive Monte Carlo."
+}

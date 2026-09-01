@@ -1,0 +1,644 @@
+{
+  "schemaVersion": "star-cluster-cross-tl-build-permutation-v7",
+  "checkpoint": "102",
+  "totalInstallationSpace": 36,
+  "fixedShellSpace": 0,
+  "fixedShell": {
+    "description": "CP102 v7 enumerates STL/FTL/PDS and Hull capacity explicitly; no combat-system Installation Space remains hidden in the fixed shell.",
+    "stlDriveSpace": 0,
+    "ftlDriveSpace": 0,
+    "kineticPdsSpace": 0,
+    "kineticPdsCount": 0
+  },
+  "baselineProfileId": "tl2-cp102-integration-reference",
+  "technologyProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl3-standard-runtime-profiles-v0_4.json",
+  "auxiliaryProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl2-auxiliary-runtime-profiles-v0_3.json",
+  "auxiliaryProfileId": "aux-r53-none-tl1",
+  "sensorEwProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/SensorEw/tl2-sew01-sensor-discrimination-isolation.json",
+  "aiDoctrineCatalog": "docs/archive/ai/pre-cp165-active/ai_doctrine_registry_v0_2.json",
+  "aiDoctrineId": "tl1-ew-preserve-combat-package-v1",
+  "constructionGuardrails": {
+    "minimumMainWeaponCount": 1,
+    "minimumReactorCount": 1,
+    "additionalMainWeaponsOptional": true,
+    "additionalReactorsOptional": true,
+    "duplicationMustBeExplicit": true,
+    "redundantEwInstallationsAllowed": true,
+    "ecmSameTypeRatingsAdditive": false,
+    "eccmSameTypeRatingsAdditive": false,
+    "ewDuplicateResolution": "highest_applicable_functional_rating",
+    "powerSufficiencyIsConstructionLegalityFilter": false,
+    "minimumSensorCount": 1,
+    "sensorlessDiagnosticsAllowedOutsideLegalPopulation": true
+  },
+  "id": "cross-tl-build-permutation-foundation-v0_9",
+  "status": "checkpoint102_tl2_tl3_construction_envelope_preflight",
+  "purpose": "Executable CP102 v7 TL2/TL3 construction-envelope preflight. Enumerate every spatially distinct base construction choice needed for hull capacity, Main/Reactor multiplicity, Shield/Hardener compatibility, EW redundancy, propulsion, and PDS footprint while deliberately collapsing Space-isomorphic family/mode states that cannot change construction legality. No combat balance inference.",
+  "coverageMode": "construction_envelope",
+  "variantIdPrefix": "c102e",
+  "generatedStudyId": "tl3-cp102-construction-envelope-preflight",
+  "masterSeed": 1020100,
+  "trialsPerVariant": 1,
+  "expectedRawCombinationCount": 221184,
+  "expectedLegalBuildCount": 51264,
+  "expectedExactFillBuildCount": 10752,
+  "expectedNearFillBuildCount": 25536,
+  "expectedUnderfilledBuildCount": 14976,
+  "expectedNamedRecipeCount": 0,
+  "expectedNamedLogicalPairingCount": 0,
+  "expectedStratifiedLogicalPairingCount": 0,
+  "expectedLogicalPairingCount": 0,
+  "expectedGeometryCount": 0,
+  "expectedGeneratedVariantCount": 0,
+  "stratifiedPairingSelection": null,
+  "exactEdgePairingSelection": null,
+  "progressionLattice": {
+    "enabled": false,
+    "requireSameInstallationSpace": false,
+    "expectedTotalLegalEdgeCount": 0,
+    "transitions": []
+  },
+  "axes": [
+    {
+      "id": "hull",
+      "code": "h",
+      "options": [
+        {
+          "id": "h2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "installationSpaceCapacity": 35,
+          "note": "TL2 35-Space cruiser envelope."
+        },
+        {
+          "id": "h3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "installationSpaceCapacity": 36,
+          "note": "TL3 mature cruiser integration: 36 Installation Space; no bundled Hull durability increase."
+        }
+      ]
+    },
+    {
+      "id": "weapon",
+      "code": "w",
+      "options": [
+        {
+          "id": "k2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 6,
+          "mainWeaponCount": 1,
+          "family": "Kinetic",
+          "note": "TL2 Kinetic integration reference: APEN1, ordinary 1 TP.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 4,
+          "accuracyBonus": 20,
+          "powerCost": 1,
+          "maximumRange": 4,
+          "ammunition": 100
+        },
+        {
+          "id": "k2x2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 12,
+          "mainWeaponCount": 2,
+          "family": "Kinetic",
+          "note": "TL2 Kinetic integration reference: APEN1, ordinary 1 TP.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 4,
+          "accuracyBonus": 20,
+          "powerCost": 1,
+          "maximumRange": 4,
+          "ammunition": 100
+        },
+        {
+          "id": "k3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 6,
+          "mainWeaponCount": 1,
+          "family": "Kinetic",
+          "note": "TL3 Kinetic maturation: packet held; ordinary firing improves to 0 discretionary TP.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 4,
+          "accuracyBonus": 20,
+          "powerCost": 0,
+          "maximumRange": 4,
+          "ammunition": 100
+        },
+        {
+          "id": "k3x2",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 12,
+          "mainWeaponCount": 2,
+          "family": "Kinetic",
+          "note": "TL3 Kinetic maturation: packet held; ordinary firing improves to 0 discretionary TP.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 4,
+          "accuracyBonus": 20,
+          "powerCost": 0,
+          "maximumRange": 4,
+          "ammunition": 100
+        },
+        {
+          "id": "e2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 6,
+          "mainWeaponCount": 1,
+          "family": "Energy",
+          "note": "TL2 Energy standard mode: 2 TP -> DAM3, Acc+25, SPEN1/APEN1.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 3,
+          "accuracyBonus": 25,
+          "powerCost": 2,
+          "maximumRange": 5,
+          "ammunition": null
+        },
+        {
+          "id": "e2x2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 12,
+          "mainWeaponCount": 2,
+          "family": "Energy",
+          "note": "TL2 Energy standard mode: 2 TP -> DAM3, Acc+25, SPEN1/APEN1.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 3,
+          "accuracyBonus": 25,
+          "powerCost": 2,
+          "maximumRange": 5,
+          "ammunition": null
+        },
+        {
+          "id": "e3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 6,
+          "mainWeaponCount": 1,
+          "family": "Energy",
+          "note": "TL3 Energy retains the 2 TP standard mode and adds safe Low 1 TP -> DAM2 and High 3 TP -> DAM4; transition smoke selects High.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 3,
+          "accuracyBonus": 25,
+          "powerCost": 2,
+          "maximumRange": 5,
+          "ammunition": null,
+          "preferredSmokeModeId": "high",
+          "preferredSmokeModeDamage": 4,
+          "preferredSmokeModePowerCost": 3,
+          "preferredSmokeModeAccuracyBonus": 25
+        },
+        {
+          "id": "e3x2",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 12,
+          "mainWeaponCount": 2,
+          "family": "Energy",
+          "note": "TL3 Energy retains the 2 TP standard mode and adds safe Low 1 TP -> DAM2 and High 3 TP -> DAM4; transition smoke selects High.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 3,
+          "accuracyBonus": 25,
+          "powerCost": 2,
+          "maximumRange": 5,
+          "ammunition": null,
+          "preferredSmokeModeId": "high",
+          "preferredSmokeModeDamage": 4,
+          "preferredSmokeModePowerCost": 3,
+          "preferredSmokeModeAccuracyBonus": 25
+        },
+        {
+          "id": "m2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 6,
+          "mainWeaponCount": 1,
+          "family": "Missile",
+          "note": "TL2 Missile integration reference: Move3 and no standard onboard navigation sensor.",
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "damage": 5,
+          "accuracyBonus": 0,
+          "powerCost": 0,
+          "maximumRange": 6,
+          "ammunition": 25,
+          "missileMove": 3,
+          "standardOnboardNavigationSensor": false
+        },
+        {
+          "id": "m2x2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 12,
+          "mainWeaponCount": 2,
+          "family": "Missile",
+          "note": "TL2 Missile integration reference: Move3 and no standard onboard navigation sensor.",
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "damage": 5,
+          "accuracyBonus": 0,
+          "powerCost": 0,
+          "maximumRange": 6,
+          "ammunition": 25,
+          "missileMove": 3,
+          "standardOnboardNavigationSensor": false
+        },
+        {
+          "id": "m3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 6,
+          "mainWeaponCount": 1,
+          "family": "Missile",
+          "note": "TL3 Missile maturation: Move4 and standard onboard navigation sensor; seeker remains optional and detailed navigation-sensor track statistics remain deferred.",
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "damage": 5,
+          "accuracyBonus": 0,
+          "powerCost": 0,
+          "maximumRange": 6,
+          "ammunition": 25,
+          "missileMove": 4,
+          "standardOnboardNavigationSensor": true
+        },
+        {
+          "id": "m3x2",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 12,
+          "mainWeaponCount": 2,
+          "family": "Missile",
+          "note": "TL3 Missile maturation: Move4 and standard onboard navigation sensor; seeker remains optional and detailed navigation-sensor track statistics remain deferred.",
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "damage": 5,
+          "accuracyBonus": 0,
+          "powerCost": 0,
+          "maximumRange": 6,
+          "ammunition": 25,
+          "missileMove": 4,
+          "standardOnboardNavigationSensor": true
+        }
+      ]
+    },
+    {
+      "id": "reactor",
+      "code": "r",
+      "options": [
+        {
+          "id": "r2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 6,
+          "reactorCount": 1,
+          "reactorOutput": 6,
+          "note": "TL2 Early Practical Fusion, 6 TP per reactor / 6 Space."
+        },
+        {
+          "id": "r2x2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 12,
+          "reactorCount": 2,
+          "reactorOutput": 6,
+          "note": "TL2 Early Practical Fusion, 6 TP per reactor / 6 Space."
+        },
+        {
+          "id": "r3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 5,
+          "reactorCount": 1,
+          "reactorOutput": 6,
+          "note": "TL3 Mature Compact Fusion, 6 TP per reactor / 5 Space; damaged-state mapping held."
+        },
+        {
+          "id": "r3x2",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 10,
+          "reactorCount": 2,
+          "reactorOutput": 6,
+          "note": "TL3 Mature Compact Fusion, 6 TP per reactor / 5 Space; damaged-state mapping held."
+        }
+      ]
+    },
+    {
+      "id": "computer",
+      "code": "c",
+      "options": [
+        {
+          "id": "c2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 3,
+          "targetingBonus": 12,
+          "evasiveCompensation": 0,
+          "note": "TL2 +12 targeting; EvComp0."
+        },
+        {
+          "id": "c3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 3,
+          "targetingBonus": 12,
+          "evasiveCompensation": 5,
+          "note": "TL3 EvComp applies only against the firing ship own Evasive penalty and cannot create a bonus."
+        }
+      ]
+    },
+    {
+      "id": "sensor",
+      "code": "s",
+      "options": [
+        {
+          "id": "s2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 3,
+          "installed": true,
+          "sensorEwProfileId": "tl2-discrimination-1-candidate",
+          "passiveFirmRange": 1,
+          "passiveApproximateRange": 3,
+          "activeLowFirmRange": 3,
+          "activeLowApproximateRange": 4,
+          "activeLowPowerCost": 1,
+          "note": "TL2 DR1 integration reference with current 3/4 @1 TP normal Active envelope; no TL3 High normal mode."
+        },
+        {
+          "id": "s3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 3,
+          "installed": true,
+          "sensorEwProfileId": "tl2-discrimination-1-candidate",
+          "passiveFirmRange": 1,
+          "passiveApproximateRange": 3,
+          "activeLowFirmRange": 3,
+          "activeLowApproximateRange": 4,
+          "activeLowPowerCost": 1,
+          "activeHighFirmRange": 4,
+          "activeHighApproximateRange": 5,
+          "activeHighPowerCost": 2,
+          "note": "TL3 dual normal Active modes: Low 3/4 @1 TP; High 4/5 @2 TP; High is not overload and causes no Strain."
+        }
+      ]
+    },
+    {
+      "id": "shield",
+      "code": "sh",
+      "options": [
+        {
+          "id": "sh0",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "installed": false,
+          "shieldCapacity": 0,
+          "note": "No shield installed."
+        },
+        {
+          "id": "sh2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 3,
+          "installed": true,
+          "shieldCapacity": 3,
+          "note": "TL2/TL3 primary shield capacity3 / 3 Space held; TL3 hardening is a separate optional component."
+        }
+      ]
+    },
+    {
+      "id": "shieldHardener",
+      "code": "hd",
+      "options": [
+        {
+          "id": "hard0",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "installed": false,
+          "shieldArmorBonus": 0,
+          "sustainedPowerCost": 0,
+          "note": "No Shield Hardener installed."
+        },
+        {
+          "id": "hard3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 1,
+          "installed": true,
+          "shieldArmorBonus": 1,
+          "sustainedPowerCost": 1,
+          "note": "TL3 optional Shield Hardener: SA1 for sustained 1 TP; nonstacking."
+        }
+      ]
+    },
+    {
+      "id": "armor",
+      "code": "a",
+      "options": [
+        {
+          "id": "a2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "armorProtection": 0,
+          "armorIntegrity": 5,
+          "note": "TL2 AP0/AI5."
+        },
+        {
+          "id": "a3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "armorProtection": 1,
+          "armorIntegrity": 5,
+          "note": "TL3 AP1/AI5; Integrity held."
+        }
+      ]
+    },
+    {
+      "id": "ecm",
+      "code": "em",
+      "options": [
+        {
+          "id": "ecm0",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "installed": false,
+          "ewRatings": [],
+          "ewNormalPowerCost": 1,
+          "note": "No suite installed."
+        },
+        {
+          "id": "ecm2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 1,
+          "installed": true,
+          "ewRatings": [
+            2
+          ],
+          "ewNormalPowerCost": 1,
+          "ewFullStrengthNormalPowerCost": null,
+          "note": "TL2 ECM Rating2 at 1 TP/rating; full Rating2 costs 2 TP; duplicate same-type ratings remain non-additive."
+        },
+        {
+          "id": "ecm2x2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 2,
+          "installed": true,
+          "ewRatings": [
+            2,
+            2
+          ],
+          "ewNormalPowerCost": 1,
+          "ewFullStrengthNormalPowerCost": null,
+          "note": "TL2 ECM Rating2 at 1 TP/rating; full Rating2 costs 2 TP; duplicate same-type ratings remain non-additive."
+        }
+      ]
+    },
+    {
+      "id": "eccm",
+      "code": "ec",
+      "options": [
+        {
+          "id": "eccm0",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "installed": false,
+          "ewRatings": [],
+          "ewNormalPowerCost": 1,
+          "note": "No suite installed."
+        },
+        {
+          "id": "eccm2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 1,
+          "installed": true,
+          "ewRatings": [
+            2
+          ],
+          "ewNormalPowerCost": 1,
+          "ewFullStrengthNormalPowerCost": null,
+          "note": "TL2 ECCM Rating2 at 1 TP/rating; full Rating2 costs 2 TP; duplicate same-type ratings remain non-additive."
+        },
+        {
+          "id": "eccm2x2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 2,
+          "installed": true,
+          "ewRatings": [
+            2,
+            2
+          ],
+          "ewNormalPowerCost": 1,
+          "ewFullStrengthNormalPowerCost": null,
+          "note": "TL2 ECCM Rating2 at 1 TP/rating; full Rating2 costs 2 TP; duplicate same-type ratings remain non-additive."
+        }
+      ]
+    },
+    {
+      "id": "stl",
+      "code": "st",
+      "options": [
+        {
+          "id": "stl2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 5,
+          "normalMove": 2,
+          "note": "TL2 STL Move2 / 5 Space."
+        },
+        {
+          "id": "stl3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 5,
+          "normalMove": 3,
+          "note": "TL3 STL Move3 / 5 Space; bounded +1 Move overload remains +1 TP/+2 fuel/+1 Strain with Strain Limit2."
+        }
+      ]
+    },
+    {
+      "id": "ftl",
+      "code": "ft",
+      "options": [
+        {
+          "id": "ftl2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 5,
+          "strategicMove": 2,
+          "note": "TL2 strategic Move2 / 5 Space."
+        },
+        {
+          "id": "ftl3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 5,
+          "strategicMove": 3,
+          "note": "TL3 strategic Move3 / 5 Space; frontier-entry stop/interruption rules held."
+        }
+      ]
+    },
+    {
+      "id": "pds",
+      "code": "p",
+      "options": [
+        {
+          "id": "p0",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "installed": false,
+          "pdsCount": 0,
+          "note": "No PDS installed."
+        },
+        {
+          "id": "kpds2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 2,
+          "installed": true,
+          "pdsCount": 1,
+          "pdsFamily": "Kinetic",
+          "pdsBaseChance": 13,
+          "pdsPowerCost": 1,
+          "pdsReactionCapacity": 1,
+          "pdsFallbackPowerCost": null,
+          "pdsFallbackReactionCapacity": null,
+          "pdsAmmunition": 60,
+          "note": "Kinetic PDS base13 / RC1 / 1 TP / Ammo60 held at TL3."
+        }
+      ]
+    }
+  ],
+  "namedRecipes": [],
+  "pairingGroups": [],
+  "geometries": [],
+  "expectedOrientedPairingEnvelope": 2627997696,
+  "expectedUnorderedWithSelfPairingEnvelope": 1314024480,
+  "expectedUnorderedDistinctPairingEnvelope": 1313973216,
+  "expectedOrientedDistinctPairingEnvelope": 2627946432
+}

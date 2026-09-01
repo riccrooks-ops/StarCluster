@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-61-validation-suite-policy-v0_1",
+  "checkpoint": 61,
+  "status": "active_suite_plus_current_composed_ship_monte_carlo",
+  "principles": [
+    "Must-always-run covers repository/build/unit/deterministic authoritative contracts plus the current checkpoint's 54-variant composed-ship study.",
+    "Deep Calibration remains opt-in unless a checkpoint changes mechanics that require historical stochastic requalification.",
+    "Superseded calibration studies remain historical evidence but are not restored to the active release lineup.",
+    "Simulation diagnoses consequences; it does not manufacture fixed TL-versus-TL or build-versus-build win percentages.",
+    "The composed-ship study must use explicit 35-Space build records and the zero-effect AUX profile so historical implicit equipment cannot contaminate the comparison.",
+    "Sensorless-build outcomes from the established-Firm-track isolation are not sufficient promotion evidence without later sensor/EW-coupled validation."
+  ],
+  "mustAlwaysRunStageIds": [
+    "deterministic",
+    "tl1-phase-a",
+    "tl1-phase-b",
+    "tl1-installation-space-envelope",
+    "tl1-composed-ship-odd-build-combat",
+    "auxiliary-resource-endurance",
+    "checkpoint-53-resource-semantics-lock",
+    "runner-self-tests"
+  ],
+  "deepCalibrationStageIds": [
+    "tl1-kinetic-calibration",
+    "tl1-energy-calibration",
+    "tl1-weapon-matrix",
+    "tl1-pds-calibration",
+    "tl1-defensive-calibration",
+    "tl1-power-correction",
+    "tl1-range-control-calibration",
+    "tl1-damage-control-calibration",
+    "tl1-combat-pacing",
+    "tl1-integrated-tactical-combat",
+    "tl1-movement-kinetic-pacing-diagnostics",
+    "tl1-minimal-tactics-baseline"
+  ],
+  "archivedHistoricalStageCount": 38,
+  "inheritedCheckpoint58eStageCount": 56,
+  "activeRunnerStageCount": 8,
+  "deepRunnerStageCount": 20,
+  "notes": {
+    "activeMonteCarloVariants": 54,
+    "activeTrialsAtDefault": 540000,
+    "deepMonteCarloVariants": 1080,
+    "deepTrialsAtDefault": 10800000,
+    "composedBuildCount": 6,
+    "composedStudyBalanceTargetsBlocking": false,
+    "deepCalibrationRequiredForCheckpoint61Acceptance": false,
+    "reasonDeepCalibrationNotRequired": "The new explicit-build execution path is isolated from historical legacy-side composition; legacy integrated studies retain their prior one-PDS path."
+  }
+}

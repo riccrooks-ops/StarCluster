@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "star-cluster-native-acceptance-provenance-v1",
+  "checkpointId": "86a",
+  "source": "native Windows acceptance supplied by user",
+  "acceptanceSummary": {
+    "status": "Success",
+    "checkpointDefinitionSha256": "23dabf398f8ce4bf5f137a0387f6fed83315d389d6e4ff7f06b8e7c8965ad17d",
+    "checkpointManifestSha256": "5202769a7c31a60c574bc77adecebbe3ce1c38b5d65253d11d9f61907784d5a2",
+    "sdkExpected": "8.0.423",
+    "sdkActual": "8.0.423",
+    "buildWarnings": 0,
+    "buildErrors": 0,
+    "testsTotal": 863,
+    "testsPassed": 863,
+    "testsFailed": 0,
+    "runnerStagesPassed": 11,
+    "runnerStagesFailed": 0,
+    "scenarioRunnerSelfTests": 51,
+    "failedGates": 0,
+    "primaryStudyId": "tl2-itc12-weapon-penetration-layered-defense-permutations",
+    "primaryVariantCount": 288,
+    "primaryTrialsPerVariant": 10000,
+    "primaryTotalTrials": 2880000,
+    "primarySummarySha256": "1635e098ebe209fbc04a563361af68a7c29de9b63cf934bd0bff6e0de180e801"
+  },
+  "designDisposition": {
+    "kineticApen1": "locally_validated_working_candidate",
+    "kineticSpen2": "experimental_sensitivity",
+    "kineticApen1Spen2": "upper_integration_sensitivity_not_bundled",
+    "energyApen2": "no_current_envelope_benefit_not_promoted",
+    "energySpen2": "too_strong_for_ordinary_tl2_not_promoted",
+    "missileApen3": "no_current_envelope_benefit_not_promoted",
+    "missileSpen2": "no_current_envelope_benefit_not_promoted",
+    "armorAp0Ai5": "carried_locally_validated_working_candidate",
+    "armorAp1": "experimental_deferred_candidate",
+    "shieldCapacity3Space3": "carried_locally_validated_working_candidate",
+    "reactor6Tp6Space": "carried_locally_validated_working_candidate"
+  },
+  "durableSimulationLesson": {
+    "attackEligibilityAwareMovement": true,
+    "combatActivityGateRequired": true,
+    "note": "Dynamic movement policies must respect current attack eligibility/track/guidance constraints, not physical weapon range alone; standing permutation studies should compare dynamic combat activity to a healthy fixed reference."
+  }
+}

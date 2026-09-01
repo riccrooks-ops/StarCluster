@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "star-cluster-checkpoint-definition-v0.1",
+  "checkpoint": 138,
+  "title": "AUX Reference Architecture and Full-Ship Integration Sweep",
+  "status": "candidate_pending_native_validation",
+  "acceptedBaseline": 137,
+  "canonicalKernelVersion": "0.4",
+  "expectedPythonTests": 234,
+  "expectedCp138Tests": 8,
+  "expectedXunitTests": 913,
+  "expectedScenarioRunnerSelfTests": 70,
+  "expectedParityCases": 25,
+  "expectedLogicalContexts": 787,
+  "expectedVariants": 1574,
+  "expectedSymmetryComparisons": 50,
+  "declaredSubstantiveTrialsPerVariant": 2000,
+  "declaredSubstantiveTrials": 3148000,
+  "catalogComponents": 35,
+  "referencePhilosophies": 10,
+  "reactorTuningEnabled": false,
+  "automaticPromotion": false
+}

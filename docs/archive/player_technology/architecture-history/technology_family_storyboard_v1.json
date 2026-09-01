@@ -1,0 +1,3580 @@
+{
+  "schemaVersion": "star-cluster-technology-family-storyboard-v1",
+  "checkpoint": 105,
+  "status": "architecture-foundation",
+  "numericalTlTableChanged": false,
+  "simulationOrCalibrationRun": false,
+  "normalPlayerTlRange": [
+    1,
+    9
+  ],
+  "precursorTl10Shorthand": true,
+  "statusDefinitions": {
+    "base": "Mature starting-world technology or a later derivative/revival of that baseline family. Base does not mean obsolete or primitive.",
+    "existing": "Already expected or established by the current Star Cluster Concept/accepted architecture. Story placement may still be refined before numerical table work.",
+    "candidate": "A strong proposed addition with a coherent scientific/engineering premise and gameplay role. Candidate is not yet an adopted component or numerical TL-table entry.",
+    "deferred": "Worth preserving, but the owning family, era, prerequisites, gameplay role, or implementation cost is not settled enough for promotion.",
+    "exotic": "Precursor-grade, rule-bending, deliberately extreme weird science, or technology otherwise outside the normal player-developed TL1-TL9 ladder."
+  },
+  "structuralRoleDefinitions": {
+    "core_family": "Primary lineage normally represented by a standard/base component family.",
+    "maturation": "Improves integration, efficiency, reliability, packaging, resilience, or a bounded operating property without changing the core principle.",
+    "branch": "A specialist or alternate lineage that coexists with the main family rather than automatically replacing it.",
+    "cross_pollinated_derivative": "An owning-tree technology unlocked or transformed by a genuinely enabling external research discipline.",
+    "legacy_revival": "A mature older family becomes strategically interesting again because later science enables a new niche or performance envelope.",
+    "operating_capability": "A mode or capability applied to an existing family rather than a new hardware family.",
+    "specialist_auxiliary": "A support installation that creates a meaningful design choice without becoming a new visible research tree.",
+    "one_off": "A useful technology that may have no natural multi-TL progression and does not need a successor merely to fill a cell.",
+    "infrastructure": "A strategic/site technology rather than an ordinary player-cruiser component.",
+    "campaign_technology": "A technology whose principal value is exploration, logistics, salvage, diplomacy, or campaign consequence rather than direct combat.",
+    "weird_science": "A speculative but potentially normal-player scientific concept that can exist as a one-off or rare branch without becoming Precursor magic.",
+    "precursor_artifact": "Non-player-developed Precursor technology or artifact behavior; TL10 is shorthand only."
+  },
+  "eraTone": [
+    {
+      "tl": 1,
+      "label": "Slightly Futuristic Baseline",
+      "tone": "Highly mature late-near-future engineering plus the few setting-defining breakthroughs needed for Star Cluster, especially practical FTL and baseline defensive fields. TL1 should feel sophisticated rather than primitive."
+    },
+    {
+      "tl": 2,
+      "label": "Lower-SF Introduction",
+      "tone": "First broadly practical post-baseline breakthroughs. New principles may be awkward, bulky, power-hungry, or incomplete."
+    },
+    {
+      "tl": 3,
+      "label": "Lower-SF Integration",
+      "tone": "Many early breakthroughs become shipworthy, integrated, compact, reliable, or tactically flexible. TL3 is not a universal maturation tier; this is only a broad era tone."
+    },
+    {
+      "tl": 4,
+      "label": "Mature Lower-SF",
+      "tone": "Lower-SF families reach strong practical forms and begin creating new subsystem architectures rather than only scalar improvements."
+    },
+    {
+      "tl": 5,
+      "label": "Early Higher-SF",
+      "tone": "Technologies with severe real-world engineering barriers become credible player tools; mature lower-SF families may receive peak or specialist revivals."
+    },
+    {
+      "tl": 6,
+      "label": "Integrated Higher-SF",
+      "tone": "Advanced materials, computation, field control, autonomous engineering, particle technologies, and antimatter-class systems become more routinely integrated."
+    },
+    {
+      "tl": 7,
+      "label": "Mature Higher-SF",
+      "tone": "High-energy and highly automated systems reach strong operational forms. Weird-science side branches may appear, but should still have explicit costs and counters."
+    },
+    {
+      "tl": 8,
+      "label": "Early Science-Fantasy Edge",
+      "tone": "Player science begins manipulating matter, fields, signatures, inertia, and spacetime in ways that are deliberately beyond conservative engineering extrapolation."
+    },
+    {
+      "tl": 9,
+      "label": "Player-Technological Pinnacle",
+      "tone": "The normal player ladder reaches its strongest coherent science-fantasy forms. TL9 should be campaign-defining but remain bounded and distinct from Precursor rule-breaking."
+    }
+  ],
+  "principles": [
+    "Technology families tell their own development story; no family is forced to populate every TL or follow identical breakpoints.",
+    "TL1 is a highly mature slightly futuristic baseline, except for deliberate setting miracles such as practical FTL and baseline shields.",
+    "TL2-4 broadly feel like lower science fiction, TL5-7 higher science fiction, and TL8-9 increasingly science fantasy; these are tonal guides, not hard gates.",
+    "New families should move at least one useful capability/design frontier; mature legacy technologies may remain competitive through a real niche.",
+    "An older family may receive a later revival when its owning field or an enabling external field creates a genuinely new derivative.",
+    "Cross-pollination is sparse and causal. The owning research category remains explicit and external prerequisites are limited to genuinely enabling science.",
+    "One-off and weird-science technologies are allowed. A concept does not need a multi-TL sequel to deserve preservation.",
+    "Precursor/TL10 is shorthand only and remains outside normal player-developed TL1-TL9 research.",
+    "This storyboard is conceptual architecture, not a numerical component table or automatic unlock list."
+  ],
+  "disciplines": [
+    {
+      "disciplineId": "hull",
+      "name": "Hull",
+      "visibleResearchCategory": true,
+      "story": "Hull research is the engineering of a persistent cruiser lineage: structure, compartmentation, maintainability, integration and bounded capacity. It should not become automatic ship-class escalation.",
+      "lineages": [
+        {
+          "id": "structural-integration",
+          "name": "Cruiser Structural Integration",
+          "owner": "Hull",
+          "identity": "A bounded cruiser platform whose main progression is better use of volume, load paths, service routing, survivability and integration rather than unlimited Hull Points or giant size.",
+          "tl1Tl3Reconciliation": "TL1 narrative should be more advanced than the current shorthand “rolled-alloy era.” TL3 integration is consistent with accepted numbers; no numeric change is made here.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Mature aerospace/composite cruiser construction",
+              "status": "base",
+              "role": "core_family",
+              "story": "Late-near-future alloys, ceramics, composites, embedded diagnostics, mature compartmentation and robust service trunks define the normal player cruiser. Baseline shielding/FTL are setting breakthroughs layered onto an otherwise comprehensible hull.",
+              "enabling": [
+                "Armor",
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "RI-004",
+                "RI-037",
+                "SD-DC-008",
+                "SD-Q15-001"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "Distributed structural monitoring and modular service architecture",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Improved embedded sensing, modular access and standardized high-energy service interfaces make repairs/refits cleaner without requiring more hull size.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-DC-003",
+                "SD-DC-008"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Integrated cruiser architecture",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted TL3 +1 Installation-Space direction fits a structural-integration story: better routing, packaging and compartment use rather than a universal durability increase.",
+              "enabling": [
+                "Power",
+                "Propulsion"
+              ],
+              "references": [
+                "Concept 8.7",
+                "CP104"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Nanostructured load-bearing frame",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Advanced carbon structures/superalloys improve specific strength and high-temperature service integration, enabling better packaging and damage tolerance.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "TI Carbon Nanotubes",
+                "TI Superalloys",
+                "SD-DC-009"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Atomically engineered structural composites",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Designed material gradients, high-temperature joints and resilient laminates support high-energy systems without simply enlarging the cruiser.",
+              "enabling": [
+                "Armor",
+                "Power"
+              ],
+              "references": [
+                "TI Superalloys",
+                "TI Molecular Assemblers"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Self-monitoring smart lattice",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Structural members participate in continuous load sensing and damage isolation; automated repair systems can stabilize rather than freely regenerate serious damage.",
+              "enabling": [
+                "Computing / Fire Control",
+                "Armor"
+              ],
+              "references": [
+                "SD-DC-007",
+                "SD-DC-009"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Active load-distribution structure",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "High-SF structural control actively redistributes stress and isolates shocks, creating better tolerance for extreme propulsion/weapon loads.",
+              "enabling": [
+                "Power",
+                "Propulsion"
+              ],
+              "references": [
+                "SD-SM-004",
+                "SD-Q15-003"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Field-assisted structural support",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "Local field effects help support extreme accelerations, impacts or internal load paths. Treat as bounded support, not immunity to damage.",
+              "enabling": [
+                "Shields",
+                "Propulsion"
+              ],
+              "references": [
+                "GURPS Space miracle taxonomy"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Dynamic programmable cruiser architecture",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "A pinnacle player hull can re-route services and locally reconfigure material/field support, improving adaptation and repair while remaining the same cruiser lineage.",
+              "enabling": [
+                "Armor",
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "TI Molecular Assemblers",
+                "SD-DC-009"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "damage-control",
+          "name": "Maintainability and Damage Control",
+          "owner": "Hull",
+          "identity": "A support lineage covering access, diagnostics, isolation, robotics, fabrication and bounded self-repair. Combat Damage Control remains distinct from post-combat reconstruction.",
+          "tl1Tl3Reconciliation": "Current Damage Control rules already support this lineage. Higher-TL story should use existing conditions/Repair Kits rather than a second repair engine.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Expert crew, distributed spares and diagnostic access",
+              "status": "base",
+              "role": "core_family",
+              "story": "Human maintainers, standardized lockers, remote isolation and mature diagnostics underpin ordinary Damage Control.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-DC-001",
+                "SD-DC-002"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Predictive diagnostics and better service distribution",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Improved condition monitoring and maintainability reduce the engineering burden of complex systems without adding a new repair currency.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-DC-003",
+                "SD-DC-008"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Remote repair robotics",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Robotic manipulators and autonomous inspection can perform dangerous work while preserving existing Repair Kit/condition abstractions.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-DC-007"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Onboard fabrication-assisted repair",
+              "status": "candidate",
+              "role": "specialist_auxiliary",
+              "story": "Compact fabrication can replace selected damaged parts from broad resources; it is a support choice, not free restoration.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "TI Molecular Assemblers",
+                "SD-DC-009"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Autonomous repair swarm",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Coordinated micro/robotic repair can stabilize multiple faults or improve repair efficiency, bounded by material/energy and condition limits.",
+              "enabling": [
+                "Computing / Fire Control",
+                "Power"
+              ],
+              "references": [
+                "SD-DC-007",
+                "SD-DC-009"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Self-healing structural materials",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Engineered materials can close small cracks and restore limited integrity between severe events; destroyed components still require replacement.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "SD-DC-009",
+                "TI Molecular Assemblers"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Programmable matter repair patches",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "High-end matter control produces configurable structural patches and interfaces; use as bounded repair acceleration, not resurrection.",
+              "enabling": [
+                "Armor",
+                "Power"
+              ],
+              "references": [
+                "TI Molecular Assemblers"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Autonomous reconstruction architecture",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Pinnacle player maintainability can reconfigure stored matter and robotic systems to rebuild complex assemblies over appropriate campaign time, while still consuming resources.",
+              "enabling": [
+                "Power",
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-Q06-005"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "habitation-gravity",
+          "name": "Habitation and Gravity Architecture",
+          "owner": "Hull",
+          "identity": "Mostly narrative/architectural support. Spin or acceleration gravity may remain a mature baseline; generated gravity is a later architectural breakthrough, not a mandatory combat stat.",
+          "tl1Tl3Reconciliation": "No gravity technology is currently needed for the accepted combat model. Capture it now as architectural worldbuilding/cross-pollination.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Spin/acceleration gravity and mature long-duration habitation",
+              "status": "base",
+              "role": "branch",
+              "story": "Conventional artificial-gravity architecture and medical countermeasures support extended missions.",
+              "enabling": [
+                "Propulsion"
+              ],
+              "references": [
+                "SD-SG-001",
+                "SD-SG-003"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Compact/stowable gravity habitats",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Improved structural and control systems reduce the burden of rotating habitats while preserving them as rugged legacy architecture.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-SG-003",
+                "SD-SG-004"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Generated local gravity",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "A genuine higher-SF breakthrough may replace rotation in selected spaces, changing ship architecture more than combat arithmetic.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-SG-002"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Inertial-comfort field",
+              "status": "deferred",
+              "role": "weird_science",
+              "story": "Field control may protect crew/equipment from extreme acceleration. Keep separate from tactical evasion until a clear gameplay role exists.",
+              "enabling": [
+                "Propulsion",
+                "Shields"
+              ],
+              "references": [
+                "GURPS Space gravity discussion"
+              ],
+              "boundary": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disciplineId": "armor",
+      "name": "Armor",
+      "visibleResearchCategory": true,
+      "story": "Armor remains passive material protection first. Later branches may add ablative, reactive, energized or self-healing behavior without making every armor generation a universal AP/AI increase.",
+      "lineages": [
+        {
+          "id": "passive-armor",
+          "name": "Passive Armor Materials",
+          "owner": "Armor",
+          "identity": "Layered protection whose identity comes from material architecture, Integrity and Protection rather than a single escalating resistance value.",
+          "tl1Tl3Reconciliation": "",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Advanced alloy/ceramic composite armor",
+              "status": "base",
+              "role": "core_family",
+              "story": "TL1 should read as slightly futuristic aerospace/warship armor, not literal industrial-era rolled plate. The accepted mechanics can remain unchanged while the narrative baseline is modernized.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "TI Superalloys",
+                "TI Carbon Nanotubes",
+                "RI-003"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "Toughened ceramic-composite laminate",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted TL2 Integrity maturation fits improved fracture control and laminate design.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "Concept TL2 Armor"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Protected layered composite",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted AP1/AI5 direction fits stronger layering/material interfaces without requiring a new armor family.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "Concept 8.7",
+                "CP104"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Nanostructured armor matrix",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Carbon nanostructures and atomically engineered alloys improve specific strength and thermal/radiation tolerance.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "TI Carbon Nanotubes",
+                "TI Superalloys"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Gradient/diamondoid composite armor",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Designed material gradients and extremely strong covalent structures create more efficient passive protection.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "TI Diamondoids/Molecular Assemblers"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Self-healing smart laminate",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Damage-tolerant material can restore limited integrity or improve repairability after combat rather than negate incoming damage.",
+              "enabling": [
+                "Hull",
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "TI Molecular Assemblers",
+                "SD-DC-009"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Active reactive armor architecture",
+              "status": "candidate",
+              "role": "branch",
+              "story": "Embedded sensors and powered elements may respond to impact or beam deposition. This is a specialist armor enhancement, not automatic passive armor behavior.",
+              "enabling": [
+                "Power",
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "RM-THEME-006"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Field-assisted armor",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "A high-end material/field composite redistributes stress or energy before it reaches the passive layer. Keep penetrations/counters explicit.",
+              "enabling": [
+                "Shields",
+                "Power"
+              ],
+              "references": [
+                "RM-THEME-005"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Programmable matter armor",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Pinnacle armor dynamically optimizes local material structure and can regain limited Integrity through controlled reconfiguration.",
+              "enabling": [
+                "Hull",
+                "Power"
+              ],
+              "references": [
+                "TI Molecular Assemblers"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "armor-enhancements",
+          "name": "Armor Enhancement Branches",
+          "owner": "Armor",
+          "identity": "Optional external/auxiliary defensive layers that create distinct tradeoffs rather than replacing primary armor.",
+          "tl1Tl3Reconciliation": "Do not turn every later armor improvement into another universal layer. Specialist counters should remain optional and causal.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Ablative outer layer",
+              "status": "existing",
+              "role": "specialist_auxiliary",
+              "story": "Expendable outer armor remains a simple optional layer with its own AP/AI.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "Concept armor rules"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Thermal/radiation hardening package",
+              "status": "candidate",
+              "role": "specialist_auxiliary",
+              "story": "Specialist protection counters ionizing/particle or high-temperature effects without creating a universal resistance stat.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "SD-SW-022",
+                "SD-Q15-003"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Powered reactive armor",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "A powered armor auxiliary may alter one specific damage/penetration interaction at Tactical Power cost.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "RM-THEME-006"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Electromagnetic particle screen",
+              "status": "candidate",
+              "role": "specialist_auxiliary",
+              "story": "A specialized energized layer may counter charged-particle/ion weapons while doing little against other threats.",
+              "enabling": [
+                "Power",
+                "Shields"
+              ],
+              "references": [
+                "SD-SW-045"
+              ],
+              "boundary": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disciplineId": "power",
+      "name": "Power",
+      "visibleResearchCategory": true,
+      "story": "Power is the clearest overlapping-family model: mature fission at TL1; Fusion begins at TL2 and matures through TL4; Antimatter begins at TL5 and matures through TL7; direct matter conversion appears at TL8-9. Older sources may revive as specialist branches.",
+      "lineages": [
+        {
+          "id": "main-reactors",
+          "name": "Main Reactor Generation",
+          "owner": "Power",
+          "identity": "Sustained Tactical Power generation. Output, footprint, reliability, damaged output, overload, conversion efficiency, containment and enabling science are independent axes.",
+          "tl1Tl3Reconciliation": "CP105 flags a story mismatch at TL2: the current mechanical candidate behaves mostly like improved TL1 output. Later table work should make Early Fusion read as a distinct family without invalidating accepted CP104 numbers by default.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Peak Fission",
+              "status": "base",
+              "role": "core_family",
+              "story": "Highly mature fission provides the dependable starting reactor. It is not obsolete merely because Fusion appears.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "Concept 8.4",
+                "SD-Q10-002"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "Early Practical Fusion",
+              "status": "existing",
+              "role": "core_family",
+              "story": "The first viable shipboard Fusion family appears. It should eventually have a recognizable operating/design promise beyond being “Reactor 2,” even if the accepted provisional numeric seed is retained until later table work.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "Concept 8.4",
+                "LLNL NIF",
+                "TI Nuclear Fusion Methodologies"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Mature Compact Fusion",
+              "status": "existing",
+              "role": "maturation",
+              "story": "Fusion integration/packaging improves; the accepted 6-TP/5-Space direction already fits this story.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "Concept 8.4",
+                "CP104"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "High-Output Fusion",
+              "status": "existing",
+              "role": "maturation",
+              "story": "Mature Fusion pushes the usable output frontier or delivers another genuinely output-related improvement.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "Concept 8.4"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Early Antimatter / Peak Fusion coexistence",
+              "status": "existing",
+              "role": "core_family",
+              "story": "Antimatter becomes a new high-energy family with severe containment/production burdens while a highly mature Fusion option remains strategically relevant.",
+              "enabling": [
+                "Hull",
+                "Armor"
+              ],
+              "references": [
+                "Concept 8.4",
+                "CERN Antimatter",
+                "SD-Q10-006"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Mature Antimatter",
+              "status": "existing",
+              "role": "maturation",
+              "story": "Containment, conditioning, integration and reliability make Antimatter practical enough for regular high-end warships.",
+              "enabling": [
+                "Armor",
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "Concept 8.4",
+                "CERN Antimatter"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "High-Output Antimatter",
+              "status": "existing",
+              "role": "maturation",
+              "story": "Antimatter reaches its strong player-developed performance form, with containment still a defining engineering identity.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "Concept 8.4"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Fractional/Direct Matter Conversion / Peak Antimatter coexistence",
+              "status": "existing",
+              "role": "weird_science",
+              "story": "Limited direct conversion of ordinary feedstock begins; Antimatter remains a mature alternative with known containment/logistics behavior.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "Concept 8.4"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Total Matter Conversion",
+              "status": "existing",
+              "role": "core_family",
+              "story": "The normal player power ladder reaches its pinnacle: controlled conversion of ordinary matter to usable energy, bounded by component architecture and game balance rather than infinite power.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "Concept 8.4"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "fission-revival",
+          "name": "Late Fission Specialist Revival",
+          "owner": "Power",
+          "identity": "A deliberate example of the rule that old technology may become interesting again through new materials/conversion methods.",
+          "tl1Tl3Reconciliation": "This lineage is intentionally sparse. It demonstrates legacy revival without forcing a fission entry at every TL.",
+          "beats": [
+            {
+              "tl": 5,
+              "title": "Direct-conversion / advanced-containment fission specialist",
+              "status": "base",
+              "role": "legacy_revival",
+              "story": "Later materials, high-temperature conversion and reactor engineering may produce an exceptionally rugged, low-maintenance, damage-tolerant or low-signature fission reactor even after Fusion is dominant. It need not beat contemporary Antimatter on raw output.",
+              "enabling": [
+                "Armor",
+                "Hull"
+              ],
+              "references": [
+                "Concept 8.3 Optimum Fission example",
+                "TI Advanced Fission Systems",
+                "NASA Space Nuclear Propulsion"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Pinnacle fission expedition/auxiliary reactor",
+              "status": "base",
+              "role": "legacy_revival",
+              "story": "A mature fission derivative could remain attractive for long endurance, independent fuel logistics, benign failure modes or infrastructure duty. Keep as a niche, not a mandatory ladder step.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "SD-Q10-001",
+                "SD-Q10-008"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "energy-storage",
+          "name": "Pulse Storage and Power Conditioning",
+          "owner": "Power",
+          "identity": "Storage handles peak demand and temporal mismatch rather than replacing sustained reactor generation.",
+          "tl1Tl3Reconciliation": "Keep storage as Aux/support choices unless a genuine whole-ship architecture requires otherwise.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "High-density battery / pulse capacitor",
+              "status": "base",
+              "role": "specialist_auxiliary",
+              "story": "A compact energy store can support emergency power or burst loads within existing Tactical Power rules.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "SD-Q10-003"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "Supercapacitor bank",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Nanostructured capacitors combine rapid charge/discharge with useful capacity, especially for burst weapons/shields.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "TI Supercapacitors"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Superconducting magnetic storage",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Advanced superconductors enable high-rate storage and low-loss power conditioning.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "TI Advanced Superconductors",
+                "TI High-Temperature Superconductors"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Molecular dielectric ultracapacitor",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Atomically engineered storage improves density/retention and pulse delivery without changing main-reactor output.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "TI Molecular Assemblers"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Field-energy reservoir",
+              "status": "deferred",
+              "role": "weird_science",
+              "story": "A high-end field system may store/release large energy pulses. Require explicit finite capacity and failure consequences if adopted.",
+              "enabling": [
+                "Shields"
+              ],
+              "references": [
+                "RM-THEME-012"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "thermal-support",
+          "name": "Thermal Management and Energy Conversion",
+          "owner": "Power",
+          "identity": "Normally hidden inside component Space/performance. Explicit thermal technologies appear only when they create a meaningful choice such as suppression, compactness or enabling a demanding family.",
+          "tl1Tl3Reconciliation": "Thermal remains support architecture, not a new visible research tree.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Heat pipes, coolant loops, radiators and phase-change reserves",
+              "status": "base",
+              "role": "core_family",
+              "story": "Ordinary thermal engineering is part of component footprints rather than a universal heat meter.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "SD-Q15-001",
+                "SD-Q15-002"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "High-temperature compact radiators",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Improved materials permit smaller/hotter thermal systems with power/vulnerability tradeoffs.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "SD-Q15-003",
+                "TI Advanced Heat Management Concepts"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Droplet/mist radiator architecture",
+              "status": "candidate",
+              "role": "branch",
+              "story": "Advanced radiator forms can reduce mass/area for selected ships or installations. Treat as integration/Space support, not a new tactical bar.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "TI Advanced Heat Management Concepts"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Retractable thermal suppression",
+              "status": "candidate",
+              "role": "operating_capability",
+              "story": "A ship may temporarily reduce exposed thermal signature by storing heat, with finite duration/Strain/activation limits rather than a continuous heat simulation.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-Q15-005",
+                "SD-Q12-004"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Direct energy recovery / advanced heat pumping",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "More waste energy is recovered or shifted, supporting high-energy systems and lower signatures.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "SD-Q10-005",
+                "SD-Q15-010"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Entropy-routing field",
+              "status": "deferred",
+              "role": "weird_science",
+              "story": "Science-fantasy thermal control could temporarily move/store waste entropy in a bounded way. Keep far short of “no waste heat.”",
+              "enabling": [
+                "Shields"
+              ],
+              "references": [
+                "RM-THEME-007"
+              ],
+              "boundary": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disciplineId": "propulsion",
+      "name": "Propulsion",
+      "visibleResearchCategory": true,
+      "story": "One visible research discipline owns two distinct installed families: STL and FTL. Their technology stories may cross-pollinate with Power but retain separate components and gameplay identities.",
+      "lineages": [
+        {
+          "id": "stl",
+          "name": "Sublight Propulsion",
+          "owner": "Propulsion",
+          "identity": "Tactical/system maneuver. The story should preserve thrust/efficiency/endurance/overload distinctions while keeping movement rules KISS.",
+          "tl1Tl3Reconciliation": "Current TL1-TL3 mechanics are generic movement values; CP105 flags the need for explicit operating-principle names/identity in later table work.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "High-power electric/plasma cruiser drive",
+              "status": "base",
+              "role": "core_family",
+              "story": "A slightly futuristic high-power electromagnetic/plasma system provides the normal STL baseline. Nuclear-electric and electric propulsion provide grounded inspiration for efficient in-space thrust, while Star Cluster abstracts actual acceleration into Move.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "NASA SEP",
+                "NASA Space Nuclear Propulsion",
+                "SD-Q10-007"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "Pulsed high-energy plasma drive",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Better field control and power electronics increase useful tactical thrust without changing the research family into “Fusion Drive” automatically.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "TI High-Energy Electromagnetic Propulsion"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Fusion-assisted torch / mature high-energy STL",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "The accepted Move3 direction can be narrated as Propulsion exploiting mature Fusion-era power/containment, while Propulsion remains the owning tree.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "NASA Fusion Driven Rocket",
+                "SD-Q10-007"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Mature fusion torch architecture",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Lower-SF propulsion reaches a high-thrust/high-endurance form and better bounded overload behavior.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "LLNL NIF",
+                "NASA Fusion Driven Rocket"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Antimatter-catalyzed fusion drive",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Tiny antimatter quantities catalyze a mature fusion/plasma system, bridging families without requiring a full antimatter main drive.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-Q10-006"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Antimatter plasma drive",
+              "status": "candidate",
+              "role": "core_family",
+              "story": "Mature containment supports a direct high-energy antimatter/plasma propulsion family.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "CERN Antimatter"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Beam-core / ultra-high-energy propulsion",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Higher-SF antimatter propulsion emphasizes extreme output and integration burden rather than free movement.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "TI Power Plant/drive inspiration"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Inertial-coupled drive",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "Field manipulation begins reducing inertial/structural limits. Keep acceleration, fuel and tactical response costs explicit.",
+              "enabling": [
+                "Hull",
+                "Shields"
+              ],
+              "references": [
+                "GURPS Space reactionless/gravity discussion"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Gravitic/metric sublight drive",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "Pinnacle player STL manipulates local fields/spacetime for maneuver without becoming teleportation. Tactical hex movement and initiative still apply.",
+              "enabling": [
+                "Power",
+                "Shields"
+              ],
+              "references": [
+                "GURPS Space gravity/drive taxonomy"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "stl-specialists",
+          "name": "Specialist Sublight Drives",
+          "owner": "Propulsion",
+          "identity": "Branches useful for probes, infrastructure or niche ships. They illustrate that “best” propulsion depends on mission.",
+          "tl1Tl3Reconciliation": "Specialist drives need not occupy the base cruiser ladder.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Solar/nuclear electric endurance drive",
+              "status": "base",
+              "role": "branch",
+              "story": "Very efficient low-thrust drives remain excellent for probes/logistics even if inappropriate for tactical cruiser maneuver.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "NASA SEP",
+                "NASA NEP",
+                "SD-Q10-001"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "Nuclear thermal sprint drive",
+              "status": "base",
+              "role": "branch",
+              "story": "A fission thermal branch can trade propellant efficiency and reactor integration for higher thrust. It may be infrastructure/mission tech rather than the player cruiser default.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "NASA Space Nuclear Propulsion"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Fission pulse expedition drive",
+              "status": "candidate",
+              "role": "legacy_revival",
+              "story": "Advanced structures/materials could make pulsed fission propulsion a rugged specialist option.",
+              "enabling": [
+                "Hull",
+                "Armor"
+              ],
+              "references": [
+                "TI Fission Pulse Drives"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "ftl",
+          "name": "Strategic FTL Drive",
+          "owner": "Propulsion",
+          "identity": "Cluster-map transit. FTL is a deliberate setting miracle available at TL1; progression should preserve unknown-space exploration, route knowledge and strandedness rather than erase the map.",
+          "tl1Tl3Reconciliation": "FTL remains separate from STL despite shared Propulsion research. Do not let high TL erase unknown-sector stops or exploration stakes without an explicit future decision.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "First-generation practical FTL",
+              "status": "existing",
+              "role": "core_family",
+              "story": "FTL is the setting-defining exception to the otherwise slightly futuristic TL1 tone. Its exact fictional physics can remain deliberately broad until lore requires a stronger commitment.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "Concept 8.3",
+                "GURPS Space one-miracle framing",
+                "SD-Q23-001"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "Stabilized FTL transit",
+              "status": "existing",
+              "role": "maturation",
+              "story": "Reliability/navigation and known-space speed improve while unknown-sector entry still interrupts movement.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-Q23-004"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Integrated FTL navigation",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted Move3 strategic direction represents faster known-space transit without defeating exploration geography.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "Concept 8.7"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "High-throughput FTL field",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Mature lower-SF FTL improves route efficiency, recovery and hazard tolerance rather than simply multiplying range.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "SD-Q23-002",
+                "SD-Q23-009"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Adaptive transition geometry",
+              "status": "candidate",
+              "role": "operating_capability",
+              "story": "Higher-SF FTL can better handle difficult stars/regions or emergency rerouting, with explicit map-level costs.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-Q24-003"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Deep-route FTL navigation",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Advanced sensing/computation reduces uncertainty and supports more ambitious route planning without making unknown space fully known.",
+              "enabling": [
+                "Sensors / EW",
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-Q23-009"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Resilient high-energy FTL",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "A mature higher-SF drive tolerates disruptions and improves recovery/operating envelope; routine tactical micro-jumps remain deferred.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-Q24-008"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Metric-transition FTL",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "Player science begins explicit spacetime engineering. This can alter strategic constraints but should not become arbitrary teleportation.",
+              "enabling": [
+                "Power",
+                "Sensors / EW"
+              ],
+              "references": [
+                "Alcubierre paper",
+                "GURPS Space warp taxonomy"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Pinnacle topology-control FTL",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "The strongest normal player FTL may shape routes/transition conditions in bounded ways while preserving sector geography and campaign decisions.",
+              "enabling": [
+                "Power",
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-Q23-008",
+                "SD-Q24-003"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "transit-infrastructure",
+          "name": "Transit Infrastructure and Natural/Artificial Routes",
+          "owner": "Propulsion",
+          "identity": "Strategic infrastructure that changes sector topology without replacing the onboard FTL ladder.",
+          "tl1Tl3Reconciliation": "TL10 here is shorthand only; Precursor routes are not player research.",
+          "beats": [
+            {
+              "tl": 4,
+              "title": "Mapped natural shortcuts / stable anomalies",
+              "status": "candidate",
+              "role": "campaign_technology",
+              "story": "Sensors/Exploration can reveal persistent routes that low-TL ships may exploit.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-Q23-003",
+                "SD-Q24-005"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Player-built transit anchor",
+              "status": "deferred",
+              "role": "infrastructure",
+              "story": "A mature civilization might stabilize or service fixed route nodes. This is infrastructure, not a cruiser upgrade.",
+              "enabling": [
+                "Power",
+                "Hull"
+              ],
+              "references": [
+                "SD-Q23-008"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Limited player-built gate network",
+              "status": "deferred",
+              "role": "infrastructure",
+              "story": "Pinnacle player science may construct rare fixed links under strict constraints; evaluate only when sector-economy/logistics systems warrant it.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-Q23-003"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 10,
+              "title": "Precursor gate / one-way conduit / impossible shortcut",
+              "status": "exotic",
+              "role": "precursor_artifact",
+              "story": "A Precursor route artifact may explicitly break one normal FTL rule because the exception itself is discoverable content.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-Q24-007",
+                "RM-THEME-017"
+              ],
+              "boundary": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disciplineId": "sensors-ew",
+      "name": "Sensors / EW",
+      "visibleResearchCategory": true,
+      "story": "Information technology is an ecology: sensing, ECM, ECCM, emissions, signatures and identification interact but do not collapse into one rating. Higher TL should add modalities, robustness, deception and cooperation rather than only range.",
+      "lineages": [
+        {
+          "id": "sensors",
+          "name": "Sensor Suite",
+          "owner": "Sensors / EW",
+          "identity": "Multimodal passive/active sensing that creates observer-specific track quality and identification. Physical reach and attack eligibility remain separate.",
+          "tl1Tl3Reconciliation": "Current TL1-TL3 sensor progression already fits the family-story approach well.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Integrated multimodal sensor suite",
+              "status": "base",
+              "role": "core_family",
+              "story": "Passive and active optical/radar/thermal/electronic sensing support navigation, search and weapons-quality tracking.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-Q09-001",
+                "SD-Q09-003"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "Improved discrimination resistance",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted DR1 direction represents better classification/filtering under EW rather than simple range escalation.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "Concept TL2 Sensor"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Dual normal active modes",
+              "status": "existing",
+              "role": "operating_capability",
+              "story": "The accepted Low/High Active modes are a qualitative integration step with real Tactical Power choice.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "Concept 8.7"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Multimodal fusion and cooperative apertures",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Advanced processing combines channels, rapid beam steering and shared observations while preserving provenance.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-Q09-004",
+                "SD-Q09-006",
+                "SD-Q09-007"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Low-probability active sensing / adaptive waveform suite",
+              "status": "candidate",
+              "role": "operating_capability",
+              "story": "Sensors trade emission conspicuousness, power and discrimination rather than simply becoming invisible.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-Q12-005",
+                "RM-THEME-013"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Quantum-limited / precision field sensors",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Higher-SF detectors improve weak-signal discrimination and navigation; avoid claims of magical omniscience.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "TI Quantum Computing as enabling inspiration"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Penetrating particle/gravity-gradient sensing",
+              "status": "candidate",
+              "role": "branch",
+              "story": "Specialist channels may detect targets/hazards through conditions that defeat conventional modalities, with dedicated costs/counters.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-Q09-008"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Spacetime/FTL-wake sensing",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "Science-fantasy sensors detect metric disturbances, transit wakes or field signatures; they do not automatically identify every ship.",
+              "enabling": [
+                "Propulsion"
+              ],
+              "references": [
+                "SD-Q23-006"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Causal-consistency sensor fusion",
+              "status": "deferred",
+              "role": "weird_science",
+              "story": "Pinnacle processing/field sensing may infer hidden states from subtle correlations. Keep bounded by observer-safe information rules; no precognition.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "RM-THEME-009"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "ecm",
+          "name": "Electronic Countermeasures",
+          "owner": "Sensors / EW",
+          "identity": "Active deception, noise, signature manipulation and track attack. Higher TL should diversify methods/costs instead of stacking unlimited rating.",
+          "tl1Tl3Reconciliation": "",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Conventional noise/deception ECM",
+              "status": "base",
+              "role": "core_family",
+              "story": "Baseline ECM attacks discrimination at Tactical Power cost.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "Concept ECM"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "High-strength conventional ECM",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted rating-2 ceiling increases pressure but remains non-additive across duplicate suites.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "Concept TL2 ECM"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Efficient full-strength ECM",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted TL3 efficiency step reduces Tactical Power burden without raising rating.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "Concept 8.7"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Digital deception / false-track synthesis",
+              "status": "candidate",
+              "role": "operating_capability",
+              "story": "ECM can attack track provenance/identification with bounded ghost/deception behavior rather than only a larger number.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-SW-013",
+                "RM-THEME-013"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Adaptive cognitive EW",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Processing adapts jamming/deception to observed sensor behavior within information parity.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-Q09-006"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Distributed cooperative EW",
+              "status": "candidate",
+              "role": "branch",
+              "story": "Multiple allied emitters coordinate without simply adding local ratings; cooperative effects remain capped.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "Concept cooperative EW",
+                "RM-THEME-013"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Emitter-targeted electronic attack",
+              "status": "candidate",
+              "role": "one_off",
+              "story": "Specialized systems attack active sensor/datalink behavior or force hard choices rather than universally suppressing everything.",
+              "enabling": [
+                "Missile Weapons"
+              ],
+              "references": [
+                "SD-SW-012",
+                "SD-SW-035"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Field/signature spoofing",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "High-end emitters imitate exotic propulsion/shield signatures or distort apparent motion, with specialist counters.",
+              "enabling": [
+                "Shields",
+                "Propulsion"
+              ],
+              "references": [
+                "RM-THEME-006"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Metric-spectrum deception",
+              "status": "deferred",
+              "role": "weird_science",
+              "story": "Pinnacle EW may manipulate spacetime/field observables, but should never erase all information states by default.",
+              "enabling": [
+                "Propulsion"
+              ],
+              "references": [
+                "RM-THEME-009"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "eccm",
+          "name": "Electronic Counter-Countermeasures",
+          "owner": "Sensors / EW",
+          "identity": "Counter-deception, fusion, validation and robust tracking. It should not become “ECM but positive.”",
+          "tl1Tl3Reconciliation": "",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Conventional filtering and emitter analysis",
+              "status": "base",
+              "role": "core_family",
+              "story": "Baseline ECCM restores discrimination against ordinary ECM.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "Concept ECCM"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "High-strength conventional ECCM",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted rating-2 ceiling counters stronger conventional jamming at real power cost.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "Concept TL2 ECCM"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Efficient full-strength ECCM",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted TL3 efficiency step reduces cost without automatically raising sensor range.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "Concept 8.7"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Sensor-fusion anti-deception",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Cross-checking multiple modalities makes false tracks harder while preserving uncertainty where all channels are weak.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-Q09-004"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Adaptive classifier / signature memory",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Advanced processing learns opponent deception patterns during observed combat without reading hidden ratings.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "RM-THEME-013"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Cooperative track validation",
+              "status": "candidate",
+              "role": "operating_capability",
+              "story": "Allied observations can validate or reject deception with explicit provenance and bounded networking.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-Q09-007"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Counter-emitter localization",
+              "status": "candidate",
+              "role": "branch",
+              "story": "ECCM can turn hostile active emissions into localization/targeting opportunities for specialist weapons.",
+              "enabling": [
+                "Missile Weapons"
+              ],
+              "references": [
+                "SD-SW-012"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Exotic-channel correlation",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "Metric/particle channels help reject advanced signature manipulation, at high cost and limited coverage.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-Q09-008"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Causal truthing",
+              "status": "deferred",
+              "role": "weird_science",
+              "story": "Pinnacle validation may compare many field histories to expose impossible spoofing. Keep it probabilistic/bounded, not omniscient.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "RM-THEME-009"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "signature-management",
+          "name": "Signature Management and Stealth",
+          "owner": "Sensors / EW",
+          "identity": "A potential branch covering passive design, quiet operation and bounded active concealment. It is not currently a standard TL table stream.",
+          "tl1Tl3Reconciliation": "Keep ordinary passive signature management distinct from a future active cloak.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Passive low-observability design",
+              "status": "base",
+              "role": "branch",
+              "story": "Geometry, emissions discipline and ordinary thermal management can reduce observability without creating invisibility.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "SD-Q12-001",
+                "SD-Q12-002"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Emission-controlled operating posture",
+              "status": "candidate",
+              "role": "operating_capability",
+              "story": "Ships may accept reduced active systems/performance for a quieter signature state.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-Q12-005"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Thermal suppression window",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Retractable/thermal-storage architecture creates a finite quiet window with explicit limits.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-Q12-004",
+                "SD-Q15-005"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Active signature cancellation",
+              "status": "deferred",
+              "role": "branch",
+              "story": "Adaptive emissions can cancel or reshape specific signatures, but should be channel-limited and power-hungry.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-Q12-006"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Powered concealment field",
+              "status": "deferred",
+              "role": "weird_science",
+              "story": "An active cloak-like system could be a rare high-end Powered installation with incompatibilities and no guaranteed total invisibility.",
+              "enabling": [
+                "Shields",
+                "Power"
+              ],
+              "references": [
+                "SD-Q12-008",
+                "Concept cloak deferred rule"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 10,
+              "title": "Precursor phase cloak",
+              "status": "exotic",
+              "role": "precursor_artifact",
+              "story": "A Precursor device may break ordinary observability rules under explicit constraints.",
+              "enabling": [
+                "Shields"
+              ],
+              "references": [
+                "RM-THEME-017"
+              ],
+              "boundary": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disciplineId": "computing",
+      "name": "Computing / Fire Control",
+      "visibleResearchCategory": true,
+      "story": "Computing progression should improve targeting, information fusion, automation, coordination and resilience. New computational principles can be qualitative breakthroughs without granting hidden-information access.",
+      "lineages": [
+        {
+          "id": "tactical-computing",
+          "name": "Tactical Computer and Fire Control",
+          "owner": "Computing / Fire Control",
+          "identity": "Shipwide fire-control, targeting, report fusion, initiative support and bounded automation. Player/AI information parity remains absolute.",
+          "tl1Tl3Reconciliation": "Current TL1-TL3 story is coherent. Higher levels should emphasize architecture/automation rather than universal percentage bonuses.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Integrated electronic fire control",
+              "status": "base",
+              "role": "core_family",
+              "story": "Mature electronic/optical computing supports ordinary targeting, datalinks and ship control.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "Concept computing"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "Refined conventional fire control",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted targeting improvement fits better estimation and processing rather than a new computer principle.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "Concept TL2 Computer"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Mature integrated fire control / Evasive Compensation",
+              "status": "existing",
+              "role": "operating_capability",
+              "story": "The accepted EvComp capability is a good example of qualitative integration rather than raw accuracy inflation.",
+              "enabling": [
+                "Propulsion"
+              ],
+              "references": [
+                "Concept 8.7"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Photonic/optical combat computing",
+              "status": "candidate",
+              "role": "core_family",
+              "story": "Optical interconnect/processing offers a recognizable lower-SF architectural change in throughput and efficiency.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "TI Photonic Computing"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Adaptive AI battle manager",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Machine reasoning supports multi-target prioritization, damage prediction and doctrine execution while obeying player-information parity.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "RI-040",
+                "CP99 AI parity rule"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Distributed resilient combat cloud",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Ship subsystems and allied assets share processing/track tasks with graceful degradation and provenance.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-Q09-006",
+                "SD-Q09-007"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Quantum-assisted optimization",
+              "status": "candidate",
+              "role": "core_family",
+              "story": "Quantum/advanced computation accelerates selected optimization/simulation tasks; it is not magical general intelligence.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "TI Quantum Computing"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Predictive battle-state synthesis",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "High-SF computing runs massive counterfactual models to improve timing/coordination. No peeking at hidden enemy state.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "RM-THEME-009"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Pinnacle causal modeling computer",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "The normal player pinnacle may exploit exotic computation/field sensors to make exceptionally strong probabilistic predictions, still not literal precognition.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "GURPS Space superscience caution"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "autonomy-network",
+          "name": "Autonomy, Networking and Digital Crew",
+          "owner": "Computing / Fire Control",
+          "identity": "Cross-pollinated applications of computing rather than a separate visible research tree.",
+          "tl1Tl3Reconciliation": "Keep sentience separate from raw computing power.",
+          "beats": [
+            {
+              "tl": 3,
+              "title": "Advanced ship automation",
+              "status": "candidate",
+              "role": "operating_capability",
+              "story": "Automation reduces routine crew burden and supports damage control/sensors.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "SD-DC-007"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Autonomous specialist agents",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Bounded AI agents support damage control, EW, logistics and tactical planning without replacing officers or subsystems.",
+              "enabling": [
+                "Hull",
+                "Sensors / EW"
+              ],
+              "references": [
+                "RI-040"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Distributed autonomous mission control",
+              "status": "candidate",
+              "role": "campaign_technology",
+              "story": "Long-duration probes/expeditions can operate with greater independence while retaining meaningful failure/recovery risk.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "SD-Q06-002",
+                "SD-Q06-005"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Synthetic crew core",
+              "status": "deferred",
+              "role": "weird_science",
+              "story": "A high-end digital crew/sentient ship computer may be possible, but narrative/crew consequences need deliberate design first.",
+              "enabling": [
+                "Hull"
+              ],
+              "references": [
+                "SD-Q13-006"
+              ],
+              "boundary": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disciplineId": "shields",
+      "name": "Shields",
+      "visibleResearchCategory": true,
+      "story": "Shields are another setting-defining TL1 breakthrough. Progression should separate capacity, recharge, hardening, geometry, efficiency and specialized countermeasures rather than bundle them.",
+      "lineages": [
+        {
+          "id": "shield-generator",
+          "name": "Defensive Field Generator",
+          "owner": "Shields",
+          "identity": "Renewable defensive field capacity. The exact fictional physics may remain broad; gameplay identity is renewable protection with explicit penetration/counterplay.",
+          "tl1Tl3Reconciliation": "",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Baseline defensive field",
+              "status": "existing",
+              "role": "core_family",
+              "story": "A practical field generator is one of Star Cluster’s intentional TL1 “miracles.” It provides renewable capacity but no universal Shield Protection.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "Concept shields"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "Higher-capacity field",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted TL2 Capacity increase is straightforward field-strength maturation.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "Concept TL2 Shield"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Mature field with optional hardening",
+              "status": "existing",
+              "role": "branch",
+              "story": "The accepted TL3 Hardener unlock separates capacity from Protection and preserves SPEN counterplay.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "Concept 8.7"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Segmented/adaptive field geometry",
+              "status": "candidate",
+              "role": "operating_capability",
+              "story": "Mature lower-SF fields can concentrate protection or isolate damaged sectors with meaningful power/coverage tradeoffs.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "RM-THEME-001"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Frequency/phase-tuned shielding",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Advanced field control can specialize against selected beam/particle interactions rather than raising universal defense.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-SW-045"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Predictive localized reinforcement",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Fire-control prediction dynamically reinforces likely impact regions, trading Tactical Power/coverage.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "RM-THEME-005"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Stand-off shear field",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "A higher-SF field begins deflecting or disrupting attacks before contact; keep damage/penetration relationships explicit.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "GURPS Space force-field taxonomy"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Metric barrier field",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "Science-fantasy shielding manipulates local spacetime/fields to alter incoming trajectories/energy. It still has finite capacity and counters.",
+              "enabling": [
+                "Propulsion"
+              ],
+              "references": [
+                "GURPS Space miracle taxonomy"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Pinnacle adaptive barrier",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "The strongest normal player shield combines dynamic geometry and material/field interaction while remaining destructible and power-limited.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "RM-THEME-006"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "shield-support",
+          "name": "Shield Support and Specialist Fields",
+          "owner": "Shields",
+          "identity": "Auxiliary technologies that modify field behavior without becoming another universal shield layer.",
+          "tl1Tl3Reconciliation": "",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Shield Battery / Booster concepts",
+              "status": "existing",
+              "role": "specialist_auxiliary",
+              "story": "Finite emergency recharge and capacity support remain distinct roles.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "Concept shield auxiliaries"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Shield Hardener",
+              "status": "existing",
+              "role": "specialist_auxiliary",
+              "story": "Powered Protection against shield-facing damage is an explicit optional component.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "Concept 8.7"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Particle/charged-beam screen",
+              "status": "candidate",
+              "role": "specialist_auxiliary",
+              "story": "A specialist electromagnetic/plasma-like field may counter charged particle beams more effectively than ordinary attacks.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-SW-045"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Field stabilizer / anti-penetration tuner",
+              "status": "candidate",
+              "role": "specialist_auxiliary",
+              "story": "A dedicated support component trades power/Space for better resistance to a narrow penetration class.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "RM-THEME-006"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 10,
+              "title": "Precursor stasis/phase barrier",
+              "status": "exotic",
+              "role": "precursor_artifact",
+              "story": "A Precursor field may ignore or redirect an otherwise normal rule for a bounded duration or condition.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "RM-THEME-017"
+              ],
+              "boundary": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disciplineId": "projectile-weapons",
+      "name": "Projectile Weapons",
+      "visibleResearchCategory": true,
+      "story": "Kinetic technology should preserve the family’s finite-ammunition, projectile and accelerator identity. Progression can come from launch architecture, ammunition sophistication, penetration/deposition tradeoffs and power efficiency.",
+      "lineages": [
+        {
+          "id": "kinetic-main",
+          "name": "Kinetic Main Weapon",
+          "owner": "Projectile Weapons",
+          "identity": "Ship-integrated accelerator weapon. Different accelerator principles can coexist; the gameplay family remains Kinetic when their tactical identity is similar.",
+          "tl1Tl3Reconciliation": "Current TL1-TL3 identity is broadly coherent; CP105 encourages naming the launcher/material story instead of generic Kinetic I/II/III.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Mature electromagnetic mass driver",
+              "status": "base",
+              "role": "core_family",
+              "story": "A rail/coil-like accelerator with conventional smart fire control provides the baseline finite-ammunition main weapon.",
+              "enabling": [
+                "Power",
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-SW-003",
+                "SD-SM-002"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "Improved penetrator/projectile materials",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted APEN improvement fits better projectile materials/impact architecture rather than a new launcher family.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "Concept TL2 Kinetic"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Power-efficient mature accelerator",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted zero-TP ordinary fire direction fits mature power conditioning/accelerator efficiency while ammunition remains the defining resource.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "Concept 8.7"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Superconducting coil/induction accelerator",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Advanced magnets/materials reduce launcher losses and enable new projectile envelopes.",
+              "enabling": [
+                "Power",
+                "Armor"
+              ],
+              "references": [
+                "TI Coilguns",
+                "TI High-Temperature Superconductors"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Helical/continuous induction cannon",
+              "status": "candidate",
+              "role": "branch",
+              "story": "An alternate accelerator architecture may trade Space, rate, velocity and wear without replacing mature rails/coils.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-SW-031"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Smart hypervelocity mass driver",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Guided/terminal-corrected penetrators and advanced sabot/projectile architectures improve hit/penetration choices.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-SW-030",
+                "SD-SW-064"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Macron/dust accelerator branch",
+              "status": "candidate",
+              "role": "branch",
+              "story": "Extremely small high-velocity projectiles create a distinctive saturation/deposition tradeoff and demanding launcher architecture.",
+              "enabling": [
+                "Power",
+                "Armor"
+              ],
+              "references": [
+                "SD-SW-041",
+                "SD-SW-042"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Field-assisted mass accelerator",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "Inertial/field control permits extreme projectile velocity or compact launch structures while preserving finite projectile packages.",
+              "enabling": [
+                "Shields",
+                "Power"
+              ],
+              "references": [
+                "RM-THEME-005"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Relativistic kinetic lance",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "Pinnacle Kinetic attacks approach relativistic projectile regimes; use strict cost/range/accuracy/collateral constraints to preserve counterplay.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-SW-008"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "kinetic-ammunition",
+          "name": "Kinetic Ammunition and Projectile Packages",
+          "owner": "Projectile Weapons",
+          "identity": "Projectile engineering can progress independently of the launcher and unlock specialist packages rather than automatic universal bonuses.",
+          "tl1Tl3Reconciliation": "",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Conventional penetrator / fragmentation packages",
+              "status": "base",
+              "role": "branch",
+              "story": "Baseline ammunition differentiates anti-armor versus general damage at the attack-package level if needed.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "SD-SW-061"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Programmable smart projectile",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Improved computing enables terminal correction or selectable fuzing without turning every shot into a missile.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-SW-030",
+                "SD-SW-064"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Dense/graded penetrator package",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Advanced materials create different APEN/deposition tradeoffs.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "SD-SW-061"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Micro-submunition/saturation package",
+              "status": "candidate",
+              "role": "branch",
+              "story": "A single Ammo point may represent a sophisticated multi-body attack package while preserving bounded attack resolution.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "RM-THEME-011"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Exotic dense-matter projectile",
+              "status": "deferred",
+              "role": "weird_science",
+              "story": "Very high-density or engineered-matter projectiles are possible high-SF candidates, but material provenance and counterplay need definition.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "GURPS Space exotic matter discussion"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "kinetic-pds",
+          "name": "Kinetic Point Defense",
+          "owner": "Projectile Weapons",
+          "identity": "Local terminal defense using rapid kinetic/projectile interceptors and integrated fire control.",
+          "tl1Tl3Reconciliation": "Beam PDS and AMM remain separate branches rather than upgrades that erase kinetic PDS.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Rapid-fire kinetic PDS",
+              "status": "existing",
+              "role": "core_family",
+              "story": "Finite Reaction Capacity and Ammo abstract many physical shots/intercepts.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-SW-011",
+                "SD-SW-038"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Mature local fire-control / effective-ammo PDS",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted differentiated PDS maturation can improve Reaction Capacity/efficiency without literal projectile bookkeeping.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-SW-037",
+                "RM-THEME-011"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Guided intercept projectile PDS",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Smart local rounds improve engagement efficiency and target discrimination.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-SW-037"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Distributed kinetic intercept grid",
+              "status": "candidate",
+              "role": "branch",
+              "story": "Multiple mounts/sensors coordinate as one bounded PDS installation rather than multiplying free reactions.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-SW-038"
+              ],
+              "boundary": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disciplineId": "energy-weapons",
+      "name": "Energy Weapons",
+      "visibleResearchCategory": true,
+      "story": "Energy progression should preserve beam/pulse identity while allowing wavelength/focusing, pulse architecture, distributed directors and particle/ion branches. Not every “energy weapon” needs to share the same damage model.",
+      "lineages": [
+        {
+          "id": "coherent-beam",
+          "name": "Coherent Beam Main Weapon",
+          "owner": "Energy Weapons",
+          "identity": "Laser/beam family whose natural resources are Tactical Power, focusing/track quality and sustained or pulsed energy deposition.",
+          "tl1Tl3Reconciliation": "CP104 shows E3 is a strong robust step. Higher-TL Energy design should be defined in story context before revisiting its numbers.",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "High-energy coherent laser",
+              "status": "base",
+              "role": "core_family",
+              "story": "A practical space-combat laser/beam is an intentional slightly-futuristic-to-lower-SF baseline.",
+              "enabling": [
+                "Power",
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-EW-001"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "Improved optics and pulse conditioning",
+              "status": "existing",
+              "role": "maturation",
+              "story": "Current TL2 may hold combat stats while materials/power integration mature behind the scenes; no forced improvement is needed at every TL.",
+              "enabling": [
+                "Armor",
+                "Power"
+              ],
+              "references": [
+                "SD-EW-002"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Safe high-output beam mode",
+              "status": "existing",
+              "role": "operating_capability",
+              "story": "The accepted Energy High mode is a qualitative power-handling maturation rather than automatic damage on every shot.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "Concept 8.7"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Short-wavelength / advanced focusing beam",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Improved wavelength control and optics can extend useful concentration/range independent of raw damage.",
+              "enabling": [
+                "Armor",
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-EW-002",
+                "SD-EW-003"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Tunable-spectrum / free-electron beam",
+              "status": "candidate",
+              "role": "branch",
+              "story": "A tunable beam trades specialization for adaptability against range, material and defensive conditions.",
+              "enabling": [
+                "Power",
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-EW-007",
+                "SD-EW-008"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Distributed/phased beam director",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Multiple apertures coordinate rapid steering/resilience while sharing a bounded output pool.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-SW-029",
+                "SD-SW-032"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Extreme-frequency beam",
+              "status": "candidate",
+              "role": "branch",
+              "story": "UV/X-ray-class or equivalent high-energy optics become plausible, with demanding generation/focusing/thermal support and possible radiation side effects.",
+              "enabling": [
+                "Power",
+                "Armor"
+              ],
+              "references": [
+                "SD-EW-003",
+                "SD-EW-006"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Field-guided coherent lance",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "Science-fantasy field control helps focus/guide extreme beams, but does not grant perfect tracking or infinite range.",
+              "enabling": [
+                "Shields"
+              ],
+              "references": [
+                "SD-SW-033"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Pinnacle conversion beam",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "Matter-conversion-era power supports a devastating but bounded beam architecture with explicit power/Strain/charge/counterplay.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "RM-THEME-008"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "particle-ion",
+          "name": "Charged-Particle / Ion Beam Branch",
+          "owner": "Energy Weapons",
+          "identity": "A strong candidate higher-TL branch that can emphasize armor deposition, electronics/radiation effects and specialist defenses rather than behaving as a renamed laser.",
+          "tl1Tl3Reconciliation": "Current synthesis leans toward Energy/Beam ownership rather than a new visible research category unless gameplay later proves a separate tree worthwhile.",
+          "beats": [
+            {
+              "tl": 5,
+              "title": "Ion/charged-particle cannon",
+              "status": "candidate",
+              "role": "branch",
+              "story": "A ship-scale charged-particle accelerator becomes practical once power, magnetic control and thermal support are sufficiently mature. This is the user-cited “Ion Cannon” class of candidate, but the final Star Cluster name/mechanics remain open.",
+              "enabling": [
+                "Power",
+                "Armor"
+              ],
+              "references": [
+                "SD-SW-007",
+                "SD-SW-043",
+                "TI Particle Beams"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Neutralized particle beam",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Beam conditioning/neutralization improves range/focus and reduces self-dispersion, creating a natural maturation step.",
+              "enabling": [
+                "Power",
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-SW-044"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Adaptive particle species beam",
+              "status": "candidate",
+              "role": "operating_capability",
+              "story": "Different particle species/energies could trade material damage, electronics disruption or radiation effects without a universal dose simulator.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-SW-043"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Relativistic particle lance",
+              "status": "deferred",
+              "role": "weird_science",
+              "story": "Ultra-relativistic beams risk erasing ordinary counterplay; keep as a carefully constrained late candidate rather than automatic progression.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-SW-046"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "energy-specials",
+          "name": "Special Energy / Radiation Weapon Concepts",
+          "owner": "Energy Weapons",
+          "identity": "One-off or rare branches that should be preserved without forcing them into a nine-level sequence.",
+          "tl1Tl3Reconciliation": "",
+          "beats": [
+            {
+              "tl": 4,
+              "title": "Microwave electronic-attack emitter",
+              "status": "deferred",
+              "role": "one_off",
+              "story": "A long-wavelength emitter may be more useful as electronic attack/sensor interference than hull-damage beam.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-EW-005"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Plasma cannon",
+              "status": "candidate",
+              "role": "branch",
+              "story": "Magnetically contained/plasma projectiles are a recognizable higher-SF branch, potentially with strong shield/armor interaction and short effective range.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "TI Plasma Weapons"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Nuclear-pumped sacrificial laser",
+              "status": "deferred",
+              "role": "one_off",
+              "story": "A reactor/nuclear-coupled one-shot beam is memorable when it requires preparation and consequences; likely Special Weapon rather than normal Main upgrade.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-NL-001",
+                "RM-THEME-008"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Radiation-disruption weapon",
+              "status": "deferred",
+              "role": "one_off",
+              "story": "A specialist attack might threaten crew/electronics or leave contamination, but only after internal/crew mechanics can support it cleanly.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "SD-SW-022",
+                "SD-SW-024"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Matter-bond disruptor",
+              "status": "deferred",
+              "role": "weird_science",
+              "story": "A science-fantasy field/particle weapon that destabilizes material structure. Preserve the concept without committing mechanics or normal-TL placement.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "RM-THEME-018"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 10,
+              "title": "Singularity/black-hole gun",
+              "status": "exotic",
+              "role": "precursor_artifact",
+              "story": "A Precursor-scale weapon based on artificial singularities or extreme spacetime manipulation is event technology, not a normal player weapon family.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "Crane & Westmoreland black-hole starship paper",
+                "RM-THEME-008"
+              ],
+              "boundary": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disciplineId": "missile-weapons",
+      "name": "Missile Weapons",
+      "visibleResearchCategory": true,
+      "story": "Missile technology remains modular: launcher/datalink, propulsion/endurance, guidance/seeker and warhead can mature separately. Better guidance must not automatically invent a stronger warhead.",
+      "lineages": [
+        {
+          "id": "missile-delivery",
+          "name": "Missile Launcher, Flight and Propulsion",
+          "owner": "Missile Weapons",
+          "identity": "The delivery system creates finite range/endurance, movement and attack-package behavior.",
+          "tl1Tl3Reconciliation": "",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Command-guided missile flight",
+              "status": "base",
+              "role": "core_family",
+              "story": "Lower-tech missiles depend on ship track/datalink support and use finite onboard fuel/endurance.",
+              "enabling": [
+                "Sensors / EW",
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "Concept missile architecture",
+                "SD-SW-056"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 2,
+              "title": "Improved propulsion/endurance package",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "A delivery improvement can raise tactical reach or sprint behavior without changing guidance/warhead.",
+              "enabling": [
+                "Propulsion"
+              ],
+              "references": [
+                "SD-SW-060"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Autonomous navigation-enabled missile",
+              "status": "existing",
+              "role": "operating_capability",
+              "story": "The accepted TL3 onboard navigation/sensor presence fits qualitative autonomy without weakening Firm terminal requirements.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "Concept missile TL3"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Terminal maneuver / multi-stage propulsion",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Mature lower-SF missiles trade cruise endurance against terminal sprint/evasion.",
+              "enabling": [
+                "Propulsion"
+              ],
+              "references": [
+                "SD-SW-065"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Cooperative swarm/bus architecture",
+              "status": "candidate",
+              "role": "branch",
+              "story": "A Missile Flight may represent coordinated submunitions/vehicles with one bounded attack package and richer PDS interactions.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-SW-005",
+                "SD-SW-059"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "High-energy fusion sprint missile",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Power/Propulsion science creates faster terminal delivery without automatically changing seeker/warhead.",
+              "enabling": [
+                "Power",
+                "Propulsion"
+              ],
+              "references": [
+                "RM-THEME-010"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Antimatter-catalyzed missile drive",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Small antimatter quantities produce extreme sprint/endurance at high cost and containment risk.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-Q10-006"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Field-assisted terminal vehicle",
+              "status": "deferred",
+              "role": "weird_science",
+              "story": "A science-fantasy missile may use local field manipulation for terminal maneuver, but conventional interception must retain some counterplay.",
+              "enabling": [
+                "Shields",
+                "Propulsion"
+              ],
+              "references": [
+                "RM-THEME-006"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Micro-transition strike vehicle",
+              "status": "deferred",
+              "role": "weird_science",
+              "story": "FTL/metric terminal repositioning is potentially game-breaking; preserve only as a late candidate pending movement/interception architecture.",
+              "enabling": [
+                "Propulsion"
+              ],
+              "references": [
+                "SD-Q23-010"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "missile-guidance",
+          "name": "Missile Guidance, Seeker and Counter-Countermeasures",
+          "owner": "Missile Weapons",
+          "identity": "Target acquisition/discrimination can mature independently of propulsion or warhead.",
+          "tl1Tl3Reconciliation": "",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Ship-command guidance / datalink",
+              "status": "base",
+              "role": "core_family",
+              "story": "The launching ship provides Firm-track guidance for basic missiles.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "Concept missile guidance"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Onboard navigation and local reacquisition",
+              "status": "existing",
+              "role": "maturation",
+              "story": "Missile sensors can perform bounded local track improvement while preserving separate command-guided low-tech behavior.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "Concept missile sensor rules"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Multi-mode terminal seeker",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "A seeker combines modalities and better countermeasure rejection rather than gaining automatic damage.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-SW-058"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Cooperative seeker network",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Missile Flight elements share observations or assign targets while maintaining provenance/finite communications.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "RM-THEME-010"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Adaptive anti-jam seeker",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Higher guidance robustness counters EW through better discrimination and onboard autonomy.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-SW-034",
+                "SD-SW-058"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Anti-emitter seeker mode",
+              "status": "candidate",
+              "role": "operating_capability",
+              "story": "A specialist seeker can home on active emissions, creating counterplay to aggressive sensors/ECM.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-SW-012"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 8,
+              "title": "Exotic-field seeker",
+              "status": "candidate",
+              "role": "weird_science",
+              "story": "Late missiles may track metric/shield/propulsion signatures when ordinary sensors fail.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-Q09-008"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "warheads",
+          "name": "Missile Warhead Families",
+          "owner": "Missile Weapons",
+          "identity": "Payload technology should be modular and may cross-pollinate with Projectile, Energy, Power or exotic branches.",
+          "tl1Tl3Reconciliation": "",
+          "beats": [
+            {
+              "tl": 1,
+              "title": "Kinetic/explosive conventional warhead",
+              "status": "base",
+              "role": "core_family",
+              "story": "Ordinary impact/blast packages remain useful and cheap.",
+              "enabling": [
+                "Projectile Weapons"
+              ],
+              "references": [
+                "SD-SW-051"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Shaped/advanced penetrator warhead",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Improved material/geometry can change APEN/deposition without changing missile guidance.",
+              "enabling": [
+                "Armor"
+              ],
+              "references": [
+                "SD-SW-052"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 4,
+              "title": "Nuclear shaped-charge / directed-energy warhead",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Nuclear payload engineering can create high-energy specialist attacks with strong signature/collateral costs.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-SW-052",
+                "TI shaped-nuclear inspiration"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Fusion microcharge warhead",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Fusion science supports compact high-energy payloads or pumped effects.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "SD-SW-053"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 6,
+              "title": "Radiation/electronics-disruption warhead",
+              "status": "deferred",
+              "role": "one_off",
+              "story": "A specialist payload may attack crew/electronics rather than structure if internal effects can be represented simply.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-SW-054"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Antimatter-catalyzed / antimatter warhead",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Antimatter enables extraordinary payload energy but must reflect production/containment scarcity.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "CERN Antimatter",
+                "SD-Q10-006"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 9,
+              "title": "Matter-conversion warhead",
+              "status": "deferred",
+              "role": "weird_science",
+              "story": "A pinnacle player payload may convert a bounded amount of target/feedstock matter. Require strong defenses/scarcity to avoid universal best-in-slot behavior.",
+              "enabling": [
+                "Power"
+              ],
+              "references": [
+                "Concept TL9 Power"
+              ],
+              "boundary": ""
+            }
+          ]
+        },
+        {
+          "id": "amm",
+          "name": "Anti-Missile Missile Defense",
+          "owner": "Missile Weapons",
+          "identity": "A longer-range guided defensive layer distinct from terminal local PDS.",
+          "tl1Tl3Reconciliation": "",
+          "beats": [
+            {
+              "tl": 2,
+              "title": "Basic AMM interceptors",
+              "status": "candidate",
+              "role": "branch",
+              "story": "Guided defensive missiles extend interception beyond local PDS at the cost of ammunition/launch capacity.",
+              "enabling": [
+                "Sensors / EW"
+              ],
+              "references": [
+                "SD-SW-039"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 3,
+              "title": "Mature AMM readiness",
+              "status": "existing",
+              "role": "maturation",
+              "story": "The accepted TL3 AMM PDS/readiness concept fits this branch.",
+              "enabling": [
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "Concept TL3 PDS"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 5,
+              "title": "Cooperative AMM screen",
+              "status": "candidate",
+              "role": "cross_pollinated_derivative",
+              "story": "Networked sensors/launchers coordinate defensive salvos with bounded attempt budgets.",
+              "enabling": [
+                "Sensors / EW",
+                "Computing / Fire Control"
+              ],
+              "references": [
+                "SD-SW-039"
+              ],
+              "boundary": ""
+            },
+            {
+              "tl": 7,
+              "title": "Hit-to-kill / extreme-sprint AMM",
+              "status": "candidate",
+              "role": "maturation",
+              "story": "Higher propulsion/guidance improves intercept envelope while maintaining finite reactions and ammunition.",
+              "enabling": [
+                "Propulsion"
+              ],
+              "references": [
+                "SD-SW-065"
+              ],
+              "boundary": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceCatalog": [
+    {
+      "id": "CONCEPT-v0.7e",
+      "type": "project-authority",
+      "title": "Star Cluster Game Concept v0.7e",
+      "location": "docs/Star_Cluster_Game_Concept_v0.7e.docx",
+      "use": "Authoritative research philosophy, current Power model, mixed-TL/legacy rules and Precursor boundary."
+    },
+    {
+      "id": "RM-SPACEDOCK",
+      "type": "project-reference-corpus",
+      "title": "Expanded Spacedock reference-mining corpus",
+      "location": "docs/references/reference-mining/",
+      "use": "Qualitative progression, weapon identity, power/storage/thermal separation, sensors/EW, missiles/PDS, Damage Control, FTL topology, stealth and exotic-tech candidates."
+    },
+    {
+      "id": "RI-ARCHIVE",
+      "type": "project-reference-synthesis",
+      "title": "Checkpoint 23 reference mining and design reconciliation",
+      "location": "docs/archive/player_technology/reference-mining/",
+      "use": "Broad-category research, miniaturization, qualitative milestones, separate STL/FTL, KISS/originality guardrails."
+    },
+    {
+      "id": "MOO2",
+      "type": "commercial-game-reference",
+      "title": "Master of Orion II manual",
+      "location": "docs/references/MOO2_GAME_MANUAL.PDF",
+      "use": "Pattern inspiration only: research fields with multiple applications, qualitative unlocks and later miniaturization. No names/tables/ladders copied."
+    },
+    {
+      "id": "GURPS-SPACE",
+      "type": "commercial-game-reference",
+      "title": "GURPS Space 4e",
+      "location": "docs/references/GURPS - 4th Edition - Space.pdf",
+      "use": "Pattern inspiration only: “taxonomy of miracles,” grounded-vs-superscience tone, drive/gravity/force-field/exotic-resource questions. No mechanics copied."
+    },
+    {
+      "id": "TI-TECH",
+      "type": "external-game-reference",
+      "title": "Terra Invicta Official Wiki - Technology / Tech List",
+      "url": "https://wiki.hoodedhorse.com/Terra_Invicta/Technology",
+      "use": "Inspiration for enabling-science webs, multiple engineering applications, lower-SF material/computing/power branches. No exact tree/names/stats copied."
+    },
+    {
+      "id": "TI-POWER",
+      "type": "external-game-reference",
+      "title": "Terra Invicta Official Wiki - Power Plant List / Advanced Fission Systems",
+      "url": "https://wiki.hoodedhorse.com/Terra_Invicta/Power_Plant_List",
+      "use": "Inspiration that fission/fusion can have parallel specialist architectures and that mature older reactor principles can receive later engineering revivals."
+    },
+    {
+      "id": "TI-MATERIALS",
+      "type": "external-game-reference",
+      "title": "Terra Invicta Official Wiki - Carbon Nanotubes / Superalloys / Advanced Superconductors",
+      "url": "https://wiki.hoodedhorse.com/Terra_Invicta/Carbon_Nanotubes",
+      "use": "Inspiration for cross-pollinating material breakthroughs affecting structure, armor, containment, thermal and electromagnetic systems."
+    },
+    {
+      "id": "TI-STORAGE",
+      "type": "external-game-reference",
+      "title": "Terra Invicta Official Wiki - Supercapacitors",
+      "url": "https://wiki.hoodedhorse.com/Terra_Invicta/Supercapacitors",
+      "use": "Inspiration for storage/discharge-rate progression distinct from sustained generation."
+    },
+    {
+      "id": "TI-THERMAL",
+      "type": "external-game-reference",
+      "title": "Terra Invicta Official Wiki - Advanced Heat Management Concepts",
+      "url": "https://wiki.hoodedhorse.com/Terra_Invicta/Advanced_Heat_Management_Concepts",
+      "use": "Inspiration for compact radiators and thermal engineering as enabling/support tech rather than a combat heat spreadsheet."
+    },
+    {
+      "id": "TI-COMPUTE",
+      "type": "external-game-reference",
+      "title": "Terra Invicta Official Wiki - Photonic Computing / Quantum Computing",
+      "url": "https://wiki.hoodedhorse.com/Terra_Invicta/Photonic_Computing",
+      "use": "Inspiration for qualitative computing-principle changes rather than simple processor-level scaling."
+    },
+    {
+      "id": "NASA-SNP",
+      "type": "primary-science-engineering",
+      "title": "NASA Space Nuclear Propulsion",
+      "url": "https://www.nasa.gov/space-technology-mission-directorate/tdm/space-nuclear-propulsion/",
+      "use": "Grounding for fission specialist propulsion branches and mission-dependent tradeoffs between nuclear thermal and nuclear electric propulsion."
+    },
+    {
+      "id": "NASA-SEP",
+      "type": "primary-science-engineering",
+      "title": "NASA Solar Electric Propulsion",
+      "url": "https://www.nasa.gov/space-technology-mission-directorate/tdm/solar-electric-propulsion/",
+      "use": "Grounding for efficient low-thrust electric/ion propulsion as specialist lower-SF technology."
+    },
+    {
+      "id": "NASA-FDR",
+      "type": "primary-concept-research",
+      "title": "NASA Fusion Driven Rocket concept",
+      "url": "https://www.nasa.gov/general/the-fusion-driven-rocket-nuclear-propulsion-through-direct-conversion-of-fusion-energy/",
+      "use": "Conceptual grounding for Fusion/propulsion cross-pollination and direct-energy conversion as an architecture rather than merely a bigger reactor number."
+    },
+    {
+      "id": "LLNL-NIF",
+      "type": "primary-science",
+      "title": "Lawrence Livermore National Laboratory - Fusion Ignition",
+      "url": "https://www.llnl.gov/news/ignition",
+      "use": "Grounding that controlled fusion is an extreme integration/engineering frontier, supporting Early -> Mature -> High-output Fusion story beats."
+    },
+    {
+      "id": "CERN-ANTIMATTER",
+      "type": "primary-science",
+      "title": "CERN - Antimatter",
+      "url": "https://home.cern/science/physics/antimatter/",
+      "use": "Grounding for antimatter’s extraordinary energy density plus severe production, vacuum, magnetic containment and handling constraints."
+    },
+    {
+      "id": "ARXIV-WARP",
+      "type": "primary-theory",
+      "title": "Miguel Alcubierre - The warp drive: hyper-fast travel within general relativity",
+      "url": "https://arxiv.org/abs/gr-qc/0009013",
+      "use": "Exotic/high-SF inspiration only; the paper itself requires exotic matter. Not evidence that a practical warp drive exists."
+    },
+    {
+      "id": "ARXIV-BH",
+      "type": "primary-theory",
+      "title": "Crane & Westmoreland - Are Black Hole Starships Possible",
+      "url": "https://arxiv.org/abs/0908.1803",
+      "use": "Exotic/Precursor inspiration for artificial-singularity power/propulsion/weapons; explicitly edge-of-possibility theory, not normal technology."
+    }
+  ]
+}

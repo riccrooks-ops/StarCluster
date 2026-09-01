@@ -1,0 +1,69 @@
+{
+  "checkpoint": 75,
+  "suiteTier": "must_always_run",
+  "acceptedBaseline": "74d",
+  "blockingBalanceTargets": false,
+  "normal": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 40,
+    "substantiveTrials": 400000,
+    "smokeVariants": 40,
+    "smokeTrials": 40,
+    "totalTrialExecutions": 400040
+  },
+  "deepCalibration": {
+    "stageCount": 30,
+    "monteCarloVariantCount": 1584,
+    "substantiveTrials": 15840000,
+    "smokeVariants": 40,
+    "smokeTrials": 40,
+    "totalTrialExecutions": 15840040
+  },
+  "aiDoctrineControls": {
+    "registryVersion": "0.2",
+    "defaultEwDoctrine": "tl1-ew-preserve-combat-package-v1",
+    "reactiveEccmAccepted": true,
+    "cp73RerunRequired": false,
+    "playerInformationParityRequired": true
+  },
+  "studyControls": {
+    "studyId": "tl1-itc17-applied-degraded-fire-family-candidates",
+    "degradedFireProductionAssignment": false,
+    "missilesUseDegradedDirectFire": false,
+    "appliedWeaponFamilies": [
+      "Kinetic",
+      "Energy"
+    ],
+    "penaltiesPercentagePoints": [
+      20,
+      25
+    ],
+    "firmReferenceRequired": true,
+    "firmOnlyApproximateControlRequired": true,
+    "fixedRangesHexes": [
+      2,
+      3
+    ],
+    "ecmBeforeEccm": true,
+    "ewInitiativeReroll": false,
+    "reservedPowerMeansUncommittedPower": true,
+    "candidatePromotionRequiresHumanReview": true
+  },
+  "missileTerminalControls": {
+    "terminalAttackRequiresFirmSolution": true,
+    "baselineCommandGuidedRequiresLiveLauncherFirmDatalink": true,
+    "baselineCommandGuidedMaySubstitutePeerGuidance": false,
+    "peerTerminalGuidanceRequiresExplicitProfileCapability": true,
+    "sensorPlusSeekerApproximateRefinementRequiresMissileLocalTrack": true,
+    "remoteApproximateAloneMayRefineSensorPlusSeekerToFirm": false,
+    "seekerOnlyCoLocatedAcquisitionFromRemoteCueRemainsDistinct": true,
+    "coLocationAloneIsNotImpact": true
+  },
+  "productionControls": {
+    "movementPhaseFireImplementedByCheckpoint75": false,
+    "degradedFireFoundationImplementedByCheckpoint74": true,
+    "appliedDegradedFireStudyImplementedByCheckpoint75": true,
+    "productionWeaponDegradedFireEnabledByCheckpoint75": false,
+    "missileDegradedFireEnabledByCheckpoint75": false
+  }
+}

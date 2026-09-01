@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "id": "tl1-35-space-player-cruiser-baseline-v0_1",
+  "checkpoint": 59,
+  "status": "working_concept_and_simulation_seed",
+  "installationSpace": {
+    "playerCruiserTotal": 35,
+    "mandatoryCoreTotal": 25,
+    "basePrimaryArmorSpace": 0,
+    "components": [
+      {
+        "id": "main_weapon",
+        "space": 6,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": null,
+        "duplicable": true,
+        "role": "ship_integrated_primary_weapon"
+      },
+      {
+        "id": "main_reactor",
+        "space": 6,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": null,
+        "duplicable": true,
+        "role": "ship_integrated_power_generation_and_distribution"
+      },
+      {
+        "id": "stl_drive",
+        "space": 5,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": 1,
+        "duplicable": false,
+        "role": "primary_architecture",
+        "ordinaryMiniaturizationFloor": 4
+      },
+      {
+        "id": "ftl_drive",
+        "space": 5,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": 1,
+        "duplicable": false,
+        "role": "primary_architecture",
+        "ordinaryMiniaturizationFloor": 4,
+        "playerMandatory": true
+      },
+      {
+        "id": "tactical_computer",
+        "space": 3,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": 1,
+        "duplicable": false,
+        "role": "primary_architecture"
+      },
+      {
+        "id": "active_sensor",
+        "space": 3,
+        "mandatoryCount": 0,
+        "duplicable": false,
+        "role": "optional_major_system"
+      },
+      {
+        "id": "shield_generator",
+        "space": 3,
+        "mandatoryCount": 0,
+        "duplicable": false,
+        "role": "optional_major_system"
+      },
+      {
+        "id": "kinetic_pds",
+        "space": 2,
+        "mandatoryCount": 0,
+        "duplicable": true,
+        "role": "optional_terminal_defense"
+      },
+      {
+        "id": "pds_ammunition_support",
+        "space": 1,
+        "mandatoryCount": 0,
+        "duplicable": true,
+        "role": "provisional_ammunition_support",
+        "provisional": true
+      },
+      {
+        "id": "small_aux",
+        "space": 1,
+        "mandatoryCount": 0,
+        "duplicable": true,
+        "role": "compact_support_floor"
+      }
+    ],
+    "primaryArchitectureIds": [
+      "stl_drive",
+      "ftl_drive",
+      "tactical_computer"
+    ],
+    "limitedAuxiliaryBackupEligibleIds": [
+      "stl_drive",
+      "tactical_computer"
+    ],
+    "fullBackupFtlAllowed": false
+  },
+  "referenceBuilds": [
+    {
+      "id": "balanced_generalist",
+      "space": 35,
+      "legal": true,
+      "loadout": {
+        "main_weapon": 1,
+        "main_reactor": 1,
+        "stl_drive": 1,
+        "ftl_drive": 1,
+        "tactical_computer": 1,
+        "active_sensor": 1,
+        "shield_generator": 1,
+        "kinetic_pds": 1,
+        "pds_ammunition_support": 1,
+        "small_aux": 1
+      }
+    },
+    {
+      "id": "dual_main_striker",
+      "space": 35,
+      "legal": true,
+      "loadout": {
+        "main_weapon": 2,
+        "main_reactor": 1,
+        "stl_drive": 1,
+        "ftl_drive": 1,
+        "tactical_computer": 1,
+        "active_sensor": 1,
+        "small_aux": 1
+      }
+    },
+    {
+      "id": "dual_main_dual_reactor_core",
+      "space": 37,
+      "legal": false,
+      "reason": "exceeds_tl1_installation_space",
+      "loadout": {
+        "main_weapon": 2,
+        "main_reactor": 2,
+        "stl_drive": 1,
+        "ftl_drive": 1,
+        "tactical_computer": 1
+      }
+    }
+  ],
+  "retainedTl1MechanicalSeed": {
+    "sourceBaseline": "docs/design/player_technology/tl1_core_combat_numerical_baseline_v0_1.csv",
+    "hull": 12,
+    "armorIntegrity": 4,
+    "armorProtection": 0,
+    "shieldCapacity": 2,
+    "shieldBaseRecharge": 1,
+    "tacticalShieldRechargePerPower": 1,
+    "tacticalShieldRechargePowerCap": 2,
+    "mainReactorTacticalPowerByCondition": {
+      "operational": 5,
+      "degraded": 3,
+      "disabled": 1,
+      "destroyed": 0
+    },
+    "damageControl": {
+      "capacity": 1,
+      "repairKits": 3,
+      "powerPerAttempt": 1,
+      "degradedToOperationalPercent": 70,
+      "disabledToDegradedPercent": 50,
+      "restoreOneHullPercent": 40
+    },
+    "ordinaryInternalCriticalDensity": "1/3",
+    "reusePolicy": "Preserve validated TL1 combat/power/damage/PDS/sensor/Damage Control/AUX relationships as the seed, remap them into Installation Space, and revalidate; do not carry forward obsolete Weapon Bay/AUX-capacity or fixed win-ratio assumptions."
+  },
+  "progressionGuardrails": [
+    "Every technology/component change must pass a logical frontier check and a mathematical/combinatorial check.",
+    "Evaluate stacked legacy components and integer breakpoints under the same Space, Tactical Power, and prerequisite constraints.",
+    "Do not use arbitrary anti-stacking rules to repair bad component math unless the fiction independently requires the rule.",
+    "Transformative discoveries may produce substantial improvements when the whole-ship design remains healthy.",
+    "Cross-category prerequisites reward breadth only when genuine enabling science requires them; they must not blanket-block tall play.",
+    "Base armor is hull-integrated/external and consumes no Installation Space; enhancements may consume Auxiliary/support Space."
+  ]
+}

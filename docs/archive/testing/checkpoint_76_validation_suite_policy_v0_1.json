@@ -1,0 +1,73 @@
+{
+  "checkpoint": 76,
+  "suiteTier": "must_always_run",
+  "acceptedBaseline": "75a",
+  "blockingBalanceTargets": false,
+  "normal": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 54,
+    "substantiveTrials": 540000,
+    "smokeVariants": 54,
+    "smokeTrials": 54,
+    "totalTrialExecutions": 540054
+  },
+  "deepCalibration": {
+    "stageCount": 30,
+    "monteCarloVariantCount": 1598,
+    "substantiveTrials": 15980000,
+    "smokeVariants": 54,
+    "smokeTrials": 54,
+    "totalTrialExecutions": 15980054
+  },
+  "aiDoctrineControls": {
+    "registryVersion": "0.2",
+    "hostileEcmDoctrine": "tl1-ew-preserve-combat-package-v1",
+    "reactiveEccmDoctrine": "tl1-ew-reactive-eccm-v1",
+    "aggressiveEccmIsDiagnosticControl": true,
+    "cp73RerunRequired": false,
+    "playerInformationParityRequired": true
+  },
+  "studyControls": {
+    "studyId": "tl1-itc18-degraded-fire-eccm-value-counterplay",
+    "degradedFireProductionAssignment": false,
+    "degradedFireCapabilityIsWeaponSpecific": true,
+    "degradedFireMayBeUpgradePathCapability": true,
+    "eccmValueGuardrailRequired": true,
+    "missilesUseDegradedDirectFire": false,
+    "futureMissileApproximateTerminalCapabilityRequiresSeparateProfile": true,
+    "penaltiesPercentagePoints": [20, 25],
+    "directFireFamilies": ["Kinetic", "Energy"],
+    "opponentFamily": "Missile",
+    "contextCount": 6,
+    "responsePackagesPerContext": 9,
+    "fixedRangeHexes": [3],
+    "dynamicMovementIncluded": true,
+    "pdsEnabled": true,
+    "productionReactorOutput": 5,
+    "ecmBeforeEccm": true,
+    "ewInitiativeReroll": false,
+    "reservedPowerMeansUncommittedPower": true,
+    "candidatePromotionRequiresHumanReview": true,
+    "outcomeThresholdsAreReleaseBlocking": false
+  },
+  "missileTerminalControls": {
+    "terminalAttackRequiresFirmSolutionByDefault": true,
+    "baselineCommandGuidedRequiresLiveLauncherFirmDatalink": true,
+    "baselineCommandGuidedMaySubstitutePeerGuidance": false,
+    "peerTerminalGuidanceRequiresExplicitProfileCapability": true,
+    "sensorPlusSeekerApproximateRefinementRequiresMissileLocalTrack": true,
+    "remoteApproximateAloneMayRefineSensorPlusSeekerToFirm": false,
+    "seekerOnlyCoLocatedAcquisitionFromRemoteCueRemainsDistinct": true,
+    "directFireApproximateTraitAppliesToMissiles": false,
+    "approximateTerminalMissileCapabilityImplementedByCheckpoint76": false,
+    "coLocationAloneIsNotImpact": true
+  },
+  "productionControls": {
+    "movementPhaseFireImplementedByCheckpoint76": false,
+    "degradedFireFoundationImplementedByCheckpoint74": true,
+    "appliedDegradedFireStudyImplementedByCheckpoint75": true,
+    "eccmValueCounterplayStudyImplementedByCheckpoint76": true,
+    "productionWeaponDegradedFireEnabledByCheckpoint76": false,
+    "missileApproximateTerminalEnabledByCheckpoint76": false
+  }
+}

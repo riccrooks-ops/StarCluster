@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "83",
+  "title": "Checkpoint 83 TL2 Power/Reactor Progression Permutation Suite",
+  "sdkVersion": "8.0.423",
+  "configuration": "Debug",
+  "calibrationSolution": "StarCluster.Calibration.sln",
+  "testProject": "tests/StarCluster.Tests/StarCluster.Tests.csproj",
+  "runnerProject": "src/StarCluster.ScenarioRunner/StarCluster.ScenarioRunner.csproj",
+  "manifestFile": "CHECKPOINT_83_SHA256SUMS.txt",
+  "outputRoot": "out/checkpoint-83",
+  "defaultTrials": 10000,
+  "defaultJobs": 24,
+  "documentation": [
+    "docs/Star_Cluster_Game_Concept_v0.6u.docx",
+    "docs/design/README.md",
+    "docs/design/player_technology/Technology_Architecture_Matrix_v1.md",
+    "docs/archive/player_technology/pre-cp165-active/technology_architecture_matrix_v1.json",
+    "docs/design/player_technology/StarCluster_Technology_Architecture_Matrix_v1.xlsx",
+    "docs/design/player_technology/tl2_computing_sensor_ew_working_profile_v0_1.json",
+    "docs/design/player_technology/tl2_power_reactor_candidate_profile_v0_1.json",
+    "docs/design/player_technology/TL2_Power_Reactor_Progression_Permutation_Study_v0_1.md",
+    "docs/design/player_technology/Tactical_Computer_Degraded_Fire_Architecture_v0_1.md",
+    "docs/design/Technology_Calibration_And_Simulation_Architecture.md",
+    "docs/design/testing/Technology_Integration_Permutation_Suite_Architecture_v0_3.md",
+    "docs/design/testing/technology_integration_permutation_suite_v0_3.json",
+    "docs/design/testing/Checkpoint_83_Validation_Tiers.md",
+    "docs/design/testing/checkpoint_83_validation_suite_policy_v0_1.json",
+    "docs/design/Missile_Guidance_Datalink_Sensor_And_Seeker_Architecture.md",
+    "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+    "docs/archive/player_technology/pre-cp165-active/tl1_35_space_player_cruiser_baseline_v0_9.json",
+    "docs/design/ai/AI_Doctrine_Registry_Architecture_v0_2.md",
+    "docs/archive/ai/pre-cp165-active/ai_doctrine_registry_v0_2.json",
+    "docs/design/testing/README.md",
+    "docs/Prototype_TODO.md",
+    "docs/validation/Checkpoint_83_TL2_Power_Reactor_Progression_Permutation_Suite.md"
+  ],
+  "stages": [
+    {
+      "id": "deterministic",
+      "name": "Accepted deterministic moving-missile scenarios",
+      "command": "run-all",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios",
+        "--output-dir",
+        "{OutputRoot}/deterministic"
+      ],
+      "metrics": {
+        "deterministicCases": 7
+      }
+    },
+    {
+      "id": "tl1-phase-a",
+      "name": "TL1 Phase A mechanics corpus",
+      "command": "tl1-phase-a",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1PhaseA",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-a"
+      ],
+      "metrics": {
+        "caseCount": 54
+      }
+    },
+    {
+      "id": "tl1-phase-b",
+      "name": "TL1 Phase B direct-fire corpus",
+      "command": "tl1-phase-b",
+      "arguments": [
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-b"
+      ],
+      "metrics": {
+        "caseCount": 36
+      }
+    },
+    {
+      "id": "tl1-installation-space-envelope",
+      "name": "TL1 35-Space deterministic construction envelope and nominal power diagnostics",
+      "command": "tl1-installation-space-envelope",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-space01-35-space-construction-envelope.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-installation-space-envelope"
+      ],
+      "metrics": {
+        "macroLoadoutCount": 27,
+        "weaponPowerVariantCount": 96,
+        "exactFillMacroLoadoutCount": 4,
+        "usesTrials": false
+      }
+    },
+    {
+      "id": "tl1-sensor-ew-foundation",
+      "name": "TL1 deterministic sensor reach, emissions, discrimination resistance, burn-through, and EW sweep",
+      "command": "tl1-sensor-ew-foundation",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/SensorEw/tl1-sew03-sensor-ew-discrimination-burnthrough.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-sensor-ew-foundation"
+      ],
+      "metrics": {
+        "profileCount": 7,
+        "forwardCandidateCount": 6,
+        "contextCount": 12,
+        "rangeCount": 11,
+        "deterministicRowCount": 924,
+        "usesTrials": false,
+        "balanceTargetsBlocking": false,
+        "productionSensorRangesChanged": false,
+        "tl1NormalActiveModeCount": 1,
+        "sameHexLosUnoccludable": true,
+        "sameHexEwStillResolves": true,
+        "sensorDiscriminationResistance": 0,
+        "sameHexBurnThroughResistance": 1
+      }
+    },
+    {
+      "id": "tl2-power-reactor-progression-permutation-preflight",
+      "name": "TL2 Power/Reactor progression permutation actual-consumer preflight",
+      "command": "tl1-integrated-tactical-combat-preflight",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl2-itc09-power-reactor-progression-permutations.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--output-dir",
+        "{OutputRoot}/tl2-power-reactor-progression-permutation-preflight"
+      ],
+      "metrics": {
+        "variantCount": 96,
+        "usesTrials": false,
+        "actualConsumerDeserializer": true,
+        "catalogBindingRequired": true,
+        "perSideSensorProfiles": true,
+        "normalEwRatingOverride": true,
+        "perSideTacticalComputerOverride": true,
+        "perSideReactorOutputOverride": true,
+        "countTowardVariantAggregate": false
+      }
+    },
+    {
+      "id": "tl2-power-reactor-progression-permutation-smoke",
+      "name": "TL2 Power/Reactor progression 96-variant one-trial full-pipeline smoke",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl2-itc09-power-reactor-progression-permutations.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--trials",
+        "1",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl2-power-reactor-progression-permutation-smoke"
+      ],
+      "metrics": {
+        "variantCount": 96,
+        "trialsPerVariant": 1,
+        "totalSmokeTrials": 96,
+        "usesTrials": true,
+        "smokeOnly": true,
+        "fullPipelineExecution": true,
+        "balanceTargetsBlocking": false,
+        "countTowardVariantAggregate": false
+      }
+    },
+    {
+      "id": "tl2-power-reactor-progression-permutations",
+      "name": "TL2 Power/Reactor 5-TP versus 6-TP paired permutation study",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl2-itc09-power-reactor-progression-permutations.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl2-power-reactor-progression-permutations"
+      ],
+      "metrics": {
+        "buildCount": 1,
+        "sideADirectFireFamilyCount": 2,
+        "opponentFamilyCount": 2,
+        "geometryCount": 3,
+        "contextCount": 12,
+        "informationControlEnvironmentCount": 4,
+        "reactorCandidateCount": 2,
+        "reactorOutputs": [
+          5,
+          6
+        ],
+        "variantCount": 96,
+        "usesTrials": true,
+        "balanceTargetsBlocking": false,
+        "tl2WorkingComputerTargetingPp": 12,
+        "degradedFirePenaltyHeldPp": 25,
+        "evasiveCompensationHeldPp": 0,
+        "tl2WorkingSensorDiscriminationResistance": 1,
+        "tl2WorkingNormalEwRating": 2,
+        "ewPowerPerRating": 1,
+        "sideBReactorOutputHeld": 5,
+        "reactorSpaceHeld": 6,
+        "reactorConditionMappingChanged": false,
+        "reactorOverloadChanged": false,
+        "reactorEfficiencyChanged": false,
+        "sensorRangeChanged": false,
+        "sensorOverloadChanged": false,
+        "productionTl2ValuesPromoted": false,
+        "productionDegradedFireAssigned": false,
+        "missileDegradedFireImplemented": false,
+        "pairedCommonRandomStreams": true,
+        "standingPermutationSuite": "v0.3",
+        "pdsEnabled": true,
+        "preCombatEwSubphase": true,
+        "ecmBeforeEccm": true
+      }
+    },
+    {
+      "id": "auxiliary-resource-endurance",
+      "name": "Deterministic finite-resource and recharge endurance stress study",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end01-resource-endurance-stress.json",
+        "--output-dir",
+        "{OutputRoot}/auxiliary-resource-endurance"
+      ],
+      "metrics": {
+        "combatBatteryCandidateCount": 2,
+        "capacitorPatternCount": 3,
+        "ammRoundCandidateCount": 4,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "checkpoint-53-resource-semantics-lock",
+      "name": "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end02-resource-semantics-lock.json",
+        "--output-dir",
+        "{OutputRoot}/checkpoint-53-resource-semantics-lock"
+      ],
+      "metrics": {
+        "combatBatteryPrimaryCharges": 3,
+        "combatBatteryPowerPerCharge": 1,
+        "combatBatteryDischargeLimitPerTurn": 1,
+        "combatBatteryEncounterDischargeCap": null,
+        "ammRounds": 25,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "runner-self-tests",
+      "name": "ScenarioRunner self-tests",
+      "command": "self-test",
+      "arguments": [
+        "--scenario-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/terminal-two-window-hit.json"
+      ],
+      "metrics": {
+        "selfTestCount": 48
+      }
+    }
+  ],
+  "checkpointMetrics": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 96,
+    "trialsAtDefault": 960000,
+    "suiteTier": "must_always_run",
+    "smokeVariantExecutions": 96,
+    "smokeTrialsAtDefault": 96,
+    "totalTrialExecutionsAtDefault": 960096
+  },
+  "nativeDependencyPrecheck": {
+    "required": true,
+    "script": "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+    "blockedInterpreters": [
+      "python",
+      "python3",
+      "py"
+    ],
+    "powerShellPaths": [
+      "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+      "tools/checkpoints/checkpoint-83/apply_checkpoint_83.ps1",
+      "tools/checkpoints/checkpoint-83/test_checkpoint_83_contract.ps1",
+      "tools/calibration/run_calibration_checkpoint.ps1"
+    ],
+    "checkpointDefinitionPaths": [
+      "tools/calibration/checkpoints/checkpoint-83.json",
+      "tools/calibration/checkpoints/checkpoint-83-deep-calibration.json"
+    ]
+  },
+  "primaryStudy": {
+    "id": "tl2-itc09-power-reactor-progression-permutations",
+    "variantCount": 96
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "checkpoint": 74,
+  "suiteTier": "must_always_run",
+  "blockingBalanceTargets": false,
+  "normal": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 20,
+    "substantiveTrials": 200000,
+    "smokeVariants": 20,
+    "smokeTrials": 20,
+    "totalTrialExecutions": 200020
+  },
+  "deepCalibration": {
+    "stageCount": 30,
+    "monteCarloVariantCount": 1564,
+    "substantiveTrials": 15640000,
+    "smokeVariants": 20,
+    "smokeTrials": 20,
+    "totalTrialExecutions": 15640020
+  },
+  "aiDoctrineControls": {
+    "registryVersion": "0.2",
+    "defaultEwDoctrine": "tl1-ew-preserve-combat-package-v1",
+    "reactiveEccmAccepted": true,
+    "cp73RerunRequired": false,
+    "playerInformationParityRequired": true
+  },
+  "studyControls": {
+    "degradedFireProductionAssignment": false,
+    "missilesUseDegradedDirectFire": false,
+    "penaltiesPercentagePoints": [
+      10,
+      20,
+      30
+    ],
+    "ecmBeforeEccm": true,
+    "ewInitiativeReroll": false,
+    "reservedPowerMeansUncommittedPower": true
+  },
+  "productionControls": {
+    "movementPhaseFireImplementedByCheckpoint74": false,
+    "degradedFireFoundationImplementedByCheckpoint74": true,
+    "productionWeaponDegradedFireEnabledByCheckpoint74": false
+  }
+}

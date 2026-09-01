@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "92",
+  "acceptedUtc": "2026-08-12T14:05:26.0342643Z",
+  "status": "Success",
+  "sdk": {
+    "expected": "8.0.423",
+    "actual": "8.0.423"
+  },
+  "build": {
+    "succeeded": true,
+    "warnings": 0,
+    "errors": 0
+  },
+  "tests": {
+    "total": 863,
+    "passed": 863,
+    "failed": 0,
+    "skipped": 0
+  },
+  "runner": {
+    "configuredStages": 8,
+    "passedStages": 8,
+    "failedStages": 0,
+    "deterministicCases": 7,
+    "mechanicsCases": 90,
+    "selfTests": 56,
+    "failedGates": 0
+  },
+  "primaryStudy": {
+    "id": null,
+    "variantCount": 0,
+    "trialsPerVariant": 10000,
+    "totalTrials": 0
+  },
+  "checkpointDefinitionSha256": "070b9e46446e68a4aaeb74773d9f9d9000618c119c8294f37567de9a6dae3ea1",
+  "repositoryManifestSha256": "fda73ad40d9f122dff1036bdadc874c30de67454ec89232810707ec53075f31b",
+  "sourceResultsArchive": "user-supplied checkpoint-92.zip",
+  "note": "Compact accepted-native provenance embedded by Checkpoint 93. Full CP92 results remain external to the repository archive."
+}

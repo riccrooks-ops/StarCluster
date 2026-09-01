@@ -1,0 +1,649 @@
+{
+  "schemaVersion": "star-cluster-tl1-internal-damage-calibration-v1",
+  "id": "tl1-id01-internal-damage-and-damage-control-study",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "masterSeed": 360100,
+  "trialsPerVariant": 10000,
+  "variants": [
+    {
+      "id": "id-d15-seeded-nodc-kinetic-steady",
+      "density": "Percent15",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d15-seeded-nodc-kinetic-burst",
+      "density": "Percent15",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d15-seeded-nodc-missile-steady",
+      "density": "Percent15",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d15-seeded-nodc-missile-burst",
+      "density": "Percent15",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d15-seeded-dc-kinetic-steady",
+      "density": "Percent15",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d15-seeded-dc-kinetic-burst",
+      "density": "Percent15",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d15-seeded-dc-missile-steady",
+      "density": "Percent15",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d15-seeded-dc-missile-burst",
+      "density": "Percent15",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d15-protected-nodc-kinetic-steady",
+      "density": "Percent15",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d15-protected-nodc-kinetic-burst",
+      "density": "Percent15",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d15-protected-nodc-missile-steady",
+      "density": "Percent15",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d15-protected-nodc-missile-burst",
+      "density": "Percent15",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d15-protected-dc-kinetic-steady",
+      "density": "Percent15",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d15-protected-dc-kinetic-burst",
+      "density": "Percent15",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d15-protected-dc-missile-steady",
+      "density": "Percent15",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d15-protected-dc-missile-burst",
+      "density": "Percent15",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d20-seeded-nodc-kinetic-steady",
+      "density": "Percent20",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d20-seeded-nodc-kinetic-burst",
+      "density": "Percent20",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d20-seeded-nodc-missile-steady",
+      "density": "Percent20",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d20-seeded-nodc-missile-burst",
+      "density": "Percent20",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d20-seeded-dc-kinetic-steady",
+      "density": "Percent20",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d20-seeded-dc-kinetic-burst",
+      "density": "Percent20",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d20-seeded-dc-missile-steady",
+      "density": "Percent20",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d20-seeded-dc-missile-burst",
+      "density": "Percent20",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d20-protected-nodc-kinetic-steady",
+      "density": "Percent20",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d20-protected-nodc-kinetic-burst",
+      "density": "Percent20",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d20-protected-nodc-missile-steady",
+      "density": "Percent20",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d20-protected-nodc-missile-burst",
+      "density": "Percent20",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d20-protected-dc-kinetic-steady",
+      "density": "Percent20",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d20-protected-dc-kinetic-burst",
+      "density": "Percent20",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d20-protected-dc-missile-steady",
+      "density": "Percent20",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d20-protected-dc-missile-burst",
+      "density": "Percent20",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d25-seeded-nodc-kinetic-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d25-seeded-nodc-kinetic-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d25-seeded-nodc-missile-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d25-seeded-nodc-missile-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d25-seeded-dc-kinetic-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d25-seeded-dc-kinetic-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d25-seeded-dc-missile-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d25-seeded-dc-missile-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d25-protected-nodc-kinetic-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d25-protected-nodc-kinetic-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d25-protected-nodc-missile-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d25-protected-nodc-missile-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d25-protected-dc-kinetic-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d25-protected-dc-kinetic-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d25-protected-dc-missile-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d25-protected-dc-missile-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d33-seeded-nodc-kinetic-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d33-seeded-nodc-kinetic-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d33-seeded-nodc-missile-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d33-seeded-nodc-missile-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d33-seeded-dc-kinetic-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d33-seeded-dc-kinetic-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d33-seeded-dc-missile-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d33-seeded-dc-missile-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d33-protected-nodc-kinetic-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d33-protected-nodc-kinetic-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d33-protected-nodc-missile-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d33-protected-nodc-missile-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d33-protected-dc-kinetic-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d33-protected-dc-kinetic-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d33-protected-dc-missile-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d33-protected-dc-missile-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d50-seeded-nodc-kinetic-steady",
+      "density": "Percent50",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d50-seeded-nodc-kinetic-burst",
+      "density": "Percent50",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d50-seeded-nodc-missile-steady",
+      "density": "Percent50",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d50-seeded-nodc-missile-burst",
+      "density": "Percent50",
+      "protectedCompartmentation": false,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d50-seeded-dc-kinetic-steady",
+      "density": "Percent50",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d50-seeded-dc-kinetic-burst",
+      "density": "Percent50",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d50-seeded-dc-missile-steady",
+      "density": "Percent50",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d50-seeded-dc-missile-burst",
+      "density": "Percent50",
+      "protectedCompartmentation": false,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d50-protected-nodc-kinetic-steady",
+      "density": "Percent50",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d50-protected-nodc-kinetic-burst",
+      "density": "Percent50",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d50-protected-nodc-missile-steady",
+      "density": "Percent50",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d50-protected-nodc-missile-burst",
+      "density": "Percent50",
+      "protectedCompartmentation": true,
+      "damageControl": false,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d50-protected-dc-kinetic-steady",
+      "density": "Percent50",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d50-protected-dc-kinetic-burst",
+      "density": "Percent50",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "id-d50-protected-dc-missile-steady",
+      "density": "Percent50",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "id-d50-protected-dc-missile-burst",
+      "density": "Percent50",
+      "protectedCompartmentation": true,
+      "damageControl": true,
+      "loadout": "missile",
+      "damageTempo": "burst"
+    }
+  ]
+}

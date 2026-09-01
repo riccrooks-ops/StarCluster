@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "star-cluster-damage-resolution-scale-results-v0.1",
+  "checkpoint": 121,
+  "acceptedBaseline": 119,
+  "supersedesCandidate": 120,
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "damageScale": 2,
+  "legacyEquivalentResolutionPerPoint": 0.5,
+  "equivalenceTrialsPerVariant": 5,
+  "equivalenceVariants": 4284,
+  "equivalencePairedTrials": 21420,
+  "equivalenceMismatchedTrials": 0,
+  "equivalenceVariantsWithMismatch": 0,
+  "equivalenceExact": true,
+  "equivalenceElapsedSeconds": 9.782927341999994,
+  "trialsPerVariant": 25,
+  "variants": 2424,
+  "variantCounts": {
+    "energy_family_reference": 352,
+    "kinetic_family_characteristic": 832,
+    "missile_family_characteristic": 1240
+  },
+  "priorityVariantCounts": {
+    "advanced": 420,
+    "endpoint_stress": 456,
+    "primary": 1548
+  },
+  "totalTrials": 60600,
+  "elapsedSeconds": 12.749365173999877,
+  "trialErrors": 0,
+  "offenseSeriesRows": 23,
+  "defenseSeriesRows": 75,
+  "packetResolutionRows": 165,
+  "failedGates": [],
+  "automaticPromotion": false,
+  "interpretation": "CP121 first requires exact paired outcome equivalence between the legacy integer damage domain and an x2 research-only conversion, then measures odd scaled-domain half-steps around CP120's principal offensive cliffs and selected Hull/Shield/Armor defense axes. Internal H/X criticals remain outside this research combat consumer; their cadence is audited separately and cannot be inferred from the Monte Carlo results. No numerical value or x2 scale is promoted automatically."
+}

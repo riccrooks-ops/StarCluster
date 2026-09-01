@@ -1,0 +1,203 @@
+{
+  "checkpoint": "83",
+  "status": "accepted_native_windows",
+  "sourceBundle": "checkpoint-83.zip",
+  "acceptanceFile": "checkpoint-83/acceptance-summary.json",
+  "acceptance": {
+    "schemaVersion": 1,
+    "checkpointId": "83",
+    "checkpointTitle": "Checkpoint 83 TL2 Power/Reactor Progression Permutation Suite",
+    "checkpointDefinition": "tools/calibration/checkpoints/checkpoint-83.json",
+    "checkpointDefinitionSha256": "cba4de1a9432117714a4926ac4f589cdfed7506971b92b29f41a995ea0034d5e",
+    "checkpointManifest": "CHECKPOINT_83_SHA256SUMS.txt",
+    "checkpointManifestSha256": "ff1ee737afcd8b331d423b3dea54fd075fcfbe3ea50bd31ff30d8bf92f9719ed",
+    "status": "Success",
+    "repositoryOnly": false,
+    "startedUtc": "2026-08-10T22:10:55.6713885Z",
+    "completedUtc": "2026-08-10T22:11:39.2145603Z",
+    "elapsedSeconds": 43.6429172,
+    "sdk": {
+      "expected": "8.0.423",
+      "actual": "8.0.423"
+    },
+    "configuration": "Debug",
+    "requested": {
+      "trialsPerVariant": 10000,
+      "jobs": 24
+    },
+    "build": {
+      "cleanExecuted": true,
+      "succeeded": true,
+      "warnings": 0,
+      "errors": 0,
+      "elapsedSeconds": 6.5376077
+    },
+    "tests": {
+      "succeeded": true,
+      "total": 863,
+      "passed": 863,
+      "failed": 0,
+      "skipped": 0,
+      "elapsedSeconds": 2.1058811,
+      "trxPath": "out/checkpoint-83/test-results/checkpoint-tests.trx"
+    },
+    "primaryStudy": {
+      "id": "tl2-itc09-power-reactor-progression-permutations",
+      "variantCount": 96,
+      "trialsPerVariant": 10000,
+      "totalTrials": 960000
+    },
+    "aggregates": {
+      "configuredRunnerStages": 11,
+      "runnerStagesPassed": 11,
+      "runnerStagesFailed": 0,
+      "deterministicCases": 7,
+      "mechanicsCases": 90,
+      "variants": 96,
+      "trials": 960096,
+      "selfTests": 48,
+      "failedGates": 0
+    },
+    "stages": [
+      {
+        "id": "deterministic",
+        "name": "Accepted deterministic moving-missile scenarios",
+        "command": "run-all",
+        "status": "Passed",
+        "startedUtc": "2026-08-10T22:11:05.8255788Z",
+        "completedUtc": "2026-08-10T22:11:06.5105789Z",
+        "elapsedSeconds": 0.6735399,
+        "outputPath": "out/checkpoint-83/deterministic",
+        "failedGates": 0
+      },
+      {
+        "id": "tl1-phase-a",
+        "name": "TL1 Phase A mechanics corpus",
+        "command": "tl1-phase-a",
+        "status": "Passed",
+        "startedUtc": "2026-08-10T22:11:06.5235794Z",
+        "completedUtc": "2026-08-10T22:11:06.9965788Z",
+        "elapsedSeconds": 0.4685218,
+        "outputPath": "out/checkpoint-83/tl1-phase-a",
+        "failedGates": 0
+      },
+      {
+        "id": "tl1-phase-b",
+        "name": "TL1 Phase B direct-fire corpus",
+        "command": "tl1-phase-b",
+        "status": "Passed",
+        "startedUtc": "2026-08-10T22:11:07.0055785Z",
+        "completedUtc": "2026-08-10T22:11:07.4885789Z",
+        "elapsedSeconds": 0.4783538,
+        "outputPath": "out/checkpoint-83/tl1-phase-b",
+        "failedGates": 0
+      },
+      {
+        "id": "tl1-installation-space-envelope",
+        "name": "TL1 35-Space deterministic construction envelope and nominal power diagnostics",
+        "command": "tl1-installation-space-envelope",
+        "status": "Passed",
+        "startedUtc": "2026-08-10T22:11:07.4955790Z",
+        "completedUtc": "2026-08-10T22:11:07.9055788Z",
+        "elapsedSeconds": 0.4062572,
+        "outputPath": "out/checkpoint-83/tl1-installation-space-envelope",
+        "failedGates": 0
+      },
+      {
+        "id": "tl1-sensor-ew-foundation",
+        "name": "TL1 deterministic sensor reach, emissions, discrimination resistance, burn-through, and EW sweep",
+        "command": "tl1-sensor-ew-foundation",
+        "status": "Passed",
+        "startedUtc": "2026-08-10T22:11:07.9155787Z",
+        "completedUtc": "2026-08-10T22:11:08.3315786Z",
+        "elapsedSeconds": 0.41057699999999997,
+        "outputPath": "out/checkpoint-83/tl1-sensor-ew-foundation",
+        "failedGates": 0
+      },
+      {
+        "id": "tl2-power-reactor-progression-permutation-preflight",
+        "name": "TL2 Power/Reactor progression permutation actual-consumer preflight",
+        "command": "tl1-integrated-tactical-combat-preflight",
+        "status": "Passed",
+        "startedUtc": "2026-08-10T22:11:08.3375788Z",
+        "completedUtc": "2026-08-10T22:11:08.7565788Z",
+        "elapsedSeconds": 0.4155623,
+        "outputPath": "out/checkpoint-83/tl2-power-reactor-progression-permutation-preflight",
+        "failedGates": 0
+      },
+      {
+        "id": "tl2-power-reactor-progression-permutation-smoke",
+        "name": "TL2 Power/Reactor progression 96-variant one-trial full-pipeline smoke",
+        "command": "tl1-integrated-tactical-combat",
+        "status": "Passed",
+        "startedUtc": "2026-08-10T22:11:08.7635789Z",
+        "completedUtc": "2026-08-10T22:11:09.3182650Z",
+        "elapsedSeconds": 0.5505682,
+        "outputPath": "out/checkpoint-83/tl2-power-reactor-progression-permutation-smoke",
+        "failedGates": 0
+      },
+      {
+        "id": "tl2-power-reactor-progression-permutations",
+        "name": "TL2 Power/Reactor 5-TP versus 6-TP paired permutation study",
+        "command": "tl1-integrated-tactical-combat",
+        "status": "Passed",
+        "startedUtc": "2026-08-10T22:11:09.3769315Z",
+        "completedUtc": "2026-08-10T22:11:37.7064161Z",
+        "elapsedSeconds": 28.3256865,
+        "outputPath": "out/checkpoint-83/tl2-power-reactor-progression-permutations",
+        "failedGates": 0
+      },
+      {
+        "id": "auxiliary-resource-endurance",
+        "name": "Deterministic finite-resource and recharge endurance stress study",
+        "command": "auxiliary-resource-endurance",
+        "status": "Passed",
+        "startedUtc": "2026-08-10T22:11:37.7427657Z",
+        "completedUtc": "2026-08-10T22:11:38.0959396Z",
+        "elapsedSeconds": 0.3493976,
+        "outputPath": "out/checkpoint-83/auxiliary-resource-endurance",
+        "failedGates": 0
+      },
+      {
+        "id": "checkpoint-53-resource-semantics-lock",
+        "name": "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+        "command": "auxiliary-resource-endurance",
+        "status": "Passed",
+        "startedUtc": "2026-08-10T22:11:38.1019413Z",
+        "completedUtc": "2026-08-10T22:11:38.4519740Z",
+        "elapsedSeconds": 0.34966919999999996,
+        "outputPath": "out/checkpoint-83/checkpoint-53-resource-semantics-lock",
+        "failedGates": 0
+      },
+      {
+        "id": "runner-self-tests",
+        "name": "ScenarioRunner self-tests",
+        "command": "self-test",
+        "status": "Passed",
+        "startedUtc": "2026-08-10T22:11:38.4602837Z",
+        "completedUtc": "2026-08-10T22:11:39.2065143Z",
+        "elapsedSeconds": 0.7442219999999999,
+        "outputPath": null,
+        "failedGates": 0
+      }
+    ],
+    "outputPaths": {
+      "root": "out/checkpoint-83",
+      "acceptanceJson": "out/checkpoint-83/acceptance-summary.json",
+      "acceptanceText": "out/checkpoint-83/acceptance-summary.txt"
+    },
+    "firstFailure": null
+  },
+  "substantiveSummarySha256": "04b39c033f19c7c7b1d1cfdaad001e13819e8b11fc072855c5e74e3753c0646a",
+  "repositoryManifestSha256": "ff1ee737afcd8b331d423b3dea54fd075fcfbe3ea50bd31ff30d8bf92f9719ed",
+  "checkpointDefinitionSha256": "cba4de1a9432117714a4926ac4f589cdfed7506971b92b29f41a995ea0034d5e",
+  "summary": {
+    "unitTestsPassed": 863,
+    "runnerStagesPassed": 11,
+    "scenarioRunnerSelfTestsPassed": 48,
+    "substantiveVariants": 96,
+    "substantiveTrials": 960000,
+    "failedGates": 0,
+    "trialErrors": 0
+  }
+}

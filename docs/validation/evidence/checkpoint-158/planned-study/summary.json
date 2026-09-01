@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "star-cluster-cp158-defense-aux-lifetime-v0.1",
+  "checkpoint": 158,
+  "candidateTlPoints": 703,
+  "baselineCells": 6850,
+  "screenLegalCells": 497555,
+  "plannedDeepCells": 277160,
+  "pairwiseLegalCells": 169040,
+  "baselineCombatTrials": 342500,
+  "screenCombatTrials": 12438875,
+  "deepCombatTrials": 27716000,
+  "pairwiseCombatTrials": 4226000,
+  "substantiveCombatTrials": 44723375,
+  "automaticPromotion": false
+}

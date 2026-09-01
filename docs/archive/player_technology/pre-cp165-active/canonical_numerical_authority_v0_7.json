@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "star-cluster-canonical-numerical-authority-v0.7",
+  "checkpoint": 136,
+  "acceptedMechanicsAndResearchBaseline": 135,
+  "previousCandidateNumericalBaseline": 135,
+  "status": "armor_regeneration_crystalline_candidate_rebaseline_pending_native_validation",
+  "damagePointScale": 2,
+  "primaryReferenceMatrix": "technology_numerical_matrix_v0_8.json",
+  "primaryTechnologyTable": "technology_component_table_v0_8c.json",
+  "primaryWorkbook": "StarCluster_Revised_TL1_TL9_Technology_Component_Table_v0_8c.xlsx",
+  "storyboard": "technology_family_storyboard_v1_5.json",
+  "storyboardReconciled": false,
+  "productionRuntimeChanged": false,
+  "technologyValuesChanged": true,
+  "changedFamilies": [
+    "armor",
+    "A_b1 Crystalline armor"
+  ],
+  "frozenForComparison": [
+    "hull",
+    "shield",
+    "damage_control",
+    "kinetic_main",
+    "energy_main",
+    "missile_delivery",
+    "missile_guidance",
+    "missile_gp_warhead",
+    "missile_swarmer",
+    "reactor",
+    "stl",
+    "computer",
+    "sensor",
+    "pds"
+  ],
+  "sameTlComparison": "Exact CP135 context/variant population and master seed 134001; Hull-only DamCon/PDS/TL6 Armor strata retained.",
+  "authorityBoundary": "CP136 is a narrow Armor candidate delta and before/after study. It does not promote balance or alter the Storyboard. CP135 remains accepted evidence for the reduced-Shield-recharge + active Hull-DamCon baseline."
+}

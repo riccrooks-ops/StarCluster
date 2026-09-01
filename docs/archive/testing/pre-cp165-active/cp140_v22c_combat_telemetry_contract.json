@@ -1,0 +1,322 @@
+{
+  "battle_fields": [
+    {
+      "category": "outcome",
+      "field": "winner",
+      "meaning": "Winner/draw/censored result."
+    },
+    {
+      "category": "outcome",
+      "field": "turns_elapsed",
+      "meaning": "Battle duration."
+    },
+    {
+      "category": "outcome",
+      "field": "mission_success",
+      "meaning": "Scenario objective outcome if available."
+    },
+    {
+      "category": "outcome",
+      "field": "damage_inflicted",
+      "meaning": "Total relevant damage inflicted."
+    },
+    {
+      "category": "outcome",
+      "field": "damage_received",
+      "meaning": "Total relevant damage received."
+    },
+    {
+      "category": "decision_pressure",
+      "field": "tp_conflict_turns",
+      "meaning": "Turns with genuine policy-qualified TP conflict."
+    },
+    {
+      "category": "decision_pressure",
+      "field": "tp_denied_total_battle",
+      "meaning": "Total denied desired TP."
+    },
+    {
+      "category": "decision_pressure",
+      "field": "tp_headroom_turns",
+      "meaning": "Turns with positive TP headroom after all desirable actions."
+    },
+    {
+      "category": "strain",
+      "field": "overload_count",
+      "meaning": "Overload actions."
+    },
+    {
+      "category": "strain",
+      "field": "forced_overload_count",
+      "meaning": "Forced overload checks."
+    },
+    {
+      "category": "endurance",
+      "field": "weapon_shots",
+      "meaning": "Primary weapon firing events."
+    },
+    {
+      "category": "endurance",
+      "field": "missile_flights_launched",
+      "meaning": "Missile Flights launched."
+    },
+    {
+      "category": "endurance",
+      "field": "pds_attempts",
+      "meaning": "PDS attempts."
+    },
+    {
+      "category": "endurance",
+      "field": "fuel_used",
+      "meaning": "Fuel expenditure."
+    },
+    {
+      "category": "endurance",
+      "field": "ammo_exhausted_flag",
+      "meaning": "Relevant primary/PDS ammunition exhausted."
+    }
+  ],
+  "content_sha256": "490ff625572f285c9c0d5c2a391616f7a8b4dfd0204e888c3dec91efd611e21e",
+  "contract_id": "SC-V22C-COMBAT-TELEMETRY-CONTRACT",
+  "decision_pressure_boundary": "Zero TP headroom alone is not enough. TP conflict requires multiple desirable legal actions competing for insufficient TP under the bound tactical policy.",
+  "promotion_allowed": false,
+  "schema_version": "22C.0",
+  "turn_fields": [
+    {
+      "category": "identity",
+      "field": "trial_id",
+      "meaning": "Stable trial identity."
+    },
+    {
+      "category": "identity",
+      "field": "scenario_id",
+      "meaning": "Experiment scenario identity."
+    },
+    {
+      "category": "time",
+      "field": "turn",
+      "meaning": "Turn index."
+    },
+    {
+      "category": "identity",
+      "field": "side_id",
+      "meaning": "Combatant side."
+    },
+    {
+      "category": "technology",
+      "field": "tl",
+      "meaning": "Current TL."
+    },
+    {
+      "category": "technology",
+      "field": "weapon_variant",
+      "meaning": "K, E, M_GP, or M_SWARMER."
+    },
+    {
+      "category": "resource",
+      "field": "resource_ensemble_id",
+      "meaning": "v22C resource-envelope identity."
+    },
+    {
+      "category": "condition",
+      "field": "reactor_condition",
+      "meaning": "Undamaged/Degraded/Damaged/Destroyed."
+    },
+    {
+      "category": "tp_supply",
+      "field": "reactor_tp_available",
+      "meaning": "Usable Main Reactor TP this turn before allocation."
+    },
+    {
+      "category": "tp_supply",
+      "field": "aux_tp_supply",
+      "meaning": "Bound auxiliary/burst supply used this turn, distinguished from sustained Main Reactor supply."
+    },
+    {
+      "category": "tp_demand",
+      "field": "tp_requested_total",
+      "meaning": "Total desirable TP under the selected legal tactical policy before allocation."
+    },
+    {
+      "category": "tp_demand",
+      "field": "tp_allocated_total",
+      "meaning": "Total TP actually allocated."
+    },
+    {
+      "category": "tp_demand",
+      "field": "tp_denied_total",
+      "meaning": "Requested TP not funded."
+    },
+    {
+      "category": "tp_allocation",
+      "field": "tp_weapon",
+      "meaning": "Weapon firing/enhancement TP."
+    },
+    {
+      "category": "tp_allocation",
+      "field": "tp_pds",
+      "meaning": "PDS readiness/operation TP."
+    },
+    {
+      "category": "tp_allocation",
+      "field": "tp_sensor",
+      "meaning": "Active Sensor TP."
+    },
+    {
+      "category": "tp_allocation",
+      "field": "tp_ecm",
+      "meaning": "ECM TP."
+    },
+    {
+      "category": "tp_allocation",
+      "field": "tp_eccm",
+      "meaning": "ECCM TP."
+    },
+    {
+      "category": "tp_allocation",
+      "field": "tp_shield",
+      "meaning": "Shield tactical recharge/support TP."
+    },
+    {
+      "category": "tp_allocation",
+      "field": "tp_armor",
+      "meaning": "Armor regeneration/support TP."
+    },
+    {
+      "category": "tp_allocation",
+      "field": "tp_damage_control",
+      "meaning": "Damage Control TP."
+    },
+    {
+      "category": "tp_allocation",
+      "field": "tp_stl",
+      "meaning": "Movement/drive tactical TP."
+    },
+    {
+      "category": "tp_allocation",
+      "field": "tp_aux",
+      "meaning": "Other powered AUX TP."
+    },
+    {
+      "category": "tp_allocation",
+      "field": "tp_overload",
+      "meaning": "Additional TP attributable to overload actions."
+    },
+    {
+      "category": "decision_pressure",
+      "field": "desirable_action_count",
+      "meaning": "Count of policy-qualified legal actions competing for TP."
+    },
+    {
+      "category": "decision_pressure",
+      "field": "funded_action_count",
+      "meaning": "Desirable actions funded."
+    },
+    {
+      "category": "decision_pressure",
+      "field": "denied_action_count",
+      "meaning": "Desirable actions not funded because of TP/resource competition."
+    },
+    {
+      "category": "decision_pressure",
+      "field": "tp_conflict_flag",
+      "meaning": "True when two or more desirable legal actions compete for insufficient TP."
+    },
+    {
+      "category": "strain",
+      "field": "strain_reactor",
+      "meaning": "Reactor Strain."
+    },
+    {
+      "category": "strain",
+      "field": "strain_weapon",
+      "meaning": "Primary weapon Strain where applicable."
+    },
+    {
+      "category": "strain",
+      "field": "strain_sensor",
+      "meaning": "Sensor Strain where applicable."
+    },
+    {
+      "category": "strain",
+      "field": "strain_ecm",
+      "meaning": "ECM Strain."
+    },
+    {
+      "category": "strain",
+      "field": "strain_eccm",
+      "meaning": "ECCM Strain."
+    },
+    {
+      "category": "strain",
+      "field": "strain_stl",
+      "meaning": "STL Strain."
+    },
+    {
+      "category": "geometry",
+      "field": "range_hex",
+      "meaning": "Current separation."
+    },
+    {
+      "category": "information",
+      "field": "track_quality",
+      "meaning": "Firm/Approx/none or exact bound runner vocabulary."
+    },
+    {
+      "category": "endurance",
+      "field": "fuel_remaining",
+      "meaning": "Fuel remaining."
+    },
+    {
+      "category": "endurance",
+      "field": "kinetic_ammo_remaining",
+      "meaning": "K ammunition remaining if applicable."
+    },
+    {
+      "category": "endurance",
+      "field": "missile_flights_remaining",
+      "meaning": "Missile Flights remaining if applicable."
+    },
+    {
+      "category": "endurance",
+      "field": "pds_ammo_remaining",
+      "meaning": "Finite PDS ammo where applicable."
+    },
+    {
+      "category": "defense",
+      "field": "shield_remaining",
+      "meaning": "Shield capacity remaining."
+    },
+    {
+      "category": "defense",
+      "field": "armor_remaining",
+      "meaning": "Armor integrity remaining."
+    },
+    {
+      "category": "defense",
+      "field": "hull_remaining",
+      "meaning": "Hull remaining."
+    },
+    {
+      "category": "condition",
+      "field": "primary_weapon_condition",
+      "meaning": "Weapon condition, without inventing unresolved mechanical effects."
+    },
+    {
+      "category": "condition",
+      "field": "sensor_condition",
+      "meaning": "Sensor condition."
+    },
+    {
+      "category": "condition",
+      "field": "pds_condition",
+      "meaning": "PDS condition."
+    },
+    {
+      "category": "action",
+      "field": "chosen_action_summary",
+      "meaning": "Compact legal action label set chosen by the existing AI/policy."
+    }
+  ],
+  "unresolved_condition_rule": "Record condition even when effect semantics are not yet defined; do not invent generic performance penalties."
+}

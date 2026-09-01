@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "star-cluster-cp125-pure-tl-whole-ladder-results-v0.1",
+  "checkpoint": 125,
+  "mode": "substantive",
+  "variants": 280136,
+  "basePairings": 70034,
+  "trialsPerVariant": 200,
+  "totalTrials": 56027200,
+  "trialErrors": 0,
+  "orderedTlCells": 81,
+  "familySummaryRows": 1225,
+  "buildOpponentTlRows": 84843,
+  "telemetryMetrics": 47,
+  "mixedTlShipsExecuted": false,
+  "automaticPromotion": false,
+  "balanceValidated": false,
+  "failedGates": [],
+  "reviewSignals": {
+    "balanceSignalsAreBlockingGates": false,
+    "deltaTlSummary": [
+      {
+        "delta_tl": 0,
+        "base_pairings": 18854,
+        "population_weight": 6559567.0,
+        "higher_tl_conditional_win_rate": 0.5,
+        "mean_unresolved_rate": 0.02153465060079423,
+        "mean_turns": 10.222138115023446
+      },
+      {
+        "delta_tl": 1,
+        "base_pairings": 9220,
+        "population_weight": 11290444.0,
+        "higher_tl_conditional_win_rate": 0.7129327913963017,
+        "mean_unresolved_rate": 0.014691028315626915,
+        "mean_turns": 9.431569360558363
+      },
+      {
+        "delta_tl": 2,
+        "base_pairings": 8944,
+        "population_weight": 9146264.0,
+        "higher_tl_conditional_win_rate": 0.8743035163417301,
+        "mean_unresolved_rate": 0.012472227731454068,
+        "mean_turns": 8.156347444158621
+      },
+      {
+        "delta_tl": 3,
+        "base_pairings": 8328,
+        "population_weight": 6774752.0,
+        "higher_tl_conditional_win_rate": 0.9516683492435897,
+        "mean_unresolved_rate": 0.0064942046956109984,
+        "mean_turns": 6.808516615442159
+      },
+      {
+        "delta_tl": 4,
+        "base_pairings": 7592,
+        "population_weight": 4434240.0,
+        "higher_tl_conditional_win_rate": 0.9871630355436133,
+        "mean_unresolved_rate": 0.0008103415128635346,
+        "mean_turns": 5.4592426515028505
+      },
+      {
+        "delta_tl": 5,
+        "base_pairings": 6728,
+        "population_weight": 3132792.0,
+        "higher_tl_conditional_win_rate": 0.997457325862712,
+        "mean_unresolved_rate": 2.648715586607729e-05,
+        "mean_turns": 4.615288004677616
+      },
+      {
+        "delta_tl": 6,
+        "base_pairings": 5184,
+        "population_weight": 1899072.0,
+        "higher_tl_conditional_win_rate": 0.9997108269296796,
+        "mean_unresolved_rate": 3.5260643093047553e-06,
+        "mean_turns": 4.062911860371803
+      },
+      {
+        "delta_tl": 7,
+        "base_pairings": 3456,
+        "population_weight": 834624.0,
+        "higher_tl_conditional_win_rate": 0.9999919243342352,
+        "mean_unresolved_rate": 2.066798941798942e-06,
+        "mean_turns": 3.52302734375
+      },
+      {
+        "delta_tl": 8,
+        "base_pairings": 1728,
+        "population_weight": 357696.0,
+        "higher_tl_conditional_win_rate": 1.0,
+        "mean_unresolved_rate": 0.0,
+        "mean_turns": 3.1506850405092592
+      }
+    ],
+    "maxMovementOrderSwing": 1.0
+  },
+  "elapsedSeconds": 1629.8809391999966
+}

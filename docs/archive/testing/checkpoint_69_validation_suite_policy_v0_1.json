@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": 69,
+  "normal": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 72,
+    "trialsAtDefault": 720000,
+    "deterministicSensorEwRows": 924,
+    "required": true,
+    "smokeTrials": 72,
+    "totalTrialExecutions": 720072
+  },
+  "deepCalibration": {
+    "stageCount": 30,
+    "monteCarloVariantCount": 1616,
+    "trialsAtDefault": 16160000,
+    "requiredByDefault": false,
+    "smokeTrials": 72,
+    "totalTrialExecutions": 16160072
+  },
+  "blockingBalanceTargets": false,
+  "productionControls": {
+    "reactorOutput": 5,
+    "startingFuel": 100,
+    "movementFuelPerHex": 2,
+    "evasiveManeuverFuelCost": 1,
+    "tacticalMapRadius": 5,
+    "sensorRangesPromotedByCheckpoint69": false
+  },
+  "sensorEwCandidateControls": {
+    "balanced0": "Passive 1/3; Active 3/4; Overload 4/5",
+    "balanced1": "Passive 1/2; Active 3/4; Overload 4/5",
+    "balanced2": "Passive 1/2; Active 3/4; Overload 5/6",
+    "sameHexLosUnoccludable": true,
+    "sameHexEwDiscriminationStillResolves": true,
+    "staticNetEwRangePenaltyInCandidateStudy": 0
+  },
+  "nativeAcceptanceDependencyContract": {
+    "allowedBaselineDependencies": [
+      "PowerShell",
+      "pinned .NET SDK"
+    ],
+    "blockedInterpreters": [
+      "python",
+      "python3",
+      "py"
+    ],
+    "precheckRequired": true
+  },
+  "mustAlwaysRunStageIds": [
+    "deterministic",
+    "tl1-phase-a",
+    "tl1-phase-b",
+    "tl1-installation-space-envelope",
+    "tl1-sensor-ew-foundation",
+    "tl1-sensor-ew-candidate-operational-preflight",
+    "tl1-sensor-ew-candidate-operational-smoke",
+    "tl1-sensor-ew-candidate-operational-combat",
+    "auxiliary-resource-endurance",
+    "checkpoint-53-resource-semantics-lock",
+    "runner-self-tests"
+  ],
+  "deepCalibrationRetains": [
+    "tl1-bilateral-overload-ew-counterplay",
+    "tl1-scripted-overload-tactics",
+    "tl1-bilateral-tactical-geometry",
+    "tl1-track-aware-movement-acquisition",
+    "tl1-operational-sensor-acquisition-ew"
+  ],
+  "notes": [
+    "Checkpoint 69 adds Balanced-0 and carries Balanced-0/1/2 into matched operational combat without promoting production sensor ranges.",
+    "Same-hex LOS cannot be occluded, but range zero does not bypass emission provenance or ECM/ECCM discrimination.",
+    "The accepted 5-TP reactor, 100-fuel baseline, physical weapon ranges, and FullVolleyFirst offensive-isolation doctrine remain fixed controls.",
+    "Candidate outcomes are diagnostic evidence; no target win share is a release gate.",
+    "Checkpoint 69d retains the executable integrated-loader/coverage preflight and 72-variant one-trial full-pipeline smoke before the candidate Monte Carlo stage; clear-normal 1-TP Active Sensor power is gated per powered evaluation, while the substantive study remains 720,000 trials."
+  ]
+}

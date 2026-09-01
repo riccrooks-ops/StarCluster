@@ -1,0 +1,10 @@
+tl,reactor,reactor_operational_tp,reactor_space,capacity,examined_legal_branch_combinations,maximum_full_demand,power_gap,used_space,free_space,weapons,weapon_peak_tp,armor_support,shield_support,support_tp,pds_counts,pds_tp
+1,reactor-tl1,5,6,35,15,11,6,35,0,energy_main,3,none,none,0,0/1/0,2
+2,reactor-tl2,7,6,35,15,13,6,35,0,energy_main,3,none,none,0,0/1/0,2
+3,reactor-tl3,7,5,36,66,14,7,36,0,energy_main,3,none,none,0,0/0/2,4
+4,reactor-tl4,9,5,37,102,15,6,37,0,energy_main,3,none,shield-hardener,1,0/0/2,4
+5,reactor-tl5,12,5,38,813,19,7,38,0,energy_main,3,none,none,0,0/0/3,6
+6,reactor-tl6,12,4,39,4722,23,11,39,0,energy_main,3,none,none,0,0/0/5,10
+7,reactor-tl7,15,4,41,60196,26,11,41,0,energy-extreme-frequency+energy-extreme-frequency,8,none,none,0,0/0/5,10
+8,reactor-tl8,17,4,43,124093,32,15,43,0,energy_main+energy_main,8,none,shield-hardener+shield-particle-screen+shield-field-stabilizer,3,0/0/5,10
+9,reactor-tl9,20,3,45,145390,34,14,44,1,energy_main+energy_main,10,armor-field-assisted,shield-hardener+shield-particle-screen+shield-field-stabilizer,5,0/0/5,10

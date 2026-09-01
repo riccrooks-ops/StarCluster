@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "star-cluster-checkpoint-102-accepted-evidence-v1",
+  "checkpoint": 102,
+  "status": "native-accepted",
+  "acceptedRepositoryManifestSha256": "02582d2def97fd3060dc66128ab11d6744b1d8f48ff58cfbe44865524604ed89",
+  "acceptedCheckpointDefinitionSha256": "b996ca4517d114a701faf4665c9440032f597354b0c91070e3b058e8eaa64f1f",
+  "nativeResultsZipSha256": "5becb0ce44e76d6be8c5515e3956dece9f7ed025d6836fa105ad3f03ada4ca23",
+  "nativeSdkVersion": "8.0.423",
+  "buildWarnings": 0,
+  "buildErrors": 0,
+  "xunitPassed": 876,
+  "xunitFailed": 0,
+  "runnerStagesPassed": 15,
+  "scenarioRunnerSelfTestsPassed": 70,
+  "deterministicCases": 7,
+  "mechanicsCases": 90,
+  "cp102ExecutableSmokeVariants": 32,
+  "cp102ExecutableSmokeTrials": 32,
+  "primaryStudyTrials": 0,
+  "failedGates": 0,
+  "constructionEnvelope": {
+    "raw": 221184,
+    "legal": 51264,
+    "exactFill": 10752,
+    "nearFill": 25536,
+    "underfilled": 14976,
+    "twoMain": 5568,
+    "twoReactor": 7872,
+    "twoMainTwoReactor": 0
+  },
+  "typedTransitionEnvelope": {
+    "raw": 43008,
+    "legal": 38400,
+    "transitions": 16,
+    "legalEdges": 220416,
+    "logicalPairings": 16,
+    "generatedVariants": 32
+  },
+  "note": "CP102 Corrected Replacement 3 is implementation/integration evidence only; the 32 one-trial smoke outcomes are not balance evidence."
+}

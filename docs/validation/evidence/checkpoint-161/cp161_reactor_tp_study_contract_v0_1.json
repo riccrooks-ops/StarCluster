@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "star-cluster-cp161-reactor-tp-study-contract-v0.1",
+  "checkpoint": 161,
+  "acceptedBaseCheckpoint": 160,
+  "acceptedBaseNativeArchive": "StarCluster_CP160_native_results_20260830_162554.zip",
+  "acceptedBaseNativeArchiveSha256": "a15271ce19677b152c6181306354c0c3e204a2c3d36ec7a5d02e8a22df1d1fbf",
+  "researchExecutionBaselineId": "CP160-PF4",
+  "researchExecutionMatrixSha256": "7fd4dfbbe375586de2605361006db84b68f89767c76ba4b76da6cf5f48253155",
+  "architecturePopulationAtReactorSpace6": 22482,
+  "oneReactorArchitectures": 16741,
+  "twoReactorArchitectures": 5741,
+  "absoluteOperationalSupplySweep": {"minimumTpPerReactor": 2, "maximumTpPerReactor": 30},
+  "reactorSpaceSweep": [4, 5, 6, 7, 8],
+  "currentPf4OperationalScaffold": [5, 6, 7, 8, 9, 10, 11, 12, 13],
+  "currentPf4DegradedScaffold": [3, 4, 5, 6, 6, 7, 8, 8, 9],
+  "currentPf4EmergencyScaffold": [1, 2, 2, 3, 3, 3, 4, 4, 5],
+  "stochasticDemand": {
+    "representativeLoadouts": 108,
+    "doctrines": ["OFFENSE", "EW_CONTEST", "MISSILE_DEFENSE", "DAMAGE_CRISIS", "PURSUIT_BURST", "MIXED"],
+    "samplesPerVariant": 12000,
+    "variants": 648,
+    "turnSamples": 7776000
+  },
+  "fullMapCombat": {
+    "contextsPerTl": 36,
+    "techLevels": 9,
+    "supplyOffsetsFromPf4": [-4, -2, 0, 2, 4, 6, 8],
+    "trialsPerCell": 2000,
+    "cells": 2268,
+    "substantiveCombatTrials": 4536000,
+    "includesMirroredOneVsTwoReactorContests": true
+  },
+  "interpretation": {
+    "noTargetWinRate": true,
+    "noUniversalUtilizationTarget": true,
+    "fullSimultaneousInstalledDemandIsStressOnly": true,
+    "currentReactorLadderIsScaffoldNotAnswer": true,
+    "balanceMeansDistinctViableChoices": true,
+    "tuningAllowed": false,
+    "automaticPromotion": false,
+    "productionAuthorityChanged": false,
+    "auxMagnitudeArchitectureRemainClosedUnlessIntegrationInvalidates": true
+  }
+}

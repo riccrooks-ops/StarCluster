@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "86",
+  "mustRun": {
+    "primaryStudyId": "tl2-itc12-weapon-penetration-layered-defense-permutations",
+    "primaryVariantCount": 288,
+    "defaultTrialsPerVariant": 10000,
+    "fullPipelineSmokeTrialsPerVariant": 1,
+    "scenarioRunnerSelfTestsExpected": 51
+  },
+  "deepCalibration": {
+    "requiredByDefault": false,
+    "trigger": "dependency-driven only"
+  },
+  "promotion": {
+    "automaticFromStudyOutcome": false,
+    "familySpecificReviewRequired": true
+  }
+}

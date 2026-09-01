@@ -1,0 +1,23 @@
+{
+  "primary_variants": 1152,
+  "primary_source_counts": {
+    "statistical": 960,
+    "diversity": 128,
+    "named": 64
+  },
+  "primary_statistical_bundles": 240,
+  "primary_population_cells": 96,
+  "primary_population_weight_total": 13474170720.0,
+  "population_weighted_advanced_side_win_rate": 0.5796397912843388,
+  "population_weighted_mean_power_shortfall_events": 1.0432113204397822,
+  "screening_dominance_signals": {
+    "advanced_advantage": 78,
+    "advanced_disadvantage": 46,
+    "threshold": "matched statistical bundles with TL3-frontier delta > 0 and mover/orientation-neutral advanced-side win rate >= 0.65 or <= 0.35"
+  },
+  "overlay_variants": 100,
+  "overlay_diagnostics": 25,
+  "failed_gates": [],
+  "automatic_promotion": false,
+  "interpretation": "Research-screen evidence only. Breakdown CSVs screen composition, progression distance, Space breakpoints, family matchups, power pressure, matched-pair dominance signals, and legacy-stack diagnostics; no result automatically changes a game-facing technology value."
+}

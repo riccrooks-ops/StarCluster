@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "star-cluster-cp156-research-continuity-audit-v0.1",
+  "checkpoint": 156,
+  "name": "Research Continuity, Promotion Audit, and Future-Pass Guardrail Consolidation",
+  "baseCheckpoint": 155,
+  "purpose": "Preserve native-validated research findings and viable alternatives, audit intended promotions versus active authority, freeze methodological guardrails, and align the next AUX and final Reactor/TP passes without new tuning or combat.",
+  "substantiveCombatTrials": 0,
+  "tuningAllowed": false,
+  "automaticPromotion": false,
+  "authorityChangesAllowed": false,
+  "acceptedCp155NativeResultsArchiveSha256": "f368612abdbf44b1eb78f0695cc6b72be491834c22564be063a74f8823298b52",
+  "continuityScope": {
+    "recentNativeResearch": [149,150,151,152,153,154,155],
+    "historicalPdsSupport": "Combat Model Lab v17-v19 as registered by CP142",
+    "activeAuthoritiesAudited": ["Concept v0.7x","technology_numerical_matrix_v0_9.json","production C#"],
+    "preserveRejectedMethodLessons": true,
+    "preserveViableAlternatives": true,
+    "preserveClosedSurfaceReopenRules": true
+  },
+  "requiredOutputs": [
+    "research_continuity_register_v0_1.json",
+    "authority_snapshot_v0_1.json",
+    "promotion_audit_v0_1.csv",
+    "research_findings_ledger_v0_1.csv",
+    "viable_ladder_register_v0_1.csv",
+    "guardrail_registry_v0_1.json",
+    "future_pass_contract_v0_1.json",
+    "evidence_chain_sha256_v0_1.csv"
+  ],
+  "hardMethodGuardrails": [
+    "Balance is strategic viability and differentiated choice, not equality.",
+    "No global PDS 50-percent objective or inter-family win-rate variance minimization.",
+    "Preserve intentional no-PDS Missile threat.",
+    "Use technology-valid whole-TL ladders; quiet TLs and leapfrogging are legal.",
+    "Closed response surfaces may be reopened only after an explicit dependency invalidation.",
+    "Research evidence and provisional candidates remain separate from numerical authority until explicit promotion.",
+    "Ammunition is endurance/logistics once practical thresholds are met, not a fine per-TL tuning knob.",
+    "Final Reactor/TP tuning occurs after AUX demand closes."
+  ],
+  "nextPass": "Defense/AUX Lifetime Viability",
+  "finalMajorPass": "Reactor/TP Scarcity and Whole-Ship Equilibrium"
+}

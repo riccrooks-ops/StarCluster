@@ -1,0 +1,145 @@
+{
+  "schemaVersion": "star-cluster-tl1-phase-a-v1",
+  "id": "tl1-a04-one-way-power-state",
+  "matrixScenarioId": "TL1-A04",
+  "name": "Available, Powered, Spent, and earmarked Tactical Power",
+  "baselineVersion": "tl1-core-combat-v0.1",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "cases": [
+    {
+      "id": "a04-c01",
+      "name": "Available power flows to Powered and Spent",
+      "operation": "powerScript",
+      "input": {
+        "envelope": 5,
+        "commands": [
+          {
+            "action": "powerSystem",
+            "id": "ecm",
+            "amount": 1
+          },
+          {
+            "action": "spend",
+            "amount": 2
+          }
+        ]
+      },
+      "expected": {
+        "finalPower": {
+          "envelope": 5,
+          "powered": 1,
+          "spent": 2,
+          "available": 2,
+          "spendable": 2
+        }
+      }
+    },
+    {
+      "id": "a04-c02",
+      "name": "A powered system may increase only by using remaining Available power",
+      "operation": "powerScript",
+      "input": {
+        "envelope": 5,
+        "commands": [
+          {
+            "action": "powerSystem",
+            "id": "ecm",
+            "amount": 1
+          },
+          {
+            "action": "powerSystem",
+            "id": "ecm",
+            "amount": 1
+          }
+        ]
+      },
+      "expected": {
+        "finalPower": {
+          "powered": 2,
+          "spent": 0,
+          "available": 3,
+          "systems": [
+            {
+              "systemId": "ecm",
+              "lockedPower": 2,
+              "isActive": true,
+              "reactivationProhibited": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "a04-c03",
+      "name": "Overspending is rejected without changing the ledger",
+      "operation": "powerScript",
+      "input": {
+        "envelope": 5,
+        "commands": [
+          {
+            "action": "powerSystem",
+            "id": "shield-hardener",
+            "amount": 4
+          },
+          {
+            "action": "spend",
+            "amount": 2,
+            "expectFailure": true
+          }
+        ]
+      },
+      "expected": {
+        "steps": [
+          {
+            "succeeded": true
+          },
+          {
+            "succeeded": false
+          }
+        ],
+        "finalPower": {
+          "powered": 4,
+          "spent": 0,
+          "available": 1,
+          "spendable": 1
+        }
+      }
+    },
+    {
+      "id": "a04-c04",
+      "name": "Earmarked power remains Available but cannot be double-spent",
+      "operation": "powerScript",
+      "input": {
+        "envelope": 5,
+        "commands": [
+          {
+            "action": "earmark",
+            "id": "held-energy-shot",
+            "amount": 2
+          },
+          {
+            "action": "spend",
+            "amount": 4,
+            "expectFailure": true
+          }
+        ]
+      },
+      "expected": {
+        "steps": [
+          {
+            "succeeded": true
+          },
+          {
+            "succeeded": false
+          }
+        ],
+        "finalPower": {
+          "available": 5,
+          "spendable": 3,
+          "earmarked": 2,
+          "spent": 0
+        }
+      }
+    }
+  ]
+}

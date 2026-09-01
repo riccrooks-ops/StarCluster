@@ -1,0 +1,233 @@
+{
+  "schemaVersion": "star-cluster-technology-integration-permutation-suite-v1",
+  "id": "technology-integration-permutation-suite-v0_8",
+  "checkpoint": 89,
+  "status": "standing_cross_tl_power_aware_information_control_screening_definition",
+  "purpose": "Reusable integration-axis registry for focused causal slices and future mixed-TL/legal-build validation. It is not an evidence log.",
+  "supersedesForCurrentPlanning": "technology-integration-permutation-suite-v0_7",
+  "retainedHistoricalStudy": {
+    "id": "tl2-itc12-weapon-penetration-layered-defense-permutations",
+    "checkpoint": "86a",
+    "status": "accepted_native_evidence"
+  },
+  "validatedTechnologyPackages": {
+    "tl1-information-control": {
+      "tacticalComputerTargetingPp": 10,
+      "sensorDiscriminationResistance": 0,
+      "ecmNormalCeiling": 1,
+      "eccmNormalCeiling": 1,
+      "ewTpPerRating": 1
+    },
+    "tl2-information-control-working": {
+      "profile": "docs/design/player_technology/tl2_computing_sensor_ew_working_profile_v0_2.json",
+      "tacticalComputerTargetingPp": 12,
+      "sensorDiscriminationResistance": 1,
+      "ecmNormalCeiling": 2,
+      "eccmNormalCeiling": 2,
+      "ewTpPerRating": 1
+    }
+  },
+  "reusableAxes": {
+    "sideAWeaponFamily": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "opponentFamily": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "geometry": [
+      "fixed-range",
+      "dynamic-side-a-first",
+      "dynamic-side-b-first"
+    ],
+    "informationControlPackage": [
+      "tl1-information-control",
+      "tl2-information-control-working",
+      "mixed-tech-explicit"
+    ],
+    "powerEnvironment": [
+      "accepted-reference",
+      "diagnostic-sensitivity"
+    ],
+    "degradedFirePermission": [
+      "firm-only",
+      "explicit-weapon-capability-diagnostic"
+    ],
+    "doctrine": [
+      "accepted-policy",
+      "explicit-diagnostic-policy"
+    ],
+    "powerReactorPackage": [
+      "tl1-peak-fission-5tp",
+      "tl2-early-fusion-6tp-working",
+      "mixed-tech-explicit"
+    ],
+    "shieldCapacityPackage": [
+      "tl1-shield-2",
+      "tl2-shield-3-working",
+      "shield-4-upper-sensitivity",
+      "mixed-tech-explicit"
+    ],
+    "armorPackage": [
+      "tl1-armor-ap0-ai4",
+      "tl2-armor-ai5-working",
+      "tl2-armor-ap1-deferred",
+      "armor-ap1-ai5-upper-integration",
+      "mixed-tech-explicit"
+    ],
+    "weaponPenetrationPackage": [
+      "family-current",
+      "family-apen-sensitivity",
+      "family-spen-sensitivity",
+      "family-combined-upper",
+      "mixed-tech-explicit"
+    ]
+  },
+  "pairingPolicy": {
+    "sharedRandomStreamKey": "comparisonGroup",
+    "useCommonRandomStreamsWherePractical": true,
+    "note": "Candidate/control variants should share random streams whenever the changed dimension permits a clean paired comparison."
+  },
+  "activationPolicy": [
+    "Activate the smallest dependency-relevant submatrix that answers the causal question, then carry locally validated candidates into broader mixed-TL integration.",
+    "A shared sensitivity axis does not imply symmetric promotion across subsystem families.",
+    "Include mixed-TL, high-power-demand, and unusual-but-legal construction contexts when the changed dependency can interact with them.",
+    "Use actual-consumer preflight plus one-trial smoke before substantive Monte Carlo for any new or materially changed integrated study.",
+    "Audit dispatch, pre-run validation, shared/global gate classifications, study-specific gates, report routing, schema/baseline bindings, checkpoint stages, and study-family helpers before handoff.",
+    "Keep outcome/balance targets review-only unless a deterministic invariant is genuinely being promoted.",
+    "Construction legality follows actual Installation Space/prerequisite/compatibility rules; simultaneous Tactical Power insufficiency is an operational tradeoff, not an automatic invalid-build filter.",
+    "Generated broad-permutation studies must pass deterministic generator validation, actual-consumer preflight, and one-trial full-pipeline smoke before substantive screening.",
+    "Every legal combat build must include at least one Main Weapon and at least one Reactor; optional explicit duplication remains legal when actual construction constraints permit it.",
+    "Generated doctrine must price rated systems at their actual effective Tactical Power cost before optional activation decisions.",
+    "Dynamic movement/range doctrine must preserve attack eligibility, and intended-active fixed references must convert nonzero attack opportunities into actual attacks before their outcomes are interpreted."
+  ],
+  "currentCoverage": {
+    "currentStudy": {
+      "id": "tl2-itc14-cross-tl-power-aware-information-control-screening",
+      "variantCount": 288,
+      "status": "generated_actual_consumer_screen_pending_native_acceptance"
+    },
+    "currentExpansion": "Preserve the 512-build legal envelope and original 64 representative pairings, then add all 16 Computer/Sensor/ECM/ECCM TL1/TL2 combinations against two anchors for 96 logical pairings x 3 geometries.",
+    "combatActivityGuard": "Intended-active fixed references must convert nonzero opportunities into attacks; dynamic contexts must preserve attack types materially active in the healthy fixed reference.",
+    "powerAwareDoctrine": "Use preserve-combat-package EW doctrine with actual rating-scaled ECM/ECCM costs.",
+    "crossTlDirection": "Broaden legal-build axes and pairing/stratification coverage over time; use deterministic enumeration plus screening/escalation rather than exhaustive high-trial Monte Carlo over every pair."
+  },
+  "powerReactorPackages": {
+    "tl1-peak-fission-5tp": {
+      "status": "current_working_reference",
+      "technologyRole": "Peak fission",
+      "installationSpace": 6,
+      "operationalTacticalPower": 5
+    },
+    "tl2-early-fusion-6tp-working": {
+      "status": "validated_working_candidate",
+      "profile": "docs/design/player_technology/tl2_power_reactor_candidate_profile_v0_2.json",
+      "technologyRole": "Early practical fusion",
+      "installationSpace": 6,
+      "operationalTacticalPower": 6,
+      "productionPromotion": false
+    }
+  },
+  "shieldCapacityPackages": {
+    "tl1-shield-2": {
+      "status": "current_working_reference",
+      "installationSpace": 3,
+      "shieldCapacity": 2,
+      "baseRecharge": 1,
+      "tacticalRechargePerPower": 1,
+      "tacticalRechargePowerCap": 2,
+      "shieldArmor": 0
+    },
+    "shield-4-upper-sensitivity": {
+      "status": "diagnostic_upper_sensitivity",
+      "profile": "docs/design/player_technology/tl2_shield_capacity_candidate_profile_v0_2.json",
+      "installationSpace": 3,
+      "shieldCapacity": 4,
+      "productionPromotion": false
+    },
+    "tl2-shield-3-working": {
+      "status": "validated_working_candidate",
+      "profile": "docs/design/player_technology/tl2_shield_capacity_candidate_profile_v0_2.json",
+      "installationSpace": 3,
+      "shieldCapacity": 3,
+      "productionPromotion": false
+    }
+  },
+  "armorPackages": {
+    "tl1-armor-ap0-ai4": {
+      "status": "current_working_reference",
+      "basePrimaryArmorInstallationSpace": 0,
+      "armorProtection": 0,
+      "armorIntegrity": 4
+    },
+    "tl2-armor-ai5-working": {
+      "status": "locally_validated_working_candidate",
+      "profile": "docs/design/player_technology/tl2_armor_ap_ai_candidate_profile_v0_2.json",
+      "armorProtection": 0,
+      "armorIntegrity": 5,
+      "productionPromotion": false
+    },
+    "tl2-armor-ap1-deferred": {
+      "status": "experimental_deferred_candidate",
+      "profile": "docs/design/player_technology/tl2_armor_ap_ai_candidate_profile_v0_2.json",
+      "armorProtection": 1,
+      "armorIntegrity": 4,
+      "productionPromotion": false
+    },
+    "armor-ap1-ai5-upper-integration": {
+      "status": "diagnostic_upper_integration_sensitivity",
+      "profile": "docs/design/player_technology/tl2_armor_ap_ai_candidate_profile_v0_2.json",
+      "armorProtection": 1,
+      "armorIntegrity": 5,
+      "productionPromotion": false
+    }
+  },
+  "weaponPenetrationPackages": {
+    "profile": "docs/design/player_technology/tl2_weapon_penetration_working_profile_v0_2.json",
+    "promotionPolicy": "family_specific_human_review",
+    "automaticPromotion": false,
+    "kineticTl2Working": {
+      "shieldPenetration": 1,
+      "armorPenetration": 1,
+      "status": "locally_validated_working_candidate"
+    },
+    "kineticSpen2Status": "experimental_sensitivity",
+    "energyTl2PenetrationPromotion": null,
+    "missileTl2PenetrationPromotion": null
+  },
+  "legalBuildEnumeration": {
+    "schema": "star-cluster-cross-tl-build-permutation-v2",
+    "currentFoundation": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v0_2.json",
+    "installationSpace": 35,
+    "constructionLegality": "actual_space_prerequisite_compatibility_rules_not_simultaneous_power_sufficiency",
+    "currentAxisOptionCounts": {
+      "weapon": 4,
+      "reactor": 2,
+      "computer": 2,
+      "sensor": 2,
+      "shield": 2,
+      "armor": 2,
+      "ecm": 2,
+      "eccm": 2
+    },
+    "currentLegalBuildCount": 512,
+    "orientedPairingEnvelope": 262144,
+    "unorderedWithSelfPairingEnvelope": 131328,
+    "screeningStrategy": "enumerate_all_then_execute_bounded_named_or_stratified_slice_with_escalation",
+    "constructionGuardrails": {
+      "minimumMainWeaponCount": 1,
+      "minimumReactorCount": 1,
+      "additionalMainWeaponsOptional": true,
+      "additionalReactorsOptional": true,
+      "duplicationMustBeExplicit": true,
+      "redundantEwInstallationsAllowed": true,
+      "ecmSameTypeRatingsAdditive": false,
+      "eccmSameTypeRatingsAdditive": false,
+      "ewDuplicateResolution": "highest_applicable_functional_rating",
+      "currentBinaryEnvelopeExercisesDuplicateEw": false
+    }
+  }
+}

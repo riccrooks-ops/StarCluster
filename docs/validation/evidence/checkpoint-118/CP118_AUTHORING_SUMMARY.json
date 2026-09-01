@@ -1,0 +1,20 @@
+{
+  "checkpoint": 118,
+  "status": "bounded_authoring_diagnostic_only",
+  "variants": 1824,
+  "trialsPerVariant": 50,
+  "totalTrials": 91200,
+  "missileVariants": 936,
+  "kineticVariants": 888,
+  "primaryTlVariants": 1032,
+  "advancedTlVariants": 264,
+  "endpointStressVariants": 528,
+  "failedGates": [],
+  "automaticPromotion": false,
+  "keyInterpretation": [
+    "GP Missile yield can be explored without automatic SPEN/APEN growth.",
+    "A simple Swarmer is mechanically plausible as early as TL1-TL2, but frozen small packets age out quickly.",
+    "A mature two-packet Swarmer regains a bounded TL6-TL7 niche through coverage and PDS saturation, then fades at TL8-TL9.",
+    "Automatic Kinetic accuracy is a clean smart-projectile maturation axis; raw Damage/APEN remain separate accelerator/projectile controls."
+  ]
+}

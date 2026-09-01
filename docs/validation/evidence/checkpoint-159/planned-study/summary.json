@@ -1,0 +1,23 @@
+{
+  "mode": "plan",
+  "passed": true,
+  "baselineContexts": 2400,
+  "fieldCandidateTlPoints": 99,
+  "fieldContexts": 540,
+  "fieldScreenCells": 17820,
+  "crystallineCandidateTlPoints": 40,
+  "crystallineContexts": 1600,
+  "crystallineScreenCells": 32000,
+  "fieldDeepPackages": 7,
+  "fieldDeepCells": 3780,
+  "crystallineDeepPackages": 6,
+  "crystallineDeepCells": 9600,
+  "fieldHardenerInteractionPackages": 9,
+  "fieldHardenerInteractionCells": 1620,
+  "substantiveCombatTrials": 3390000,
+  "repairDroneCandidateTlPoints": 48,
+  "repairDroneMicroCells": 576,
+  "repairDroneMicroTrials": 1728000,
+  "automaticPostStudyPromotion": false,
+  "finalReactorTpTuning": false
+}

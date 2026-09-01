@@ -1,0 +1,24 @@
+profile_id,family_id,display_name,technology_level,capacity_cost,valuation_class,counterfactual,pds_base_chance,pds_power,pds_ammunition,auxiliary_reactor_output,combat_battery_gain,combat_battery_charges,capacitor_capacity,capacitor_discharge_rate,shield_battery_restore,shield_battery_charges,shield_capacity_bonus,shield_recharge_per_power,shield_recharge_power_cap,ablative_protection,ablative_integrity,evasive_maneuvers,damage_control_chance_bonus,extra_repair_kits,kinetic_ammunition_bonus,missile_ammunition_bonus
+aux-r48-none-tl1,counterfactual_none,No AUX (Counterfactual TL1),1,0,counterfactual_only,True,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0,0,0
+aux-r48-none-tl2,counterfactual_none,No AUX (Counterfactual TL2),2,0,counterfactual_only,True,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0,0,0
+aux-r48-tl1-kinetic-pds,aux_kinetic_pds,TL1 Kinetic Point-Defense Battery,1,1,tactical_combat,False,35,1,50,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0,0,0
+aux-r48-tl1-amm-pds,aux_amm_pds,TL1 Anti-Missile Missile Battery,1,1,tactical_combat,False,50,1,25,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0,0,0
+aux-r48-tl1-combat-battery,aux_combat_battery,TL1 Combat Battery,1,1,tactical_combat,False,0,0,,0,2,3,0,0,0,0,0,0,0,0,0,False,0,0,0,0
+aux-r48-tl1-shield-battery,aux_shield_battery,TL1 Shield Battery,1,1,tactical_combat,False,0,0,,0,0,0,0,0,3,3,0,0,0,0,0,False,0,0,0,0
+aux-r48-tl1-ablative-armor,aux_ablative_armor,TL1 Ablative Armor Layer,1,1,tactical_combat,False,0,0,,0,0,0,0,0,0,0,0,0,0,0,2,False,0,0,0,0
+aux-r48-tl1-kinetic-magazine,aux_kinetic_magazine_expansion,TL1 Kinetic Magazine Expansion,1,1,combat_endurance,False,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0,50,0
+aux-r48-tl1-missile-magazine,aux_missile_magazine_expansion,TL1 Missile Magazine Expansion,1,1,combat_endurance,False,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0,0,12
+aux-r48-tl2-kinetic-pds,aux_kinetic_pds,TL2 Kinetic Point-Defense Battery,2,1,tactical_combat,False,38,1,60,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0,0,0
+aux-r48-tl2-amm-pds,aux_amm_pds,TL2 Anti-Missile Missile Battery,2,1,tactical_combat,False,53,1,30,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0,0,0
+aux-r48-tl2-combat-battery,aux_combat_battery,TL2 Combat Battery,2,1,tactical_combat,False,0,0,,0,3,3,0,0,0,0,0,0,0,0,0,False,0,0,0,0
+aux-r48-tl2-shield-battery,aux_shield_battery,TL2 Shield Battery,2,1,tactical_combat,False,0,0,,0,0,0,0,0,4,3,0,0,0,0,0,False,0,0,0,0
+aux-r48-tl2-ablative-armor,aux_ablative_armor,TL2 Ablative Armor Layer,2,1,tactical_combat,False,0,0,,0,0,0,0,0,0,0,0,0,0,1,2,False,0,0,0,0
+aux-r48-tl2-kinetic-magazine,aux_kinetic_magazine_expansion,TL2 Kinetic Magazine Expansion,2,1,combat_endurance,False,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0,75,0
+aux-r48-tl2-missile-magazine,aux_missile_magazine_expansion,TL2 Missile Magazine Expansion,2,1,combat_endurance,False,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0,0,15
+aux-r48-tl2-energy-pds,aux_energy_pds,TL2 Energy Point-Defense Array,2,1,tactical_combat,False,42,2,,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0,0,0
+aux-r48-tl2-auxiliary-reactor,aux_auxiliary_reactor,TL2 Auxiliary Reactor,2,2,tactical_combat,False,0,0,,1,0,0,0,0,0,0,0,0,0,0,0,False,0,0,0,0
+aux-r48-tl2-power-capacitor,aux_power_capacitor,TL2 Power Capacitor,2,1,tactical_combat,False,0,0,,0,0,0,4,2,0,0,0,0,0,0,0,False,0,0,0,0
+aux-r48-tl2-shield-booster,aux_shield_booster,TL2 Shield Booster,2,1,tactical_combat,False,0,0,,0,0,0,0,0,0,0,2,0,0,0,0,False,0,0,0,0
+aux-r48-tl2-power-stabilizer,aux_power_stabilizer,TL2 Shield Power Stabilizer,2,1,tactical_combat,False,0,0,,0,0,0,0,0,0,0,0,2,1,0,0,False,0,0,0,0
+aux-r48-tl2-evasive-maneuver-system,aux_evasive_maneuver_system,TL2 Evasive Maneuver System,2,1,tactical_combat,False,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,True,0,0,0,0
+aux-r48-tl2-repair-drone-bay,aux_repair_drone_bay,TL2 Repair Drone Bay,2,1,tactical_combat,False,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,False,10,1,0,0

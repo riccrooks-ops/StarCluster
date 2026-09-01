@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "checkpoint-106-architecture-validation-policy-v0.1",
+  "checkpoint": "106",
+  "scope": "technology_foundation_completeness_audit_only",
+  "required": {
+    "nativeDependencyPrecheck": true,
+    "architectureContract": true,
+    "referenceCoverage": true,
+    "repositoryManifest": true,
+    "conceptRenderQaBeforePackaging": true
+  },
+  "notApplicable": {
+    "dotnetBuild": true,
+    "xunit": true,
+    "scenarioRunner": true,
+    "pythonResearchEngine": true,
+    "monteCarlo": true,
+    "deepCalibration": true
+  },
+  "declaredTrials": 0,
+  "numericalTlChartChanged": false,
+  "simulationOrCalibrationRun": false,
+  "automaticTechnologyPromotion": false
+}

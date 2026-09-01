@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "star-cluster-research-authority-snapshot-v0.2",
+  "checkpoint": 157,
+  "activeNumericalAuthority": {
+    "path": "docs/design/player_technology/technology_numerical_matrix_v0_9.json",
+    "sha256": "3088b0a9eb45f6bf505c24513e8bb2ac878819db4ab464ccfea330243c82f194",
+    "declaredCheckpoint": 137,
+    "status": "finite_in_combat_armor_regeneration_reserve_candidate_pending_same_tl_recalibration",
+    "damagePointScale": {
+      "canonicalScale": 2,
+      "historicalPointEqualsCanonicalPoints": 2,
+      "oddCanonicalValuesPermitted": true,
+      "oddValueUse": "selective_reference_hypothesis",
+      "productionRepairHullPerKitTl1": 1,
+      "criticalCadenceMigrated": false,
+      "migrationAcceptedCheckpoint": 122
+    }
+  },
+  "conceptAuthority": {
+    "path": "docs/Star_Cluster_Game_Concept_v0.7x.docx",
+    "sha256": "f76ca6ce488ccb5ad1352f7d38b8c3d4657c12ed64d0c93cc45d2db605cc632f"
+  },
+  "productionPdsContext": {
+    "path": "src/StarCluster.Core/Combat/Missiles/MissileInterceptionPhaseContext.cs",
+    "sha256": "1a731834a3956267aacbdde030561df2cef18121d91860cfbef1c5e851c10c99"
+  },
+  "recentResearchSeries": {
+    "firstCheckpoint": 149,
+    "lastCheckpoint": 155,
+    "automaticNumericalPromotionAuthorized": false,
+    "interpretation": "CP149-CP155 are native-validated research evidence and provisional candidate sources, not production numerical authority unless a later explicit promotion checkpoint says otherwise."
+  },
+  "pendingFinalizationResearchExecutionAuthority": {
+    "path": "docs/design/player_technology/technology_research_execution_baseline_pending_finalization_v0_1.json",
+    "sha256": "78424255ec94af225d563f5c4570a3094841244ff4acc31a962d6f81ee20365f",
+    "baselineId": "CP157-PF1",
+    "status": "PENDING_FINALIZATION_RESEARCH_AUTHORITY",
+    "defaultForFutureSubstantiveResearch": true,
+    "productionAuthorityReplaced": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-101-validation-suite-policy-v0_1",
+  "checkpoint": 101,
+  "status": "candidate",
+  "mustAlwaysRun": {
+    "nativeDependencyPrecheck": true,
+    "repositoryContract": true,
+    "manifestAndPowerShellSyntax": true,
+    "pinnedSdk": true,
+    "warningsAsErrorsBuild": true,
+    "unitTests": true,
+    "deterministicAndMechanicsGates": true,
+    "acceptedCp99ExactEdgePreflightRegression": true,
+    "acceptedCp99ExactEdgeGenerationRegression": true,
+    "runnerSelfTests": true,
+    "cp99SubstantiveReplay": false,
+    "newMonteCarloStudy": false
+  },
+  "acceptedBaseline": {
+    "checkpoint": 100,
+    "checkpointDefinitionSha256": "4d9420008706b2970151159d4041a2b3ad81bad145b8985a1583416f82d54c13",
+    "checkpointManifestSha256": "e8104cc761e0807414ccf278a7bd9813cdd3ea99cfd5f58dab9ae7cce16faaf6",
+    "nativeResultsZipSha256": "2b31e5325c83c8801899b6806b09949d2536ad0e07ddb2a7726aa5e15403e643",
+    "stochasticExecutions": 0
+  },
+  "acceptedExecutableCrossProgression": {
+    "foundation": "v0.8",
+    "legalBuilds": 11776,
+    "progressionLegalEdges": 37184,
+    "exactEdgeStrata": 181,
+    "logicalPairings": 362,
+    "generatedVariants": 724,
+    "mandatorySensor": true,
+    "retainedUnderAcceptedCheckpoint": 100
+  },
+  "authorityBoundary": {
+    "technologyPromotionAutomatic": false,
+    "productionCombatDataChanged": false,
+    "initiativeRuleChange": false,
+    "tl3CombatMechanicsImplemented": false
+  },
+  "preflight": {
+    "acceptedCp100ProvenanceAndFreeze": true,
+    "tl3CrossAuthorityValueConsistency": true,
+    "transitionTypeAndSpaceSemantics": true,
+    "buildAndPowerArithmeticRecomputed": true,
+    "noAccidentalTl3RuntimeActivation": true,
+    "noSymmetricPlaceholderProgression": true,
+    "checkpointExecutionArithmetic": true,
+    "powerShell51TypeTokenAudit": true
+  },
+  "expected": {
+    "xunitTests": 876,
+    "runnerStages": 10,
+    "scenarioRunnerSelfTests": 63,
+    "totalTrialExecutions": 0
+  },
+  "deepCalibration": {
+    "applicable": false,
+    "aliasUsesSameBoundedWorkload": true
+  },
+  "purpose": "Bounded native acceptance for complete TL3 base-table candidate registration with no TL3 runtime activation or Monte Carlo.",
+  "deepCalibrationApplicable": false,
+  "tl3BaseRegistration": {
+    "profile": "docs/design/player_technology/tl3_base_technology_candidates_v0_2.json",
+    "buildSanity": "docs/design/player_technology/tl3_base_build_sanity_v0_1.json",
+    "standingSuite": "v0.16",
+    "registeredTransitionCount": 16,
+    "baseTableComplete": true,
+    "combatConsumerEnabled": false,
+    "tl3CruiserInstallationSpace": 36,
+    "dualMainSingleReactorUsedSpace": 33,
+    "singleMainDualReactorUsedSpace": 32,
+    "dualMainDualReactorUsedSpace": 38,
+    "dualMainDualReactorLegal": false,
+    "reactorSpaceDelta": -1,
+    "shieldHardenerTransitionType": "optional_component_unlock",
+    "heldWeaponPenetration": true
+  }
+}

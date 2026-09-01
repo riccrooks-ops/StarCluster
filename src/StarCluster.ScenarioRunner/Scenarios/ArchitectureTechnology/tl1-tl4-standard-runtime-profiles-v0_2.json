@@ -1,0 +1,988 @@
+{
+  "schemaVersion": "star-cluster-architecture-runtime-profile-catalog-v1",
+  "id": "tl1-tl4-standard-runtime-profiles-v0_2",
+  "checkpoint": 58,
+  "status": "tl1_tl3_frozen_single_main_tl4_subsystem_foundation_screening",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "policy": {
+    "tl1Tl3Frozen": true,
+    "tl3ProductionProfileId": "tl3-production",
+    "tl4ControlProfileId": "tl4-single-control",
+    "standardPlayerWeaponBayCapacity": 1,
+    "tl4AuxiliaryCapacity": 2,
+    "automaticPromotion": false,
+    "generationalConditionalTarget": "75-80 percent screening region; not a hard gate",
+    "tl4NumericalPolicy": "Single-main TL4 screens subsystem axes separately. Higher-output weapon candidates pay +1 Tactical Power per activation; reactor growth is measured separately and in composed packages."
+  },
+  "profiles": [
+    {
+      "id": "tl1-production",
+      "label": "TL1 Production Control",
+      "technologyLevel": 1,
+      "source": "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 5,
+        "targetingBonus": 10,
+        "effectivePdsChance": 45,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 2
+      },
+      "movement": {
+        "shipMove": 1,
+        "missileMove": 2
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "accuracyBonus": 20,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "accuracyBonus": 0,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      }
+    },
+    {
+      "id": "tl2-production",
+      "label": "Accepted TL2 Standard Combat Profile",
+      "technologyLevel": 2,
+      "source": "src/StarCluster.ScenarioRunner/Scenarios/AuxiliaryTechnology/tl2-accepted-standard-combat-profile-v0_1.json",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 23,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 28,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl3-production",
+      "label": "Accepted TL3 Mature Low-Tech Production Profile",
+      "technologyLevel": 3,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 13,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 24,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 29,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 62,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl4-single-control",
+      "label": "TL4 Single-Main Generation Control",
+      "technologyLevel": 4,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 13,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 24,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 29,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 62,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl4-fire-control-foundation",
+      "label": "TL4 Mid-Tech Fire-Control Foundation",
+      "technologyLevel": 4,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 15,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 26,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 31,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 66,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl4-output-power-foundation",
+      "label": "TL4 Higher-Output Weapon / Power-Cost Foundation",
+      "technologyLevel": 4,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 13,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 4
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 5,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 24,
+          "maximumRange": 4,
+          "powerCost": 2,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 29,
+          "maximumRange": 5,
+          "powerCost": 3,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 6,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 62,
+          "maximumRange": 7,
+          "powerCost": 1,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl4-reactor-foundation",
+      "label": "TL4 Reactor Foundation",
+      "technologyLevel": 4,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 7,
+        "targetingBonus": 13,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 24,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 29,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 62,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl4-structure-foundation",
+      "label": "TL4 Structural Foundation",
+      "technologyLevel": 4,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 6,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 13,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 24,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 29,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 62,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl4-armor-protection-foundation",
+      "label": "TL4 Primary-Armor Protection Foundation",
+      "technologyLevel": 4,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 1,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 13,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 24,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 29,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 62,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl4-shield-foundation",
+      "label": "TL4 Shield-Capacity Foundation",
+      "technologyLevel": 4,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 13,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 24,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 29,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 62,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl4-mobility-foundation",
+      "label": "TL4 Propulsion Foundation",
+      "technologyLevel": 4,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 13,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 3,
+        "missileMove": 4
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 24,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 29,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 62,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl4-package-firecontrol-reactor",
+      "label": "TL4 Package A - Fire Control + Reactor",
+      "technologyLevel": 4,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 7,
+        "targetingBonus": 15,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 26,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 31,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 66,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl4-package-firepower-reactor",
+      "label": "TL4 Package B - Fire Control + Higher-Output Weapons + Reactor",
+      "technologyLevel": 4,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 7,
+        "targetingBonus": 15,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 4
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 5,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 26,
+          "maximumRange": 4,
+          "powerCost": 2,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 31,
+          "maximumRange": 5,
+          "powerCost": 3,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 6,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 66,
+          "maximumRange": 7,
+          "powerCost": 1,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl4-package-structure-reactor",
+      "label": "TL4 Package C - Fire Control + Structure + Reactor",
+      "technologyLevel": 4,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 6,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 7,
+        "targetingBonus": 15,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 26,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 31,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 66,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl4-package-firepower-structure-reactor",
+      "label": "TL4 Package D - Firepower + Structure + Reactor",
+      "technologyLevel": 4,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 6,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 7,
+        "targetingBonus": 15,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 4
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 5,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 26,
+          "maximumRange": 4,
+          "powerCost": 2,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 31,
+          "maximumRange": 5,
+          "powerCost": 3,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 6,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 66,
+          "maximumRange": 7,
+          "powerCost": 1,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl4-package-firepower-ap-reactor",
+      "label": "TL4 Package E - Firepower + Primary AP + Reactor",
+      "technologyLevel": 4,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 1,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 7,
+        "targetingBonus": 15,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 4
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 5,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 26,
+          "maximumRange": 4,
+          "powerCost": 2,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 31,
+          "maximumRange": 5,
+          "powerCost": 3,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 6,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 66,
+          "maximumRange": 7,
+          "powerCost": 1,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl4-package-firepower-mobility-reactor",
+      "label": "TL4 Package F - Firepower + Mobility + Reactor",
+      "technologyLevel": 4,
+      "source": "Checkpoint 56 accepted offense-only TL3 profile: one main weapon, two AUX Capacity, no defensive integer microstep.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 7,
+        "targetingBonus": 15,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 4
+      },
+      "movement": {
+        "shipMove": 3,
+        "missileMove": 4
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 5,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 26,
+          "maximumRange": 4,
+          "powerCost": 2,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 31,
+          "maximumRange": 5,
+          "powerCost": 3,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 6,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 66,
+          "maximumRange": 7,
+          "powerCost": 1,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    }
+  ]
+}

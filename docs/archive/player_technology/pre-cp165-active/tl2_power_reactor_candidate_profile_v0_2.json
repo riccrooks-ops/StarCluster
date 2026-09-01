@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "star-cluster-tl2-power-reactor-working-profile-v2",
+  "id": "tl2-power-reactor-candidate-profile-v0_2",
+  "status": "locally_validated_working_candidate",
+  "purpose": "Current TL2 Power/Reactor working candidate state without embedded checkpoint history.",
+  "researchOwnership": "Power / Reactor",
+  "tl1Reference": {
+    "technologyRole": "Peak Fission",
+    "installationSpace": 6,
+    "operationalTacticalPower": 5,
+    "degradedTacticalPower": 3,
+    "disabledEmergencyTacticalPower": 1,
+    "destroyedTacticalPower": 0,
+    "status": "current_working_reference"
+  },
+  "tl2WorkingCandidate": {
+    "technologyRole": "Early Practical Fusion",
+    "installationSpace": 6,
+    "operationalTacticalPower": 6,
+    "status": "locally_validated_working_candidate",
+    "productionPromotion": false
+  },
+  "explicitNonPromotions": [
+    "degraded output",
+    "disabled/emergency output",
+    "destroyed output",
+    "overload",
+    "efficiency",
+    "storage",
+    "auxiliary generation",
+    "reliability",
+    "installation-space reduction",
+    "new cross-category prerequisites"
+  ],
+  "guardrails": [
+    "Output, output density, efficiency, condition mapping, overload, storage, auxiliary generation, reliability, and footprint are separate axes.",
+    "Legacy-reactor stacking remains legal where ordinary construction rules allow it; opportunity cost is evaluated through real Space and power pressure."
+  ]
+}

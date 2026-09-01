@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "star-cluster-tl1-phase-a-v1",
+  "id": "tl1-a07-held-interception-fires",
+  "matrixScenarioId": "TL1-A07",
+  "name": "Triggered held-interception spending",
+  "baselineVersion": "tl1-core-combat-v0.1",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "cases": [
+    {
+      "id": "a07-c01",
+      "name": "Triggered energy hold converts earmarked power to Spent",
+      "operation": "heldInterception",
+      "input": {
+        "envelope": 5,
+        "holdId": "energy-hold",
+        "powerCost": 2,
+        "startingAmmunition": 0,
+        "ammunitionCost": 0,
+        "triggered": true
+      },
+      "expected": {
+        "afterDeclaration": {
+          "available": 5,
+          "spendable": 3,
+          "earmarked": 2
+        },
+        "finalPower": {
+          "available": 3,
+          "spendable": 3,
+          "earmarked": 0,
+          "spent": 2
+        },
+        "attackOpportunityUsed": true
+      }
+    },
+    {
+      "id": "a07-c02",
+      "name": "Triggered kinetic hold spends one Tactical Power and one ammunition package",
+      "operation": "heldInterception",
+      "input": {
+        "envelope": 5,
+        "holdId": "kinetic-hold",
+        "powerCost": 1,
+        "startingAmmunition": 12,
+        "ammunitionCost": 1,
+        "triggered": true
+      },
+      "expected": {
+        "finalPower": {
+          "available": 4,
+          "spendable": 4,
+          "earmarked": 0,
+          "spent": 1
+        },
+        "remainingAmmunition": 11,
+        "attackOpportunityUsed": true,
+        "afterDeclaration": {
+          "available": 5,
+          "spendable": 4,
+          "earmarked": 1
+        }
+      }
+    }
+  ]
+}

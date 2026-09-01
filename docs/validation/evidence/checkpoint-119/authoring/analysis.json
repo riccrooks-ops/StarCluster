@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "star-cluster-campaign-weapon-integration-results-v0.1",
+  "checkpoint": 119,
+  "acceptedBaseline": 118,
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "trialsPerVariant": 50,
+  "variants": 1152,
+  "variantCounts": {
+    "energy_family_reference": 216,
+    "kinetic_family_characteristic": 360,
+    "missile_family_characteristic": 576
+  },
+  "priorityVariantCounts": {
+    "advanced": 144,
+    "endpoint_stress": 288,
+    "primary": 720
+  },
+  "totalTrials": 57600,
+  "elapsedSeconds": 26.02607748399896,
+  "failedGates": [],
+  "automaticPromotion": false,
+  "targetFixtureCount": 6,
+  "controlledFixtureCount": 0,
+  "missileProfileCount": 7,
+  "kineticProfileCount": 2,
+  "energyReferenceProfileCount": 1,
+  "primaryCalibrationTls": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "advancedValidationTls": [
+    7
+  ],
+  "endpointStressTls": [
+    8,
+    9
+  ],
+  "workingMissileGpByTl": {
+    "1": "gp-current",
+    "2": "gp-current",
+    "3": "missile-working-fission-d6",
+    "4": "missile-working-fission-d6",
+    "5": "missile-working-fusion-d7",
+    "6": "missile-working-fusion-d7",
+    "7": "missile-working-antimatter-d8",
+    "8": "missile-working-antimatter-d8",
+    "9": "missile-working-antimatter-d8"
+  },
+  "workingSwarmerByTl": {
+    "1": null,
+    "2": "swarmer-early-tl2",
+    "3": "swarmer-early-tl2",
+    "4": "swarmer-mid",
+    "5": "swarmer-mid",
+    "6": "swarmer-mature",
+    "7": "swarmer-mature",
+    "8": "swarmer-mature",
+    "9": "swarmer-mature"
+  },
+  "workingKineticByTl": {
+    "1": "gp-current",
+    "2": "gp-current",
+    "3": "gp-current",
+    "4": "kinetic-working-smart-plus5",
+    "5": "kinetic-working-smart-plus5",
+    "6": "kinetic-working-smart-plus5",
+    "7": "kinetic-working-smart-plus5",
+    "8": "kinetic-working-smart-plus5",
+    "9": "kinetic-working-smart-plus5"
+  },
+  "maxWorkingMovementOrderSwingPp": 38.372093023255815,
+  "interpretation": "CP119 is a campaign-weighted same-TL integration ecology. It compares native Energy, a restrained +5 Kinetic smart-projectile working schedule, simple GP Missile yield milestones, and a TL2+ two-packet Swarmer branch against the same six legal exact-fill target packages. TL1-TL6 drive inference; TL7 is advanced validation; TL8-TL9 are endpoint stress. Outcome rates are review evidence only and never automatic promotion gates."
+}

@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-auxiliary-combat-screening-catalog-v1",
+  "title": "Star Cluster Auxiliary Combat Screening Catalog",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schemaVersion",
+    "id",
+    "checkpoint",
+    "status",
+    "profiles"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-auxiliary-combat-screening-catalog-v1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "checkpoint": {
+      "const": 48
+    },
+    "status": {
+      "type": "string"
+    },
+    "profiles": {
+      "type": "array",
+      "minItems": 23,
+      "maxItems": 23,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "familyId",
+          "displayName",
+          "technologyLevel",
+          "capacityCost",
+          "valuationClass",
+          "counterfactual",
+          "pdsBaseChance",
+          "pdsPower",
+          "pdsAmmunition",
+          "auxiliaryReactorOutput",
+          "combatBatteryGain",
+          "combatBatteryCharges",
+          "capacitorCapacity",
+          "capacitorDischargeRate",
+          "shieldBatteryRestore",
+          "shieldBatteryCharges",
+          "shieldCapacityBonus",
+          "shieldRechargePerPower",
+          "shieldRechargePowerCap",
+          "ablativeProtection",
+          "ablativeIntegrity",
+          "evasiveManeuvers",
+          "damageControlChanceBonus",
+          "extraRepairKits",
+          "kineticAmmunitionBonus",
+          "missileAmmunitionBonus"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "familyId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "displayName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "technologyLevel": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9
+          },
+          "capacityCost": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "valuationClass": {
+            "type": "string"
+          },
+          "counterfactual": {
+            "type": "boolean"
+          },
+          "pdsAmmunition": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "evasiveManeuvers": {
+            "type": "boolean"
+          },
+          "pdsBaseChance": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "pdsPower": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "auxiliaryReactorOutput": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "combatBatteryGain": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "combatBatteryCharges": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "capacitorCapacity": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "capacitorDischargeRate": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "shieldBatteryRestore": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "shieldBatteryCharges": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "shieldCapacityBonus": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "shieldRechargePerPower": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "shieldRechargePowerCap": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "ablativeProtection": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "ablativeIntegrity": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "damageControlChanceBonus": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "extraRepairKits": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "kineticAmmunitionBonus": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "missileAmmunitionBonus": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

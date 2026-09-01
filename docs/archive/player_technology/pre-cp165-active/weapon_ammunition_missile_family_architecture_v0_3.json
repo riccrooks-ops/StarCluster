@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "star-cluster-weapon-ammunition-missile-family-architecture-v0.3",
+  "checkpoint": 117,
+  "status": "kiss_consolidation_no_numerical_promotion",
+  "automaticPromotion": false,
+  "familyIdentity": {
+    "Energy": {
+      "primaryFlexibility": "power_output_modes",
+      "normalLoadoutSelector": false
+    },
+    "Kinetic": {
+      "primaryFlexibility": "automatic_projectile_and_accuracy_maturation",
+      "normalAmmoSelector": false,
+      "genericMagazine": true
+    },
+    "Missile": {
+      "primaryFlexibility": "gp_yield_plus_distinct_flight_families",
+      "normalWarheadSelector": false,
+      "genericMagazine": true
+    }
+  },
+  "missileGpMilestones": [
+    {
+      "tl": 1,
+      "generation": "conventional_fission_era",
+      "expression": "automatic_baseline"
+    },
+    {
+      "tl": 5,
+      "generation": "fusion_microcharge",
+      "expression": "automatic_compatible_upgrade",
+      "hardPrerequisite": {
+        "discipline": "Power",
+        "tl": 2
+      }
+    },
+    {
+      "tl": 7,
+      "generation": "antimatter",
+      "expression": "automatic_compatible_upgrade",
+      "hardPrerequisite": {
+        "discipline": "Power",
+        "tl": 5
+      }
+    }
+  ],
+  "swarmer": {
+    "status": "candidate_branch",
+    "window": [
+      5,
+      7
+    ],
+    "oneFlightCounter": true,
+    "oneTerminalAttackRoll": true,
+    "genericMissileAmmo": true,
+    "firmTerminalByDefault": true,
+    "boundedInternalPackets": true,
+    "pdsSaturationTrait": "candidate",
+    "extraPdsWindows": false,
+    "automaticApproximateTargetCapability": false
+  },
+  "specialistWarheads": {
+    "baselineMenu": false,
+    "preservedConcepts": [
+      "shaped_armor_penetrator",
+      "directed_pulse_shield_disruption",
+      "radiation_electronics",
+      "antimatter_catalyzed_bridge",
+      "matter_conversion_exotic"
+    ]
+  },
+  "calibrationPriority": {
+    "primary": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "advanced": [
+      7
+    ],
+    "endpointStress": [
+      8,
+      9
+    ]
+  },
+  "retiredFromActiveBaseline": [
+    "kinetic_dense_ammo_selector",
+    "kinetic_saturation_ammo_selector",
+    "kinetic_tandem_ammo_selector",
+    "normal_shaped_warhead_menu",
+    "normal_shield_disruption_warhead_menu",
+    "tl9_first_balance_inference"
+  ]
+}

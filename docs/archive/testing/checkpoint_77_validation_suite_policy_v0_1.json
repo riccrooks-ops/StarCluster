@@ -1,0 +1,48 @@
+{
+  "checkpoint": 77,
+  "suiteTier": "must_always_run",
+  "acceptedBaseline": "76",
+  "blockingBalanceTargets": false,
+  "normal": {
+    "stageCount": 8,
+    "monteCarloVariantCount": 0,
+    "substantiveTrials": 0,
+    "totalTrialExecutions": 0
+  },
+  "deepCalibration": {
+    "stageCount": 30,
+    "monteCarloVariantCount": 1598,
+    "substantiveTrials": 15980000,
+    "smokeVariants": 54,
+    "smokeTrials": 54,
+    "totalTrialExecutions": 15980054
+  },
+  "architectureControls": {
+    "degradedFireCapabilityOwner": "weapon-profile-or-upgrade",
+    "degradedFirePenaltyOwner": "tactical-computer-fire-control",
+    "tl1DegradedFirePenaltyPercentagePoints": 25,
+    "weaponCapabilityRequired": true,
+    "computerSupportRequired": true,
+    "firmFireUnaffected": true,
+    "productionWeaponDegradedFireEnabled": false,
+    "mainWeaponMissileInterceptionRemainsFirmOnly": true,
+    "computerDamageConditionMapping": "deferred",
+    "futureComputerImprovementAssumedLinear": false,
+    "revalidateWithSensorEcmEccmProgression": true,
+    "eccmEconomicValueGuardrailRequired": true
+  },
+  "missileControls": {
+    "ordinaryTerminalAttackRequiresFirm": true,
+    "directFireDegradedTraitAppliesToMissiles": false,
+    "futureSwarmerApproximateTargetConcept": "volume-saturation-barrage",
+    "futureSwarmerExactCostMechanic": "deferred",
+    "approximateTargetMissileCapabilityImplemented": false
+  },
+  "cleanupControls": {
+    "activeConceptVersion": "0.6p",
+    "activeConceptContainsCheckpointHistory": false,
+    "godotUsesStablePrototypeLabel": true,
+    "historicalSourceReadmesArchived": true,
+    "historicalStudiesRetainedForReproducibility": true
+  }
+}

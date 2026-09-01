@@ -1,0 +1,36 @@
+{
+  "mode": "plan",
+  "passed": true,
+  "baselineId": "CP160-PF4",
+  "acceptedDiagnosticCheckpoint": 162,
+  "legalPoweredArchitectures": 22482,
+  "oneMainReactorArchitectures": 16741,
+  "mainReactorSpace": 6,
+  "mainOffsets": [
+    -1,
+    0,
+    1
+  ],
+  "apuSpace": 2,
+  "trajectoryCandidates": 5,
+  "uniqueTlLocalApuPoints": 16,
+  "installationCountCapImposed": false,
+  "stochasticVariants": 1152,
+  "stochasticTurnSamples": 5760000,
+  "combatContextsByTl": {
+    "1": 24,
+    "2": 24,
+    "3": 24,
+    "4": 24,
+    "5": 48,
+    "6": 48,
+    "7": 48,
+    "8": 72,
+    "9": 72
+  },
+  "combatContexts": 384,
+  "combatCells": 1152,
+  "combatTrials": 2304000,
+  "automaticPromotion": false,
+  "tuningAllowed": false
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "star-cluster-tl2-armor-ap-ai-candidate-profile-v1",
+  "id": "tl2-armor-ap-ai-candidate-profile-v0_1",
+  "checkpoint": 85,
+  "status": "sensitivity_candidates_not_production_data",
+  "researchOwnership": "Defensive Systems / Armor",
+  "purpose": "Keep Armor Protection and Armor Integrity separately testable while measuring their interaction with the CP84 Shield 3 and CP83 Reactor 6 working candidates.",
+  "tl1Reference": {
+    "technologyRole": "Rolled Alloy Plating",
+    "basePrimaryArmorInstallationSpace": 0,
+    "armorProtection": 0,
+    "armorIntegrity": 4,
+    "status": "current_working_reference"
+  },
+  "tl2Candidates": [
+    {
+      "id": "tl2-armor-ai5-candidate",
+      "technologyRole": "Ceramic Composite Plating - integrity emphasis",
+      "armorProtection": 0,
+      "armorIntegrity": 5,
+      "role": "primary_sensitivity_candidate"
+    },
+    {
+      "id": "tl2-armor-ap1-candidate",
+      "technologyRole": "Ceramic Composite Plating - protection emphasis",
+      "armorProtection": 1,
+      "armorIntegrity": 4,
+      "role": "primary_sensitivity_candidate"
+    },
+    {
+      "id": "tl2-armor-ap1-ai5-upper",
+      "technologyRole": "Ceramic Composite Plating - combined upper integration sensitivity",
+      "armorProtection": 1,
+      "armorIntegrity": 5,
+      "role": "upper_integration_sensitivity_not_assumed_bundle"
+    }
+  ],
+  "acceptedCounterplayReference": {
+    "kineticArmorPenetration": 0,
+    "energyArmorPenetration": 1,
+    "missileArmorPenetration": 2,
+    "interpretation": "AP1 is expected to matter directly against Kinetic APEN0 and be cancelled by the standard Energy APEN1 and Missile APEN2 packets; AI5 is expected to remain broadly relevant. These are design relationships to measure, not balance gates."
+  },
+  "integrationCross": {
+    "reactor": {
+      "sideA": "Early Practical Fusion 6 Operational TP / 6 Space validated working candidate",
+      "sideB": "Peak Fission 5 Operational TP / 6 Space TL1 reference"
+    },
+    "shieldCapacities": [2, 3],
+    "shield3Status": "validated_working_candidate_from_checkpoint_84",
+    "informationControlEnvironments": ["firm-reference", "tall-dr1-eccm1"]
+  },
+  "isolationControls": {
+    "basePrimaryArmorInstallationSpaceHeld": 0,
+    "armorRepairChanged": false,
+    "ablativeArmorChanged": false,
+    "weaponDamageChanged": false,
+    "weaponArmorPenetrationChanged": false,
+    "shieldRechargeChanged": false,
+    "shieldHardeningChanged": false,
+    "shieldInstallationSpaceChanged": false,
+    "reactorOperationalOutputChangedWithinStudy": false,
+    "reactorOtherPropertiesChanged": false,
+    "sensorRangeChanged": false,
+    "sensorOverloadChanged": false,
+    "productionValuesPromoted": false
+  },
+  "study": {
+    "id": "tl2-itc11-armor-ap-ai-shield-integration-permutations",
+    "sideADirectFireFamilies": ["Kinetic", "Energy"],
+    "opponentFamilies": ["Kinetic", "Energy", "Missile"],
+    "geometryCount": 3,
+    "informationControlEnvironmentCount": 2,
+    "shieldCapacityCount": 2,
+    "armorPackageCount": 4,
+    "variantCount": 288,
+    "pairedCommonRandomStreams": true
+  },
+  "promotionBoundary": {
+    "automaticPromotion": false,
+    "ai5MayAdvanceAfterHumanReview": true,
+    "ap1MayAdvanceAfterHumanReview": true,
+    "combinedAp1Ai5IsUpperIntegrationSensitivity": true,
+    "doNotBundleApAndAiWithoutEvidence": true,
+    "laterArmorPropertiesRemainSeparate": true
+  }
+}

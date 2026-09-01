@@ -1,0 +1,54 @@
+available_tl,reactor,reactor_tl,technology,family,status,space,operational_tp,degraded_tp,emergency_tp,operational_tp_per_space,degraded_fraction,emergency_fraction,pareto_frontier
+1,reactor-tl1,1,Peak Fission,fission,primary,6,5,3,1,0.8333333333333334,0.6,0.2,True
+2,reactor-tl1,1,Peak Fission,fission,primary,6,5,3,1,0.8333333333333334,0.6,0.2,True
+2,reactor-tl2,2,Early Practical Fusion,fusion,primary,6,7,3,0,1.1666666666666667,0.42857142857142855,0.0,True
+3,reactor-tl1,1,Peak Fission,fission,primary,6,5,3,1,0.8333333333333334,0.6,0.2,False
+3,reactor-tl2,2,Early Practical Fusion,fusion,primary,6,7,3,0,1.1666666666666667,0.42857142857142855,0.0,False
+3,reactor-tl3,3,Mature Compact Fusion,fusion,primary,5,7,4,1,1.4,0.5714285714285714,0.14285714285714285,True
+4,reactor-tl1,1,Peak Fission,fission,primary,6,5,3,1,0.8333333333333334,0.6,0.2,False
+4,reactor-tl2,2,Early Practical Fusion,fusion,primary,6,7,3,0,1.1666666666666667,0.42857142857142855,0.0,False
+4,reactor-tl3,3,Mature Compact Fusion,fusion,primary,5,7,4,1,1.4,0.5714285714285714,0.14285714285714285,False
+4,reactor-tl4,4,High-Output Fusion,fusion,primary,5,9,5,1,1.8,0.5555555555555556,0.1111111111111111,True
+5,reactor-tl1,1,Peak Fission,fission,primary,6,5,3,1,0.8333333333333334,0.6,0.2,False
+5,reactor-tl2,2,Early Practical Fusion,fusion,primary,6,7,3,0,1.1666666666666667,0.42857142857142855,0.0,False
+5,reactor-tl3,3,Mature Compact Fusion,fusion,primary,5,7,4,1,1.4,0.5714285714285714,0.14285714285714285,False
+5,reactor-tl4,4,High-Output Fusion,fusion,primary,5,9,5,1,1.8,0.5555555555555556,0.1111111111111111,True
+5,reactor-tl5,5,Early Antimatter Reactor,antimatter,primary,5,12,4,0,2.4,0.3333333333333333,0.0,True
+5,power-fission-revival-tl5,5,Direct-conversion / advanced-containment fission specialist,fission,legacy_revival_branch,5,6,5,2,1.2,0.8333333333333334,0.3333333333333333,True
+6,reactor-tl1,1,Peak Fission,fission,primary,6,5,3,1,0.8333333333333334,0.6,0.2,False
+6,reactor-tl2,2,Early Practical Fusion,fusion,primary,6,7,3,0,1.1666666666666667,0.42857142857142855,0.0,False
+6,reactor-tl3,3,Mature Compact Fusion,fusion,primary,5,7,4,1,1.4,0.5714285714285714,0.14285714285714285,False
+6,reactor-tl4,4,High-Output Fusion,fusion,primary,5,9,5,1,1.8,0.5555555555555556,0.1111111111111111,False
+6,reactor-tl5,5,Early Antimatter Reactor,antimatter,primary,5,12,4,0,2.4,0.3333333333333333,0.0,False
+6,power-fission-revival-tl5,5,Direct-conversion / advanced-containment fission specialist,fission,legacy_revival_branch,5,6,5,2,1.2,0.8333333333333334,0.3333333333333333,True
+6,reactor-tl6,6,Mature Antimatter,antimatter,primary,4,12,7,1,3.0,0.5833333333333334,0.08333333333333333,True
+7,reactor-tl1,1,Peak Fission,fission,primary,6,5,3,1,0.8333333333333334,0.6,0.2,False
+7,reactor-tl2,2,Early Practical Fusion,fusion,primary,6,7,3,0,1.1666666666666667,0.42857142857142855,0.0,False
+7,reactor-tl3,3,Mature Compact Fusion,fusion,primary,5,7,4,1,1.4,0.5714285714285714,0.14285714285714285,False
+7,reactor-tl4,4,High-Output Fusion,fusion,primary,5,9,5,1,1.8,0.5555555555555556,0.1111111111111111,False
+7,reactor-tl5,5,Early Antimatter Reactor,antimatter,primary,5,12,4,0,2.4,0.3333333333333333,0.0,False
+7,power-fission-revival-tl5,5,Direct-conversion / advanced-containment fission specialist,fission,legacy_revival_branch,5,6,5,2,1.2,0.8333333333333334,0.3333333333333333,False
+7,reactor-tl6,6,Mature Antimatter,antimatter,primary,4,12,7,1,3.0,0.5833333333333334,0.08333333333333333,False
+7,reactor-tl7,7,High-Output Antimatter,antimatter,primary,4,15,8,1,3.75,0.5333333333333333,0.06666666666666667,True
+7,power-fission-revival-tl7,7,Pinnacle fission expedition/auxiliary reactor,fission,legacy_revival_branch,4,7,6,2,1.75,0.8571428571428571,0.2857142857142857,True
+8,reactor-tl1,1,Peak Fission,fission,primary,6,5,3,1,0.8333333333333334,0.6,0.2,False
+8,reactor-tl2,2,Early Practical Fusion,fusion,primary,6,7,3,0,1.1666666666666667,0.42857142857142855,0.0,False
+8,reactor-tl3,3,Mature Compact Fusion,fusion,primary,5,7,4,1,1.4,0.5714285714285714,0.14285714285714285,False
+8,reactor-tl4,4,High-Output Fusion,fusion,primary,5,9,5,1,1.8,0.5555555555555556,0.1111111111111111,False
+8,reactor-tl5,5,Early Antimatter Reactor,antimatter,primary,5,12,4,0,2.4,0.3333333333333333,0.0,False
+8,power-fission-revival-tl5,5,Direct-conversion / advanced-containment fission specialist,fission,legacy_revival_branch,5,6,5,2,1.2,0.8333333333333334,0.3333333333333333,False
+8,reactor-tl6,6,Mature Antimatter,antimatter,primary,4,12,7,1,3.0,0.5833333333333334,0.08333333333333333,False
+8,reactor-tl7,7,High-Output Antimatter,antimatter,primary,4,15,8,1,3.75,0.5333333333333333,0.06666666666666667,True
+8,power-fission-revival-tl7,7,Pinnacle fission expedition/auxiliary reactor,fission,legacy_revival_branch,4,7,6,2,1.75,0.8571428571428571,0.2857142857142857,True
+8,reactor-tl8,8,Fractional / Direct Matter-Conversion Reactor,matter_conversion,primary,4,17,6,0,4.25,0.35294117647058826,0.0,True
+9,reactor-tl1,1,Peak Fission,fission,primary,6,5,3,1,0.8333333333333334,0.6,0.2,False
+9,reactor-tl2,2,Early Practical Fusion,fusion,primary,6,7,3,0,1.1666666666666667,0.42857142857142855,0.0,False
+9,reactor-tl3,3,Mature Compact Fusion,fusion,primary,5,7,4,1,1.4,0.5714285714285714,0.14285714285714285,False
+9,reactor-tl4,4,High-Output Fusion,fusion,primary,5,9,5,1,1.8,0.5555555555555556,0.1111111111111111,False
+9,reactor-tl5,5,Early Antimatter Reactor,antimatter,primary,5,12,4,0,2.4,0.3333333333333333,0.0,False
+9,power-fission-revival-tl5,5,Direct-conversion / advanced-containment fission specialist,fission,legacy_revival_branch,5,6,5,2,1.2,0.8333333333333334,0.3333333333333333,False
+9,reactor-tl6,6,Mature Antimatter,antimatter,primary,4,12,7,1,3.0,0.5833333333333334,0.08333333333333333,False
+9,reactor-tl7,7,High-Output Antimatter,antimatter,primary,4,15,8,1,3.75,0.5333333333333333,0.06666666666666667,False
+9,power-fission-revival-tl7,7,Pinnacle fission expedition/auxiliary reactor,fission,legacy_revival_branch,4,7,6,2,1.75,0.8571428571428571,0.2857142857142857,False
+9,reactor-tl8,8,Fractional / Direct Matter-Conversion Reactor,matter_conversion,primary,4,17,6,0,4.25,0.35294117647058826,0.0,False
+9,reactor-tl9,9,Total Matter Conversion,matter_conversion,primary,3,20,12,2,6.666666666666667,0.6,0.1,True

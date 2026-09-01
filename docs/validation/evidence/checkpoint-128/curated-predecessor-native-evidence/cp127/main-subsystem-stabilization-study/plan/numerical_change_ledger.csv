@@ -1,0 +1,10 @@
+profile,tl,field,cp123_cp126_value,cp127_candidate,delta
+energy_main,8,highDamage,13,12,-1
+energy_main,8,lowDamage,8,7,-1
+energy_main,8,standardDamage,11,10,-1
+missile_delivery,5,missileMove,5,6,1
+missile_delivery,8,missileMove,8,9,1
+missile_delivery,9,missileMove,9,10,1
+stl,5,move,6,5,-1
+stl,8,move,9,8,-1
+stl,9,move,10,9,-1

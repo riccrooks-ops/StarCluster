@@ -1,0 +1,342 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-auxiliary-component-catalog-v1",
+  "title": "Star Cluster Auxiliary Component Catalog Schema v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "title",
+    "status",
+    "checkpoint",
+    "installationClasses",
+    "foundation",
+    "components"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-auxiliary-component-catalog-v1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "const": "candidate_only"
+    },
+    "checkpoint": {
+      "const": 43
+    },
+    "installationClasses": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "displayName",
+          "description",
+          "consumesGenericAuxiliaryCapacity",
+          "notFreeFactors",
+          "duplicateRule"
+        ],
+        "properties": {
+          "id": {
+            "enum": [
+              "dedicated_core",
+              "weapon_bay",
+              "auxiliary_capacity"
+            ]
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "consumesGenericAuxiliaryCapacity": {
+            "type": "boolean"
+          },
+          "notFreeFactors": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "duplicateRule": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "foundation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "standardAuxiliaryResearchTree",
+        "coreMeansFree",
+        "existingCombatMechanicsRevisedByThisCheckpoint",
+        "strippedCalibrationFixtureMayUseZeroAuxiliaryCapacity",
+        "normalPlayerHullBaselineAuxiliaryCapacity",
+        "hullTlRole",
+        "availabilityFormula",
+        "availabilityInterpretation",
+        "tl1FixtureEvidencePolicy",
+        "balanceEntryPolicy",
+        "highRiskFunctions",
+        "highRiskMinimumCandidateFloor",
+        "excludedStandardCapabilities",
+        "alienAndPrecursorPolicy"
+      ],
+      "properties": {
+        "standardAuxiliaryResearchTree": {
+          "const": false
+        },
+        "coreMeansFree": {
+          "const": false
+        },
+        "existingCombatMechanicsRevisedByThisCheckpoint": {
+          "const": false
+        },
+        "strippedCalibrationFixtureMayUseZeroAuxiliaryCapacity": {
+          "const": true
+        },
+        "normalPlayerHullBaselineAuxiliaryCapacity": {
+          "type": "string"
+        },
+        "hullTlRole": {
+          "type": "string"
+        },
+        "availabilityFormula": {
+          "type": "string"
+        },
+        "availabilityInterpretation": {
+          "type": "string"
+        },
+        "tl1FixtureEvidencePolicy": {
+          "type": "string"
+        },
+        "balanceEntryPolicy": {
+          "type": "string"
+        },
+        "highRiskFunctions": {
+          "type": "array",
+          "minItems": 6,
+          "items": {
+            "type": "string"
+          }
+        },
+        "highRiskMinimumCandidateFloor": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 9
+        },
+        "excludedStandardCapabilities": {
+          "type": "array",
+          "contains": {
+            "const": "cloak"
+          }
+        },
+        "alienAndPrecursorPolicy": {
+          "type": "string"
+        }
+      }
+    },
+    "components": {
+      "type": "array",
+      "minItems": 27,
+      "maxItems": 27,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "displayName",
+          "role",
+          "installationClass",
+          "candidateFirstStandardItemTl",
+          "primaryResearchCategory",
+          "minimumPrimaryResearchTl",
+          "supportFloors",
+          "minimumHullTl",
+          "capacityCost",
+          "tacticalPowerBehavior",
+          "stackingRule",
+          "damageProfile",
+          "tl1FixtureEvidence",
+          "balanceRisk",
+          "blockingConcerns",
+          "availabilityStatus",
+          "firstStandardItemTlMayOnlyMoveUpUntilPromoted",
+          "standardPlayerAvailability",
+          "entryPolicy",
+          "notes"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^aux_[a-z0-9_]+$"
+          },
+          "displayName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "installationClass": {
+            "const": "auxiliary_capacity"
+          },
+          "candidateFirstStandardItemTl": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9
+          },
+          "primaryResearchCategory": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minimumPrimaryResearchTl": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9
+          },
+          "supportFloors": {
+            "type": "array",
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "technologyId",
+                "minimumTl"
+              ],
+              "properties": {
+                "technologyId": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minimumTl": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 9
+                }
+              }
+            }
+          },
+          "minimumHullTl": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9
+          },
+          "capacityCost": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3
+          },
+          "tacticalPowerBehavior": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "mode",
+              "amount",
+              "notes"
+            ],
+            "properties": {
+              "mode": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "string"
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          },
+          "stackingRule": {
+            "type": "string"
+          },
+          "damageProfile": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "damageable",
+              "criticalExposure",
+              "notes"
+            ],
+            "properties": {
+              "damageable": {
+                "type": "boolean"
+              },
+              "criticalExposure": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          },
+          "tl1FixtureEvidence": {
+            "type": "string"
+          },
+          "balanceRisk": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "tier",
+              "flags"
+            ],
+            "properties": {
+              "tier": {
+                "enum": [
+                  "low",
+                  "moderate",
+                  "high"
+                ]
+              },
+              "flags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "blockingConcerns": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "availabilityStatus": {
+            "const": "candidate_only"
+          },
+          "firstStandardItemTlMayOnlyMoveUpUntilPromoted": {
+            "const": true
+          },
+          "standardPlayerAvailability": {
+            "const": "not_promoted"
+          },
+          "entryPolicy": {
+            "const": "raise_starting_tl_before_reducing_established_mechanical_identity"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

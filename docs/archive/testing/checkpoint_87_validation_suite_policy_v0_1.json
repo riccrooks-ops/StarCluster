@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "87",
+  "mustRun": {
+    "generatedStudyId": "tl2-itc13-cross-tl-build-permutation-screening",
+    "legalBuildCount": 512,
+    "namedRecipeCount": 13,
+    "logicalPairingCount": 64,
+    "geometryCount": 3,
+    "generatedVariantCount": 192,
+    "defaultTrialsPerVariant": 10000,
+    "fullPipelineSmokeTrialsPerVariant": 1,
+    "scenarioRunnerSelfTestsExpected": 52,
+    "actualConsumerPreflightRequired": true,
+    "dynamicCombatActivityGateRequired": true
+  },
+  "constructionLegality": {
+    "installationSpaceAndExplicitConstraints": true,
+    "simultaneousTacticalPowerSufficiencyRequired": false,
+    "retainMixedGenerationLegalBuilds": true
+  },
+  "deepCalibration": {
+    "requiredByDefault": false,
+    "trigger": "dependency-driven only",
+    "addsAcceptedCp86aPenetrationRegression": true
+  },
+  "promotion": {
+    "automaticFromStudyOutcome": false,
+    "crossTlHumanReviewRequired": true,
+    "sharedAxesDoNotImplySymmetricFamilyProgression": true
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "id": "seeker-search-then-hit",
+  "name": "Seeker Search/Wait then hit",
+  "description": "A seeker-only Missile Flight fails acquisition on arrival, spends one stationary-search fuel next action, reacquires, and hits.",
+  "randomSeed": 180100,
+  "map": {
+    "radius": 6,
+    "starId": "star-primary",
+    "starName": "Primary Star",
+    "environmentId": "clear-space",
+    "environmentRangePenalty": 0,
+    "objects": []
+  },
+  "ships": [
+    {
+      "id": "ship-player",
+      "name": "Player Ship",
+      "side": "Player",
+      "position": {
+        "q": 0,
+        "r": 2
+      },
+      "movement": {
+        "technologyLevel": 3,
+        "maximumHexesPerTurn": 3
+      },
+      "sensor": {
+        "technologyLevel": 3,
+        "firmRange": 6,
+        "approximateRange": 10,
+        "requiresLineOfSight": true,
+        "activeModeBonus": 2
+      },
+      "computing": {
+        "technologyLevel": 3,
+        "staleRetentionUpdates": 3,
+        "uncertaintyGrowthPerMissedUpdate": 1
+      },
+      "signature": {
+        "id": "standard-ship",
+        "baselineRangeModifier": 0,
+        "activeEmissionRangeModifier": 2
+      },
+      "electronicWarfare": {
+        "technologyLevel": 2,
+        "jammingRangePenalty": 3,
+        "counterJammingStrength": 1
+      },
+      "sensorMode": "Passive",
+      "jammingEnabled": false
+    },
+    {
+      "id": "ship-enemy",
+      "name": "Enemy Ship",
+      "side": "Enemy",
+      "position": {
+        "q": 2,
+        "r": 2
+      },
+      "movement": {
+        "technologyLevel": 3,
+        "maximumHexesPerTurn": 3
+      },
+      "sensor": {
+        "technologyLevel": 3,
+        "firmRange": 6,
+        "approximateRange": 10,
+        "requiresLineOfSight": true,
+        "activeModeBonus": 2
+      },
+      "computing": {
+        "technologyLevel": 3,
+        "staleRetentionUpdates": 3,
+        "uncertaintyGrowthPerMissedUpdate": 1
+      },
+      "signature": {
+        "id": "standard-ship",
+        "baselineRangeModifier": 0,
+        "activeEmissionRangeModifier": 2
+      },
+      "electronicWarfare": {
+        "technologyLevel": 2,
+        "jammingRangePenalty": 3,
+        "counterJammingStrength": 1
+      },
+      "sensorMode": "Passive",
+      "jammingEnabled": false
+    }
+  ],
+  "priorTracks": [
+    {
+      "observerId": "ship-player",
+      "targetId": "ship-enemy",
+      "lastKnownPosition": {
+        "q": 2,
+        "r": 2
+      },
+      "uncertaintyRadius": 1
+    },
+    {
+      "observerId": "ship-enemy",
+      "targetId": "ship-player",
+      "lastKnownPosition": {
+        "q": 0,
+        "r": 2
+      },
+      "uncertaintyRadius": 1
+    }
+  ],
+  "missiles": [
+    {
+      "id": "hostile-1",
+      "side": "Enemy",
+      "launcherId": "ship-enemy",
+      "targetId": "ship-player",
+      "launchPosition": {
+        "q": 2,
+        "r": 2
+      },
+      "enteredCoordinates": [
+        {
+          "q": 1,
+          "r": 2
+        }
+      ],
+      "flight": {
+        "technologyLevel": 2,
+        "maximumRange": 5,
+        "speed": 1
+      },
+      "datalink": {
+        "technologyLevel": 2,
+        "isInstalled": true,
+        "requiresLineOfSight": true,
+        "maximumRetainedReportAgePhases": 3
+      },
+      "sensor": {
+        "technologyLevel": 2,
+        "isInstalled": false,
+        "firmRange": 0,
+        "approximateRange": 0,
+        "requiresLineOfSight": true,
+        "activeModeBonus": 0,
+        "allowsActiveMode": false,
+        "maximumLocalTrackAgeEpochs": 2
+      },
+      "terminal": {
+        "guidanceComputer": {
+          "technologyLevel": 2,
+          "baseHitChance": 65,
+          "minimumHitChance": 5,
+          "maximumHitChance": 95
+        },
+        "seeker": {
+          "technologyLevel": 2,
+          "isInstalled": true,
+          "baseAcquisitionChance": 65,
+          "terminalEccmStrength": 2,
+          "accuracyBonus": 15,
+          "minimumAcquisitionChance": 5,
+          "maximumAcquisitionChance": 95
+        },
+        "acquisitionPenaltyPerNetEcm": 10,
+        "stationarySearchFuelCost": 1
+      },
+      "signature": {
+        "id": "missile-plume",
+        "baselineRangeModifier": 1,
+        "activeEmissionRangeModifier": 0
+      },
+      "initialStatus": "InFlight"
+    }
+  ],
+  "defenses": [],
+  "interceptionOutcomes": [],
+  "terminalRolls": [
+    90,
+    20,
+    50
+  ],
+  "actions": [
+    {
+      "type": "advanceMissile",
+      "missileId": "hostile-1",
+      "newInterceptionPhase": true
+    },
+    {
+      "type": "advancePhase"
+    },
+    {
+      "type": "advancePhase"
+    },
+    {
+      "type": "advancePhase"
+    },
+    {
+      "type": "advancePhase"
+    },
+    {
+      "type": "advancePhase"
+    },
+    {
+      "type": "advancePhase"
+    },
+    {
+      "type": "advanceMissile",
+      "missileId": "hostile-1",
+      "newInterceptionPhase": false
+    }
+  ],
+  "expect": {
+    "missiles": [
+      {
+        "id": "hostile-1",
+        "status": "Expended",
+        "terminalOutcome": "Hit",
+        "position": {
+          "q": 0,
+          "r": 2
+        },
+        "distanceTraveled": 2,
+        "stationarySearchFuelSpent": 1,
+        "totalFuelSpent": 3,
+        "acquisitionRoll": 20,
+        "attackRoll": 50
+      }
+    ],
+    "tracks": [],
+    "interceptionOpportunities": [],
+    "requiredEventsInOrder": [
+      "MissileTerminalAcquisitionResolved",
+      "MissileSearchActivated",
+      "MissileTerminalAcquisitionResolved",
+      "MissileTerminalAttackResolved"
+    ]
+  },
+  "initialTurnNumber": 1,
+  "initialPhase": "MissileAndInterception",
+  "observationEpoch": 1,
+  "initialSequence": 0
+}

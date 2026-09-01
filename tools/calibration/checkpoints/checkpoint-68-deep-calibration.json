@@ -1,0 +1,651 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "68",
+  "title": "Checkpoint 68 Deep Calibration - TL1 Sensor/EW Foundation and Range Sweep",
+  "sdkVersion": "8.0.423",
+  "configuration": "Debug",
+  "calibrationSolution": "StarCluster.Calibration.sln",
+  "testProject": "tests/StarCluster.Tests/StarCluster.Tests.csproj",
+  "runnerProject": "src/StarCluster.ScenarioRunner/StarCluster.ScenarioRunner.csproj",
+  "manifestFile": "CHECKPOINT_68_SHA256SUMS.txt",
+  "outputRoot": "out/checkpoint-68-deep-calibration",
+  "defaultTrials": 10000,
+  "defaultJobs": 24,
+  "documentation": [
+    "docs/Star_Cluster_Game_Concept_v0.6g.docx",
+    "docs/design/player_technology/TL1_Sensor_EW_Foundation_And_Range_Sweep_v0_1.md",
+    "src/StarCluster.ScenarioRunner/Scenarios/SensorEw/tl1-sew01-sensor-ew-foundation-range-sweep.json",
+    "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+    "docs/design/testing/checkpoint_68_validation_suite_policy_v0_1.json",
+    "docs/design/testing/Checkpoint_68_Validation_Tiers.md",
+    "docs/validation/Checkpoint_68_TL1_Sensor_EW_Foundation_And_Range_Sweep.md",
+    "docs/Prototype_TODO.md"
+  ],
+  "stages": [
+    {
+      "id": "deterministic",
+      "name": "Accepted deterministic moving-missile scenarios",
+      "command": "run-all",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios",
+        "--output-dir",
+        "{OutputRoot}/deterministic"
+      ],
+      "metrics": {
+        "deterministicCases": 7
+      }
+    },
+    {
+      "id": "tl1-phase-a",
+      "name": "TL1 Phase A mechanics corpus",
+      "command": "tl1-phase-a",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1PhaseA",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-a"
+      ],
+      "metrics": {
+        "caseCount": 54
+      }
+    },
+    {
+      "id": "tl1-phase-b",
+      "name": "TL1 Phase B direct-fire corpus",
+      "command": "tl1-phase-b",
+      "arguments": [
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-b"
+      ],
+      "metrics": {
+        "caseCount": 36
+      }
+    },
+    {
+      "id": "tl1-installation-space-envelope",
+      "name": "TL1 35-Space deterministic construction envelope and nominal power diagnostics",
+      "command": "tl1-installation-space-envelope",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-space01-35-space-construction-envelope.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-installation-space-envelope"
+      ],
+      "metrics": {
+        "macroLoadoutCount": 27,
+        "weaponPowerVariantCount": 96,
+        "exactFillMacroLoadoutCount": 4,
+        "usesTrials": false
+      }
+    },
+    {
+      "id": "tl1-sensor-ew-foundation",
+      "name": "TL1 deterministic sensor reach, emissions, ECM/ECCM discrimination, and candidate range sweep",
+      "command": "tl1-sensor-ew-foundation",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/SensorEw/tl1-sew01-sensor-ew-foundation-range-sweep.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-sensor-ew-foundation"
+      ],
+      "metrics": {
+        "profileCount": 6,
+        "forwardCandidateCount": 5,
+        "contextCount": 12,
+        "rangeCount": 11,
+        "deterministicRowCount": 792,
+        "usesTrials": false,
+        "balanceTargetsBlocking": false,
+        "productionSensorRangesChanged": false,
+        "tl1NormalActiveModeCount": 1
+      }
+    },
+    {
+      "id": "tl1-bilateral-tactical-geometry",
+      "name": "TL1 bilateral finite-map tactical geometry, fuel, and movement-order study",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc08-bilateral-tactical-geometry-fuel-movement-order.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-bilateral-tactical-geometry"
+      ],
+      "metrics": {
+        "buildCount": 1,
+        "sideAWeaponFamilyCount": 3,
+        "sideBWeaponFamilyCount": 3,
+        "bilateralRegimeCount": 3,
+        "movementOrderCount": 2,
+        "variantCount": 54,
+        "usesTrials": true,
+        "balanceTargetsBlocking": false,
+        "productionReactorOutput": 5,
+        "powerDoctrine": "FullVolleyFirst",
+        "tacticalMapRadius": 5,
+        "tacticalMapDiameter": 11,
+        "tacticalMapCellCount": 91,
+        "startingFuel": 200,
+        "movementFuelPerHex": 2,
+        "evasiveManeuverFuelCost": 1
+      }
+    },
+    {
+      "id": "tl1-bilateral-overload-ew-counterplay",
+      "name": "TL1 bilateral overload request telemetry and post-Movement EW counterplay study",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc10-bilateral-overload-ew-counterplay.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-bilateral-overload-ew-counterplay"
+      ],
+      "metrics": {
+        "buildCount": 2,
+        "variantCount": 60,
+        "bilateralStlVariantCount": 48,
+        "postMovementEwResponseVariantCount": 12,
+        "movementOrderCount": 2,
+        "usesTrials": true,
+        "balanceTargetsBlocking": false,
+        "productionReactorOutput": 5,
+        "powerDoctrine": "FullVolleyFirst",
+        "tacticalMapRadius": 5,
+        "startingFuel": 100,
+        "movementFuelPerHex": 2,
+        "evasiveManeuverFuelCost": 1,
+        "fullTacticalAiImplemented": false,
+        "overloadDamageIntegrated": false
+      }
+    },
+    {
+      "id": "tl1-scripted-overload-tactics",
+      "name": "TL1 finite-map scripted STL and Active Sensor overload tactics study",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc09-scripted-overload-tactics.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_2.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-scripted-overload-tactics"
+      ],
+      "metrics": {
+        "buildCount": 1,
+        "orderedWeaponPairCount": 5,
+        "bilateralEwRegimeCount": 2,
+        "sideAOverloadPlanCount": 4,
+        "movementOrderCount": 2,
+        "variantCount": 80,
+        "usesTrials": true,
+        "balanceTargetsBlocking": false,
+        "productionReactorOutput": 5,
+        "powerDoctrine": "FullVolleyFirst",
+        "tacticalMapRadius": 5,
+        "startingFuel": 200,
+        "movementFuelPerHex": 2,
+        "evasiveManeuverFuelCost": 1,
+        "fullTacticalAiImplemented": false
+      }
+    },
+    {
+      "id": "tl1-track-aware-movement-acquisition",
+      "name": "TL1 35-Space track-aware movement and acquisition study",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc07-35-space-track-aware-movement-acquisition.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-track-aware-movement-acquisition"
+      ],
+      "metrics": {
+        "buildCount": 6,
+        "weaponFamilyCount": 3,
+        "operationalRegimeCount": 5,
+        "variantCount": 90,
+        "usesTrials": true,
+        "balanceTargetsBlocking": false,
+        "productionReactorOutput": 5,
+        "powerDoctrine": "FullVolleyFirst",
+        "sideBTrackControl": "EstablishedFirm",
+        "trackAwareMovementMode": "TrackAwareOpponentRange",
+        "acquisitionPolicy": "AcquisitionFirstAutoActive"
+      }
+    },
+    {
+      "id": "tl1-operational-sensor-acquisition-ew",
+      "name": "TL1 35-Space operational sensor acquisition and EW study",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc06-35-space-operational-sensor-acquisition-ew.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-operational-sensor-acquisition-ew"
+      ],
+      "metrics": {
+        "buildCount": 6,
+        "weaponFamilyCount": 3,
+        "acquisitionRegimeCount": 4,
+        "variantCount": 72,
+        "usesTrials": true,
+        "balanceTargetsBlocking": false,
+        "productionReactorOutput": 5,
+        "powerDoctrine": "FullVolleyFirst",
+        "sideBTrackControl": "EstablishedFirm"
+      }
+    },
+    {
+      "id": "tl1-power-doctrine-reactor-sensitivity",
+      "name": "TL1 35-Space Tactical Power doctrine and reactor-output sensitivity",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc05-35-space-power-doctrine-reactor-sensitivity.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-power-doctrine-reactor-sensitivity"
+      ],
+      "metrics": {
+        "buildCount": 4,
+        "weaponFamilyCount": 3,
+        "powerDoctrineCount": 3,
+        "reactorOutputSensitivityCount": 3,
+        "variantCount": 108,
+        "usesTrials": true,
+        "balanceTargetsBlocking": false,
+        "productionReactorOutput": 5
+      }
+    },
+    {
+      "id": "tl1-composed-ship-odd-build-combat",
+      "name": "TL1 35-Space composed-ship and odd-build combat study",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc04-35-space-composed-ship-odd-build-matrix.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-composed-ship-odd-build-combat"
+      ],
+      "metrics": {
+        "buildCount": 6,
+        "variantCount": 54,
+        "usesTrials": true,
+        "balanceTargetsBlocking": false
+      }
+    },
+    {
+      "id": "tl1-kinetic-calibration",
+      "name": "TL1 kinetic-interaction calibration",
+      "command": "tl1-kinetic-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-kc01-kinetic-interaction-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-kinetic-calibration"
+      ],
+      "metrics": {
+        "variantCount": 29,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-energy-calibration",
+      "name": "TL1 energy-interaction calibration",
+      "command": "tl1-energy-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-ec01-energy-interaction-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-energy-calibration"
+      ],
+      "metrics": {
+        "variantCount": 31,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-weapon-matrix",
+      "name": "Complete TL1 no-counter weapon matrix",
+      "command": "tl1-weapon-matrix",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-wm01-complete-weapon-matrix.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-weapon-matrix"
+      ],
+      "metrics": {
+        "variantCount": 48,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-pds-calibration",
+      "name": "Corrected TL1 PDS and interception calibration",
+      "command": "tl1-pds-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-pds01-interception-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-pds-calibration"
+      ],
+      "metrics": {
+        "variantCount": 59,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-defensive-calibration",
+      "name": "TL1 layered defensive-system calibration",
+      "command": "tl1-defensive-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-ds01-layered-defensive-systems-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-defensive-calibration"
+      ],
+      "metrics": {
+        "variantCount": 171,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-power-correction",
+      "name": "TL1 main-power and interception-order correction study",
+      "command": "tl1-power-envelope-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-pe02-main-power-interception-correction-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-power-correction"
+      ],
+      "metrics": {
+        "variantCount": 294,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-range-control-calibration",
+      "name": "TL1 scripted relative-range and missile-budget calibration",
+      "command": "tl1-range-control-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-rc01-scripted-relative-range-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-range-control-calibration"
+      ],
+      "metrics": {
+        "variantCount": 75,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-damage-control-calibration",
+      "name": "TL1 Damage Control eligibility and doctrine calibration",
+      "command": "tl1-damage-control-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-dc01-damage-control-doctrine-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-damage-control-calibration"
+      ],
+      "metrics": {
+        "variantCount": 64,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-combat-pacing",
+      "name": "TL1 critical-density, combat-pacing, and Immobile timing probe",
+      "command": "tl1-combat-pacing",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-cp01-critical-density-and-immobile-timing.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-combat-pacing"
+      ],
+      "metrics": {
+        "variantCount": 8,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-integrated-tactical-combat",
+      "name": "TL1 integrated cross-family combat and tactical-order policy study",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc01-cross-family-dynamic-range.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-integrated-tactical-combat"
+      ],
+      "metrics": {
+        "variantCount": 90,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-movement-kinetic-pacing-diagnostics",
+      "name": "TL1 movement-law, kinetic-damage, defense, and disengagement diagnostics",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc02-movement-kinetic-pacing-diagnostics.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-movement-kinetic-pacing-diagnostics"
+      ],
+      "metrics": {
+        "variantCount": 44,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-minimal-tactics-baseline",
+      "name": "TL1 minimal-tactics Range 2-5 baseline sanity grid",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc03-minimal-tactics-baseline-grid.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-minimal-tactics-baseline"
+      ],
+      "metrics": {
+        "variantCount": 113,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "auxiliary-resource-endurance",
+      "name": "Deterministic finite-resource and recharge endurance stress study",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end01-resource-endurance-stress.json",
+        "--output-dir",
+        "{OutputRoot}/auxiliary-resource-endurance"
+      ],
+      "metrics": {
+        "combatBatteryCandidateCount": 2,
+        "capacitorPatternCount": 3,
+        "ammRoundCandidateCount": 4,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "checkpoint-53-resource-semantics-lock",
+      "name": "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end02-resource-semantics-lock.json",
+        "--output-dir",
+        "{OutputRoot}/checkpoint-53-resource-semantics-lock"
+      ],
+      "metrics": {
+        "combatBatteryPrimaryCharges": 3,
+        "combatBatteryPowerPerCharge": 1,
+        "combatBatteryDischargeLimitPerTurn": 1,
+        "combatBatteryEncounterDischargeCap": null,
+        "ammRounds": 25,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "runner-self-tests",
+      "name": "ScenarioRunner self-tests",
+      "command": "self-test",
+      "arguments": [
+        "--scenario-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/terminal-two-window-hit.json"
+      ],
+      "metrics": {
+        "selfTestCount": 46
+      }
+    }
+  ],
+  "checkpointMetrics": {
+    "stageCount": 27,
+    "monteCarloVariantCount": 1544,
+    "trialsAtDefault": 15440000,
+    "suiteTier": "deep_calibration"
+  },
+  "nativeDependencyPrecheck": {
+    "required": true,
+    "script": "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+    "blockedInterpreters": [
+      "python",
+      "python3",
+      "py"
+    ],
+    "powerShellPaths": [
+      "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+      "tools/checkpoints/checkpoint-68/apply_checkpoint_68.ps1",
+      "tools/checkpoints/checkpoint-68/test_checkpoint_68_contract.ps1",
+      "tools/calibration/run_calibration_checkpoint.ps1"
+    ],
+    "checkpointDefinitionPaths": [
+      "tools/calibration/checkpoints/checkpoint-68.json",
+      "tools/calibration/checkpoints/checkpoint-68-deep-calibration.json"
+    ]
+  },
+  "primaryStudy": {
+    "id": "tl1-sensor-ew-foundation",
+    "variantCount": 0
+  }
+}

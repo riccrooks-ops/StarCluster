@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "star-cluster-tl2-shield-capacity-working-profile-v2",
+  "id": "tl2-shield-capacity-candidate-profile-v0_2",
+  "status": "locally_validated_working_candidate",
+  "purpose": "Current TL2 Shield working candidate state without embedded checkpoint history.",
+  "researchOwnership": "Defensive Systems / Shields",
+  "tl1Reference": {
+    "installationSpace": 3,
+    "shieldCapacity": 2,
+    "baseRecharge": 1,
+    "tacticalRechargePerPower": 1,
+    "tacticalRechargePowerCap": 2,
+    "shieldArmor": 0,
+    "status": "current_working_reference"
+  },
+  "tl2WorkingCandidate": {
+    "installationSpace": 3,
+    "shieldCapacity": 3,
+    "baseRecharge": 1,
+    "tacticalRechargePerPower": 1,
+    "tacticalRechargePowerCap": 2,
+    "shieldArmor": 0,
+    "status": "locally_validated_working_candidate",
+    "productionPromotion": false
+  },
+  "upperSensitivity": {
+    "installationSpace": 3,
+    "shieldCapacity": 4,
+    "status": "upper_sensitivity_not_promoted"
+  },
+  "explicitNonPromotions": [
+    "base recharge",
+    "tactical recharge rate",
+    "tactical recharge cap",
+    "shield armor/hardening",
+    "condition behavior",
+    "overload",
+    "efficiency",
+    "installation-space reduction"
+  ],
+  "guardrails": [
+    "Integer capacity steps can cross weapon-packet breakpoints and must not be treated as uniform percentage growth.",
+    "Capacity, recharge, hardening, condition behavior, efficiency, overload, and footprint remain separate progression axes."
+  ]
+}

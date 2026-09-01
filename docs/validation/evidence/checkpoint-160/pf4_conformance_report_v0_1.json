@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "star-cluster-cp160-pf4-conformance-report-v0.1",
+  "checkpoint": 160,
+  "baselineId": "CP160-PF4",
+  "passed": true,
+  "profilesUnchangedFromPf3": true,
+  "branchesUnchangedFromPf3": true,
+  "candidateBranchSeedsUnchangedFromPf3": true,
+  "productionAuthorityChanged": false,
+  "substantiveCombatTrials": 0,
+  "auxProfilesMaterialized": [
+    "shieldBattery",
+    "shieldBooster",
+    "shieldHardener",
+    "ablativeArmor",
+    "energizedArmor",
+    "crystallineArmor",
+    "fieldStabilizer",
+    "repairDroneBay",
+    "kineticMagazine",
+    "missileMagazine"
+  ],
+  "closedCp159Items": {
+    "fieldStabilizer": "FST_HIGH 16/18/20 @ 1 TP",
+    "crystallineArmor": "CRY_RISE_A",
+    "repairDroneBay": "distinct-target +1 action with +100% default kit reserve"
+  },
+  "remainingDependency": "FINAL_REACTOR_TP_SCARCITY"
+}

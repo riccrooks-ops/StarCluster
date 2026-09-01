@@ -1,0 +1,521 @@
+{
+  "schemaVersion": "star-cluster-tl1-damage-control-calibration-v1",
+  "id": "tl1-dc01-damage-control-doctrine-study",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "masterSeed": 370100,
+  "trialsPerVariant": 10000,
+  "variants": [
+    {
+      "id": "dc-p25-ordinary-none-kinetic-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "None",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-ordinary-none-kinetic-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "None",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-ordinary-none-missile-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "None",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-ordinary-none-missile-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "None",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-ordinary-componentonly-kinetic-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "ComponentOnly",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-ordinary-componentonly-kinetic-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "ComponentOnly",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-ordinary-componentonly-missile-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "ComponentOnly",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-ordinary-componentonly-missile-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "ComponentOnly",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-ordinary-hullhalf-kinetic-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalf",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-ordinary-hullhalf-kinetic-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalf",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-ordinary-hullhalf-missile-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalf",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-ordinary-hullhalf-missile-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalf",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-ordinary-hullhalfreserveone-kinetic-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-ordinary-hullhalfreserveone-kinetic-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-ordinary-hullhalfreserveone-missile-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-ordinary-hullhalfreserveone-missile-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-protected-none-kinetic-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "None",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-protected-none-kinetic-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "None",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-protected-none-missile-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "None",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-protected-none-missile-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "None",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-protected-componentonly-kinetic-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "ComponentOnly",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-protected-componentonly-kinetic-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "ComponentOnly",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-protected-componentonly-missile-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "ComponentOnly",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-protected-componentonly-missile-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "ComponentOnly",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-protected-hullhalf-kinetic-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalf",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-protected-hullhalf-kinetic-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalf",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-protected-hullhalf-missile-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalf",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-protected-hullhalf-missile-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalf",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-protected-hullhalfreserveone-kinetic-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-protected-hullhalfreserveone-kinetic-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p25-protected-hullhalfreserveone-missile-steady",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p25-protected-hullhalfreserveone-missile-burst",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-ordinary-none-kinetic-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "None",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-ordinary-none-kinetic-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "None",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-ordinary-none-missile-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "None",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-ordinary-none-missile-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "None",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-ordinary-componentonly-kinetic-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "ComponentOnly",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-ordinary-componentonly-kinetic-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "ComponentOnly",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-ordinary-componentonly-missile-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "ComponentOnly",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-ordinary-componentonly-missile-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "ComponentOnly",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-ordinary-hullhalf-kinetic-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalf",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-ordinary-hullhalf-kinetic-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalf",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-ordinary-hullhalf-missile-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalf",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-ordinary-hullhalf-missile-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalf",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-ordinary-hullhalfreserveone-kinetic-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-ordinary-hullhalfreserveone-kinetic-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-ordinary-hullhalfreserveone-missile-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-ordinary-hullhalfreserveone-missile-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-protected-none-kinetic-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "None",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-protected-none-kinetic-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "None",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-protected-none-missile-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "None",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-protected-none-missile-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "None",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-protected-componentonly-kinetic-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "ComponentOnly",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-protected-componentonly-kinetic-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "ComponentOnly",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-protected-componentonly-missile-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "ComponentOnly",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-protected-componentonly-missile-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "ComponentOnly",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-protected-hullhalf-kinetic-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalf",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-protected-hullhalf-kinetic-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalf",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-protected-hullhalf-missile-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalf",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-protected-hullhalf-missile-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalf",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-protected-hullhalfreserveone-kinetic-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "kinetic",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-protected-hullhalfreserveone-kinetic-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "kinetic",
+      "damageTempo": "burst"
+    },
+    {
+      "id": "dc-p33-protected-hullhalfreserveone-missile-steady",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "missile",
+      "damageTempo": "steady"
+    },
+    {
+      "id": "dc-p33-protected-hullhalfreserveone-missile-burst",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "doctrine": "HullHalfReserveOne",
+      "loadout": "missile",
+      "damageTempo": "burst"
+    }
+  ]
+}

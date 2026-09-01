@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "100",
+  "title": "Checkpoint 100 - TL3 Core Technology Table Foundation",
+  "sdkVersion": "8.0.423",
+  "configuration": "Debug",
+  "calibrationSolution": "StarCluster.Calibration.sln",
+  "testProject": "tests/StarCluster.Tests/StarCluster.Tests.csproj",
+  "runnerProject": "src/StarCluster.ScenarioRunner/StarCluster.ScenarioRunner.csproj",
+  "manifestFile": "CHECKPOINT_100_SHA256SUMS.txt",
+  "outputRoot": "out/checkpoint-100",
+  "defaultTrials": 250,
+  "defaultJobs": 24,
+  "documentation": [
+    "CHAT_README.md",
+    "README.md",
+    "docs/README.md",
+    "docs/Star_Cluster_Game_Concept_v0.7b.docx",
+    "docs/Prototype_TODO.md",
+    "docs/design/README.md",
+    "docs/design/player_technology/README.md",
+    "docs/design/player_technology/Technology_Architecture_Matrix_v1.md",
+    "docs/archive/player_technology/pre-cp165-active/technology_architecture_matrix_v1.json",
+    "docs/design/player_technology/StarCluster_Technology_Architecture_Matrix_v1.xlsx",
+    "docs/design/player_technology/tl3_core_technology_candidates_v0_1.json",
+    "docs/archive/player_technology/pre-cp165-active/component_installation_space_catalog_v1.json",
+    "docs/archive/player_technology/pre-cp165-active/auxiliary_component_catalog_v0_1.json",
+    "docs/design/testing/README.md",
+    "docs/design/testing/Checkpoint_100_Validation_Tiers.md",
+    "docs/design/testing/checkpoint_100_validation_suite_policy_v0_1.json",
+    "docs/design/testing/Technology_Integration_Permutation_Suite_Architecture_v0_15.md",
+    "docs/design/testing/technology_integration_permutation_suite_v0_15.json",
+    "docs/development/Simulation_Development_Guidelines.md",
+    "docs/validation/Checkpoint_100_TL3_Core_Technology_Table_Foundation.md",
+    "docs/validation/evidence/checkpoint-99/CHECKPOINT_99_SHA256SUMS.txt",
+    "docs/validation/evidence/checkpoint-99/checkpoint-99-native-acceptance-summary.json",
+    "docs/validation/evidence/checkpoint-99/cp99-exact-edge-progression-evidence.json"
+  ],
+  "stages": [
+    {
+      "id": "deterministic",
+      "name": "Accepted deterministic moving-missile scenarios",
+      "command": "run-all",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios",
+        "--output-dir",
+        "{OutputRoot}/deterministic"
+      ],
+      "metrics": {
+        "deterministicCases": 7
+      }
+    },
+    {
+      "id": "tl1-phase-a",
+      "name": "TL1 Phase A mechanics corpus",
+      "command": "tl1-phase-a",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1PhaseA",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-a"
+      ],
+      "metrics": {
+        "caseCount": 54
+      }
+    },
+    {
+      "id": "tl1-phase-b",
+      "name": "TL1 Phase B direct-fire corpus",
+      "command": "tl1-phase-b",
+      "arguments": [
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-b"
+      ],
+      "metrics": {
+        "caseCount": 36
+      }
+    },
+    {
+      "id": "tl1-installation-space-envelope",
+      "name": "TL1 35-Space deterministic construction envelope and nominal power diagnostics",
+      "command": "tl1-installation-space-envelope",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-space01-35-space-construction-envelope.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-installation-space-envelope"
+      ],
+      "metrics": {
+        "macroLoadoutCount": 27,
+        "weaponPowerVariantCount": 96,
+        "exactFillMacroLoadoutCount": 4,
+        "usesTrials": false
+      }
+    },
+    {
+      "id": "tl1-sensor-ew-foundation",
+      "name": "TL1 deterministic sensor reach, emissions, discrimination resistance, burn-through, and EW sweep",
+      "command": "tl1-sensor-ew-foundation",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/SensorEw/tl1-sew03-sensor-ew-discrimination-burnthrough.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-sensor-ew-foundation"
+      ],
+      "metrics": {
+        "profileCount": 7,
+        "forwardCandidateCount": 6,
+        "contextCount": 12,
+        "rangeCount": 11,
+        "deterministicRowCount": 924,
+        "usesTrials": false,
+        "balanceTargetsBlocking": false,
+        "productionSensorRangesChanged": false,
+        "tl1NormalActiveModeCount": 1,
+        "sameHexLosUnoccludable": true,
+        "sameHexEwStillResolves": true,
+        "sensorDiscriminationResistance": 0,
+        "sameHexBurnThroughResistance": 1
+      }
+    },
+    {
+      "id": "cross-tl-cp99-exact-edge-preflight",
+      "name": "CP99 mandatory-Sensor exact-edge foundation deterministic preflight",
+      "command": "cross-tl-build-permutation-preflight",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v0_8.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--output-dir",
+        "{OutputRoot}/cross-tl-cp99-exact-edge-preflight"
+      ],
+      "metrics": {
+        "axisCount": 9,
+        "rawCombinationCount": 82944,
+        "legalBuildCount": 11776,
+        "exactFillBuildCount": 2944,
+        "nearFillBuildCount": 6656,
+        "underfilledBuildCount": 2176,
+        "progressionTransitionCount": 12,
+        "progressionLegalEdgeCount": 37184,
+        "exactEdgeStratumCount": 181,
+        "logicalPairingCount": 362,
+        "geometryCount": 2,
+        "generatedVariantCount": 724,
+        "usesTrials": false,
+        "mandatorySensor": true,
+        "countTowardVariantAggregate": false
+      }
+    },
+    {
+      "id": "cross-tl-cp99-exact-edge-generation",
+      "name": "CP99 11,776-build / 37,184-edge / 724-variant exact-edge generation",
+      "command": "cross-tl-build-permutation",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v0_8.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--output-dir",
+        "{OutputRoot}/cross-tl-cp99-exact-edge"
+      ],
+      "metrics": {
+        "legalBuildCount": 11776,
+        "progressionTransitionCount": 12,
+        "progressionLegalEdgeCount": 37184,
+        "exactEdgeStratumCount": 181,
+        "logicalPairingCount": 362,
+        "generatedVariantCount": 724,
+        "usesTrials": false,
+        "generatedStudyActualConsumerRequired": true,
+        "countTowardVariantAggregate": false
+      }
+    },
+    {
+      "id": "auxiliary-resource-endurance",
+      "name": "Deterministic finite-resource and recharge endurance stress study",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end01-resource-endurance-stress.json",
+        "--output-dir",
+        "{OutputRoot}/auxiliary-resource-endurance"
+      ],
+      "metrics": {
+        "combatBatteryCandidateCount": 2,
+        "capacitorPatternCount": 3,
+        "ammRoundCandidateCount": 4,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "checkpoint-53-resource-semantics-lock",
+      "name": "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end02-resource-semantics-lock.json",
+        "--output-dir",
+        "{OutputRoot}/checkpoint-53-resource-semantics-lock"
+      ],
+      "metrics": {
+        "combatBatteryPrimaryCharges": 3,
+        "combatBatteryPowerPerCharge": 1,
+        "combatBatteryDischargeLimitPerTurn": 1,
+        "combatBatteryEncounterDischargeCap": null,
+        "ammRounds": 25,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "runner-self-tests",
+      "name": "ScenarioRunner self-tests",
+      "command": "self-test",
+      "arguments": [
+        "--scenario-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/terminal-two-window-hit.json"
+      ],
+      "metrics": {
+        "selfTestCount": 63
+      }
+    }
+  ],
+  "checkpointMetrics": {
+    "stageCount": 10,
+    "monteCarloVariantCount": 0,
+    "trialsAtDefault": 0,
+    "smokeTrialsAtDefault": 0,
+    "totalTrialExecutionsAtDefault": 0,
+    "suiteTier": "must_always_run",
+    "expectedXunitTests": 876,
+    "expectedRunnerSelfTests": 63,
+    "acceptedExecutableFoundation": "cross-tl-build-permutation-foundation-v0_8",
+    "acceptedLegalBuildCount": 11776,
+    "acceptedProgressionLegalEdges": 37184,
+    "tl3CoreCandidateRegistered": true,
+    "tl3CombatConsumerEnabled": false,
+    "newTl3Values": true,
+    "initiativeRuleChanged": false,
+    "deepCalibrationApplicable": false,
+    "technologyPromotionAutomatic": false
+  },
+  "nativeDependencyPrecheck": {
+    "required": true,
+    "script": "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+    "blockedInterpreters": [
+      "python",
+      "python3",
+      "py"
+    ],
+    "powerShellPaths": [
+      "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+      "tools/checkpoints/checkpoint-100/apply_checkpoint_100.ps1",
+      "tools/checkpoints/checkpoint-100/test_checkpoint_100_contract.ps1",
+      "tools/calibration/run_calibration_checkpoint.ps1"
+    ],
+    "checkpointDefinitionPaths": [
+      "tools/calibration/checkpoints/checkpoint-100.json",
+      "tools/calibration/checkpoints/checkpoint-100-deep-calibration.json"
+    ]
+  },
+  "description": "Register the initial TL3 core maturation/integration technology candidates while preserving CP99 foundation v0.8 as the executable TL1/TL2 consumer. No TL3 combat mechanics, initiative change, substantive Monte Carlo, or automatic technology promotion is introduced."
+}

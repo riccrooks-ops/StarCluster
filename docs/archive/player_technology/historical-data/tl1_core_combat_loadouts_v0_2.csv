@@ -1,0 +1,14 @@
+loadout_id,name,base_chassis,weapon,optional_systems,weapon_mode,starting_ammo,starting_power,doctrine,purpose
+tl1_core_kinetic,TL1 Core Kinetic Cruiser,tl1_standard_test_cruiser,tl1_kinetic_cannon,none,standard 1 TP,100 total: 1 Ready + 99 reserve Kinetic Packages,5 TP,core_doctrine_v0_1,Core kinetic mirror and cross-family baseline; firing spends 1 TP for internal systems
+tl1_core_energy,TL1 Core Energy Cruiser,tl1_standard_test_cruiser,tl1_energy_cannon,none,standard 2 TP,unlimited,5 TP,core_doctrine_v0_1,Core energy mirror and cross-family baseline
+tl1_core_missile,TL1 Core Missile Cruiser,tl1_standard_test_cruiser,tl1_missile_launcher,none,one TL1 Missile Flight / 0 TP launch,25 total: 1 Ready + 24 reserve Missile Flights,5 TP,core_doctrine_v0_1,Core missile mirror and cross-family baseline
+tl1_kinetic_pds,TL1 Kinetic PDS Fixture,tl1_standard_test_cruiser,scenario-selected,Kinetic PDS,standard,"50 total: 1 Ready + 49 reserve PDS packages, plus weapon ammo",5 TP,core_plus_pds_v0_1,PDS relevance and opportunity-cost tests
+tl1_amm_pds,TL1 AMM Fixture,tl1_standard_test_cruiser,scenario-selected,AMM PDS,standard,"25 total: 1 Ready + 24 reserve AMMs, plus weapon ammo",5 TP,core_plus_pds_v0_1,Higher-reliability finite PDS test
+tl1_energy_pds,TL1 Energy PDS Fixture,tl1_standard_test_cruiser,scenario-selected,Energy PDS,standard,weapon ammo only,5 TP,core_plus_pds_v0_1,Higher-power ammunition-independent PDS test
+tl1_ecm,TL1 ECM Fixture,tl1_standard_test_cruiser,scenario-selected,ECM max1,standard,weapon dependent,5 TP,core_plus_ew_v0_1,ECM relevance and activation-timing tests
+tl1_eccm,TL1 ECCM Fixture,tl1_standard_test_cruiser,scenario-selected,ECCM max1,standard,weapon dependent,5 TP,core_plus_ew_v0_1,Counter-jamming tests
+tl1_shield_hardener,TL1 Shield Hardener Fixture,tl1_standard_test_cruiser,scenario-selected,Shield Hardener SA1,standard,weapon dependent,5 TP,core_plus_defense_v0_1,SPEN matchup tests
+tl1_combat_battery,TL1 Combat Battery Fixture,tl1_standard_test_cruiser,scenario-selected,Combat Battery 3x2 TP,standard,weapon dependent,5 TP plus battery,core_plus_power_v0_1,Finite emergency power tests
+tl1_capacitor,TL1 Capacitor Fixture,tl1_standard_test_cruiser,scenario-selected,Capacitor 3 capacity,standard,weapon dependent,5 TP,core_plus_power_v0_1,Planned inter-turn storage tests
+tl1_aux_reactor,TL1 Auxiliary Reactor Fixture,tl1_standard_test_cruiser,scenario-selected,Auxiliary Reactor +1 TP,standard,weapon dependent,6 TP,core_plus_power_v0_1,Early auxiliary-output threshold comparison; not normal TL1-hull equipment
+tl1_tractor,TL1 Tractor Fixture,tl1_standard_test_cruiser,scenario-selected,Tractor max3 (legacy fixture; recalibration required under production Move1),standard,weapon dependent,5 TP,tractor_test_v0_1,"Historical tractor controls only; recalibrate normal, overload, and combined thresholds against ship Move = Drive TL"

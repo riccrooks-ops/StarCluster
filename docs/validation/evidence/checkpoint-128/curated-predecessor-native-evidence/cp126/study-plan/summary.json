@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "analysis": {
+    "schemaVersion": "star-cluster-cp126-system-map-fidelity-era-attribution-results-v0.1",
+    "checkpoint": 126,
+    "mode": "plan",
+    "rawBuildCombinations": 14112,
+    "legalBuilds": 9427,
+    "compactTasks": 25678,
+    "generatedVariants": 139000,
+    "pipelineSmokeTrials": 139000,
+    "substantiveTrialsPerVariant": 250,
+    "plannedSubstantiveTrials": 34750000,
+    "telemetryMetrics": 61,
+    "groupCounts": {
+      "adjacent_population": {
+        "tasks": 9220,
+        "variants": 36880
+      },
+      "energy_isolation": {
+        "tasks": 1728,
+        "variants": 27648
+      },
+      "late_missile_geometry": {
+        "tasks": 1727,
+        "variants": 6908
+      },
+      "matched_composition": {
+        "tasks": 7699,
+        "variants": 30796
+      },
+      "movement_hotspot": {
+        "tasks": 4008,
+        "variants": 16032
+      },
+      "swarmer_lifecycle": {
+        "tasks": 1296,
+        "variants": 20736
+      }
+    },
+    "mixedTlShipsExecuted": false,
+    "balanceValidated": false,
+    "automaticPromotion": false,
+    "failedGates": []
+  },
+  "gates": {
+    "failed": [],
+    "passed": true
+  },
+  "failedGates": 0
+}

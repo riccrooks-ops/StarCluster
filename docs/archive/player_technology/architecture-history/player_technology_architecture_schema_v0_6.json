@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-player-technology-architecture-schema-v0_6",
+  "title": "Star Cluster Player Technology Architecture Schema v0.6",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "title",
+    "checkpoint",
+    "status",
+    "eras",
+    "standardFamilies",
+    "familyRules",
+    "subfamilies",
+    "auxiliaryEntryDisposition",
+    "simulationPolicy"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "checkpoint": {
+      "const": 54
+    },
+    "status": {
+      "const": "provisional_tl3_candidate_screening"
+    },
+    "date": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "principles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "eras": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "required": [
+          "tl",
+          "eraId",
+          "era",
+          "theme"
+        ],
+        "properties": {
+          "tl": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9
+          },
+          "eraId": {
+            "enum": [
+              "realistic_sf",
+              "future_sf",
+              "science_fantasy"
+            ]
+          },
+          "era": {
+            "type": "string"
+          },
+          "theme": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "installationCapacityProposals": {
+      "type": "object"
+    },
+    "standardFamilies": {
+      "type": "array",
+      "minItems": 11,
+      "items": {
+        "type": "object",
+        "required": [
+          "familyId",
+          "displayName",
+          "technologyId",
+          "technologyName",
+          "implementations"
+        ],
+        "properties": {
+          "familyId": {
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "technologyId": {
+            "type": "string"
+          },
+          "technologyName": {
+            "type": "string"
+          },
+          "identity": {
+            "type": "string"
+          },
+          "implementations": {
+            "type": "array",
+            "minItems": 9,
+            "maxItems": 9,
+            "items": {
+              "type": "object",
+              "required": [
+                "tl",
+                "componentId",
+                "displayName",
+                "progressionBasis",
+                "mechanicalPromise",
+                "status"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "familyRules": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "subfamilies": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "familyId",
+          "displayName",
+          "installationClass",
+          "entryTl",
+          "identity",
+          "strengths",
+          "weaknesses",
+          "tuningKnobs",
+          "milestones"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "familyId": {
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "installationClass": {
+            "enum": [
+              "dedicated_core_integration",
+              "weapon_bay",
+              "auxiliary_capacity"
+            ]
+          },
+          "entryTl": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9
+          },
+          "identity": {
+            "type": "string"
+          },
+          "strengths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "weaknesses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tuningKnobs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "initialEstimate": {
+            "type": "object"
+          },
+          "milestones": {
+            "type": "object",
+            "minProperties": 9,
+            "maxProperties": 9
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "auxiliaryEntryDisposition": {
+      "type": "array",
+      "minItems": 28,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "displayName",
+          "proposedEntryTl",
+          "change",
+          "familyId",
+          "status",
+          "rationale"
+        ]
+      }
+    },
+    "simulationPolicy": {
+      "type": "object",
+      "required": [
+        "checkpoint48ScenariosPreserved",
+        "tableDrivenScenarioGeneration",
+        "bridgeFile"
+      ]
+    }
+  }
+}

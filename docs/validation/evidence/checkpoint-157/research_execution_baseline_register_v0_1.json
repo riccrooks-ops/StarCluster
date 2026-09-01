@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "star-cluster-research-execution-baseline-register-v0.1",
+  "checkpoint": 157,
+  "acceptedBaseline": 156,
+  "baselineId": "CP157-PF1",
+  "status": "PENDING_FINALIZATION_RESEARCH_AUTHORITY",
+  "substantiveCombatTrials": 0,
+  "promotionType": "RESEARCH_EXECUTION_AUTHORITY_ONLY",
+  "productionNumericalAuthorityPreserved": true,
+  "files": {
+    "materializedMatrix": "docs/design/player_technology/technology_research_execution_baseline_pending_finalization_v0_1.json",
+    "baselineManifest": "research_execution_baseline_manifest_v0_1.json",
+    "fieldDiff": "research_execution_baseline_diff_v0_1.csv",
+    "promotionRegister": "pending_finalization_promotion_register_v0_1.csv",
+    "findingsLedger": "research_findings_ledger_v0_2.csv",
+    "viableLadders": "viable_ladder_register_v0_2.csv",
+    "guardrails": "guardrail_registry_v0_2.json",
+    "futurePassContract": "future_pass_contract_v0_2.json",
+    "authoritySnapshot": "authority_snapshot_v0_2.json"
+  },
+  "selected": {
+    "KineticMain": "K1",
+    "EnergyMain": "E7",
+    "GpMissileMain": "M2",
+    "SwarmerMain": "SW2",
+    "KineticPds": "K155P06",
+    "EnergyPds": "E155P08",
+    "AmmPds": "A155P07"
+  },
+  "requiredAlternates": {
+    "GpMissileMain": [
+      "M3"
+    ],
+    "KineticPds": [
+      "K155P03"
+    ],
+    "EnergyPds": [
+      "E155P07"
+    ],
+    "AmmPds": [
+      "A155P09"
+    ]
+  },
+  "openDependencies": [
+    "AUX lifecycle viability",
+    "final Reactor/TP scarcity"
+  ],
+  "nextStage": "Defense/AUX Lifetime Viability using CP157-PF1; final Reactor/TP scarcity follows AUX closure."
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "star-cluster-cp154-pds-lifecycle-closure-study-v0.1",
+  "checkpoint": 154,
+  "baseCheckpoint": 153,
+  "status": "candidate_pending_native_windows_acceptance",
+  "scope": "Reconcile Kinetic, Energy, and AMM point-defense architecture, then oversweep all balance-relevant PDS parameters and synthesize coherent TL1-TL9 PDS ladders against the native-accepted CP153 main-weapon environment.",
+  "matrix": "docs/design/player_technology/technology_numerical_matrix_v0_9.json",
+  "resourceEnsemble": "docs/design/testing/cp144_stage_a_resource_ensemble.csv",
+  "resourceEnsembleTl": "docs/design/testing/cp144_stage_a_resource_ensemble_tl.csv",
+  "stageAExperimentManifest": "docs/design/testing/cp144_stage_a_experiment_manifest.csv",
+  "acceptedCp153NativeResultsArchiveSha256": "e1c0e18f2f99bd80df9cd45ac340cac96b7fe500882782bb978201a14e0bc588",
+  "pointScale": 2,
+  "damageModel": "def-res-v1",
+  "combatDoctrine": "cp147_tactical_utility",
+  "pdsArchitecture": {
+    "reactionCapacity": "per-turn pool of interception attempts; attempts remain committed to the first arriving Flight until it is destroyed or its legal engagement windows are exhausted, after which unused RC may spill to later Flights",
+    "terminalWindows": "Kinetic and Energy PDS remain local same-hex defenses with at most two terminal opportunities: terminal entry and immediately before terminal attack",
+    "ammRc3": "AMM RC3 is qualitatively different: one range-1 pre-terminal opportunity plus the two local terminal windows; no Kinetic or Energy range-1/RC3 capability is enabled",
+    "ammRangeOneFlightSemantics": "the range-1 AMM opportunity attacks the magazine Flight before terminal Swarmer subflights are individually exposed; a miss commits remaining RC to that first Flight's terminal windows",
+    "energyIdentity": "Energy PDS is ammunition-free and may trade Tactical Power for RC2; candidate states include safe RC2 and overcharged RC2 where the extra reaction adds persistent PDS Strain only when that extra reaction is actually fired",
+    "forcedOverloadPolicy": "normal research AI is safe-only; once an overcharged Energy PDS reaches its Strain Limit it falls back to a legal safe readiness state rather than treating Forced Overload as routine defense",
+    "singleArrivalScope": "current substantive balance remains based on the accepted single-arriving-Flight cadence; simultaneous multi-Flight and cross-target range-1 benefits are preserved as future mechanics/integration validation rather than invented balance weight"
+  },
+  "pdsClosureDesign": {
+    "baseChanceGridPp": [5,10,15,20,25,30,35,40,45],
+    "includeExactCurrentChance": true,
+    "kinetic": {
+      "reactionCapacity": [1,2],
+      "readinessTp": [1,2,3],
+      "ammo": [15,25,35,50,60,75,100],
+      "rangeOne": false,
+      "strain": false
+    },
+    "energy": {
+      "reactionCapacity": [1,2],
+      "rc1Tp": [1,2,3],
+      "rc2IncrementalTp": [0,1,2],
+      "rc2Modes": ["safe","overcharged"],
+      "overchargedStrainPerExtraAttempt": 1,
+      "strainLimit": [1,2,3,4],
+      "ammo": null,
+      "rangeOne": false
+    },
+    "amm": {
+      "reactionCapacity": [1,2,3],
+      "ammo": [6,12,18,25,35,50],
+      "rc1Tp": [1,2],
+      "rc2TpProfiles": "full rc1 x (rc1, rc1+1, rc1+2)",
+      "rc3TpProfiles": [[1,2,2],[1,2,3],[1,2,4],[1,3,3],[1,3,4],[1,3,5],[2,3,3],[2,3,4],[2,3,5]],
+      "rc3EarliestTestTl": 5,
+      "rc3RequiresRangeOne": true
+    },
+    "strata": ["BALANCED_CORE_NO_PDS","SHIELD_PRESSURE","ARMOR_PRESSURE","EW_CONTEST","RECOVERY_ATTRITION","POWER_CRISIS"],
+    "broadContextDesign": "every attacker x defender-main x stratum combination at each TL, with all five resource ensembles Latin-rotated across the cells; full resource crossing is reserved for deep confirmation",
+    "deepContextDesign": "full attacker x defender-main x six-stratum x five-resource crossing at every TL",
+    "attackerMains": "GP M2, GP M3, and Swarmer SW2 where unlocked",
+    "defenderMains": "K1, E7, GP M2, and Swarmer SW2 where unlocked",
+    "heldFixed": "CP153 K1/E7/M2-or-M3/SW2 mains, current Hull/Shield/Armor/DEF/RES, current AUX, EW/Sensor, movement/cadence, and provisional Reactor/TP supply",
+    "spacePolicy": "PDS Space remains current during this closure; Space/AUX opportunity-cost retuning belongs to the subsequent AUX lifetime pass"
+  },
+  "wholeLadderSynthesis": {
+    "laddersPerFamily": 8,
+    "families": 3,
+    "kineticCoherence": "base chance and RC may hold or improve; RC never regresses; no RC3/range-1",
+    "energyCoherence": "base chance and RC may hold or improve; overcharged RC2 may mature into safe RC2 but safe RC2 does not regress to strain-requiring RC2",
+    "ammCoherence": "base chance and RC may hold or improve; RC3 is range-1 architecture and, once acquired, does not regress",
+    "selection": "whole-ladder beam synthesis from actually tested candidates; preserve distinct RC/Strain/range-1 trajectories before filling duplicate-equivalent slots",
+    "automaticPromotion": false
+  },
+  "deferred": [
+    "simultaneous multi-Flight arrival balance weighting",
+    "cross-target AMM range-1 fleet-defense value",
+    "remaining Shield/Armor/AUX lifetime-value sweep",
+    "final Reactor/TP supply tuning",
+    "production C# and active Concept/numerical-matrix promotion",
+    "Stage-B/campaign weighting"
+  ],
+  "masterSeed": 154001,
+  "screenTrialsPerCell": 25,
+  "deepTrialsPerCell": 100,
+  "recommendedJobs": 24,
+  "candidateBatchSize": 128,
+  "deepLadderBatchSize": 2,
+  "tuningAllowed": false,
+  "automaticPromotion": false,
+  "stageBAutomatic": false
+}

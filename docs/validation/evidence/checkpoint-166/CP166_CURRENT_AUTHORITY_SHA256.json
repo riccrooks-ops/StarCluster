@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "star-cluster-cp166-current-authority-sha256-v0.1",
+  "baseCheckpoint": 165,
+  "acceptedRevision": "CR3",
+  "files": [
+    {"path":"docs/CURRENT_AUTHORITIES.md","sha256":"5e36153a2992fd7ccbeede784a1558ede9addac27d7f0b72c865117dd281b584"},
+    {"path":"docs/Star_Cluster_Game_Concept.docx","sha256":"a67a055d315f8f97ccd84b4363a1fc41963ddcd794f795fd644f387a931bea1a"},
+    {"path":"docs/design/player_technology/Current_Technology_Tree.md","sha256":"ccecf285d61064828c240f964b13ed45ce28f4928946fe51e8c246d5804c15f6"},
+    {"path":"docs/design/player_technology/StarCluster_Current_TL1_TL9_Technology_Tree.xlsx","sha256":"8017a0dbe61e38fe675c254bef4d92e3eb0e0f08bb7dd863c364796bc7aa41de"},
+    {"path":"docs/design/player_technology/current_working_technology_baseline.json","sha256":"e937ce7f48fb86da3b42a9492e7ad7cc18c456051cdfac1f4712f7e60b29eda8"},
+    {"path":"docs/design/player_technology/auxiliary_component_catalog.json","sha256":"431b512b5d054b20ead8efd05a11c05193461f22872840541355907e50289598"},
+    {"path":"docs/design/player_technology/component_installation_space_catalog.json","sha256":"2567a8dceca1a6584e631ec3a233bcc09306d3e47d0dabd5ce1e582be09aff87"},
+    {"path":"docs/design/combat/Combat_System_Reference.md","sha256":"10bcafbce2c14a0a72d861013c06b257f43d83f9109c5d06be73fc7348286c0b"}
+  ],
+  "productionPromotion": false,
+  "authorityMutationAllowed": false
+}

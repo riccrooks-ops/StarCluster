@@ -1,0 +1,11 @@
+profile_id,display_name,capacity_cost,shield_hardener_strength,shield_hardener_power,energized_armor_ap_bonus,energized_armor_power,power_component,status
+aux-r58-shield-hardener-s1-p1,TL4 Shield Hardener S1 P1,1,1,1,0,0,,screening_only
+aux-r58-shield-hardener-s1-p2,TL4 Shield Hardener S1 P2,1,1,2,0,0,,screening_only
+aux-r58-shield-hardener-s2-p2,TL4 Shield Hardener S2 P2,1,2,2,0,0,,screening_only
+aux-r58-energized-armor-a1-p1,TL4 Energized Armor A1 P1,1,0,0,1,1,,screening_only
+aux-r58-energized-armor-a1-p2,TL4 Energized Armor A1 P2,1,0,0,1,2,,screening_only
+aux-r58-energized-armor-a2-p2,TL4 Energized Armor A2 P2,1,0,0,2,2,,screening_only
+aux-r58-shield-hardener-battery,TL4 Shield Hardener S1 P1 + TL3 Battery,2,1,1,0,0,CombatBattery,screening_only
+aux-r58-energized-armor-battery,TL4 Energized Armor A1 P1 + TL3 Battery,2,0,0,1,1,CombatBattery,screening_only
+aux-r58-shield-hardener-capacitor,TL4 Shield Hardener S1 P1 + TL3 Capacitor,2,1,1,0,0,PowerCapacitor,screening_only
+aux-r58-energized-armor-capacitor,TL4 Energized Armor A1 P1 + TL3 Capacitor,2,0,0,1,1,PowerCapacitor,screening_only

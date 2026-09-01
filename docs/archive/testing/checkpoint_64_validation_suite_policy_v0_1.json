@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-64-validation-suite-policy-v0_1",
+  "checkpoint": 64,
+  "status": "active_suite_plus_track_aware_movement_acquisition",
+  "principles": [
+    "Must-always-run covers repository/build/unit/deterministic authoritative contracts plus the current checkpoint's 90-variant track-aware movement/acquisition study.",
+    "Deep Calibration remains opt-in unless a checkpoint changes accepted combat mechanics broadly enough to require historical stochastic requalification.",
+    "The accepted Checkpoint 63b 72-variant operational sensor study, Checkpoint 62 108-variant power-doctrine/reactor study, and Checkpoint 61 54-variant composed-build study move to Deep Calibration as historical stochastic regression evidence.",
+    "Production TL1 reactor output remains 5 Tactical Power and FullVolleyFirst remains fixed so power-allocation and reactor-output changes do not confound the movement/acquisition question.",
+    "TrackAwareOpponentRange caps weapon standoff by the Firm range the ship can support while preserving its ready volley when possible; it does not guarantee closure against an equal-or-faster opponent.",
+    "AcquisitionFirstAutoActive may spend the minimum active-sensor power needed for Firm after movement before PDS allocation, even when fewer ready weapons can then fire.",
+    "All cruisers retain core passive/navigation sensing and sensorless builds may never synthesize active-sensor power.",
+    "Side B retains an established Firm solution; EW1 remains an abstract one-hex net range-pressure stress input.",
+    "Simulation diagnoses consequences; it does not manufacture fixed build or weapon-family win percentages.",
+    "Latent/contextual advantages remain valid design value when the current opponent does not exercise them; Energy APEN remains the explicit standing example.",
+    "Generated historical checkpoint text logs/manifests/readmes remain excluded from full-repository packaging unless active tooling explicitly consumes them."
+  ],
+  "mustAlwaysRunStageIds": [
+    "deterministic",
+    "tl1-phase-a",
+    "tl1-phase-b",
+    "tl1-installation-space-envelope",
+    "tl1-track-aware-movement-acquisition",
+    "auxiliary-resource-endurance",
+    "checkpoint-53-resource-semantics-lock",
+    "runner-self-tests"
+  ],
+  "deepCalibrationStageIds": [
+    "tl1-operational-sensor-acquisition-ew",
+    "tl1-power-doctrine-reactor-sensitivity",
+    "tl1-composed-ship-odd-build-combat",
+    "tl1-kinetic-calibration",
+    "tl1-energy-calibration",
+    "tl1-weapon-matrix",
+    "tl1-pds-calibration",
+    "tl1-defensive-calibration",
+    "tl1-power-correction",
+    "tl1-range-control-calibration",
+    "tl1-damage-control-calibration",
+    "tl1-combat-pacing",
+    "tl1-integrated-tactical-combat",
+    "tl1-movement-kinetic-pacing-diagnostics",
+    "tl1-minimal-tactics-baseline"
+  ],
+  "archivedHistoricalStageCount": 39,
+  "activeRunnerStageCount": 8,
+  "deepRunnerStageCount": 23,
+  "notes": {
+    "activeMonteCarloVariants": 90,
+    "activeTrialsAtDefault": 900000,
+    "deepMonteCarloVariants": 1350,
+    "deepTrialsAtDefault": 13500000,
+    "studyBuildCount": 6,
+    "weaponFamilyCount": 3,
+    "operationalRegimeCount": 5,
+    "productionReactorOutput": 5,
+    "powerDoctrine": "FullVolleyFirst",
+    "balanceTargetsBlocking": false,
+    "deepCalibrationRequiredForCheckpoint64Acceptance": false,
+    "reasonDeepCalibrationNotRequired": "The new movement mode and acquisition-first track policy are opt-in fields used only by the Checkpoint 64 study. Accepted historical variants retain OpponentAwareRange and their prior track policies."
+  }
+}

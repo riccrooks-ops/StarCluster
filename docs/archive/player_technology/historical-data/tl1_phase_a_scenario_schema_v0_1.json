@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-tl1-phase-a-v1",
+  "title": "Star Cluster TL1 Phase A deterministic mechanics scenario",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "matrixScenarioId",
+    "name",
+    "baselineVersion",
+    "baselineSha256",
+    "cases"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-tl1-phase-a-v1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "matrixScenarioId": {
+      "type": "string",
+      "pattern": "^TL1-A[0-9]{2}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baselineVersion": {
+      "const": "tl1-core-combat-v0.1"
+    },
+    "baselineSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{64}$"
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "operation",
+          "input",
+          "expected"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "operation": {
+            "enum": [
+              "resolveDamage",
+              "turnStartRecharge",
+              "powerScript",
+              "heldInterception",
+              "reactorEnvelope",
+              "reactorOverload",
+              "resetState",
+              "weaponFire",
+              "chargedWeaponScript"
+            ]
+          },
+          "input": {
+            "type": "object"
+          },
+          "expected": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

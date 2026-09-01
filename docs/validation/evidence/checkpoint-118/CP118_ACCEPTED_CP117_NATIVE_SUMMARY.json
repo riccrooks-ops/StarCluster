@@ -1,0 +1,13 @@
+{
+  "checkpoint": 117,
+  "acceptedForCp118": true,
+  "sourceArchive": "checkpoint-117-native-results.zip",
+  "sourceArchiveSha256": "65f4cb224c5feba4d7389b5b5b0a11dc743254d35bbd5d5df44ab9900ac34bf0",
+  "nativeEvidence": {
+    "parityPassed": true,
+    "parityCases": 25,
+    "parityErrors": 0,
+    "failedGates": 0
+  },
+  "scope": "CP117 was a zero-trial deterministic architecture checkpoint; no substantive Monte Carlo result tree was expected."
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "112",
+  "acceptedBaseline": "111",
+  "checkpointType": "causal_build_neighbor_ablation_diagnostics",
+  "productionRuntime": "C# / Godot",
+  "pythonAllowedForTestingSimulationAndCheckpointValidation": true,
+  "pythonRequiredByProductionRuntime": false,
+  "productionSourceChanged": false,
+  "conceptChanged": false,
+  "numericalMatrixChanged": false,
+  "reactorCandidateChanged": false,
+  "sourceMatrix": "docs/archive/player_technology/pre-cp165-active/technology_numerical_matrix_v0_1.json",
+  "reactorAuthority": "docs/archive/player_technology/pre-cp165-active/power_reactor_calibration_profile_v0_1.json",
+  "study": "docs/archive/testing/pre-cp165-active/build_neighbor_ablation_study_v0_1.json",
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "variantPopulations": {
+    "energyDefenseAblation": 1056,
+    "movementOrderGeometry": 24,
+    "missileAttritionAblation": 120,
+    "total": 1200
+  },
+  "localBoundedEvidence": {
+    "trialsPerVariant": 100,
+    "totalEngagements": 120000
+  },
+  "nativeSubstantiveWorkload": {
+    "trialsPerVariant": 2000,
+    "totalEngagements": 2400000
+  },
+  "mixedTlPopulation": {
+    "registered": true,
+    "executed": false,
+    "populationWeight": 0
+  },
+  "automaticPromotion": false,
+  "productionPromotion": false,
+  "repositoryOwnedFiles": 2242
+}

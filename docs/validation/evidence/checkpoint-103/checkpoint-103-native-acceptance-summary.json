@@ -1,0 +1,339 @@
+﻿{
+    "schemaVersion":  1,
+    "checkpointId":  "103",
+    "checkpointTitle":  "Checkpoint 103 - TL1/TL2/TL3 Integration and Permutation Analysis",
+    "checkpointDefinition":  "tools/calibration/checkpoints/checkpoint-103.json",
+    "checkpointDefinitionSha256":  "f9fa4ae6bb2063f504d8a347757ae503a8d7594167c19ba92b185ba71db92caf",
+    "checkpointManifest":  "CHECKPOINT_103_SHA256SUMS.txt",
+    "checkpointManifestSha256":  "ecc3b0c4db276f8302d320143cfee9e9e649d8ad601efb193aa5e600414a4ae2",
+    "status":  "Success",
+    "repositoryOnly":  false,
+    "startedUtc":  "2026-08-14T21:31:49.0475896Z",
+    "completedUtc":  "2026-08-14T21:32:44.6760656Z",
+    "elapsedSeconds":  55.724047,
+    "sdk":  {
+                "expected":  "8.0.423",
+                "actual":  "8.0.423"
+            },
+    "configuration":  "Debug",
+    "requested":  {
+                      "trialsPerVariant":  250,
+                      "jobs":  24
+                  },
+    "build":  {
+                  "cleanExecuted":  true,
+                  "succeeded":  true,
+                  "warnings":  0,
+                  "errors":  0,
+                  "elapsedSeconds":  5.9862904
+              },
+    "tests":  {
+                  "succeeded":  true,
+                  "total":  876,
+                  "passed":  876,
+                  "failed":  0,
+                  "skipped":  0,
+                  "elapsedSeconds":  2.1052027,
+                  "trxPath":  "out/checkpoint-103/test-results/checkpoint-tests.trx"
+              },
+    "primaryStudy":  {
+                         "id":  "cross-tl-cp103-primary-substantive",
+                         "variantCount":  1152,
+                         "trialsPerVariant":  250,
+                         "totalTrials":  288000
+                     },
+    "aggregates":  {
+                       "configuredRunnerStages":  25,
+                       "runnerStagesPassed":  25,
+                       "runnerStagesFailed":  0,
+                       "deterministicCases":  7,
+                       "mechanicsCases":  90,
+                       "variants":  1252,
+                       "trials":  314284,
+                       "selfTests":  70,
+                       "failedGates":  0
+                   },
+    "stages":  [
+                   {
+                       "id":  "deterministic",
+                       "name":  "Accepted deterministic moving-missile scenarios",
+                       "command":  "run-all",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:31:58.8990598Z",
+                       "completedUtc":  "2026-08-14T21:31:59.5735262Z",
+                       "elapsedSeconds":  0.66677409999999993,
+                       "outputPath":  "out/checkpoint-103/deterministic",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "tl1-phase-a",
+                       "name":  "TL1 Phase A mechanics corpus",
+                       "command":  "tl1-phase-a",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:31:59.5885262Z",
+                       "completedUtc":  "2026-08-14T21:32:00.0135213Z",
+                       "elapsedSeconds":  0.4212989,
+                       "outputPath":  "out/checkpoint-103/tl1-phase-a",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "tl1-phase-b",
+                       "name":  "TL1 Phase B direct-fire corpus",
+                       "command":  "tl1-phase-b",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:00.0205211Z",
+                       "completedUtc":  "2026-08-14T21:32:00.3985172Z",
+                       "elapsedSeconds":  0.3737211,
+                       "outputPath":  "out/checkpoint-103/tl1-phase-b",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "tl1-installation-space-envelope",
+                       "name":  "TL1 35-Space deterministic construction envelope and nominal power diagnostics",
+                       "command":  "tl1-installation-space-envelope",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:00.4045193Z",
+                       "completedUtc":  "2026-08-14T21:32:00.7765129Z",
+                       "elapsedSeconds":  0.3644861,
+                       "outputPath":  "out/checkpoint-103/tl1-installation-space-envelope",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "tl1-sensor-ew-foundation",
+                       "name":  "TL1 deterministic sensor reach, emissions, discrimination resistance, burn-through, and EW sweep",
+                       "command":  "tl1-sensor-ew-foundation",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:00.7875127Z",
+                       "completedUtc":  "2026-08-14T21:32:01.1584552Z",
+                       "elapsedSeconds":  0.3667241,
+                       "outputPath":  "out/checkpoint-103/tl1-sensor-ew-foundation",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp99-exact-edge-preflight",
+                       "name":  "CP99 mandatory-Sensor exact-edge foundation deterministic preflight",
+                       "command":  "cross-tl-build-permutation-preflight",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:01.1644548Z",
+                       "completedUtc":  "2026-08-14T21:32:01.7876977Z",
+                       "elapsedSeconds":  0.61998789999999993,
+                       "outputPath":  "out/checkpoint-103/cross-tl-cp99-exact-edge-preflight",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp99-exact-edge-generation",
+                       "name":  "CP99 11,776-build / 37,184-edge / 724-variant exact-edge generation",
+                       "command":  "cross-tl-build-permutation",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:01.7947003Z",
+                       "completedUtc":  "2026-08-14T21:32:02.5820946Z",
+                       "elapsedSeconds":  0.78314,
+                       "outputPath":  "out/checkpoint-103/cross-tl-cp99-exact-edge",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp102-construction-envelope-preflight",
+                       "name":  "CP102 v7 TL2/TL3 construction-envelope actual-consumer preflight",
+                       "command":  "cross-tl-build-permutation-preflight",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:02.5880952Z",
+                       "completedUtc":  "2026-08-14T21:32:03.2971160Z",
+                       "elapsedSeconds":  0.7062357,
+                       "outputPath":  "out/checkpoint-103/cross-tl-cp102-construction-envelope-preflight",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp102-transition-preflight",
+                       "name":  "CP102 v7 typed TL2/TL3 transition-smoke deterministic preflight",
+                       "command":  "cross-tl-build-permutation-preflight",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:03.3041165Z",
+                       "completedUtc":  "2026-08-14T21:32:04.9878940Z",
+                       "elapsedSeconds":  1.6804610999999998,
+                       "outputPath":  "out/checkpoint-103/cross-tl-cp102-transition-preflight",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp102-transition-generation",
+                       "name":  "CP102 16-transition / 32-variant typed TL3 integration generation",
+                       "command":  "cross-tl-build-permutation",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:04.9938958Z",
+                       "completedUtc":  "2026-08-14T21:32:07.4061455Z",
+                       "elapsedSeconds":  2.408552,
+                       "outputPath":  "out/checkpoint-103/cross-tl-cp102-transition",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp102-generated-study-preflight",
+                       "name":  "CP102 32-variant TL3 executable integration actual-consumer preflight",
+                       "command":  "tl1-integrated-tactical-combat-preflight",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:07.4131472Z",
+                       "completedUtc":  "2026-08-14T21:32:07.8347600Z",
+                       "elapsedSeconds":  0.4186739,
+                       "outputPath":  "out/checkpoint-103/cross-tl-cp102-generated-study-preflight",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp102-generated-study-smoke",
+                       "name":  "CP102 32-variant one-trial TL3 executable full-pipeline smoke",
+                       "command":  "tl1-integrated-tactical-combat",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:07.8417625Z",
+                       "completedUtc":  "2026-08-14T21:32:08.3734020Z",
+                       "elapsedSeconds":  0.528606,
+                       "outputPath":  "out/checkpoint-103/cross-tl-cp102-generated-study-smoke",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cp103-python-environment",
+                       "name":  "CP103 pinned Python research-runtime environment preflight",
+                       "command":  "environment",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:08.3914024Z",
+                       "completedUtc":  "2026-08-14T21:32:08.6843788Z",
+                       "elapsedSeconds":  0.2899351,
+                       "outputPath":  "out/checkpoint-103/cp103-python-environment",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cp103-python-self-tests",
+                       "name":  "CP103 Python research-engine unit tests",
+                       "command":  "self-test",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:08.6963759Z",
+                       "completedUtc":  "2026-08-14T21:32:15.7763519Z",
+                       "elapsedSeconds":  7.0771023,
+                       "outputPath":  "out/checkpoint-103/cp103-python-self-tests",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cp103-python-parity",
+                       "name":  "CP103 deterministic accepted-C#/Python bridge parity corpus",
+                       "command":  "parity",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:15.7955542Z",
+                       "completedUtc":  "2026-08-14T21:32:19.4503380Z",
+                       "elapsedSeconds":  3.6491732999999997,
+                       "outputPath":  "out/checkpoint-103/cp103-python-parity",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp103-primary-validation",
+                       "name":  "CP103 Python v8 weighted TL2/TL3 population validation and deterministic sampling",
+                       "command":  "validate",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:19.4683351Z",
+                       "completedUtc":  "2026-08-14T21:32:22.5979340Z",
+                       "elapsedSeconds":  3.1271329999999997,
+                       "outputPath":  "out/checkpoint-103/cross-tl-cp103-primary-validation",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp103-overlay-validation",
+                       "name":  "CP103 Python v8 TL1/TL2/TL3 legacy-stack diagnostic validation",
+                       "command":  "validate",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:22.6099344Z",
+                       "completedUtc":  "2026-08-14T21:32:22.8269328Z",
+                       "elapsedSeconds":  0.2138844,
+                       "outputPath":  "out/checkpoint-103/cross-tl-cp103-overlay-validation",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp103-primary-smoke",
+                       "name":  "CP103 Python 1,152-variant one-trial primary full-pipeline smoke",
+                       "command":  "run",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:22.8369313Z",
+                       "completedUtc":  "2026-08-14T21:32:27.5435273Z",
+                       "elapsedSeconds":  4.7014521,
+                       "outputPath":  "out/checkpoint-103/cross-tl-cp103-primary-smoke",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp103-overlay-smoke",
+                       "name":  "CP103 Python 100-variant one-trial legacy-stack full-pipeline smoke",
+                       "command":  "run",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:27.5555258Z",
+                       "completedUtc":  "2026-08-14T21:32:28.3170946Z",
+                       "elapsedSeconds":  0.75776749999999993,
+                       "outputPath":  "out/checkpoint-103/cross-tl-cp103-overlay-smoke",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp103-primary-substantive",
+                       "name":  "CP103 Python weighted TL2/TL3 substantive integration screen",
+                       "command":  "run",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:28.3282833Z",
+                       "completedUtc":  "2026-08-14T21:32:41.6113624Z",
+                       "elapsedSeconds":  13.2799082,
+                       "outputPath":  "out/checkpoint-103/cross-tl-cp103-primary-substantive",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp103-overlay-substantive",
+                       "name":  "CP103 Python TL1/TL2/TL3 legacy-stack substantive diagnostic screen",
+                       "command":  "run",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:41.6233609Z",
+                       "completedUtc":  "2026-08-14T21:32:42.8635910Z",
+                       "elapsedSeconds":  1.2368497999999999,
+                       "outputPath":  "out/checkpoint-103/cross-tl-cp103-overlay-substantive",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp103-analysis",
+                       "name":  "CP103 Python population-weighted and legacy-overlay analysis",
+                       "command":  "analyze",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:42.8745921Z",
+                       "completedUtc":  "2026-08-14T21:32:43.1078452Z",
+                       "elapsedSeconds":  0.23028669999999998,
+                       "outputPath":  "out/checkpoint-103/cross-tl-cp103-analysis",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "auxiliary-resource-endurance",
+                       "name":  "Deterministic finite-resource and recharge endurance stress study",
+                       "command":  "auxiliary-resource-endurance",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:43.1188457Z",
+                       "completedUtc":  "2026-08-14T21:32:43.4964033Z",
+                       "elapsedSeconds":  0.374037,
+                       "outputPath":  "out/checkpoint-103/auxiliary-resource-endurance",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "checkpoint-53-resource-semantics-lock",
+                       "name":  "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+                       "command":  "auxiliary-resource-endurance",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:43.5024064Z",
+                       "completedUtc":  "2026-08-14T21:32:43.8620470Z",
+                       "elapsedSeconds":  0.3561317,
+                       "outputPath":  "out/checkpoint-103/checkpoint-53-resource-semantics-lock",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "runner-self-tests",
+                       "name":  "ScenarioRunner self-tests",
+                       "command":  "self-test",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T21:32:43.8680480Z",
+                       "completedUtc":  "2026-08-14T21:32:44.6690640Z",
+                       "elapsedSeconds":  0.7964947,
+                       "outputPath":  null,
+                       "failedGates":  0
+                   }
+               ],
+    "outputPaths":  {
+                        "root":  "out/checkpoint-103",
+                        "acceptanceJson":  "out/checkpoint-103/acceptance-summary.json",
+                        "acceptanceText":  "out/checkpoint-103/acceptance-summary.txt"
+                    },
+    "firstFailure":  null
+}

@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "pds-tl1-tl2-characteristics-v0_2",
+  "checkpoint": 52,
+  "status": "provisional_stateful_endurance_candidates",
+  "commonContract": [
+    "May engage every eligible close-range terminal threat authorized by the PDS family rules, including missile flights and boarding craft.",
+    "Cannot attack enemy ships.",
+    "Uses established terminal-defense timing and reaction accounting.",
+    "Sub-family identity does not silently alter target eligibility."
+  ],
+  "notes": [
+    "Checkpoint 51 tactical accuracy and Reaction Capacity values are preserved for the primary Checkpoint 52 combat matrix.",
+    "AMM already uses 1 Tactical Power of readiness at both TL1 and TL2, matching Kinetic PDS readiness cost; Energy PDS remains 2 TP.",
+    "AMM ammunition is evaluated as campaign/endurance capacity rather than forced to deplete in one duel."
+  ],
+  "profiles": [
+    {
+      "subfamilyId": "aux_kinetic_pds",
+      "technologyLevel": 1,
+      "pdsBaseChance": 10,
+      "shipTargetingBonus": 10,
+      "effectiveCandidateChance": 20,
+      "reactionCapacity": 1,
+      "tacticalPowerReadiness": 1,
+      "ammunition": 50,
+      "evasiveCompensation": 0,
+      "reliability": "uses_current_component_condition_model",
+      "note": "Baseline gun CIWS: cheapest readiness and deep ammunition, lowest candidate accuracy."
+    },
+    {
+      "subfamilyId": "aux_energy_pds",
+      "technologyLevel": 1,
+      "pdsBaseChance": 12,
+      "shipTargetingBonus": 10,
+      "effectiveCandidateChance": 22,
+      "reactionCapacity": 1,
+      "tacticalPowerReadiness": 2,
+      "ammunition": null,
+      "evasiveCompensation": 0,
+      "reliability": "uses_current_component_condition_model",
+      "note": "Early directed-energy defense: no conventional ammunition, higher readiness power, modest accuracy."
+    },
+    {
+      "subfamilyId": "aux_amm_pds",
+      "technologyLevel": 1,
+      "pdsBaseChance": 15,
+      "shipTargetingBonus": 10,
+      "effectiveCandidateChance": 25,
+      "reactionCapacity": 1,
+      "tacticalPowerReadiness": 1,
+      "ammunition": 25,
+      "evasiveCompensation": 0,
+      "reliability": "uses_current_component_condition_model",
+      "note": "Early interceptor battery: best candidate accuracy, scarce ammunition, still deliberately modest."
+    },
+    {
+      "subfamilyId": "aux_kinetic_pds",
+      "technologyLevel": 2,
+      "pdsBaseChance": 13,
+      "shipTargetingBonus": 12,
+      "effectiveCandidateChance": 25,
+      "reactionCapacity": 1,
+      "tacticalPowerReadiness": 1,
+      "ammunition": 60,
+      "evasiveCompensation": 0,
+      "reliability": "uses_current_component_condition_model",
+      "note": "Accuracy and ammunition efficiency improve; Reaction Capacity remains one."
+    },
+    {
+      "subfamilyId": "aux_energy_pds",
+      "technologyLevel": 2,
+      "pdsBaseChance": 16,
+      "shipTargetingBonus": 12,
+      "effectiveCandidateChance": 28,
+      "reactionCapacity": 1,
+      "tacticalPowerReadiness": 2,
+      "ammunition": null,
+      "evasiveCompensation": 0,
+      "reliability": "uses_current_component_condition_model",
+      "note": "Accuracy improves while high readiness power remains the principal tradeoff."
+    },
+    {
+      "subfamilyId": "aux_amm_pds",
+      "technologyLevel": 2,
+      "pdsBaseChance": 20,
+      "shipTargetingBonus": 12,
+      "effectiveCandidateChance": 32,
+      "reactionCapacity": 1,
+      "tacticalPowerReadiness": 1,
+      "ammunition": 30,
+      "evasiveCompensation": 0,
+      "reliability": "uses_current_component_condition_model",
+      "note": "Seeker/reliability and ammunition improve; Reaction Capacity remains one."
+    }
+  ],
+  "ammunitionSensitivityCandidates": {
+    "ammRounds": [
+      15,
+      20,
+      25,
+      30
+    ],
+    "primaryCombatMatrix": {
+      "tl1": 25,
+      "tl2": 30
+    },
+    "policy": "Do not lower accuracy merely to make ammunition matter in one fight. Evaluate multiple-encounter endurance first; revisit accuracy only if tactical evidence independently warrants it."
+  }
+}

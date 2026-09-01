@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "star-cluster-damage-domain-scaling-audit-v0.1",
+  "checkpoint": 121,
+  "scale": 2,
+  "purpose": "Classify every known magnitude, cadence, or special-case consumer that must be considered before an x2 damage-domain scale could become canonical.",
+  "scaledInCp121Research": [
+    {"domain":"Hull","fields":["hull.hullPoints"],"reason":"Survivability magnitude must scale with incoming damage."},
+    {"domain":"Armor","fields":["armor.ap","armor.ai"],"reason":"Flat Armor Protection and Armor Integrity are expressed in the same point domain as damage."},
+    {"domain":"Shields","fields":["shield.capacity","shield.baseRecharge","shield.tacticalRechargePerTp","shield.shieldArmor"],"reason":"Capacity, restoration, and flat Shield Armor all consume or restore damage points."},
+    {"domain":"Kinetic main weapon","fields":["kinetic_main.damage","kinetic_main.spen","kinetic_main.apen"],"reason":"Damage and penetration subtract from point-domain defenses."},
+    {"domain":"Energy main weapon","fields":["energy_main.lowDamage","energy_main.standardDamage","energy_main.highDamage","energy_main.spen","energy_main.apen"],"reason":"Damage and penetration subtract from point-domain defenses."},
+    {"domain":"Missile delivery","fields":["missile_delivery.warheadDamage","missile_delivery.spen","missile_delivery.apen"],"reason":"Warhead damage and penetration subtract from point-domain defenses."},
+    {"domain":"Research payload/fixture values","fields":["damage","damageDelta","spen","spenDelta","apen","apenDelta","shieldBonusDamage","shieldArmorReduction","rechargeSuppression","armorProtectionDelta","armorIntegrityDelta","armorProtectionOverride","armorIntegrityOverride","shieldCapacityDelta","shieldRechargeBonus","hullDelta"],"reason":"Research controls must use the same point domain as production-derived values."},
+    {"domain":"Shield Hardener equivalence","fields":["research hardener Shield Armor"],"reason":"The current research consumer's flat SA1 hardener must become SA2 inside x2 equivalence runs."}
+  ],
+  "notScaled": [
+    "accuracy / guidance / evasion percentages",
+    "PDS interception percentages and Reaction Capacity",
+    "range and movement hexes",
+    "Tactical Power production and costs",
+    "Installation Space / mass-volume capacity",
+    "ammunition package counts and magazine counts",
+    "fuel quantities and movement fuel costs",
+    "Sensor, ECM, ECCM, and computing ratings",
+    "component condition steps",
+    "technology levels",
+    "turn counts and overload-use counts"
+  ],
+  "canonicalAdoptionConsumers": [
+    {"id":"hx-cadence","status":"must_change_if_adopted","source":"src/StarCluster.Core/Combat/InternalDamage/ShipDamageResolver.cs","current":"Advance one H/X position for every Hull point lost.","x2Equivalent":"Advance one legacy H/X position per two new-scale Hull points lost, with deterministic remainder/carry semantics across packets.","why":"Otherwise doubling Hull and damage would also double internal-critical frequency."},
+    {"id":"damage-control-hull-repair","status":"must_change_if_adopted","source":"src/StarCluster.Core/Combat/InternalDamage/ShipDamageState.cs","current":"A successful queued Hull repair restores 1 Hull.","x2Equivalent":"Restore 2 new-scale Hull points for the same legacy repair effect; a future intentionally smaller repair could use 1 point as a new half-step.","why":"Repair magnitude is in the Hull point domain."},
+    {"id":"degraded-energy-damage-rounding","status":"requires_semantic_decision_if_adopted","source":"src/StarCluster.Core/Combat/InternalDamage/ComponentPerformance.cs","current":"Degraded Energy damage is HalfRoundedUp(normalDamage).","x2Equivalent":"Preserve the old-domain rounded result then scale it, or explicitly redefine degradation as exact 50% in the new domain.","why":"For odd legacy damage values, naive x2 followed by HalfRoundedUp is not mathematically equivalent (e.g. old 3 -> 2; new 6 -> 3 instead of equivalent 4)."},
+    {"id":"natural-100-point-bonuses","status":"must_audit_if_adopted","source":"Concept v0.7l / eventual precision-damage consumer","current":"Player-facing precision text includes +1 shield-only damage or +1 penetration effects in relevant layer cases.","x2Equivalent":"A legacy +1 magnitude becomes +2 new-scale points if exact equivalence is intended; a new +1 would intentionally be a half-step.","why":"Natural-100 effect magnitudes are point-domain modifiers even though the current CP121 research consumer does not simulate internal precision criticals."},
+    {"id":"branch-flat-defense-values","status":"must_audit_if_adopted","source":"technology_component_table / auxiliary catalogs / numerical matrix branch candidates","current":"Examples include Shield Armor and Ablative/Armor Integrity magnitude bonuses.","x2Equivalent":"Scale point-domain bonuses by 2 while retaining TP, Space, percentages, and counts.","why":"Optional components must remain equivalent to the base point scale."},
+    {"id":"legacy-specialized-simulators","status":"must_audit_if_adopted","source":"src/StarCluster.Core/Combat/DirectFire and ScenarioRunner calibration helpers","current":"Several historical calibration simulators contain literal Shield recharge or legacy point-profile values.","x2Equivalent":"Either freeze/archive those consumers or convert their point constants and add equivalence fixtures.","why":"A canonical scale conversion must not leave active regression consumers on mixed units."}
+  ],
+  "cp121Boundary": {
+    "productionValuesChanged": false,
+    "conceptAuthorityChanged": false,
+    "internalCriticalsSimulated": false,
+    "researchHullScaled": true,
+    "hardGate": "All 4,284 CP120 variants must be exact outcome/telemetry equivalents under same-seed paired legacy versus x2 execution before odd half-steps are interpreted."
+  }
+}

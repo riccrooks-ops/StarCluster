@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "94",
+  "acceptedUtc": "2026-08-12T21:32:37.6948488Z",
+  "status": "Success",
+  "sourceResultsArchive": "checkpoint-94.zip",
+  "sourceResultsArchiveSha256": "bdd47d1b38d952db9a957ac9fc9d1b463d52f24f5e850228b5abed399ac9784d",
+  "checkpointDefinition": "tools/calibration/checkpoints/checkpoint-94.json",
+  "checkpointDefinitionSha256": "a121176b8525827ebbd7335b0f89a83d2bef9a6c194ef06a277b5a63335920f1",
+  "checkpointManifest": "CHECKPOINT_94_SHA256SUMS.txt",
+  "checkpointManifestSha256": "10003c7bdc8ee167ec2ab02d547de87fe2dec7293e03872f96a61dbca64c763a",
+  "sdk": {
+    "expected": "8.0.423",
+    "actual": "8.0.423"
+  },
+  "build": {
+    "succeeded": true,
+    "warnings": 0,
+    "errors": 0
+  },
+  "tests": {
+    "succeeded": true,
+    "total": 863,
+    "passed": 863,
+    "failed": 0,
+    "skipped": 0,
+    "elapsedSeconds": 2.0381629,
+    "trxPath": "out/checkpoint-94/test-results/checkpoint-tests.trx"
+  },
+  "aggregates": {
+    "configuredRunnerStages": 13,
+    "runnerStagesPassed": 13,
+    "runnerStagesFailed": 0,
+    "deterministicCases": 7,
+    "mechanicsCases": 90,
+    "variants": 1440,
+    "trials": 2161440,
+    "selfTests": 58,
+    "failedGates": 0
+  },
+  "primaryStudy": {
+    "id": "tl2-itc16-cross-tl-matched-readiness-space-screening",
+    "variantCount": 1440,
+    "trialsPerVariant": 1500,
+    "totalTrials": 2160000
+  },
+  "note": "CP94 native acceptance validated the adaptive 1,440-variant screen. Subsequent human review found that observed-engagement geometry classification used MeanMinimumRange, which includes movement-path closest approach on the finite map, while ordinary combat eligibility uses final post-Movement geometry. CP95 preserves CP94 outcomes/seeds and hardens this instrumentation boundary."
+}

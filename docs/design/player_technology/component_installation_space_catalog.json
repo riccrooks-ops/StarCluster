@@ -1,0 +1,492 @@
+{
+  "schemaVersion": "2.0",
+  "id": "starcluster-current-component-installation-space-catalog",
+  "checkpoint": 165,
+  "status": "CURRENT_WORKING_DESIGN",
+  "globalRules": {
+    "technologyLevels": "Player-researchable TL1-TL9; TL10 reserved for Precursor/exotic capabilities.",
+    "installationSpaceByTl": {
+      "1": 35,
+      "2": 35,
+      "3": 36,
+      "4": 36,
+      "5": 37,
+      "6": 37,
+      "7": 38,
+      "8": 38,
+      "9": 39
+    },
+    "mandatoryPlayerShipSystems": [
+      "at least one Main Weapon",
+      "at least one Main Reactor",
+      "one primary STL Drive",
+      "one primary FTL Drive",
+      "one primary Tactical Computer",
+      "one primary Sensor Suite"
+    ],
+    "additionalMainWeaponsAllowed": true,
+    "additionalMainReactorsAllowed": true,
+    "mainReactorSpace": 6,
+    "apuSpace": 2,
+    "apuCountCap": null,
+    "ecmEccmSameTypeStacking": "Multiple installations may provide redundancy but ratings never add; highest applicable functional rating is used."
+  },
+  "components": [
+    {
+      "id": "main_weapon",
+      "name": "Main Weapon",
+      "spaceByTl": {
+        "1": 6,
+        "2": 6,
+        "3": 6,
+        "4": 6,
+        "5": 6,
+        "6": 6,
+        "7": 6,
+        "8": 6,
+        "9": 6
+      },
+      "minimumCount": 1,
+      "maximumCount": null,
+      "multiplicityAllowed": true,
+      "notes": "Separate attack packages; each pays own resource costs."
+    },
+    {
+      "id": "main_reactor",
+      "name": "Main Reactor",
+      "spaceByTl": {
+        "1": 6,
+        "2": 6,
+        "3": 6,
+        "4": 6,
+        "5": 6,
+        "6": 6,
+        "7": 6,
+        "8": 6,
+        "9": 6
+      },
+      "minimumCount": 1,
+      "maximumCount": null,
+      "multiplicityAllowed": true,
+      "notes": "Independent additive reactor output."
+    },
+    {
+      "id": "apu",
+      "name": "Auxiliary Power Unit (APU)",
+      "spaceByTl": {
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 2,
+        "9": 2
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": true,
+      "notes": "+1 Operational TP TL1-4, +2 TL5-9; no arbitrary count cap."
+    },
+    {
+      "id": "stl_drive",
+      "name": "STL Drive",
+      "spaceByTl": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5,
+        "5": 5,
+        "6": 5,
+        "7": 5,
+        "8": 5,
+        "9": 5
+      },
+      "minimumCount": 1,
+      "maximumCount": 1,
+      "multiplicityAllowed": false,
+      "notes": "One primary STL Drive."
+    },
+    {
+      "id": "ftl_drive",
+      "name": "FTL Drive",
+      "spaceByTl": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5,
+        "5": 5,
+        "6": 5,
+        "7": 5,
+        "8": 5,
+        "9": 5
+      },
+      "minimumCount": 1,
+      "maximumCount": 1,
+      "multiplicityAllowed": false,
+      "notes": "One primary FTL Drive."
+    },
+    {
+      "id": "tactical_computer",
+      "name": "Tactical Computer",
+      "spaceByTl": {
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 2,
+        "7": 2,
+        "8": 2,
+        "9": 2
+      },
+      "minimumCount": 1,
+      "maximumCount": 1,
+      "multiplicityAllowed": false,
+      "notes": "One primary Tactical Computer."
+    },
+    {
+      "id": "sensor",
+      "name": "Sensor Suite",
+      "spaceByTl": {
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 3,
+        "7": 2,
+        "8": 2,
+        "9": 2
+      },
+      "minimumCount": 1,
+      "maximumCount": 1,
+      "multiplicityAllowed": false,
+      "notes": "One primary Sensor on normal combat ships."
+    },
+    {
+      "id": "shield",
+      "name": "Shield Generator",
+      "spaceByTl": {
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 3,
+        "7": 2,
+        "8": 2,
+        "9": 2
+      },
+      "minimumCount": 0,
+      "maximumCount": 1,
+      "multiplicityAllowed": false,
+      "notes": "Optional broadly; standard player cruiser includes it."
+    },
+    {
+      "id": "armor",
+      "name": "Primary Armor",
+      "spaceByTl": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "minimumCount": 0,
+      "maximumCount": 1,
+      "multiplicityAllowed": false,
+      "notes": "Hull-integrated base layer."
+    },
+    {
+      "id": "ecm",
+      "name": "ECM Suite",
+      "spaceByTl": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": true,
+      "notes": "Same-type ratings do not add."
+    },
+    {
+      "id": "eccm",
+      "name": "ECCM Suite",
+      "spaceByTl": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": true,
+      "notes": "Same-type ratings do not add."
+    },
+    {
+      "id": "kinetic_pds",
+      "name": "Kinetic PDS",
+      "spaceByTl": {
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 2,
+        "9": 2
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": true,
+      "notes": "Finite reaction capacity and ammunition."
+    },
+    {
+      "id": "energy_pds",
+      "name": "Energy PDS",
+      "spaceByTl": {
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 2,
+        "9": 2
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": true,
+      "notes": "Powered, ammunition-free interception."
+    },
+    {
+      "id": "amm_pds",
+      "name": "AMM PDS",
+      "spaceByTl": {
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 2,
+        "9": 2
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": true,
+      "notes": "Finite AMM ammunition."
+    },
+    {
+      "id": "shield_battery",
+      "name": "Shield Battery",
+      "spaceByTl": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": null,
+      "notes": "finite emergency Shield restoration; automatic research-AI discharge below 50 percent Shield only; finite charges"
+    },
+    {
+      "id": "shield_booster",
+      "name": "Shield Booster",
+      "spaceByTl": {
+        "1": null,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": null,
+      "notes": "passive increase to maximum Shield Capacity"
+    },
+    {
+      "id": "shield_hardener",
+      "name": "Shield Hardener",
+      "spaceByTl": {
+        "1": null,
+        "2": null,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": null,
+      "notes": "powered Shield DEF bonus; broad protection, strongest against Energy but not SPEN-specific"
+    },
+    {
+      "id": "ablative_armor",
+      "name": "Ablative Armor",
+      "spaceByTl": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": null,
+      "notes": "one expendable outer layer that absorbs raw post-Shield damage before primary Armor; no tactical repair"
+    },
+    {
+      "id": "energized_armor",
+      "name": "Energized Armor",
+      "spaceByTl": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": null,
+      "notes": "powered Armor RES bonus; passive Armor remains functional when unpowered"
+    },
+    {
+      "id": "crystalline_armor",
+      "name": "Crystalline Armor",
+      "spaceByTl": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": null,
+      "notes": "non-regenerative Crystalline Armor branch: additional Armor capacity plus RES; sacrifices tactical Armor regeneration"
+    },
+    {
+      "id": "field_stabilizer",
+      "name": "Field Stabilizer",
+      "spaceByTl": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": null,
+      "notes": "anti-SPEN Shield tuner: while active, subtract its rating from incoming SPEN before effective Shield DEF is calculated; cannot reduce SPEN below zero"
+    },
+    {
+      "id": "repair_drone_bay",
+      "name": "Repair Drone Bay",
+      "spaceByTl": {
+        "1": null,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": null,
+      "notes": "adds one additional Damage Control action per Damage Control phase; crew and Drone actions must target different eligible repair targets in that phase; never a same-target reroll"
+    },
+    {
+      "id": "kinetic_magazine",
+      "name": "Kinetic Magazine",
+      "spaceByTl": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": true,
+      "notes": "+25 Kinetic ammunition; duel outcome effectively nonbinding in CP158; value is endurance/logistics"
+    },
+    {
+      "id": "missile_magazine",
+      "name": "Missile Magazine",
+      "spaceByTl": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      },
+      "minimumCount": 0,
+      "maximumCount": null,
+      "multiplicityAllowed": true,
+      "notes": "+25 Missile Flights; duel outcome effectively nonbinding in CP158; value is endurance/logistics"
+    }
+  ]
+}

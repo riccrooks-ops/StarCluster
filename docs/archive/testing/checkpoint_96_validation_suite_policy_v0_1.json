@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-96-validation-suite-policy-v0_1",
+  "checkpoint": "96",
+  "status": "readiness_cohort_semantics_closure_release_policy",
+  "mustAlwaysRun": {
+    "nativeDependencyPrecheck": true,
+    "repositoryContract": true,
+    "manifestAndPowerShellSyntax": true,
+    "pinnedSdk": true,
+    "warningsAsErrorsBuild": true,
+    "unitTests": true,
+    "deterministicAndMechanicsGates": true,
+    "crossTlGeneratorPreflight": true,
+    "generatedStudyActualConsumerPreflight": true,
+    "generatedStudyOneTrialSmoke": true,
+    "boundedCrossTlPrimaryStudy": true,
+    "resourceRegressionGates": true,
+    "runnerSelfTests": true
+  },
+  "causalReplay": {
+    "acceptedCheckpoint": 95,
+    "pairSelectionSeed": 940177,
+    "combatMasterSeed": 940100,
+    "sameFoundation": "v0.6",
+    "sameLegalEnvelope": true,
+    "sameSamplingAllocation": true,
+    "gameplayChangesAllowed": false
+  },
+  "cohortSemantics": {
+    "referenceContextMutualReady": true,
+    "observedReferenceReadyWindow": true,
+    "runtimeBilateralActive": true,
+    "runtimeBilateralActivityIndependentOfReferenceEstimate": true,
+    "legacyCp95ObservedActiveCompatibilityName": "legacy_cp95_reference_expected_runtime_active",
+    "referenceRuntimeRelationReported": true,
+    "referenceNotExpectedRuntimeActiveReviewOnly": true,
+    "referenceExpectedRuntimeInactiveReviewOnlyUnlessExistingExecutionGateFails": true
+  },
+  "populationAnalysis": {
+    "populationCountsAnalytical": true,
+    "statisticalWeightSplitWithinCell": true,
+    "statisticalForwardWeightMustRecoverUnorderedDistinctPopulation": 255187936,
+    "diversityOverlayInferenceWeight": 0,
+    "namedDiagnosticsInferenceWeight": 0,
+    "rawAndPopulationWeightedReports": true
+  },
+  "authorityBoundary": {
+    "componentTuning": false,
+    "gameplayRuleChanges": false,
+    "aiDoctrineChanges": false,
+    "technologyPromotion": false,
+    "samplingPolicyChanges": false,
+    "automaticCandidatePromotion": false
+  },
+  "completionBoundary": {
+    "narrowInstrumentationSequenceEndsAfterAcceptance": true,
+    "broaderMechanicsAndTechnologyWorkResumesNext": true,
+    "reopenOnlyForMeasurementBlocker": true
+  },
+  "deepCalibration": {
+    "applicable": false,
+    "aliasUsesSameBoundedWorkload": true
+  }
+}

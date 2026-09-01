@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "star-cluster-cp144-authoring-validation-summary-v0.1",
+  "checkpoint": 144,
+  "baseCheckpoint": 143,
+  "status": "candidate_pending_native_validation",
+  "pythonTestsPassed": 298,
+  "pythonTestChunks": [
+    170,
+    128
+  ],
+  "focusedCp144TestsPassed": 11,
+  "sharedPolicyFixtureCases": 10,
+  "expectedNativeXunitTests": 916,
+  "expectedNativeScenarioRunnerSelfTests": 70,
+  "expectedNativeResearchParityCases": 25,
+  "sourceMatrixUnmodified": true,
+  "productionCsharpChanged": false,
+  "movementParityCorrection": {
+    "scope": "Python canonical research kernel only",
+    "kernelVersion": "0.5",
+    "behavior": "hold current range once target is inside own weapon envelope unless non-Firm-track recovery or demonstrated one-sided standoff requires movement",
+    "numericCombatChanges": 0
+  },
+  "internalMissileCorrectionProbe": {
+    "scenarios": 1980,
+    "executionErrors": 0,
+    "resolved": 1941,
+    "resolvedGe25": 3,
+    "turnCapSentinels": 39,
+    "safeStalemates": 0,
+    "medianResolvedTurns": 8,
+    "p90ResolvedTurns": 12.0,
+    "p95ResolvedTurns": 14.0,
+    "nonstandoffOpenOrders": 0,
+    "interpretation": "Internal parity-correction validation only; no tuning or balance promotion."
+  },
+  "stageASmoke": {
+    "scenarioCells": 6850,
+    "resourceEnvironmentCount": 5,
+    "scenarioStrataCount": 10,
+    "orderedSameTlWeaponPairings": 137,
+    "executionErrors": 0,
+    "resolved": 6785,
+    "resolvedGe25": 9,
+    "turnCapSentinels": 65,
+    "safeStalemates": 0,
+    "nonstandoffOpenOrders": 0,
+    "stageASubstantiveReady": true,
+    "interpretation": "One-trial whole-matrix execution/pacing evidence only, not balance-rate evidence."
+  },
+  "substantiveAggregationProbe": {
+    "scenarioCells": 20,
+    "trialsPerScenario": 10,
+    "combatTrials": 200,
+    "trialErrors": 0,
+    "passed": true,
+    "interpretation": "Representative aggregation/response-schema probe only; not substantive Stage-A evidence."
+  },
+  "plannedSubstantiveStageA": {
+    "scenarioCells": 6850,
+    "trialsPerScenario": 500,
+    "combatTrials": 3425000,
+    "substantiveBatches": 27,
+    "jobsDefault": 24,
+    "resourceEnvironmentCount": 5,
+    "excludedDuplicateResource": "R5_CENTRAL_HIGH_DEMAND",
+    "automaticTuning": false,
+    "automaticPromotion": false,
+    "automaticStageB": false
+  },
+  "authoringSubstantiveCombatTrials": 0,
+  "nextStage": "native RepositoryOnly acceptance followed in the same extraction by resumable 3,425,000-trial whole-combat substantive Stage A"
+}

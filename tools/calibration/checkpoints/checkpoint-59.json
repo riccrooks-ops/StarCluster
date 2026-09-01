@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "59",
+  "title": "Checkpoint 59 Active Test-Suite Scrub and TL1 35-Space Baseline",
+  "sdkVersion": "8.0.423",
+  "configuration": "Debug",
+  "calibrationSolution": "StarCluster.Calibration.sln",
+  "testProject": "tests/StarCluster.Tests/StarCluster.Tests.csproj",
+  "runnerProject": "src/StarCluster.ScenarioRunner/StarCluster.ScenarioRunner.csproj",
+  "manifestFile": "CHECKPOINT_59_SHA256SUMS.txt",
+  "outputRoot": "out/checkpoint-59",
+  "defaultTrials": 10000,
+  "defaultJobs": 24,
+  "documentation": [
+    "docs/Star_Cluster_Game_Concept_v0.6b.docx",
+    "docs/design/player_technology/tl1_35_space_player_cruiser_baseline_v0_1.json",
+    "docs/design/testing/checkpoint_59_validation_suite_policy_v0_1.json",
+    "docs/validation/Checkpoint_59_Active_Test_Suite_Scrub_And_TL1_35_Space_Baseline.md"
+  ],
+  "stages": [
+    {
+      "id": "deterministic",
+      "name": "Accepted deterministic moving-missile scenarios",
+      "command": "run-all",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios",
+        "--output-dir",
+        "{OutputRoot}/deterministic"
+      ],
+      "metrics": {
+        "deterministicCases": 7
+      }
+    },
+    {
+      "id": "tl1-phase-a",
+      "name": "TL1 Phase A mechanics corpus",
+      "command": "tl1-phase-a",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1PhaseA",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-a"
+      ],
+      "metrics": {
+        "caseCount": 54
+      }
+    },
+    {
+      "id": "tl1-phase-b",
+      "name": "TL1 Phase B direct-fire corpus",
+      "command": "tl1-phase-b",
+      "arguments": [
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-b"
+      ],
+      "metrics": {
+        "caseCount": 36
+      }
+    },
+    {
+      "id": "auxiliary-resource-endurance",
+      "name": "Deterministic finite-resource and recharge endurance stress study",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end01-resource-endurance-stress.json",
+        "--output-dir",
+        "{OutputRoot}/auxiliary-resource-endurance"
+      ],
+      "metrics": {
+        "combatBatteryCandidateCount": 2,
+        "capacitorPatternCount": 3,
+        "ammRoundCandidateCount": 4,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "checkpoint-53-resource-semantics-lock",
+      "name": "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end02-resource-semantics-lock.json",
+        "--output-dir",
+        "{OutputRoot}/checkpoint-53-resource-semantics-lock"
+      ],
+      "metrics": {
+        "combatBatteryPrimaryCharges": 3,
+        "combatBatteryPowerPerCharge": 1,
+        "combatBatteryDischargeLimitPerTurn": 1,
+        "combatBatteryEncounterDischargeCap": null,
+        "ammRounds": 25,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "runner-self-tests",
+      "name": "ScenarioRunner self-tests",
+      "command": "self-test",
+      "arguments": [
+        "--scenario-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/terminal-two-window-hit.json"
+      ],
+      "metrics": {
+        "selfTestCount": 46
+      }
+    }
+  ],
+  "checkpointMetrics": {
+    "stageCount": 6,
+    "monteCarloVariantCount": 0,
+    "trialsAtDefault": 0,
+    "suiteTier": "must_always_run"
+  }
+}

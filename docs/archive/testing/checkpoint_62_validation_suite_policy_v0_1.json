@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-62-validation-suite-policy-v0_1",
+  "checkpoint": 62,
+  "status": "active_suite_plus_current_power_doctrine_reactor_sensitivity",
+  "principles": [
+    "Must-always-run covers repository/build/unit/deterministic authoritative contracts plus the current checkpoint's 108-variant Tactical Power doctrine/reactor sensitivity study.",
+    "Deep Calibration remains opt-in unless a checkpoint changes mechanics that require historical stochastic requalification.",
+    "The Checkpoint 61 54-variant composed-ship matrix moves out of the normal lineup and remains available in Deep Calibration as historical stochastic regression evidence.",
+    "Simulation diagnoses consequences; it does not manufacture fixed build or weapon-family win percentages.",
+    "The accepted TL1 production reactor remains 5 Tactical Power. Reactor outputs 4 and 6 are sensitivity probes only.",
+    "Weapon capabilities must be judged in contexts that can exercise them. Energy APEN is a latent capability against the current TL1 AP0 armor control and must not be declared worthless from this study.",
+    "Sensorless-build outcomes remain established-Firm-track isolation evidence only until sensor/acquisition/EW-coupled validation is performed.",
+    "Generated historical checkpoint text logs/manifests/readmes are excluded from current full-repository packaging; machine inputs and explicit evidence are retained."
+  ],
+  "mustAlwaysRunStageIds": [
+    "deterministic",
+    "tl1-phase-a",
+    "tl1-phase-b",
+    "tl1-installation-space-envelope",
+    "tl1-power-doctrine-reactor-sensitivity",
+    "auxiliary-resource-endurance",
+    "checkpoint-53-resource-semantics-lock",
+    "runner-self-tests"
+  ],
+  "deepCalibrationStageIds": [
+    "tl1-composed-ship-odd-build-combat",
+    "tl1-kinetic-calibration",
+    "tl1-energy-calibration",
+    "tl1-weapon-matrix",
+    "tl1-pds-calibration",
+    "tl1-defensive-calibration",
+    "tl1-power-correction",
+    "tl1-range-control-calibration",
+    "tl1-damage-control-calibration",
+    "tl1-combat-pacing",
+    "tl1-integrated-tactical-combat",
+    "tl1-movement-kinetic-pacing-diagnostics",
+    "tl1-minimal-tactics-baseline"
+  ],
+  "archivedHistoricalStageCount": 39,
+  "activeRunnerStageCount": 8,
+  "deepRunnerStageCount": 21,
+  "notes": {
+    "activeMonteCarloVariants": 108,
+    "activeTrialsAtDefault": 1080000,
+    "deepMonteCarloVariants": 1188,
+    "deepTrialsAtDefault": 11880000,
+    "sensitivityBuildCount": 4,
+    "powerDoctrineCount": 3,
+    "reactorOutputSensitivityValues": [
+      4,
+      5,
+      6
+    ],
+    "productionReactorOutput": 5,
+    "balanceTargetsBlocking": false,
+    "deepCalibrationRequiredForCheckpoint62Acceptance": false,
+    "reasonDeepCalibrationNotRequired": "The new doctrine and reactor-output controls are opt-in variant fields; absent fields default to Checkpoint 61 DefenseFirst behavior and the production technology profile remains unchanged."
+  }
+}

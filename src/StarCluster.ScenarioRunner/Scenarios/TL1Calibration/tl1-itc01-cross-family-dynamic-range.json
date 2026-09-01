@@ -1,0 +1,819 @@
+{
+  "schemaVersion": "star-cluster-tl1-integrated-tactical-combat-v2",
+  "id": "tl1-itc01-cross-family-dynamic-range",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "masterSeed": 390100,
+  "trialsPerVariant": 10000,
+  "variants": [
+    {
+      "id": "itc-kk-holdrange2-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Kinetic",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-kk-holdrange2-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Kinetic",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-kk-holdrange4-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Kinetic",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-kk-holdrange4-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Kinetic",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-kk-scriptedpursuit-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Kinetic",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-kk-scriptedpursuit-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Kinetic",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-kk-preferred-ordinary-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Kinetic",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-kk-preferred-ordinary-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Kinetic",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-kk-preferred-protected-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Kinetic",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-kk-preferred-protected-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Kinetic",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ke-holdrange2-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Energy",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ke-holdrange2-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Energy",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ke-holdrange4-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Energy",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ke-holdrange4-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Energy",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ke-scriptedpursuit-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Energy",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ke-scriptedpursuit-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Energy",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ke-preferred-ordinary-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Energy",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ke-preferred-ordinary-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Energy",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ke-preferred-protected-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Energy",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ke-preferred-protected-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Energy",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-km-holdrange2-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Missile",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-km-holdrange2-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Missile",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-km-holdrange4-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Missile",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-km-holdrange4-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Missile",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-km-scriptedpursuit-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Missile",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-km-scriptedpursuit-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Missile",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-km-preferred-ordinary-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Missile",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-km-preferred-ordinary-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Missile",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-km-preferred-protected-nodc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Missile",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-km-preferred-protected-dc",
+      "sideAFamily": "Kinetic",
+      "sideBFamily": "Missile",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ek-holdrange2-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Kinetic",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ek-holdrange2-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Kinetic",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ek-holdrange4-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Kinetic",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ek-holdrange4-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Kinetic",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ek-scriptedpursuit-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Kinetic",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ek-scriptedpursuit-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Kinetic",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ek-preferred-ordinary-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Kinetic",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ek-preferred-ordinary-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Kinetic",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ek-preferred-protected-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Kinetic",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ek-preferred-protected-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Kinetic",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ee-holdrange2-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Energy",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ee-holdrange2-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Energy",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ee-holdrange4-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Energy",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ee-holdrange4-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Energy",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ee-scriptedpursuit-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Energy",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ee-scriptedpursuit-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Energy",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ee-preferred-ordinary-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Energy",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ee-preferred-ordinary-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Energy",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ee-preferred-protected-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Energy",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-ee-preferred-protected-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Energy",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-em-holdrange2-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Missile",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-em-holdrange2-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Missile",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-em-holdrange4-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Missile",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-em-holdrange4-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Missile",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-em-scriptedpursuit-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Missile",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-em-scriptedpursuit-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Missile",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-em-preferred-ordinary-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Missile",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-em-preferred-ordinary-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Missile",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-em-preferred-protected-nodc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Missile",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-em-preferred-protected-dc",
+      "sideAFamily": "Energy",
+      "sideBFamily": "Missile",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mk-holdrange2-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Kinetic",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mk-holdrange2-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Kinetic",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mk-holdrange4-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Kinetic",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mk-holdrange4-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Kinetic",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mk-scriptedpursuit-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Kinetic",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mk-scriptedpursuit-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Kinetic",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mk-preferred-ordinary-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Kinetic",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mk-preferred-ordinary-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Kinetic",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mk-preferred-protected-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Kinetic",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mk-preferred-protected-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Kinetic",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-me-holdrange2-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Energy",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-me-holdrange2-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Energy",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-me-holdrange4-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Energy",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-me-holdrange4-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Energy",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-me-scriptedpursuit-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Energy",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-me-scriptedpursuit-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Energy",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-me-preferred-ordinary-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Energy",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-me-preferred-ordinary-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Energy",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-me-preferred-protected-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Energy",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-me-preferred-protected-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Energy",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mm-holdrange2-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Missile",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mm-holdrange2-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Missile",
+      "movementMode": "HoldRange2",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mm-holdrange4-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Missile",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mm-holdrange4-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Missile",
+      "movementMode": "HoldRange4",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mm-scriptedpursuit-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Missile",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mm-scriptedpursuit-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Missile",
+      "movementMode": "ScriptedPursuit",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mm-preferred-ordinary-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Missile",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mm-preferred-ordinary-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Missile",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mm-preferred-protected-nodc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Missile",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "None",
+      "profileLabel": "production-1-2"
+    },
+    {
+      "id": "itc-mm-preferred-protected-dc",
+      "sideAFamily": "Missile",
+      "sideBFamily": "Missile",
+      "movementMode": "PreferredRange",
+      "protectedCompartmentation": true,
+      "damageControl": "ComponentFirstReserveOne",
+      "profileLabel": "production-1-2"
+    }
+  ]
+}

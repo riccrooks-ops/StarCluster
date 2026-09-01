@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": 70,
+  "normal": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 99,
+    "trialsAtDefault": 990000,
+    "deterministicSensorEwRows": 924,
+    "required": true,
+    "smokeTrials": 99,
+    "totalTrialExecutions": 990099
+  },
+  "deepCalibration": {
+    "stageCount": 30,
+    "monteCarloVariantCount": 1643,
+    "trialsAtDefault": 16430000,
+    "requiredByDefault": false,
+    "smokeTrials": 99,
+    "totalTrialExecutions": 16430099
+  },
+  "blockingBalanceTargets": false,
+  "productionControls": {
+    "reactorOutput": 5,
+    "ecmNormalPowerCost": 1,
+    "eccmNormalPowerCost": 1,
+    "startingFuel": 100,
+    "movementFuelPerHex": 2,
+    "evasiveManeuverFuelCost": 1,
+    "tacticalMapRadius": 5,
+    "sensorRangesPromotedByCheckpoint70": false,
+    "ecmPowerCostChangedByCheckpoint70": false
+  },
+  "studyControls": {
+    "sensorEnvelope": "Balanced-0 Passive 1/3; Active 3/4; Overload 4/5",
+    "ecmNormalPowerCostSweep": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "eccmNormalPowerCost": 1,
+    "operationalVariants": 66,
+    "pointBlankVariants": 33,
+    "sameHexLosUnoccludable": true,
+    "sameHexEwDiscriminationStillResolves": true,
+    "staticNetEwRangePenalty": 0
+  },
+  "nativeAcceptanceDependencyContract": {
+    "allowedBaselineDependencies": [
+      "PowerShell",
+      "pinned .NET SDK"
+    ],
+    "blockedInterpreters": [
+      "python",
+      "python3",
+      "py"
+    ],
+    "precheckRequired": true
+  },
+  "mustAlwaysRunStageIds": [
+    "deterministic",
+    "tl1-phase-a",
+    "tl1-phase-b",
+    "tl1-installation-space-envelope",
+    "tl1-sensor-ew-foundation",
+    "tl1-ecm-power-cost-counterplay-preflight",
+    "tl1-ecm-power-cost-counterplay-smoke",
+    "tl1-ecm-power-cost-point-blank-counterplay",
+    "auxiliary-resource-endurance",
+    "checkpoint-53-resource-semantics-lock",
+    "runner-self-tests"
+  ],
+  "notes": [
+    "CP69d is the accepted implementation/validation baseline.",
+    "Active Sensors are expected to be common TL1 tactics; the remaining passive-awareness distinction is deferred while ECM/ECCM balance is isolated.",
+    "Costs 2-5 are calibration-only sensitivity values; production ECM remains 1 TP until evidence is reviewed.",
+    "Same-hex LOS remains unoccludable and ECM/ECCM discrimination still resolves at range zero.",
+    "The 99-variant one-trial smoke must pass before the 990,000-trial substantive stage.",
+    "Acceptance trial accounting honors stage-specific trialsPerVariant so smoke work is not multiplied by the global substantive trial count."
+  ]
+}

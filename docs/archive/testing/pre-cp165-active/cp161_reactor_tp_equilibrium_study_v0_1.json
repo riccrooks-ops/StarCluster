@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "star-cluster-cp161-reactor-tp-equilibrium-v0.1",
+  "checkpoint": 161,
+  "acceptedBaselineCheckpoint": 160,
+  "pendingFinalizationBaselineId": "CP160-PF4",
+  "matrixPath": "docs/design/player_technology/technology_research_execution_baseline_pending_finalization_v0_4.json",
+  "masterSeed": 16120260830,
+  "jobsDefault": 24,
+  "researchQuestion": "At each TL, what Reactor output and subsystem Tactical Power economy preserves meaningful tactical scarcity, multiple viable ship architectures, and useful degraded/emergency behavior without chronic starvation or effectively unlimited power?",
+  "operationalSupplySweep": {
+    "minimumTp": 2,
+    "maximumTp": 30,
+    "note": "Absolute supply curve, deliberately broader than the CP160-PF4 5-13 TP scaffold and broad enough to include/exceed historical CP110 high-TL candidates."
+  },
+  "reactorSpaceSweep": [4, 5, 6, 7, 8],
+  "combatSupplyOffsetsFromPf4": [-4, -2, 0, 2, 4, 6, 8],
+  "combatTrialsPerCell": 2000,
+  "combatContextsPerTl": 36,
+  "stochasticTurnSamplesPerVariant": 12000,
+  "representativeLoadoutsPerTl": 12,
+  "doctrines": [
+    "OFFENSE",
+    "EW_CONTEST",
+    "MISSILE_DEFENSE",
+    "DAMAGE_CRISIS",
+    "PURSUIT_BURST",
+    "MIXED"
+  ],
+  "demandClasses": {
+    "continuousCommon": ["main_weapon_standard", "active_sensor_low"],
+    "tacticalConditional": ["energy_overload", "active_sensor_high", "ecm", "eccm", "pds", "shield_recharge", "armor_regeneration", "shield_hardener", "energized_armor", "field_stabilizer"],
+    "emergencyBurst": ["damage_control", "repair_drone_damage_control", "stl_overload"]
+  },
+  "poweredAuxTpInterpretation": "CP160-PF4 magnitudes/mechanics are held fixed. Shield Hardener, Energized Armor, Field Stabilizer, and Damage Control/Repair Drone TP operating costs remain provisional and are measured as resource-economy variables rather than retuned combat magnitudes.",
+  "repairDroneIntegrationBoundary": "The whole-ship demand model includes a second distinct-target Damage Control TP request when a Damage Crisis presents multiple eligible targets. Full component-damage execution remains deferred because the current Python combat ecology still exposes hull-only Damage Control targets.",
+  "reactorDamageStateBoundary": "Degraded and Emergency Reactor outputs are evaluated against the same exact/stochastic demand distributions as separate supply states. The current full-map Python combat ecology does not yet transition reactor component state during battle, so combat outcome sensitivity varies Operational output only.",
+  "allocationPolicy": "Budget-aware deterministic priority allocation is evaluated per doctrine. Raw simultaneous demand is a stress diagnostic only; no requirement exists to fund every installed system every turn.",
+  "spacePolicy": "One primary Reactor is the primary scarcity population; an optional second Reactor is evaluated as a legal architecture with explicit Space opportunity cost. Reactor Space 4-8 is a diagnostic sweep only and does not imply miniaturization promotion.",
+  "costSensitivity": {
+    "mode": "one_factor_plus_minus_one_tp_or_adjacent_cap",
+    "levers": [
+      "kinetic_weapon",
+      "energy_standard",
+      "energy_overload",
+      "missile_weapon",
+      "sensor_active",
+      "ecm",
+      "eccm",
+      "pds_readiness",
+      "shield_recharge_cap",
+      "armor_regeneration_cap",
+      "shield_hardener",
+      "energized_armor",
+      "field_stabilizer",
+      "damage_control"
+    ],
+    "evaluationSupply": "current CP160-PF4 Operational Reactor output",
+    "automaticPromotion": false
+  },
+  "interpretationPolicy": {
+    "automaticPromotion": false,
+    "noTargetWinRate": true,
+    "noRequiredFullSimultaneousDemandCoverage": true,
+    "noUniversalUtilizationTarget": true,
+    "balanceMeansDistinctViableChoices": true,
+    "currentReactorLadderIsScaffoldNotAnswer": true,
+    "auxMagnitudeArchitectureRemainClosedUnlessIntegrationInvalidates": true,
+    "productionAuthorityChanged": false,
+    "conceptChanged": false,
+    "tuningAllowed": false
+  },
+  "expectedStudyProducts": [
+    "exact powered-architecture population and demand envelopes",
+    "Reactor Space / second-Reactor opportunity-cost curves",
+    "2-30 TP operational supply response surfaces",
+    "degraded/emergency support curves",
+    "stochastic doctrine demand distributions and allocation outcomes",
+    "one-factor TP-cost sensitivity attribution",
+    "same-TL full-map combat sensitivity across seven Reactor-output offsets, including mirrored one-Reactor versus two-Reactor architecture contests",
+    "evidence for a later selection/refinement checkpoint; no automatic PF5 promotion"
+  ]
+}

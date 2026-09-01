@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "star-cluster-cp163-apu-maturation-study-contract-v0.1",
+  "checkpoint": 163,
+  "acceptedBaseCheckpoint": 162,
+  "acceptedBaseNativeArchiveSha256": "f782cd9a12a920c8582b13d0628b0da4733b6098d041edbfa2177f58fc8a8e67",
+  "researchExecutionBaselineId": "CP160-PF4",
+  "researchExecutionMatrixSha256": "7fd4dfbbe375586de2605361006db84b68f89767c76ba4b76da6cf5f48253155",
+  "mainReactor": {
+    "space": 6,
+    "operationalOffsetsFromPf4": [-1, 0, 1],
+    "spaceSweepAllowed": false
+  },
+  "apu": {
+    "userFacingName": "Auxiliary Power Unit",
+    "cp162LegacyResearchName": "Auxiliary Reactor",
+    "space": 2,
+    "availability": "TL1+",
+    "trajectories": ["APU_FLAT_1", "APU_MATURE_TL5", "APU_MATURE_TL6", "APU_MATURE_TL7", "APU_MATURE_TL8"],
+    "latePlus3BoundaryTls": [8, 9],
+    "installationCountCapImposed": false,
+    "staticScreenEveryLegalStackCount": true,
+    "stochasticAndCombatTiers": [1, 2, 3, "MAX"]
+  },
+  "resilienceBoundary": {
+    "degradedFlexibleTp": 0,
+    "independentUnitFailureSurface": true,
+    "integratedComponentDamageExecutionDeferred": true
+  },
+  "studyScale": {
+    "uniqueTlLocalApuPoints": 16,
+    "staticLegalStackSupportRows": 288,
+    "staticResilienceRows": 330,
+    "stochasticVariants": 1152,
+    "stochasticTurnSamples": 5760000,
+    "combatContexts": 384,
+    "combatCells": 1152,
+    "combatTrialsPerCell": 2000,
+    "substantiveCombatTrials": 2304000
+  },
+  "interpretation": {
+    "playerBaseCruiserAndBroadLegalEnvelopeBothRetained": true,
+    "apuMustRemainGranularSupplementNotMainReactorReplacement": true,
+    "countCapMayBeRecommendedOnlyIfEconomicsOrResilienceFailToBoundStacking": true,
+    "maturationTimingMustBeEvidenceDriven": true,
+    "automaticPromotion": false,
+    "tuningAllowed": false,
+    "productionAuthorityChanged": false,
+    "conceptChanged": false
+  }
+}

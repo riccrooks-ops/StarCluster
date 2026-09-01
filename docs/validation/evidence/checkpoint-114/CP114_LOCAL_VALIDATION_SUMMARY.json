@@ -1,0 +1,20 @@
+{
+  "checkpoint": 114,
+  "status": "candidate_pending_native_acceptance",
+  "pythonSelfTests": {"run": 49, "failures": 0, "errors": 0},
+  "parityCases": 25,
+  "parityPassed": true,
+  "smokeVariants": 3184,
+  "smokeEngagements": 3184,
+  "authoringVariants": 3184,
+  "authoringTrialsPerVariant": 20,
+  "authoringEngagements": 63680,
+  "authoringFailedGates": [],
+  "nativePlannedTrialsPerVariant": 2000,
+  "nativePlannedEngagements": 6368000,
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "automaticPromotion": false,
+  "productionRuntime": "C# / Godot",
+  "notes": "Bounded authoring evidence validates characteristic-space behavior only. No payload, CP109, CP110, Concept, or production value is promoted by local CP114 validation."
+}

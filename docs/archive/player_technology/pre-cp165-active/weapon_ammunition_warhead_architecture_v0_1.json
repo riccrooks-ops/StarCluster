@@ -1,0 +1,504 @@
+{
+  "schemaVersion": "star-cluster-weapon-ammunition-warhead-architecture-v0.1",
+  "checkpoint": 113,
+  "status": "architecture_candidate_no_balance_calibration",
+  "purpose": "Reconcile Kinetic ammunition and Missile warhead progression with CP108/CP109 technology architecture, CP112 causal diagnostics, the Concept, and preserved reference material before payload numerical calibration.",
+  "authorityBoundary": {
+    "changesGameplayRuntime": false,
+    "changesCp109PrimaryNumericalProfiles": false,
+    "changesCp110ReactorCandidates": false,
+    "runsCalibration": false,
+    "normalAmmunitionInventoryRule": "Normal Kinetic projectile modes share the Kinetic magazine; normal Missile warheads share the Missile Flight magazine. No pre-battle subtype allocation.",
+    "exoticAmmunitionRule": "Rare, unique, alien, Precursor, or explicitly Exotic munitions may use individual shot counts because scarcity itself is gameplay."
+  },
+  "principles": [
+    "Weapon families express tactical flexibility differently: Energy through power/output modes; Kinetic through projectile engineering; Missiles through delivery/guidance plus mission-specific warheads.",
+    "If a compatible ammunition improvement strictly dominates its predecessor and has no meaningful tactical cost, it is an automatic family upgrade rather than a selectable loadout choice.",
+    "A selectable ammunition or warhead mode must be non-dominating: it gains a real capability while sacrificing another meaningful characteristic.",
+    "Compatibility is explicit. Researching a munition does not make every old or alternate weapon family capable of firing it.",
+    "Normal ammunition variants never require per-type magazine bookkeeping. One Kinetic attack spends one Kinetic Ammunition Package; one missile launch spends one Missile Flight.",
+    "Missile warhead choice is committed at launch and cannot change after the flight is launched.",
+    "General-purpose ammunition remains the safe default when target defenses are unknown. Specialist modes become valuable when intelligence or observed combat effects justify them.",
+    "Combat feedback must be observer-safe: show qualitative effects that could be observed, never hidden enemy arithmetic or exact undiscovered component values.",
+    "An anti-shield payload must be tested against shield sustain/recharge, not merely given a higher paper SPEN value. It must create cumulative shield progress without becoming universal best-in-slot.",
+    "Internal-damage payloads remain deferred until the Python research consumer can parity-validate critical/subsystem effects."
+  ],
+  "normalAmmoAccounting": {
+    "kinetic": {
+      "resource": "Kinetic Ammunition Package",
+      "spend": "1 per committed main-weapon attack unless a weapon profile explicitly says otherwise",
+      "subtypeInventory": false,
+      "readyPackage": "one compatible loaded Ready Package per weapon under the existing Concept rule"
+    },
+    "missile": {
+      "resource": "Missile Flight",
+      "spend": "1 per committed launch unless an explicit salvo/bus mode says otherwise",
+      "subtypeInventory": false,
+      "selectionTiming": "warhead selected when launch is committed; immutable in flight"
+    },
+    "exotic": {
+      "resource": "explicit individual counter or named store",
+      "examples": [
+        "unique alien munition",
+        "Precursor payload",
+        "adopted matter-conversion shot",
+        "mission-provided one-off weapon"
+      ],
+      "rule": "Use only when limited availability is itself a strategic/tactical decision."
+    }
+  },
+  "combatAssessment": {
+    "purpose": "Give the player and AI enough legitimate feedback to recognize ineffective attacks without revealing exact hidden defense statistics.",
+    "firmTrackFeedback": [
+      "active shield presence may be identified once energized or conspicuously struck",
+      "shield absorption observed",
+      "shield collapse observed",
+      "armor contact observed",
+      "hull penetration confirmed",
+      "no observed armor/hull penetration after a resolved hit",
+      "on a later Firm observation, whether a previously collapsed/damaged shield is active again may be observed"
+    ],
+    "approximateTrackFeedback": "Limit to conspicuous effects and uncertain impact assessment; do not expose layer-by-layer resolution from an Approximate contact by default.",
+    "neverRevealByDefault": [
+      "exact hostile Shield Capacity",
+      "exact Shield Armor",
+      "exact recharge value",
+      "exact Armor Protection/Integrity",
+      "hidden component stats",
+      "hidden ECM/ECCM arithmetic",
+      "future random outcomes"
+    ],
+    "aiParity": "AI receives only the same derived assessment flags and remembered observations that the player could possess; it may not read authoritative hidden defender state.",
+    "tl9Example": "Repeated Damage-5 missile hits that visibly flare/restore the shield but never show armor or Hull penetration can legitimately teach the commander that the current payload is not creating cumulative progress, without revealing the 1+3+1 hidden arithmetic."
+  },
+  "compatibilityModel": {
+    "rule": "Installed weapon/flight profiles expose compatibility tags. A researched ammunition/warhead capability appears only when the installed weapon has every required tag.",
+    "kineticTags": [
+      {
+        "tag": "legacy_em_accelerator",
+        "examples": "TL1-TL3 mature electromagnetic mass-driver family",
+        "supports": [
+          "contemporary_general_projectile",
+          "improved_material_projectile"
+        ]
+      },
+      {
+        "tag": "smart_munition_interface",
+        "examples": "TL4+ superconducting/smart standard accelerators and explicitly compatible branches",
+        "supports": [
+          "maneuvering_smart_projectile",
+          "dense_penetrator",
+          "saturation_package"
+        ]
+      },
+      {
+        "tag": "specialized_macron_feed",
+        "examples": "Macron/dust accelerator branch",
+        "supports": [
+          "macron_native_package"
+        ],
+        "excludes": "ordinary full-bore projectile modes unless its profile explicitly says otherwise"
+      },
+      {
+        "tag": "field_relativistic_accelerator",
+        "examples": "field-assisted / relativistic standard line",
+        "supports": [
+          "contemporary_general_projectile",
+          "dense_penetrator"
+        ],
+        "notes": "saturation/exotic compatibility remains profile-specific"
+      }
+    ],
+    "missileTags": [
+      {
+        "tag": "conventional_flight_body",
+        "examples": "baseline/early Missile Flights",
+        "supports": [
+          "general_purpose_conventional",
+          "shaped_penetrator"
+        ]
+      },
+      {
+        "tag": "high_energy_payload_bus",
+        "examples": "TL4+ multi-stage/advanced Missile Flights",
+        "supports": [
+          "directed_pulse_shield_disruptor",
+          "fusion_general_purpose"
+        ]
+      },
+      {
+        "tag": "antimatter_hardened_payload_bus",
+        "examples": "TL7+ antimatter-era Missile Flights",
+        "supports": [
+          "antimatter_general_purpose"
+        ]
+      },
+      {
+        "tag": "exotic_payload_interface",
+        "examples": "explicit late/alien/Precursor profiles only",
+        "supports": [
+          "individually_tracked_exotic_payloads"
+        ]
+      }
+    ]
+  },
+  "kineticProgression": [
+    {
+      "tl": 1,
+      "technology": "Contemporary general-purpose projectile package",
+      "mode": "automatic_baseline",
+      "status": "base",
+      "compatibility": [
+        "legacy_em_accelerator",
+        "smart_munition_interface",
+        "field_relativistic_accelerator"
+      ],
+      "hardPrerequisites": [],
+      "inventory": "generic_kinetic",
+      "commitment": "automatic",
+      "role": "Balanced contemporary projectile/manufacturing baseline. Fragmentation/fuzing detail remains abstract unless a real target/mechanic makes it a decision.",
+      "characteristicSpace": [
+        "baseline Damage/SPEN/APEN",
+        "munition hazard trait where explosive packages exist"
+      ],
+      "cp109Relationship": "Current TL1 Kinetic profile remains the numerical placeholder."
+    },
+    {
+      "tl": 2,
+      "technology": "Improved penetrator/projectile materials",
+      "mode": "automatic_upgrade",
+      "status": "existing",
+      "compatibility": [
+        "legacy_em_accelerator",
+        "smart_munition_interface",
+        "field_relativistic_accelerator"
+      ],
+      "hardPrerequisites": [],
+      "inventory": "generic_kinetic",
+      "commitment": "automatic",
+      "role": "Strict material/manufacturing maturation. If no meaningful cost exists, older standard projectile does not remain a UI choice.",
+      "characteristicSpace": [
+        "APEN/material efficiency improvement",
+        "no mandatory launcher change"
+      ],
+      "cp109Relationship": "Supports the current TL2 APEN1 candidate without creating a separate ammo selector."
+    },
+    {
+      "tl": 4,
+      "technology": "Maneuvering / programmable smart projectile",
+      "mode": "automatic_compatible_upgrade",
+      "status": "candidate",
+      "compatibility": [
+        "smart_munition_interface"
+      ],
+      "hardPrerequisites": [
+        {
+          "discipline": "Computing / Fire Control",
+          "tl": 4
+        }
+      ],
+      "inventory": "generic_kinetic",
+      "commitment": "automatic when compatible",
+      "role": "Terminal correction and programmable fuzing improve a compatible accelerator. Because the old CP109 version had only benefits, it should not be a separate selectable loadout.",
+      "characteristicSpace": [
+        "accuracy/terminal-correction improvement",
+        "possible Approximate-Track/volume-fire permission if later calibrated",
+        "guidance/interface resilience"
+      ],
+      "cp109Relationship": "CP109 branch kinetic-smart-projectile selectable numeric candidate is suspended pending calibration of this automatic expression."
+    },
+    {
+      "tl": 5,
+      "technology": "Dense / graded penetrator package",
+      "mode": "selectable_normal",
+      "status": "candidate",
+      "compatibility": [
+        "smart_munition_interface",
+        "field_relativistic_accelerator"
+      ],
+      "hardPrerequisites": [],
+      "inventory": "generic_kinetic",
+      "commitment": "selected at attack commitment",
+      "role": "Armor-focused projectile that must sacrifice enough general damage or shield performance to remain a real choice.",
+      "characteristicSpace": [
+        "APEN +1 to +2 relative to contemporary general package",
+        "DAM -1 and/or SPEN -1",
+        "no free accuracy bonus"
+      ],
+      "cp109Relationship": "The CP109 -1 DAM / +1 APEN concept remains a useful candidate point, not a promoted value."
+    },
+    {
+      "tl": 6,
+      "technology": "Micro-submunition / saturation package",
+      "mode": "selectable_normal",
+      "status": "candidate",
+      "compatibility": [
+        "smart_munition_interface"
+      ],
+      "hardPrerequisites": [],
+      "inventory": "generic_kinetic",
+      "commitment": "selected at attack commitment",
+      "role": "Trades per-packet penetration/effect for multiple smaller packets or a broader effective damage volume.",
+      "characteristicSpace": [
+        "2-3 bounded packets",
+        "lower DAM per packet",
+        "lower or unchanged APEN/SPEN per packet",
+        "possible small-target/volume-fire niche when such mechanics are supported"
+      ],
+      "cp109Relationship": "The CP109 2 x DAM3 point remains an uncalibrated example, not an adopted packet profile."
+    },
+    {
+      "tl": 8,
+      "technology": "Exotic dense-matter projectile",
+      "mode": "exotic_individually_tracked_if_adopted",
+      "status": "deferred",
+      "compatibility": [
+        "field_relativistic_accelerator",
+        "exotic_payload_interface"
+      ],
+      "hardPrerequisites": [],
+      "inventory": "individual_exotic_shots",
+      "commitment": "selected at attack commitment",
+      "role": "Preserved weird-science projectile. If adopted, scarcity/handling is itself gameplay and therefore may justify per-shot tracking.",
+      "characteristicSpace": [
+        "extreme penetration",
+        "handling/compatibility limits",
+        "resource scarcity",
+        "counterplay"
+      ],
+      "cp109Relationship": "No active normal-player numerical profile."
+    }
+  ],
+  "missileWarheadProgression": [
+    {
+      "tl": 1,
+      "technology": "Conventional general-purpose warhead",
+      "mode": "automatic_baseline",
+      "status": "base",
+      "compatibility": [
+        "conventional_flight_body",
+        "high_energy_payload_bus",
+        "antimatter_hardened_payload_bus"
+      ],
+      "hardPrerequisites": [],
+      "inventory": "generic_missile_flight",
+      "selection": "default when no specialist is chosen",
+      "role": "Balanced structural payload; safest choice when target defenses are not known.",
+      "characteristicSpace": [
+        "balanced DAM/SPEN/APEN"
+      ],
+      "cp109Relationship": "Current D5/SP1/AP2 remains the simulated GP placeholder until payload calibration."
+    },
+    {
+      "tl": 3,
+      "technology": "Shaped / advanced penetrator warhead",
+      "mode": "selectable_normal",
+      "status": "candidate",
+      "compatibility": [
+        "conventional_flight_body",
+        "high_energy_payload_bus",
+        "antimatter_hardened_payload_bus"
+      ],
+      "hardPrerequisites": [],
+      "inventory": "generic_missile_flight",
+      "selection": "chosen at launch",
+      "role": "Armor specialist. Must give up shield effectiveness and/or raw structural damage so it does not strictly dominate GP.",
+      "characteristicSpace": [
+        "APEN +1 to +2",
+        "DAM -1 and/or SPEN -1",
+        "no free seeker benefit"
+      ],
+      "cp109Relationship": "CP109 D5/SP1/AP3 is suspended because it strictly dominates GP on APEN with no tradeoff."
+    },
+    {
+      "tl": 4,
+      "technology": "Nuclear directed-pulse / shield-disruption warhead",
+      "mode": "selectable_normal",
+      "status": "candidate",
+      "compatibility": [
+        "high_energy_payload_bus",
+        "antimatter_hardened_payload_bus"
+      ],
+      "hardPrerequisites": [],
+      "inventory": "generic_missile_flight",
+      "selection": "chosen at launch",
+      "role": "Shield specialist derived from directed high-energy payload engineering. It must create cumulative shield pressure while sacrificing armor/Hull performance.",
+      "characteristicSpace": [
+        "extra shield-only Capacity damage",
+        "temporary reduction/ignore of Shield Armor for this hit",
+        "bounded next-recharge suppression",
+        "lower APEN and/or lower post-shield structural damage"
+      ],
+      "implementationCandidates": [
+        {
+          "id": "A",
+          "summary": "Shield-only bonus damage; no new persistent state."
+        },
+        {
+          "id": "B",
+          "summary": "One-hit Shield Armor reduction/ignore plus reduced structural effect."
+        },
+        {
+          "id": "C",
+          "summary": "Bounded suppression/reduction of the next legal Shield recharge after shield contact; adds temporary state and therefore needs stronger justification."
+        }
+      ],
+      "cp109Relationship": "CP109 nuclear-shaped raw-damage candidate is suspended; CP113 reframes the TL4 specialist around anti-shield role rather than universal payload escalation."
+    },
+    {
+      "tl": 5,
+      "technology": "Fusion microcharge general-purpose warhead",
+      "mode": "automatic_compatible_upgrade",
+      "status": "candidate",
+      "compatibility": [
+        "high_energy_payload_bus",
+        "antimatter_hardened_payload_bus"
+      ],
+      "hardPrerequisites": [
+        {
+          "discipline": "Power",
+          "tl": 2
+        }
+      ],
+      "inventory": "generic_missile_flight",
+      "selection": "becomes the contemporary GP payload when unlocked and compatible",
+      "role": "High-energy GP maturation. Because an otherwise superior fusion payload would be an obvious choice, it should replace the older GP package rather than create loadout clutter.",
+      "characteristicSpace": [
+        "bounded increase in general-purpose damage and/or penetration",
+        "strategic resupply/resource cost may differ later",
+        "no per-type tactical inventory"
+      ],
+      "cp109Relationship": "CP109 D8/SP2/AP3 is not retained as an active numerical candidate; exact GP improvement requires calibration."
+    },
+    {
+      "tl": 6,
+      "technology": "Radiation / electronics-disruption warhead",
+      "mode": "deferred_specialist",
+      "status": "deferred",
+      "compatibility": [
+        "high_energy_payload_bus",
+        "antimatter_hardened_payload_bus"
+      ],
+      "hardPrerequisites": [],
+      "inventory": "generic_missile_flight_if_adopted",
+      "selection": "would be chosen at launch",
+      "role": "Specialist anti-crew/electronics/internal-effect payload. Do not use it as a substitute anti-shield mechanic while internal damage/crew consequences are absent.",
+      "characteristicSpace": [
+        "crew/electronics effect after appropriate penetration",
+        "hardening counterplay",
+        "lower ordinary structural effect"
+      ],
+      "cp109Relationship": "Remains deferred until internal critical/subsystem research consumer exists."
+    },
+    {
+      "tl": 7,
+      "technology": "Antimatter general-purpose warhead",
+      "mode": "automatic_compatible_upgrade",
+      "status": "candidate",
+      "compatibility": [
+        "antimatter_hardened_payload_bus"
+      ],
+      "hardPrerequisites": [
+        {
+          "discipline": "Power",
+          "tl": 5
+        }
+      ],
+      "inventory": "generic_missile_flight",
+      "selection": "becomes contemporary GP when unlocked and compatible",
+      "role": "Antimatter-era GP maturation. Tactical subtype bookkeeping remains abstract; containment/resource consequences belong to compatibility, hazards, resupply and campaign economy.",
+      "characteristicSpace": [
+        "large but bounded GP effect increase",
+        "containment/signature/hazard traits",
+        "strategic resource burden"
+      ],
+      "cp109Relationship": "CP109 D10/SP3/AP4 branch value is suspended; exact contemporary GP stats require calibration against defenses."
+    },
+    {
+      "tl": 9,
+      "technology": "Matter-conversion warhead",
+      "mode": "exotic_individually_tracked_if_adopted",
+      "status": "deferred",
+      "compatibility": [
+        "exotic_payload_interface"
+      ],
+      "hardPrerequisites": [
+        {
+          "discipline": "Power",
+          "tl": 9
+        }
+      ],
+      "inventory": "individual_exotic_shots",
+      "selection": "chosen at launch",
+      "role": "Rule-breaking pinnacle payload is not ordinary generic-ammunition progression. If ever adopted, rarity/scarcity and counterplay justify explicit shot counts.",
+      "characteristicSpace": [
+        "bounded conversion effect",
+        "strict scarcity",
+        "special defenses/counters",
+        "campaign consequence"
+      ],
+      "cp109Relationship": "No active normal-player numerical profile."
+    }
+  ],
+  "antiShieldCalibrationRequirements": [
+    "Test shield specialist, balanced defense, and no-shield controls at each relevant TL.",
+    "Test with PDS present and removed so interception does not mask payload effectiveness.",
+    "Measure Shield Armor prevented, Shield Capacity removed, recharge opportunities/restoration, armor contact, Hull penetration, magazine exhaustion, and unresolved rate.",
+    "A shield-specialist payload should create materially more cumulative shield progress than GP against shield-heavy targets, but should lose materially to GP/penetrator against unshielded or armor-heavy targets.",
+    "Do not require every specialist missile to defeat equal-TL maximum defense; require a useful niche and a credible route to progress under finite ammunition.",
+    "Keep movement-order cliff lanes separate from payload balance inference until their sequencing/geometry issue is understood."
+  ],
+  "suspendedCp109PayloadCandidates": [
+    {
+      "id": "kinetic-smart-projectile",
+      "reason": "Strictly beneficial selectable mode would be a non-choice; re-expressed as automatic compatible upgrade."
+    },
+    {
+      "id": "missile-shaped-warhead",
+      "reason": "D5/SP1/AP3 strictly improves APEN over GP with no cost; specialist must trade something."
+    },
+    {
+      "id": "missile-nuclear-shaped",
+      "reason": "Raw D7/SP2/AP3 universal escalation obscures the more useful anti-shield specialist role."
+    },
+    {
+      "id": "missile-fusion-warhead",
+      "reason": "If superior high-energy GP, it should automatically replace earlier GP on compatible flights; exact stats need calibration."
+    },
+    {
+      "id": "missile-antimatter-warhead",
+      "reason": "If superior high-energy GP, it should automatically replace earlier GP on compatible flights; exact stats need calibration."
+    }
+  ],
+  "referenceSynthesis": [
+    {
+      "source": "Concept v0.7j",
+      "signal": "Existing generic Ammunition Package / Missile Flight accounting, shared magazines, payload-variant expression, family-specific resource identity, and observer-safe sensor presentation already support this architecture."
+    },
+    {
+      "source": "Technology Family Storyboard v1.2",
+      "signal": "Kinetic ammunition and Missile warheads already exist as independent lineages; CP113 mainly reconciles expression and tactical choice."
+    },
+    {
+      "source": "CP112 native diagnostics",
+      "signal": "Late Missile Damage-5 packets can be completely absorbed by Shield Armor + renewable Shield Capacity + passive Armor, proving payload interaction is a material calibration axis."
+    },
+    {
+      "source": "Spacedock reference-mining corpus",
+      "signal": "Kinetic projectile sophistication is a major progression axis; missile delivery, guidance and payload can progress independently; proximity/submunitions and directed nuclear effects provide non-scalar specialization inspiration."
+    },
+    {
+      "source": "GURPS Space 4e",
+      "signal": "Pattern-level support that missile bodies may carry qualitatively different payloads; no mechanics copied."
+    },
+    {
+      "source": "Master of Orion II manual",
+      "signal": "Pattern-level support for weapon specialization/modification with explicit tradeoffs; no names, exact mechanics or balance values copied."
+    },
+    {
+      "source": "Star Fleet Battles rules",
+      "signal": "Pattern-level support for finite ammunition, alternative ammunition, seeking-weapon modularity and specialized payload/guidance roles; no detailed rules copied."
+    }
+  ],
+  "nextPass": "Implement these payload expressions as simulation-only candidate modes and run controlled ammunition/warhead characteristic sweeps before changing Shields, standard Missile GP numbers, Kinetic profiles, or the production runtime."
+}

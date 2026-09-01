@@ -1,0 +1,96 @@
+{
+  "axes": [
+    {
+      "axis_id": "technology_level",
+      "stage_a_levels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "stage_b_extension": "adjacent/uneven TL after same-TL baseline"
+    },
+    {
+      "aggregation_rule": "Retain GP and Swarmer separately; family M aggregation is diagnostic only.",
+      "availability": {
+        "M_SWARMER": "TL2+"
+      },
+      "axis_id": "primary_weapon_variant",
+      "stage_a_levels": [
+        "K",
+        "E",
+        "M_GP",
+        "M_SWARMER"
+      ]
+    },
+    {
+      "axis_id": "resource_ensemble",
+      "rule": "Same resource environment on both sides in Stage A; asymmetry is adaptive Stage B.",
+      "stage_a_levels": [
+        "R0_CP138_HISTORICAL",
+        "R1_CENTRAL_NO_MAJOR",
+        "R2_CENTRAL_PROPULSION",
+        "R3_LOWER_DEMAND",
+        "R4_TIGHT_HIGH_DEMAND",
+        "R5_CENTRAL_HIGH_DEMAND"
+      ]
+    },
+    {
+      "axis_id": "scenario_stratum",
+      "stage_a_levels": [
+        "BALANCED_CORE_NO_PDS",
+        "KINETIC_PDS_PRESSURE",
+        "ENERGY_PDS_PRESSURE",
+        "AMM_PDS_PRESSURE",
+        "SHIELD_PRESSURE",
+        "ARMOR_PRESSURE",
+        "EW_CONTEST",
+        "MOBILITY_STANDOFF",
+        "RECOVERY_ATTRITION",
+        "POWER_CRISIS"
+      ],
+      "stage_b_extension": "adaptive local numeric sweeps, mixed-counter archetypes, and legal-build cohorts selected from Stage A response boundaries"
+    },
+    {
+      "axis_id": "tactical_policy",
+      "stage_a_levels": [
+        "ENGAGE_ADAPTIVE_CURRENT"
+      ],
+      "stage_b_levels": [
+        "policy contrasts only after executable behavior is explicitly defined and bound"
+      ]
+    },
+    {
+      "axis_id": "reactor_condition",
+      "rule": "Destroyed reactor is primarily a failure/control state, not a nominal viability center.",
+      "stage_a_levels": [
+        "Undamaged"
+      ],
+      "stage_b_levels": [
+        "Degraded",
+        "Damaged"
+      ]
+    },
+    {
+      "axis_id": "geometry",
+      "stage_a_levels": [
+        "OppositeEdgeEncounter",
+        "StandoffEncounter"
+      ],
+      "stage_b_levels": [
+        "range/standoff/refinement centers selected from Stage A telemetry"
+      ]
+    }
+  ],
+  "content_sha256": "731c5f2eb34b5b201c8741415a6d883c4ed53a75149ccda692b92dc297e42bfb",
+  "core_principle": "Balance is viability across response surfaces. Relative family leadership may change by TL/scenario; broad persistent dominance or broad uselessness is the warning.",
+  "promotion_allowed": false,
+  "purpose": "Define the broad combined combat/resource/TL vector space without asserting equal family performance.",
+  "registry_id": "SC-V22C-COMBAT-FACTOR-REGISTRY",
+  "schema_version": "22C.0"
+}

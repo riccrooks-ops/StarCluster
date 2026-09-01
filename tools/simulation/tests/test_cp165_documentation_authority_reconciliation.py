@@ -1,0 +1,52 @@
+import csv,hashlib,importlib.util,json,unittest
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[3];PT=ROOT/'docs/design/player_technology'
+def js(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def audit():
+ p=ROOT/'tools/checkpoints/checkpoint-165/document_authority_audit.py';s=importlib.util.spec_from_file_location('a',p);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m.report(ROOT)
+class T(unittest.TestCase):
+ @classmethod
+ def setUpClass(c):c.b=js(PT/'current_working_technology_baseline.json');c.a=js(PT/'auxiliary_component_catalog.json')
+ def test_01(self):self.assertEqual(js(ROOT/'tools/checkpoints/checkpoint-165/checkpoint_165_definition.json')['checkpoint'],165)
+ def test_02(self):self.assertTrue((ROOT/'docs/CURRENT_AUTHORITIES.md').is_file())
+ def test_03(self):self.assertTrue((ROOT/'docs/Star_Cluster_Game_Concept.docx').is_file())
+ def test_04(self):self.assertFalse((ROOT/'docs/Star_Cluster_Game_Concept_v0.7x.docx').exists())
+ def test_05(self):self.assertTrue((ROOT/'docs/archive/concepts/Star_Cluster_Game_Concept_v0.7x.docx').is_file())
+ def test_06(self):self.assertEqual(c:=self.b['checkpoint'],165)
+ def test_07(self):self.assertEqual([self.b['globalRules']['installationSpaceByTl'][str(i)] for i in range(1,10)],[35,35,36,36,37,37,38,38,39])
+ def test_08(self):self.assertTrue(self.b['globalRules']['additionalMainWeaponsAllowed'])
+ def test_09(self):self.assertTrue(self.b['globalRules']['additionalMainReactorsAllowed'])
+ def test_10(self):self.assertEqual(self.b['damageModel']['id'],'def-res-v1')
+ def test_11(self):self.assertEqual([self.b['damageModel']['shieldDefByTlPp'][str(i)] for i in range(1,10)],[20,22,24,26,28,30,32,34,36])
+ def test_12(self):self.assertEqual([self.b['damageModel']['armorResByTlPp'][str(i)] for i in range(1,10)],[20,22,24,26,28,30,32,34,36])
+ def test_13(self):self.assertEqual((self.b['damageModel']['shieldDefCapPp'],self.b['damageModel']['armorResCapPp']),(45,95))
+ def test_14(self):self.assertEqual([self.b['powerClosure']['mainReactor'][str(i)]['operationalTp'] for i in range(1,10)],list(range(5,14)))
+ def test_15(self):self.assertTrue(all(self.b['powerClosure']['mainReactor'][str(i)]['space']==6 for i in range(1,10)))
+ def test_16(self):self.assertEqual([self.b['powerClosure']['apu'][str(i)]['operationalTp'] for i in range(1,10)],[1,1,1,1,2,2,2,2,2])
+ def test_17(self):self.assertTrue(all(self.b['powerClosure']['apu'][str(i)]['space']==2 for i in range(1,10)))
+ def test_18(self):self.assertIsNone(self.b['globalRules']['apuCountCap'])
+ def test_19(self):self.assertEqual(self.b['combatRules']['directFireApproximateTrackPenaltyPp'],-25)
+ def test_20(self):self.assertEqual(self.b['combatRules']['directFireExtendedRangePenaltyPp'],-10)
+ def test_21(self):self.assertTrue(self.b['combatRules']['modifiersStack'])
+ def test_22(self):self.assertEqual(len(self.a['components']),11)
+ def test_23(self):self.assertEqual(next(x for x in self.a['components'] if x['id']=='apu')['byTl']['5']['operationalTp'],2)
+ def test_24(self):self.assertEqual(next(x for x in self.a['components'] if x['id']=='field_stabilizer')['byTl']['9']['spenReduction'],20)
+ def test_25(self):self.assertEqual(next(x for x in self.a['components'] if x['id']=='crystalline_armor')['byTl']['9']['resBonusPp'],20)
+ def test_26(self):self.assertEqual(next(x for x in self.a['components'] if x['id']=='repair_drone_bay')['byTl']['9']['additionalPreparedRepairKits'],7)
+ def test_27(self):self.assertTrue((ROOT/'docs/references/player_technology/Technology_Family_Storyboard.md').is_file())
+ def test_28(self):self.assertEqual(len(js(ROOT/'docs/archive/player_technology/pre-cp165-active/RELOCATION_MAP.json')['moved']),116)
+ def test_29(self):
+  self.assertEqual(len(js(ROOT/'docs/archive/testing/pre-cp165-active/RELOCATION_MAP.json')['entries']),92)
+  cs='\n'.join(p.read_text(encoding='utf-8') for p in (ROOT/'tests/StarCluster.Tests').rglob('*.cs'))
+  self.assertNotIn('\"docs\", \"design\", \"testing\"',cs)
+  for n in ['canonical_combat_kernel_fixtures_v0_1.json','system_map_research_parity_fixtures_v0_1.json','cp144_engage_adaptive_policy_parity_fixtures_v0_1.json','cp146_combat_resource_doctrine_parity_fixtures_v0_1.json','cp147_tactical_package_utility_parity_fixtures_v0_1.json']:
+   self.assertIn(f'\"docs\", \"archive\", \"testing\", \"pre-cp165-active\", \"{n}\"',cs)
+  sr=(ROOT/'src/StarCluster.ScenarioRunner/Program.cs').read_text(encoding='utf-8')
+  self.assertNotIn('\"docs\", \"design\", \"player_technology\"',sr)
+  for n in ['tl1_core_combat_numerical_baseline_v0_1.csv','tl1_core_combat_numerical_baseline_v0_3.csv','auxiliary_component_catalog_v0_1.json','auxiliary_component_catalog_schema_v0_1.json']:
+   self.assertTrue((ROOT/'docs/archive/player_technology/pre-cp165-active'/n).is_file())
+   self.assertIn(f'LegacyPlayerTechnologyFile(\"{n}\")',sr)
+ def test_30(self):self.assertTrue(js(ROOT/'docs/validation/evidence/checkpoint-165/CP164_ACCEPTED_NATIVE_PROVENANCE.json')['nativeAccepted'])
+ def test_31(self):self.assertEqual(js(ROOT/'docs/validation/evidence/checkpoint-165/CP164_ACCEPTED_NATIVE_PROVENANCE.json')['substantiveCombatTrials'],1620000)
+ def test_32(self):q=audit();self.assertTrue(q['passed'],q['failed']);self.assertGreaterEqual(q['checksTotal'],35)
+if __name__=='__main__':unittest.main()

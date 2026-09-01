@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "star-cluster-cp127-main-subsystem-stabilization-results-v0.1",
+  "checkpoint": 127,
+  "mode": "plan",
+  "rawBuildCombinations": 14112,
+  "legalBuilds": 9427,
+  "finalBaselineTasks": 18646,
+  "finalBaselineVariants": 74584,
+  "tl5Tl6AblationSampleTasks": 120,
+  "tl5Tl6AblationVariants": 4320,
+  "tl8EnergySampleTasks": 120,
+  "tl8EnergyVariants": 7680,
+  "generatedVariants": 86584,
+  "pipelineSmokeTrials": 86584,
+  "substantiveTrialsPerVariant": 100,
+  "plannedSubstantiveTrials": 8658400,
+  "telemetryMetrics": 61,
+  "numericLeafChangesFromCp123": 9,
+  "mixedTlShipsExecuted": false,
+  "balanceValidated": false,
+  "automaticPromotion": false,
+  "failedGates": []
+}

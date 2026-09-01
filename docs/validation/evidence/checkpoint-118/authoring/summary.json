@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "analysis": {
+    "schemaVersion": "star-cluster-simplified-weapon-progression-results-v0.1",
+    "checkpoint": 118,
+    "acceptedBaseline": 117,
+    "damageModel": "layered_defense_hull_only",
+    "internalDamageCriticalsSimulated": false,
+    "trialsPerVariant": 50,
+    "variants": 1824,
+    "variantCounts": {
+      "kinetic_family_characteristic": 888,
+      "missile_family_characteristic": 936
+    },
+    "priorityVariantCounts": {
+      "advanced": 264,
+      "endpoint_stress": 528,
+      "primary": 1032
+    },
+    "totalTrials": 91200,
+    "elapsedSeconds": 18.837705844000084,
+    "failedGates": [],
+    "automaticPromotion": false,
+    "targetFixtureCount": 6,
+    "controlledFixtureCount": 2,
+    "missileProfileCount": 12,
+    "kineticProfileCount": 6,
+    "primaryCalibrationTls": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "advancedValidationTls": [
+      7
+    ],
+    "endpointStressTls": [
+      8,
+      9
+    ],
+    "interpretation": "CP118 is a KISS-focused progression study. TL1-TL6 are primary evidence, TL7 advanced validation, TL8-TL9 endpoint stress. GP Missile candidates vary yield without penetration creep; Swarmer candidates vary coverage/packetization/PDS saturation; Kinetic candidates are automatic single-axis progression controls, not selectable ammunition. No outcome threshold promotes a candidate."
+  },
+  "gates": {
+    "failed": [],
+    "passed": true
+  },
+  "failedGates": 0
+}

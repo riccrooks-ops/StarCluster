@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Star Cluster Support Component Catalog v0.2",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "checkpoint",
+    "foundation",
+    "components"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-installed-support-component-catalog-v0.2"
+    },
+    "checkpoint": {
+      "const": 107
+    },
+    "foundation": {
+      "type": "object"
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "owner",
+          "window",
+          "kind",
+          "space",
+          "status",
+          "gameplayLoop",
+          "mechanicalIdentity",
+          "notes"
+        ]
+      }
+    }
+  }
+}

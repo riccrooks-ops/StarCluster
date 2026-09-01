@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "91",
+  "status": "Success",
+  "acceptedDate": "2026-08-12",
+  "checkpointDefinition": "tools/calibration/checkpoints/checkpoint-91.json",
+  "checkpointDefinitionSha256": "f7a6ab0daba09999e4cc4e8868950624b5500321549c40256efbc9c30e180bde",
+  "checkpointManifest": "CHECKPOINT_91_SHA256SUMS.txt",
+  "checkpointManifestSha256": "a35d727be7e1ca4ea03c96efcb7fcc4ae614e4beb5772c62c0eb4714d0c899e4",
+  "sdkExpected": "8.0.423",
+  "sdkActual": "8.0.423",
+  "build": {
+    "succeeded": true,
+    "warnings": 0,
+    "errors": 0
+  },
+  "tests": {
+    "total": 863,
+    "passed": 863,
+    "failed": 0,
+    "skipped": 0
+  },
+  "runner": {
+    "configuredStages": 8,
+    "passedStages": 8,
+    "failedStages": 0,
+    "selfTests": 56,
+    "failedGates": 0
+  },
+  "primaryStudy": null,
+  "monteCarlo": {
+    "variantCount": 0,
+    "totalTrials": 0
+  },
+  "sourceEvidence": "User-provided native Windows Checkpoint 91 acceptance results reviewed on 2026-08-12 before Checkpoint 92 generation."
+}

@@ -1,0 +1,25 @@
+{
+  "acceptedCheckpoint": 118,
+  "status": "accepted_native_baseline_for_cp119",
+  "nativeStudy": {
+    "variants": 1824,
+    "trialsPerVariant": 2000,
+    "totalTrials": 3648000,
+    "elapsedSeconds": 142.87860009999713,
+    "failedGates": [],
+    "automaticPromotion": false,
+    "variantCounts": {
+      "kinetic_family_characteristic": 888,
+      "missile_family_characteristic": 936
+    },
+    "priorityVariantCounts": {
+      "advanced": 264,
+      "endpoint_stress": 528,
+      "primary": 1032
+    }
+  },
+  "parityCases": 25,
+  "archiveSha256": "6fee230850eeaf621c57450e353f06c5beb3aacd593937307d380ffd030f3337",
+  "nativeAnalysisSha256": "65c7b60f28aa8e6cabcc547ac8be95d9f5c19666c0887d0913b4124b182a8ae5",
+  "notes": "CP118 native validation accepted the simplified GP-yield/Swarmer/Kinetic characteristic study. CP119 uses that evidence to test a much smaller working candidate set in a shared same-TL ecology."
+}

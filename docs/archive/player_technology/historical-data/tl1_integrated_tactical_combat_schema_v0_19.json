@@ -1,0 +1,486 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-tl1-integrated-tactical-combat-schema-v0-19",
+  "title": "Star Cluster Integrated Tactical Combat Study v18 (per-side Sensor/EW profiles and normal EW rating overrides)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "baselineSha256",
+    "masterSeed",
+    "trialsPerVariant",
+    "variants"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-tl1-integrated-tactical-combat-v2"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baselineSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "masterSeed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "trialsPerVariant": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2500,
+      "items": {
+        "$ref": "#/$defs/variant"
+      }
+    },
+    "technologyProfileCatalog": {
+      "type": "string",
+      "minLength": 1
+    },
+    "auxiliaryProfileCatalog": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sensorEwProfileCatalog": {
+      "type": "string",
+      "minLength": 1
+    },
+    "builds": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/build"
+      }
+    },
+    "aiDoctrineCatalog": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "$defs": {
+    "variant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "sideAFamily",
+        "sideBFamily",
+        "movementMode",
+        "protectedCompartmentation",
+        "damageControl"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "comparisonGroup": {
+          "type": "string",
+          "minLength": 1
+        },
+        "profileLabel": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sideAFamily": {
+          "enum": [
+            "Kinetic",
+            "Energy",
+            "Missile"
+          ]
+        },
+        "sideBFamily": {
+          "enum": [
+            "Kinetic",
+            "Energy",
+            "Missile"
+          ]
+        },
+        "movementMode": {
+          "enum": [
+            "HoldRange2",
+            "HoldRange3",
+            "HoldRange4",
+            "HoldRange5",
+            "ScriptedPursuit",
+            "PreferredRange",
+            "OpponentAwareRange",
+            "TrackAwareOpponentRange"
+          ]
+        },
+        "initialRangeHexes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "movementOrder": {
+          "enum": [
+            "Simultaneous",
+            "SideAFirst",
+            "SideBFirst"
+          ]
+        },
+        "tacticalMapRadius": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "startingFuel": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100000
+        },
+        "movementFuelPerHex": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "evasiveManeuverFuelCost": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        },
+        "protectedCompartmentation": {
+          "type": "boolean"
+        },
+        "damageControl": {
+          "enum": [
+            "None",
+            "ComponentFirstReserveOne"
+          ]
+        },
+        "sideAStlMovementHexes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "sideBStlMovementHexes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "missileSpeedHexesPerTurn": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "missileMaximumTravelHexes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "kineticDamage": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "kineticArmorPenetration": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "primaryArmorProtection": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "baseShieldRechargeEnabled": {
+          "type": "boolean"
+        },
+        "evasiveManeuversEnabled": {
+          "type": "boolean"
+        },
+        "pdsEnabled": {
+          "type": "boolean"
+        },
+        "escapeDisengagementEnabled": {
+          "type": "boolean"
+        },
+        "sideAProfileId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sideBProfileId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sideAAuxiliaryProfileId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sideBAuxiliaryProfileId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sensorEwProfileId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sideABuildId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sideBBuildId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sideASecondaryFamily": {
+          "enum": [
+            "Kinetic",
+            "Energy",
+            "Missile"
+          ]
+        },
+        "sideBSecondaryFamily": {
+          "enum": [
+            "Kinetic",
+            "Energy",
+            "Missile"
+          ]
+        },
+        "sideABackgroundTacticalPowerCommitment": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sideBBackgroundTacticalPowerCommitment": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sideATacticalPowerDoctrine": {
+          "enum": [
+            "DefenseFirst",
+            "PrimaryFireFirst",
+            "FullVolleyFirst"
+          ]
+        },
+        "sideBTacticalPowerDoctrine": {
+          "enum": [
+            "DefenseFirst",
+            "PrimaryFireFirst",
+            "FullVolleyFirst"
+          ]
+        },
+        "sideAReactorOutputOverride": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "sideBReactorOutputOverride": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "sideATrackPolicy": {
+          "enum": [
+            "EstablishedFirm",
+            "PassiveOnly",
+            "AutoActive",
+            "AcquisitionFirstAutoActive"
+          ]
+        },
+        "sideBTrackPolicy": {
+          "enum": [
+            "EstablishedFirm",
+            "PassiveOnly",
+            "AutoActive",
+            "AcquisitionFirstAutoActive"
+          ]
+        },
+        "sideANetEwRangePenalty": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "sideBNetEwRangePenalty": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "sideAStlOverloadPolicy": {
+          "enum": [
+            "None",
+            "SafeRangePressure"
+          ]
+        },
+        "sideBStlOverloadPolicy": {
+          "enum": [
+            "None",
+            "SafeRangePressure"
+          ]
+        },
+        "sideASensorOverloadPolicy": {
+          "enum": [
+            "None",
+            "SafeWhenNeeded"
+          ]
+        },
+        "sideBSensorOverloadPolicy": {
+          "enum": [
+            "None",
+            "SafeWhenNeeded"
+          ]
+        },
+        "sideAAiDoctrineId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sideBAiDoctrineId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sideAEcmPolicy": {
+          "enum": [
+            "None",
+            "Normal",
+            "SafeOverload"
+          ]
+        },
+        "sideBEcmPolicy": {
+          "enum": [
+            "None",
+            "Normal",
+            "SafeOverload"
+          ]
+        },
+        "sideAEccmPolicy": {
+          "enum": [
+            "None",
+            "Normal",
+            "ReactiveNormal",
+            "SafeOverload"
+          ]
+        },
+        "sideBEccmPolicy": {
+          "enum": [
+            "None",
+            "Normal",
+            "ReactiveNormal",
+            "SafeOverload"
+          ]
+        },
+        "sideAEcmNormalPowerCostOverride": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "sideBEcmNormalPowerCostOverride": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "sideAEccmNormalPowerCostOverride": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "sideBEccmNormalPowerCostOverride": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "sideAAllowsApproximateDirectFire": {
+          "type": "boolean"
+        },
+        "sideBAllowsApproximateDirectFire": {
+          "type": "boolean"
+        },
+        "sideAApproximateDirectFireAccuracyPenalty": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "sideBApproximateDirectFireAccuracyPenalty": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "sideASensorEwProfileId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sideBSensorEwProfileId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sideAEcmNormalRatingOverride": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "sideBEcmNormalRatingOverride": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "sideAEccmNormalRatingOverride": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "sideBEccmNormalRatingOverride": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        }
+      }
+    },
+    "build": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "mainWeaponCount",
+        "mainReactorCount",
+        "activeSensor",
+        "shieldGenerator",
+        "kineticPdsCount",
+        "usedSpace",
+        "freeSupportSpace"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mainWeaponCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "mainReactorCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "activeSensor": {
+          "type": "boolean"
+        },
+        "shieldGenerator": {
+          "type": "boolean"
+        },
+        "kineticPdsCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "usedSpace": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "freeSupportSpace": {
+          "type": "integer"
+        },
+        "ecmSuite": {
+          "type": "boolean"
+        },
+        "eccmSuite": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

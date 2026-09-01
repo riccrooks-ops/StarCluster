@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "star-cluster-tl2-weapon-penetration-sensitivity-profile-v1",
+  "id": "tl2-weapon-penetration-sensitivity-profile-v0_1",
+  "status": "family_specific_sensitivities_not_production_data",
+  "purpose": "Expose APEN and SPEN sensitivity across all current weapon families without implying symmetric TL progression.",
+  "families": {
+    "Kinetic": {
+      "current": {
+        "shieldPenetration": 1,
+        "armorPenetration": 0
+      },
+      "apen": {
+        "shieldPenetration": 1,
+        "armorPenetration": 1
+      },
+      "spen": {
+        "shieldPenetration": 2,
+        "armorPenetration": 0
+      },
+      "combined": {
+        "shieldPenetration": 2,
+        "armorPenetration": 1
+      }
+    },
+    "Energy": {
+      "current": {
+        "shieldPenetration": 1,
+        "armorPenetration": 1
+      },
+      "apen": {
+        "shieldPenetration": 1,
+        "armorPenetration": 2
+      },
+      "spen": {
+        "shieldPenetration": 2,
+        "armorPenetration": 1
+      },
+      "combined": {
+        "shieldPenetration": 2,
+        "armorPenetration": 2
+      }
+    },
+    "Missile": {
+      "current": {
+        "shieldPenetration": 1,
+        "armorPenetration": 2
+      },
+      "apen": {
+        "shieldPenetration": 1,
+        "armorPenetration": 3
+      },
+      "spen": {
+        "shieldPenetration": 2,
+        "armorPenetration": 2
+      },
+      "combined": {
+        "shieldPenetration": 2,
+        "armorPenetration": 3
+      }
+    }
+  },
+  "promotionPolicy": {
+    "automaticPromotion": false,
+    "familySpecificHumanReview": true,
+    "sharedSensitivityDoesNotImplySharedProgression": true,
+    "combinedIsUpperIntegrationSensitivity": true
+  },
+  "heldProperties": [
+    "damage",
+    "range",
+    "accuracy/guidance",
+    "power cost",
+    "ammunition",
+    "rate/attack package",
+    "missile terminal rules",
+    "installation space"
+  ]
+}

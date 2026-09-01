@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "star-cluster-technology-integration-permutation-suite-v0.20",
+  "checkpoint": "106",
+  "status": "architecture_only_no_execution",
+  "acceptedNumericalSimulationAuthority": "CP104 / archived v0.18 suite",
+  "inputsForNextExpansion": [
+    "docs/design/player_technology/technology_family_storyboard_v1_1.json",
+    "docs/design/player_technology/Technology_Foundation_Completeness_Audit_v1.json"
+  ],
+  "requiredFutureLenses": [
+    "tall_vertical",
+    "wide_cross_pollinated",
+    "mixed_tl",
+    "nonadjacent_tl",
+    "multiple_population_weights",
+    "mirrored_movement_order"
+  ],
+  "declaredTrials": 0,
+  "executed": false,
+  "numericalTlTableChanged": false
+}

@@ -1,0 +1,2696 @@
+{
+  "schemaVersion": "star-cluster-reference-coverage-ledger-v1",
+  "checkpoint": "106",
+  "sourceCorpus": "docs/references/reference-mining/observation-index.json",
+  "observationCount": 195,
+  "coverageCount": 195,
+  "complete": true,
+  "outcomeCounts": {
+    "abstraction_guardrail": 33,
+    "deferred": 26,
+    "excluded": 1,
+    "foundation_captured": 29,
+    "incorporated": 106
+  },
+  "domainCounts": {
+    "ammunition-stores": 12,
+    "crew-marines": 3,
+    "exotic-mobility": 9,
+    "exploration-comms": 46,
+    "fuel-endurance": 11,
+    "information-diplomacy-awareness": 5,
+    "installation-capacity": 44,
+    "life-support-medical": 6,
+    "power-energy": 9,
+    "repair-salvage-fabrication": 14,
+    "thermal-radiation": 36
+  },
+  "outcomeDefinitions": {
+    "incorporated": "Explicitly cited in an active technology architecture artifact.",
+    "foundation_captured": "Represented in the completeness ledger without necessarily becoming a technology.",
+    "abstraction_guardrail": "Retained as rationale or a warning against excess detail.",
+    "deferred": "Preserved for later with no current adoption.",
+    "excluded": "Explicitly outside the intended project scope."
+  },
+  "rows": [
+    {
+      "observationId": "SD-DC-001",
+      "sourceId": "SD-DC",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "repair-salvage-fabrication",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-130",
+        "Storyboard/Hull/Maintainability and Damage Control/TL1"
+      ],
+      "idea": "Immediate stabilization/jury-rigging precedes proper restoration.",
+      "assessment": "Supports combat Damage Control versus later Ship Repair; no extra repair layer.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-DC-002",
+      "sourceId": "SD-DC",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "repair-salvage-fabrication",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Hull/Maintainability and Damage Control/TL1"
+      ],
+      "idea": "Distributed repair stores improve immediate response.",
+      "assessment": "Repair Kits can abstract lockers; future maintainability could reflect distribution.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-DC-003",
+      "sourceId": "SD-DC",
+      "sourceDisposition": "defer",
+      "foundationDomain": "repair-salvage-fabrication",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-135",
+        "Storyboard/Hull/Cruiser Structural Integration/TL2",
+        "Storyboard/Hull/Maintainability and Damage Control/TL3"
+      ],
+      "idea": "Computer casualties can be hardware or software/control failures.",
+      "assessment": "Future crossover; do not increase ordinary damage granularity.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-DC-004",
+      "sourceId": "SD-DC",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "repair-salvage-fabrication",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/repair-salvage-fabrication"
+      ],
+      "idea": "Fire/atmosphere/propellant casualties can remain ongoing hazards until contained.",
+      "assessment": "Candidate bounded Hazard state; avoid room-level simulation.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-DC-005",
+      "sourceId": "SD-DC",
+      "sourceDisposition": "defer",
+      "foundationDomain": "repair-salvage-fabrication",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/repair-salvage-fabrication"
+      ],
+      "idea": "Emergency isolation can sacrifice a local area to save the ship.",
+      "assessment": "Potential future command decision after Hazard/crew abstractions mature.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-DC-006",
+      "sourceId": "SD-DC",
+      "sourceDisposition": "defer",
+      "foundationDomain": "repair-salvage-fabrication",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/repair-salvage-fabrication"
+      ],
+      "idea": "Damage Control work is itself hazardous.",
+      "assessment": "Supports future crew risk without current implementation.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-DC-007",
+      "sourceId": "SD-DC",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "repair-salvage-fabrication",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-017",
+        "Storyboard/Computing / Fire Control/Autonomy, Networking and Digital Crew/TL3",
+        "Storyboard/Hull/Cruiser Structural Integration/TL6",
+        "Storyboard/Hull/Maintainability and Damage Control/TL4",
+        "Storyboard/Hull/Maintainability and Damage Control/TL6"
+      ],
+      "idea": "Robots are well suited to vacuum/hazardous repair.",
+      "assessment": "Good human->automation->robotics progression.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-DC-008",
+      "sourceId": "SD-DC",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "repair-salvage-fabrication",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-084",
+        "Storyboard/Hull/Cruiser Structural Integration/TL1",
+        "Storyboard/Hull/Cruiser Structural Integration/TL2",
+        "Storyboard/Hull/Maintainability and Damage Control/TL3"
+      ],
+      "idea": "Repairability can be designed into ship architecture.",
+      "assessment": "Strong maintainability tradeoff candidate.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-DC-009",
+      "sourceId": "SD-DC",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "repair-salvage-fabrication",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-011",
+        "IdeaRegister/IDEA-012",
+        "IdeaRegister/IDEA-029",
+        "Storyboard/Armor/Passive Armor Materials/TL6",
+        "Storyboard/Hull/Cruiser Structural Integration/TL4",
+        "Storyboard/Hull/Cruiser Structural Integration/TL6",
+        "Storyboard/Hull/Cruiser Structural Integration/TL9",
+        "Storyboard/Hull/Maintainability and Damage Control/TL5",
+        "Storyboard/Hull/Maintainability and Damage Control/TL6",
+        "Storyboard/Hull/Maintainability and Damage Control/TL7"
+      ],
+      "idea": "Self-sealing/self-repairing materials provide qualitative progression.",
+      "assessment": "Strong later-TL lineage.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-DC-010",
+      "sourceId": "SD-DC",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "repair-salvage-fabrication",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/repair-salvage-fabrication"
+      ],
+      "idea": "Compartmentation/fire-resistant construction limits damage propagation.",
+      "assessment": "Keep containment distinct from resistance, repair, and restoration.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-NL-001",
+      "sourceId": "SD-NL",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-041",
+        "Storyboard/Energy Weapons/Special Energy / Radiation Weapon Concepts/TL7"
+      ],
+      "idea": "Bomb-pumped lasers trade an expendable nuclear event for directed beam output.",
+      "assessment": "Potential sacrificial interceptor/Special Weapon rather than normal Main upgrade.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-NL-002",
+      "sourceId": "SD-NL",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/thermal-radiation"
+      ],
+      "idea": "Nuclear reactor output can pump a laser directly.",
+      "assessment": "Strong fiction for selective reactor-enabling prerequisites.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-NL-003",
+      "sourceId": "SD-NL",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Different pumping architectures trade geometry/materials/complexity differently.",
+      "assessment": "Supports architecture progression rather than one number ladder.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-NL-004",
+      "sourceId": "SD-NL",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "power-energy",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/power-energy"
+      ],
+      "idea": "More extreme reactor states can unlock higher-output beam architectures.",
+      "assessment": "Reactor progress can expand the Energy design envelope.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-NL-005",
+      "sourceId": "SD-NL",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Some high-output laser architectures may destroy their own active medium.",
+      "assessment": "Candidate architecture-specific destructive Forced Overload.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-NL-006",
+      "sourceId": "SD-NL",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/thermal-radiation"
+      ],
+      "idea": "Thermal/material limits bound sustainable output.",
+      "assessment": "Use Strain/Overload abstraction instead of heat meter.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-NL-007",
+      "sourceId": "SD-NL",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/thermal-radiation"
+      ],
+      "idea": "Waste heat remains an engineering cost.",
+      "assessment": "Rationale for existing currencies, not detailed thermal simulation.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-NL-008",
+      "sourceId": "SD-NL",
+      "sourceDisposition": "defer",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/thermal-radiation"
+      ],
+      "idea": "Different nuclear-laser architectures operate at different wavelengths.",
+      "assessment": "Combine with wavelength-focused source before mechanics.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-NL-009",
+      "sourceId": "SD-NL",
+      "sourceDisposition": "defer",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Extreme-duty active media may have unusual component resilience.",
+      "assessment": "Possible future trait; current damage model does not need it.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-NL-010",
+      "sourceId": "SD-NL",
+      "sourceDisposition": "defer",
+      "foundationDomain": "fuel-endurance",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/fuel-endurance"
+      ],
+      "idea": "Shared high-temperature breakthroughs may cross reactor/propulsion/weapon categories.",
+      "assessment": "Possible enabling discovery; avoid blanket prerequisite chains.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-EW-001",
+      "sourceId": "SD-EW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Energy Weapons/Coherent Beam Main Weapon/TL1"
+      ],
+      "idea": "Laser physical reach can exceed practical targeting/engagement capability.",
+      "assessment": "Strong support for physical range != attack eligibility.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-EW-002",
+      "sourceId": "SD-EW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Energy Weapons/Coherent Beam Main Weapon/TL2",
+        "Storyboard/Energy Weapons/Coherent Beam Main Weapon/TL4"
+      ],
+      "idea": "Shorter wavelength concentrates a smaller spot at range.",
+      "assessment": "Potential range/focusing progression independent of damage.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-EW-003",
+      "sourceId": "SD-EW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Energy Weapons/Coherent Beam Main Weapon/TL4",
+        "Storyboard/Energy Weapons/Coherent Beam Main Weapon/TL7"
+      ],
+      "idea": "High-frequency beams require increasingly specialized generation/focusing.",
+      "assessment": "Supports advanced branches/enabling technology.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-EW-004",
+      "sourceId": "SD-EW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Environment changes which wavelengths propagate well.",
+      "assessment": "Future atmospheric-combat relevance.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-EW-005",
+      "sourceId": "SD-EW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-042",
+        "Storyboard/Energy Weapons/Special Energy / Radiation Weapon Concepts/TL4"
+      ],
+      "idea": "Microwave energy may fit electronics/EW roles better than thermal drilling.",
+      "assessment": "Potential electronic-attack/Special Weapon crossover.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-EW-006",
+      "sourceId": "SD-EW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Energy Weapons/Coherent Beam Main Weapon/TL7"
+      ],
+      "idea": "Very high-frequency beams can create ionizing secondary effects.",
+      "assessment": "Do not translate directly into penetration values.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-EW-007",
+      "sourceId": "SD-EW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-036",
+        "Storyboard/Energy Weapons/Coherent Beam Main Weapon/TL5"
+      ],
+      "idea": "Fixed-frequency and tunable emitters create different operating choices.",
+      "assessment": "Strong adaptive-spectrum concept.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-EW-008",
+      "sourceId": "SD-EW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-036",
+        "Storyboard/Energy Weapons/Coherent Beam Main Weapon/TL5"
+      ],
+      "idea": "Free-electron lasers provide a broad tunable architecture.",
+      "assessment": "Strong long-term Energy branch candidate.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-EW-009",
+      "sourceId": "SD-EW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Frequency multiplication can be an enabling technology step.",
+      "assessment": "Useful lineage/flavor without current mechanics.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-EW-010",
+      "sourceId": "SD-EW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Precision beam effectiveness may depend strongly on tracking/jitter quality.",
+      "assessment": "Possible future family-specific degraded-fire/targeting interaction.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-SM-001",
+      "sourceId": "SD-SM",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Fixed integration permits a larger weapon architecture than a turret.",
+      "assessment": "Supports large Main Weapon Space abstraction.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-SM-002",
+      "sourceId": "SD-SM",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Projectile Weapons/Kinetic Main Weapon/TL1"
+      ],
+      "idea": "Longer acceleration structures can improve Kinetic/Particle velocity and range.",
+      "assessment": "Strong family-specific progression path.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SM-003",
+      "sourceId": "SD-SM",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Rigid mounting can improve pointing stability.",
+      "assessment": "Potential spinal accuracy/range identity.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-SM-004",
+      "sourceId": "SD-SM",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Hull/Cruiser Structural Integration/TL7"
+      ],
+      "idea": "Mount architecture reallocates structure between traverse/support and weapon/defense.",
+      "assessment": "Rationale for Space tradeoffs.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SM-005",
+      "sourceId": "SD-SM",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Whole-ship aiming becomes vulnerable to fast close targets.",
+      "assessment": "Natural long-range vs close-range counterplay.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-SM-006",
+      "sourceId": "SD-SM",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Forward-fixed fire can conflict with major maneuver direction.",
+      "assessment": "Explore abstract alignment commitment before full facing.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-SM-007",
+      "sourceId": "SD-SM",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Spinal weapons favor specialized siege/anti-capital roles.",
+      "assessment": "Fits generalized legal extreme-build philosophy.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-SM-008",
+      "sourceId": "SD-SM",
+      "sourceDisposition": "defer",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Semi-fixed mounts can retain limited aim.",
+      "assessment": "Potential intermediate architecture.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-SM-009",
+      "sourceId": "SD-SM",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Laser generators need not share Kinetic axial mount constraints.",
+      "assessment": "Guardrail against generic cross-family spinal bonuses.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-SM-010",
+      "sourceId": "SD-SM",
+      "sourceDisposition": "defer",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Particle beams may permit limited steering despite axial accelerators.",
+      "assessment": "Potential distinct Particle identity.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-SM-011",
+      "sourceId": "SD-SM",
+      "sourceDisposition": "defer",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Broadside fixed mounts decouple fire direction from thrust axis.",
+      "assessment": "Interesting only if facing/arcs earn their complexity.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-SW-001",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Unguided Kinetic hit probability depends on projectile speed, range and target acceleration.",
+      "assessment": "Supports effective-range distinction.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-SW-002",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "fuel-endurance",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/fuel-endurance"
+      ],
+      "idea": "Threatening Kinetic fire can force maneuver/evasion expenditure.",
+      "assessment": "Potential emergent suppression/evasion-pressure later.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-SW-003",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "power-energy",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Projectile Weapons/Kinetic Main Weapon/TL1"
+      ],
+      "idea": "Kinetic launcher architectures trade power, complexity, wear, timing and velocity differently.",
+      "assessment": "Strong non-linear Kinetic progression model.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-004",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "fuel-endurance",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/fuel-endurance"
+      ],
+      "idea": "Missiles are miniature spacecraft with modular propulsion/guidance/sensor/payload possibilities.",
+      "assessment": "Supports modular missile progression.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-SW-005",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "ammunition-stores",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-056",
+        "Storyboard/Missile Weapons/Missile Launcher, Flight and Propulsion/TL5"
+      ],
+      "idea": "Missile size trades salvo density against individual seeker/payload/protection capability.",
+      "assessment": "Strong heavy-vs-saturation missile design axis.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-006",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "A laser generator can route output through multiple beam directors.",
+      "assessment": "Energy-specific director architecture; no free extra attack packages.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-SW-007",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-038",
+        "Storyboard/Energy Weapons/Charged-Particle / Ion Beam Branch/TL5"
+      ],
+      "idea": "Particle beams differ enough in propagation, impact and defenses to merit separate study.",
+      "assessment": "Serious future family candidate.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-008",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-050",
+        "Storyboard/Projectile Weapons/Kinetic Main Weapon/TL9"
+      ],
+      "idea": "Macron accelerators produce dense microscopic high-velocity projectile streams.",
+      "assessment": "Potential late accelerator branch.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-009",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Plausible plasma weapons often converge toward particle/direct-energy behavior.",
+      "assessment": "Do not add Plasma by genre convention alone.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-SW-010",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "ammunition-stores",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-052",
+        "Storyboard/Energy Weapons/Energy / Beam Point Defense/TL4",
+        "Storyboard/Energy Weapons/Energy / Beam Point Defense/TL5"
+      ],
+      "idea": "PDS can branch into Kinetic/flak, laser and interceptor-missile architectures.",
+      "assessment": "Strong future branching direction.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-011",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Projectile Weapons/Kinetic Point Defense/TL1"
+      ],
+      "idea": "PDS may use local sensing/control and ship-level information together.",
+      "assessment": "Strong support for current local PDS architecture.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-012",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-023",
+        "IdeaRegister/IDEA-055",
+        "Storyboard/Missile Weapons/Missile Guidance, Seeker and Counter-Countermeasures/TL7",
+        "Storyboard/Sensors / EW/Electronic Counter-Countermeasures/TL7",
+        "Storyboard/Sensors / EW/Electronic Countermeasures/TL7"
+      ],
+      "idea": "Active emitters can be targeted by anti-radiation/home-on-emission weapons.",
+      "assessment": "Elegant future counterplay to strong active emissions.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-013",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "information-diplomacy-awareness",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-022",
+        "Storyboard/Sensors / EW/Electronic Countermeasures/TL4"
+      ],
+      "idea": "EW includes deception/false signatures/comms disruption, not only raw jamming.",
+      "assessment": "Strong qualitative EW progression.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-014",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-064"
+      ],
+      "idea": "Space mines make most sense near strategic constraints; mobile/ranged mines blur toward missiles/platforms.",
+      "assessment": "Prefer system/chokepoint hazards over generic tactical mine spam.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-015",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Turrets include substantial internal support/feed/traverse architecture.",
+      "assessment": "Reinforces current Space abstraction.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-SW-016",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/thermal-radiation"
+      ],
+      "idea": "Radiation can create crew/electronics effects distinct from hull damage.",
+      "assessment": "Wait for dedicated radiation source and mature crew/internal systems.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-SW-017",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Effective engagement range emerges from weapon physics, tracking, target mobility, guidance, EW and defenses.",
+      "assessment": "Strong cross-system confirmation of current architecture.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-SW-018",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Scientific categories blur; gameplay families should be based on coherent lineage/behavior.",
+      "assessment": "Use gameplay identity rather than taxonomy purity.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-SW-019",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Exceptional weapons are memorable when firing requires buildup/commitment/consequence.",
+      "assessment": "Strong principle for rare/Precursor/experimental systems.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-SG-001",
+      "sourceId": "SD-SG",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "crew-marines",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Hull/Habitation and Gravity Architecture/TL1"
+      ],
+      "idea": "Long-duration zero-g causes health effects not fully solved by exercise.",
+      "assessment": "Star Cluster eventually needs a deliberate long-duration gravity answer.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SG-002",
+      "sourceId": "SD-SG",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "fuel-endurance",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-009",
+        "Storyboard/Hull/Habitation and Gravity Architecture/TL6"
+      ],
+      "idea": "Artificial gravity can come from generated fields, linear acceleration or rotation.",
+      "assessment": "Foundational setting choice remains open.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SG-003",
+      "sourceId": "SD-SG",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "life-support-medical",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Hull/Habitation and Gravity Architecture/TL1",
+        "Storyboard/Hull/Habitation and Gravity Architecture/TL4"
+      ],
+      "idea": "Small centrifuges require higher spin rates and harsher Coriolis/gradient conditions.",
+      "assessment": "Model quality/architecture, not RPM equations.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SG-004",
+      "sourceId": "SD-SG",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "life-support-medical",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Hull/Habitation and Gravity Architecture/TL4"
+      ],
+      "idea": "Large rings suit stations/civilian habitats better than compact warships.",
+      "assessment": "Strong role/visual differentiation.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SG-005",
+      "sourceId": "SD-SG",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "life-support-medical",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/life-support-medical"
+      ],
+      "idea": "Deployable/folding centrifuges suggest cruise versus combat configurations.",
+      "assessment": "Good warship fiction; mechanize only if preparedness gameplay earns it.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-SG-006",
+      "sourceId": "SD-SG",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "power-energy",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/power-energy"
+      ],
+      "idea": "Rotating joints create power/fluid transfer and maintenance complexity.",
+      "assessment": "Rationale for architecture cost without component-level detail.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-SG-007",
+      "sourceId": "SD-SG",
+      "sourceDisposition": "out_of_scope",
+      "foundationDomain": "life-support-medical",
+      "coverageOutcome": "excluded",
+      "destinations": [
+        "FoundationAudit/explicitlyExcludedComplexity"
+      ],
+      "idea": "Spin sections exchange angular momentum and create gyroscopic effects.",
+      "assessment": "Keep as fiction; no gyro dynamics simulator.",
+      "coverageReason": "The source observation was already marked outside project scope."
+    },
+    {
+      "observationId": "SD-SG-008",
+      "sourceId": "SD-SG",
+      "sourceDisposition": "defer",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Whole-ship/tethered rotation offers alternative artificial-gravity layouts.",
+      "assessment": "Useful exploration/emergency flavor.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-SG-009",
+      "sourceId": "SD-SG",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "life-support-medical",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/life-support-medical"
+      ],
+      "idea": "Hub docking is naturally easier than rim docking on a rotating habitat.",
+      "assessment": "Good station-layout logic without docking minigame.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-SG-010",
+      "sourceId": "SD-SG",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "life-support-medical",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/life-support-medical"
+      ],
+      "idea": "Generated gravity can distinguish later technological generations from spin gravity.",
+      "assessment": "Strong design-envelope breakthrough candidate; preserve legacy spin usefulness.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-SW-020",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/thermal-radiation"
+      ],
+      "idea": "Kinetic and Energy weapon families can differ in resource burden: finite ammunition and magazines versus power/thermal demand, with hybrid technologies sometimes carrying both.",
+      "assessment": "Useful family identity axis; do not turn it into an absolute physics taxonomy.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-SW-021",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "ammunition-stores",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/ammunition-stores"
+      ],
+      "idea": "Kinetic systems can vary through projectile, accelerator and ammunition changes, while Energy systems can vary through emitter, focusing, steering and efficiency changes.",
+      "assessment": "Strong support for asymmetric family-specific TL progression.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-SW-022",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-030",
+        "IdeaRegister/IDEA-043",
+        "IdeaRegister/IDEA-083",
+        "Storyboard/Armor/Armor Enhancement Branches/TL4",
+        "Storyboard/Energy Weapons/Special Energy / Radiation Weapon Concepts/TL7"
+      ],
+      "idea": "Radiation-oriented weapons can be countered by dedicated shielding/hardening, but that protection carries engineering cost.",
+      "assessment": "Prefer specialist hardening/traits over a universal radiation-resistance stat until radiation mechanics earn that complexity.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-023",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/thermal-radiation"
+      ],
+      "idea": "Particle composition and mass can change how deeply energy is deposited and how strongly secondary ionizing effects threaten crew/electronics.",
+      "assessment": "Potential future specialization axis; avoid detailed dose simulation.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-SW-024",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-043",
+        "Storyboard/Energy Weapons/Special Energy / Radiation Weapon Concepts/TL7"
+      ],
+      "idea": "Radiological contamination and lingering exposure can matter after an attack even when the immediate structural effect is limited.",
+      "assessment": "Better suited to scenario/salvage consequences than universal tactical bookkeeping.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-025",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-064"
+      ],
+      "idea": "Minefields derive much of their value from uncertainty and area denial rather than raw damage alone.",
+      "assessment": "Supports observer-safe hazard regions and route pressure rather than visible mine-counter spam.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-026",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-065"
+      ],
+      "idea": "Mine counterplay can include sensing, probes, spoofing, sweeping, disposable clearing assets and route choice.",
+      "assessment": "Strong counterplay vocabulary if minefields are introduced.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-027",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "ammunition-stores",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-097"
+      ],
+      "idea": "As mines gain range, mobility or autonomous pursuit they increasingly blur into disposable platforms or missiles.",
+      "assessment": "Classify future systems by behavior rather than naming convention.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-028",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Large weapon mounts trade structural mass/output against tracking responsiveness and target-switch agility.",
+      "assessment": "Useful distinction for heavy/spinal/turreted architectures without degrees-per-second simulation.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-SW-029",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-037",
+        "Storyboard/Energy Weapons/Coherent Beam Main Weapon/TL6"
+      ],
+      "idea": "Phased-array or other nonmechanical beam steering can improve rapid retargeting and distributed aperture use without increasing total generator output.",
+      "assessment": "Strong high-TL integration direction; no free extra attack packages.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-030",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "ammunition-stores",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-048",
+        "Storyboard/Projectile Weapons/Kinetic Ammunition and Projectile Packages/TL4",
+        "Storyboard/Projectile Weapons/Kinetic Main Weapon/TL6"
+      ],
+      "idea": "Kinetic ammunition can use penetrators, proximity/submunition packages, guided or smart projectiles, specialized armatures and exotic materials in addition to changes in the launcher itself.",
+      "assessment": "One of the richest Kinetic progression axes.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-031",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-047",
+        "Storyboard/Projectile Weapons/Kinetic Main Weapon/TL5"
+      ],
+      "idea": "Rail, coil and hybrid/helical electromagnetic launchers trade timing/control complexity, current, wear, projectile interaction and accelerator architecture in different ways.",
+      "assessment": "Promising maturation branch; exact implementation remains open.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-032",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-037",
+        "Storyboard/Energy Weapons/Coherent Beam Main Weapon/TL6"
+      ],
+      "idea": "Advanced laser systems can distribute generation and steering across multiple apertures/arrays for resilience and rapid engagement changes.",
+      "assessment": "Corroborates distributed-director architecture while keeping one bounded output pool.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-033",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-086",
+        "Storyboard/Energy Weapons/Coherent Beam Main Weapon/TL8"
+      ],
+      "idea": "Laser-coupled particle concepts offer an exotic route to reduced divergence or extreme-range directed effects.",
+      "assessment": "Preserve as exotic/Precursor/high-TL inspiration rather than ordinary progression.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-034",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "information-diplomacy-awareness",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Missile Weapons/Missile Guidance, Seeker and Counter-Countermeasures/TL6"
+      ],
+      "idea": "Physical/active decoys are a distinct EW tool from continuous jamming and can attack seeker discrimination rather than raw signal strength.",
+      "assessment": "Potential qualitative EW progression without another stacked rating.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-035",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-135",
+        "Storyboard/Sensors / EW/Electronic Countermeasures/TL7"
+      ],
+      "idea": "Communications jamming can attack command links and datalinks rather than only sensor discrimination.",
+      "assessment": "Especially relevant to command-guided missile chains; needs explicit observer-safe mechanics later.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-036",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "information-diplomacy-awareness",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/information-diplomacy-awareness"
+      ],
+      "idea": "Directional jamming can concentrate effect when threat direction is known, at the cost of coverage/flexibility.",
+      "assessment": "Interesting specialist system; avoid baseline facing/allocation micromanagement.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-SW-037",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "ammunition-stores",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-053",
+        "Storyboard/Projectile Weapons/Kinetic Point Defense/TL3",
+        "Storyboard/Projectile Weapons/Kinetic Point Defense/TL4"
+      ],
+      "idea": "Point-defense systems can use high-volume kinetic fire, proximity/submunition packages, local fire-control improvements and guided intercept rounds.",
+      "assessment": "Strong family-specific PDS progression vocabulary.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-038",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Projectile Weapons/Kinetic Point Defense/TL1",
+        "Storyboard/Projectile Weapons/Kinetic Point Defense/TL6"
+      ],
+      "idea": "Point defense operates during a short terminal closing interval in which reaction time and opportunities to re-engage an incoming threat are limited.",
+      "assessment": "Supports current abstraction; no need for turret-arc or burst-by-burst timing.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-039",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "ammunition-stores",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-054",
+        "Storyboard/Missile Weapons/Local AMM PDS and Extended Interceptor Defense/TL2",
+        "Storyboard/Missile Weapons/Local AMM PDS and Extended Interceptor Defense/TL5"
+      ],
+      "idea": "Anti-missile missiles form a distinct guided defensive layer with finite interceptor inventory and potentially longer reach than terminal gun/laser PDS.",
+      "assessment": "Natural future extended-defense family; keep distinct from standard terminal PDS.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-040",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "ammunition-stores",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/ammunition-stores"
+      ],
+      "idea": "Destroying or mission-killing an incoming missile can still leave high-velocity fragments that are physically hazardous.",
+      "assessment": "Record the physical caveat, but retain Star Cluster's attack-package abstraction and no universal residual-debris damage roll unless a special trait later earns one.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-SW-041",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "ammunition-stores",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-049",
+        "IdeaRegister/IDEA-092",
+        "Storyboard/Projectile Weapons/Kinetic Main Weapon/TL7"
+      ],
+      "idea": "Macron weapons fire enormous streams of microscopic projectiles that can be carried in very large physical quantities, while their electrostatic accelerator infrastructure can be substantial.",
+      "assessment": "Distinctive late-Kinetic trade: abundant attack material, demanding launcher.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-042",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-049",
+        "Storyboard/Projectile Weapons/Kinetic Main Weapon/TL7"
+      ],
+      "idea": "Fissile or fusion payloads inside macrons can release additional nuclear energy on impact, and related microreaction concepts can also be used for power generation or propulsion.",
+      "assessment": "Excellent example of enabling science shared across categories without merging ownership.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-043",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-038",
+        "Storyboard/Energy Weapons/Charged-Particle / Ion Beam Branch/TL5",
+        "Storyboard/Energy Weapons/Charged-Particle / Ion Beam Branch/TL7"
+      ],
+      "idea": "Particle species can shift a beam from shallow material damage toward deeper ionization/radiation and electronics effects.",
+      "assessment": "Strong subtype/progression axis; does not require a universal radiation bar.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-044",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-039",
+        "Storyboard/Energy Weapons/Charged-Particle / Ion Beam Branch/TL6"
+      ],
+      "idea": "Neutralizing a charged particle beam after acceleration can reduce electrostatic bloom and preserve a tighter beam over distance.",
+      "assessment": "Strong qualitative maturation step.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-045",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-030",
+        "IdeaRegister/IDEA-033",
+        "IdeaRegister/IDEA-089",
+        "IdeaRegister/IDEA-093",
+        "Storyboard/Armor/Armor Enhancement Branches/TL7",
+        "Storyboard/Shields/Defensive Field Generator/TL5",
+        "Storyboard/Shields/Shield Support and Specialist Fields/TL5"
+      ],
+      "idea": "Electrostatic, magnetic and plasma-screen defenses provide specialist countermeasure concepts against particle beams.",
+      "assessment": "Prefer specialist auxiliaries/traits over redefining ordinary shields.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-046",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Energy Weapons/Charged-Particle / Ion Beam Branch/TL8"
+      ],
+      "idea": "Ultra-relativistic electron beams greatly reduce bloom, carry extreme energy, penetrate strongly, generate high-energy secondary radiation and are very difficult to deflect.",
+      "assessment": "Preserve as exceptional/Precursor/very-late candidate unless substantial costs and counters are proven.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-047",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Continuous-wave and pulsed lasers deposit energy differently; short high-energy pulses can create mechanical shock and drilling-like effects, and pulse duration changes the result.",
+      "assessment": "Strong basis for a pulsed-laser maturation step; exact DAM/APEN/mode mechanics remain open.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-SW-048",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "ammunition-stores",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/ammunition-stores"
+      ],
+      "idea": "Chemical lasers can trade finite expendable reactants for high output/reduced ship electrical dependence.",
+      "assessment": "Useful faction/specialist Beam identity; Beam does not have to mean infinite electrical ammunition.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-SW-049",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "fuel-endurance",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/fuel-endurance"
+      ],
+      "idea": "Distributed strategic focusing arrays can create system-scale laser infrastructure useful for weapons, propulsion, sensing, communications or power transfer.",
+      "assessment": "Better fit for installations/Precursor infrastructure than ordinary cruiser Main Weapons.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-SW-050",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Superweapon status is a role/scale/narrative descriptor, and extraordinary effects can emerge from unusual uses of established systems rather than a dedicated weapon family.",
+      "assessment": "Do not create a Superweapon TL family; use rare scenario/Precursor/artifact effects when appropriate.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-SW-051",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Missile Weapons/Missile Warhead Families/TL1"
+      ],
+      "idea": "Nuclear devices are commonly missile-delivered, and nuclear energy can also be engineered into several directed terminal effects rather than only an omnidirectional detonation.",
+      "assessment": "Strong support for separating missile delivery/guidance from warhead effect.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-052",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-058",
+        "Storyboard/Missile Weapons/Missile Warhead Families/TL3",
+        "Storyboard/Missile Weapons/Missile Warhead Families/TL4"
+      ],
+      "idea": "Bomb-pumped beams, directed plasma charges and nuclear formed penetrators can focus nuclear output into qualitatively different terminal attack mechanisms.",
+      "assessment": "Rich advanced-warhead vocabulary; exact Star Cluster stats remain open.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-053",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Missile Weapons/Missile Warhead Families/TL5"
+      ],
+      "idea": "The same directed nuclear-energy principles can be applied to propulsion or converted back into weapons such as plasma jets and explosively formed penetrators.",
+      "assessment": "Use causal prerequisite tags if adopted; do not merge the research families.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-054",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Missile Weapons/Missile Warhead Families/TL6"
+      ],
+      "idea": "Enhanced-radiation nuclear devices deliberately shift more of their output toward neutrons, threatening crew over distances where strong material damage may be much lower.",
+      "assessment": "Potential niche payload after crew/internal systems mature; specialist hardening can counter it.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-055",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/thermal-radiation"
+      ],
+      "idea": "A deliberately broader, shorter-ranged directed nuclear effect can be used defensively to destroy incoming weapons across a volume of space.",
+      "assessment": "Interesting AMM/emergency-defense concept with obvious scarcity/collateral costs.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-SW-056",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "fuel-endurance",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Missile Weapons/Missile Launcher, Flight and Propulsion/TL1"
+      ],
+      "idea": "Missile designs vary separately in propulsion/endurance, guidance and sensors, warhead type, physical size and launcher integration.",
+      "assessment": "Strong structural support for modular missile progression.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-057",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "ammunition-stores",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/ammunition-stores"
+      ],
+      "idea": "Unguided rockets/torpedoes remain a legitimate distinct munition form with shorter useful reach but lower guidance complexity.",
+      "assessment": "Supports retaining unguided rockets as a real capability combination.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-SW-058",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "information-diplomacy-awareness",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-057",
+        "Storyboard/Missile Weapons/Missile Guidance, Seeker and Counter-Countermeasures/TL4",
+        "Storyboard/Missile Weapons/Missile Guidance, Seeker and Counter-Countermeasures/TL6"
+      ],
+      "idea": "Seeker sophistication and countermeasures form an arms race in discrimination, decoys/blinding and onboard power/integration complexity.",
+      "assessment": "Higher-TL guidance can improve robustness/information quality rather than raw warhead damage.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-059",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-056",
+        "Storyboard/Missile Weapons/Missile Launcher, Flight and Propulsion/TL5"
+      ],
+      "idea": "Many-small versus few-large missile designs trade defensive saturation against per-vehicle sensor, power, protection and payload capability.",
+      "assessment": "Maps naturally to different physical compositions inside one Missile Flight abstraction.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-060",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "fuel-endurance",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-087",
+        "Storyboard/Missile Weapons/Missile Launcher, Flight and Propulsion/TL2"
+      ],
+      "idea": "Missile engine/propellant choices trade acceleration, range/endurance and cost; beamed-power propulsion can extend range while shifting the propulsion power burden back to the launching platform.",
+      "assessment": "Useful progression axis; beamed-power missiles need a distinct reason to exist over firing the beam directly.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-061",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Projectile Weapons/Kinetic Ammunition and Projectile Packages/TL1",
+        "Storyboard/Projectile Weapons/Kinetic Ammunition and Projectile Packages/TL5"
+      ],
+      "idea": "Projectile mass, velocity and construction can trade broad energy deposition against narrow penetration/internal effects.",
+      "assessment": "Supports family-appropriate DAM/APEN trade space without automatic penetration every TL.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-062",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/thermal-radiation"
+      ],
+      "idea": "Coilguns require precise staged electromagnetic timing, while railguns avoid that timing burden but face high-current, heating, arcing, erosion and materials problems.",
+      "assessment": "Good sparse cross-category prerequisite vocabulary.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-SW-063",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Kinetic launchers can require recoil compensation, structural bracing, cooling and wear management in addition to the accelerator and projectile themselves.",
+      "assessment": "Strong abstraction support.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-SW-064",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "ammunition-stores",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-048",
+        "Storyboard/Projectile Weapons/Kinetic Ammunition and Projectile Packages/TL4",
+        "Storyboard/Projectile Weapons/Kinetic Main Weapon/TL6"
+      ],
+      "idea": "Proximity/submunition Kinetic packages can trade individual hit effect for a larger effective interception/damage volume, especially against exposed or small systems.",
+      "assessment": "Interesting ammunition specialization; avoid generic size accuracy modifiers.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-SW-065",
+      "sourceId": "SD-SW",
+      "sourceDisposition": "defer",
+      "foundationDomain": "fuel-endurance",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Missile Weapons/Local AMM PDS and Extended Interceptor Defense/TL7",
+        "Storyboard/Missile Weapons/Missile Launcher, Flight and Propulsion/TL4"
+      ],
+      "idea": "Missile closing speed, maneuver and remaining propellant affect the terminal interception opportunity available to point defense.",
+      "assessment": "Useful rationale for bounded terminal-defense windows; defer detailed closing-time simulation.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q06-001",
+      "sourceId": "SD-Q06",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Exploration is purposeful knowledge acquisition - mapping, resources, science and contact - rather than merely arriving first.",
+      "assessment": "Strong fit for Star Cluster exploration goals.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q06-002",
+      "sourceId": "SD-Q06",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-062",
+        "Storyboard/Computing / Fire Control/Autonomy, Networking and Digital Crew/TL7"
+      ],
+      "idea": "Sensors and disposable/reusable probes can automate tedious surveying while leaving the player to choose what merits investigation and risk.",
+      "assessment": "High-interest probe/survey direction; avoid repetitive manual scanning minigames.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q06-003",
+      "sourceId": "SD-Q06",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "repair-salvage-fabrication",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-125",
+        "IdeaRegister/IDEA-126"
+      ],
+      "idea": "Exploration ships benefit from endurance, ruggedness, efficiency, field repairability and carried spares because distant failures may be hard to fix.",
+      "assessment": "Strong support for self-sufficiency tradeoffs using existing repair/fuel systems.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q06-004",
+      "sourceId": "SD-Q06",
+      "sourceDisposition": "defer",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Long expeditions are constrained by consumables and replenishment opportunities, and specialized harvesting equipment trades against carrying more supplies or better recycling.",
+      "assessment": "Model through broad resources/equipment choices rather than food/water calorie accounting.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-Q06-005",
+      "sourceId": "SD-Q06",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-063",
+        "Storyboard/Computing / Fire Control/Autonomy, Networking and Digital Crew/TL7",
+        "Storyboard/Hull/Maintainability and Damage Control/TL9"
+      ],
+      "idea": "Very advanced self-sufficiency technology can erase the feeling of distance unless failures or other constraints preserve meaningful expedition choices.",
+      "assessment": "Higher TL should reduce expedition problems without deleting the press-on/return-home tension.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q06-006",
+      "sourceId": "SD-Q06",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "repair-salvage-fabrication",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/repair-salvage-fabrication"
+      ],
+      "idea": "Isolation from rescue and the possibility of being unable to return are core exploration hazards.",
+      "assessment": "Strong support for strandedness and return capability as campaign stakes.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q06-007",
+      "sourceId": "SD-Q06",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Local resource gathering can extend an expedition, but extraction hardware competes with other ship capacity and may only be valuable in some failures/routes.",
+      "assessment": "Good optional expedition specialization; no large inventory taxonomy required.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-Q06-008",
+      "sourceId": "SD-Q06",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Exploration is more memorable when discoveries have context and consequences rather than being interchangeable procedural scan targets.",
+      "assessment": "Use procedural generation to create distinct situations/decisions, not repetitive collection chores.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q09-001",
+      "sourceId": "SD-Q09",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-133",
+        "Storyboard/Sensors / EW/Sensor Suite/TL1"
+      ],
+      "idea": "Passive sensing and active sensing provide different information and emission tradeoffs; even encrypted communications can reveal direction or activity.",
+      "assessment": "Strong support for separate active/passive behavior and observable emissions.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q09-002",
+      "sourceId": "SD-Q09",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Different sensing modalities specialize in search, range, motion or identification rather than one sensor being best at everything.",
+      "assessment": "Useful rationale for abstract multimodal suites; do not expose six separate sensor-control panels.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q09-003",
+      "sourceId": "SD-Q09",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Sensors / EW/Sensor Suite/TL1"
+      ],
+      "idea": "Broad search/detection and precision fire-control tracking are distinct sensing tasks with different accuracy requirements.",
+      "assessment": "Strong support for search versus Firm weapons-quality track and Sensors versus Computing/Fire Control separation.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q09-004",
+      "sourceId": "SD-Q09",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Sensors / EW/Electronic Counter-Countermeasures/TL4",
+        "Storyboard/Sensors / EW/Sensor Suite/TL4"
+      ],
+      "idea": "Redundant or multimodal sensing can preserve useful information when one channel is jammed, obscured or damaged.",
+      "assessment": "High-interest progression direction without simply raising sensor range.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q09-005",
+      "sourceId": "SD-Q09",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Active fire-control illumination or other active sensing can warn the target that it is being observed or precisely tracked.",
+      "assessment": "Potential observer-safe warning information without exposing hidden enemy ratings.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-Q09-006",
+      "sourceId": "SD-Q09",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Computing / Fire Control/Tactical Computer and Fire Control/TL6",
+        "Storyboard/Energy Weapons/Energy / Beam Point Defense/TL5",
+        "Storyboard/Sensors / EW/Electronic Countermeasures/TL5",
+        "Storyboard/Sensors / EW/Sensor Suite/TL4"
+      ],
+      "idea": "Phased arrays and advanced processing can combine rapid steering, multiple tracks, communication/datalink and resistance to interference.",
+      "assessment": "Strong integrated-sensor maturation concept; keep player controls simple.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q09-007",
+      "sourceId": "SD-Q09",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-018",
+        "Storyboard/Computing / Fire Control/Tactical Computer and Fire Control/TL6",
+        "Storyboard/Sensors / EW/Electronic Counter-Countermeasures/TL6",
+        "Storyboard/Sensors / EW/Sensor Suite/TL4"
+      ],
+      "idea": "Friendly assets can share observations or hand off targeting information, making cooperative sensing a distinct capability from one sensor being stronger.",
+      "assessment": "High-interest networked-sensing candidate; preserve track provenance and information parity.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q09-008",
+      "sourceId": "SD-Q09",
+      "sourceDisposition": "defer",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-020",
+        "IdeaRegister/IDEA-094",
+        "Storyboard/Missile Weapons/Missile Guidance, Seeker and Counter-Countermeasures/TL8",
+        "Storyboard/Sensors / EW/Electronic Counter-Countermeasures/TL8",
+        "Storyboard/Sensors / EW/Sensor Suite/TL7"
+      ],
+      "idea": "Exotic high-energy sensing channels can counter some low-observability techniques but require specialized emitters/detectors.",
+      "assessment": "Good alien/high-TL candidate, not an ordinary toggle.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q09-009",
+      "sourceId": "SD-Q09",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Advanced sensing can require substantial computation for beam steering, noise filtering, detection tracking, track processing and signature recognition.",
+      "assessment": "Supports sparse causal cross-category requirements.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q09-010",
+      "sourceId": "SD-Q09",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "A precise positional/fire-control track need not imply complete identification of target class, equipment or intent.",
+      "assessment": "Useful information-control guardrail: Firm position can remain distinct from intelligence/identification.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-Q10-001",
+      "sourceId": "SD-Q10",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "power-energy",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Power/Late Fission Specialist Revival/TL7",
+        "Storyboard/Propulsion/Specialist Sublight Drives/TL1"
+      ],
+      "idea": "Power-source suitability depends on mission, environment, scale, required output and operating duration rather than one universally superior generator.",
+      "assessment": "Supports overlapping technology generations and specialist sources.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q10-002",
+      "sourceId": "SD-Q10",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Power/Main Reactor Generation/TL1"
+      ],
+      "idea": "Fission, fusion and antimatter systems carry different shielding, conversion, containment and integration burdens in addition to raw output.",
+      "assessment": "Useful family-specific progression vocabulary; avoid separate thermal/containment meters by default.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q10-003",
+      "sourceId": "SD-Q10",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "power-energy",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-002",
+        "Storyboard/Power/Pulse Storage and Power Conditioning/TL1"
+      ],
+      "idea": "Power generation and energy storage solve different problems: sustained supply versus temporal mismatch and peak demand.",
+      "assessment": "High-interest distinction for batteries/capacitors and future power progression.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q10-004",
+      "sourceId": "SD-Q10",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "power-energy",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/power-energy"
+      ],
+      "idea": "Storage technologies trade capacity, discharge rate, recharge, retention, footprint, cooling and reliability rather than scaling one capacity number.",
+      "assessment": "Strong qualitative storage progression axis.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-Q10-005",
+      "sourceId": "SD-Q10",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "power-energy",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Power/Thermal Management and Energy Conversion/TL6"
+      ],
+      "idea": "Fusion power can convert fusion output through thermodynamic cycles or through more direct electrostatic/electromagnetic conversion methods.",
+      "assessment": "Good TL maturation concept without compulsory output inflation.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q10-006",
+      "sourceId": "SD-Q10",
+      "sourceDisposition": "defer",
+      "foundationDomain": "power-energy",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-008",
+        "IdeaRegister/IDEA-059",
+        "Storyboard/Missile Weapons/Missile Launcher, Flight and Propulsion/TL7",
+        "Storyboard/Missile Weapons/Missile Warhead Families/TL7",
+        "Storyboard/Power/Main Reactor Generation/TL5",
+        "Storyboard/Propulsion/Sublight Propulsion/TL5"
+      ],
+      "idea": "Antimatter offers very high energy release and can catalyze fission or fusion, but production, storage and powered containment are severe constraints.",
+      "assessment": "Interesting overlapping-generation path; exact Star Cluster TL mapping remains open.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q10-007",
+      "sourceId": "SD-Q10",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Propulsion/Sublight Propulsion/TL1",
+        "Storyboard/Propulsion/Sublight Propulsion/TL3"
+      ],
+      "idea": "Several power technologies can also be applied directly to propulsion, such as solar heating, nuclear thermal propulsion and fusion engines.",
+      "assessment": "Supports sparse cross-pollination rather than merging categories.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q10-008",
+      "sourceId": "SD-Q10",
+      "sourceDisposition": "defer",
+      "foundationDomain": "power-energy",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Power/Late Fission Specialist Revival/TL7"
+      ],
+      "idea": "Solar, radioisotope and beamed-power systems can be useful specialist sources for probes, infrastructure or niche missions even when unsuitable as main combat reactors.",
+      "assessment": "Good worldbuilding/scenario technology; not every source needs a player-cruiser component.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q10-009",
+      "sourceId": "SD-Q10",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/thermal-radiation"
+      ],
+      "idea": "Power systems can require substantial support infrastructure such as radiators, radiation shielding, containment, cryogenic cooling or structural reinforcement.",
+      "assessment": "Strong support for current abstraction philosophy.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q10-010",
+      "sourceId": "SD-Q10",
+      "sourceDisposition": "defer",
+      "foundationDomain": "fuel-endurance",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/fuel-endurance"
+      ],
+      "idea": "Potential power and propulsion resources such as water, methane and fissile material can be found or processed from bodies within a solar system.",
+      "assessment": "Use broad compatible-resource/logistics abstractions if needed.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-Q12-001",
+      "sourceId": "SD-Q12",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Sensors / EW/Signature Management and Stealth/TL1"
+      ],
+      "idea": "Stealth is reduced observability and uncertainty, not binary invisibility.",
+      "assessment": "Strong fit for graded observer information.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q12-002",
+      "sourceId": "SD-Q12",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Sensors / EW/Signature Management and Stealth/TL1"
+      ],
+      "idea": "Low observability is sensor-specific; suppressing one signature channel does not automatically defeat every detection method.",
+      "assessment": "Avoid one universal stealth number if future mechanics need channel distinctions, but keep player controls simple.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q12-003",
+      "sourceId": "SD-Q12",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Detection, identification and precise tracking are distinct mission-relevant information layers, and stealth can defeat any one of them without making the ship nonexistent.",
+      "assessment": "High-interest support for existing graded track architecture.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-Q12-004",
+      "sourceId": "SD-Q12",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-024",
+        "Storyboard/Power/Thermal Management and Energy Conversion/TL5",
+        "Storyboard/Sensors / EW/Signature Management and Stealth/TL5"
+      ],
+      "idea": "Thermal and propulsion emissions are difficult to hide; suppressing them tends to be temporary, costly or operationally constraining.",
+      "assessment": "Strong candidate for bounded quiet/thermal-suppression behavior, not a heat meter.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q12-005",
+      "sourceId": "SD-Q12",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-019",
+        "Storyboard/Sensors / EW/Sensor Suite/TL5",
+        "Storyboard/Sensors / EW/Signature Management and Stealth/TL3"
+      ],
+      "idea": "Ship actions such as hard burns, active sensing and other emissions can change observability over time.",
+      "assessment": "High-interest action-dependent signature direction.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q12-006",
+      "sourceId": "SD-Q12",
+      "sourceDisposition": "defer",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-025",
+        "Storyboard/Sensors / EW/Signature Management and Stealth/TL6"
+      ],
+      "idea": "Low-observable design can conflict with the ship's own sensing/emission needs; low-probability-of-intercept and advanced integration can mitigate that trade.",
+      "assessment": "Useful high-TL integration idea without guaranteeing perfect stealth.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q12-007",
+      "sourceId": "SD-Q12",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Stealth and electronic warfare can reinforce each other but remain different tools: one reduces observability while the other interferes with information/discrimination.",
+      "assessment": "Preserve separate subsystem identities.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q12-008",
+      "sourceId": "SD-Q12",
+      "sourceDisposition": "defer",
+      "foundationDomain": "information-diplomacy-awareness",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-026",
+        "Storyboard/Sensors / EW/Signature Management and Stealth/TL8"
+      ],
+      "idea": "Passive low-observability design and active cloaking are distinct concepts with different costs and failure modes.",
+      "assessment": "If active cloak ever appears, treat it as a costly special system rather than Stealth +N.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q12-009",
+      "sourceId": "SD-Q12",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "All-angle observation in space makes perfect passive concealment difficult, especially for powered craft.",
+      "assessment": "Good guardrail against routine total invisibility.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q12-010",
+      "sourceId": "SD-Q12",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Even suspected presence without exact position/identity can create tactical value, uncertainty and route pressure.",
+      "assessment": "Supports observer-safe suspected-contact states.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-Q13-001",
+      "sourceId": "SD-Q13",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Biological and mechanical spacecraft form a continuum rather than mutually exclusive categories.",
+      "assessment": "Good taxonomy guardrail for alien generation.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q13-002",
+      "sourceId": "SD-Q13",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Construction method, outward appearance and sentience/agency are independent design axes.",
+      "assessment": "Important: organic-looking need not mean living, and living need not look organic.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-Q13-003",
+      "sourceId": "SD-Q13",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-013"
+      ],
+      "idea": "Biotechnology can be integrated throughout a vessel or localized to particular components/armor/control systems.",
+      "assessment": "Strong fit for biological alien components using existing compatibility/support-tag architecture.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q13-004",
+      "sourceId": "SD-Q13",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "repair-salvage-fabrication",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-013"
+      ],
+      "idea": "Growth and regeneration are common biomechanical concepts but are not automatic properties of every living ship.",
+      "assessment": "Potential bounded self-healing branch; must be costed and explicitly present.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q13-005",
+      "sourceId": "SD-Q13",
+      "sourceDisposition": "defer",
+      "foundationDomain": "crew-marines",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/crew-marines"
+      ],
+      "idea": "Living ships can relate to crew as passengers, hosts, symbionts, integrated pilots or control organisms.",
+      "assessment": "Rich narrative/boarding possibilities; no universal crew mechanic required.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-Q13-006",
+      "sourceId": "SD-Q13",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "repair-salvage-fabrication",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-014",
+        "IdeaRegister/IDEA-080",
+        "Storyboard/Computing / Fire Control/Autonomy, Networking and Digital Crew/TL9"
+      ],
+      "idea": "Some biomechanical ship concepts depict the spacecraft itself as a sentient living being, in extreme cases treating the ship as equivalent to an entire civilization.",
+      "assessment": "High-interest narrative consequence for living alien ships.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q13-007",
+      "sourceId": "SD-Q13",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Biomimetic visual design can be functional, purely stylistic or both; mechanical ships can use organic visual language without being biological.",
+      "assessment": "Useful procedural visual grammar; not a gameplay rule.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q13-008",
+      "sourceId": "SD-Q13",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "installation-capacity",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/installation-capacity"
+      ],
+      "idea": "Repeated curves, ribs, spines, fins and subtly varying forms can create a coherent organic visual doctrine without copying a literal organism.",
+      "assessment": "Useful art/procedural-generation reference.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q13-009",
+      "sourceId": "SD-Q13",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "A spacecraft can look strongly mechanical while being living or sentient, while other designs can use biological-looking forms without being literal living organisms.",
+      "assessment": "Do not let organic/metallic art automatically reveal regeneration, sentience or other hidden mechanics.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q15-001",
+      "sourceId": "SD-Q15",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Hull/Cruiser Structural Integration/TL1",
+        "Storyboard/Power/Thermal Management and Energy Conversion/TL1"
+      ],
+      "idea": "Spacecraft must reject waste heat from power, electronics, crew and environment, making thermal management a foundational support requirement.",
+      "assessment": "Useful engineering basis for complete component footprint.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q15-002",
+      "sourceId": "SD-Q15",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Power/Thermal Management and Energy Conversion/TL1"
+      ],
+      "idea": "Spacecraft thermal-control systems can circulate coolant through heat exchangers and dedicated radiators to move internal waste heat to surfaces optimized for radiation.",
+      "assessment": "Strong support for hiding normal thermal support inside Space and operating characteristics.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q15-003",
+      "sourceId": "SD-Q15",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Armor/Armor Enhancement Branches/TL4",
+        "Storyboard/Hull/Cruiser Structural Integration/TL7",
+        "Storyboard/Power/Thermal Management and Energy Conversion/TL3"
+      ],
+      "idea": "Hotter/advanced radiators can reduce area and vulnerability but may demand more pumping power, materials capability or engineering complexity.",
+      "assessment": "Useful compactness-power-vulnerability tradeoff.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q15-004",
+      "sourceId": "SD-Q15",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/thermal-radiation"
+      ],
+      "idea": "Thermal survivability can be improved through redundancy, protection, tougher construction or retractable radiators, each with costs.",
+      "assessment": "Good technology/race differentiation without universal exposed radiator hit locations.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-Q15-005",
+      "sourceId": "SD-Q15",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-004",
+        "IdeaRegister/IDEA-024",
+        "Storyboard/Power/Thermal Management and Energy Conversion/TL5",
+        "Storyboard/Sensors / EW/Signature Management and Stealth/TL5"
+      ],
+      "idea": "Retracting radiators and relying on heat storage creates a temporary operating window before heat must be rejected again.",
+      "assessment": "High-interest thermal-suppression/protected-operation concept; prefer finite activations/duration/Strain over a heat bar.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q15-006",
+      "sourceId": "SD-Q15",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/thermal-radiation"
+      ],
+      "idea": "Radiators deliberately emit thermal photons, and sufficiently high-temperature radiators can become visibly luminous as their emission spectrum shifts.",
+      "assessment": "Strong physical basis for qualitative action-dependent signature states.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-Q15-007",
+      "sourceId": "SD-Q15",
+      "sourceDisposition": "defer",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/thermal-radiation"
+      ],
+      "idea": "Large radiator structures can be vulnerable in combat, motivating redundancy, protection, harder-to-damage designs or temporary retraction backed by heat storage.",
+      "assessment": "Potential effect through overload limits, Strain or reduced output rather than instant reactor explosion.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-Q15-008",
+      "sourceId": "SD-Q15",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/thermal-radiation"
+      ],
+      "idea": "Solid, moving, droplet, membrane, magnetic and plasma radiator concepts provide multiple technological/alien expressions of the same support function.",
+      "assessment": "Use as race/technology flavor and bounded traits, not separate universal cooling rules.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q15-009",
+      "sourceId": "SD-Q15",
+      "sourceDisposition": "defer",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-088"
+      ],
+      "idea": "Open-cycle cooling can handle exceptional thermal loads by consuming and discarding coolant rather than maintaining a closed loop.",
+      "assessment": "Possible finite-charge emergency/high-output auxiliary; do not add ordinary Coolant inventory by default.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q15-010",
+      "sourceId": "SD-Q15",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "thermal-radiation",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Power/Thermal Management and Energy Conversion/TL6"
+      ],
+      "idea": "Open-cycle cooling can be combined with closed-cycle radiators, using expendable coolant for unusually demanding thermal loads while radiators handle baseline continuous loads.",
+      "assessment": "Strong candidate for capability tags/support components rather than a sprawling research category.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q23-001",
+      "sourceId": "SD-Q23",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exotic-mobility",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Propulsion/Strategic FTL Drive/TL1"
+      ],
+      "idea": "FTL systems can be classified by travel topology - discontinuous versus continuous - and by constraints on entry, path and exit.",
+      "assessment": "Useful design-space taxonomy, not a replacement for current Star Cluster FTL.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q23-002",
+      "sourceId": "SD-Q23",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Propulsion/Strategic FTL Drive/TL4"
+      ],
+      "idea": "FTL systems differ in whether transit requires fixed infrastructure or location-specific access, or can instead be initiated by a self-contained ship.",
+      "assessment": "Use FTL rules to preserve exploration geography and route choices.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q23-003",
+      "sourceId": "SD-Q23",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-069",
+        "Storyboard/Propulsion/Transit Infrastructure and Natural/Artificial Routes/TL4",
+        "Storyboard/Propulsion/Transit Infrastructure and Natural/Artificial Routes/TL9"
+      ],
+      "idea": "Fixed gates, jump points and lanes naturally create chokepoints, shortcuts, crossroads and valuable locations.",
+      "assessment": "High-interest sector-population content layered on ordinary FTL.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q23-004",
+      "sourceId": "SD-Q23",
+      "sourceDisposition": "defer",
+      "foundationDomain": "exotic-mobility",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Propulsion/Strategic FTL Drive/TL2"
+      ],
+      "idea": "Navigable hyperspace can use fixed-exit, fixed-direction or freely navigable travel rules, each allowing a different degree of control after entry.",
+      "assessment": "Useful progression vocabulary; do not replace current ladder without a dedicated design decision.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q23-005",
+      "sourceId": "SD-Q23",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exotic-mobility",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/exotic-mobility"
+      ],
+      "idea": "Infrastructure-based FTL and self-contained ship FTL can coexist in one setting; common traffic may rely on gates while more capable ships create their own access.",
+      "assessment": "Strong asymmetric civilization concept with explicit constraints.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-Q23-006",
+      "sourceId": "SD-Q23",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-021",
+        "Storyboard/Sensors / EW/Sensor Suite/TL8"
+      ],
+      "idea": "Permanent FTL gateways or conduits can be natural or artificial and can act like fixed travel corridors between separated regions.",
+      "assessment": "Excellent Precursor/anomaly discovery type.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q23-007",
+      "sourceId": "SD-Q23",
+      "sourceDisposition": "defer",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Navigable hyperspace can contain hazards, currents or navigation requirements.",
+      "assessment": "Represent at route/event level rather than building a second tactical map.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-Q23-008",
+      "sourceId": "SD-Q23",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Propulsion/Strategic FTL Drive/TL9",
+        "Storyboard/Propulsion/Transit Infrastructure and Natural/Artificial Routes/TL7"
+      ],
+      "idea": "Some FTL environments depend on known routes, beacons or other navigation aids because travel away from them is dangerous.",
+      "assessment": "High-interest non-component exploration reward.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q23-009",
+      "sourceId": "SD-Q23",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Propulsion/Strategic FTL Drive/TL4",
+        "Storyboard/Propulsion/Strategic FTL Drive/TL6"
+      ],
+      "idea": "FTL access can be limited to particular locations, fixed routes, gateway devices or other entry conditions rather than being universally available everywhere.",
+      "assessment": "Preserve distance, strandedness and return-home decisions at high capability.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q23-010",
+      "sourceId": "SD-Q23",
+      "sourceDisposition": "defer",
+      "foundationDomain": "crew-marines",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-068",
+        "IdeaRegister/IDEA-136",
+        "Storyboard/Missile Weapons/Missile Launcher, Flight and Propulsion/TL9"
+      ],
+      "idea": "Object teleportation/portals are distinct capabilities from ordinary ship-scale interstellar FTL even when the fictional science overlaps.",
+      "assessment": "Keep separate so local logistics/boarding/tactical positioning are not accidentally erased.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q23-011",
+      "sourceId": "SD-Q23",
+      "sourceDisposition": "defer",
+      "foundationDomain": "exotic-mobility",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/exotic-mobility"
+      ],
+      "idea": "The FTL taxonomy also includes distance shrinking, local or regional light-speed modification, backward time travel and reality/coordinate alteration as extreme mechanism classes.",
+      "assessment": "Excellent singular-artifact inspiration; do not normalize it into ordinary TL advancement.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-Q24-001",
+      "sourceId": "SD-Q24",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exotic-mobility",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/exotic-mobility"
+      ],
+      "idea": "FTL design should begin with explicit capabilities, limitations, costs and consequences; fictional mechanism can come later.",
+      "assessment": "Strong validation of Star Cluster's rules-first approach.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q24-002",
+      "sourceId": "SD-Q24",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exotic-mobility",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/exotic-mobility"
+      ],
+      "idea": "FTL rules shape travel time, information flow, trade, governance, warfare and strategic geography rather than merely setting a speed number.",
+      "assessment": "Useful world-generation lens; no immediate gameplay-rule change.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q24-003",
+      "sourceId": "SD-Q24",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Propulsion/Strategic FTL Drive/TL5",
+        "Storyboard/Propulsion/Strategic FTL Drive/TL9"
+      ],
+      "idea": "A good FTL limitation creates decisions, encounters or geography rather than mere procedural inconvenience.",
+      "assessment": "Evaluate each restriction by the gameplay opportunity it creates.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q24-004",
+      "sourceId": "SD-Q24",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "foundation_captured",
+      "destinations": [
+        "FoundationAudit/exploration-comms"
+      ],
+      "idea": "Slow/flexible onboard FTL can coexist with much faster fixed transit infrastructure, preserving exploration freedom while creating strategic routes.",
+      "assessment": "Very high-interest sector-generation pattern; ordinary Star Cluster FTL remains the reliable baseline.",
+      "coverageReason": "Captured in the foundation ledger as a domain, hook, open item, or abstraction boundary."
+    },
+    {
+      "observationId": "SD-Q24-005",
+      "sourceId": "SD-Q24",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Propulsion/Transit Infrastructure and Natural/Artificial Routes/TL4"
+      ],
+      "idea": "Natural or artificial jump features become valuable content when they must be discovered, mapped, addressed, powered or otherwise understood.",
+      "assessment": "Excellent low-TL exploration opportunity through discovered routes.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q24-006",
+      "sourceId": "SD-Q24",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "fuel-endurance",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-126"
+      ],
+      "idea": "A small set of explicit FTL rules can produce many downstream setting consequences, as shown by examples built around travel time, jump distance, fuel, gravity limits, addresses, power and gate access.",
+      "assessment": "Use two or three legible constraints rather than a large FTL simulation.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q24-007",
+      "sourceId": "SD-Q24",
+      "sourceDisposition": "discuss",
+      "foundationDomain": "exotic-mobility",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-070",
+        "Storyboard/Propulsion/Transit Infrastructure and Natural/Artificial Routes/TL10"
+      ],
+      "idea": "Rare exceptions to established FTL rules work best when they are explicit exceptional phenomena rather than casual inconsistencies.",
+      "assessment": "A Precursor gate/artifact may break one ordinary rule because the exception itself is content.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q24-008",
+      "sourceId": "SD-Q24",
+      "sourceDisposition": "defer",
+      "foundationDomain": "exotic-mobility",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "Storyboard/Propulsion/Strategic FTL Drive/TL7"
+      ],
+      "idea": "FTL can be disrupted or interdicted in some settings, creating strategic/scenario possibilities.",
+      "assessment": "Preserve as advanced/alien/installation possibility; avoid routine universal FTL-jammer stat contests.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    },
+    {
+      "observationId": "SD-Q24-009",
+      "sourceId": "SD-Q24",
+      "sourceDisposition": "defer",
+      "foundationDomain": "fuel-endurance",
+      "coverageOutcome": "deferred",
+      "destinations": [
+        "FoundationAudit/fuel-endurance"
+      ],
+      "idea": "FTL cost, maintenance, fuel, specialist personnel or political control can differentiate access and civilization reach.",
+      "assessment": "Useful faction/worldbuilding distinction without mandatory player bureaucracy.",
+      "coverageReason": "Preserved as a future option or boundary; not promoted into ordinary technology."
+    },
+    {
+      "observationId": "SD-Q24-010",
+      "sourceId": "SD-Q24",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exotic-mobility",
+      "coverageOutcome": "abstraction_guardrail",
+      "destinations": [
+        "FoundationAudit/exotic-mobility"
+      ],
+      "idea": "FTL design can work forward from a chosen rule set or backward from the desired setting/story, and examining existing settings by reverse-engineering their rules can help.",
+      "assessment": "Mine the method, not Traveller/Stargate/Mass Effect numerical rules.",
+      "coverageReason": "Used as engineering rationale or a design warning without creating a new rule."
+    },
+    {
+      "observationId": "SD-Q24-011",
+      "sourceId": "SD-Q24",
+      "sourceDisposition": "retain_reference",
+      "foundationDomain": "exploration-comms",
+      "coverageOutcome": "incorporated",
+      "destinations": [
+        "IdeaRegister/IDEA-082",
+        "IdeaRegister/IDEA-133"
+      ],
+      "idea": "Whether faster-than-light communications exist is a separate rule from faster-than-light travel and strongly affects how quickly information, governance, trade and military reactions can spread.",
+      "assessment": "Useful strategic/worldbuilding axis to keep conceptually separate from ship travel; no Star Cluster rule change is made here.",
+      "coverageReason": "Explicitly cited by the active Technology Storyboard or Idea Register."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+profile_id,display_name,aux_capacity,reactor_output,power_component_count,battery_count,capacitor_count,independent_components,status
+aux-r56-auxiliary-reactor,TL3 Auxiliary Reactor +1 sustained TP,2,1,0,0,0,,screening_only
+aux-r56-bb-b3g1,Dual B3G1 Combat Batteries,2,0,2,2,0,b3g1-battery-a:CombatBattery; b3g1-battery-b:CombatBattery,screening_only
+aux-r56-bb-b4g1,Dual B4G1 Combat Batteries,2,0,2,2,0,b4g1-battery-a:CombatBattery; b4g1-battery-b:CombatBattery,screening_only
+aux-r56-bb-b3g2,Dual B3G2 Combat Batteries,2,0,2,2,0,b3g2-battery-a:CombatBattery; b3g2-battery-b:CombatBattery,screening_only
+aux-r56-bb-b4g2,Dual B4G2 Combat Batteries,2,0,2,2,0,b4g2-battery-a:CombatBattery; b4g2-battery-b:CombatBattery,screening_only
+aux-r56-cc-c2d1,Dual C2D1 Power Capacitors,2,0,2,0,2,c2d1-capacitor-a:PowerCapacitor; c2d1-capacitor-b:PowerCapacitor,screening_only
+aux-r56-cc-c3d1,Dual C3D1 Power Capacitors,2,0,2,0,2,c3d1-capacitor-a:PowerCapacitor; c3d1-capacitor-b:PowerCapacitor,screening_only
+aux-r56-cc-c2d2,Dual C2D2 Power Capacitors,2,0,2,0,2,c2d2-capacitor-a:PowerCapacitor; c2d2-capacitor-b:PowerCapacitor,screening_only
+aux-r56-cc-c3d2,Dual C3D2 Power Capacitors,2,0,2,0,2,c3d2-capacitor-a:PowerCapacitor; c3d2-capacitor-b:PowerCapacitor,screening_only
+aux-r56-bc-b3g1-c2d1,B3G1 Battery + C2D1 Capacitor,2,0,2,1,1,b3g1-battery:CombatBattery; c2d1-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b3g1-c3d1,B3G1 Battery + C3D1 Capacitor,2,0,2,1,1,b3g1-battery:CombatBattery; c3d1-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b3g1-c2d2,B3G1 Battery + C2D2 Capacitor,2,0,2,1,1,b3g1-battery:CombatBattery; c2d2-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b3g1-c3d2,B3G1 Battery + C3D2 Capacitor,2,0,2,1,1,b3g1-battery:CombatBattery; c3d2-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b4g1-c2d1,B4G1 Battery + C2D1 Capacitor,2,0,2,1,1,b4g1-battery:CombatBattery; c2d1-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b4g1-c3d1,B4G1 Battery + C3D1 Capacitor,2,0,2,1,1,b4g1-battery:CombatBattery; c3d1-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b4g1-c2d2,B4G1 Battery + C2D2 Capacitor,2,0,2,1,1,b4g1-battery:CombatBattery; c2d2-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b4g1-c3d2,B4G1 Battery + C3D2 Capacitor,2,0,2,1,1,b4g1-battery:CombatBattery; c3d2-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b3g2-c2d1,B3G2 Battery + C2D1 Capacitor,2,0,2,1,1,b3g2-battery:CombatBattery; c2d1-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b3g2-c3d1,B3G2 Battery + C3D1 Capacitor,2,0,2,1,1,b3g2-battery:CombatBattery; c3d1-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b3g2-c2d2,B3G2 Battery + C2D2 Capacitor,2,0,2,1,1,b3g2-battery:CombatBattery; c2d2-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b3g2-c3d2,B3G2 Battery + C3D2 Capacitor,2,0,2,1,1,b3g2-battery:CombatBattery; c3d2-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b4g2-c2d1,B4G2 Battery + C2D1 Capacitor,2,0,2,1,1,b4g2-battery:CombatBattery; c2d1-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b4g2-c3d1,B4G2 Battery + C3D1 Capacitor,2,0,2,1,1,b4g2-battery:CombatBattery; c3d1-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b4g2-c2d2,B4G2 Battery + C2D2 Capacitor,2,0,2,1,1,b4g2-battery:CombatBattery; c2d2-capacitor:PowerCapacitor,screening_only
+aux-r56-bc-b4g2-c3d2,B4G2 Battery + C3D2 Capacitor,2,0,2,1,1,b4g2-battery:CombatBattery; c3d2-capacitor:PowerCapacitor,screening_only

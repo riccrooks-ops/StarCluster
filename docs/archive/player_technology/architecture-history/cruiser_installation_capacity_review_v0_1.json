@@ -1,0 +1,542 @@
+{
+  "schemaVersion": 1,
+  "id": "cruiser-installation-capacity-review-v0_1",
+  "checkpoint": 50,
+  "date": "2026-08-06",
+  "status": "candidate_review_pending_human_acceptance",
+  "purpose": "Validate a bounded cruiser-scale Hull TL capacity curve with representative legal designs before deriving table-backed TL1/TL2 combat profiles.",
+  "capacityCurve": {
+    "auxiliaryCapacity": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 2,
+      "5": 3,
+      "6": 3,
+      "7": 3,
+      "8": 4,
+      "9": 4
+    },
+    "weaponBayCapacity": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 3,
+      "7": 3,
+      "8": 3,
+      "9": 4
+    },
+    "weaponBayMilestones": {
+      "1": 1,
+      "3": 2,
+      "6": 3,
+      "9": 4
+    },
+    "secondShuttleBerthTl": "deferred"
+  },
+  "historicalScreeningBoundary": {
+    "checkpoint48Tl2AuxCapacity": 2,
+    "normalTl2CandidateAuxCapacity": 1,
+    "rule": "Historical TL2 AUX=2 was a diagnostic screening allowance for capacity-2 candidates and is not a production-hull promotion."
+  },
+  "representativeProfiles": [
+    {
+      "id": "tl1-defense",
+      "tl": 1,
+      "role": "Defense specialist",
+      "weaponBaysAvailable": 1,
+      "weaponBaysUsed": 1,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 1,
+      "auxiliaryCapacityUsed": 1,
+      "auxiliaryModules": [
+        {
+          "id": "aux_kinetic_pds",
+          "displayName": "Kinetic Point-Defense Battery",
+          "entryTl": 1,
+          "capacityCost": 1
+        }
+      ],
+      "capacitySignal": "One AUX slot forces a clear defensive specialization.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl1-explorer",
+      "tl": 1,
+      "role": "Explorer",
+      "weaponBaysAvailable": 1,
+      "weaponBaysUsed": 1,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 1,
+      "auxiliaryCapacityUsed": 1,
+      "auxiliaryModules": [
+        {
+          "id": "aux_active_sensor_array",
+          "displayName": "Active Sensor Array",
+          "entryTl": 1,
+          "capacityCost": 1
+        }
+      ],
+      "capacitySignal": "One AUX slot forces a sensor-versus-combat tradeoff.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl2-power",
+      "tl": 2,
+      "role": "Power planner",
+      "weaponBaysAvailable": 1,
+      "weaponBaysUsed": 1,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 1,
+      "auxiliaryCapacityUsed": 1,
+      "auxiliaryModules": [
+        {
+          "id": "aux_power_capacitor",
+          "displayName": "Power Capacitor",
+          "entryTl": 2,
+          "capacityCost": 1
+        }
+      ],
+      "capacitySignal": "TL2 gains more component choice but not more normal-hull AUX capacity.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl2-ew",
+      "tl": 2,
+      "role": "EW specialist",
+      "weaponBaysAvailable": 1,
+      "weaponBaysUsed": 1,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 1,
+      "auxiliaryCapacityUsed": 1,
+      "auxiliaryModules": [
+        {
+          "id": "aux_ecm_suite",
+          "displayName": "Electronic Countermeasures Suite",
+          "entryTl": 1,
+          "capacityCost": 1
+        }
+      ],
+      "capacitySignal": "A single-slot TL2 hull cannot stack ECM with another AUX without a later Hull milestone.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl3-defense",
+      "tl": 3,
+      "role": "Layered defense",
+      "weaponBaysAvailable": 2,
+      "weaponBaysUsed": 2,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 2,
+      "auxiliaryCapacityUsed": 2,
+      "auxiliaryModules": [
+        {
+          "id": "aux_amm_pds",
+          "displayName": "Anti-Missile Missile Battery",
+          "entryTl": 3,
+          "capacityCost": 1
+        },
+        {
+          "id": "aux_shield_battery",
+          "displayName": "Shield Battery",
+          "entryTl": 3,
+          "capacityCost": 1
+        }
+      ],
+      "capacitySignal": "Two 1-capacity modules become legal at the first major integration milestone.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl3-power",
+      "tl": 3,
+      "role": "Power support",
+      "weaponBaysAvailable": 2,
+      "weaponBaysUsed": 2,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 2,
+      "auxiliaryCapacityUsed": 2,
+      "auxiliaryModules": [
+        {
+          "id": "aux_auxiliary_reactor",
+          "displayName": "Auxiliary Reactor",
+          "entryTl": 3,
+          "capacityCost": 2
+        }
+      ],
+      "capacitySignal": "A capacity-2 Auxiliary Reactor occupies the whole TL3 AUX allowance.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl4-repair",
+      "tl": 4,
+      "role": "Repair defense",
+      "weaponBaysAvailable": 2,
+      "weaponBaysUsed": 2,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 2,
+      "auxiliaryCapacityUsed": 2,
+      "auxiliaryModules": [
+        {
+          "id": "aux_shield_hardener",
+          "displayName": "Shield Hardener",
+          "entryTl": 4,
+          "capacityCost": 1
+        },
+        {
+          "id": "aux_repair_drone_bay",
+          "displayName": "Repair Drone Bay",
+          "entryTl": 4,
+          "capacityCost": 1
+        }
+      ],
+      "capacitySignal": "New future-SF modules expand choice without a free capacity increase.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl4-control",
+      "tl": 4,
+      "role": "Movement control",
+      "weaponBaysAvailable": 2,
+      "weaponBaysUsed": 2,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 2,
+      "auxiliaryCapacityUsed": 2,
+      "auxiliaryModules": [
+        {
+          "id": "aux_tractor_projector",
+          "displayName": "Tractor Projector",
+          "entryTl": 4,
+          "capacityCost": 2
+        }
+      ],
+      "capacitySignal": "A capacity-2 Tractor Projector remains a full AUX commitment at TL4.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl5-power-ew",
+      "tl": 5,
+      "role": "Power and EW",
+      "weaponBaysAvailable": 2,
+      "weaponBaysUsed": 2,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 3,
+      "auxiliaryCapacityUsed": 3,
+      "auxiliaryModules": [
+        {
+          "id": "aux_auxiliary_reactor",
+          "displayName": "Auxiliary Reactor",
+          "entryTl": 3,
+          "capacityCost": 2
+        },
+        {
+          "id": "aux_ecm_suite",
+          "displayName": "Electronic Countermeasures Suite",
+          "entryTl": 1,
+          "capacityCost": 1
+        }
+      ],
+      "capacitySignal": "Three AUX capacity permits a 2+1 combination for the first time.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl5-expedition",
+      "tl": 5,
+      "role": "Expedition support",
+      "weaponBaysAvailable": 2,
+      "weaponBaysUsed": 2,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 3,
+      "auxiliaryCapacityUsed": 3,
+      "auxiliaryModules": [
+        {
+          "id": "aux_hangar_bay",
+          "displayName": "Auxiliary Hangar Bay",
+          "entryTl": 3,
+          "capacityCost": 2
+        },
+        {
+          "id": "aux_laboratory_module",
+          "displayName": "Laboratory Module",
+          "entryTl": 1,
+          "capacityCost": 1
+        }
+      ],
+      "capacitySignal": "A two-capacity hangar can coexist with one specialist module.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl6-combat",
+      "tl": 6,
+      "role": "Mixed combat support",
+      "weaponBaysAvailable": 3,
+      "weaponBaysUsed": 3,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 3,
+      "auxiliaryCapacityUsed": 3,
+      "auxiliaryModules": [
+        {
+          "id": "aux_shield_booster",
+          "displayName": "Shield Booster",
+          "entryTl": 3,
+          "capacityCost": 1
+        },
+        {
+          "id": "aux_energy_pds",
+          "displayName": "Energy Point-Defense Array",
+          "entryTl": 2,
+          "capacityCost": 1
+        },
+        {
+          "id": "aux_combat_battery",
+          "displayName": "Combat Battery",
+          "entryTl": 1,
+          "capacityCost": 1
+        }
+      ],
+      "capacitySignal": "Three one-capacity combat supports compete with the newly expanded weapon suite.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl6-logistics",
+      "tl": 6,
+      "role": "Logistics cruiser",
+      "weaponBaysAvailable": 3,
+      "weaponBaysUsed": 3,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 3,
+      "auxiliaryCapacityUsed": 3,
+      "auxiliaryModules": [
+        {
+          "id": "aux_fabrication_module",
+          "displayName": "Fabrication Module",
+          "entryTl": 3,
+          "capacityCost": 2
+        },
+        {
+          "id": "aux_cargo_expansion",
+          "displayName": "Cargo Expansion Module",
+          "entryTl": 1,
+          "capacityCost": 1
+        }
+      ],
+      "capacitySignal": "A 2+1 utility combination remains bounded at three AUX capacity.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl7-resilience",
+      "tl": 7,
+      "role": "Resilience support",
+      "weaponBaysAvailable": 3,
+      "weaponBaysUsed": 3,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 3,
+      "auxiliaryCapacityUsed": 3,
+      "auxiliaryModules": [
+        {
+          "id": "aux_auxiliary_reactor",
+          "displayName": "Auxiliary Reactor",
+          "entryTl": 3,
+          "capacityCost": 2
+        },
+        {
+          "id": "aux_repair_drone_bay",
+          "displayName": "Repair Drone Bay",
+          "entryTl": 4,
+          "capacityCost": 1
+        }
+      ],
+      "capacitySignal": "Self-healing remains excluded until its capacity cost and mechanics are defined.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl7-ew",
+      "tl": 7,
+      "role": "Information warfare",
+      "weaponBaysAvailable": 3,
+      "weaponBaysUsed": 3,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 3,
+      "auxiliaryCapacityUsed": 3,
+      "auxiliaryModules": [
+        {
+          "id": "aux_active_sensor_array",
+          "displayName": "Active Sensor Array",
+          "entryTl": 1,
+          "capacityCost": 1
+        },
+        {
+          "id": "aux_ecm_suite",
+          "displayName": "Electronic Countermeasures Suite",
+          "entryTl": 1,
+          "capacityCost": 1
+        },
+        {
+          "id": "aux_eccm_suite",
+          "displayName": "Electronic Counter-Countermeasures Suite",
+          "entryTl": 1,
+          "capacityCost": 1
+        }
+      ],
+      "capacitySignal": "Three related one-capacity modules can form a specialized late-game information build.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl8-heavy-support",
+      "tl": 8,
+      "role": "Heavy support",
+      "weaponBaysAvailable": 3,
+      "weaponBaysUsed": 3,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 4,
+      "auxiliaryCapacityUsed": 4,
+      "auxiliaryModules": [
+        {
+          "id": "aux_tractor_projector",
+          "displayName": "Tractor Projector",
+          "entryTl": 4,
+          "capacityCost": 2
+        },
+        {
+          "id": "aux_auxiliary_reactor",
+          "displayName": "Auxiliary Reactor",
+          "entryTl": 3,
+          "capacityCost": 2
+        }
+      ],
+      "capacitySignal": "Four AUX capacity permits two capacity-2 systems but consumes the full allowance.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl8-expedition",
+      "tl": 8,
+      "role": "Deep expedition",
+      "weaponBaysAvailable": 3,
+      "weaponBaysUsed": 3,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 4,
+      "auxiliaryCapacityUsed": 4,
+      "auxiliaryModules": [
+        {
+          "id": "aux_hangar_bay",
+          "displayName": "Auxiliary Hangar Bay",
+          "entryTl": 3,
+          "capacityCost": 2
+        },
+        {
+          "id": "aux_fabrication_module",
+          "displayName": "Fabrication Module",
+          "entryTl": 3,
+          "capacityCost": 2
+        }
+      ],
+      "capacitySignal": "Two large utility modules fit only after the TL8 AUX milestone.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl9-balanced",
+      "tl": 9,
+      "role": "Balanced pinnacle",
+      "weaponBaysAvailable": 4,
+      "weaponBaysUsed": 4,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 4,
+      "auxiliaryCapacityUsed": 4,
+      "auxiliaryModules": [
+        {
+          "id": "aux_shield_hardener",
+          "displayName": "Shield Hardener",
+          "entryTl": 4,
+          "capacityCost": 1
+        },
+        {
+          "id": "aux_power_stabilizer",
+          "displayName": "Shield Power Stabilizer",
+          "entryTl": 3,
+          "capacityCost": 1
+        },
+        {
+          "id": "aux_repair_drone_bay",
+          "displayName": "Repair Drone Bay",
+          "entryTl": 4,
+          "capacityCost": 1
+        },
+        {
+          "id": "aux_combat_battery",
+          "displayName": "Combat Battery",
+          "entryTl": 1,
+          "capacityCost": 1
+        }
+      ],
+      "capacitySignal": "Four one-capacity systems give breadth without unbounded stacking.",
+      "status": "legal_capacity_fixture"
+    },
+    {
+      "id": "tl9-heavy-support",
+      "tl": 9,
+      "role": "Heavy pinnacle support",
+      "weaponBaysAvailable": 4,
+      "weaponBaysUsed": 4,
+      "weaponBayFixture": "standard one-bay batteries; exact production mix not promoted",
+      "auxiliaryCapacityAvailable": 4,
+      "auxiliaryCapacityUsed": 4,
+      "auxiliaryModules": [
+        {
+          "id": "aux_tractor_projector",
+          "displayName": "Tractor Projector",
+          "entryTl": 4,
+          "capacityCost": 2
+        },
+        {
+          "id": "aux_auxiliary_reactor",
+          "displayName": "Auxiliary Reactor",
+          "entryTl": 3,
+          "capacityCost": 2
+        }
+      ],
+      "capacitySignal": "Two capacity-2 systems still consume the full TL9 AUX allowance.",
+      "status": "legal_capacity_fixture"
+    }
+  ],
+  "weaponBayStressCases": [
+    {
+      "id": "tl3-two-bay-oversized",
+      "tl": 3,
+      "weaponBaysAvailable": 2,
+      "occupancies": [
+        2
+      ],
+      "result": "legal_full_commitment",
+      "purpose": "A hypothetical 2-bay weapon displaces all other primary batteries at the first expansion milestone."
+    },
+    {
+      "id": "tl6-two-plus-one",
+      "tl": 6,
+      "weaponBaysAvailable": 3,
+      "occupancies": [
+        2,
+        1
+      ],
+      "result": "legal_full_commitment",
+      "purpose": "A 2-bay weapon can coexist with one ordinary battery at the TL6 milestone."
+    },
+    {
+      "id": "tl9-three-plus-one",
+      "tl": 9,
+      "weaponBaysAvailable": 4,
+      "occupancies": [
+        3,
+        1
+      ],
+      "result": "legal_full_commitment",
+      "purpose": "A rare 3-bay system can coexist with one ordinary battery without requiring battleship-scale growth."
+    }
+  ],
+  "unresolved": [
+    "Exact TL for the second shuttle berth.",
+    "Capacity cost and mechanics of the TL7+ Self-Healing Repair System.",
+    "Exact TL9 Hull capstone beyond the fourth Weapon Bay.",
+    "Numerical values for table-backed TL1/TL2 profiles and multi-AUX stacking balance."
+  ]
+}

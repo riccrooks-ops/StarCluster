@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "star-cluster-canonical-numerical-authority-v0.3",
+  "checkpoint": 127,
+  "acceptedImplementationBaseline": 122,
+  "status": "main_subsystem_stabilization_candidate_pending_native_acceptance",
+  "damagePointScale": 2,
+  "primaryReferenceMatrix": "technology_numerical_matrix_v0_4.json",
+  "primaryTechnologyTable": "technology_component_table_v0_6.json",
+  "storyboard": "technology_family_storyboard_v1_5.json",
+  "productionRuntimeChanged": false,
+  "scenarioDefinitionsChanged": false,
+  "balanceCalibrationRun": true,
+  "newScenarioCount": 0,
+  "criticalCadenceMigrated": false,
+  "productionRepairHullPerKitTl1": 1,
+  "authorityBoundary": "CP122 remains the accepted production implementation baseline. CP126 is the accepted full-map evidence baseline. CP127 proposes the stabilized main-subsystem TL1-TL9 reference for native validation and subsequent broad TL-sensitivity work; most AUX progression remains deferred.",
+  "acceptedEvidenceBaseline": 126,
+  "activeConcept": "docs/Star_Cluster_Game_Concept_v0.7r.docx",
+  "technologyValuesChanged": true,
+  "numericLeafChangesFromV0_3": 9,
+  "movementInvariants": {
+    "stlStandardMove": "Drive TL",
+    "operationalMissileMove": "Missile Drive TL + 1"
+  },
+  "deliberateStrategicFtlLadder": [
+    1,
+    2,
+    3,
+    4,
+    4,
+    6,
+    7,
+    9,
+    12
+  ],
+  "tl8EnergyOutputDamage": {
+    "low": 7,
+    "standard": 10,
+    "high": 12
+  }
+}

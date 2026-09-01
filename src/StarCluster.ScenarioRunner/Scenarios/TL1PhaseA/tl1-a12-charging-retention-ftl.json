@@ -1,0 +1,597 @@
+{
+  "schemaVersion": "star-cluster-tl1-phase-a-v1",
+  "id": "tl1-a12-charging-retention-ftl",
+  "matrixScenarioId": "TL1-A12",
+  "name": "Charging, retention, safe discharge, and FTL reset",
+  "baselineVersion": "tl1-core-combat-v0.1",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "cases": [
+    {
+      "id": "a12-c01",
+      "name": "Consecutive charge payments produce a Ready weapon",
+      "operation": "chargedWeaponScript",
+      "input": {
+        "requiredChargeTurns": 2,
+        "chargePowerPerTurn": 1,
+        "retentionAllowed": true,
+        "retentionUpkeep": 1,
+        "steps": [
+          {
+            "action": "beginTurn",
+            "envelope": 5
+          },
+          {
+            "action": "charge"
+          },
+          {
+            "action": "beginTurn",
+            "envelope": 5
+          },
+          {
+            "action": "charge"
+          }
+        ]
+      },
+      "expected": {
+        "steps": [
+          {
+            "chargedWeapon": {
+              "chargeProgress": 0,
+              "isReady": false
+            }
+          },
+          {
+            "chargedWeapon": {
+              "chargeProgress": 1,
+              "isReady": false
+            },
+            "power": {
+              "spent": 1
+            }
+          },
+          {
+            "chargedWeapon": {
+              "chargeProgress": 1,
+              "isReady": false
+            },
+            "power": {
+              "spent": 0
+            }
+          },
+          {
+            "chargedWeapon": {
+              "chargeProgress": 2,
+              "isReady": true
+            },
+            "power": {
+              "spent": 1
+            }
+          }
+        ],
+        "finalChargedWeapon": {
+          "chargeProgress": 2,
+          "isReady": true
+        }
+      }
+    },
+    {
+      "id": "a12-c02",
+      "name": "Ready weapon may be retained indefinitely when no maximum is listed",
+      "operation": "chargedWeaponScript",
+      "input": {
+        "requiredChargeTurns": 2,
+        "chargePowerPerTurn": 1,
+        "retentionAllowed": true,
+        "retentionUpkeep": 1,
+        "steps": [
+          {
+            "action": "loadState",
+            "chargeProgress": 2,
+            "isReady": true,
+            "retentionTurns": 0
+          },
+          {
+            "action": "beginTurn",
+            "envelope": 5
+          },
+          {
+            "action": "retain"
+          },
+          {
+            "action": "beginTurn",
+            "envelope": 5
+          },
+          {
+            "action": "retain"
+          }
+        ]
+      },
+      "expected": {
+        "finalChargedWeapon": {
+          "chargeProgress": 2,
+          "isReady": true,
+          "retentionTurns": 2
+        },
+        "finalPower": {
+          "spent": 1,
+          "available": 4
+        }
+      }
+    },
+    {
+      "id": "a12-c03",
+      "name": "Listed retention maximum rejects further normal upkeep",
+      "operation": "chargedWeaponScript",
+      "input": {
+        "requiredChargeTurns": 2,
+        "chargePowerPerTurn": 1,
+        "retentionAllowed": true,
+        "retentionUpkeep": 1,
+        "maximumRetentionTurns": 1,
+        "steps": [
+          {
+            "action": "loadState",
+            "chargeProgress": 2,
+            "isReady": true,
+            "retentionTurns": 0
+          },
+          {
+            "action": "beginTurn",
+            "envelope": 5
+          },
+          {
+            "action": "retain"
+          },
+          {
+            "action": "beginTurn",
+            "envelope": 5
+          },
+          {
+            "action": "retain",
+            "expectFailure": true
+          }
+        ]
+      },
+      "expected": {
+        "steps": [
+          {
+            "succeeded": true
+          },
+          {
+            "succeeded": true
+          },
+          {
+            "succeeded": true
+          },
+          {
+            "succeeded": true
+          },
+          {
+            "succeeded": false,
+            "chargedWeapon": {
+              "isReady": true,
+              "retentionTurns": 1
+            }
+          }
+        ],
+        "finalChargedWeapon": {
+          "chargeProgress": 2,
+          "isReady": true,
+          "retentionTurns": 1
+        }
+      }
+    },
+    {
+      "id": "a12-c04",
+      "name": "Stopping retention safely discharges the weapon",
+      "operation": "chargedWeaponScript",
+      "input": {
+        "requiredChargeTurns": 2,
+        "chargePowerPerTurn": 1,
+        "retentionAllowed": true,
+        "retentionUpkeep": 1,
+        "steps": [
+          {
+            "action": "loadState",
+            "chargeProgress": 2,
+            "isReady": true,
+            "retentionTurns": 1
+          },
+          {
+            "action": "stopRetention"
+          }
+        ]
+      },
+      "expected": {
+        "finalChargedWeapon": {
+          "chargeProgress": 0,
+          "isReady": false,
+          "retentionTurns": 0
+        }
+      }
+    },
+    {
+      "id": "a12-c05",
+      "name": "Disabled charging component safely loses progress and Ready state",
+      "operation": "chargedWeaponScript",
+      "input": {
+        "requiredChargeTurns": 2,
+        "chargePowerPerTurn": 1,
+        "retentionAllowed": true,
+        "retentionUpkeep": 1,
+        "steps": [
+          {
+            "action": "loadState",
+            "chargeProgress": 2,
+            "isReady": true,
+            "retentionTurns": 0
+          },
+          {
+            "action": "applyCondition",
+            "condition": "disabled"
+          }
+        ]
+      },
+      "expected": {
+        "finalChargedWeapon": {
+          "chargeProgress": 0,
+          "isReady": false,
+          "retentionTurns": 0
+        }
+      }
+    },
+    {
+      "id": "a12-c06",
+      "name": "Firing consumes the stored charge without another power payment",
+      "operation": "chargedWeaponScript",
+      "input": {
+        "requiredChargeTurns": 2,
+        "chargePowerPerTurn": 1,
+        "retentionAllowed": true,
+        "retentionUpkeep": 1,
+        "steps": [
+          {
+            "action": "beginTurn",
+            "envelope": 5
+          },
+          {
+            "action": "charge"
+          },
+          {
+            "action": "beginTurn",
+            "envelope": 5
+          },
+          {
+            "action": "charge"
+          },
+          {
+            "action": "fire"
+          }
+        ]
+      },
+      "expected": {
+        "steps": [
+          {
+            "chargedWeapon": {
+              "chargeProgress": 0,
+              "isReady": false
+            }
+          },
+          {
+            "chargedWeapon": {
+              "chargeProgress": 1,
+              "isReady": false
+            },
+            "power": {
+              "spent": 1
+            }
+          },
+          {
+            "chargedWeapon": {
+              "chargeProgress": 1,
+              "isReady": false
+            },
+            "power": {
+              "spent": 0
+            }
+          },
+          {
+            "chargedWeapon": {
+              "chargeProgress": 2,
+              "isReady": true,
+              "requiresRetentionPayment": false
+            },
+            "power": {
+              "spent": 1
+            }
+          },
+          {
+            "chargedWeapon": {
+              "chargeProgress": 0,
+              "isReady": false
+            },
+            "power": {
+              "spent": 1
+            }
+          }
+        ],
+        "finalChargedWeapon": {
+          "chargeProgress": 0,
+          "isReady": false
+        },
+        "finalPower": {
+          "spent": 1,
+          "available": 4
+        }
+      }
+    },
+    {
+      "id": "a12-c07",
+      "name": "FTL transition safely discharges and clears the Tactical Power ledger",
+      "operation": "chargedWeaponScript",
+      "input": {
+        "requiredChargeTurns": 2,
+        "chargePowerPerTurn": 1,
+        "retentionAllowed": true,
+        "retentionUpkeep": 1,
+        "steps": [
+          {
+            "action": "loadState",
+            "chargeProgress": 2,
+            "isReady": true,
+            "retentionTurns": 1
+          },
+          {
+            "action": "ftlTransition"
+          }
+        ]
+      },
+      "expected": {
+        "finalChargedWeapon": {
+          "chargeProgress": 0,
+          "isReady": false,
+          "retentionTurns": 0
+        },
+        "finalPower": {
+          "envelope": 0,
+          "available": 0,
+          "spent": 0
+        }
+      }
+    },
+    {
+      "id": "a12-c08",
+      "name": "Skipping a required charging turn resets incomplete progress",
+      "operation": "chargedWeaponScript",
+      "input": {
+        "requiredChargeTurns": 2,
+        "chargePowerPerTurn": 1,
+        "retentionAllowed": true,
+        "retentionUpkeep": 1,
+        "steps": [
+          {
+            "action": "beginTurn",
+            "envelope": 5
+          },
+          {
+            "action": "charge"
+          },
+          {
+            "action": "beginTurn",
+            "envelope": 5
+          },
+          {
+            "action": "beginTurn",
+            "envelope": 5
+          }
+        ]
+      },
+      "expected": {
+        "steps": [
+          {
+            "chargedWeapon": {
+              "chargeProgress": 0,
+              "isReady": false
+            }
+          },
+          {
+            "chargedWeapon": {
+              "chargeProgress": 1,
+              "isReady": false
+            }
+          },
+          {
+            "chargedWeapon": {
+              "chargeProgress": 1,
+              "isReady": false
+            }
+          },
+          {
+            "chargedWeapon": {
+              "chargeProgress": 0,
+              "isReady": false
+            }
+          }
+        ],
+        "finalChargedWeapon": {
+          "chargeProgress": 0,
+          "isReady": false,
+          "retentionTurns": 0
+        }
+      }
+    },
+    {
+      "id": "a12-c09",
+      "name": "A charging weapon cannot receive two charging payments in one turn",
+      "operation": "chargedWeaponScript",
+      "input": {
+        "requiredChargeTurns": 2,
+        "chargePowerPerTurn": 1,
+        "retentionAllowed": true,
+        "retentionUpkeep": 1,
+        "steps": [
+          {
+            "action": "beginTurn",
+            "envelope": 5
+          },
+          {
+            "action": "charge"
+          },
+          {
+            "action": "charge",
+            "expectFailure": true
+          }
+        ]
+      },
+      "expected": {
+        "steps": [
+          {
+            "succeeded": true
+          },
+          {
+            "succeeded": true,
+            "chargedWeapon": {
+              "chargeProgress": 1
+            },
+            "power": {
+              "spent": 1
+            }
+          },
+          {
+            "succeeded": false,
+            "chargedWeapon": {
+              "chargeProgress": 1,
+              "isReady": false
+            },
+            "power": {
+              "spent": 1
+            }
+          }
+        ],
+        "finalChargedWeapon": {
+          "chargeProgress": 1,
+          "isReady": false
+        },
+        "finalPower": {
+          "spent": 1,
+          "available": 4
+        }
+      }
+    },
+    {
+      "id": "a12-c10",
+      "name": "A carried Ready charge cannot fire before retention upkeep is paid",
+      "operation": "chargedWeaponScript",
+      "input": {
+        "requiredChargeTurns": 2,
+        "chargePowerPerTurn": 1,
+        "retentionAllowed": true,
+        "retentionUpkeep": 1,
+        "steps": [
+          {
+            "action": "loadState",
+            "chargeProgress": 2,
+            "isReady": true,
+            "retentionTurns": 0
+          },
+          {
+            "action": "beginTurn",
+            "envelope": 5
+          },
+          {
+            "action": "fire",
+            "expectFailure": true
+          }
+        ]
+      },
+      "expected": {
+        "steps": [
+          {
+            "chargedWeapon": {
+              "chargeProgress": 2,
+              "isReady": true,
+              "requiresRetentionPayment": true
+            }
+          },
+          {
+            "chargedWeapon": {
+              "chargeProgress": 2,
+              "isReady": true,
+              "requiresRetentionPayment": true
+            }
+          },
+          {
+            "succeeded": false,
+            "chargedWeapon": {
+              "chargeProgress": 2,
+              "isReady": true,
+              "requiresRetentionPayment": true
+            }
+          }
+        ],
+        "finalChargedWeapon": {
+          "chargeProgress": 2,
+          "isReady": true,
+          "requiresRetentionPayment": true
+        },
+        "finalPower": {
+          "spent": 0,
+          "available": 5
+        }
+      }
+    },
+    {
+      "id": "a12-c11",
+      "name": "A weapon that does not permit retention safely discharges at the next turn",
+      "operation": "chargedWeaponScript",
+      "input": {
+        "requiredChargeTurns": 2,
+        "chargePowerPerTurn": 1,
+        "retentionAllowed": false,
+        "retentionUpkeep": 0,
+        "steps": [
+          {
+            "action": "loadState",
+            "chargeProgress": 2,
+            "isReady": true,
+            "readyPowerPaidThisTurn": true,
+            "retentionTurns": 0
+          },
+          {
+            "action": "beginTurn",
+            "envelope": 5
+          }
+        ]
+      },
+      "expected": {
+        "steps": [
+          {
+            "chargedWeapon": {
+              "chargeProgress": 2,
+              "isReady": true,
+              "requiresRetentionPayment": false
+            }
+          },
+          {
+            "chargedWeapon": {
+              "chargeProgress": 0,
+              "isReady": false,
+              "retentionTurns": 0,
+              "requiresRetentionPayment": false
+            }
+          }
+        ],
+        "finalChargedWeapon": {
+          "chargeProgress": 0,
+          "isReady": false,
+          "retentionTurns": 0,
+          "requiresRetentionPayment": false
+        },
+        "finalPower": {
+          "spent": 0,
+          "available": 5
+        }
+      }
+    }
+  ]
+}

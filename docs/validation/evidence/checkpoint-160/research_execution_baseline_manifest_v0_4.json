@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "star-cluster-cp160-research-execution-baseline-manifest-v0.4",
+  "checkpoint": 160,
+  "baselineId": "CP160-PF4",
+  "status": "PENDING_FINALIZATION_RESEARCH_AUTHORITY",
+  "materializedMatrix": "docs/design/player_technology/technology_research_execution_baseline_pending_finalization_v0_4.json",
+  "materializedMatrixSha256": "7fd4dfbbe375586de2605361006db84b68f89767c76ba4b76da6cf5f48253155",
+  "baseBaselineId": "CP159-PF3",
+  "baseMatrix": "docs/design/player_technology/technology_research_execution_baseline_pending_finalization_v0_3.json",
+  "baseMatrixSha256": "9158c44c6c66d84997696f3415612f1f3bba70960b738b0344ecb8e09062d8e2",
+  "productionMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_9.json",
+  "productionMatrixSha256": "3088b0a9eb45f6bf505c24513e8bb2ac878819db4ab464ccfea330243c82f194",
+  "acceptedCp159NativeArchiveSha256": "e7c17f3aeb6d6833620e8f8ca72694fdc4be589ef9791fb73e7cc0cfbe771a65",
+  "authorityPromotionType": "RESEARCH_EXECUTION_ONLY",
+  "productionAuthorityReplaced": false,
+  "substantiveCombatTrials": 0,
+  "promotedAuxExecutionCenters": {
+    "shieldBattery": "CP158 RISING_FULL",
+    "shieldBooster": "CP158 RISING_FULL",
+    "shieldHardener": "CP158 RISING_FULL",
+    "ablativeArmor": "CP158 RISING_FULL",
+    "energizedArmor": "CP158 RISING_FULL",
+    "crystallineArmor": "CP159 CRY_RISE_A",
+    "fieldStabilizer": "CP159 FST_HIGH",
+    "repairDroneBay": "CP159 distinct-target + default-kit-load",
+    "kineticMagazine": "CP158 +25 endurance-only",
+    "missileMagazine": "CP158 +25 endurance-only"
+  },
+  "openDependencies": [
+    "FINAL_REACTOR_TP_SCARCITY"
+  ],
+  "isolatedAuxMagnitudeArchitectureClosed": true,
+  "poweredAuxTpCostsRemainProvisional": true,
+  "nextPass": "Reactor/TP Scarcity and Whole-Ship Equilibrium"
+}

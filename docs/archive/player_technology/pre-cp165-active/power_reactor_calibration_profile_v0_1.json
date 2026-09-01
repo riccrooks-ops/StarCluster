@@ -1,0 +1,234 @@
+{
+  "schemaVersion": "star-cluster-power-reactor-calibrated-candidate-profile-v0.1",
+  "checkpoint": "110",
+  "sourceMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_1.json",
+  "scope": "Primary Main Reactor Generation TL1-TL9 plus legacy fission revival comparison; Energy Storage and auxiliary generation remain uncalibrated.",
+  "status": "first_pass_calibration_evidence_retains_cp109_values_no_production_promotion",
+  "decision": {
+    "primaryReactorNumericalChanges": 0,
+    "retainAllCp109PrimaryReactorCandidates": true,
+    "promoteToProductionRuntime": false,
+    "reason": "The candidate ladder preserves Storyboard-driven frontier/maturation cadence, operational power pressure, damaged-state family identity, predecessor/specialist Pareto niches at key frontier TLs, and bounded safe-overload relief. High-TL multi-reactor availability remains an integration flag pending numerical AUX/mission-system competition rather than a Reactor-only retune trigger."
+  },
+  "studyScale": {
+    "exhaustiveLegalBuildsAcrossTls": 18006,
+    "representativeLoadouts": 72,
+    "stochasticVariants": 288,
+    "adaptiveTurnDemandSamples": 7025000,
+    "equivalentSafeOverloadEncounterTurns": 14400000,
+    "doctrines": 4,
+    "wilsonHalfWidthTarget": 0.004
+  },
+  "primaryReactors": [
+    {
+      "tl": 1,
+      "technology": "Peak Fission",
+      "space": 6,
+      "operationalTp": 5,
+      "degradedTp": 3,
+      "emergencyTp": 1,
+      "candidateStatus": "retained_after_cp110_first_pass_calibration",
+      "paretoFrontierAtIntroduction": true,
+      "frontierAlternativesAtTl": [
+        "reactor-tl1"
+      ],
+      "meanRepresentativeOperationalShortfallRate": 0.15583608405483407,
+      "meanRepresentativeDegradedShortfallRate": 0.46679070932539685,
+      "fullEnvelopeSupportedFraction": 0.20748299319727892,
+      "branchHotspotMaximumDemand": 11,
+      "branchHotspotPowerGap": 6,
+      "samePackageTwoCurrentReactorsLegalFraction": 0.030612244897959183,
+      "meanRawShortfallRate": 0.15583608405483407,
+      "meanSafeOverloadAssistedShortfallRate": 0.10363183206478163
+    },
+    {
+      "tl": 2,
+      "technology": "Early Practical Fusion",
+      "space": 6,
+      "operationalTp": 7,
+      "degradedTp": 3,
+      "emergencyTp": 0,
+      "candidateStatus": "retained_after_cp110_first_pass_calibration",
+      "paretoFrontierAtIntroduction": true,
+      "frontierAlternativesAtTl": [
+        "reactor-tl1",
+        "reactor-tl2"
+      ],
+      "meanRepresentativeOperationalShortfallRate": 0.04640887152777778,
+      "meanRepresentativeDegradedShortfallRate": 0.55558296875,
+      "fullEnvelopeSupportedFraction": 0.43197278911564624,
+      "branchHotspotMaximumDemand": 13,
+      "branchHotspotPowerGap": 6,
+      "samePackageTwoCurrentReactorsLegalFraction": 0.030612244897959183,
+      "meanRawShortfallRate": 0.046408871527777784,
+      "meanSafeOverloadAssistedShortfallRate": 0.03094356130382812
+    },
+    {
+      "tl": 3,
+      "technology": "Mature Compact Fusion",
+      "space": 5,
+      "operationalTp": 7,
+      "degradedTp": 4,
+      "emergencyTp": 1,
+      "candidateStatus": "retained_after_cp110_first_pass_calibration",
+      "paretoFrontierAtIntroduction": true,
+      "frontierAlternativesAtTl": [
+        "reactor-tl3"
+      ],
+      "meanRepresentativeOperationalShortfallRate": 0.07488008116883117,
+      "meanRepresentativeDegradedShortfallRate": 0.38136293222402595,
+      "fullEnvelopeSupportedFraction": 0.32019704433497537,
+      "branchHotspotMaximumDemand": 14,
+      "branchHotspotPowerGap": 7,
+      "samePackageTwoCurrentReactorsLegalFraction": 0.12315270935960591,
+      "meanRawShortfallRate": 0.07488008116883117,
+      "meanSafeOverloadAssistedShortfallRate": 0.05033799126929279
+    },
+    {
+      "tl": 4,
+      "technology": "High-Output Fusion",
+      "space": 5,
+      "operationalTp": 9,
+      "degradedTp": 5,
+      "emergencyTp": 1,
+      "candidateStatus": "retained_after_cp110_first_pass_calibration",
+      "paretoFrontierAtIntroduction": true,
+      "frontierAlternativesAtTl": [
+        "reactor-tl4"
+      ],
+      "meanRepresentativeOperationalShortfallRate": 0.038732916666666665,
+      "meanRepresentativeDegradedShortfallRate": 0.26631777777777776,
+      "fullEnvelopeSupportedFraction": 0.5231316725978647,
+      "branchHotspotMaximumDemand": 15,
+      "branchHotspotPowerGap": 6,
+      "samePackageTwoCurrentReactorsLegalFraction": 0.14590747330960854,
+      "meanRawShortfallRate": 0.038732916666666665,
+      "meanSafeOverloadAssistedShortfallRate": 0.024845945986678504
+    },
+    {
+      "tl": 5,
+      "technology": "Early Antimatter Reactor",
+      "space": 5,
+      "operationalTp": 12,
+      "degradedTp": 4,
+      "emergencyTp": 0,
+      "candidateStatus": "retained_after_cp110_first_pass_calibration",
+      "paretoFrontierAtIntroduction": true,
+      "frontierAlternativesAtTl": [
+        "reactor-tl4",
+        "reactor-tl5",
+        "power-fission-revival-tl5"
+      ],
+      "meanRepresentativeOperationalShortfallRate": 0.032329166666666666,
+      "meanRepresentativeDegradedShortfallRate": 0.6338240104166667,
+      "fullEnvelopeSupportedFraction": 0.5552631578947368,
+      "branchHotspotMaximumDemand": 19,
+      "branchHotspotPowerGap": 7,
+      "samePackageTwoCurrentReactorsLegalFraction": 0.17105263157894737,
+      "meanRawShortfallRate": 0.032329166666666666,
+      "meanSafeOverloadAssistedShortfallRate": 0.019017911920304303
+    },
+    {
+      "tl": 6,
+      "technology": "Mature Antimatter",
+      "space": 4,
+      "operationalTp": 12,
+      "degradedTp": 7,
+      "emergencyTp": 1,
+      "candidateStatus": "retained_after_cp110_first_pass_calibration",
+      "paretoFrontierAtIntroduction": true,
+      "frontierAlternativesAtTl": [
+        "power-fission-revival-tl5",
+        "reactor-tl6"
+      ],
+      "meanRepresentativeOperationalShortfallRate": 0.09609785804473304,
+      "meanRepresentativeDegradedShortfallRate": 0.3553376957070707,
+      "fullEnvelopeSupportedFraction": 0.3648351648351648,
+      "branchHotspotMaximumDemand": 23,
+      "branchHotspotPowerGap": 11,
+      "samePackageTwoCurrentReactorsLegalFraction": 0.46593406593406594,
+      "meanRawShortfallRate": 0.09609785804473304,
+      "meanSafeOverloadAssistedShortfallRate": 0.07378970880281542
+    },
+    {
+      "tl": 7,
+      "technology": "High-Output Antimatter",
+      "space": 4,
+      "operationalTp": 15,
+      "degradedTp": 8,
+      "emergencyTp": 1,
+      "candidateStatus": "retained_after_cp110_first_pass_calibration",
+      "paretoFrontierAtIntroduction": true,
+      "frontierAlternativesAtTl": [
+        "reactor-tl7",
+        "power-fission-revival-tl7"
+      ],
+      "meanRepresentativeOperationalShortfallRate": 0.027154739583333334,
+      "meanRepresentativeDegradedShortfallRate": 0.18292958333333334,
+      "fullEnvelopeSupportedFraction": 0.6612103174603174,
+      "branchHotspotMaximumDemand": 26,
+      "branchHotspotPowerGap": 11,
+      "samePackageTwoCurrentReactorsLegalFraction": 0.7142857142857143,
+      "meanRawShortfallRate": 0.027154739583333334,
+      "meanSafeOverloadAssistedShortfallRate": 0.016218534161043737
+    },
+    {
+      "tl": 8,
+      "technology": "Fractional / Direct Matter-Conversion Reactor",
+      "space": 4,
+      "operationalTp": 17,
+      "degradedTp": 6,
+      "emergencyTp": 0,
+      "candidateStatus": "retained_after_cp110_first_pass_calibration",
+      "paretoFrontierAtIntroduction": true,
+      "frontierAlternativesAtTl": [
+        "reactor-tl7",
+        "power-fission-revival-tl7",
+        "reactor-tl8"
+      ],
+      "meanRepresentativeOperationalShortfallRate": 0.04232894097222222,
+      "meanRepresentativeDegradedShortfallRate": 0.6123532986111111,
+      "fullEnvelopeSupportedFraction": 0.5902777777777778,
+      "branchHotspotMaximumDemand": 32,
+      "branchHotspotPowerGap": 15,
+      "samePackageTwoCurrentReactorsLegalFraction": 0.96875,
+      "meanRawShortfallRate": 0.04232894097222222,
+      "meanSafeOverloadAssistedShortfallRate": 0.03063052446959661
+    },
+    {
+      "tl": 9,
+      "technology": "Total Matter Conversion",
+      "space": 3,
+      "operationalTp": 20,
+      "degradedTp": 12,
+      "emergencyTp": 2,
+      "candidateStatus": "retained_after_cp110_first_pass_calibration",
+      "paretoFrontierAtIntroduction": true,
+      "frontierAlternativesAtTl": [
+        "reactor-tl9"
+      ],
+      "meanRepresentativeOperationalShortfallRate": 0.006940625,
+      "meanRepresentativeDegradedShortfallRate": 0.12456875,
+      "fullEnvelopeSupportedFraction": 0.7896825396825397,
+      "branchHotspotMaximumDemand": 34,
+      "branchHotspotPowerGap": 14,
+      "samePackageTwoCurrentReactorsLegalFraction": 1.0,
+      "meanRawShortfallRate": 0.006940625,
+      "meanSafeOverloadAssistedShortfallRate": 0.0037485215799958308
+    }
+  ],
+  "crossCuttingFindings": [
+    "Early-family frontier steps at TL2, TL5, and TL8 intentionally exchange damaged-state resilience for higher operational capability; maturation at TL3 and TL6 restores resilience/Space efficiency without another peak-output increase.",
+    "The TL9 Total Matter Conversion candidate is a deliberate pinnacle jump. Standard representative demand is rarely power-starved, but branch-heavy legal designs still exceed one-reactor output by 14 TP at the maximum stress point.",
+    "Two-current-reactor installations become much easier to fit from TL6 onward because the entire ship miniaturizes and Hull capacity grows. This must be retested after AUX/mission components receive numerical Space/Power values; it is not evidence by itself that Reactor output should be reduced.",
+    "Safe +1 TP Reactor overload reduces one-point shortfalls but does not eliminate sustained power tradeoffs because Strain limits only two safe uses in a 20-turn encounter model.",
+    "Energy-storage branches are deliberately excluded from this first pass because storage changes inter-turn allocation rather than sustained generation and should be calibrated after the sustained-generation baseline is understood."
+  ],
+  "revalidationTriggers": [
+    "Any change to primary Reactor Space or Operational/Degraded/Emergency TP.",
+    "Material changes to Hull capacity or standard component Space across TL1-TL9.",
+    "Material changes to Energy weapon, Sensor/EW, Shield recharge, PDS, or STL overload Tactical Power demand.",
+    "Promotion of numerical AUX/mission-system Space or Tactical Power costs that materially compete with second-Reactor installations.",
+    "Implementation or retuning of Energy Storage, auxiliary generation, or Reactor overload/Strain mechanics."
+  ]
+}

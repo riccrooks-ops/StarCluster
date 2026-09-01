@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "star-cluster-cp124-executable-baseline-foundation-results-v0.1",
+  "checkpoint": 124,
+  "acceptedReferenceBaseline": 123,
+  "acceptedImplementationBaseline": 122,
+  "sourceMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_3.json",
+  "profileFamilies": 20,
+  "profileRows": 180,
+  "rawBuildCombinations": 14112,
+  "legalBuilds": 9427,
+  "pipelineSmokeVariants": 70,
+  "pipelineSmokeTrials": 70,
+  "instrumentationProbeCount": 9,
+  "telemetryContractMetricCount": 47,
+  "substantiveMonteCarloTrials": 0,
+  "balanceValidated": false,
+  "automaticPromotion": false,
+  "failedGates": []
+}

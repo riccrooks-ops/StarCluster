@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "star-cluster-checkpoint54-tl3-weapon-loadouts-v1",
+  "checkpoint": 54,
+  "weaponBayCapacity": 2,
+  "loadouts": [
+    {
+      "id": "KK",
+      "primary": "Kinetic",
+      "secondary": "Kinetic",
+      "note": "Primary family drives Checkpoint 54 range doctrine; secondary bay fires opportunistically."
+    },
+    {
+      "id": "KE",
+      "primary": "Kinetic",
+      "secondary": "Energy",
+      "note": "Primary family drives Checkpoint 54 range doctrine; secondary bay fires opportunistically."
+    },
+    {
+      "id": "KM",
+      "primary": "Kinetic",
+      "secondary": "Missile",
+      "note": "Primary family drives Checkpoint 54 range doctrine; secondary bay fires opportunistically."
+    },
+    {
+      "id": "EK",
+      "primary": "Energy",
+      "secondary": "Kinetic",
+      "note": "Primary family drives Checkpoint 54 range doctrine; secondary bay fires opportunistically."
+    },
+    {
+      "id": "EE",
+      "primary": "Energy",
+      "secondary": "Energy",
+      "note": "Primary family drives Checkpoint 54 range doctrine; secondary bay fires opportunistically."
+    },
+    {
+      "id": "EM",
+      "primary": "Energy",
+      "secondary": "Missile",
+      "note": "Primary family drives Checkpoint 54 range doctrine; secondary bay fires opportunistically."
+    },
+    {
+      "id": "MK",
+      "primary": "Missile",
+      "secondary": "Kinetic",
+      "note": "Primary family drives Checkpoint 54 range doctrine; secondary bay fires opportunistically."
+    },
+    {
+      "id": "ME",
+      "primary": "Missile",
+      "secondary": "Energy",
+      "note": "Primary family drives Checkpoint 54 range doctrine; secondary bay fires opportunistically."
+    },
+    {
+      "id": "MM",
+      "primary": "Missile",
+      "secondary": "Missile",
+      "note": "Primary family drives Checkpoint 54 range doctrine; secondary bay fires opportunistically."
+    }
+  ],
+  "sameFamilyMagazineRule": "Duplicate Kinetic or Missile bays share the shipwide family reserve rather than creating a second reserve.",
+  "status": "screening_abstraction_not_final_tactical_policy"
+}

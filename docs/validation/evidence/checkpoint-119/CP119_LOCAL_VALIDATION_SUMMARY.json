@@ -1,0 +1,66 @@
+{
+  "checkpoint": 119,
+  "status": "local_pre_handoff_validation_passed",
+  "acceptedBaseline": 118,
+  "pythonVersion": "3.13.5",
+  "selfTests": {
+    "passed": 97,
+    "failed": 0
+  },
+  "parity": {
+    "passed": 25,
+    "failed": 0
+  },
+  "regressionSmokes": {
+    "cp114": {
+      "variants": 3184,
+      "failedGates": 0
+    },
+    "cp115a": {
+      "variants": 4064,
+      "failedGates": 0
+    },
+    "cp116": {
+      "variants": 2976,
+      "failedGates": 0
+    },
+    "cp118": {
+      "variants": 1824,
+      "failedGates": 0
+    }
+  },
+  "cp119Smoke": {
+    "variants": 1152,
+    "trials": 1152,
+    "failedGates": 0
+  },
+  "authoring": {
+    "variants": 1152,
+    "trialsPerVariant": 50,
+    "engagements": 57600,
+    "failedGates": 0
+  },
+  "plannedNative": {
+    "variants": 1152,
+    "trialsPerVariant": 2000,
+    "engagements": 2304000
+  },
+  "workbookQa": {
+    "sheets": 9,
+    "formulaErrors": 0,
+    "cachedFormulaChecks": {
+      "authoringEngagements": 57600,
+      "plannedNativeEngagements": 2304000
+    },
+    "qaRenderedPages": 9,
+    "visuallyReviewed": true
+  },
+  "productionRuntime": "C#/Godot",
+  "pythonRole": "research/testing/checkpoint validation",
+  "internalDamageCriticalsSimulated": false,
+  "automaticPromotion": false,
+  "acceptedCp118NativeArchiveSha256": "6fee230850eeaf621c57450e353f06c5beb3aacd593937307d380ffd030f3337",
+  "studySha256": "ee375ae5c02b441fec8d02b5c487f1b2f0409866121bc8b11d70531466baa15a",
+  "analysisModuleSha256": "7bece4c363eae533ce6e0477da257b0268eb0eb8a6f59d0d8dc3b3eac022e779",
+  "cliSha256": "405ce5c57c7e2d11b513d70e46777058af183fc06f7aad532d8f0e10183c6071"
+}

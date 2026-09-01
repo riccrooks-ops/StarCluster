@@ -1,0 +1,30 @@
+﻿{
+    "schemaVersion":  "star-cluster-cp124-native-acceptance-summary-v0.1",
+    "checkpoint":  124,
+    "acceptedReferenceBaseline":  123,
+    "acceptedImplementationBaseline":  122,
+    "repositoryOnly":  false,
+    "python":  "Python 3.13.14",
+    "productionSourceChanged":  false,
+    "scenarioDefinitionsChanged":  false,
+    "researchSimulationChanged":  true,
+    "pythonTests":  139,
+    "pythonTestsPassed":  139,
+    "researchParityCases":  25,
+    "researchParityPassed":  25,
+    "profileFamilies":  20,
+    "profileRows":  180,
+    "rawBuildCombinations":  14112,
+    "legalBuilds":  9427,
+    "pipelineSmokeVariants":  70,
+    "pipelineSmokeTrials":  70,
+    "instrumentationProbes":  9,
+    "telemetryContractMetrics":  47,
+    "newCSharpScenarioCount":  0,
+    "substantiveMonteCarloTrials":  0,
+    "balanceValidated":  false,
+    "automaticPromotion":  false,
+    "failedGates":  [
+
+                    ]
+}

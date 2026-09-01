@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "95",
+  "reviewDate": "2026-08-12",
+  "acceptedPopulationUnorderedDistinctPairs": 255187936,
+  "finding": "CP95 proves that reference-context readiness, observed reference-ready firing-window reach, and true runtime bilateral activity are distinct observables. The legacy observed_active cohort is reference-conditioned and must not be treated as a pure runtime-active cohort.",
+  "geometryMetrics": {
+    "fixed-r3": {
+      "referenceContextMutualReadyPopulationPercent": 19.489406087493624,
+      "observedReferenceReadyWindowPopulationPercent": 19.489406087493624,
+      "legacyCp95ObservedActivePopulationPercent": 19.489406087493624,
+      "runtimeBilateralActivePopulationPercent": 20.71953006953014,
+      "referenceNotExpectedButRuntimeBilateralActivePopulationPercent": 1.2301239820365175,
+      "referenceExpectedButRuntimeInactivePopulationPercent": 0.0
+    },
+    "dynamic-a-first": {
+      "referenceContextMutualReadyPopulationPercent": 84.37154870048403,
+      "observedReferenceReadyWindowPopulationPercent": 56.57622046312827,
+      "legacyCp95ObservedActivePopulationPercent": 58.72712778501672,
+      "runtimeBilateralActivePopulationPercent": 60.64837704553557,
+      "referenceNotExpectedButRuntimeBilateralActivePopulationPercent": 1.921249260518857,
+      "referenceExpectedButRuntimeInactivePopulationPercent": 25.644420915467308
+    },
+    "dynamic-b-first": {
+      "referenceContextMutualReadyPopulationPercent": 84.37154870048403,
+      "observedReferenceReadyWindowPopulationPercent": 56.57622046312827,
+      "legacyCp95ObservedActivePopulationPercent": 58.72712778501672,
+      "runtimeBilateralActivePopulationPercent": 60.64837704553557,
+      "referenceNotExpectedButRuntimeBilateralActivePopulationPercent": 1.921249260518857,
+      "referenceExpectedButRuntimeInactivePopulationPercent": 25.644420915467308
+    }
+  },
+  "dynamicReferenceFalseNegativeBundles": [
+    {
+      "bundleId": "adaptive-combined-duplication-equal_high-exact_fill-exact_fill-01",
+      "populationRepresentativeWeight": 284979.0,
+      "populationCell": "combined-duplication~equal_high~exact_fill-exact_fill"
+    },
+    {
+      "bundleId": "adaptive-combined-duplication-equal_high-underfilled-underfilled-01",
+      "populationRepresentativeWeight": 9240.0,
+      "populationCell": "combined-duplication~equal_high~underfilled-underfilled"
+    },
+    {
+      "bundleId": "adaptive-combined-duplication-near-exact_fill-underfilled-02",
+      "populationRepresentativeWeight": 2185363.3333333335,
+      "populationCell": "combined-duplication~near~exact_fill-underfilled"
+    },
+    {
+      "bundleId": "adaptive-ew-redundancy-far-near_fill-near_fill-02",
+      "populationRepresentativeWeight": 2423214.0,
+      "populationCell": "ew-redundancy~far~near_fill-near_fill"
+    }
+  ],
+  "dynamicReferenceFalseNegativeBundleCount": 4,
+  "interpretation": "CP96 should report the three observables independently, retain the CP95 reference-conditioned cohort only as an explicitly labeled compatibility bridge, and quantify reference-context false-negative/false-positive classifications before later balance or technology-promotion decisions.",
+  "authorityBoundary": "Instrumentation/interpretation evidence only; no gameplay, component, AI doctrine, or technology value is promoted by this finding."
+}

@@ -1,0 +1,43 @@
+{
+  "checkpoint": 113,
+  "policy": "Archive superseded human-facing authority and completed study presentation artifacts. Retain current authority, reusable executable study definitions, native evidence, and machine-readable compatibility/runtime-consumed snapshots in active locations.",
+  "activeCountsAfterCleanup": {
+    "docsRootFiles": 3,
+    "playerTechnologyTopFiles": 43,
+    "testingTopFiles": 9,
+    "validationTopFiles": 2
+  },
+  "activeConcept": "docs/Star_Cluster_Game_Concept_v0.7k.docx",
+  "archivedCategories": [
+    "superseded Concept versions",
+    "completed checkpoint validation runbooks",
+    "superseded human-facing Storyboard/Technology Table/Foundation/Idea versions",
+    "superseded technology workbooks",
+    "completed calibration/ecology/ablation report workbooks",
+    "obsolete CP107 validation-tier documents"
+  ],
+  "compatibilitySnapshotsRetainedActive": [
+    "docs/design/player_technology/technology_architecture_matrix_v1.json",
+    "docs/design/player_technology/technology_component_table_v0_1.json",
+    "docs/design/player_technology/technology_component_table_v0_2.json",
+    "docs/design/player_technology/technology_family_storyboard_v1_1.json",
+    "docs/design/player_technology/technology_family_storyboard_v1_2.json",
+    "docs/design/player_technology/auxiliary_component_catalog_v0_1.json",
+    "docs/design/player_technology/auxiliary_component_catalog_schema_v0_1.json"
+  ],
+  "selectedArchiveChecks": [
+    "docs/archive/concepts/Star_Cluster_Game_Concept_v0.7j.docx",
+    "docs/archive/checkpoints/validation/Checkpoint_112_Build_Neighbor_And_Ablation_Diagnostics.md",
+    "docs/archive/player_technology/architecture-history/Technology_Component_Table_v0_2.md",
+    "docs/archive/player_technology/architecture-history/Technology_Family_Storyboard_v1_2.md",
+    "docs/archive/player_technology/workbooks/StarCluster_Provisional_TL1_TL9_Technology_Component_Table_v0_2.xlsx",
+    "docs/archive/testing/checkpoint-111/StarCluster_CP111_Same_TL_Build_Ecology_v0_1.xlsx",
+    "docs/archive/testing/checkpoint-112/StarCluster_CP112_Build_Neighbor_Ablation_v0_1.xlsx"
+  ],
+  "validationArchivePolicy": {
+    "path": "docs/validation/archive/",
+    "files": 143,
+    "retainedInPlace": true,
+    "reason": "Historical checkpoint contracts explicitly verify legacy validation runbooks at this path; relocating them would break reproducible historical validation. The active docs/validation root remains limited to README plus the current checkpoint runbook, while native reproducibility evidence remains under docs/validation/evidence/."
+  }
+}

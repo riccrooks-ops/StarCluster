@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "pds-tl1-tl2-characteristics-v0_3",
+  "checkpoint": 53,
+  "status": "provisional_checkpoint53_amm25_lock",
+  "commonContract": [
+    "May engage every eligible close-range terminal threat authorized by the PDS family rules, including missile flights and boarding craft.",
+    "Cannot attack enemy ships.",
+    "Uses established terminal-defense timing and reaction accounting.",
+    "Sub-family identity does not silently alter target eligibility."
+  ],
+  "notes": [
+    "Checkpoint 53 keeps all three PDS sub-families available from TL1 and preserves the Checkpoint 51/52 tactical accuracy and Reaction Capacity candidates.",
+    "AMM uses 1 Tactical Power of readiness at both TL1 and TL2, matching Kinetic PDS readiness cost; Energy PDS remains 2 TP.",
+    "AMM ammunition is held at 25 rounds at both TL1 and TL2 for the current campaign-endurance baseline; do not tune it to force single-fight depletion."
+  ],
+  "profiles": [
+    {
+      "subfamilyId": "aux_kinetic_pds",
+      "technologyLevel": 1,
+      "pdsBaseChance": 10,
+      "shipTargetingBonus": 10,
+      "effectiveCandidateChance": 20,
+      "reactionCapacity": 1,
+      "tacticalPowerReadiness": 1,
+      "ammunition": 50,
+      "evasiveCompensation": 0,
+      "reliability": "uses_current_component_condition_model",
+      "note": "Baseline gun CIWS: cheapest readiness and deep ammunition, lowest candidate accuracy."
+    },
+    {
+      "subfamilyId": "aux_energy_pds",
+      "technologyLevel": 1,
+      "pdsBaseChance": 12,
+      "shipTargetingBonus": 10,
+      "effectiveCandidateChance": 22,
+      "reactionCapacity": 1,
+      "tacticalPowerReadiness": 2,
+      "ammunition": null,
+      "evasiveCompensation": 0,
+      "reliability": "uses_current_component_condition_model",
+      "note": "Early directed-energy defense: no conventional ammunition, higher readiness power, modest accuracy."
+    },
+    {
+      "subfamilyId": "aux_amm_pds",
+      "technologyLevel": 1,
+      "pdsBaseChance": 15,
+      "shipTargetingBonus": 10,
+      "effectiveCandidateChance": 25,
+      "reactionCapacity": 1,
+      "tacticalPowerReadiness": 1,
+      "ammunition": 25,
+      "evasiveCompensation": 0,
+      "reliability": "uses_current_component_condition_model",
+      "note": "Early interceptor battery: best candidate accuracy, scarce ammunition, still deliberately modest."
+    },
+    {
+      "subfamilyId": "aux_kinetic_pds",
+      "technologyLevel": 2,
+      "pdsBaseChance": 13,
+      "shipTargetingBonus": 12,
+      "effectiveCandidateChance": 25,
+      "reactionCapacity": 1,
+      "tacticalPowerReadiness": 1,
+      "ammunition": 60,
+      "evasiveCompensation": 0,
+      "reliability": "uses_current_component_condition_model",
+      "note": "Accuracy and ammunition efficiency improve; Reaction Capacity remains one."
+    },
+    {
+      "subfamilyId": "aux_energy_pds",
+      "technologyLevel": 2,
+      "pdsBaseChance": 16,
+      "shipTargetingBonus": 12,
+      "effectiveCandidateChance": 28,
+      "reactionCapacity": 1,
+      "tacticalPowerReadiness": 2,
+      "ammunition": null,
+      "evasiveCompensation": 0,
+      "reliability": "uses_current_component_condition_model",
+      "note": "Accuracy improves while high readiness power remains the principal tradeoff."
+    },
+    {
+      "subfamilyId": "aux_amm_pds",
+      "technologyLevel": 2,
+      "pdsBaseChance": 20,
+      "shipTargetingBonus": 12,
+      "effectiveCandidateChance": 32,
+      "reactionCapacity": 1,
+      "tacticalPowerReadiness": 1,
+      "ammunition": 25,
+      "evasiveCompensation": 0,
+      "reliability": "uses_current_component_condition_model",
+      "note": "Accuracy improves at TL2 while readiness remains 1 TP and ammunition is held at 25 rounds for the current endurance baseline."
+    }
+  ],
+  "ammunitionSensitivityCandidates": {
+    "ammRounds": [
+      25
+    ],
+    "primaryCombatMatrix": {
+      "tl1": 25,
+      "tl2": 25
+    },
+    "policy": "Hold AMM ammunition at 25 rounds at both TL1 and TL2 for Checkpoint 53. Judge the reserve across repeated engagements; revisit quantity or accuracy only if later campaign/tactical evidence warrants it."
+  }
+}

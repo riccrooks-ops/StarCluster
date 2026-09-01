@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "star-cluster-canonical-damage-domain-implementation-audit-v0.1",
+  "checkpoint": 122,
+  "status": "candidate_pending_native_acceptance",
+  "canonicalScale": 2,
+  "intent": "Exact unit migration of active point-domain quantities with no balance promotion; production Repair Kit yield is the sole intentional parity exception.",
+  "canonicalAuthorities": [
+    "docs/design/player_technology/tl1_core_combat_numerical_baseline_v0_4.csv",
+    "docs/design/player_technology/technology_numerical_matrix_v0_2.json",
+    "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl3-standard-runtime-profiles-v0_5.json",
+    "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl2-auxiliary-runtime-profiles-v0_4.json",
+    "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl4-standard-runtime-profiles-v0_3.json",
+    "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl3-tl4-production-auxiliary-profiles-v0_3.json"
+  ],
+  "activePointConsumers": [
+    {
+      "consumer": "LayeredDamageResolver / LayeredDefenseState / AttackPacket",
+      "classification": "unit_agnostic",
+      "action": "No arithmetic rewrite; canonical callers/data supply x2 DAM, SPEN/APEN, Shield, Armor, Hull and temporary point effects.",
+      "parityCoverage": "234000 layered + 117 temporary-effect deterministic cases."
+    },
+    {
+      "consumer": "ComponentPerformance.Weapon Energy degraded damage",
+      "classification": "scale_sensitive_rounding",
+      "action": "Uses DamagePointScale.HalfDamageRoundedUp; migrated even values preserve legacy half-rounded-up semantics; future odd values are capped so degradation never increases damage.",
+      "parityCoverage": "21 migrated degraded-Energy cases plus xUnit range tests."
+    },
+    {
+      "consumer": "Damage Control Hull repair",
+      "classification": "intentional_production_exception",
+      "action": "Production remains RestoreHull(1); parity fixture alone uses RestoreHull(2).",
+      "parityCoverage": "Dedicated xUnit production and parity-only tests."
+    },
+    {
+      "consumer": "Hull fraction thresholds in historical calibration runners",
+      "classification": "ratio_invariant",
+      "action": "No code change required because Hull and threshold operands scale together; historical consumers remain bound to legacy numerical authorities.",
+      "parityCoverage": "Historical authorities remain frozen; canonical data has doubled calibration threshold where stored as an absolute point value."
+    },
+    {
+      "consumer": "Shield recharge / battery / hardener / overcapacity and Armor flat bonuses",
+      "classification": "data_point_domain",
+      "action": "Canonical successor data doubles active point magnitudes while TP/count/percentage costs remain unchanged.",
+      "parityCoverage": "Canonical regeneration/preflight and temporary-effect parity."
+    },
+    {
+      "consumer": "Internal H/X critical cadence",
+      "classification": "deferred",
+      "action": "No cadence migration in CP122; critical implementation will receive its own future checkpoint.",
+      "parityCoverage": "Preflight hash-locks current critical/DamCon core files except the explicitly unchanged RepairHull behavior."
+    },
+    {
+      "consumer": "TL1 Core MechanicsFixture/calibration literals",
+      "classification": "historical_test_fixture",
+      "action": "Not canonical player data. Stable mechanics fixtures remain legacy-unit fixtures so historical unit tests and calibration evidence remain interpretable; canonical player/simulation work must bind successor authorities.",
+      "parityCoverage": "CP122 contract distinguishes canonical authorities from frozen mechanics fixtures."
+    }
+  ],
+  "nonPointConsumersHeld": [
+    "Tactical Power",
+    "accuracy/guidance/evasion percentages",
+    "range",
+    "movement",
+    "fuel",
+    "ammunition counts",
+    "Installation Space",
+    "PDS percentages/Reaction Capacity",
+    "Sensor/EW ratings",
+    "repair-kit count",
+    "technology level"
+  ],
+  "roundingAudit": {
+    "damageDomainChanged": [
+      "degraded Energy damage"
+    ],
+    "nonDamageRoundingUnchanged": [
+      "Energy degraded Tactical Power",
+      "PDS accuracy",
+      "STL movement",
+      "FTL range",
+      "evasive modifiers",
+      "component capacities/counts"
+    ],
+    "futureOddSafety": "Scale-aware Energy damage result is capped at normal damage."
+  },
+  "criticalCadenceMigrated": false,
+  "productionRepairHullPerKit": 1,
+  "parityOnlyRepairHullPerKit": 2,
+  "oddHalfStepValuesPromoted": false
+}

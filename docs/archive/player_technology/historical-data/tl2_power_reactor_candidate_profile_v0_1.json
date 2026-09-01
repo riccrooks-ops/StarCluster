@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "star-cluster-tl2-power-reactor-candidate-profile-v1",
+  "id": "tl2-power-reactor-candidate-profile-v0_1",
+  "checkpoint": 84,
+  "status": "validated_working_candidate_not_production_data",
+  "purpose": "Validated current-architecture working profile for the CP83-supported TL2 Early Practical Fusion 6-TP Operational-output candidate; carried into CP84 without bundling any other reactor improvement.",
+  "researchOwnership": "Power / Reactor",
+  "tl1Reference": {
+    "technologyRole": "Peak fission",
+    "installationSpace": 6,
+    "tacticalPowerByCondition": {
+      "operational": 5,
+      "degraded": 3,
+      "disabledEmergency": 1,
+      "destroyed": 0
+    },
+    "normalOperationalOutput": 5,
+    "safeOverloadAdditionalTacticalPower": 1,
+    "status": "current_working_reference"
+  },
+  "tl2Candidate": {
+    "technologyRole": "Early practical fusion",
+    "installationSpace": 6,
+    "normalOperationalOutput": 6,
+    "candidateChange": "operational_output_only",
+    "degradedOutput": "held_or_deferred_not_promoted",
+    "disabledEmergencyOutput": "held_or_deferred_not_promoted",
+    "overloadBehavior": "held_or_deferred_not_promoted",
+    "powerEfficiency": "no_separate_efficiency_improvement_assumed",
+    "auxiliaryReactorAndStorageBehavior": "unchanged_not_in_scope"
+  },
+  "isolationControls": {
+    "sideAInformationControlPackage": "tl2-information-control-working",
+    "sideATacticalComputerTargetingPp": 12,
+    "degradedFirePenaltyPp": 25,
+    "evasiveCompensationPp": 0,
+    "sensorDiscriminationResistanceCandidate": 1,
+    "ecmNormalCeilingCandidate": 2,
+    "eccmNormalCeilingCandidate": 2,
+    "ewTpPerRating": 1,
+    "sideBReactorOutput": 5,
+    "sensorRangeChanged": false,
+    "sensorEwOverloadChanged": false,
+    "productionValuesPromoted": false
+  },
+  "capabilityFrontierCheck": {
+    "singleTl1Reactor": {
+      "installationSpace": 6,
+      "operationalTp": 5
+    },
+    "singleTl2CandidateReactor": {
+      "installationSpace": 6,
+      "operationalTp": 6
+    },
+    "twoTl1Reactors": {
+      "installationSpace": 12,
+      "operationalTp": 10
+    },
+    "antiStackingRuleAdded": false,
+    "interpretation": "The candidate improves single-reactor output density at the same 6-Space footprint. Stacking mature TL1 reactors remains physically legal where ship architecture permits it, but pays the full additional Space/opportunity cost."
+  },
+  "acceptedEvidence": [
+    {
+      "checkpoint": "80",
+      "studyId": "tl2-itc07-ew-power-pressure-tall-viability",
+      "summarySha256": "596a90b51ae73691e5571b270785f445faed7ed443177f52aa5effff429cb992",
+      "interpretation": "6 TP was sensitivity-only evidence showing that additional power restores power-starved mixed-tech EW packages; it was not a TL2 reactor promotion."
+    },
+    {
+      "checkpoint": "83",
+      "studyId": "tl2-itc09-power-reactor-progression-permutations",
+      "summarySha256": "04b39c033f19c7c7b1d1cfdaad001e13819e8b11fc072855c5e74e3753c0646a",
+      "repositoryManifestSha256": "ff1ee737afcd8b331d423b3dea54fd075fcfbe3ea50bd31ff30d8bf92f9719ed",
+      "interpretation": "Native acceptance completed cleanly: 96 paired variants / 960,000 substantive trials, zero failed gates/trial errors. Six Operational TP at the same 6-Space footprint behaved as useful power headroom rather than a blanket combat-stat bonus, and the contemporary DR1 + ECCM1 tall route remained valuable."
+    }
+  ],
+  "promotionRequirements": [
+    "CP83 native evidence is satisfied for carrying 6 Operational TP / 6 Space forward as a validated TL2 working candidate.",
+    "Keep Degraded output, Disabled emergency output, overload, efficiency, storage, auxiliary generation, footprint, and prerequisites separate until individually designed and tested.",
+    "Revalidate 6 TP in dependency-relevant integration studies whenever a new power-consuming subsystem changes the combat-package envelope; CP84 does this for Shield Capacity and recharge competition.",
+    "Do not introduce an arbitrary anti-stacking rule; mature TL1 reactors remain legal where Installation Space permits."
+  ],
+  "explicitNonPromotions": [
+    "This file records a validated TL2 working candidate, not a production TL2 reactor component.",
+    "The 6-TP working candidate remains normal Operational output only; all other reactor properties stay at held/deferred status.",
+    "No TL2 reactor Space reduction is promoted.",
+    "No TL2 reactor Degraded/Disabled output map is promoted.",
+    "No TL2 reactor overload or efficiency improvement is promoted.",
+    "No reactor prerequisite is added to unrelated equipment merely to block legacy-reactor stacking."
+  ]
+}

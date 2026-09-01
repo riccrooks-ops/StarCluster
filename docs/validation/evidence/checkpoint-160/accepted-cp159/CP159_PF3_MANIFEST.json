@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "star-cluster-cp159-research-execution-baseline-manifest-v0.3",
+  "checkpoint": 159,
+  "baselineId": "CP159-PF3",
+  "status": "PENDING_FINALIZATION_RESEARCH_AUTHORITY",
+  "baseBaseline": "CP158-PF2",
+  "materializedMatrix": "docs/design/player_technology/technology_research_execution_baseline_pending_finalization_v0_3.json",
+  "materializedMatrixSha256": "9158c44c6c66d84997696f3415612f1f3bba70960b738b0344ecb8e09062d8e2",
+  "productionMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_9.json",
+  "productionMatrixSha256": "3088b0a9eb45f6bf505c24513e8bb2ac878819db4ab464ccfea330243c82f194",
+  "authorityPromotionType": "RESEARCH_EXECUTION_ONLY",
+  "productionAuthorityReplaced": false,
+  "selectedMainsPds": {
+    "kineticMain": "K1",
+    "energyMain": "E7",
+    "gpMissileMain": "M2",
+    "swarmerMain": "SW2",
+    "kineticPds": "K155P06",
+    "energyPds": "E155P08",
+    "ammPds": "A155P07"
+  },
+  "promotedAuxExecutionCenters": [
+    "shieldBattery",
+    "shieldBooster",
+    "shieldHardener",
+    "ablativeArmor",
+    "energizedArmor",
+    "kineticMagazine",
+    "missileMagazine"
+  ],
+  "boundaryAuxExecutionCenter": "crystallineArmor",
+  "openClosureAux": [
+    "fieldStabilizer",
+    "repairDroneBay"
+  ],
+  "cp158NativeArchiveSha256": "31d2d28ca60f9e41a2648c2556e752985c6376d232e61e87df674cfa9db1f270",
+  "cp158NativeAcceptanceSummarySha256": "019bd24eecf999acd7b6f3cf3204eec47035b27425a2b93206f368c2a18fc2fd",
+  "finalMajorPass": "Reactor/TP Scarcity and Whole-Ship Equilibrium after CP159 AUX closure"
+}

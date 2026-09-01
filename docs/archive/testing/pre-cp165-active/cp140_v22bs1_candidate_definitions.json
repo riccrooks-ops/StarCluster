@@ -1,0 +1,830 @@
+{
+  "schema_version": "22BS.1",
+  "definition_id": "SC-V22BS1-FULL-FACTORIAL-CONDITION-CLOSURE",
+  "normalization_parent_content_sha256": "98b0ac8824c803b16668e381fbbc901cb84fd3be2fe136c73c33382cfaf3158e",
+  "primary_architecture": "Cruiser_1W1R",
+  "control_architectures": [
+    "Control_2W1R",
+    "Control_1W2R",
+    "Control_2W2R"
+  ],
+  "templates": [
+    {
+      "id": "Balanced",
+      "caps": {
+        "shield": 1,
+        "armor": 1,
+        "power": 2,
+        "repair": 1,
+        "endurance": 1,
+        "ew": 1
+      },
+      "philosophies": [
+        "combat-generalist",
+        "power-flexibility"
+      ]
+    },
+    {
+      "id": "ShieldHeavy",
+      "caps": {
+        "shield": 4,
+        "armor": 0,
+        "power": 2,
+        "repair": 1,
+        "endurance": 0,
+        "ew": 0
+      },
+      "philosophies": [
+        "shield-specialist",
+        "power-flexibility"
+      ]
+    },
+    {
+      "id": "ArmorHeavy",
+      "caps": {
+        "shield": 0,
+        "armor": 4,
+        "power": 2,
+        "repair": 2,
+        "endurance": 0,
+        "ew": 0
+      },
+      "philosophies": [
+        "damage-resilience",
+        "power-flexibility"
+      ]
+    },
+    {
+      "id": "PDSHeavy",
+      "caps": {
+        "shield": 1,
+        "armor": 1,
+        "power": 2,
+        "repair": 1,
+        "endurance": 2,
+        "ew": 1
+      },
+      "philosophies": [
+        "missile-defense-escort",
+        "munition-endurance",
+        "power-flexibility"
+      ]
+    },
+    {
+      "id": "NonPDS",
+      "caps": {
+        "shield": 2,
+        "armor": 2,
+        "power": 2,
+        "repair": 1,
+        "endurance": 1,
+        "ew": 1
+      },
+      "philosophies": [
+        "combat-generalist",
+        "damage-resilience",
+        "power-flexibility"
+      ]
+    },
+    {
+      "id": "PowerFlex",
+      "caps": {
+        "shield": 1,
+        "armor": 1,
+        "power": 5,
+        "repair": 1,
+        "endurance": 0,
+        "ew": 0
+      },
+      "philosophies": [
+        "power-flexibility"
+      ]
+    }
+  ],
+  "miniaturization_patterns": [
+    {
+      "id": "CP138_Current",
+      "role": "historical_control",
+      "reactor_tl": true,
+      "stl_tl": true,
+      "ftl_tl": true,
+      "computer_tl": true,
+      "sensor_tl": true,
+      "shield_tl": true
+    },
+    {
+      "id": "Selective_NoMajorMini",
+      "role": "leading_candidate",
+      "reactor_tl": false,
+      "stl_tl": false,
+      "ftl_tl": false,
+      "computer_tl": true,
+      "sensor_tl": true,
+      "shield_tl": true
+    },
+    {
+      "id": "Selective_PropulsionMini",
+      "role": "neighbor",
+      "reactor_tl": false,
+      "stl_tl": true,
+      "ftl_tl": true,
+      "computer_tl": true,
+      "sensor_tl": true,
+      "shield_tl": true
+    },
+    {
+      "id": "NoMini",
+      "role": "bound",
+      "reactor_tl": false,
+      "stl_tl": false,
+      "ftl_tl": false,
+      "computer_tl": false,
+      "sensor_tl": false,
+      "shield_tl": false
+    }
+  ],
+  "reactor_trajectories": [
+    {
+      "id": "CP138_Control",
+      "role": "historical_control",
+      "operational": "historical",
+      "degraded": "historical",
+      "emergency": "historical"
+    },
+    {
+      "id": "Linear_4to12",
+      "role": "user_proposed_control",
+      "operational": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "degraded": [
+        2,
+        3,
+        4,
+        5,
+        4,
+        6,
+        7,
+        6,
+        8
+      ],
+      "emergency": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        3,
+        2,
+        4
+      ]
+    },
+    {
+      "id": "Linear_5to13",
+      "role": "candidate",
+      "operational": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "degraded": [
+        3,
+        4,
+        5,
+        6,
+        5,
+        7,
+        8,
+        7,
+        9
+      ],
+      "emergency": [
+        1,
+        2,
+        2,
+        3,
+        2,
+        3,
+        4,
+        3,
+        5
+      ]
+    },
+    {
+      "id": "Progressive_5to15",
+      "role": "candidate",
+      "operational": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        15
+      ],
+      "degraded": [
+        3,
+        4,
+        5,
+        6,
+        5,
+        7,
+        8,
+        7,
+        10
+      ],
+      "emergency": [
+        1,
+        2,
+        2,
+        3,
+        2,
+        3,
+        4,
+        3,
+        5
+      ]
+    },
+    {
+      "id": "Punctuated_5to16",
+      "role": "stress",
+      "operational": [
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        14,
+        16
+      ],
+      "degraded": [
+        3,
+        4,
+        5,
+        6,
+        5,
+        7,
+        9,
+        8,
+        11
+      ],
+      "emergency": [
+        1,
+        2,
+        2,
+        3,
+        2,
+        3,
+        4,
+        3,
+        6
+      ]
+    },
+    {
+      "id": "OutputAndResilience_5to13",
+      "role": "candidate",
+      "operational": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "degraded": [
+        3,
+        4,
+        5,
+        6,
+        6,
+        7,
+        8,
+        8,
+        9
+      ],
+      "emergency": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5
+      ]
+    }
+  ],
+  "weapon_tp_trajectories": [
+    {
+      "id": "Historical_Control",
+      "role": "historical_control",
+      "M": "historical",
+      "K": "historical",
+      "E": "historical"
+    },
+    {
+      "id": "Static_M1_K2_E3",
+      "role": "v21_centerline",
+      "M": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "K": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "E": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "id": "Staged_Low",
+      "role": "candidate",
+      "M": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "K": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "E": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "Staged_Mid",
+      "role": "candidate",
+      "M": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3
+      ],
+      "K": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "E": [
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        5,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "Capability_Pulses",
+      "role": "stress",
+      "M": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "K": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4
+      ],
+      "E": [
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        6,
+        6
+      ]
+    }
+  ],
+  "weapon_space_patterns": [
+    {
+      "id": "Historical_Control",
+      "role": "historical_control",
+      "K": "historical",
+      "E": "historical",
+      "M": "historical"
+    },
+    {
+      "id": "Equal6",
+      "role": "neutral_candidate",
+      "K": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "E": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "M": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    {
+      "id": "MissileLatePlus1",
+      "role": "trade_candidate",
+      "K": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "E": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "M": [
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "id": "EnergyCompactLate",
+      "role": "contrast",
+      "K": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "E": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        5,
+        5,
+        5
+      ],
+      "M": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    {
+      "id": "FamilyTrade",
+      "role": "trade_candidate",
+      "K": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "E": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        5,
+        5,
+        5
+      ],
+      "M": [
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7
+      ]
+    }
+  ],
+  "pds_readiness_trajectories": [
+    {
+      "id": "Historical_Control",
+      "role": "historical_control",
+      "K": "historical",
+      "E": "historical",
+      "AMM": "historical"
+    },
+    {
+      "id": "FamilyDifferentiated",
+      "role": "candidate",
+      "K": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "E": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "AMM": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "LateEscalation",
+      "role": "stress",
+      "K": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "E": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "AMM": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ]
+    }
+  ],
+  "aux_proxy_profiles": [
+    {
+      "id": "CompactLowDemand",
+      "role": "lower_bound",
+      "base_space": 1,
+      "active_tp": 1,
+      "aux_reactor_output": 1
+    },
+    {
+      "id": "Moderate",
+      "role": "central_proxy",
+      "base_space": 2,
+      "active_tp": 1,
+      "aux_reactor_output": 1
+    },
+    {
+      "id": "ModerateHighDemand",
+      "role": "demand_stress",
+      "base_space": 2,
+      "active_tp": 2,
+      "aux_reactor_output": 1
+    },
+    {
+      "id": "PowerFlexible",
+      "role": "power_support_stress",
+      "base_space": 2,
+      "active_tp": 1,
+      "aux_reactor_output": 2
+    }
+  ],
+  "screening_thresholds": {
+    "hard_min_family_legal": 0.5,
+    "hard_min_family_standard": 0.5,
+    "coexist_min_family_legal": 0.8,
+    "coexist_min_family_essential": 0.95,
+    "coexist_min_family_standard": 0.75,
+    "max_power_starved": 0.05,
+    "max_universal_all_normal": 0.95,
+    "watch_all_normal": 0.75,
+    "max_tl9_unresolved_space": 4.0,
+    "watch_tl9_unresolved_space": 2.0,
+    "universal_pick_fraction": 0.8,
+    "never_pick_fraction": 0.01,
+    "architecture_identity_2w2r_fit": "research_watch_not_production_illegality"
+  },
+  "interpretation_boundary": "Resource screening identifies coherent or problematic trajectories. It does not establish combat balance, final AUX economics, or a single best trajectory.",
+  "subsystem_condition_semantics": {
+    "owner_directed_canonical_ladder": [
+      "Undamaged",
+      "Degraded",
+      "Damaged",
+      "Destroyed"
+    ],
+    "current_concept_v0_7x_terms": [
+      "Operational",
+      "Degraded",
+      "Disabled",
+      "Destroyed"
+    ],
+    "reconciliation_status": "terminology_drift_pending_concept_sync",
+    "reactor_mapping": {
+      "Undamaged": "operational_tp",
+      "Degraded": "degraded_tp",
+      "Damaged": "emergency_tp_non_overloadable",
+      "Destroyed": "zero_main_reactor_tp"
+    },
+    "research_scope": "Only Main Reactor condition changes in the condition-response screen. Other subsystem damage effects remain unchanged unless already explicit; undefined effects are not invented."
+  },
+  "curve_shape_watches": {
+    "status": "diagnostic_only_not_authority",
+    "early_tls": [
+      1,
+      2
+    ],
+    "early_overconstrained_fraction": 0.5,
+    "late_tls": [
+      8,
+      9
+    ],
+    "late_all_normal_fraction": 0.75
+  },
+  "pareto_objective_policy": {
+    "tl9_unresolved_space": "descriptive_only_not_monotonically_minimized",
+    "reactor_condition_resilience": "explicit_multiobjective_axis",
+    "fronts": [
+      "all",
+      "candidate",
+      "control",
+      "stress",
+      "bound"
+    ]
+  },
+  "content_sha256": "d7b5943d9107a82f9dea8cf57fb0e87c50f34210215c937e376d3275b4071881"
+}

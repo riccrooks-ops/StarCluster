@@ -1,0 +1,269 @@
+{
+  "schemaVersion": "star-cluster-combat-scaling-v1",
+  "id": "tl2-candidate-derivation-v0_1",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "calibrationEvidence": "docs/validation/evidence/checkpoint-40-minimal-tactics/tl1-mirror-calibration.csv",
+  "targetHigherTlWinPercent": 66.666667,
+  "reviewBandMinimumPercent": 60.0,
+  "reviewBandMaximumPercent": 72.0,
+  "ranges": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "tierModel": {
+    "lowTech": [
+      1,
+      2,
+      3
+    ],
+    "mediumTech": [
+      4,
+      5,
+      6
+    ],
+    "highTech": [
+      7,
+      8,
+      9
+    ],
+    "progressionRhythm": "foundation-refinement-culmination / breakthrough-refinement-culmination / transformation-refinement-apex"
+  },
+  "tl1AnalyticalAssumptions": {
+    "effectivePdsChanceFormula": "kinetic_pds_chance + targeting_accuracy_bonus",
+    "missileLaunchCadenceTurns": 1,
+    "directFireCadenceTurns": 1,
+    "shieldRechargeTiming": "turn-start",
+    "simultaneousRaceModel": "opponent expected kill time divided by combined expected kill times"
+  },
+  "candidates": [
+    {
+      "id": "tl2-conservative-refinement",
+      "label": "Conservative Refinement",
+      "status": "screening-control",
+      "designThesis": "TL2 improves early-system reliability, precision, and capacity while avoiding major weapon-packet growth.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 15,
+        "effectivePdsChance": 48,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": []
+    },
+    {
+      "id": "tl2-balanced-derived",
+      "label": "Balanced Derived Candidate",
+      "status": "recommended-for-first-monte-carlo",
+      "designThesis": "TL2 is a mature early package: reinforced structure, fusion power and propulsion, improved fire control, and family-specific weapon refinements that analytically approach a two-to-one full-ship odds advantage over TL1.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 14,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 15,
+        "effectivePdsChance": 50,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 5,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 25,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 6,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE",
+        "T4_QSDS",
+        "T4_SSDS"
+      ],
+      "namingReview": [
+        "Coil Cannon range growth is provisional and should remain only if the Range 5 identity does not erase later Rail Cannon progression.",
+        "Pulsed Laser DAM 4 is a peak-output interpretation; rename or revise if later testing shows the name implies a different mechanical promise."
+      ]
+    },
+    {
+      "id": "tl2-specialization-forward",
+      "label": "Specialization-Forward Control",
+      "status": "screening-control",
+      "designThesis": "TL2 emphasizes differentiated capabilities rather than uniform packet growth: early kinetic penetration, longer beam reach, stronger guidance, and tougher structure.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 14,
+        "armorIntegrity": 6,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 15,
+        "effectivePdsChance": 50,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 1,
+          "accuracyBonus": 25,
+          "maximumRange": 5,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 6,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 6,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 65,
+          "maximumRange": 8,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Coil Cannon APEN 1 may intrude on the TL3 Rail Cannon culmination and is intentionally retained only as a control.",
+        "Pulsed Laser range 6 may fit beam-control refinement better than peak-output naming; compare against an alternate display name if this vector survives."
+      ]
+    }
+  ]
+}

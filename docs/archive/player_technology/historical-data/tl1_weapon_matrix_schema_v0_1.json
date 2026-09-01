@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Star Cluster TL1 Complete Weapon Matrix",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "baselineSha256",
+    "masterSeed",
+    "trialsPerVariant",
+    "variants"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-tl1-weapon-matrix-v1"
+    },
+    "id": {
+      "type": "string"
+    },
+    "baselineSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "masterSeed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "trialsPerVariant": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 30,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "rangeHexes",
+          "sideA",
+          "sideB"
+        ]
+      }
+    }
+  }
+}

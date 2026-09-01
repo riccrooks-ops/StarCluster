@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-tl1-phase-b-v1",
+  "title": "Star Cluster TL1 Phase B deterministic direct-fire scenario",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "name", "baselineSha256", "cases"],
+  "properties": {
+    "schemaVersion": { "const": "star-cluster-tl1-phase-b-v1" },
+    "id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "baselineSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "operation",
+          "profileSource",
+          "weaponFamily",
+          "targetingCondition",
+          "rangeHexes",
+          "rollA",
+          "rollB"
+        ],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "name": { "type": "string", "minLength": 1 },
+          "operation": { "enum": ["Accuracy", "Roll", "SimultaneousVolley", "KineticMirrorDuel"] },
+          "profileSource": { "enum": ["baseline", "explicit"] },
+          "weaponFamily": { "enum": ["kinetic", "energy"] },
+          "targetingCondition": { "enum": ["operational", "degraded", "disabled", "destroyed"] },
+          "weaponAccuracy": { "type": "integer" },
+          "computerBonus": { "type": "integer" },
+          "rangeHexes": { "type": "integer", "minimum": 0 },
+          "shooterEvasive": { "type": "boolean" },
+          "targetEvasive": { "type": "boolean" },
+          "rollA": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "rollB": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "hullA": { "type": "integer", "minimum": 1 },
+          "hullB": { "type": "integer", "minimum": 1 },
+          "damageA": { "type": "integer", "minimum": 1 },
+          "damageB": { "type": "integer", "minimum": 1 },
+          "expectedChance": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "expectedOutcomeA": { "type": "string" },
+          "expectedOutcomeB": { "type": "string" },
+          "expectedHullA": { "type": "integer", "minimum": 0 },
+          "expectedHullB": { "type": "integer", "minimum": 0 },
+          "expectedMutualDestruction": { "type": "boolean" },
+          "turnCap": { "type": "integer", "minimum": 1 },
+          "rollsA": { "type": "array", "items": { "type": "integer", "minimum": 1, "maximum": 100 } },
+          "rollsB": { "type": "array", "items": { "type": "integer", "minimum": 1, "maximum": 100 } },
+          "expectedDuelOutcome": { "type": "string" },
+          "expectedTurnsResolved": { "type": "integer", "minimum": 1 }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": 68,
+  "normal": {
+    "stageCount": 8,
+    "monteCarloVariantCount": 0,
+    "trialsAtDefault": 0,
+    "deterministicSensorEwRows": 792,
+    "required": true
+  },
+  "deepCalibration": {
+    "stageCount": 27,
+    "monteCarloVariantCount": 1544,
+    "trialsAtDefault": 15440000,
+    "requiredByDefault": false
+  },
+  "blockingBalanceTargets": false,
+  "productionControls": {
+    "reactorOutput": 5,
+    "startingFuel": 100,
+    "movementFuelPerHex": 2,
+    "evasiveManeuverFuelCost": 1,
+    "tacticalMapRadius": 5,
+    "sensorRangesPromotedByCheckpoint68": false
+  },
+  "nativeAcceptanceDependencyContract": {
+    "allowedBaselineDependencies": ["PowerShell", "pinned .NET SDK"],
+    "blockedInterpreters": ["python", "python3", "py"],
+    "precheckRequired": true
+  },
+  "mustAlwaysRunStageIds": [
+    "deterministic",
+    "tl1-phase-a",
+    "tl1-phase-b",
+    "tl1-installation-space-envelope",
+    "tl1-sensor-ew-foundation",
+    "auxiliary-resource-endurance",
+    "checkpoint-53-resource-semantics-lock",
+    "runner-self-tests"
+  ],
+  "deepCalibrationRetains": [
+    "tl1-bilateral-overload-ew-counterplay",
+    "tl1-scripted-overload-tactics",
+    "tl1-bilateral-tactical-geometry",
+    "tl1-track-aware-movement-acquisition",
+    "tl1-operational-sensor-acquisition-ew"
+  ],
+  "notes": [
+    "Checkpoint 68 tests candidate sensor envelopes deterministically and does not promote one into integrated combat.",
+    "The accepted CP67a 100-fuel baseline and prior overload/EW Monte Carlo evidence remain frozen.",
+    "Forward TL1 sensor candidates use one normal Active mode plus one bounded overload; higher TL may later unlock multiple rated modes."
+  ]
+}

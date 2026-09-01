@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "star-cluster-checkpoint-definition-v0.1",
+  "checkpoint": 139,
+  "name": "Combat Model DEF/RES Reconciliation Foundation",
+  "baseCheckpoint": 138,
+  "status": "candidate_pending_native_validation",
+  "scope": "research mechanics reconciliation; zero production numerical promotion",
+  "productionDamageModel": "penetration-hardening-v1",
+  "researchDamageModel": "def-res-v1",
+  "canonicalKernelVersion": "0.4",
+  "expectedPythonTests": 243,
+  "expectedXunitTests": 915,
+  "expectedScenarioRunnerSelfTests": 70,
+  "expectedResearchParityCases": 25,
+  "expectedFocusedCp139Tests": 9,
+  "expectedDefResFixtures": 8,
+  "expectedSmokeVariants": 82,
+  "declaredSubstantiveTrials": 0,
+  "stageAReady": false,
+  "stageABlockers": [
+    "reactor/TP resource environments",
+    "dynamic TP conflict telemetry",
+    "ten Stage A combat strata"
+  ],
+  "automaticPromotion": false
+}

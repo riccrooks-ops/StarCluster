@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "87a",
+  "title": "Checkpoint 87a - CP87 Study-ID Integration Contract Hotfix",
+  "sdkVersion": "8.0.423",
+  "configuration": "Debug",
+  "calibrationSolution": "StarCluster.Calibration.sln",
+  "testProject": "tests/StarCluster.Tests/StarCluster.Tests.csproj",
+  "runnerProject": "src/StarCluster.ScenarioRunner/StarCluster.ScenarioRunner.csproj",
+  "manifestFile": "CHECKPOINT_87a_SHA256SUMS.txt",
+  "outputRoot": "out/checkpoint-87a",
+  "defaultTrials": 10000,
+  "defaultJobs": 24,
+  "documentation": [
+    "CHAT_README.md",
+    "docs/Star_Cluster_Game_Concept_v0.6x.docx",
+    "docs/development/Simulation_Development_Guidelines.md",
+    "docs/development/Prototype_And_Technical_Guardrails.md",
+    "docs/development/Diagnostic_Event_Journal.md",
+    "docs/design/README.md",
+    "docs/design/ai/AI_Doctrine_Registry_Architecture_v0_4.md",
+    "docs/design/player_technology/Technology_Architecture_Matrix_v1.md",
+    "docs/archive/player_technology/pre-cp165-active/technology_architecture_matrix_v1.json",
+    "docs/design/player_technology/StarCluster_Technology_Architecture_Matrix_v1.xlsx",
+    "docs/archive/player_technology/pre-cp165-active/tl2_computing_sensor_ew_working_profile_v0_2.json",
+    "docs/archive/player_technology/pre-cp165-active/tl2_power_reactor_candidate_profile_v0_2.json",
+    "docs/archive/player_technology/pre-cp165-active/tl2_shield_capacity_candidate_profile_v0_2.json",
+    "docs/archive/player_technology/pre-cp165-active/tl2_armor_ap_ai_candidate_profile_v0_2.json",
+    "docs/archive/player_technology/pre-cp165-active/tl2_weapon_penetration_working_profile_v0_2.json",
+    "docs/design/testing/Technology_Integration_Permutation_Suite_Architecture_v0_7.md",
+    "docs/design/testing/technology_integration_permutation_suite_v0_7.json",
+    "docs/design/testing/Checkpoint_87_Validation_Tiers.md",
+    "docs/design/testing/checkpoint_87_validation_suite_policy_v0_1.json",
+    "docs/validation/Checkpoint_87a_CP87_Study_ID_Integration_Contract_Hotfix.md",
+    "docs/validation/evidence/checkpoint-86a/CHECKPOINT_86a_SHA256SUMS.txt",
+    "docs/validation/evidence/checkpoint-86a/checkpoint-86a-native-acceptance-provenance.json"
+  ],
+  "stages": [
+    {
+      "id": "deterministic",
+      "name": "Accepted deterministic moving-missile scenarios",
+      "command": "run-all",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios",
+        "--output-dir",
+        "{OutputRoot}/deterministic"
+      ],
+      "metrics": {
+        "deterministicCases": 7
+      }
+    },
+    {
+      "id": "tl1-phase-a",
+      "name": "TL1 Phase A mechanics corpus",
+      "command": "tl1-phase-a",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1PhaseA",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-a"
+      ],
+      "metrics": {
+        "caseCount": 54
+      }
+    },
+    {
+      "id": "tl1-phase-b",
+      "name": "TL1 Phase B direct-fire corpus",
+      "command": "tl1-phase-b",
+      "arguments": [
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-b"
+      ],
+      "metrics": {
+        "caseCount": 36
+      }
+    },
+    {
+      "id": "tl1-installation-space-envelope",
+      "name": "TL1 35-Space deterministic construction envelope and nominal power diagnostics",
+      "command": "tl1-installation-space-envelope",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-space01-35-space-construction-envelope.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-installation-space-envelope"
+      ],
+      "metrics": {
+        "macroLoadoutCount": 27,
+        "weaponPowerVariantCount": 96,
+        "exactFillMacroLoadoutCount": 4,
+        "usesTrials": false
+      }
+    },
+    {
+      "id": "tl1-sensor-ew-foundation",
+      "name": "TL1 deterministic sensor reach, emissions, discrimination resistance, burn-through, and EW sweep",
+      "command": "tl1-sensor-ew-foundation",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/SensorEw/tl1-sew03-sensor-ew-discrimination-burnthrough.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-sensor-ew-foundation"
+      ],
+      "metrics": {
+        "profileCount": 7,
+        "forwardCandidateCount": 6,
+        "contextCount": 12,
+        "rangeCount": 11,
+        "deterministicRowCount": 924,
+        "usesTrials": false,
+        "balanceTargetsBlocking": false,
+        "productionSensorRangesChanged": false,
+        "tl1NormalActiveModeCount": 1,
+        "sameHexLosUnoccludable": true,
+        "sameHexEwStillResolves": true,
+        "sensorDiscriminationResistance": 0,
+        "sameHexBurnThroughResistance": 1
+      }
+    },
+    {
+      "id": "cross-tl-build-permutation-preflight",
+      "name": "Cross-TL legal-build enumeration and generated-study preflight",
+      "command": "cross-tl-build-permutation-preflight",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v0_1.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--output-dir",
+        "{OutputRoot}/cross-tl-build-permutation-preflight"
+      ],
+      "metrics": {
+        "axisCount": 8,
+        "rawCombinationCount": 512,
+        "legalBuildCount": 512,
+        "namedRecipeCount": 13,
+        "logicalPairingCount": 64,
+        "geometryCount": 3,
+        "generatedVariantCount": 192,
+        "usesTrials": false,
+        "countTowardVariantAggregate": false,
+        "powerOvercommitIsConstructionIllegal": false
+      }
+    },
+    {
+      "id": "cross-tl-build-permutation-generation",
+      "name": "Cross-TL 512-build enumeration and 192-variant integrated-study generation",
+      "command": "cross-tl-build-permutation",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v0_1.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--output-dir",
+        "{OutputRoot}/cross-tl-build-permutation"
+      ],
+      "metrics": {
+        "axisCount": 8,
+        "rawCombinationCount": 512,
+        "legalBuildCount": 512,
+        "orientedPairingEnvelope": 262144,
+        "unorderedWithSelfPairingEnvelope": 131328,
+        "namedRecipeCount": 13,
+        "logicalPairingCount": 64,
+        "generatedVariantCount": 192,
+        "usesTrials": false,
+        "countTowardVariantAggregate": false,
+        "generatedStudyActualConsumerRequired": true
+      }
+    },
+    {
+      "id": "cross-tl-generated-study-preflight",
+      "name": "Generated cross-TL integrated-combat actual-consumer preflight",
+      "command": "tl1-integrated-tactical-combat-preflight",
+      "arguments": [
+        "--study-file",
+        "{OutputRoot}/cross-tl-build-permutation/generated-integrated-combat-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--output-dir",
+        "{OutputRoot}/cross-tl-generated-study-preflight"
+      ],
+      "metrics": {
+        "variantCount": 192,
+        "usesTrials": false,
+        "actualConsumerDeserializer": true,
+        "generatedInput": true,
+        "trackAwareDynamicMovement": true,
+        "combatActivityGatePresent": true,
+        "countTowardVariantAggregate": false
+      }
+    },
+    {
+      "id": "cross-tl-generated-study-smoke",
+      "name": "Generated cross-TL 192-variant one-trial full-pipeline smoke",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "{OutputRoot}/cross-tl-build-permutation/generated-integrated-combat-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--trials",
+        "1",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/cross-tl-generated-study-smoke"
+      ],
+      "metrics": {
+        "variantCount": 192,
+        "trialsPerVariant": 1,
+        "totalSmokeTrials": 192,
+        "usesTrials": true,
+        "smokeOnly": true,
+        "fullPipelineExecution": true,
+        "balanceTargetsBlocking": false,
+        "countTowardVariantAggregate": false
+      }
+    },
+    {
+      "id": "cross-tl-build-permutation-screening",
+      "name": "Cross-TL TL1/TL2 legal-build representative mixed-generation screening",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "{OutputRoot}/cross-tl-build-permutation/generated-integrated-combat-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/cross-tl-build-permutation-screening"
+      ],
+      "metrics": {
+        "legalBuildEnvelope": 512,
+        "namedRecipeCount": 13,
+        "logicalPairingCount": 64,
+        "geometryCount": 3,
+        "variantCount": 192,
+        "usesTrials": true,
+        "balanceTargetsBlocking": false,
+        "standingPermutationSuite": "v0.7",
+        "dynamicMovementMode": "TrackAwareOpponentRange",
+        "combatActivityGate": true,
+        "completeAndMixedTlPairings": true,
+        "automaticCandidatePromotion": false
+      }
+    },
+    {
+      "id": "auxiliary-resource-endurance",
+      "name": "Deterministic finite-resource and recharge endurance stress study",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end01-resource-endurance-stress.json",
+        "--output-dir",
+        "{OutputRoot}/auxiliary-resource-endurance"
+      ],
+      "metrics": {
+        "combatBatteryCandidateCount": 2,
+        "capacitorPatternCount": 3,
+        "ammRoundCandidateCount": 4,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "checkpoint-53-resource-semantics-lock",
+      "name": "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end02-resource-semantics-lock.json",
+        "--output-dir",
+        "{OutputRoot}/checkpoint-53-resource-semantics-lock"
+      ],
+      "metrics": {
+        "combatBatteryPrimaryCharges": 3,
+        "combatBatteryPowerPerCharge": 1,
+        "combatBatteryDischargeLimitPerTurn": 1,
+        "combatBatteryEncounterDischargeCap": null,
+        "ammRounds": 25,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "runner-self-tests",
+      "name": "ScenarioRunner self-tests",
+      "command": "self-test",
+      "arguments": [
+        "--scenario-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/terminal-two-window-hit.json"
+      ],
+      "metrics": {
+        "selfTestCount": 52
+      }
+    }
+  ],
+  "checkpointMetrics": {
+    "stageCount": 13,
+    "monteCarloVariantCount": 192,
+    "trialsAtDefault": 1920000,
+    "suiteTier": "must_always_run",
+    "smokeVariantExecutions": 192,
+    "smokeTrialsAtDefault": 192,
+    "totalTrialExecutionsAtDefault": 1920192
+  },
+  "nativeDependencyPrecheck": {
+    "required": true,
+    "script": "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+    "blockedInterpreters": [
+      "python",
+      "python3",
+      "py"
+    ],
+    "powerShellPaths": [
+      "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+      "tools/checkpoints/checkpoint-87a/apply_checkpoint_87a.ps1",
+      "tools/checkpoints/checkpoint-87a/test_checkpoint_87a_contract.ps1",
+      "tools/calibration/run_calibration_checkpoint.ps1"
+    ],
+    "checkpointDefinitionPaths": [
+      "tools/calibration/checkpoints/checkpoint-87a.json",
+      "tools/calibration/checkpoints/checkpoint-87a-deep-calibration.json"
+    ]
+  },
+  "primaryStudy": {
+    "id": "tl2-itc13-cross-tl-build-permutation-screening",
+    "variantCount": 192
+  }
+}

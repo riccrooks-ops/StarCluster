@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "90a",
+  "status": "Success",
+  "acceptedAtUtc": "2026-08-12T00:43:24.7687519Z",
+  "checkpointDefinition": "tools/calibration/checkpoints/checkpoint-90a.json",
+  "checkpointDefinitionSha256": "eabd5d18f695b5a7244e23dd4d1f85a76d2719bb2d010d4ea530d9ee71c3f7af",
+  "checkpointManifest": "CHECKPOINT_90a_SHA256SUMS.txt",
+  "checkpointManifestSha256": "8637eb74b97b2f6e5bea67e2c727b5650b6e5e2b1ca80a7b7b9cd54ac6c0ce2c",
+  "sdkExpected": "8.0.423",
+  "sdkActual": "8.0.423",
+  "build": {
+    "succeeded": true,
+    "warnings": 0,
+    "errors": 0
+  },
+  "tests": {
+    "total": 863,
+    "passed": 863,
+    "failed": 0,
+    "skipped": 0
+  },
+  "runner": {
+    "configuredStages": 13,
+    "passedStages": 13,
+    "failedStages": 0,
+    "selfTests": 56,
+    "failedGates": 0
+  },
+  "primaryStudy": {
+    "id": "tl2-itc15-cross-tl-generalized-legal-build-screening",
+    "variantCount": 432,
+    "trialsPerVariant": 10000,
+    "substantiveTrials": 4320000,
+    "smokeTrials": 432,
+    "summarySha256": "0d9a66194c18ca7897405bd34d2190038df75531ba8060430666ea6b39a88854"
+  },
+  "sourceEvidence": "User-provided native Windows checkpoint-90a result package reviewed before Checkpoint 91 generation."
+}

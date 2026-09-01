@@ -1,0 +1,350 @@
+{
+  "schemaVersion": "star-cluster-cp127-main-subsystem-stabilization-results-v0.1",
+  "checkpoint": 127,
+  "mode": "substantive",
+  "variants": 86584,
+  "trialsPerVariant": 100,
+  "totalTrials": 8658400,
+  "trialErrors": 0,
+  "telemetryMetrics": 61,
+  "mixedTlShipsExecuted": false,
+  "balanceValidated": false,
+  "automaticPromotion": false,
+  "failedGates": [],
+  "reviewSignals": {
+    "transitionComparison": [
+      {
+        "lane": "adjacent_population",
+        "low_tl": 1,
+        "high_tl": 2,
+        "cp126_higher_tl_win_rate": 0.8624714605034305,
+        "cp127_higher_tl_win_rate": 0.8628876193406302,
+        "delta_pp": 0.041615883719969826,
+        "cp126_unresolved_rate": 0.0007246376811594203,
+        "cp127_unresolved_rate": 0.0005434782608695651
+      },
+      {
+        "lane": "adjacent_population",
+        "low_tl": 2,
+        "high_tl": 3,
+        "cp126_higher_tl_win_rate": 0.8142127495445305,
+        "cp127_higher_tl_win_rate": 0.8140925688564182,
+        "delta_pp": -0.012018068811225913,
+        "cp126_unresolved_rate": 0.0009642857142857144,
+        "cp127_unresolved_rate": 0.0008847402597402599
+      },
+      {
+        "lane": "adjacent_population",
+        "low_tl": 3,
+        "high_tl": 4,
+        "cp126_higher_tl_win_rate": 0.774957771703833,
+        "cp127_higher_tl_win_rate": 0.7746982500845855,
+        "delta_pp": -0.02595216192474714,
+        "cp126_unresolved_rate": 0.012228260869565218,
+        "cp127_unresolved_rate": 0.012649456521739131
+      },
+      {
+        "lane": "adjacent_population",
+        "low_tl": 4,
+        "high_tl": 5,
+        "cp126_higher_tl_win_rate": 0.7939747857276259,
+        "cp127_higher_tl_win_rate": 0.7930599691393337,
+        "delta_pp": -0.09148165882921777,
+        "cp126_unresolved_rate": 0.0011458333333333333,
+        "cp127_unresolved_rate": 0.0010937499999999999
+      },
+      {
+        "lane": "adjacent_population",
+        "low_tl": 5,
+        "high_tl": 6,
+        "cp126_higher_tl_win_rate": 0.8896972881304029,
+        "cp127_higher_tl_win_rate": 0.8897270124986237,
+        "delta_pp": 0.002972436822079594,
+        "cp126_unresolved_rate": 0.007865284974093265,
+        "cp127_unresolved_rate": 0.007674870466321243
+      },
+      {
+        "lane": "adjacent_population",
+        "low_tl": 6,
+        "high_tl": 7,
+        "cp126_higher_tl_win_rate": 0.6601664036116939,
+        "cp127_higher_tl_win_rate": 0.6593227278474406,
+        "delta_pp": -0.084367576425326,
+        "cp126_unresolved_rate": 0.006252314814814815,
+        "cp127_unresolved_rate": 0.006296296296296296
+      },
+      {
+        "lane": "adjacent_population",
+        "low_tl": 7,
+        "high_tl": 8,
+        "cp126_higher_tl_win_rate": 0.7640166942844658,
+        "cp127_higher_tl_win_rate": 0.7626156921142491,
+        "delta_pp": -0.14010021702167696,
+        "cp126_unresolved_rate": 0.013563657407407408,
+        "cp127_unresolved_rate": 0.013642939814814814
+      },
+      {
+        "lane": "adjacent_population",
+        "low_tl": 8,
+        "high_tl": 9,
+        "cp126_higher_tl_win_rate": 0.6652437393899652,
+        "cp127_higher_tl_win_rate": 0.6710845455249492,
+        "delta_pp": 0.5840806134984056,
+        "cp126_unresolved_rate": 0.03065277777777778,
+        "cp127_unresolved_rate": 0.03040509259259259
+      },
+      {
+        "lane": "matched_composition",
+        "low_tl": 1,
+        "high_tl": 2,
+        "cp126_higher_tl_win_rate": 0.9015553395286272,
+        "cp127_higher_tl_win_rate": 0.9027942108785311,
+        "delta_pp": 0.12388713499038584,
+        "cp126_unresolved_rate": 0.00048309178743961357,
+        "cp127_unresolved_rate": 0.000676328502415459
+      },
+      {
+        "lane": "matched_composition",
+        "low_tl": 2,
+        "high_tl": 3,
+        "cp126_higher_tl_win_rate": 0.9348017073364175,
+        "cp127_higher_tl_win_rate": 0.9309352002671752,
+        "delta_pp": -0.38665070692422976,
+        "cp126_unresolved_rate": 0.000992753623188406,
+        "cp127_unresolved_rate": 0.0007971014492753623
+      },
+      {
+        "lane": "matched_composition",
+        "low_tl": 3,
+        "high_tl": 4,
+        "cp126_higher_tl_win_rate": 0.8763163839369053,
+        "cp127_higher_tl_win_rate": 0.8740949130541946,
+        "delta_pp": -0.222147088271063,
+        "cp126_unresolved_rate": 0.06323376623376623,
+        "cp127_unresolved_rate": 0.06323051948051948
+      },
+      {
+        "lane": "matched_composition",
+        "low_tl": 4,
+        "high_tl": 5,
+        "cp126_higher_tl_win_rate": 0.9051946305639657,
+        "cp127_higher_tl_win_rate": 0.9054483077278839,
+        "delta_pp": 0.025367716391822004,
+        "cp126_unresolved_rate": 0.006744565217391305,
+        "cp127_unresolved_rate": 0.006440217391304348
+      },
+      {
+        "lane": "matched_composition",
+        "low_tl": 5,
+        "high_tl": 6,
+        "cp126_higher_tl_win_rate": 0.9636389109419846,
+        "cp127_higher_tl_win_rate": 0.9638305075388375,
+        "delta_pp": 0.0191596596852861,
+        "cp126_unresolved_rate": 0.05131481481481481,
+        "cp127_unresolved_rate": 0.05048032407407407
+      },
+      {
+        "lane": "matched_composition",
+        "low_tl": 6,
+        "high_tl": 7,
+        "cp126_higher_tl_win_rate": 0.7856943096554411,
+        "cp127_higher_tl_win_rate": 0.7873658947582101,
+        "delta_pp": 0.1671585102768991,
+        "cp126_unresolved_rate": 0.04339378238341969,
+        "cp127_unresolved_rate": 0.04314766839378239
+      },
+      {
+        "lane": "matched_composition",
+        "low_tl": 7,
+        "high_tl": 8,
+        "cp126_higher_tl_win_rate": 0.9707740839151997,
+        "cp127_higher_tl_win_rate": 0.9663909487043637,
+        "delta_pp": -0.4383135210835998,
+        "cp126_unresolved_rate": 0.07116666666666667,
+        "cp127_unresolved_rate": 0.07127025462962963
+      },
+      {
+        "lane": "matched_composition",
+        "low_tl": 8,
+        "high_tl": 9,
+        "cp126_higher_tl_win_rate": 0.9379271509466919,
+        "cp127_higher_tl_win_rate": 0.9454443831864396,
+        "delta_pp": 0.7517232239747762,
+        "cp126_unresolved_rate": 0.16124305555555554,
+        "cp127_unresolved_rate": 0.16127893518518518
+      }
+    ],
+    "tl5Tl6Ablation": [
+      {
+        "condition": "candidate",
+        "all_higher_tl_win_rate": 0.9629824459733377,
+        "unresolved_rate": 0.04720833333333333,
+        "mean_turns": 13.317583333333333,
+        "kinetic_higher_tl_win_rate": 0.9816799000423094,
+        "energy_higher_tl_win_rate": 0.9972923022744451,
+        "missile_higher_tl_win_rate": 0.9362552952423607,
+        "delta_vs_candidate_pp": 0.0
+      },
+      {
+        "condition": "hold_hull",
+        "all_higher_tl_win_rate": 0.962484784889609,
+        "unresolved_rate": 0.04704166666666666,
+        "mean_turns": 13.312833333333334,
+        "kinetic_higher_tl_win_rate": 0.9816799000423094,
+        "energy_higher_tl_win_rate": 0.9972923022744451,
+        "missile_higher_tl_win_rate": 0.9352594181829832,
+        "delta_vs_candidate_pp": -0.049766108372872875
+      },
+      {
+        "condition": "hold_armor",
+        "all_higher_tl_win_rate": 0.9451596520254674,
+        "unresolved_rate": 0.043166666666666666,
+        "mean_turns": 13.144458333333334,
+        "kinetic_higher_tl_win_rate": 0.9752583131314583,
+        "energy_higher_tl_win_rate": 0.9966205507455508,
+        "missile_higher_tl_win_rate": 0.9042011112841309,
+        "delta_vs_candidate_pp": -1.7822793947870341
+      },
+      {
+        "condition": "hold_stl",
+        "all_higher_tl_win_rate": 0.9630241126400043,
+        "unresolved_rate": 0.04720833333333333,
+        "mean_turns": 13.317874999999999,
+        "kinetic_higher_tl_win_rate": 0.9816799000423094,
+        "energy_higher_tl_win_rate": 0.9972923022744451,
+        "missile_higher_tl_win_rate": 0.936338628575694,
+        "delta_vs_candidate_pp": 0.004166666666660657
+      },
+      {
+        "condition": "hold_computer",
+        "all_higher_tl_win_rate": 0.9629824459733377,
+        "unresolved_rate": 0.04720833333333333,
+        "mean_turns": 13.317583333333333,
+        "kinetic_higher_tl_win_rate": 0.9816799000423094,
+        "energy_higher_tl_win_rate": 0.9972923022744451,
+        "missile_higher_tl_win_rate": 0.9362552952423607,
+        "delta_vs_candidate_pp": 0.0
+      },
+      {
+        "condition": "hold_sensor",
+        "all_higher_tl_win_rate": 0.8638329543368777,
+        "unresolved_rate": 0.04683333333333333,
+        "mean_turns": 13.7265,
+        "kinetic_higher_tl_win_rate": 0.9286984969749311,
+        "energy_higher_tl_win_rate": 0.9567910699721104,
+        "missile_higher_tl_win_rate": 0.7849211252002345,
+        "delta_vs_candidate_pp": -9.914949163646003
+      },
+      {
+        "condition": "hold_shield",
+        "all_higher_tl_win_rate": 0.9477937253812839,
+        "unresolved_rate": 0.042958333333333334,
+        "mean_turns": 13.148291666666667,
+        "kinetic_higher_tl_win_rate": 0.9688867875452787,
+        "energy_higher_tl_win_rate": 0.996623952106095,
+        "missile_higher_tl_win_rate": 0.91261790833243,
+        "delta_vs_candidate_pp": -1.5188720592053784
+      },
+      {
+        "condition": "hold_kinetic",
+        "all_higher_tl_win_rate": 0.907079538111569,
+        "unresolved_rate": 0.04720833333333333,
+        "mean_turns": 14.166083333333335,
+        "kinetic_higher_tl_win_rate": 0.7586020213437817,
+        "energy_higher_tl_win_rate": 0.9972923022744451,
+        "missile_higher_tl_win_rate": 0.9362552952423607,
+        "delta_vs_candidate_pp": -5.590290786176865
+      },
+      {
+        "condition": "hold_energy",
+        "all_higher_tl_win_rate": 0.9572729805364986,
+        "unresolved_rate": 0.04720833333333333,
+        "mean_turns": 14.198333333333332,
+        "kinetic_higher_tl_win_rate": 0.9816799000423094,
+        "energy_higher_tl_win_rate": 0.9744494776263721,
+        "missile_higher_tl_win_rate": 0.9362552952423607,
+        "delta_vs_candidate_pp": -0.5709465436839145
+      },
+      {
+        "condition": "hold_missile",
+        "all_higher_tl_win_rate": 0.9481776447402044,
+        "unresolved_rate": 0.05695833333333333,
+        "mean_turns": 13.990541666666667,
+        "kinetic_higher_tl_win_rate": 0.9816799000423094,
+        "energy_higher_tl_win_rate": 0.9972923022744451,
+        "missile_higher_tl_win_rate": 0.9066570330428715,
+        "delta_vs_candidate_pp": -1.4804801233133325
+      }
+    ],
+    "tl8EnergyFactorial": [
+      {
+        "condition": "candidate_damage_apen3",
+        "Energy_noShield_win_rate": 0.8051249602785222,
+        "Energy_Shield_win_rate": 0.41166719538845414,
+        "Kinetic_noShield_win_rate": 0.6815782607526181,
+        "Kinetic_Shield_win_rate": 0.226293543029186,
+        "energy_minus_kinetic_no_shield_pp": 12.354669952590413,
+        "energy_minus_kinetic_shield_pp": 18.537365235926814
+      },
+      {
+        "condition": "cp126_damage_apen3",
+        "Energy_noShield_win_rate": 0.8613365327094991,
+        "Energy_Shield_win_rate": 0.40540517635128975,
+        "Kinetic_noShield_win_rate": 0.6621463461391025,
+        "Kinetic_Shield_win_rate": 0.2258644801513013,
+        "energy_minus_kinetic_no_shield_pp": 19.919018657039654,
+        "energy_minus_kinetic_shield_pp": 17.954069619998844
+      },
+      {
+        "condition": "candidate_damage_apen2",
+        "Energy_noShield_win_rate": 0.808082411626248,
+        "Energy_Shield_win_rate": 0.35051938164952623,
+        "Kinetic_noShield_win_rate": 0.6896265065127776,
+        "Kinetic_Shield_win_rate": 0.2293100853459369,
+        "energy_minus_kinetic_no_shield_pp": 11.845590511347048,
+        "energy_minus_kinetic_shield_pp": 12.120929630358933
+      },
+      {
+        "condition": "cp126_damage_apen2",
+        "Energy_noShield_win_rate": 0.807662103020924,
+        "Energy_Shield_win_rate": 0.3549996075650717,
+        "Kinetic_noShield_win_rate": 0.6888656837224824,
+        "Kinetic_Shield_win_rate": 0.2289053071579058,
+        "energy_minus_kinetic_no_shield_pp": 11.879641929844166,
+        "energy_minus_kinetic_shield_pp": 12.60943004071659
+      }
+    ],
+    "lateMissile": [
+      {
+        "tl": 8,
+        "base_pairings": 860,
+        "unresolved_rate": 0.10943023255813954,
+        "mean_turns": 13.600720930232557,
+        "mean_mover_order_swing": 0.0
+      },
+      {
+        "tl": 9,
+        "base_pairings": 867,
+        "unresolved_rate": 0.1732410611303345,
+        "mean_turns": 18.489261822376008,
+        "mean_mover_order_swing": 0.0
+      }
+    ]
+  },
+  "elapsedSecondsByLane": {
+    "finalBaseline": 2329.7964129,
+    "tl5_hold_hull": 16.683576500000527,
+    "tl5_hold_armor": 16.160815700000057,
+    "tl5_hold_stl": 15.147629699999925,
+    "tl5_hold_computer": 14.981208100000003,
+    "tl5_hold_sensor": 17.383111999999528,
+    "tl5_hold_shield": 15.743578499999785,
+    "tl5_hold_kinetic": 16.740959300000213,
+    "tl5_hold_energy": 16.596739399999933,
+    "tl5_hold_missile": 16.43304210000042,
+    "energy_candidate_damage_apen3": 36.38849289999962,
+    "energy_cp126_damage_apen3": 35.624782400000186,
+    "energy_candidate_damage_apen2": 38.2174085000006,
+    "energy_cp126_damage_apen2": 38.00905899999998
+  }
+}

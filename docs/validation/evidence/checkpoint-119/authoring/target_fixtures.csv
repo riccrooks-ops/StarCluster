@@ -1,0 +1,55 @@
+tl,target_fixture,classification,underlying_build,used_space,capacity,initial_shield,shield_base_recharge,armor_protection,armor_integrity,hull,pds_family,hardener,role
+1,energy-balanced-legal,legal_build,tl1-energy-balanced,35,35,2,1,0,4,12,-,False,General Energy-family layered target.
+1,energy-defense-legal,legal_build,tl1-energy-defense-specialist,35,35,2,1,0,4,12,Energy,False,Shield/Hardener/Energy-PDS defensive specialist.
+1,kinetic-balanced-legal,legal_build,tl1-kinetic-balanced,35,35,2,1,0,4,12,-,False,General Kinetic-family layered target.
+1,kinetic-ew-legal,legal_build,tl1-kinetic-ew-specialist,35,35,0,0,0,4,12,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.
+1,missile-balanced-legal,legal_build,tl1-missile-balanced,35,35,2,1,0,4,12,-,False,General Missile-family layered target.
+1,missile-defense-legal,legal_build,tl1-missile-missile-defense,35,35,2,1,0,4,12,AMM,False,Shield/AMM Missile-defense specialist target.
+2,energy-balanced-legal,legal_build,tl2-energy-balanced,35,35,3,1,0,5,12,-,False,General Energy-family layered target.
+2,energy-defense-legal,legal_build,tl2-energy-defense-specialist,35,35,3,1,0,5,12,Energy,False,Shield/Hardener/Energy-PDS defensive specialist.
+2,kinetic-balanced-legal,legal_build,tl2-kinetic-balanced,35,35,3,1,0,5,12,-,False,General Kinetic-family layered target.
+2,kinetic-ew-legal,legal_build,tl2-kinetic-ew-specialist,35,35,0,0,0,5,12,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.
+2,missile-balanced-legal,legal_build,tl2-missile-balanced,35,35,3,1,0,5,12,-,False,General Missile-family layered target.
+2,missile-defense-legal,legal_build,tl2-missile-missile-defense,35,35,3,1,0,5,12,AMM,False,Shield/AMM Missile-defense specialist target.
+3,energy-balanced-legal,legal_build,tl3-energy-balanced,36,36,3,1,1,5,12,-,False,General Energy-family layered target.
+3,energy-defense-legal,legal_build,tl3-energy-defense-specialist,36,36,3,1,1,5,12,Energy,True,Shield/Hardener/Energy-PDS defensive specialist.
+3,kinetic-balanced-legal,legal_build,tl3-kinetic-balanced,36,36,3,1,1,5,12,-,False,General Kinetic-family layered target.
+3,kinetic-ew-legal,legal_build,tl3-kinetic-ew-specialist,36,36,0,0,1,5,12,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.
+3,missile-balanced-legal,legal_build,tl3-missile-balanced,36,36,3,1,1,5,12,-,False,General Missile-family layered target.
+3,missile-defense-legal,legal_build,tl3-missile-missile-defense,36,36,3,1,1,5,12,AMM,True,Shield/AMM Missile-defense specialist target.
+4,energy-balanced-legal,legal_build,tl4-energy-balanced,37,37,4,1,1,6,12,-,False,General Energy-family layered target.
+4,energy-defense-legal,legal_build,tl4-energy-defense-specialist,37,37,4,1,1,6,12,Energy,True,Shield/Hardener/Energy-PDS defensive specialist.
+4,kinetic-balanced-legal,legal_build,tl4-kinetic-balanced,37,37,4,1,1,6,12,-,False,General Kinetic-family layered target.
+4,kinetic-ew-legal,legal_build,tl4-kinetic-ew-specialist,37,37,0,0,1,6,12,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.
+4,missile-balanced-legal,legal_build,tl4-missile-balanced,37,37,4,1,1,6,12,-,False,General Missile-family layered target.
+4,missile-defense-legal,legal_build,tl4-missile-missile-defense,37,37,4,1,1,6,12,AMM,True,Shield/AMM Missile-defense specialist target.
+5,energy-balanced-legal,legal_build,tl5-energy-balanced,38,38,5,1,2,6,12,-,False,General Energy-family layered target.
+5,energy-defense-legal,legal_build,tl5-energy-defense-specialist,38,38,5,1,2,6,12,Energy,True,Shield/Hardener/Energy-PDS defensive specialist.
+5,kinetic-balanced-legal,legal_build,tl5-kinetic-balanced,38,38,5,1,2,6,12,-,False,General Kinetic-family layered target.
+5,kinetic-ew-legal,legal_build,tl5-kinetic-ew-specialist,38,38,0,0,2,6,12,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.
+5,missile-balanced-legal,legal_build,tl5-missile-balanced,38,38,5,1,2,6,12,-,False,General Missile-family layered target.
+5,missile-defense-legal,legal_build,tl5-missile-missile-defense,38,38,5,1,2,6,12,AMM,True,Shield/AMM Missile-defense specialist target.
+6,energy-balanced-legal,legal_build,tl6-energy-balanced,39,39,5,2,2,7,12,-,False,General Energy-family layered target.
+6,energy-defense-legal,legal_build,tl6-energy-defense-specialist,39,39,5,2,2,7,12,Energy,True,Shield/Hardener/Energy-PDS defensive specialist.
+6,kinetic-balanced-legal,legal_build,tl6-kinetic-balanced,39,39,5,2,2,7,12,-,False,General Kinetic-family layered target.
+6,kinetic-ew-legal,legal_build,tl6-kinetic-ew-specialist,39,39,0,0,2,7,12,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.
+6,missile-balanced-legal,legal_build,tl6-missile-balanced,39,39,5,2,2,7,12,-,False,General Missile-family layered target.
+6,missile-defense-legal,legal_build,tl6-missile-missile-defense,39,39,5,2,2,7,12,AMM,True,Shield/AMM Missile-defense specialist target.
+7,energy-balanced-legal,legal_build,tl7-energy-balanced,41,41,7,2,2,7,12,-,False,General Energy-family layered target.
+7,energy-defense-legal,legal_build,tl7-energy-defense-specialist,41,41,7,2,2,7,12,Energy,True,Shield/Hardener/Energy-PDS defensive specialist.
+7,kinetic-balanced-legal,legal_build,tl7-kinetic-balanced,41,41,7,2,2,7,12,-,False,General Kinetic-family layered target.
+7,kinetic-ew-legal,legal_build,tl7-kinetic-ew-specialist,41,41,0,0,2,7,12,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.
+7,missile-balanced-legal,legal_build,tl7-missile-balanced,41,41,7,2,2,7,12,-,False,General Missile-family layered target.
+7,missile-defense-legal,legal_build,tl7-missile-missile-defense,41,41,7,2,2,7,12,AMM,True,Shield/AMM Missile-defense specialist target.
+8,energy-balanced-legal,legal_build,tl8-energy-balanced,43,43,9,2,2,7,12,-,False,General Energy-family layered target.
+8,energy-defense-legal,legal_build,tl8-energy-defense-specialist,43,43,9,2,2,7,12,Energy,True,Shield/Hardener/Energy-PDS defensive specialist.
+8,kinetic-balanced-legal,legal_build,tl8-kinetic-balanced,43,43,9,2,2,7,12,-,False,General Kinetic-family layered target.
+8,kinetic-ew-legal,legal_build,tl8-kinetic-ew-specialist,43,43,0,0,2,7,12,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.
+8,missile-balanced-legal,legal_build,tl8-missile-balanced,43,43,9,2,2,7,12,-,False,General Missile-family layered target.
+8,missile-defense-legal,legal_build,tl8-missile-missile-defense,43,43,9,2,2,7,12,AMM,True,Shield/AMM Missile-defense specialist target.
+9,energy-balanced-legal,legal_build,tl9-energy-balanced,45,45,12,3,3,8,12,-,False,General Energy-family layered target.
+9,energy-defense-legal,legal_build,tl9-energy-defense-specialist,45,45,12,3,3,8,12,Energy,True,Shield/Hardener/Energy-PDS defensive specialist.
+9,kinetic-balanced-legal,legal_build,tl9-kinetic-balanced,45,45,12,3,3,8,12,-,False,General Kinetic-family layered target.
+9,kinetic-ew-legal,legal_build,tl9-kinetic-ew-specialist,45,45,0,0,3,8,12,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.
+9,missile-balanced-legal,legal_build,tl9-missile-balanced,45,45,12,3,3,8,12,-,False,General Missile-family layered target.
+9,missile-defense-legal,legal_build,tl9-missile-missile-defense,45,45,12,3,3,8,12,AMM,True,Shield/AMM Missile-defense specialist target.

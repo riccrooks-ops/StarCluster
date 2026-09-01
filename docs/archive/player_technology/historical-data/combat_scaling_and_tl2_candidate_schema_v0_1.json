@@ -1,0 +1,439 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-combat-scaling-and-tl2-candidate-schema-v0-1",
+  "title": "Star Cluster Combat Scaling and TL2 Candidate Study v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "baselineSha256",
+    "calibrationEvidence",
+    "targetHigherTlWinPercent",
+    "reviewBandMinimumPercent",
+    "reviewBandMaximumPercent",
+    "ranges",
+    "tierModel",
+    "tl1AnalyticalAssumptions",
+    "candidates"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-combat-scaling-v1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baselineSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "calibrationEvidence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "targetHigherTlWinPercent": {
+      "type": "number",
+      "exclusiveMinimum": 50,
+      "exclusiveMaximum": 100
+    },
+    "reviewBandMinimumPercent": {
+      "type": "number",
+      "exclusiveMinimum": 50,
+      "exclusiveMaximum": 100
+    },
+    "reviewBandMaximumPercent": {
+      "type": "number",
+      "exclusiveMinimum": 50,
+      "exclusiveMaximum": 100
+    },
+    "ranges": {
+      "const": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "tierModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lowTech",
+        "mediumTech",
+        "highTech",
+        "progressionRhythm"
+      ],
+      "properties": {
+        "lowTech": {
+          "const": [
+            1,
+            2,
+            3
+          ]
+        },
+        "mediumTech": {
+          "const": [
+            4,
+            5,
+            6
+          ]
+        },
+        "highTech": {
+          "const": [
+            7,
+            8,
+            9
+          ]
+        },
+        "progressionRhythm": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "tl1AnalyticalAssumptions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "effectivePdsChanceFormula",
+        "missileLaunchCadenceTurns",
+        "directFireCadenceTurns",
+        "shieldRechargeTiming",
+        "simultaneousRaceModel"
+      ],
+      "properties": {
+        "effectivePdsChanceFormula": {
+          "type": "string",
+          "minLength": 1
+        },
+        "missileLaunchCadenceTurns": {
+          "const": 1
+        },
+        "directFireCadenceTurns": {
+          "const": 1
+        },
+        "shieldRechargeTiming": {
+          "const": "turn-start"
+        },
+        "simultaneousRaceModel": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "$ref": "#/$defs/candidate"
+      }
+    }
+  },
+  "$defs": {
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "status",
+        "designThesis",
+        "componentNames",
+        "defense",
+        "powerAndControl",
+        "movement",
+        "weapons",
+        "referenceInfluences",
+        "namingReview"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "designThesis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "componentNames": {
+          "$ref": "#/$defs/componentNames"
+        },
+        "defense": {
+          "$ref": "#/$defs/defense"
+        },
+        "powerAndControl": {
+          "$ref": "#/$defs/powerAndControl"
+        },
+        "movement": {
+          "$ref": "#/$defs/movement"
+        },
+        "weapons": {
+          "$ref": "#/$defs/weapons"
+        },
+        "referenceInfluences": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "namingReview": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "componentNames": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hull",
+        "armor",
+        "shield",
+        "reactor",
+        "stl",
+        "sensors",
+        "computer",
+        "kinetic",
+        "energy",
+        "missile"
+      ],
+      "properties": {
+        "hull": {
+          "type": "string",
+          "minLength": 1
+        },
+        "armor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shield": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reactor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stl": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sensors": {
+          "type": "string",
+          "minLength": 1
+        },
+        "computer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kinetic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "energy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "missile": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "defense": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hull",
+        "armorIntegrity",
+        "armorProtection",
+        "shieldCapacity",
+        "shieldBaseRecharge",
+        "shieldArmor"
+      ],
+      "properties": {
+        "hull": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "armorIntegrity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "armorProtection": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "shieldCapacity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "shieldBaseRecharge": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "shieldArmor": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        }
+      }
+    },
+    "powerAndControl": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reactorOutput",
+        "targetingBonus",
+        "effectivePdsChance",
+        "pdsPower",
+        "standardCombatPowerCommitment"
+      ],
+      "properties": {
+        "reactorOutput": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "targetingBonus": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "effectivePdsChance": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 95
+        },
+        "pdsPower": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "standardCombatPowerCommitment": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "movement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "shipMove",
+        "missileMove"
+      ],
+      "properties": {
+        "shipMove": {
+          "const": 2
+        },
+        "missileMove": {
+          "const": 3
+        }
+      }
+    },
+    "weapons": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kinetic",
+        "energy",
+        "missile"
+      ],
+      "properties": {
+        "kinetic": {
+          "$ref": "#/$defs/weapon"
+        },
+        "energy": {
+          "$ref": "#/$defs/weapon"
+        },
+        "missile": {
+          "$ref": "#/$defs/weapon"
+        }
+      }
+    },
+    "weapon": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "damage",
+        "shieldPenetration",
+        "armorPenetration",
+        "maximumRange",
+        "powerCost",
+        "ammunition"
+      ],
+      "properties": {
+        "damage": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 30
+        },
+        "shieldPenetration": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "armorPenetration": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "accuracyBonus": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "guidanceChance": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 95
+        },
+        "maximumRange": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "powerCost": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "ammunition": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

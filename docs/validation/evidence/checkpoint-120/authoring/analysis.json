@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "star-cluster-weapon-progression-sensitivity-results-v0.1",
+  "checkpoint": 120,
+  "acceptedBaseline": 119,
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "trialsPerVariant": 5,
+  "variants": 4284,
+  "variantCounts": {
+    "energy_family_reference": 324,
+    "kinetic_family_characteristic": 1008,
+    "missile_family_characteristic": 2952
+  },
+  "priorityVariantCounts": {
+    "advanced": 576,
+    "endpoint_stress": 648,
+    "primary": 3060
+  },
+  "totalTrials": 21420,
+  "elapsedSeconds": 17.037034738999978,
+  "failedGates": [],
+  "automaticPromotion": false,
+  "targetFixtureCount": 9,
+  "controlledFixtureCount": 3,
+  "missileProfileCount": 32,
+  "kineticProfileCount": 6,
+  "energyReferenceProfileCount": 1,
+  "sensitivityComparisonCount": 22,
+  "candidateProgressionPathCount": 9,
+  "primaryCalibrationTls": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "advancedValidationTls": [
+    7
+  ],
+  "endpointStressTls": [
+    8,
+    9
+  ],
+  "maxPrimaryLegalMovementOrderSwingPp": 80.0,
+  "interpretation": "CP120 maps numerical sensitivities around the simplified weapon architecture without reopening mechanical design. GP Missile profiles vary yield only; Swarmer remains exactly two packets with bounded coverage/PDS axes; Kinetic profiles are automatic single-axis controls. TL1-TL6 dominate inference. Outcome magnitudes are review evidence only and never automatic promotion gates."
+}

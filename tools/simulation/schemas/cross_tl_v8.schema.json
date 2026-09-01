@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-cross-tl-build-permutation-v8",
+  "title": "Star Cluster Cross-TL Build Permutation Study v8 (CP103-CP104)",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "checkpoint",
+    "id",
+    "coverageMode",
+    "masterSeed",
+    "trialsPerVariant",
+    "expectedRawCombinationCount",
+    "expectedLegalBuildCount",
+    "axes",
+    "geometries",
+    "researchSimulationEngine",
+    "researchSimulationAuthority",
+    "pythonRuntimeMajorMinor"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-cross-tl-build-permutation-v8"
+    },
+    "checkpoint": {
+      "type": "string",
+      "enum": [
+        "103",
+        "104"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "coverageMode": {
+      "enum": [
+        "integration_screening",
+        "diagnostic_overlay"
+      ]
+    },
+    "masterSeed": {
+      "type": "integer"
+    },
+    "trialsPerVariant": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "expectedRawCombinationCount": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "expectedLegalBuildCount": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "axes": {
+      "type": "array",
+      "minItems": 13,
+      "maxItems": 13,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "code",
+          "options"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "technologyLevel",
+                "space"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "technologyLevel": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "space": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "geometries": {
+      "type": "array",
+      "minItems": 1
+    },
+    "researchSimulationEngine": {
+      "const": "starcluster-python-research-v1"
+    },
+    "researchSimulationAuthority": {
+      "const": "screening_not_gameplay_authority"
+    },
+    "pythonRuntimeMajorMinor": {
+      "type": "string",
+      "const": "3.13"
+    }
+  }
+}

@@ -1,0 +1,384 @@
+{
+  "schemaVersion": "star-cluster-tl1-phase-a-v1",
+  "id": "tl1-a03-turn-start-shield-recharge",
+  "matrixScenarioId": "TL1-A03",
+  "name": "Turn-start Shield recharge and power spending",
+  "baselineVersion": "tl1-core-combat-v0.1",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "cases": [
+    {
+      "id": "a03-c01",
+      "name": "Operational shield receives base and requested tactical recharge",
+      "operation": "turnStartRecharge",
+      "input": {
+        "defense": {
+          "pristineShieldCapacity": 6,
+          "currentShieldCapacity": 2,
+          "shieldArmor": 0,
+          "currentHull": {
+            "$baseline": "hull_points"
+          },
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "shieldCondition": "operational",
+        "reactorCondition": "operational",
+        "requestedTacticalRechargePower": {
+          "$baseline": "shield_tactical_recharge_cap"
+        }
+      },
+      "expected": {
+        "baseRestored": {
+          "$baseline": "shield_base_recharge"
+        },
+        "tacticalPowerSpent": {
+          "$baseline": "shield_tactical_recharge_cap"
+        },
+        "tacticalRestored": {
+          "$multiply": [
+            {
+              "$baseline": "shield_tactical_recharge_cap"
+            },
+            {
+              "$baseline": "shield_tactical_recharge_rate"
+            }
+          ]
+        },
+        "defense": {
+          "currentShieldCapacity": {
+            "$add": [
+              {
+                "$input": "$.defense.currentShieldCapacity"
+              },
+              {
+                "$baseline": "shield_base_recharge"
+              },
+              {
+                "$multiply": [
+                  {
+                    "$baseline": "shield_tactical_recharge_cap"
+                  },
+                  {
+                    "$baseline": "shield_tactical_recharge_rate"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "power": {
+          "envelope": {
+            "$baseline": "reactor_output"
+          },
+          "available": {
+            "$subtract": [
+              {
+                "$baseline": "reactor_output"
+              },
+              {
+                "$baseline": "shield_tactical_recharge_cap"
+              }
+            ]
+          },
+          "spent": {
+            "$baseline": "shield_tactical_recharge_cap"
+          }
+        }
+      }
+    },
+    {
+      "id": "a03-c02",
+      "name": "Recharge cannot exceed the pristine maximum",
+      "operation": "turnStartRecharge",
+      "input": {
+        "defense": {
+          "pristineShieldCapacity": 6,
+          "currentShieldCapacity": 5,
+          "shieldArmor": 0,
+          "currentHull": {
+            "$baseline": "hull_points"
+          },
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "shieldCondition": "operational",
+        "reactorCondition": "operational",
+        "requestedTacticalRechargePower": {
+          "$baseline": "shield_tactical_recharge_cap"
+        }
+      },
+      "expected": {
+        "baseRestored": {
+          "$baseline": "shield_base_recharge"
+        },
+        "tacticalPowerSpent": 0,
+        "tacticalRestored": 0,
+        "defense": {
+          "currentShieldCapacity": {
+            "$input": "$.defense.pristineShieldCapacity"
+          }
+        },
+        "power": {
+          "available": {
+            "$baseline": "reactor_output"
+          },
+          "spent": 0
+        }
+      }
+    },
+    {
+      "id": "a03-c03",
+      "name": "Degraded shield uses reduced recharge profile",
+      "operation": "turnStartRecharge",
+      "input": {
+        "defense": {
+          "pristineShieldCapacity": 6,
+          "currentShieldCapacity": 2,
+          "shieldArmor": 0,
+          "currentHull": {
+            "$baseline": "hull_points"
+          },
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "shieldCondition": "degraded",
+        "reactorCondition": "operational",
+        "requestedTacticalRechargePower": {
+          "$baseline": "shield_tactical_recharge_cap"
+        }
+      },
+      "expected": {
+        "baseRestored": {
+          "$baseline": "shield_degraded_base_recharge"
+        },
+        "tacticalPowerSpent": {
+          "$baseline": "shield_degraded_tactical_cap"
+        },
+        "tacticalRestored": {
+          "$multiply": [
+            {
+              "$baseline": "shield_degraded_tactical_cap"
+            },
+            {
+              "$baseline": "shield_tactical_recharge_rate"
+            }
+          ]
+        },
+        "defense": {
+          "currentShieldCapacity": {
+            "$add": [
+              {
+                "$input": "$.defense.currentShieldCapacity"
+              },
+              {
+                "$baseline": "shield_degraded_base_recharge"
+              },
+              {
+                "$multiply": [
+                  {
+                    "$baseline": "shield_degraded_tactical_cap"
+                  },
+                  {
+                    "$baseline": "shield_tactical_recharge_rate"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "power": {
+          "available": {
+            "$subtract": [
+              {
+                "$baseline": "reactor_output"
+              },
+              {
+                "$baseline": "shield_degraded_tactical_cap"
+              }
+            ]
+          },
+          "spent": {
+            "$baseline": "shield_degraded_tactical_cap"
+          }
+        }
+      }
+    },
+    {
+      "id": "a03-c04",
+      "name": "Disabled shield cannot recharge",
+      "operation": "turnStartRecharge",
+      "input": {
+        "defense": {
+          "pristineShieldCapacity": 6,
+          "currentShieldCapacity": 2,
+          "shieldArmor": 0,
+          "currentHull": {
+            "$baseline": "hull_points"
+          },
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "shieldCondition": "disabled",
+        "reactorCondition": "operational",
+        "requestedTacticalRechargePower": {
+          "$baseline": "shield_tactical_recharge_cap"
+        }
+      },
+      "expected": {
+        "baseRestored": 0,
+        "tacticalPowerSpent": 0,
+        "tacticalRestored": 0,
+        "defense": {
+          "currentShieldCapacity": {
+            "$input": "$.defense.currentShieldCapacity"
+          }
+        }
+      }
+    },
+    {
+      "id": "a03-c05",
+      "name": "Temporary overcapacity clears before recharge",
+      "operation": "turnStartRecharge",
+      "input": {
+        "defense": {
+          "pristineShieldCapacity": 6,
+          "currentShieldCapacity": 8,
+          "shieldArmor": 0,
+          "currentHull": {
+            "$baseline": "hull_points"
+          },
+          "temporaryShieldOvercapacity": 2,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "shieldCondition": "operational",
+        "reactorCondition": "operational",
+        "requestedTacticalRechargePower": {
+          "$baseline": "shield_tactical_recharge_cap"
+        }
+      },
+      "expected": {
+        "temporaryCapacityLost": {
+          "$input": "$.defense.temporaryShieldOvercapacity"
+        },
+        "baseRestored": 0,
+        "tacticalPowerSpent": 0,
+        "defense": {
+          "currentShieldCapacity": {
+            "$input": "$.defense.pristineShieldCapacity"
+          },
+          "temporaryShieldOvercapacity": 0
+        }
+      }
+    },
+    {
+      "id": "a03-c06",
+      "name": "Collapsed shield may recover at the next legal turn-start recharge",
+      "operation": "turnStartRecharge",
+      "input": {
+        "defense": {
+          "pristineShieldCapacity": 6,
+          "currentShieldCapacity": 0,
+          "shieldArmor": 0,
+          "currentHull": {
+            "$baseline": "hull_points"
+          },
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "shieldCondition": "operational",
+        "reactorCondition": "operational",
+        "requestedTacticalRechargePower": {
+          "$baseline": "shield_tactical_recharge_cap"
+        }
+      },
+      "expected": {
+        "baseRestored": {
+          "$baseline": "shield_base_recharge"
+        },
+        "tacticalPowerSpent": {
+          "$baseline": "shield_tactical_recharge_cap"
+        },
+        "tacticalRestored": {
+          "$multiply": [
+            {
+              "$baseline": "shield_tactical_recharge_cap"
+            },
+            {
+              "$baseline": "shield_tactical_recharge_rate"
+            }
+          ]
+        },
+        "defense": {
+          "currentShieldCapacity": {
+            "$add": [
+              {
+                "$input": "$.defense.currentShieldCapacity"
+              },
+              {
+                "$baseline": "shield_base_recharge"
+              },
+              {
+                "$multiply": [
+                  {
+                    "$baseline": "shield_tactical_recharge_cap"
+                  },
+                  {
+                    "$baseline": "shield_tactical_recharge_rate"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

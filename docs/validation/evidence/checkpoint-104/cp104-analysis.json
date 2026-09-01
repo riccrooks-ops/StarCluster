@@ -1,0 +1,57 @@
+{
+  "diagnostic_variants": 256,
+  "diagnostic_comparisons": 64,
+  "category_counts": {
+    "control": 2,
+    "energy-synergy": 22,
+    "legacy-response": 16,
+    "movement": 10,
+    "power-hotspot": 14
+  },
+  "trial_errors": 0,
+  "population_weight_sensitivity": [
+    {
+      "weighting_scheme": "combinatorial_population",
+      "bundle_count": 240,
+      "advanced_side_win_rate": 0.5796397912843388,
+      "mean_power_shortfall_events": 1.0432113204397822
+    },
+    {
+      "weighting_scheme": "equal_statistical_bundle",
+      "bundle_count": 240,
+      "advanced_side_win_rate": 0.5472791666666666,
+      "mean_power_shortfall_events": 0.8370833333333334
+    },
+    {
+      "weighting_scheme": "equal_population_cell",
+      "bundle_count": 240,
+      "advanced_side_win_rate": 0.536898611111111,
+      "mean_power_shortfall_events": 0.7783122395833333
+    },
+    {
+      "weighting_scheme": "equal_composition_class",
+      "bundle_count": 240,
+      "advanced_side_win_rate": 0.5449533723322217,
+      "mean_power_shortfall_events": 0.8271235144684543
+    },
+    {
+      "weighting_scheme": "equal_progression_stratum",
+      "bundle_count": 240,
+      "advanced_side_win_rate": 0.5364507402531412,
+      "mean_power_shortfall_events": 0.8351175916943828
+    },
+    {
+      "weighting_scheme": "equal_space_pair_stratum",
+      "bundle_count": 240,
+      "advanced_side_win_rate": 0.5495809657053704,
+      "mean_power_shortfall_events": 0.8003658513939764
+    }
+  ],
+  "failed_gates": [],
+  "automatic_promotion": false,
+  "higher_tl_expansion_gate": {
+    "next_phase": "extend basic subsystem Technology-Level chart beyond TL3",
+    "additional_tl3_calibration_only_for_architectural_defect": true
+  },
+  "interpretation": "CP104 is targeted diagnostic closure only. Results can identify architectural defects or future design questions but do not automatically change TL3 values. Absent an architectural defect, proceed to higher-TL chart expansion rather than further TL3 tuning."
+}

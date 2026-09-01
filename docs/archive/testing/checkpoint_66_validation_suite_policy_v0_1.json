@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": 66,
+  "normal": {
+    "stageCount": 8,
+    "monteCarloVariantCount": 80,
+    "trialsAtDefault": 800000,
+    "required": true,
+    "purpose": "repository/build/core regression plus current finite-map scripted bounded-overload diagnostic"
+  },
+  "deepCalibration": {
+    "stageCount": 25,
+    "monteCarloVariantCount": 1484,
+    "trialsAtDefault": 14840000,
+    "required": false,
+    "purpose": "accepted historical stochastic evidence plus current overload study; opt-in unless a later dependency warrants it"
+  },
+  "blockingBalanceTargets": false,
+  "productionControls": {
+    "reactorOutput": 5,
+    "tacticalPowerDoctrine": "FullVolleyFirst",
+    "mapRadius": 5,
+    "startingFuel": 200,
+    "movementFuelPerHex": 2,
+    "evasiveManeuverFuelCost": 1
+  },
+  "nativeAcceptanceDependencyContract": {
+    "requiredForCheckpoint66AndLater": true,
+    "allowedRuntimeClasses": ["Windows PowerShell", "pinned .NET SDK"],
+    "blockedInterpreterNames": ["python", "python3", "py"],
+    "sharedHarnessEnforced": true
+  },
+  "notes": [
+    "TL1 STL overload affecting Movement is committed before either ship moves; movement order does not reopen that decision.",
+    "Active Sensor overload is a later legal acquisition-window decision and competes for the same Tactical Power pool.",
+    "Checkpoint 66 safe-only doctrine stops before Forced Overload would be required; this is an AI/test policy, not a rules exception.",
+    "No target win rate or component rebalance is a release gate."
+  ],
+  "mustAlwaysRunStageIds": [
+    "deterministic",
+    "tl1-phase-a",
+    "tl1-phase-b",
+    "tl1-installation-space-envelope",
+    "tl1-scripted-overload-tactics",
+    "auxiliary-resource-endurance",
+    "checkpoint-53-resource-semantics-lock",
+    "runner-self-tests"
+  ],
+  "deepCalibrationStageIds": [
+    "tl1-bilateral-tactical-geometry",
+    "tl1-track-aware-movement-acquisition",
+    "tl1-operational-sensor-acquisition-ew",
+    "tl1-power-doctrine-reactor-sensitivity",
+    "tl1-composed-ship-odd-build-combat",
+    "tl1-kinetic-calibration",
+    "tl1-energy-calibration",
+    "tl1-weapon-matrix",
+    "tl1-pds-calibration",
+    "tl1-defensive-calibration",
+    "tl1-power-correction",
+    "tl1-range-control-calibration",
+    "tl1-damage-control-calibration",
+    "tl1-combat-pacing",
+    "tl1-integrated-tactical-combat",
+    "tl1-movement-kinetic-pacing-diagnostics",
+    "tl1-minimal-tactics-baseline"
+  ]
+}

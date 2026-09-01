@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "tests": {
+    "run": 36,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "gates": {
+    "failed": [],
+    "passed": true
+  },
+  "failedGates": 0
+}

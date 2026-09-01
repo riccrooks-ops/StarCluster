@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "star-cluster-cp123-accepted-cp122-native-summary-v0.1",
+  "acceptedCheckpoint": 122,
+  "sourceArchive": "CP122_NATIVE_RESULTS_ACCEPTED.zip",
+  "sourceArchiveSha256": "32a2cf12384229b2285872c5c1c74d34207cc0406800cd53b0d99702a26b8aec",
+  "dotnetSdk": "8.0.423",
+  "xunitPassed": 905,
+  "xunitTotal": 905,
+  "scenarioRunnerSelfTestsPassed": 70,
+  "researchParityPassed": 25,
+  "canonicalParityCases": 234138,
+  "canonicalParityMismatches": 0,
+  "exactParity": true,
+  "productionRepairHullPerKit": 1,
+  "criticalCadenceMigrated": false,
+  "substantiveMonteCarloTrials": 0,
+  "failedGates": []
+}

@@ -1,0 +1,49 @@
+{
+  "checkpoint": 117,
+  "title": "Weapon-Family Simplification and Swarmer Architecture",
+  "acceptedBaseline": 116,
+  "status": "candidate_pending_native_acceptance",
+  "automaticPromotion": false,
+  "productionSourceChanged": false,
+  "simulationResearchChanged": false,
+  "numericalMatrixChanged": false,
+  "conceptChanged": true,
+  "substantiveMonteCarloTrials": 0,
+  "expected": {
+    "repositoryOwnedFiles": 2459,
+    "jsonFilesMinimum": 706,
+    "pythonSelfTests": 77,
+    "parityCases": 25,
+    "disciplines": 10,
+    "lineages": 32,
+    "storyboardBeats": 214,
+    "ideas": 137,
+    "hardExternalPrerequisiteBeats": 3,
+    "frozenCSharpAndTests": 561,
+    "frozenResearchExecutableFiles": 33,
+    "acceptedCp116Variants": 2976,
+    "acceptedCp116TrialsPerVariant": 2000,
+    "acceptedCp116Engagements": 5952000,
+    "acceptedCp116AdaptiveRows": 128,
+    "acceptedCp116AdaptiveSwitchRows": 20,
+    "swarmerWindow": [
+      5,
+      7
+    ],
+    "primaryCalibrationTls": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "advancedCalibrationTls": [
+      7
+    ],
+    "endpointStressTls": [
+      8,
+      9
+    ]
+  }
+}

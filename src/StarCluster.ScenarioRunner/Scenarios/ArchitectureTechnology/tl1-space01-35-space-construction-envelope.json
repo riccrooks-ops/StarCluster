@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "star-cluster-tl1-installation-space-envelope-v1",
+  "id": "tl1-space01-35-space-construction-envelope",
+  "checkpoint": 60,
+  "status": "deterministic_architecture_foundation",
+  "policy": "Enumerate every legal TL1 macro construction under the 35-Space working model before introducing new combat-balance targets. Space legality and nominal Tactical Power feasibility are separate diagnostics.",
+  "totalSpace": 35,
+  "fixedPrimarySystems": [
+    {
+      "id": "stl_drive",
+      "space": 5
+    },
+    {
+      "id": "ftl_drive",
+      "space": 5
+    },
+    {
+      "id": "tactical_computer",
+      "space": 3
+    }
+  ],
+  "mainWeapon": {
+    "id": "main_weapon",
+    "space": 6,
+    "minimumCount": 1
+  },
+  "mainReactor": {
+    "id": "main_reactor",
+    "space": 6,
+    "minimumCount": 1
+  },
+  "activeSensor": {
+    "id": "active_sensor",
+    "space": 3,
+    "maximumCount": 1
+  },
+  "shieldGenerator": {
+    "id": "shield_generator",
+    "space": 3,
+    "maximumCount": 1
+  },
+  "kineticPds": {
+    "id": "kinetic_pds",
+    "space": 2,
+    "minimumCount": 0
+  },
+  "powerDiagnostic": {
+    "policy": "Nominal demand means firing every installed main weapon once at its retained TL1 standard setting, readying every installed kinetic PDS, and operating an installed active sensor at its 1-TP setting. Shield maintenance remains core-powered; tactical shield recharge, evasion, overload, and AUX are deliberately excluded. A negative margin is legal construction but proves all nominal systems cannot operate simultaneously from the installed main reactors.",
+    "reactorOutputParameterId": "reactor_output",
+    "pdsPowerParameterId": "kinetic_pds_power",
+    "activeSensorSettingOnePower": 1,
+    "weaponFamilies": [
+      {
+        "id": "kinetic",
+        "powerParameterId": "kinetic_power"
+      },
+      {
+        "id": "energy",
+        "powerParameterId": "energy_standard_power"
+      },
+      {
+        "id": "missile",
+        "powerParameterId": "missile_launch_power"
+      }
+    ]
+  },
+  "supportSpacePolicy": "The enumerator leaves residual Installation Space untyped rather than pretending the AUX/ammunition catalogue is already settled. The current balanced reference uses its 2 residual Space as provisional PDS ammunition support plus one small AUX; future subsystem passes may allocate residual Space differently.",
+  "referenceBuilds": [
+    {
+      "id": "balanced_generalist_major",
+      "description": "One main weapon/reactor, active sensor, shield generator, and one kinetic PDS; leaves two Space for provisional ammunition/support and a small AUX.",
+      "mainWeaponCount": 1,
+      "mainReactorCount": 1,
+      "activeSensor": true,
+      "shieldGenerator": true,
+      "kineticPdsCount": 1,
+      "expectedUsedSpace": 33,
+      "expectedFreeSupportSpace": 2,
+      "expectedLegal": true
+    },
+    {
+      "id": "dual_main_striker_major",
+      "description": "Two main weapons plus active sensor; no shield or PDS; leaves one Space for support.",
+      "mainWeaponCount": 2,
+      "mainReactorCount": 1,
+      "activeSensor": true,
+      "shieldGenerator": false,
+      "kineticPdsCount": 0,
+      "expectedUsedSpace": 34,
+      "expectedFreeSupportSpace": 1,
+      "expectedLegal": true
+    },
+    {
+      "id": "dual_reactor_power_core",
+      "description": "Two main reactors plus active sensor; intentionally overbuilt for power and leaves one support Space.",
+      "mainWeaponCount": 1,
+      "mainReactorCount": 2,
+      "activeSensor": true,
+      "shieldGenerator": false,
+      "kineticPdsCount": 0,
+      "expectedUsedSpace": 34,
+      "expectedFreeSupportSpace": 1,
+      "expectedLegal": true
+    },
+    {
+      "id": "pds_saturator",
+      "description": "One weapon/reactor with five kinetic PDS installations and no active sensor or shield; exact-fill odd build for later combat testing.",
+      "mainWeaponCount": 1,
+      "mainReactorCount": 1,
+      "activeSensor": false,
+      "shieldGenerator": false,
+      "kineticPdsCount": 5,
+      "expectedUsedSpace": 35,
+      "expectedFreeSupportSpace": 0,
+      "expectedLegal": true
+    },
+    {
+      "id": "dual_main_dual_pds",
+      "description": "Two main weapons and two kinetic PDS installations; exact-fill offensive/terminal-defense stress build.",
+      "mainWeaponCount": 2,
+      "mainReactorCount": 1,
+      "activeSensor": false,
+      "shieldGenerator": false,
+      "kineticPdsCount": 2,
+      "expectedUsedSpace": 35,
+      "expectedFreeSupportSpace": 0,
+      "expectedLegal": true
+    },
+    {
+      "id": "shielded_pds_fortress",
+      "description": "One main weapon/reactor, shield generator, and three kinetic PDS installations; leaves one support Space and no active sensor.",
+      "mainWeaponCount": 1,
+      "mainReactorCount": 1,
+      "activeSensor": false,
+      "shieldGenerator": true,
+      "kineticPdsCount": 3,
+      "expectedUsedSpace": 34,
+      "expectedFreeSupportSpace": 1,
+      "expectedLegal": true
+    },
+    {
+      "id": "dual_main_dual_reactor_illegal",
+      "description": "Two main weapons and two main reactors before optional systems; this must remain outside the TL1 35-Space envelope.",
+      "mainWeaponCount": 2,
+      "mainReactorCount": 2,
+      "activeSensor": false,
+      "shieldGenerator": false,
+      "kineticPdsCount": 0,
+      "expectedUsedSpace": 37,
+      "expectedFreeSupportSpace": -2,
+      "expectedLegal": false
+    }
+  ],
+  "expected": {
+    "totalSpace": 35,
+    "fixedPrimarySpace": 13,
+    "mandatoryCoreSpace": 25,
+    "macroLoadoutCount": 27,
+    "weaponPowerVariantCount": 96,
+    "exactFillMacroCount": 4,
+    "maximumMainWeapons": 2,
+    "maximumMainReactors": 2,
+    "maximumKineticPds": 5,
+    "maximumFreeSupportSpace": 10,
+    "dualMainDualReactorLegal": false,
+    "dualMainDualReactorSpace": 37,
+    "nominalPowerOvercommitVariantCount": 5,
+    "nominalPowerExactVariantCount": 10,
+    "minimumPowerMargin": -2,
+    "maximumPowerMargin": 10
+  }
+}

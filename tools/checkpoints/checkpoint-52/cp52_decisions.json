@@ -1,0 +1,42 @@
+[
+  {
+    "id": "D-483",
+    "text": "Accept Checkpoint 51 as the frozen architecture/runtime-bridge baseline while keeping its AUX/PDS numerical balance provisional.",
+    "status": "Current direction"
+  },
+  {
+    "id": "D-484",
+    "text": "Use the intended Combat Battery primary candidate at TL1: three finite charges, +1 Tactical Power per charge, maximum one discharge per turn, with charges persisting across encounters until replenishment. Test two charges before considering a TL2 entry-floor move if the primary candidate remains compulsory.",
+    "status": "Current direction; balance provisional"
+  },
+  {
+    "id": "D-485",
+    "text": "Use the TL2 Power Capacitor as reusable stored power: start with 1 stored TP, discharge +1 TP, then spend 1 TP on a later turn to recharge before another discharge; charging and discharging on the same turn are prohibited.",
+    "status": "Current direction; balance provisional"
+  },
+  {
+    "id": "D-486",
+    "text": "Tactical shield recharge is a core ship action and is never unlocked by installing Combat Battery, Power Capacitor, or Auxiliary Reactor. Power-support AUX may supply or shift TP but only affects affordability.",
+    "status": "Current direction"
+  },
+  {
+    "id": "D-487",
+    "text": "Keep AMM readiness at 1 TP at TL1 and TL2, matching Kinetic PDS readiness cost. Preserve Checkpoint 51 PDS accuracy candidates during Checkpoint 52 unless tactical evidence independently justifies an accuracy change.",
+    "status": "Current direction; balance provisional"
+  },
+  {
+    "id": "D-488",
+    "text": "Evaluate AMM ammunition as campaign endurance. Retain 25 TL1 / 30 TL2 rounds in the primary combat matrix while stress-testing 15, 20, 25, and 30 rounds across repeated demand; do not force routine single-fight depletion.",
+    "status": "Current direction; endurance provisional"
+  },
+  {
+    "id": "D-489",
+    "text": "Evaluate Combat Battery charges, AMM ammunition, and Kinetic/Missile magazine expansion on repeated-engagement resource timescales in addition to duel performance; single-battle parity is not a design requirement for endurance systems.",
+    "status": "Current direction"
+  },
+  {
+    "id": "D-490",
+    "text": "Keep Checkpoint 51 combat evidence frozen and add a separate Checkpoint 52 stateful 975-variant matrix plus deterministic resource-endurance diagnostics; defer TL3-TL9 runtime population until early resource relationships are reviewed.",
+    "status": "Current direction"
+  }
+]

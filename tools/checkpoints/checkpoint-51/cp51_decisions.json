@@ -1,0 +1,30 @@
+[
+  [
+    "D-476",
+    "All three standard PDS sub-families - Kinetic PDS, Energy PDS, and Anti-Missile Missile Battery - enter at TL1. Availability is separate from effectiveness; early implementations remain deliberately modest."
+  ],
+  [
+    "D-477",
+    "All PDS sub-families inherit one common terminal-defense target-eligibility contract, including missile flights and boarding craft; standard PDS cannot attack enemy ships. Sub-family differences require explicit characteristics, not flavor-based exceptions."
+  ],
+  [
+    "D-478",
+    "Checkpoint 51 uses provisional TL1 PDS base chances of 10/12/15 points for Kinetic/Energy/AMM before the ship targeting bonus, with Reaction Capacity held at 1 to isolate accuracy, power, and ammunition effects."
+  ],
+  [
+    "D-479",
+    "TL2 PDS progression is selective: provisional base chances become 13/16/20 for Kinetic/Energy/AMM, Kinetic and AMM ammunition improve, Energy remains ammunition-free and power-intensive, and Reaction Capacity remains 1 for all three."
+  ],
+  [
+    "D-480",
+    "Enable table-driven runtime integration only for TL1 and TL2 through a separate architecture-derived study. The table-backed TL1 standard row must reproduce the frozen TL1 baseline exactly and the TL2 row must reproduce the accepted TL2 standard before balance changes are interpreted."
+  ],
+  [
+    "D-481",
+    "Normal TL1 and TL2 cruisers each have one AUX Capacity. The architecture-derived combat matrix includes only entry-legal, currently modeled combat AUX candidates; no-AUX remains diagnostic and strategic/not-yet-modeled legal AUX systems are excluded rather than assigned fake zero combat value."
+  ],
+  [
+    "D-482",
+    "Preserve the complete Checkpoint 48-50 scenario corpus as frozen regression evidence and add the architecture-derived study separately. Successful execution does not automatically promote any PDS value, AUX candidate, production loadout, or TL3-TL9 runtime profile."
+  ]
+]

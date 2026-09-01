@@ -1,0 +1,318 @@
+{
+  "schemaVersion": "star-cluster-ai-doctrine-registry-v1",
+  "registryVersion": "0.2",
+  "dependencies": [
+    {
+      "id": "ew-subphase-v1",
+      "description": "Movement completes before the pre-combat ECM declaration -> ECCM response -> finalized-track sequence."
+    },
+    {
+      "id": "tactical-power-single-pool-v1",
+      "description": "One Tactical Power pool; reserved power means ordinary uncommitted power available at later legal windows."
+    },
+    {
+      "id": "tl1-ew-rating-cost-v1",
+      "description": "Normal TL1 ECM rating 1 costs 1 TP; normal TL1 ECCM rating 1 costs 1 TP."
+    },
+    {
+      "id": "tl1-sensor-burnthrough-v1",
+      "description": "Balanced-0 diagnostic envelope with intrinsic discrimination resistance 0 and same-hex burn-through resistance +1."
+    },
+    {
+      "id": "firm-track-fire-eligibility-v1",
+      "description": "Current direct-fire and launch eligibility requires Firm track except for separately defined seeker/guidance behavior and future degraded-fire traits."
+    },
+    {
+      "id": "tl1-full-volley-first-v1",
+      "description": "Accepted 5-TP TL1 operational study doctrine reserves ready attack power before PDS allocation."
+    },
+    {
+      "id": "tl1-pds-threat-allocation-v1",
+      "description": "PDS readiness is funded when a missile threat is present, subject to FullVolleyFirst offensive reserve and available TP."
+    }
+  ],
+  "doctrines": [
+    {
+      "id": "tl1-ew-none-v1",
+      "version": 1,
+      "domain": "electronic-warfare",
+      "status": "control",
+      "ecmHeuristic": "Never",
+      "eccmHeuristic": "Never",
+      "acceptedCheckpoint": null,
+      "evidenceIds": [],
+      "dependencies": [
+        "ew-subphase-v1",
+        "tactical-power-single-pool-v1"
+      ],
+      "rationale": "No-EW control for paired studies.",
+      "informationPolicy": {
+        "usesOwnCapabilities": true,
+        "usesObservedTrackState": false,
+        "usesObservedEnemyEmissions": false,
+        "usesHiddenEnemyRatings": false
+      }
+    },
+    {
+      "id": "tl1-ew-reactive-eccm-v1",
+      "version": 1,
+      "domain": "electronic-warfare",
+      "status": "accepted",
+      "ecmHeuristic": "Never",
+      "eccmHeuristic": "ReactiveOnFirmDegradation",
+      "acceptedCheckpoint": "72",
+      "evidenceIds": [
+        "cp72-reactive-eccm-accepted"
+      ],
+      "dependencies": [
+        "ew-subphase-v1",
+        "tactical-power-single-pool-v1",
+        "tl1-ew-rating-cost-v1",
+        "tl1-sensor-burnthrough-v1",
+        "firm-track-fire-eligibility-v1"
+      ],
+      "rationale": "Activate ECCM only when the observable post-ECM track was actually degraded from Firm; do not spend ECCM when burn-through or intrinsic sensor resistance already preserves Firm.",
+      "informationPolicy": {
+        "usesOwnCapabilities": true,
+        "usesObservedTrackState": true,
+        "usesObservedEnemyEmissions": true,
+        "usesHiddenEnemyRatings": false
+      }
+    },
+    {
+      "id": "tl1-ew-always-ecm-reactive-eccm-v1",
+      "version": 1,
+      "domain": "electronic-warfare",
+      "status": "control",
+      "ecmHeuristic": "AlwaysNormal",
+      "eccmHeuristic": "ReactiveOnFirmDegradation",
+      "acceptedCheckpoint": null,
+      "evidenceIds": [
+        "cp72-bilateral-always-ew-diagnostic",
+        "cp73-always-ecm-control-confirmed"
+      ],
+      "dependencies": [
+        "ew-subphase-v1",
+        "tactical-power-single-pool-v1",
+        "tl1-ew-rating-cost-v1",
+        "tl1-sensor-burnthrough-v1",
+        "firm-track-fire-eligibility-v1",
+        "tl1-full-volley-first-v1",
+        "tl1-pds-threat-allocation-v1"
+      ],
+      "rationale": "Stress/control doctrine retained for diagnostics only. CP73 confirmed that always activating ECM creates the highest power denials and suppresses offense/PDS, so it is rejected as a normal default.",
+      "informationPolicy": {
+        "usesOwnCapabilities": true,
+        "usesObservedTrackState": true,
+        "usesObservedEnemyEmissions": true,
+        "usesHiddenEnemyRatings": false
+      }
+    },
+    {
+      "id": "tl1-ew-preserve-offense-v1",
+      "version": 1,
+      "domain": "electronic-warfare",
+      "status": "rejected",
+      "ecmHeuristic": "PreserveOffenseAndEccm",
+      "eccmHeuristic": "ReactiveOnFirmDegradation",
+      "acceptedCheckpoint": null,
+      "evidenceIds": [
+        "cp73-preserve-offense-rejected"
+      ],
+      "dependencies": [
+        "ew-subphase-v1",
+        "tactical-power-single-pool-v1",
+        "tl1-ew-rating-cost-v1",
+        "tl1-sensor-burnthrough-v1",
+        "firm-track-fire-eligibility-v1",
+        "tl1-full-volley-first-v1"
+      ],
+      "rationale": "Tested in CP73 and not promoted: preserving ready offense plus ECCM headroom still fails to preserve PDS against missile threats, producing severe Energy-vs-Missile pathology.",
+      "informationPolicy": {
+        "usesOwnCapabilities": true,
+        "usesObservedTrackState": true,
+        "usesObservedEnemyEmissions": true,
+        "usesHiddenEnemyRatings": false
+      }
+    },
+    {
+      "id": "tl1-ew-preserve-combat-package-v1",
+      "version": 1,
+      "domain": "electronic-warfare",
+      "status": "accepted",
+      "ecmHeuristic": "PreserveCombatPackageAndEccm",
+      "eccmHeuristic": "ReactiveOnFirmDegradation",
+      "acceptedCheckpoint": "73",
+      "evidenceIds": [
+        "cp73-preserve-combat-package-accepted"
+      ],
+      "dependencies": [
+        "ew-subphase-v1",
+        "tactical-power-single-pool-v1",
+        "tl1-ew-rating-cost-v1",
+        "tl1-sensor-burnthrough-v1",
+        "firm-track-fire-eligibility-v1",
+        "tl1-full-volley-first-v1",
+        "tl1-pds-threat-allocation-v1"
+      ],
+      "rationale": "Current TL1 ECM affordability/default heuristic: activate ECM only when enough TP remains for the ready offensive package, planned PDS against a present missile threat, and one possible reactive ECCM response.",
+      "informationPolicy": {
+        "usesOwnCapabilities": true,
+        "usesObservedTrackState": true,
+        "usesObservedEnemyEmissions": true,
+        "usesHiddenEnemyRatings": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "cp72-reactive-eccm-accepted",
+      "checkpoint": "72",
+      "studyId": "tl1-itc14-reactive-ew-subphase",
+      "status": "accepted",
+      "resultSha256": "cb30e4d3800a0474aaed0447390cd18542962915676cd710bd28db23b5cc4f04",
+      "conclusion": "Reactive ECCM preserves automatic-ECCM effectiveness at ordinary jammed ranges while eliminating unnecessary point-blank ECCM expenditure when burn-through already preserves Firm track. This is accepted TL1 AI doctrine behavior.",
+      "keyMetrics": {
+        "pointBlankReactiveMeanEccmPower": 0.0,
+        "pointBlankAutomaticMeanEccmPowerApprox": 7.7,
+        "operationalReactiveVsAutomaticConditionalWinDeltaMaxPercentagePoints": 0.15,
+        "acceptedNativeTests": 843,
+        "acceptedSubstantiveTrials": 390000
+      },
+      "dependencyIds": [
+        "ew-subphase-v1",
+        "tactical-power-single-pool-v1",
+        "tl1-ew-rating-cost-v1",
+        "tl1-sensor-burnthrough-v1",
+        "firm-track-fire-eligibility-v1"
+      ],
+      "revalidateIfChanged": [
+        "EW sub-phase timing",
+        "ECCM normal TP cost or rating",
+        "sensor discrimination/burn-through model",
+        "Firm-track attack eligibility",
+        "Tactical Power commitment semantics"
+      ]
+    },
+    {
+      "id": "cp72-bilateral-always-ew-diagnostic",
+      "checkpoint": "72",
+      "studyId": "tl1-itc14-reactive-ew-subphase",
+      "status": "diagnostic",
+      "resultSha256": "cb30e4d3800a0474aaed0447390cd18542962915676cd710bd28db23b5cc4f04",
+      "conclusion": "Always running ECM plus reactive/automatic ECCM is not a safe default. CP72 showed strong family-specific TP opportunity costs, especially Energy versus Missile, motivating explicit ECM activation heuristics rather than an always-on rule.",
+      "keyMetrics": {
+        "bilateralReactiveEnergyVsMissileConditionalSideAWinPercentApprox": 8.4,
+        "clearEnergyVsMissileConditionalSideAWinPercentApprox": 62.2
+      },
+      "dependencyIds": [
+        "ew-subphase-v1",
+        "tactical-power-single-pool-v1",
+        "tl1-ew-rating-cost-v1",
+        "tl1-full-volley-first-v1",
+        "tl1-pds-threat-allocation-v1"
+      ],
+      "revalidateIfChanged": [
+        "ECM/ECCM TP costs",
+        "weapon TP costs",
+        "PDS readiness cost/allocation",
+        "Tactical Power doctrine",
+        "reactor output"
+      ]
+    },
+    {
+      "id": "cp73-always-ecm-control-confirmed",
+      "checkpoint": "73",
+      "studyId": "tl1-itc15-ew-ai-doctrine",
+      "status": "diagnostic",
+      "resultSha256": "667b553760b16ec63a67db52748a98bcb6daf7640bce21b3b7e4fc7d88da8613",
+      "conclusion": "Always-normal ECM remains useful as a stress/control behavior but is rejected as a normal TL1 default because it creates the highest Tactical Power denial rate and suppresses both offensive execution and PDS.",
+      "keyMetrics": {
+        "meanPowerDenials": 1.6862333333333333,
+        "meanPdsAttempts": 2.8503666666666665,
+        "meanDirectShots": 10.634083333333335
+      },
+      "dependencyIds": [
+        "ew-subphase-v1",
+        "tactical-power-single-pool-v1",
+        "tl1-ew-rating-cost-v1",
+        "tl1-full-volley-first-v1",
+        "tl1-pds-threat-allocation-v1"
+      ],
+      "revalidateIfChanged": [
+        "ECM/ECCM TP costs",
+        "weapon TP costs",
+        "PDS readiness cost/allocation",
+        "Tactical Power doctrine",
+        "reactor output"
+      ]
+    },
+    {
+      "id": "cp73-preserve-offense-rejected",
+      "checkpoint": "73",
+      "studyId": "tl1-itc15-ew-ai-doctrine",
+      "status": "rejected",
+      "resultSha256": "667b553760b16ec63a67db52748a98bcb6daf7640bce21b3b7e4fc7d88da8613",
+      "conclusion": "Preserving ready offense plus ECCM headroom is not sufficient as the default ECM heuristic because it does not preserve planned PDS against missile threats; Energy-vs-Missile remains near the always-ECM pathology.",
+      "keyMetrics": {
+        "energyVsMissileSideAFirstConditionalWinPercent": 9.939884,
+        "energyVsMissileSideBFirstConditionalWinPercent": 9.879992,
+        "energyVsMissileMeanPdsAttemptsApprox": 1.14555
+      },
+      "dependencyIds": [
+        "ew-subphase-v1",
+        "tactical-power-single-pool-v1",
+        "tl1-ew-rating-cost-v1",
+        "tl1-full-volley-first-v1",
+        "tl1-pds-threat-allocation-v1"
+      ],
+      "revalidateIfChanged": [
+        "ECM/ECCM TP costs",
+        "Energy weapon TP cost",
+        "PDS readiness cost/allocation",
+        "missile threat classification",
+        "Tactical Power doctrine",
+        "reactor output"
+      ]
+    },
+    {
+      "id": "cp73-preserve-combat-package-accepted",
+      "checkpoint": "73",
+      "studyId": "tl1-itc15-ew-ai-doctrine",
+      "status": "accepted",
+      "resultSha256": "667b553760b16ec63a67db52748a98bcb6daf7640bce21b3b7e4fc7d88da8613",
+      "conclusion": "Preserve-combat-package plus reactive ECCM is accepted as the current TL1 ECM affordability/default heuristic. It preserves offense, planned PDS against missile threats, and ECCM headroom while still using ECM when the ship can afford it.",
+      "keyMetrics": {
+        "meanPowerDenials": 0.6014833333333334,
+        "meanPdsAttempts": 6.150816666666667,
+        "meanDirectShots": 12.409183333333333,
+        "energyVsMissileSideAFirstConditionalWinPercent": 47.168597,
+        "energyVsMissileSideBFirstConditionalWinPercent": 47.600644,
+        "energyVsMissileMeanPdsAttemptsApprox": 10.9295,
+        "energyVsMissileMeanEcmPowerSideAApprox": 0.78445,
+        "energyVsMissileMeanEcmPowerSideBApprox": 12.53245
+      },
+      "dependencyIds": [
+        "ew-subphase-v1",
+        "tactical-power-single-pool-v1",
+        "tl1-ew-rating-cost-v1",
+        "tl1-sensor-burnthrough-v1",
+        "firm-track-fire-eligibility-v1",
+        "tl1-full-volley-first-v1",
+        "tl1-pds-threat-allocation-v1"
+      ],
+      "revalidateIfChanged": [
+        "EW sub-phase timing",
+        "ECM/ECCM TP costs or ratings",
+        "Firm-track/degraded-fire attack eligibility",
+        "weapon TP costs",
+        "PDS threat allocation/readiness cost",
+        "Tactical Power doctrine",
+        "reactor output"
+      ]
+    }
+  ],
+  "defaults": {
+    "electronic-warfare": "tl1-ew-preserve-combat-package-v1"
+  }
+}

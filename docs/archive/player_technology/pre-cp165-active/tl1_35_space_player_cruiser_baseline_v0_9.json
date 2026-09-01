@@ -1,0 +1,594 @@
+{
+  "schemaVersion": 1,
+  "id": "tl1-35-space-player-cruiser-baseline-v0_9",
+  "checkpoint": 67,
+  "status": "working_concept_bilateral_overload_ew_counterplay_defined_pending_native_acceptance",
+  "installationSpace": {
+    "playerCruiserTotal": 35,
+    "mandatoryCoreTotal": 25,
+    "basePrimaryArmorSpace": 0,
+    "components": [
+      {
+        "id": "main_weapon",
+        "space": 6,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": null,
+        "duplicable": true,
+        "role": "ship_integrated_primary_weapon"
+      },
+      {
+        "id": "main_reactor",
+        "space": 6,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": null,
+        "duplicable": true,
+        "role": "ship_integrated_power_generation_and_distribution"
+      },
+      {
+        "id": "stl_drive",
+        "space": 5,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": 1,
+        "duplicable": false,
+        "role": "primary_architecture",
+        "ordinaryMiniaturizationFloor": 4
+      },
+      {
+        "id": "ftl_drive",
+        "space": 5,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": 1,
+        "duplicable": false,
+        "role": "primary_architecture",
+        "ordinaryMiniaturizationFloor": 4,
+        "playerMandatory": true
+      },
+      {
+        "id": "tactical_computer",
+        "space": 3,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": 1,
+        "duplicable": false,
+        "role": "primary_architecture"
+      },
+      {
+        "id": "active_sensor",
+        "space": 3,
+        "mandatoryCount": 0,
+        "duplicable": false,
+        "role": "optional_major_system"
+      },
+      {
+        "id": "shield_generator",
+        "space": 3,
+        "mandatoryCount": 0,
+        "duplicable": false,
+        "role": "optional_major_system"
+      },
+      {
+        "id": "kinetic_pds",
+        "space": 2,
+        "mandatoryCount": 0,
+        "duplicable": true,
+        "role": "optional_terminal_defense"
+      },
+      {
+        "id": "pds_ammunition_support",
+        "space": 1,
+        "mandatoryCount": 0,
+        "duplicable": true,
+        "role": "provisional_ammunition_support",
+        "provisional": true
+      },
+      {
+        "id": "small_aux",
+        "space": 1,
+        "mandatoryCount": 0,
+        "duplicable": true,
+        "role": "compact_support_floor"
+      }
+    ],
+    "primaryArchitectureIds": [
+      "stl_drive",
+      "ftl_drive",
+      "tactical_computer"
+    ],
+    "limitedAuxiliaryBackupEligibleIds": [
+      "stl_drive",
+      "tactical_computer"
+    ],
+    "fullBackupFtlAllowed": false
+  },
+  "referenceBuilds": [
+    {
+      "id": "balanced_generalist",
+      "space": 35,
+      "legal": true,
+      "loadout": {
+        "main_weapon": 1,
+        "main_reactor": 1,
+        "stl_drive": 1,
+        "ftl_drive": 1,
+        "tactical_computer": 1,
+        "active_sensor": 1,
+        "shield_generator": 1,
+        "kinetic_pds": 1,
+        "pds_ammunition_support": 1,
+        "small_aux": 1
+      }
+    },
+    {
+      "id": "dual_main_striker",
+      "space": 35,
+      "legal": true,
+      "loadout": {
+        "main_weapon": 2,
+        "main_reactor": 1,
+        "stl_drive": 1,
+        "ftl_drive": 1,
+        "tactical_computer": 1,
+        "active_sensor": 1,
+        "small_aux": 1
+      }
+    },
+    {
+      "id": "dual_main_dual_reactor_core",
+      "space": 37,
+      "legal": false,
+      "reason": "exceeds_tl1_installation_space",
+      "loadout": {
+        "main_weapon": 2,
+        "main_reactor": 2,
+        "stl_drive": 1,
+        "ftl_drive": 1,
+        "tactical_computer": 1
+      }
+    }
+  ],
+  "retainedTl1MechanicalSeed": {
+    "sourceBaseline": "docs/design/player_technology/tl1_core_combat_numerical_baseline_v0_3.csv",
+    "hull": 12,
+    "armorIntegrity": 4,
+    "armorProtection": 0,
+    "shieldCapacity": 2,
+    "shieldBaseRecharge": 1,
+    "tacticalShieldRechargePerPower": 1,
+    "tacticalShieldRechargePowerCap": 2,
+    "mainReactorTacticalPowerByCondition": {
+      "operational": 5,
+      "degraded": 3,
+      "disabled": 1,
+      "destroyed": 0
+    },
+    "damageControl": {
+      "capacity": 1,
+      "repairKits": 3,
+      "powerPerAttempt": 1,
+      "degradedToOperationalPercent": 70,
+      "disabledToDegradedPercent": 50,
+      "restoreOneHullPercent": 40
+    },
+    "ordinaryInternalCriticalDensity": "1/3",
+    "reusePolicy": "Preserve validated TL1 combat/power/damage/PDS/sensor/Damage Control/AUX relationships as the seed, remap them into Installation Space, and revalidate; do not carry forward obsolete Weapon Bay/AUX-capacity or fixed win-ratio assumptions."
+  },
+  "progressionGuardrails": [
+    "Every technology/component change must pass a logical frontier check and a mathematical/combinatorial check.",
+    "Evaluate stacked legacy components and integer breakpoints under the same Space, Tactical Power, and prerequisite constraints.",
+    "Do not use arbitrary anti-stacking rules to repair bad component math unless the fiction independently requires the rule.",
+    "Transformative discoveries may produce substantial improvements when the whole-ship design remains healthy.",
+    "Cross-category prerequisites reward breadth only when genuine enabling science requires them; they must not blanket-block tall play.",
+    "Base armor is hull-integrated/external and consumes no Installation Space; enhancements may consume Auxiliary/support Space.",
+    "Before Monte Carlo combat promotion, enumerate the current legal construction envelope deterministically and carry deliberately odd legal configurations forward as stress candidates rather than suppressing them with ad hoc build rules."
+  ],
+  "deterministicArchitectureEnvelope": {
+    "study": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-space01-35-space-construction-envelope.json",
+    "macroLoadoutCount": 27,
+    "weaponPowerVariantCount": 96,
+    "exactFillMacroLoadoutCount": 4,
+    "maximumMainWeapons": 2,
+    "maximumMainReactors": 2,
+    "maximumKineticPdsAtCurrentFootprint": 5,
+    "dualMainDualReactorCoreSpace": 37,
+    "dualMainDualReactorCoreLegalAtTl1": false,
+    "residualSupportSpaceRange": [
+      0,
+      10
+    ],
+    "nominalPowerDiagnostic": {
+      "definition": "Fire every installed main weapon once at retained TL1 standard power, ready every installed kinetic PDS, and run an installed active sensor at the 1-TP setting; exclude shield recharge, evasion, overload, and AUX.",
+      "overcommitVariantCount": 5,
+      "exactPowerVariantCount": 10,
+      "powerMarginRange": [
+        -2,
+        10
+      ],
+      "constructionLegalityIndependentOfNominalPower": true
+    },
+    "interpretation": "These are arithmetic consequences of the current 35-Space working seed, not class restrictions or balance targets. Odd legal builds are intentionally preserved for later combat simulation."
+  },
+  "composedShipCombatStudy": {
+    "study": "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc04-35-space-composed-ship-odd-build-matrix.json",
+    "legalBuildCount": 6,
+    "variantCount": 54,
+    "trialsPerVariantDefault": 10000,
+    "matrix": "six Checkpoint 60 legal reference/odd builds as Side A x three primary weapon families x three balanced-generalist opponent weapon families",
+    "dualMainRule": "The first isolation pass installs the same weapon family in both main bays so attack-package density is measured before mixed-family combinations are introduced.",
+    "opponent": "balanced_generalist_major with one main weapon using the compared Side B family",
+    "movementMode": "OpponentAwareRange",
+    "initialRangeHexes": 4,
+    "damageControl": "ComponentFirstReserveOne",
+    "auxiliaryProfile": "aux-r53-none-tl1",
+    "balanceTargetsBlocking": false,
+    "reviewSignals": [
+      "power starvation/surplus",
+      "attack-package density",
+      "PDS reaction concentration",
+      "shield opportunity cost",
+      "combat pacing",
+      "matchup sensitivity"
+    ],
+    "sensorIsolation": "Established Firm-track combat is assumed for this first composed-ship pass. Active Sensor installation therefore has no direct accuracy bonus or special attack-eligibility gate in this study; sensorless-build combat outcomes are not sufficient promotion evidence without a later sensor/EW-coupled study.",
+    "pdsSemantics": "Explicit composed builds use pooled per-turn PDS reactions with random threat allocation without replacement, up to two attempts against one Missile Flight in the same terminal window when reactions remain. Historical legacy studies retain their prior one-PDS execution path.",
+    "pdsAmmunitionIsolation": "The runner retains 50 kinetic PDS rounds per installed PDS as a provisional combat fixture. This is not a final Installation-Space ruling for magazines/support; ammunition architecture must be revisited if PDS endurance materially drives the results."
+  },
+  "powerDoctrineReactorSensitivityStudy": {
+    "study": "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc05-35-space-power-doctrine-reactor-sensitivity.json",
+    "buildCount": 4,
+    "variantCount": 108,
+    "trialsPerVariantDefault": 10000,
+    "sideABuilds": [
+      "balanced_generalist_major",
+      "pds_saturator",
+      "dual_main_dual_pds",
+      "shielded_pds_fortress"
+    ],
+    "sideAWeaponFamilies": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "sideBTacticalOpponent": "balanced_generalist_major / Missile",
+    "powerDoctrines": {
+      "DefenseFirst": "Arm as many eligible PDS reactions as Tactical Power permits before preserving any weapon power; this is the Checkpoint 61 behavior.",
+      "PrimaryFireFirst": "Reserve the ready primary main-weapon power cost, then arm as many PDS reactions as the remaining Tactical Power permits; a second main fires only if power remains.",
+      "FullVolleyFirst": "Reserve all currently ready main-weapon power costs, then arm as many PDS reactions as the remaining Tactical Power permits."
+    },
+    "reactorOutputSensitivityPerMain": [
+      4,
+      5,
+      6
+    ],
+    "productionReactorOutputRemains": 5,
+    "reactorInterpretation": "4/5/6 are controlled sensitivity probes only. Checkpoint 62 does not change the accepted TL1 production reactor output unless later evidence supports a separate design decision.",
+    "pairedRandomness": "All nine doctrine/reactor settings for the same build and Side-A weapon family share a comparisonGroup/master-seed lane so sensitivity differences are paired rather than confounded by independent random streams.",
+    "weaponFamilyInterpretation": "Do not infer that a weapon-family statistic is worthless merely because the current TL1 opponent does not expose it. Energy APEN=1 is a latent capability when TL1 armor protection is 0; later armor-bearing opponents may realize that value. Cross-family win share is review evidence, not a promotion/demotion gate.",
+    "sensorIsolation": "The study retains Checkpoint 61 established-Firm-track isolation. Sensorless builds still require later sensor/acquisition/EW-coupled validation before strategic conclusions.",
+    "balanceTargetsBlocking": false
+  },
+  "acceptedCheckpoint62Interpretation": {
+    "productionReactorOutput": 5,
+    "preferredOffensiveIsolationDoctrine": "FullVolleyFirst",
+    "defenseFirstStillLegitimate": true,
+    "finding": "Checkpoint 62 showed that the five-PDS pathology was primarily an allocation-doctrine effect; 5 TP remains the production baseline and 4/6 remain sensitivity evidence only."
+  },
+  "operationalSensorAcquisitionStudy": {
+    "study": "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc06-35-space-operational-sensor-acquisition-ew.json",
+    "buildCount": 6,
+    "weaponFamilyCount": 3,
+    "acquisitionRegimeCount": 4,
+    "variantCount": 72,
+    "trialsPerVariantDefault": 10000,
+    "productionReactorOutput": 5,
+    "tacticalPowerDoctrine": "FullVolleyFirst",
+    "sideBOpponent": "balanced_generalist_major / Missile / established Firm control",
+    "initialRangeHexes": 4,
+    "movementMode": "OpponentAwareRange",
+    "regimes": [
+      {
+        "id": "established-firm-control",
+        "trackPolicy": "EstablishedFirm",
+        "netEwRangePenalty": 0,
+        "role": "reproduce the Checkpoint 61/62 combat-isolation assumption without sensor power"
+      },
+      {
+        "id": "operational-passive-clear",
+        "trackPolicy": "PassiveOnly",
+        "netEwRangePenalty": 0,
+        "role": "exercise core passive sensing only, even on builds that carry the optional active-sensor suite"
+      },
+      {
+        "id": "operational-auto-active-clear",
+        "trackPolicy": "AutoActive",
+        "netEwRangePenalty": 0,
+        "role": "use the minimum useful active-sensor power setting while preserving the ready full main-weapon volley"
+      },
+      {
+        "id": "operational-auto-active-ew1",
+        "trackPolicy": "AutoActive",
+        "netEwRangePenalty": 1,
+        "role": "apply one point of abstract net EW range pressure to Side A and measure robustness"
+      }
+    ],
+    "acceptedSensorEnvelope": {
+      "passiveFirm": 3,
+      "passiveApproximate": 5,
+      "active1Power": 1,
+      "active1Firm": 5,
+      "active1Approximate": 7,
+      "active2Power": 2,
+      "active2Firm": 6,
+      "active2Approximate": 9
+    },
+    "corePassiveSensorRule": "All cruisers retain core passive/navigation sensing. A build with activeSensor=false lacks only the optional 3-Space active sensor suite; it is not blind.",
+    "firmFireAuthorization": "This composed-ship pass conservatively requires a Firm track for all main-weapon fire/launch authorization. Missile-specific Approximate-cue/seeker exceptions remain outside this study rather than being silently assumed.",
+    "powerPriority": "In operational lanes, sensor power is allocated after movement and before PDS readiness. AutoActive preserves the power required by the ready full main-weapon volley, then PDS uses the remaining Tactical Power.",
+    "ewInterpretation": "The EW1 lane is an abstract net range-pressure input. It does not price or promote a specific ECM/ECCM installation and does not add a second accuracy penalty.",
+    "pairedRandomness": "The four regimes for each build/family lane share one comparisonGroup/master-seed lane. For builds without an active sensor suite, AutoActive-clear must collapse exactly to PassiveOnly-clear.",
+    "latentCapabilityRule": "Do not demote a component or weapon statistic merely because the current opponent cannot exercise its advantage. Energy APEN remains contextual/latent value until armor-bearing opposition is tested.",
+    "balanceTargetsBlocking": false
+  },
+  "acceptedCheckpoint63bInterpretation": {
+    "status": "accepted",
+    "finding": "Clear-space AutoActive nearly reproduced EstablishedFirm for Kinetic/Missile and most Energy lanes, confirming real active-sensor value. Checkpoint 63b also exposed that movement and acquisition must be evaluated together; raw sensor win rates remain diagnostic rather than final balance evidence.",
+    "movementCaveat": "Some passive-only ships already attempted to close but could not defeat equal-speed missile standoff. A track-aware doctrine must correct self-inflicted unusable range choices without forcing sensorless parity when the opponent can legitimately kite.",
+    "productionReactorOutput": 5,
+    "offensiveIsolationDoctrine": "FullVolleyFirst",
+    "deepCalibrationRequired": false
+  },
+  "trackAwareMovementAcquisitionStudy": {
+    "study": "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc07-35-space-track-aware-movement-acquisition.json",
+    "buildCount": 6,
+    "weaponFamilyCount": 3,
+    "regimeCount": 5,
+    "variantCount": 90,
+    "trialsPerVariantDefault": 10000,
+    "productionReactorOutput": 5,
+    "tacticalPowerDoctrine": "FullVolleyFirst",
+    "sideBOpponent": "balanced_generalist_major / Missile / established Firm track",
+    "initialRangeHexes": 4,
+    "pairedRegimes": [
+      {
+        "id": "established-firm-control",
+        "movementMode": "OpponentAwareRange",
+        "trackPolicy": "EstablishedFirm",
+        "netEwRangePenalty": 0,
+        "role": "performance ceiling / accepted combat-isolation control"
+      },
+      {
+        "id": "legacy-auto-active-clear",
+        "movementMode": "OpponentAwareRange",
+        "trackPolicy": "AutoActive",
+        "netEwRangePenalty": 0,
+        "role": "Checkpoint 63b operational control"
+      },
+      {
+        "id": "track-aware-auto-active-clear",
+        "movementMode": "TrackAwareOpponentRange",
+        "trackPolicy": "AcquisitionFirstAutoActive",
+        "netEwRangePenalty": 0,
+        "role": "new doctrine in clear space"
+      },
+      {
+        "id": "legacy-auto-active-ew1",
+        "movementMode": "OpponentAwareRange",
+        "trackPolicy": "AutoActive",
+        "netEwRangePenalty": 1,
+        "role": "Checkpoint 63b EW-pressure control"
+      },
+      {
+        "id": "track-aware-auto-active-ew1",
+        "movementMode": "TrackAwareOpponentRange",
+        "trackPolicy": "AcquisitionFirstAutoActive",
+        "netEwRangePenalty": 1,
+        "role": "new doctrine under EW1"
+      }
+    ],
+    "movementRule": "TrackAwareOpponentRange begins from the accepted opponent-aware weapon range but caps the ship effective doctrine at the maximum Firm range supportable by the passive/active sensor state while reserving its ready full volley when possible. It does not guarantee closure against an equal-or-faster opponent.",
+    "sensorPowerRule": "After movement, AcquisitionFirstAutoActive funds the active-sensor setting required by the resulting range before defensive allocation, even when that can reduce the number of weapons that actually fire. This prevents reserving a full volley that has no legal Firm solution.",
+    "standoffRule": "A sensorless ship may remain track-denied when an equal-or-faster opponent successfully preserves range beyond the passive Firm envelope. This is valid operational disadvantage, not a failed doctrine gate.",
+    "balanceTargetsBlocking": false,
+    "latentCapabilityRule": "Contextual capabilities such as Energy APEN remain protected from premature retuning when the current opponent does not exercise them."
+  },
+  "acceptedCheckpoint64Interpretation": {
+    "status": "accepted",
+    "interpretation": "TrackAwareOpponentRange plus AcquisitionFirstAutoActive successfully reduces avoidable track denial but remains diagnostic rather than a universal tactical AI. One-sided EstablishedFirm opposition amplified missile chase/kite geometry, motivating bilateral operational sensing on the finite production map.",
+    "balanceAction": "none"
+  },
+  "bilateralTacticalGeometryFuelMovementOrderStudy": {
+    "study": "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc08-bilateral-tactical-geometry-fuel-movement-order.json",
+    "buildCount": 1,
+    "sideAWeaponFamilyCount": 3,
+    "sideBWeaponFamilyCount": 3,
+    "regimeCount": 3,
+    "movementOrderCount": 2,
+    "variantCount": 54,
+    "trialsPerVariantDefault": 10000,
+    "productionReactorOutput": 5,
+    "tacticalPowerDoctrine": "FullVolleyFirst",
+    "map": {
+      "radius": 5,
+      "diameter": 11,
+      "cellCount": 91,
+      "edgeRole": "movement boundary for this diagnostic; no arbitrary kite-turn limit"
+    },
+    "initialRangeHexes": 4,
+    "fuel": {
+      "startingFuel": 200,
+      "fuelPerTraversedHex": 2,
+      "evasiveManeuverFlatFuelPerTurn": 1
+    },
+    "movementOrders": [
+      "SideAFirst",
+      "SideBFirst"
+    ],
+    "movementOrderInterpretation": "The second mover may react geometrically to the first mover final coordinate, but Movement-phase Tactical Power commitments are already fixed and cannot be retroactively changed.",
+    "regimes": [
+      {
+        "id": "established-firm-bilateral",
+        "movementMode": "OpponentAwareRange",
+        "trackPolicy": "EstablishedFirm",
+        "netEwRangePenalty": 0,
+        "role": "bilateral acquisition ceiling/control"
+      },
+      {
+        "id": "bilateral-track-aware-clear",
+        "movementMode": "TrackAwareOpponentRange",
+        "trackPolicy": "AcquisitionFirstAutoActive",
+        "netEwRangePenalty": 0,
+        "role": "bilateral operational sensing in clear space"
+      },
+      {
+        "id": "bilateral-track-aware-ew1",
+        "movementMode": "TrackAwareOpponentRange",
+        "trackPolicy": "AcquisitionFirstAutoActive",
+        "netEwRangePenalty": 1,
+        "role": "bilateral operational sensing under symmetric EW1 pressure"
+      }
+    ],
+    "combatGeometryRule": "Ordinary Direct Fire, launches, and other post-Movement combat use final end-of-Movement HexCoord separation. Minimum/closest path separation is recorded for diagnostics and explicit Movement-phase effects only.",
+    "overloadRule": "Existing Concept overload/Strain rules remain authoritative. No full tactical overload-response AI is introduced in Checkpoint 65.",
+    "balanceTargetsBlocking": false,
+    "latentCapabilityRule": "Contextual capabilities such as Energy APEN remain protected from premature retuning when the current opponent does not exercise them."
+  },
+  "acceptedCheckpoint65bInterpretation": {
+    "status": "accepted",
+    "finding": "The radius-5 map naturally constrains kiting; bilateral operational sensing removes the one-sided EstablishedFirm missile-chase pathology; fuel is active but non-binding in short 1v1s; movement-order advantage is modest and matchup-dependent.",
+    "productionReactorOutput": 5,
+    "balanceAction": "none",
+    "deepCalibrationRequired": false
+  },
+  "scriptedOverloadTacticsStudy": {
+    "study": "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc09-scripted-overload-tactics.json",
+    "numericBaseline": "docs/design/player_technology/tl1_core_combat_numerical_baseline_v0_2.csv",
+    "variantCount": 80,
+    "trialsPerVariantDefault": 10000,
+    "productionReactorOutput": 5,
+    "map": {
+      "radius": 5,
+      "diameter": 11,
+      "cellCount": 91
+    },
+    "fuel": {
+      "startingFuel": 200,
+      "fuelPerTraversedHex": 2,
+      "evasiveManeuverFlatFuelPerTurn": 1
+    },
+    "orderedWeaponPairs": [
+      "Kinetic-vs-Missile",
+      "Missile-vs-Kinetic",
+      "Energy-vs-Missile",
+      "Missile-vs-Energy",
+      "Missile-vs-Missile"
+    ],
+    "symmetricEwPenalties": [
+      0,
+      1
+    ],
+    "sideAOverloadPlans": [
+      "none",
+      "safe STL range pressure",
+      "safe Active Sensor when needed",
+      "combined safe STL + sensor"
+    ],
+    "movementOrders": [
+      "SideAFirst",
+      "SideBFirst"
+    ],
+    "sideBRole": "non-overload bilateral operational-sensing control",
+    "stlOverload": {
+      "additionalTacticalPower": 1,
+      "movementBonus": 1,
+      "extraFuel": 2,
+      "strainPerActivation": 1,
+      "strainLimit": 2,
+      "timing": "pre-Movement commitment; both ships commitments are fixed before either moves"
+    },
+    "activeSensorOverload": {
+      "ratedMaximumPower": 2,
+      "overloadAdditionalTacticalPower": 1,
+      "overloadTotalPower": 3,
+      "firmAndApproximateRangeBonus": 2,
+      "strainPerActivation": 1,
+      "strainLimit": 2,
+      "timing": "later legal sensor/acquisition adjustment window after Movement"
+    },
+    "safeOnlySimulationPolicy": "The scripted doctrine uses only overloads whose resulting Strain remains at or below the component limit and stops before Forced Overload would be required. This is a study/AI policy, not a rules exception.",
+    "fullTacticalAiDeferred": true,
+    "balanceTargetsBlocking": false,
+    "latentCapabilityRule": "Contextual capabilities such as Energy APEN remain protected from premature retuning when this study does not exercise them."
+  },
+  "authoritativeTacticalFuel": {
+    "startingFuel": 100,
+    "fuelPerTraversedHex": 2,
+    "evasiveManeuverFlatFuelPerTurn": 1,
+    "historicalNote": "Checkpoint 65b and 66d studies explicitly retain 200 starting fuel as frozen historical evidence; Checkpoint 67 and later use 100 unless deliberately testing another value."
+  },
+  "acceptedCheckpoint66dInterpretation": {
+    "status": "accepted",
+    "finding": "Bounded TL1 STL and Active Sensor overloads are situational: useful in some pursuit/standoff lanes, irrelevant in others, and occasionally harmful when Tactical Power opportunity cost outweighs geometry benefit. Safe two-use Strain bounds behaved as intended.",
+    "productionReactorOutput": 5,
+    "balanceAction": "none",
+    "deepCalibrationRequired": false
+  },
+  "bilateralOverloadEwCounterplayStudy": {
+    "study": "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc10-bilateral-overload-ew-counterplay.json",
+    "numericBaseline": "docs/design/player_technology/tl1_core_combat_numerical_baseline_v0_3.csv",
+    "variantCount": 60,
+    "trialsPerVariantDefault": 10000,
+    "productionReactorOutput": 5,
+    "fuel": {
+      "startingFuel": 100,
+      "fuelPerTraversedHex": 2,
+      "evasiveManeuverFlatFuelPerTurn": 1
+    },
+    "map": {
+      "radius": 5,
+      "diameter": 11,
+      "cellCount": 91
+    },
+    "stlPrecommitMatrix": {
+      "orderedWeaponPairs": [
+        "Kinetic-vs-Missile",
+        "Energy-vs-Missile",
+        "Missile-vs-Kinetic"
+      ],
+      "symmetricEwPenalties": [
+        0,
+        1
+      ],
+      "movementOrders": [
+        "SideAFirst",
+        "SideBFirst"
+      ],
+      "pairings": [
+        "none/none",
+        "A STL only",
+        "B STL only",
+        "both STL"
+      ],
+      "timing": "Both STL overload commitments are resolved from the same pre-Movement state before either ship moves."
+    },
+    "postMovementEwResponseMatrix": {
+      "matchup": "Missile-vs-Missile",
+      "movementOrders": [
+        "SideAFirst",
+        "SideBFirst"
+      ],
+      "packages": [
+        "control",
+        "A sensor overload",
+        "B ECM overload",
+        "B ECM + A sensor",
+        "B ECM + A ECCM",
+        "B ECM + A sensor + A ECCM"
+      ],
+      "ewFixture": "balanced_generalist_ew_major exactly fills 35 Installation Space using explicit 1-Space ECM and 1-Space ECCM support systems.",
+      "timing": "ECM/ECCM and Active Sensor responses occur only at the existing post-Movement power/acquisition window; no Movement-phase commitment is retroactively changed. For the CP67 scripted diagnostic, listed ECM/ECCM commitments are funded first and AcquisitionFirstAutoActive uses the remaining TP; this is not a production power-priority rule."
+    },
+    "telemetry": "Separate overload planning/request/activation telemetry plus explicit Tactical-Power and safe-Strain denial counts are reported so contingency effects can be distinguished from actual hardware overload use and from requests that cannot execute.",
+    "safeOnlySimulationPolicy": "Scripted overload modes stop before Forced Overload would be required; overload-damage integration remains deferred.",
+    "fullTacticalAiDeferred": true,
+    "balanceTargetsBlocking": false,
+    "latentCapabilityRule": "Contextual capabilities such as Energy APEN remain protected from premature retuning when the current fixture does not exercise them."
+  }
+}

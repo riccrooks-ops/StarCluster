@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "star-cluster-cp146-combat-resource-doctrine-result-v0.1",
+  "checkpoint": 146,
+  "baseCheckpoint": 145,
+  "passed": true,
+  "failedGates": 0,
+  "scenariosPerDoctrine": 252,
+  "trialsPerScenarioPerDoctrine": 25,
+  "combatTrialsPerDoctrine": 6300,
+  "totalCombatTrials": 12600,
+  "acceptedCp145LegacyFieldMismatches": 0,
+  "sourceMatrixUnmodified": true,
+  "tuningAllowed": false,
+  "automaticPromotion": false,
+  "stageBAutomatic": false,
+  "tl2LegacyTurnCaps": 400,
+  "tl2ContextualTurnCaps": 0,
+  "tl2LegacyMeanWeaponDenialTurnRate": 0.9559583333333334,
+  "tl2ContextualMeanWeaponDenialTurnRate": 0.0,
+  "contextualWeaponCoreFundedTurns": 118201,
+  "contextualWeaponCoreStarvedTurns": 0,
+  "contextualNewSaturatedTurnCapCells": 0,
+  "contextualUnknownOpponentTurns": 29925,
+  "contextualKnownOpponentTurns": 105601,
+  "heldMainDeclarations": 0,
+  "heldMainAttempts": 0,
+  "heldMainIntercepts": 0,
+  "interpretation": "Logic-only before/after doctrine validation. Outcome deltas are diagnostic and do not promote numerical balance changes.",
+  "gates": {
+    "failed": [],
+    "passed": true
+  }
+}

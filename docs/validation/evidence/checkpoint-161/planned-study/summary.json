@@ -1,0 +1,36 @@
+{
+  "mode": "plan",
+  "passed": true,
+  "baselineId": "CP160-PF4",
+  "legalPoweredArchitectures": 22482,
+  "oneReactorArchitectures": 16741,
+  "twoReactorArchitectures": 5741,
+  "representativeLoadouts": 108,
+  "stochasticVariants": 648,
+  "stochasticTurnSamples": 7776000,
+  "combatContextsByTl": {
+    "1": 36,
+    "2": 36,
+    "3": 36,
+    "4": 36,
+    "5": 36,
+    "6": 36,
+    "7": 36,
+    "8": 36,
+    "9": 36
+  },
+  "combatContexts": 324,
+  "combatSupplyCandidatesPerTl": 7,
+  "combatCells": 2268,
+  "combatTrials": 4536000,
+  "operationalSupplySweep": "2-30 TP",
+  "reactorSpaceSweep": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "automaticPromotion": false,
+  "tuningAllowed": false
+}

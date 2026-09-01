@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "star-cluster-cp133-accepted-cp132-provenance-v0.1",
+  "checkpoint": 133,
+  "acceptedBaseline": 132,
+  "nativeResultsSha256": "5b454578e4e24836a9defeabc6309719ab8d9844b679de9c2a94040d21f1a564",
+  "canonicalKernelVersion": "0.1",
+  "canonicalDamageModel": "penetration-hardening-v1",
+  "pythonTestsPassed": 196,
+  "xunitPassed": 910,
+  "scenarioRunnerSelfTestsPassed": 70,
+  "researchParityPassed": 25,
+  "failedGates": []
+}

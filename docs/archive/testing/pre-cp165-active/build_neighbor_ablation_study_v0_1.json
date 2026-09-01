@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "star-cluster-build-neighbor-ablation-v0.1",
+  "checkpoint": "112",
+  "status": "causal_diagnostic_no_numerical_promotion",
+  "sourceMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_1.json",
+  "sourceEcology": "Checkpoint 111 native-accepted same-TL ecology",
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "primaryQuestions": [
+    "Which components or synergies drive the Energy defense-specialist advantage at TL3-TL8?",
+    "Does the TL7/TL9 Kinetic-vs-Missile movement-order cliff persist across shorter starting ranges, or is it concentrated at the radius-5 edge-to-edge geometry?",
+    "Which defensive layers sustain the TL7-TL9 Missile-vs-Missile-defense unresolved equilibrium, and does doubling the engagement horizon resolve it?"
+  ],
+  "populations": {
+    "energyDefenseAblation": {"technologyLevels": [3,4,5,6,7,8], "perturbationsPerTl": 8, "standardOpponentsPerPerturbation": 11, "movementOrders": 2, "variants": 1056},
+    "movementOrderGeometry": {"targetPairs": 3, "startRanges": [4,6,8,10], "movementOrders": 2, "variants": 24},
+    "missileAttritionAblation": {"technologyLevels": [7,8,9], "attackersPerTl": 2, "defensePerturbations": 5, "turnHorizons": [60,120], "movementOrders": 2, "variants": 120}
+  },
+  "exactFillRule": "All target and control builds fill Hull Installation Space exactly after explicit zero-tactical-effect mission/AUX accounting.",
+  "mixedTlPopulation": {"registered": true, "executed": false, "populationWeight": 0},
+  "masterSeed": 11220260815,
+  "trialsPerVariant": 2000,
+  "localAuthoringTrialsPerVariant": 100,
+  "blockingGates": ["no trial errors", "exact-fill construction", "declared variant-shape", "required diagnostic telemetry exercised"],
+  "nonBlockingReviewSignals": ["Energy component marginal effects", "Energy weapon-family control effect", "movement-order swing versus starting range", "Missile unresolved rate versus defense ablation and horizon", "PDS/recharge/Hardener attribution"],
+  "automaticPromotion": false,
+  "notes": "CP112 is causal diagnostic evidence. Review signals do not automatically alter CP109 numbers, CP110 Reactor candidates, or C#/Godot production values."
+}

@@ -1,0 +1,412 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-tl1-power-envelope-calibration-v1",
+  "title": "Star Cluster TL1 Tactical Power and Reactor Envelope Calibration Study",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "baselineSha256",
+    "masterSeed",
+    "trialsPerVariant",
+    "variants"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-tl1-power-envelope-calibration-v1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baselineSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "masterSeed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "trialsPerVariant": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 504,
+      "maxItems": 504,
+      "items": {
+        "$ref": "#/$defs/variant"
+      }
+    }
+  },
+  "$defs": {
+    "side": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family",
+        "doctrine",
+        "accuracy",
+        "computerBonus",
+        "evasive",
+        "reactorOutput",
+        "auxiliaryReactorOutput",
+        "ammunition",
+        "missileGuidance",
+        "missileDamage",
+        "missileShieldPenetration",
+        "missileArmorPenetration",
+        "missileSpeed",
+        "missileRange",
+        "targetMovePerTurn",
+        "missileLaunchesPerTurn",
+        "pdsFamily",
+        "pdsPowerCost",
+        "pdsReactionCapacity",
+        "pdsInterceptionChance",
+        "pdsAmmunition",
+        "pdsUnlimitedAmmunition",
+        "sensorTrackGateEnabled",
+        "passiveFirmRange",
+        "activeFirmRangeAtOnePower",
+        "activeFirmRangeAtTwoPower",
+        "sensorPower",
+        "ecmPower",
+        "eccmPower",
+        "shieldHardenerPower",
+        "tacticalShieldRechargePower",
+        "powerPriority",
+        "heldInterception",
+        "heldInterceptionMode",
+        "reactorSafeOverload",
+        "energySafeBurst",
+        "sensorSafeOverload",
+        "ecmSafeOverload",
+        "eccmSafeOverload",
+        "shieldHardenerSafeOverload",
+        "shieldOvercapacitySafeOverload",
+        "shieldRecoverySafeOverload",
+        "safeOverloadTurnLimit",
+        "combatBatteryCharges",
+        "combatBatteryGain",
+        "combatBatteryDoctrine",
+        "capacitorCapacity",
+        "capacitorStartingCharge",
+        "capacitorChargeRate",
+        "capacitorDischargeRate",
+        "capacitorDoctrine"
+      ],
+      "properties": {
+        "family": {
+          "type": "string",
+          "enum": [
+            "kinetic",
+            "energy",
+            "missile"
+          ]
+        },
+        "doctrine": {
+          "type": "string",
+          "enum": [
+            "low",
+            "standard"
+          ]
+        },
+        "accuracy": {
+          "type": "integer"
+        },
+        "computerBonus": {
+          "type": "integer"
+        },
+        "evasive": {
+          "type": "boolean"
+        },
+        "reactorOutput": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "auxiliaryReactorOutput": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ammunition": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missileGuidance": {
+          "type": "integer"
+        },
+        "missileDamage": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missileShieldPenetration": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missileArmorPenetration": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missileSpeed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missileRange": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "targetMovePerTurn": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missileLaunchesPerTurn": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "pdsFamily": {
+          "type": "string",
+          "enum": [
+            "none",
+            "kinetic",
+            "amm",
+            "energy"
+          ]
+        },
+        "pdsPowerCost": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pdsReactionCapacity": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pdsInterceptionChance": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "pdsAmmunition": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pdsUnlimitedAmmunition": {
+          "type": "boolean"
+        },
+        "sensorTrackGateEnabled": {
+          "type": "boolean"
+        },
+        "passiveFirmRange": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "activeFirmRangeAtOnePower": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "activeFirmRangeAtTwoPower": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sensorPower": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "ecmPower": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "eccmPower": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "shieldHardenerPower": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tacticalShieldRechargePower": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "powerPriority": {
+          "type": "string",
+          "enum": [
+            "defense-first",
+            "offense-first"
+          ]
+        },
+        "heldInterception": {
+          "type": "boolean"
+        },
+        "heldInterceptionMode": {
+          "type": "string",
+          "enum": [
+            "low",
+            "standard"
+          ]
+        },
+        "reactorSafeOverload": {
+          "type": "boolean"
+        },
+        "energySafeBurst": {
+          "type": "boolean"
+        },
+        "sensorSafeOverload": {
+          "type": "boolean"
+        },
+        "ecmSafeOverload": {
+          "type": "boolean"
+        },
+        "eccmSafeOverload": {
+          "type": "boolean"
+        },
+        "shieldHardenerSafeOverload": {
+          "type": "boolean"
+        },
+        "shieldOvercapacitySafeOverload": {
+          "type": "boolean"
+        },
+        "shieldRecoverySafeOverload": {
+          "type": "boolean"
+        },
+        "safeOverloadTurnLimit": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "combatBatteryCharges": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "combatBatteryGain": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "combatBatteryDoctrine": {
+          "type": "string",
+          "enum": [
+            "none",
+            "threshold"
+          ]
+        },
+        "capacitorCapacity": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "capacitorStartingCharge": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "capacitorChargeRate": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "capacitorDischargeRate": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "capacitorDoctrine": {
+          "type": "string",
+          "enum": [
+            "none",
+            "threshold-and-recharge"
+          ]
+        }
+      }
+    },
+    "variant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "category",
+        "pairId",
+        "shieldCapacity",
+        "shieldArmor",
+        "baseShieldRecharge",
+        "armorProtection",
+        "armorIntegrity",
+        "hull",
+        "rangeHexes",
+        "rangePenaltyPerHex",
+        "turnCap",
+        "sideA",
+        "sideB"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "accepted-control",
+            "reactor-sweep",
+            "single-consumer",
+            "layered-sweep",
+            "power-source-overlay",
+            "overload-boundary",
+            "held-interception"
+          ]
+        },
+        "pairId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shieldCapacity": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "shieldArmor": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "baseShieldRecharge": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "armorProtection": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "armorIntegrity": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hull": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "rangeHexes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rangePenaltyPerHex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "turnCap": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sideA": {
+          "$ref": "#/$defs/side"
+        },
+        "sideB": {
+          "$ref": "#/$defs/side"
+        }
+      }
+    }
+  }
+}

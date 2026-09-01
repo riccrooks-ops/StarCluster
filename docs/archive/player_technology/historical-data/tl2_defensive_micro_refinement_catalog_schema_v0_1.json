@@ -1,0 +1,336 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-tl2-defensive-micro-refinement-catalog-v1",
+  "title": "Star Cluster TL2 defensive micro-refinement catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "checkpoint",
+    "status",
+    "baselineSha256",
+    "sourceCandidateCatalog",
+    "sourceCheckpointResults",
+    "designPrinciple",
+    "balanceInterpretation",
+    "promotionPolicy",
+    "profileIds",
+    "sameTlProfileIds",
+    "ranges",
+    "movementLanes",
+    "reportingPolicy",
+    "dominanceSignals",
+    "candidateLogic",
+    "identityGuardrails",
+    "candidates"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-tl2-defensive-micro-refinement-catalog-v1"
+    },
+    "id": {
+      "const": "tl2-defensive-micro-refinement-and-choice-viability-v0_1"
+    },
+    "checkpoint": {
+      "const": 45
+    },
+    "status": {
+      "const": "diagnostic_candidate_only"
+    },
+    "baselineSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "sourceCandidateCatalog": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceCheckpointResults": {
+      "type": "string",
+      "minLength": 1
+    },
+    "designPrinciple": {
+      "type": "string",
+      "minLength": 20
+    },
+    "balanceInterpretation": {
+      "type": "string",
+      "minLength": 20
+    },
+    "promotionPolicy": {
+      "type": "string",
+      "minLength": 20
+    },
+    "profileIds": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^tl2-r45-"
+      }
+    },
+    "sameTlProfileIds": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^tl2-r45-"
+      }
+    },
+    "ranges": {
+      "const": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "movementLanes": {
+      "type": "object"
+    },
+    "reportingPolicy": {
+      "type": "object"
+    },
+    "dominanceSignals": {
+      "type": "object"
+    },
+    "candidateLogic": {
+      "type": "object"
+    },
+    "identityGuardrails": {
+      "type": "object"
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "$ref": "#/$defs/profile"
+      }
+    }
+  },
+  "$defs": {
+    "weapon": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "damage",
+        "shieldPenetration",
+        "armorPenetration",
+        "accuracyBonus",
+        "guidanceChance",
+        "maximumRange",
+        "powerCost",
+        "ammunition"
+      ],
+      "properties": {
+        "damage": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "shieldPenetration": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "armorPenetration": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "accuracyBonus": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "guidanceChance": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "maximumRange": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "powerCost": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ammunition": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "status",
+        "analysisRole",
+        "designThesis",
+        "componentNames",
+        "defense",
+        "powerAndControl",
+        "movement",
+        "weapons",
+        "referenceInfluences",
+        "namingReview"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^tl2-r45-"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "const": "diagnostic-candidate-not-promoted"
+        },
+        "analysisRole": {
+          "enum": [
+            "null_control",
+            "retained_control",
+            "micro_refinement_probe"
+          ]
+        },
+        "designThesis": {
+          "type": "string",
+          "minLength": 20
+        },
+        "componentNames": {
+          "type": "object"
+        },
+        "defense": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "hull",
+            "armorIntegrity",
+            "armorProtection",
+            "shieldCapacity",
+            "shieldBaseRecharge",
+            "shieldArmor"
+          ],
+          "properties": {
+            "hull": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "armorIntegrity": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "armorProtection": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "shieldCapacity": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "shieldBaseRecharge": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "shieldArmor": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "powerAndControl": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "reactorOutput",
+            "targetingBonus",
+            "effectivePdsChance",
+            "pdsPower",
+            "standardCombatPowerCommitment"
+          ],
+          "properties": {
+            "reactorOutput": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "targetingBonus": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "effectivePdsChance": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "pdsPower": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "standardCombatPowerCommitment": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "movement": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "shipMove",
+            "missileMove"
+          ],
+          "properties": {
+            "shipMove": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "missileMove": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "weapons": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kinetic",
+            "energy",
+            "missile"
+          ],
+          "properties": {
+            "kinetic": {
+              "$ref": "#/$defs/weapon"
+            },
+            "energy": {
+              "$ref": "#/$defs/weapon"
+            },
+            "missile": {
+              "$ref": "#/$defs/weapon"
+            }
+          }
+        },
+        "referenceInfluences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "namingReview": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

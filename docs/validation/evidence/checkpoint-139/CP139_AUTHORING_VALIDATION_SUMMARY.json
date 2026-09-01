@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "star-cluster-cp139-authoring-validation-summary-v0.2",
+  "checkpoint": 139,
+  "date": "2026-08-25",
+  "baseCheckpoint": 138,
+  "status": "reconstructed_full_archive_authoring_validation_pass_native_validation_pending",
+  "productionDamageModel": "penetration-hardening-v1",
+  "researchCandidateDamageModel": "def-res-v1",
+  "pythonVersionObserved": "Python 3.13.5",
+  "pythonTestsDiscovered": 243,
+  "focusedCp139TestsPassed": 9,
+  "defResFixtures": {
+    "expected": 8,
+    "passed": 8
+  },
+  "reconciliationSmoke": {
+    "variants": 82,
+    "legacyVariants": 41,
+    "candidateVariants": 41,
+    "errors": 0,
+    "candidateDefResPackets": 1328,
+    "candidateShieldDeflections": 372,
+    "candidateArmorResistedDamage": 267.05964646464645
+  },
+  "frozenAuthoritySha256": {
+    "technologyNumericalMatrixV09": "3088b0a9eb45f6bf505c24513e8bb2ac878819db4ab464ccfea330243c82f194",
+    "conceptV07x": "f76ca6ce488ccb5ad1352f7d38b8c3d4657c12ed64d0c93cc45d2db605cc632f",
+    "productionLayeredDamageResolver": "ae0ec150f8a04823f3b5d703e9ba4e58a23ad9a21f1b69e60cc4483f4cbde45d"
+  },
+  "sourceMatrixUnmodified": true,
+  "stageAReady": false,
+  "stageABlockers": [
+    "reactor/TP resource environments",
+    "dynamic TP conflict telemetry",
+    "ten Stage A combat strata"
+  ],
+  "substantiveCombatTrials": 0,
+  "automaticPromotion": false,
+  "nativeValidationPending": [
+    ".NET SDK 8.0.423 warning-as-error build",
+    "915 xUnit tests",
+    "70 ScenarioRunner self-tests",
+    "deterministic ScenarioRunner corpora",
+    "25 existing C#/Python research parity cases",
+    "RepositoryOnly-to-final native sequence"
+  ],
+  "legacyFullMapEquivalence": {
+    "variants": 41,
+    "cp138ProbeSha256": "627e14a685a90c0a9d02150cedb05b322d801c154c959e4a6f2124d97dae30a4",
+    "cp139LegacyProbeSha256": "627e14a685a90c0a9d02150cedb05b322d801c154c959e4a6f2124d97dae30a4",
+    "byteIdentical": true
+  }
+}

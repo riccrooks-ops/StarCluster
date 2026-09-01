@@ -1,0 +1,263 @@
+PS E:\dev\star-cluster> powershell -ExecutionPolicy Bypass -File .\tools\checkpoints\checkpoint-22c\apply_checkpoint_22c.ps1
+[1/12] Verifying the successful Checkpoint 22b diagnostic baseline...
+[2/12] Confirming that Godot is closed...
+[3/12] Checking the pinned .NET SDK...
+       SDK: 8.0.423
+[4/12] Verifying map-sizing, initialization-attribution, and symbol contracts...
+[5/12] Performing a clean compiler preflight with warnings as errors...
+  Determining projects to restore...
+  Restored E:\dev\star-cluster\src\StarCluster.Core\StarCluster.Core.csproj (in 38 ms).
+  Restored E:\dev\star-cluster\src\StarCluster.ScenarioRunner\StarCluster.ScenarioRunner.csproj (in 41 ms).
+  Restored E:\dev\star-cluster\src\StarCluster.Game\StarCluster.Game.csproj (in 327 ms).
+  Restored E:\dev\star-cluster\tests\StarCluster.Tests\StarCluster.Tests.csproj (in 540 ms).
+  StarCluster.Core -> E:\dev\star-cluster\src\StarCluster.Core\bin\Debug\net8.0\StarCluster.Core.dll
+  StarCluster.Tests -> E:\dev\star-cluster\tests\StarCluster.Tests\bin\Debug\net8.0\StarCluster.Tests.dll
+  StarCluster.Game -> E:\dev\star-cluster\src\StarCluster.Game\.godot\mono\temp\bin\Debug\StarCluster.Game.dll
+  StarCluster.ScenarioRunner -> E:\dev\star-cluster\src\StarCluster.ScenarioRunner\bin\Debug\net8.0\StarCluster.ScenarioRunner.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:04.11
+[6/12] Running 506 engine-independent tests...
+Test run for E:\dev\star-cluster\tests\StarCluster.Tests\bin\Debug\net8.0\StarCluster.Tests.dll (.NETCoreApp,Version=v8.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:   506, Skipped:     0, Total:   506, Duration: 30 ms - StarCluster.Tests.dll (net8.0)
+[7/12] Running deterministic scenarios and forty-six runner self-tests...
+Scenario preflight: 7 passed, 0 failed.
+PASS blocked-retained-report-search (15 events)
+PASS command-guided-live-datalink (26 events)
+PASS preexisting-missile-initialization (17 events)
+PASS search-fuel-exhaustion (31 events)
+PASS seeker-search-then-hit (31 events)
+PASS terminal-entry-intercept (16 events)
+PASS terminal-two-window-hit (19 events)
+Scenarios: 7 passed, 0 failed, 7 total. Output: E:\dev\star-cluster\out\checkpoint-22c-deterministic
+PASS self-test: seed derivation is stable
+PASS self-test: trial indexes receive different seeds
+PASS self-test: random stream IDs are separated
+PASS self-test: deterministic random streams replay
+PASS self-test: Wilson interval bounds are valid
+PASS self-test: scenario overrides update typed documents
+PASS self-test: worker counts produce identical results
+PASS self-test: resume extension matches a fresh run
+PASS self-test: PDS TL calibration is bounded and directional
+PASS self-test: seeker-only acquisition responds to net ECM
+PASS self-test: representative calibration matrix has stable cardinality
+PASS self-test: effective-hit aggregation includes ordinary and critical hits
+PASS self-test: common random numbers align different variants
+PASS self-test: paired binary differences preserve discordant counts
+PASS self-test: Holm adjustment controls the marginal family
+PASS self-test: practical-effect threshold suppresses trivial contradictions
+PASS self-test: full-flight matrix has stable cardinality
+PASS self-test: full-flight movement policies materialize deterministic routes
+PASS self-test: occluded datalink variants seed valid prior flight state
+PASS self-test: full-flight scenarios stop after terminal resolution
+PASS self-test: full-flight matrix covers relative speed classes
+PASS self-test: full-flight variants pair live and occluded datalinks
+PASS self-test: full-flight safety caps scale with missile endurance
+PASS self-test: crossing-weave is distinct and deterministic
+PASS self-test: target-entered missile hex creates an authoritative opportunity
+PASS self-test: terminal opportunity diagnostics match authoritative records
+PASS self-test: operational safety caps classify stalled missiles
+PASS self-test: full-flight scenarios materialize operational turn limits
+PASS self-test: global trial scheduler honors the 24-worker ceiling
+PASS self-test: trial-block sizing preserves bounded granularity
+PASS self-test: trial blocks cover every variant trial exactly once
+PASS self-test: scenario runner uses server garbage collection
+PASS self-test: candidate-coordinate Search/Wait is not terminal acquisition
+PASS self-test: discarded trial journals retain error details
+PASS self-test: scheduler proof corpus has twenty-four stable variants
+PASS self-test: relative-motion datalink comparisons can be descriptive
+PASS self-test: semantic occlusion permits resolution before a guidance update
+PASS self-test: scenario execution plans reuse immutable preparation
+PASS self-test: compact and diagnostic trials preserve identical outcomes
+PASS self-test: compact trials suppress diagnostic journal materialization
+PASS self-test: compact track refresh preserves authoritative final state
+PASS self-test: profiled trials preserve canonical outcomes
+PASS self-test: allocation attribution records a bounded stage hierarchy
+PASS self-test: optimized calibration maps are bounded and deterministic
+PASS self-test: optimized and reference maps preserve canonical trial outcomes
+PASS self-test: initialization attribution isolates map creation
+Runner self-tests: 46 passed, 0 failed, 46 total.
+[8/12] Proving radius-scaled map allocation and all-variant radius-192 parity...
+Map optimization preflight: 288 optimized variants and 288 radius-192 reference variants passed.
+Map parity policy: 4 compact trial(s) per variant with identical common-random-number streams.
+Map allocation sweep: radius 5 17,944 bytes; radius 192 20,488,216 bytes; strictly monotonic True.
+Optimized map radii: 30 to 102; average 38.25; average cell retention 4.7 %.
+Map canonical parity: 288 matched, 0 failed; explicit-coordinate failures 0.
+Map optimization proof: PASS. Output: E:\dev\star-cluster\out\checkpoint-22c-map-optimization-proof
+[9/12] Reprofiling optimized initialization against the frozen Checkpoint 22b gate...
+Allocation profile preflight: 24 scheduler-proof variants across 4 missile profiles passed.
+Allocation profile policy: one worker; 1 warmup and 4 measured trials per variant per mode.
+Allocation profile DiagnosticJournal: 96 trials; 0 errors; 1,334,036 global bytes/trial; 1,334,036 attributed bytes/trial; 99.9 % top-level coverage.
+       ExecutorConstruction: 921,772 bytes/trial (69.1 %).
+       MissileAdvancement: 250,044 bytes/trial (18.7 %).
+       ShipMovement: 152,000 bytes/trial (11.4 %).
+       PhaseAdvancement: 8,468 bytes/trial (0.6 %).
+       InitializationMapCreation: 897,368 bytes/trial (67.3 %).
+Allocation profile CompactMetrics: 96 trials; 0 errors; 1,257,616 global bytes/trial; 1,257,609 attributed bytes/trial; 99.9 % top-level coverage.
+       ExecutorConstruction: 916,082 bytes/trial (72.8 %).
+       MissileAdvancement: 221,212 bytes/trial (17.6 %).
+       ShipMovement: 118,563 bytes/trial (9.4 %).
+       ResultProjection: 416 bytes/trial (0.0 %).
+       InitializationMapCreation: 897,368 bytes/trial (71.4 %).
+Allocation profile parity: 96 matched, 0 failed.
+Allocation profile: PASS. Output: E:\dev\star-cluster\out\checkpoint-22c-allocation-profile
+       Frozen Checkpoint 22b compact allocation: 20,863,918 bytes/trial.
+       Optimized compact allocation: 1,257,609 bytes/trial; reduction 93.97%.
+       Optimized map creation: 897,368 bytes/trial (71.4% of total).
+[10/12] Proving worker independence, execution-mode parity, and scaling...
+Sweep preflight: 1 variants passed, 0 failed.
+PASS pds-40 (2000 trials; resumed 0; executed 2000; hash 7d402ff1c8512ab9c48b772afeeba4e52076b8feaf97c499311c12d295fb65e8)
+Sweep: 1 passed, 0 failed, 1 total. Hash: 5c760196276fd2203bc552e1f6ea4ca9a69f9aae515d88387e392832e44cf9f0. Output: E:\dev\star-cluster\out\checkpoint-22c-repro-j1
+Sweep preflight: 1 variants passed, 0 failed.
+PASS pds-40 (2000 trials; resumed 0; executed 2000; hash 7d402ff1c8512ab9c48b772afeeba4e52076b8feaf97c499311c12d295fb65e8)
+Sweep: 1 passed, 0 failed, 1 total. Hash: 5c760196276fd2203bc552e1f6ea4ca9a69f9aae515d88387e392832e44cf9f0. Output: E:\dev\star-cluster\out\checkpoint-22c-repro-j24
+Full-flight scheduler proof preflight: 24 variants across 4 missile profiles passed.
+Prepared command-guided: 6 full-flight variants at 128 trials each.
+Prepared seeker-only: 6 full-flight variants at 128 trials each.
+Prepared sensor-only: 6 full-flight variants at 128 trials each.
+Prepared sensor-plus-seeker: 6 full-flight variants at 128 trials each.
+Full-flight scheduler: 24 global trial-block workers; block size 8; maximum worker ceiling 24; trial execution DiagnosticJournal; server GC enabled.
+Full-flight progress: 5% (20/384 blocks; 68 ms).
+Full-flight progress: 10% (39/384 blocks; 84 ms).
+Full-flight progress: 15% (58/384 blocks; 101 ms).
+Full-flight progress: 20% (77/384 blocks; 131 ms).
+Full-flight progress: 25% (96/384 blocks; 147 ms).
+Full-flight progress: 30% (116/384 blocks; 158 ms).
+Full-flight progress: 35% (135/384 blocks; 180 ms).
+Full-flight progress: 40% (154/384 blocks; 197 ms).
+Full-flight progress: 45% (173/384 blocks; 209 ms).
+Full-flight progress: 50% (192/384 blocks; 234 ms).
+Full-flight progress: 55% (212/384 blocks; 268 ms).
+Full-flight progress: 60% (231/384 blocks; 278 ms).
+Full-flight progress: 65% (250/384 blocks; 344 ms).
+Full-flight progress: 70% (269/384 blocks; 366 ms).
+Full-flight progress: 75% (288/384 blocks; 385 ms).
+Full-flight progress: 80% (308/384 blocks; 418 ms).
+Full-flight progress: 85% (327/384 blocks; 435 ms).
+Full-flight progress: 90% (346/384 blocks; 449 ms).
+Full-flight progress: 95% (365/384 blocks; 500 ms).
+Full-flight progress: 100% (384/384 blocks; 521 ms).
+Full-flight compute: peak 24/24 active workers; 3072 trials in 521 ms; 5896.35 trials/second; 18.89 effective processor cores.
+Full-flight runtime: Environment.ProcessorCount 32; process affinity 32; server GC True; normalized CPU 59.04%; allocation 1328658.37 bytes/trial.
+Full-flight failure categories: trial errors 0; datalink contract failures 0; terminal-opportunity invariant failures 0; unexplained unresolved outcomes 0.
+Full-flight scheduler proof: 24 variants passed, 0 failed; common random numbers verified; statistical gates skipped. Hash: d6f65937e3ca418a465d7b7faba69fdf834f09d0b04a4bc38f8aa998fb55425e. Output: E:\dev\star-cluster\out\checkpoint-22c-diagnostic-proof-j24
+Full-flight scheduler proof preflight: 24 variants across 4 missile profiles passed.
+Prepared command-guided: 6 full-flight variants at 128 trials each.
+Prepared seeker-only: 6 full-flight variants at 128 trials each.
+Prepared sensor-only: 6 full-flight variants at 128 trials each.
+Prepared sensor-plus-seeker: 6 full-flight variants at 128 trials each.
+Full-flight scheduler: 1 global trial-block workers; block size 8; maximum worker ceiling 24; trial execution CompactMetrics; server GC enabled.
+Full-flight progress: 5% (20/384 blocks; 185 ms).
+Full-flight progress: 10% (39/384 blocks; 348 ms).
+Full-flight progress: 15% (58/384 blocks; 525 ms).
+Full-flight progress: 20% (77/384 blocks; 656 ms).
+Full-flight progress: 25% (96/384 blocks; 815 ms).
+Full-flight progress: 30% (116/384 blocks; 931 ms).
+Full-flight progress: 35% (135/384 blocks; 1063 ms).
+Full-flight progress: 40% (154/384 blocks; 1176 ms).
+Full-flight progress: 45% (173/384 blocks; 1288 ms).
+Full-flight progress: 50% (192/384 blocks; 1382 ms).
+Full-flight progress: 55% (212/384 blocks; 1457 ms).
+Full-flight progress: 60% (231/384 blocks; 1565 ms).
+Full-flight progress: 65% (250/384 blocks; 1644 ms).
+Full-flight progress: 70% (269/384 blocks; 1734 ms).
+Full-flight progress: 75% (288/384 blocks; 1814 ms).
+Full-flight progress: 80% (308/384 blocks; 1884 ms).
+Full-flight progress: 85% (327/384 blocks; 1983 ms).
+Full-flight progress: 90% (346/384 blocks; 2072 ms).
+Full-flight progress: 95% (365/384 blocks; 2146 ms).
+Full-flight progress: 100% (384/384 blocks; 2235 ms).
+Full-flight compute: peak 1/1 active workers; 3072 trials in 2236 ms; 1373.88 trials/second; 1.89 effective processor cores.
+Full-flight runtime: Environment.ProcessorCount 32; process affinity 32; server GC True; normalized CPU 5.9%; allocation 1253995.89 bytes/trial.
+Full-flight failure categories: trial errors 0; datalink contract failures 0; terminal-opportunity invariant failures 0; unexplained unresolved outcomes 0.
+Full-flight scheduler proof: 24 variants passed, 0 failed; common random numbers verified; statistical gates skipped. Hash: d6f65937e3ca418a465d7b7faba69fdf834f09d0b04a4bc38f8aa998fb55425e. Output: E:\dev\star-cluster\out\checkpoint-22c-compact-proof-j1
+Full-flight scheduler proof preflight: 24 variants across 4 missile profiles passed.
+Prepared command-guided: 6 full-flight variants at 128 trials each.
+Prepared seeker-only: 6 full-flight variants at 128 trials each.
+Prepared sensor-only: 6 full-flight variants at 128 trials each.
+Prepared sensor-plus-seeker: 6 full-flight variants at 128 trials each.
+Full-flight scheduler: 24 global trial-block workers; block size 8; maximum worker ceiling 24; trial execution CompactMetrics; server GC enabled.
+Full-flight progress: 5% (20/384 blocks; 64 ms).
+Full-flight progress: 10% (39/384 blocks; 79 ms).
+Full-flight progress: 15% (58/384 blocks; 96 ms).
+Full-flight progress: 20% (77/384 blocks; 125 ms).
+Full-flight progress: 25% (96/384 blocks; 138 ms).
+Full-flight progress: 30% (116/384 blocks; 146 ms).
+Full-flight progress: 35% (135/384 blocks; 170 ms).
+Full-flight progress: 40% (154/384 blocks; 182 ms).
+Full-flight progress: 45% (173/384 blocks; 199 ms).
+Full-flight progress: 50% (192/384 blocks; 225 ms).
+Full-flight progress: 55% (212/384 blocks; 238 ms).
+Full-flight progress: 60% (231/384 blocks; 269 ms).
+Full-flight progress: 65% (250/384 blocks; 281 ms).
+Full-flight progress: 70% (269/384 blocks; 311 ms).
+Full-flight progress: 75% (288/384 blocks; 333 ms).
+Full-flight progress: 80% (308/384 blocks; 341 ms).
+Full-flight progress: 85% (327/384 blocks; 374 ms).
+Full-flight progress: 90% (346/384 blocks; 389 ms).
+Full-flight progress: 95% (365/384 blocks; 407 ms).
+Full-flight progress: 100% (384/384 blocks; 452 ms).
+Full-flight compute: peak 24/24 active workers; 3072 trials in 452 ms; 6796.46 trials/second; 20.74 effective processor cores.
+Full-flight runtime: Environment.ProcessorCount 32; process affinity 32; server GC True; normalized CPU 64.82%; allocation 1253989.26 bytes/trial.
+Full-flight failure categories: trial errors 0; datalink contract failures 0; terminal-opportunity invariant failures 0; unexplained unresolved outcomes 0.
+Full-flight scheduler proof: 24 variants passed, 0 failed; common random numbers verified; statistical gates skipped. Hash: d6f65937e3ca418a465d7b7faba69fdf834f09d0b04a4bc38f8aa998fb55425e. Output: E:\dev\star-cluster\out\checkpoint-22c-compact-proof-j24
+       Compact proof: 1,373.88 trials/s at jobs=1; 6,796.46 trials/s at jobs=24; 4.95x speedup.
+       Compact proof allocation: 1,253,989 bytes/trial.
+       Projected 288,000-trial compute time: 0.7 minutes.
+[11/12] Running the 288-variant compact calibration and reproducing accepted behavior...
+Full-flight preflight: 288 variants across 4 missile profiles passed.
+Prepared command-guided: 72 full-flight variants at 1000 trials each.
+Prepared seeker-only: 72 full-flight variants at 1000 trials each.
+Prepared sensor-only: 72 full-flight variants at 1000 trials each.
+Prepared sensor-plus-seeker: 72 full-flight variants at 1000 trials each.
+Full-flight scheduler: 24 global trial-block workers; block size 16; maximum worker ceiling 24; trial execution CompactMetrics; server GC enabled.
+Full-flight progress: 5% (908/18144 blocks; 2313 ms).
+Full-flight progress: 10% (1815/18144 blocks; 4322 ms).
+Full-flight progress: 15% (2722/18144 blocks; 6365 ms).
+Full-flight progress: 20% (3629/18144 blocks; 8438 ms).
+Full-flight progress: 25% (4536/18144 blocks; 10644 ms).
+Full-flight progress: 30% (5444/18144 blocks; 12870 ms).
+Full-flight progress: 35% (6351/18144 blocks; 15156 ms).
+Full-flight progress: 40% (7258/18144 blocks; 17110 ms).
+Full-flight progress: 45% (8165/18144 blocks; 19057 ms).
+Full-flight progress: 50% (9072/18144 blocks; 21182 ms).
+Full-flight progress: 55% (9980/18144 blocks; 23160 ms).
+Full-flight progress: 60% (10887/18144 blocks; 25278 ms).
+Full-flight progress: 65% (11794/18144 blocks; 27307 ms).
+Full-flight progress: 70% (12701/18144 blocks; 29341 ms).
+Full-flight progress: 75% (13608/18144 blocks; 31455 ms).
+Full-flight progress: 80% (14516/18144 blocks; 33579 ms).
+Full-flight progress: 85% (15423/18144 blocks; 35785 ms).
+Full-flight progress: 90% (16330/18144 blocks; 37879 ms).
+Full-flight progress: 95% (17237/18144 blocks; 39971 ms).
+Full-flight progress: 100% (18144/18144 blocks; 41853 ms).
+Full-flight compute: peak 24/24 active workers; 288000 trials in 41853 ms; 6881.23 trials/second; 23.26 effective processor cores.
+Full-flight runtime: Environment.ProcessorCount 32; process affinity 32; server GC True; normalized CPU 72.69%; allocation 1316967.92 bytes/trial.
+Full-flight failure categories: trial errors 0; datalink contract failures 0; terminal-opportunity invariant failures 0; unexplained unresolved outcomes 0.
+Full-flight calibration: 288 variants passed, 0 failed; 0 statistically contradictory inferential paired marginals after Holm correction; 144 descriptive relative-motion marginals. Hash: 226677d3b9d2fded9e529ab5b897f6ec0e5251eb27937208f571cbb9b184ee28. Output: E:\dev\star-cluster\out\checkpoint-22c-full-flight-pursuit-calibration
+[12/12] Finalizing Checkpoint 22c evidence...
+
+Checkpoint 22c completed successfully.
+Engine-independent tests passed: 506.
+Deterministic headless scenarios passed: 7.
+Runner self-tests passed: 46.
+Map optimization parity: 288/288 variants against radius 192.
+Average map-cell retention: 4.71%.
+Profiled compact allocation reduction versus Checkpoint 22b: 93.97%.
+Compact 24-worker speedup: 4.95x.
+Full allocation reduction versus Checkpoint 21e: 93.72%.
+Full Gen 2 collection reduction versus Checkpoint 21e: 91.13%.
+Accepted Checkpoint 21e summary and marginal CSV behavior reproduced exactly.
+Representative full-flight variants passed: 288.
+Inferential paired marginals verified: 720.
+Descriptive relative-motion marginals reported: 144.
+Mechanical failure categories: all zero.
+Full-flight calibration result hash: 226677d3b9d2fded9e529ab5b897f6ec0e5251eb27937208f571cbb9b184ee28.
+Full-flight compact throughput: 6,881.23 trials/second over 41853 ms.
+No mechanical Godot validation is required.
+Preserve the checkpoint-22c map proof, allocation profile, scheduler proofs, and full calibration directories for review.

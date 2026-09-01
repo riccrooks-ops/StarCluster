@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "star-cluster-technology-integration-permutation-suite-v1",
+  "id": "technology-integration-permutation-suite-v0_1",
+  "status": "standing_scenario_coverage_definition",
+  "purpose": "Define reusable technology-integration axes and pairing rules so future checkpoints can extend shared scenario matrices instead of creating wholly bespoke studies.",
+  "currentStudyId": "tl2-itc08-tactical-computer-ew-integration-permutations",
+  "axes": {
+    "sideAWeaponFamily": [
+      "Kinetic",
+      "Energy"
+    ],
+    "opponentFamily": [
+      "Missile",
+      "Kinetic"
+    ],
+    "geometry": [
+      "fixed-range-3",
+      "dynamic-side-a-first",
+      "dynamic-side-b-first"
+    ],
+    "ewResponsePackage": [
+      "firm-reference",
+      "wide-eccm2",
+      "tall-dr1-eccm1",
+      "degraded-p25"
+    ],
+    "sideATacticalComputerOrdinaryTargetingBonusPp": [
+      10,
+      12
+    ]
+  },
+  "expectedCartesianProductCount": 96,
+  "pairedComparison": {
+    "factor": "sideATacticalComputerOrdinaryTargetingBonusPp",
+    "control": 10,
+    "candidate": 12,
+    "sharedRandomStreamKey": "comparisonGroup",
+    "note": "The integrated runner derives identical trial streams for all variants sharing comparisonGroup; CP81 deliberately holds the stream fixed across the four EW packages and both +10/+12 computer candidates within each combat/geometry context."
+  },
+  "frozenDimensions": {
+    "reactorOutput": 5,
+    "tl2SensorDiscriminationResistanceCandidate": 1,
+    "tl2EcmNormalCeilingCandidate": 2,
+    "tl2EccmNormalCeilingCandidate": 2,
+    "ewPowerPerRating": 1,
+    "degradedFirePenaltyPp": 25,
+    "evasiveCompensationPp": 0,
+    "sensorRangeChanged": false,
+    "sensorOverloadChanged": false,
+    "ewOverloadChanged": false,
+    "productionWeaponDegradedFireAssigned": false,
+    "missileDegradedFireImplemented": false
+  },
+  "extensionPolicy": [
+    "Extend shared axes only when the additional dimension is relevant to a changed dependency.",
+    "Keep pairwise or factorial blocks small enough that causal attribution remains interpretable.",
+    "Use actual-consumer preflight and one-trial full-pipeline smoke before substantive Monte Carlo.",
+    "Do not convert outcome targets into automatic promotion gates; balance remains human-reviewed evidence."
+  ]
+}

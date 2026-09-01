@@ -1,0 +1,409 @@
+{
+  "schemaVersion": "star-cluster-architecture-runtime-profile-catalog-v1",
+  "id": "tl1-tl3-standard-runtime-profiles-v0_3",
+  "checkpoint": 56,
+  "status": "tl3_offense_base_defensive_microstep_screening",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "policy": "TL1/TL2 remain frozen. TL3 stays single-main; offense-only is the working base while Hull, Armor Integrity, and Shield Capacity are screened as separate one-point maturity microsteps.",
+  "profiles": [
+    {
+      "id": "tl1-production",
+      "label": "TL1 Production Control",
+      "technologyLevel": 1,
+      "source": "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 5,
+        "targetingBonus": 10,
+        "effectivePdsChance": 45,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 2
+      },
+      "movement": {
+        "shipMove": 1,
+        "missileMove": 2
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "accuracyBonus": 20,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "accuracyBonus": 0,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      }
+    },
+    {
+      "id": "tl2-production",
+      "label": "Accepted TL2 Standard Combat Profile",
+      "technologyLevel": 2,
+      "source": "src/StarCluster.ScenarioRunner/Scenarios/AuxiliaryTechnology/tl2-accepted-standard-combat-profile-v0_1.json",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 23,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 28,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl3-lowtech-control",
+      "label": "TL3 Low-Tech Capacity Control",
+      "technologyLevel": 3,
+      "source": "Checkpoint 55: accepted TL2 numerical vector with one main Weapon and TL3 AUX Capacity 2.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 23,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 28,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl3-offense-refinement",
+      "label": "TL3 Offense-Only Refinement",
+      "technologyLevel": 3,
+      "source": "docs/design/player_technology/checkpoint_55_tl3_lowtech_profile_candidates_v0_1.json",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 13,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 24,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 29,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 62,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl3-offense-plus-hull1",
+      "label": "TL3 Offense Refinement + Hull Microstep",
+      "technologyLevel": 3,
+      "source": "Checkpoint 56 defensive-microstep screening on the TL3 offense-only base.",
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 13,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 24,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 29,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 62,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl3-offense-plus-ai1",
+      "label": "TL3 Offense Refinement + Armor Integrity Microstep",
+      "technologyLevel": 3,
+      "source": "Checkpoint 56 defensive-microstep screening on the TL3 offense-only base.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 6,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 13,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 24,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 29,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 62,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl3-offense-plus-shield1",
+      "label": "TL3 Offense Refinement + Shield Capacity Microstep",
+      "technologyLevel": 3,
+      "source": "Checkpoint 56 defensive-microstep screening on the TL3 offense-only base.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 13,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 24,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 29,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 62,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    }
+  ]
+}

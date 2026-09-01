@@ -1,0 +1,264 @@
+{
+  "schemaVersion": "star-cluster-tl2-opponent-aware-range-control-catalog-v1",
+  "id": "tl2-opponent-aware-range-control-and-promotion-decision-v0_1",
+  "checkpoint": 47,
+  "status": "diagnostic-candidate-only-promotion-decision-pending",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "sourceCandidateCatalog": "src/StarCluster.ScenarioRunner/Scenarios/TL2Scaling/tl2-dynamic-weapon-choice-confirmation-v0_1.json",
+  "sourceCheckpointResults": "out/checkpoint-46/tl2-dynamic-weapon-choice-confirmation",
+  "leadingProfileId": "tl2-r45-armor-step-conservative-direct-fire",
+  "controlProfileId": "tl2-r45-hull-step-conservative-direct-fire",
+  "designPrinciple": "Preserve weapon-family identity while choosing range from both own and observed opponent weapon envelopes.",
+  "balanceInterpretation": "Exact parity is not required. The opponent-aware policy is healthy when starting range and tactical range control create credible advantages for multiple families rather than one broad compulsory choice.",
+  "promotionPolicy": "Checkpoint 47 may support a later human promotion decision, but successful execution does not promote a profile or weapon value automatically.",
+  "startingRanges": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "movementPolicy": "Compare the retained family-only Preferred Range policy against an opponent-aware policy that seeks the outer useful envelope when it outranges the target and the outer established preferred band when it is outranged.",
+  "orientationPolicy": "Every dynamic policy pairing is run in both side orders from starting ranges 1 through 6 under paired random streams; fixed Range 5 Kinetic/Energy controls are also paired.",
+  "profileIds": [
+    "tl2-r45-armor-step-conservative-direct-fire",
+    "tl2-r45-hull-step-conservative-direct-fire"
+  ],
+  "reportingPolicy": {
+    "pooledTrials": true,
+    "decisiveCoverage": true,
+    "startingRangeBreakdown": true,
+    "orientationReview": true,
+    "fixedControlsSeparate": true,
+    "exactParityRequired": false
+  },
+  "dominanceSignals": {
+    "startingRangeDominancePercent": 75,
+    "broadDominanceMinimumStarts": 4,
+    "credibleChoiceFloorPercent": 25,
+    "minimumDecisiveCoveragePercent": 50,
+    "blocking": false
+  },
+  "candidates": [
+    {
+      "id": "tl2-r45-hull-step-conservative-direct-fire",
+      "label": "Hull Step + Conservative Direct Fire",
+      "status": "opponent-aware-promotion-decision-candidate-not-promoted",
+      "analysisRole": "micro_refinement_probe",
+      "designThesis": "Retains the one-Hull structural step but reduces the direct-fire accuracy increment from five to three percentage points for both direct-fire families.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 23,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 28,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names and values do not imply promotion.",
+        "Weapon-family characteristics remain distinct; this profile changes strength without converging family roles.",
+        "Checkpoint 47 changes no weapon characteristic or TL value; it tests opponent-aware range control before any promotion decision."
+      ]
+    },
+    {
+      "id": "tl2-r45-armor-step-conservative-direct-fire",
+      "label": "Armor Step + Conservative Direct Fire",
+      "status": "opponent-aware-promotion-decision-candidate-not-promoted",
+      "analysisRole": "micro_refinement_probe",
+      "designThesis": "Retains the one-Armor-Integrity structural step but reduces the direct-fire accuracy increment from five to three percentage points for both direct-fire families.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 23,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 28,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names and values do not imply promotion.",
+        "Weapon-family characteristics remain distinct; this profile changes strength without converging family roles.",
+        "Checkpoint 47 changes no weapon characteristic or TL value; it tests opponent-aware range control before any promotion decision."
+      ]
+    }
+  ],
+  "fixedRange5Control": {
+    "familyPair": [
+      "Kinetic",
+      "Energy"
+    ],
+    "range": 5
+  },
+  "policies": [
+    {
+      "id": "family-preferred-control",
+      "movementMode": "PreferredRange",
+      "role": "retained-control"
+    },
+    {
+      "id": "opponent-aware-range",
+      "movementMode": "OpponentAwareRange",
+      "role": "candidate-policy"
+    }
+  ],
+  "requestedRangeContract": [
+    {
+      "ownFamily": "Kinetic",
+      "opponentFamily": "Energy",
+      "requestedRange": 2,
+      "basis": "ShorterRangePressure"
+    },
+    {
+      "ownFamily": "Kinetic",
+      "opponentFamily": "Missile",
+      "requestedRange": 2,
+      "basis": "ShorterRangePressure"
+    },
+    {
+      "ownFamily": "Energy",
+      "opponentFamily": "Kinetic",
+      "requestedRange": 5,
+      "basis": "StandoffAdvantage"
+    },
+    {
+      "ownFamily": "Energy",
+      "opponentFamily": "Missile",
+      "requestedRange": 4,
+      "basis": "ShorterRangePressure"
+    },
+    {
+      "ownFamily": "Missile",
+      "opponentFamily": "Kinetic",
+      "requestedRange": 6,
+      "basis": "StandoffAdvantage"
+    },
+    {
+      "ownFamily": "Missile",
+      "opponentFamily": "Energy",
+      "requestedRange": 6,
+      "basis": "StandoffAdvantage"
+    }
+  ]
+}

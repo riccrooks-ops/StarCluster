@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "id": "tl1-35-space-player-cruiser-baseline-v0_4",
+  "checkpoint": 62,
+  "status": "working_concept_power_doctrine_and_reactor_output_sensitivity_defined_pending_native_acceptance",
+  "installationSpace": {
+    "playerCruiserTotal": 35,
+    "mandatoryCoreTotal": 25,
+    "basePrimaryArmorSpace": 0,
+    "components": [
+      {
+        "id": "main_weapon",
+        "space": 6,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": null,
+        "duplicable": true,
+        "role": "ship_integrated_primary_weapon"
+      },
+      {
+        "id": "main_reactor",
+        "space": 6,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": null,
+        "duplicable": true,
+        "role": "ship_integrated_power_generation_and_distribution"
+      },
+      {
+        "id": "stl_drive",
+        "space": 5,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": 1,
+        "duplicable": false,
+        "role": "primary_architecture",
+        "ordinaryMiniaturizationFloor": 4
+      },
+      {
+        "id": "ftl_drive",
+        "space": 5,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": 1,
+        "duplicable": false,
+        "role": "primary_architecture",
+        "ordinaryMiniaturizationFloor": 4,
+        "playerMandatory": true
+      },
+      {
+        "id": "tactical_computer",
+        "space": 3,
+        "mandatoryCount": 1,
+        "maxPrimaryCount": 1,
+        "duplicable": false,
+        "role": "primary_architecture"
+      },
+      {
+        "id": "active_sensor",
+        "space": 3,
+        "mandatoryCount": 0,
+        "duplicable": false,
+        "role": "optional_major_system"
+      },
+      {
+        "id": "shield_generator",
+        "space": 3,
+        "mandatoryCount": 0,
+        "duplicable": false,
+        "role": "optional_major_system"
+      },
+      {
+        "id": "kinetic_pds",
+        "space": 2,
+        "mandatoryCount": 0,
+        "duplicable": true,
+        "role": "optional_terminal_defense"
+      },
+      {
+        "id": "pds_ammunition_support",
+        "space": 1,
+        "mandatoryCount": 0,
+        "duplicable": true,
+        "role": "provisional_ammunition_support",
+        "provisional": true
+      },
+      {
+        "id": "small_aux",
+        "space": 1,
+        "mandatoryCount": 0,
+        "duplicable": true,
+        "role": "compact_support_floor"
+      }
+    ],
+    "primaryArchitectureIds": [
+      "stl_drive",
+      "ftl_drive",
+      "tactical_computer"
+    ],
+    "limitedAuxiliaryBackupEligibleIds": [
+      "stl_drive",
+      "tactical_computer"
+    ],
+    "fullBackupFtlAllowed": false
+  },
+  "referenceBuilds": [
+    {
+      "id": "balanced_generalist",
+      "space": 35,
+      "legal": true,
+      "loadout": {
+        "main_weapon": 1,
+        "main_reactor": 1,
+        "stl_drive": 1,
+        "ftl_drive": 1,
+        "tactical_computer": 1,
+        "active_sensor": 1,
+        "shield_generator": 1,
+        "kinetic_pds": 1,
+        "pds_ammunition_support": 1,
+        "small_aux": 1
+      }
+    },
+    {
+      "id": "dual_main_striker",
+      "space": 35,
+      "legal": true,
+      "loadout": {
+        "main_weapon": 2,
+        "main_reactor": 1,
+        "stl_drive": 1,
+        "ftl_drive": 1,
+        "tactical_computer": 1,
+        "active_sensor": 1,
+        "small_aux": 1
+      }
+    },
+    {
+      "id": "dual_main_dual_reactor_core",
+      "space": 37,
+      "legal": false,
+      "reason": "exceeds_tl1_installation_space",
+      "loadout": {
+        "main_weapon": 2,
+        "main_reactor": 2,
+        "stl_drive": 1,
+        "ftl_drive": 1,
+        "tactical_computer": 1
+      }
+    }
+  ],
+  "retainedTl1MechanicalSeed": {
+    "sourceBaseline": "docs/design/player_technology/tl1_core_combat_numerical_baseline_v0_1.csv",
+    "hull": 12,
+    "armorIntegrity": 4,
+    "armorProtection": 0,
+    "shieldCapacity": 2,
+    "shieldBaseRecharge": 1,
+    "tacticalShieldRechargePerPower": 1,
+    "tacticalShieldRechargePowerCap": 2,
+    "mainReactorTacticalPowerByCondition": {
+      "operational": 5,
+      "degraded": 3,
+      "disabled": 1,
+      "destroyed": 0
+    },
+    "damageControl": {
+      "capacity": 1,
+      "repairKits": 3,
+      "powerPerAttempt": 1,
+      "degradedToOperationalPercent": 70,
+      "disabledToDegradedPercent": 50,
+      "restoreOneHullPercent": 40
+    },
+    "ordinaryInternalCriticalDensity": "1/3",
+    "reusePolicy": "Preserve validated TL1 combat/power/damage/PDS/sensor/Damage Control/AUX relationships as the seed, remap them into Installation Space, and revalidate; do not carry forward obsolete Weapon Bay/AUX-capacity or fixed win-ratio assumptions."
+  },
+  "progressionGuardrails": [
+    "Every technology/component change must pass a logical frontier check and a mathematical/combinatorial check.",
+    "Evaluate stacked legacy components and integer breakpoints under the same Space, Tactical Power, and prerequisite constraints.",
+    "Do not use arbitrary anti-stacking rules to repair bad component math unless the fiction independently requires the rule.",
+    "Transformative discoveries may produce substantial improvements when the whole-ship design remains healthy.",
+    "Cross-category prerequisites reward breadth only when genuine enabling science requires them; they must not blanket-block tall play.",
+    "Base armor is hull-integrated/external and consumes no Installation Space; enhancements may consume Auxiliary/support Space.",
+    "Before Monte Carlo combat promotion, enumerate the current legal construction envelope deterministically and carry deliberately odd legal configurations forward as stress candidates rather than suppressing them with ad hoc build rules."
+  ],
+  "deterministicArchitectureEnvelope": {
+    "study": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-space01-35-space-construction-envelope.json",
+    "macroLoadoutCount": 27,
+    "weaponPowerVariantCount": 96,
+    "exactFillMacroLoadoutCount": 4,
+    "maximumMainWeapons": 2,
+    "maximumMainReactors": 2,
+    "maximumKineticPdsAtCurrentFootprint": 5,
+    "dualMainDualReactorCoreSpace": 37,
+    "dualMainDualReactorCoreLegalAtTl1": false,
+    "residualSupportSpaceRange": [
+      0,
+      10
+    ],
+    "nominalPowerDiagnostic": {
+      "definition": "Fire every installed main weapon once at retained TL1 standard power, ready every installed kinetic PDS, and run an installed active sensor at the 1-TP setting; exclude shield recharge, evasion, overload, and AUX.",
+      "overcommitVariantCount": 5,
+      "exactPowerVariantCount": 10,
+      "powerMarginRange": [
+        -2,
+        10
+      ],
+      "constructionLegalityIndependentOfNominalPower": true
+    },
+    "interpretation": "These are arithmetic consequences of the current 35-Space working seed, not class restrictions or balance targets. Odd legal builds are intentionally preserved for later combat simulation."
+  },
+  "composedShipCombatStudy": {
+    "study": "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc04-35-space-composed-ship-odd-build-matrix.json",
+    "legalBuildCount": 6,
+    "variantCount": 54,
+    "trialsPerVariantDefault": 10000,
+    "matrix": "six Checkpoint 60 legal reference/odd builds as Side A x three primary weapon families x three balanced-generalist opponent weapon families",
+    "dualMainRule": "The first isolation pass installs the same weapon family in both main bays so attack-package density is measured before mixed-family combinations are introduced.",
+    "opponent": "balanced_generalist_major with one main weapon using the compared Side B family",
+    "movementMode": "OpponentAwareRange",
+    "initialRangeHexes": 4,
+    "damageControl": "ComponentFirstReserveOne",
+    "auxiliaryProfile": "aux-r53-none-tl1",
+    "balanceTargetsBlocking": false,
+    "reviewSignals": [
+      "power starvation/surplus",
+      "attack-package density",
+      "PDS reaction concentration",
+      "shield opportunity cost",
+      "combat pacing",
+      "matchup sensitivity"
+    ],
+    "sensorIsolation": "Established Firm-track combat is assumed for this first composed-ship pass. Active Sensor installation therefore has no direct accuracy bonus or special attack-eligibility gate in this study; sensorless-build combat outcomes are not sufficient promotion evidence without a later sensor/EW-coupled study.",
+    "pdsSemantics": "Explicit composed builds use pooled per-turn PDS reactions with random threat allocation without replacement, up to two attempts against one Missile Flight in the same terminal window when reactions remain. Historical legacy studies retain their prior one-PDS execution path.",
+    "pdsAmmunitionIsolation": "The runner retains 50 kinetic PDS rounds per installed PDS as a provisional combat fixture. This is not a final Installation-Space ruling for magazines/support; ammunition architecture must be revisited if PDS endurance materially drives the results."
+  },
+  "powerDoctrineReactorSensitivityStudy": {
+    "study": "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc05-35-space-power-doctrine-reactor-sensitivity.json",
+    "buildCount": 4,
+    "variantCount": 108,
+    "trialsPerVariantDefault": 10000,
+    "sideABuilds": [
+      "balanced_generalist_major",
+      "pds_saturator",
+      "dual_main_dual_pds",
+      "shielded_pds_fortress"
+    ],
+    "sideAWeaponFamilies": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "sideBTacticalOpponent": "balanced_generalist_major / Missile",
+    "powerDoctrines": {
+      "DefenseFirst": "Arm as many eligible PDS reactions as Tactical Power permits before preserving any weapon power; this is the Checkpoint 61 behavior.",
+      "PrimaryFireFirst": "Reserve the ready primary main-weapon power cost, then arm as many PDS reactions as the remaining Tactical Power permits; a second main fires only if power remains.",
+      "FullVolleyFirst": "Reserve all currently ready main-weapon power costs, then arm as many PDS reactions as the remaining Tactical Power permits."
+    },
+    "reactorOutputSensitivityPerMain": [
+      4,
+      5,
+      6
+    ],
+    "productionReactorOutputRemains": 5,
+    "reactorInterpretation": "4/5/6 are controlled sensitivity probes only. Checkpoint 62 does not change the accepted TL1 production reactor output unless later evidence supports a separate design decision.",
+    "pairedRandomness": "All nine doctrine/reactor settings for the same build and Side-A weapon family share a comparisonGroup/master-seed lane so sensitivity differences are paired rather than confounded by independent random streams.",
+    "weaponFamilyInterpretation": "Do not infer that a weapon-family statistic is worthless merely because the current TL1 opponent does not expose it. Energy APEN=1 is a latent capability when TL1 armor protection is 0; later armor-bearing opponents may realize that value. Cross-family win share is review evidence, not a promotion/demotion gate.",
+    "sensorIsolation": "The study retains Checkpoint 61 established-Firm-track isolation. Sensorless builds still require later sensor/acquisition/EW-coupled validation before strategic conclusions.",
+    "balanceTargetsBlocking": false
+  }
+}

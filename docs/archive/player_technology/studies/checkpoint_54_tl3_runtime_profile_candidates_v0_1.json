@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "star-cluster-checkpoint54-tl3-runtime-candidates-v1",
+  "checkpoint": 54,
+  "status": "candidate_screening_only",
+  "capacityMilestone": {
+    "weaponBays": 2,
+    "auxiliaryCapacity": 2
+  },
+  "candidates": [
+    {
+      "id": "tl3-capacity-control",
+      "label": "TL3 Capacity-Only Structural Control",
+      "purpose": "isolate TL3 structural capacity without numerical uplift"
+    },
+    {
+      "id": "tl3-balanced-candidate",
+      "label": "TL3 Balanced First-Refit Candidate",
+      "purpose": "moderate first-refit progression vector"
+    },
+    {
+      "id": "tl3-output-forward-control",
+      "label": "TL3 Output-Forward Sensitivity Control",
+      "purpose": "deliberately stronger sensitivity control"
+    }
+  ],
+  "promotionPolicy": "No TL3 profile is promoted by Checkpoint 54. Native evidence and design review are required."
+}

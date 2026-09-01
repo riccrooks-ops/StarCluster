@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "star-cluster-canonical-combat-kernel-fixtures-v0.1",
+  "checkpoint": 132,
+  "kernelVersion": "0.1",
+  "damageModel": "penetration-hardening-v1",
+  "mapRadius": 5,
+  "expectedCellCount": 91,
+  "standardStartA": [-5, 0],
+  "standardStartB": [5, 0],
+  "standardStartRange": 10,
+  "preContactSearchHexesPerActivation": 1,
+  "visibleTurnPhases": [
+    "Movement",
+    "ElectronicWarfare",
+    "DirectFire",
+    "MissileAndInterception",
+    "Damage",
+    "DamageControl"
+  ],
+  "damageCases": [
+    {
+      "id": "unhardened-spen-apen-chain",
+      "initial": {"shield": 6, "shieldArmor": 0, "armorIntegrity": 8, "armorProtection": 0, "hull": 12},
+      "packet": {"damage": 8, "spen": 1, "apen": 1},
+      "expected": {"effectiveSpen": 1, "shieldPenetrationResisted": 0, "shieldBypass": 1, "shieldAbsorbed": 6, "damageToArmor": 2, "effectiveApen": 1, "armorPenetrationResisted": 0, "armorBypass": 1, "armorIntegrityDamage": 1, "hullDamage": 1, "finalShield": 0, "finalArmorIntegrity": 7, "finalArmorProtection": 0, "finalHull": 11}
+    },
+    {
+      "id": "sa-ap-harden-penetration",
+      "initial": {"shield": 6, "shieldArmor": 1, "armorIntegrity": 8, "armorProtection": 1, "hull": 12},
+      "packet": {"damage": 8, "spen": 2, "apen": 2},
+      "expected": {"effectiveSpen": 1, "shieldPenetrationResisted": 1, "shieldBypass": 1, "shieldAbsorbed": 6, "damageToArmor": 2, "effectiveApen": 1, "armorPenetrationResisted": 1, "armorBypass": 1, "armorIntegrityDamage": 1, "hullDamage": 1, "finalShield": 0, "finalArmorIntegrity": 7, "finalArmorProtection": 1, "finalHull": 11}
+    },
+    {
+      "id": "hardening-does-not-delete-ordinary-damage",
+      "initial": {"shield": 6, "shieldArmor": 2, "armorIntegrity": 8, "armorProtection": 3, "hull": 12},
+      "packet": {"damage": 4, "spen": 0, "apen": 0},
+      "expected": {"effectiveSpen": 0, "shieldPenetrationResisted": 0, "shieldBypass": 0, "shieldAbsorbed": 4, "damageToArmor": 0, "effectiveApen": 0, "armorPenetrationResisted": 0, "armorBypass": 0, "armorIntegrityDamage": 0, "hullDamage": 0, "finalShield": 2, "finalArmorIntegrity": 8, "finalArmorProtection": 3, "finalHull": 12}
+    },
+    {
+      "id": "collapsed-layers-disable-hardening",
+      "initial": {"shield": 0, "shieldArmor": 9, "armorIntegrity": 0, "armorProtection": 9, "hull": 12},
+      "packet": {"damage": 4, "spen": 9, "apen": 9},
+      "expected": {"effectiveSpen": 0, "shieldPenetrationResisted": 0, "shieldBypass": 0, "shieldAbsorbed": 0, "damageToArmor": 4, "effectiveApen": 0, "armorPenetrationResisted": 0, "armorBypass": 0, "armorIntegrityDamage": 0, "hullDamage": 4, "finalShield": 0, "finalArmorIntegrity": 0, "finalArmorProtection": 9, "finalHull": 8}
+    },
+    {
+      "id": "armor-integrity-exhaustion-does-not-strip-ap",
+      "initial": {"shield": 0, "shieldArmor": 0, "armorIntegrity": 2, "armorProtection": 3, "hull": 12},
+      "packet": {"damage": 5, "spen": 0, "apen": 0},
+      "expected": {"effectiveSpen": 0, "shieldPenetrationResisted": 0, "shieldBypass": 0, "shieldAbsorbed": 0, "damageToArmor": 5, "effectiveApen": 0, "armorPenetrationResisted": 0, "armorBypass": 0, "armorIntegrityDamage": 2, "hullDamage": 3, "finalShield": 0, "finalArmorIntegrity": 0, "finalArmorProtection": 3, "finalHull": 9}
+    }
+  ]
+}

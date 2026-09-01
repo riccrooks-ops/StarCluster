@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "star-cluster-cp125-pure-tl-whole-ladder-study-v0.1",
+  "checkpoint": 125,
+  "title": "Pure-TL Whole-Ladder Integrated Progression Study",
+  "status": "candidate",
+  "acceptedReferenceBaseline": 123,
+  "acceptedInstrumentationBaseline": 124,
+  "acceptedImplementationBaseline": 122,
+  "sourceMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_3.json",
+  "shipTechnologyPolicy": "pure_same_tl_components_per_ship",
+  "mixedTlShipsExecuted": false,
+  "automaticPromotion": false,
+  "balanceValidated": false,
+  "sameTlPairingRounds": 2,
+  "substantiveTrialsPerVariant": 200,
+  "recommendedJobs": 24,
+  "pairingSeed": 12520260816,
+  "masterSeed": 12520260816,
+  "pairingDesign": {
+    "allBuildsEveryOpponentTl": true,
+    "bothSideAssignments": true,
+    "bothMovementOrders": true,
+    "offDiagonalBasePairsPerCell": "max(build_count_tl_a, build_count_tl_b)",
+    "diagonalBasePairsPerCell": "2 * build_count_tl",
+    "populationWeighting": "canonical legal-build pair population divided by sampled base pairings in each unordered TL cell",
+    "note": "Every legal build participates in every opponent-TL relationship. Off-diagonal cells use deterministic shuffled cyclic coverage; diagonal cells use two deterministic deranged rounds. Four symmetry mirrors are emitted for every base pairing."
+  },
+  "analysis": {
+    "primary": [
+      "9x9 ordered TL conditional-win matrix",
+      "Delta-TL higher-generation advantage",
+      "weapon/payload-family matchup matrix",
+      "population-weighted raw telemetry by TL cell",
+      "per-build performance against every opponent TL",
+      "movement-order sensitivity"
+    ],
+    "rawTelemetryAuthority": "docs/design/testing/telemetry_instrumentation_contract_v0_1.json",
+    "internalCriticalDamageSimulated": false,
+    "fullCSharpMissileRangeExhaustionParityClaimed": false,
+    "damageControlScheduledInCombat": false,
+    "balanceSignalsAreBlockingGates": false
+  },
+  "expected": {
+    "legalBuilds": 9427,
+    "canonicalPairPopulation": 44429451,
+    "canonicalTlCells": 45,
+    "orderedTlCells": 81,
+    "basePairings": 70034,
+    "generatedVariants": 280136,
+    "buildOpponentTlCoverage": 84843,
+    "pipelineSmokeTrials": 280136,
+    "substantiveTrials": 56027200
+  }
+}

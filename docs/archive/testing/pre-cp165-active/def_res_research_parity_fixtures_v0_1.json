@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "star-cluster-def-res-research-parity-fixtures-v0.1",
+  "checkpoint": 139,
+  "cases": [
+    {
+      "id": "shield-deflection-at-boundary",
+      "shield": 8,
+      "armor": 6,
+      "hull": 12,
+      "damage": 4,
+      "spen": 0,
+      "apen": 0,
+      "defPp": 20,
+      "resPp": 20,
+      "roll": 20
+    },
+    {
+      "id": "shield-couples-above-deflection-boundary",
+      "shield": 8,
+      "armor": 6,
+      "hull": 12,
+      "damage": 4,
+      "spen": 0,
+      "apen": 0,
+      "defPp": 20,
+      "resPp": 20,
+      "roll": 21
+    },
+    {
+      "id": "spen-reduces-def-not-capacity",
+      "shield": 4,
+      "armor": 6,
+      "hull": 12,
+      "damage": 6,
+      "spen": 5,
+      "apen": 0,
+      "defPp": 20,
+      "resPp": 20,
+      "roll": 16
+    },
+    {
+      "id": "apen-reduces-res-fractionally",
+      "shield": 0,
+      "armor": 6,
+      "hull": 12,
+      "damage": 4,
+      "spen": 0,
+      "apen": 5,
+      "defPp": 20,
+      "resPp": 20,
+      "roll": 1
+    },
+    {
+      "id": "armor-collapse-carries-unused-raw-inward",
+      "shield": 0,
+      "armor": 1,
+      "hull": 12,
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "defPp": 0,
+      "resPp": 25,
+      "roll": 100
+    },
+    {
+      "id": "caps-apply-after-penetration-reduction",
+      "shield": 1,
+      "armor": 10,
+      "hull": 12,
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "defPp": 100,
+      "resPp": 100,
+      "roll": 46
+    },
+    {
+      "id": "no-live-shield-means-no-deflection",
+      "shield": 0,
+      "armor": 3,
+      "hull": 12,
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "defPp": 45,
+      "resPp": 20,
+      "roll": 1
+    },
+    {
+      "id": "no-live-armor-means-unmitigated-hull",
+      "shield": 0,
+      "armor": 0,
+      "hull": 12,
+      "damage": 12,
+      "spen": 0,
+      "apen": 0,
+      "defPp": 0,
+      "resPp": 95,
+      "roll": 100
+    }
+  ]
+}

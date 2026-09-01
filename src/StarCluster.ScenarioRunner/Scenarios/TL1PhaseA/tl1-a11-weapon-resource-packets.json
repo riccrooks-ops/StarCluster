@@ -1,0 +1,659 @@
+{
+  "schemaVersion": "star-cluster-tl1-phase-a-v1",
+  "id": "tl1-a11-weapon-resource-packets",
+  "matrixScenarioId": "TL1-A11",
+  "name": "TL1 weapon resource packets and damage identities",
+  "baselineVersion": "tl1-core-combat-v0.1",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "cases": [
+    {
+      "id": "a11-c01",
+      "name": "Kinetic hit spends one Tactical Power and one ammunition package",
+      "operation": "weaponFire",
+      "input": {
+        "weapon": "kinetic",
+        "mode": "standard",
+        "hit": true,
+        "envelope": {
+          "$baseline": "reactor_output"
+        },
+        "startingAmmunition": {
+          "$baseline": "kinetic_ammo"
+        },
+        "defense": {
+          "currentShieldCapacity": 6,
+          "shieldArmor": 0,
+          "currentHull": {
+            "$baseline": "hull_points"
+          },
+          "temporaryShieldOvercapacity": 0
+        }
+      },
+      "expected": {
+        "fire": {
+          "hit": true,
+          "tacticalPowerSpent": {
+            "$baseline": "kinetic_power"
+          },
+          "ammunitionSpent": {
+            "$baseline": "ammunition_ready_package"
+          },
+          "remainingAmmunition": {
+            "$subtract": [
+              {
+                "$input": "$.startingAmmunition"
+              },
+              {
+                "$actual": "$.fire.ammunitionSpent"
+              }
+            ]
+          },
+          "power": {
+            "available": {
+              "$subtract": [
+                {
+                  "$baseline": "reactor_output"
+                },
+                {
+                  "$baseline": "kinetic_power"
+                }
+              ]
+            },
+            "spent": {
+              "$baseline": "kinetic_power"
+            }
+          },
+          "damageResolution": {
+            "incomingDamage": {
+              "$baseline": "kinetic_damage"
+            },
+            "shieldBypass": {
+              "$baseline": "kinetic_spen"
+            },
+            "shieldAbsorption": {
+              "$min": [
+                {
+                  "$input": "$.defense.currentShieldCapacity"
+                },
+                {
+                  "$max": [
+                    0,
+                    {
+                      "$subtract": [
+                        {
+                          "$baseline": "kinetic_damage"
+                        },
+                        {
+                          "$baseline": "kinetic_spen"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "defense": {
+          "currentShieldCapacity": {
+            "$subtract": [
+              {
+                "$input": "$.defense.currentShieldCapacity"
+              },
+              {
+                "$min": [
+                  {
+                    "$input": "$.defense.currentShieldCapacity"
+                  },
+                  {
+                    "$max": [
+                      0,
+                      {
+                        "$subtract": [
+                          {
+                            "$baseline": "kinetic_damage"
+                          },
+                          {
+                            "$baseline": "kinetic_spen"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "temporaryShieldOvercapacity": {
+            "$input": "$.defense.temporaryShieldOvercapacity"
+          },
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "currentProtection": {
+                "$baseline": "armor_protection"
+              },
+              "currentIntegrity": {
+                "$subtract": [
+                  {
+                    "$baseline": "armor_integrity"
+                  },
+                  {
+                    "$actual": "$.fire.damageResolution.armorLayers[0].integrityDamage"
+                  }
+                ]
+              }
+            }
+          ],
+          "currentHull": {
+            "$input": "$.defense.currentHull"
+          }
+        }
+      }
+    },
+    {
+      "id": "a11-c02",
+      "name": "Low-output energy hit spends power and no ammunition",
+      "operation": "weaponFire",
+      "input": {
+        "weapon": "energy",
+        "mode": "low",
+        "hit": true,
+        "envelope": {
+          "$baseline": "reactor_output"
+        },
+        "defense": {
+          "currentShieldCapacity": 6,
+          "shieldArmor": 0,
+          "currentHull": {
+            "$baseline": "hull_points"
+          },
+          "temporaryShieldOvercapacity": 0
+        }
+      },
+      "expected": {
+        "fire": {
+          "mode": "low",
+          "tacticalPowerSpent": {
+            "$baseline": "energy_low_power"
+          },
+          "ammunitionSpent": 0,
+          "remainingAmmunition": null,
+          "power": {
+            "available": {
+              "$subtract": [
+                {
+                  "$baseline": "reactor_output"
+                },
+                {
+                  "$baseline": "energy_low_power"
+                }
+              ]
+            },
+            "spent": {
+              "$baseline": "energy_low_power"
+            }
+          },
+          "damageResolution": {
+            "incomingDamage": {
+              "$baseline": "energy_low_damage"
+            },
+            "shieldAbsorption": {
+              "$min": [
+                {
+                  "$input": "$.defense.currentShieldCapacity"
+                },
+                {
+                  "$max": [
+                    0,
+                    {
+                      "$subtract": [
+                        {
+                          "$baseline": "energy_low_damage"
+                        },
+                        0
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "defense": {
+          "currentShieldCapacity": {
+            "$subtract": [
+              {
+                "$input": "$.defense.currentShieldCapacity"
+              },
+              {
+                "$min": [
+                  {
+                    "$input": "$.defense.currentShieldCapacity"
+                  },
+                  {
+                    "$max": [
+                      0,
+                      {
+                        "$subtract": [
+                          {
+                            "$baseline": "energy_low_damage"
+                          },
+                          0
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "temporaryShieldOvercapacity": {
+            "$input": "$.defense.temporaryShieldOvercapacity"
+          },
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "currentProtection": {
+                "$baseline": "armor_protection"
+              },
+              "currentIntegrity": {
+                "$baseline": "armor_integrity"
+              }
+            }
+          ],
+          "currentHull": {
+            "$input": "$.defense.currentHull"
+          }
+        }
+      }
+    },
+    {
+      "id": "a11-c03",
+      "name": "Standard energy hit applies SPEN and APEN",
+      "operation": "weaponFire",
+      "input": {
+        "weapon": "energy",
+        "mode": "standard",
+        "hit": true,
+        "envelope": {
+          "$baseline": "reactor_output"
+        },
+        "defense": {
+          "currentShieldCapacity": 6,
+          "shieldArmor": 0,
+          "currentHull": {
+            "$baseline": "hull_points"
+          },
+          "temporaryShieldOvercapacity": 0
+        }
+      },
+      "expected": {
+        "fire": {
+          "tacticalPowerSpent": {
+            "$baseline": "energy_standard_power"
+          },
+          "power": {
+            "available": {
+              "$subtract": [
+                {
+                  "$baseline": "reactor_output"
+                },
+                {
+                  "$baseline": "energy_standard_power"
+                }
+              ]
+            },
+            "spent": {
+              "$baseline": "energy_standard_power"
+            }
+          },
+          "damageResolution": {
+            "incomingDamage": {
+              "$baseline": "energy_standard_damage"
+            },
+            "shieldBypass": {
+              "$baseline": "energy_spen"
+            },
+            "armorLayers": [
+              {
+                "armorHardening": {
+                  "$baseline": "armor_protection"
+                },
+                "effectiveArmorPenetration": {
+                  "$baseline": "energy_apen"
+                },
+                "armorPenetrationResisted": 0,
+                "armorBypass": 1,
+                "armorFacingDamage": 0,
+                "integrityDamage": 0,
+                "finalIntegrity": {
+                  "$baseline": "armor_integrity"
+                },
+                "finalProtection": {
+                  "$baseline": "armor_protection"
+                }
+              }
+            ],
+            "shieldAbsorption": {
+              "$min": [
+                {
+                  "$input": "$.defense.currentShieldCapacity"
+                },
+                {
+                  "$max": [
+                    0,
+                    {
+                      "$subtract": [
+                        {
+                          "$baseline": "energy_standard_damage"
+                        },
+                        {
+                          "$baseline": "energy_spen"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "damageToArmor": 1,
+            "hullDamage": 1
+          }
+        },
+        "defense": {
+          "currentShieldCapacity": {
+            "$subtract": [
+              {
+                "$input": "$.defense.currentShieldCapacity"
+              },
+              {
+                "$min": [
+                  {
+                    "$input": "$.defense.currentShieldCapacity"
+                  },
+                  {
+                    "$max": [
+                      0,
+                      {
+                        "$subtract": [
+                          {
+                            "$baseline": "energy_standard_damage"
+                          },
+                          {
+                            "$baseline": "energy_spen"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "temporaryShieldOvercapacity": {
+            "$input": "$.defense.temporaryShieldOvercapacity"
+          },
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "currentProtection": {
+                "$baseline": "armor_protection"
+              },
+              "currentIntegrity": {
+                "$subtract": [
+                  {
+                    "$baseline": "armor_integrity"
+                  },
+                  {
+                    "$actual": "$.fire.damageResolution.armorLayers[0].integrityDamage"
+                  }
+                ]
+              }
+            }
+          ],
+          "currentHull": {
+            "$subtract": [
+              {
+                "$input": "$.defense.currentHull"
+              },
+              {
+                "$actual": "$.fire.damageResolution.hullDamage"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "a11-c04",
+      "name": "Missile hit spends ammunition and no launch power",
+      "operation": "weaponFire",
+      "input": {
+        "weapon": "missile",
+        "mode": "standard",
+        "hit": true,
+        "envelope": {
+          "$baseline": "reactor_output"
+        },
+        "startingAmmunition": {
+          "$baseline": "missile_ammo"
+        },
+        "defense": {
+          "currentShieldCapacity": 6,
+          "shieldArmor": 0,
+          "currentHull": {
+            "$baseline": "hull_points"
+          },
+          "temporaryShieldOvercapacity": 0
+        }
+      },
+      "expected": {
+        "fire": {
+          "tacticalPowerSpent": {
+            "$baseline": "missile_launch_power"
+          },
+          "ammunitionSpent": {
+            "$baseline": "ammunition_ready_package"
+          },
+          "remainingAmmunition": {
+            "$subtract": [
+              {
+                "$input": "$.startingAmmunition"
+              },
+              {
+                "$actual": "$.fire.ammunitionSpent"
+              }
+            ]
+          },
+          "power": {
+            "available": {
+              "$baseline": "reactor_output"
+            }
+          },
+          "damageResolution": {
+            "incomingDamage": {
+              "$baseline": "missile_warhead_damage"
+            },
+            "shieldBypass": {
+              "$baseline": "missile_warhead_spen"
+            },
+            "armorLayers": [
+              {
+                "armorHardening": {
+                  "$baseline": "armor_protection"
+                },
+                "effectiveArmorPenetration": {
+                  "$baseline": "missile_warhead_apen"
+                },
+                "armorPenetrationResisted": 0,
+                "armorBypass": 1,
+                "armorFacingDamage": 0,
+                "integrityDamage": 0,
+                "finalIntegrity": {
+                  "$baseline": "armor_integrity"
+                },
+                "finalProtection": {
+                  "$baseline": "armor_protection"
+                }
+              }
+            ],
+            "shieldAbsorption": {
+              "$min": [
+                {
+                  "$input": "$.defense.currentShieldCapacity"
+                },
+                {
+                  "$max": [
+                    0,
+                    {
+                      "$subtract": [
+                        {
+                          "$baseline": "missile_warhead_damage"
+                        },
+                        {
+                          "$baseline": "missile_warhead_spen"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "damageToArmor": 1,
+            "hullDamage": 1
+          }
+        },
+        "defense": {
+          "currentShieldCapacity": {
+            "$subtract": [
+              {
+                "$input": "$.defense.currentShieldCapacity"
+              },
+              {
+                "$min": [
+                  {
+                    "$input": "$.defense.currentShieldCapacity"
+                  },
+                  {
+                    "$max": [
+                      0,
+                      {
+                        "$subtract": [
+                          {
+                            "$baseline": "missile_warhead_damage"
+                          },
+                          {
+                            "$baseline": "missile_warhead_spen"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "temporaryShieldOvercapacity": {
+            "$input": "$.defense.temporaryShieldOvercapacity"
+          },
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "currentProtection": {
+                "$baseline": "armor_protection"
+              },
+              "currentIntegrity": {
+                "$subtract": [
+                  {
+                    "$baseline": "armor_integrity"
+                  },
+                  {
+                    "$actual": "$.fire.damageResolution.armorLayers[0].integrityDamage"
+                  }
+                ]
+              }
+            }
+          ],
+          "currentHull": {
+            "$subtract": [
+              {
+                "$input": "$.defense.currentHull"
+              },
+              {
+                "$actual": "$.fire.damageResolution.hullDamage"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "a11-c05",
+      "name": "A miss still spends the selected firing resources",
+      "operation": "weaponFire",
+      "input": {
+        "weapon": "energy",
+        "mode": "standard",
+        "hit": false,
+        "envelope": {
+          "$baseline": "reactor_output"
+        },
+        "defense": {
+          "currentShieldCapacity": 6,
+          "shieldArmor": 0,
+          "currentHull": {
+            "$baseline": "hull_points"
+          },
+          "temporaryShieldOvercapacity": 0
+        }
+      },
+      "expected": {
+        "fire": {
+          "hit": false,
+          "tacticalPowerSpent": {
+            "$baseline": "energy_standard_power"
+          },
+          "power": {
+            "available": {
+              "$subtract": [
+                {
+                  "$baseline": "reactor_output"
+                },
+                {
+                  "$baseline": "energy_standard_power"
+                }
+              ]
+            },
+            "spent": {
+              "$baseline": "energy_standard_power"
+            }
+          },
+          "damageResolution": null
+        },
+        "defense": {
+          "currentShieldCapacity": {
+            "$input": "$.defense.currentShieldCapacity"
+          },
+          "temporaryShieldOvercapacity": {
+            "$input": "$.defense.temporaryShieldOvercapacity"
+          },
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "currentProtection": {
+                "$baseline": "armor_protection"
+              },
+              "currentIntegrity": {
+                "$baseline": "armor_integrity"
+              }
+            }
+          ],
+          "currentHull": {
+            "$input": "$.defense.currentHull"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# .NET build output
+**/bin/
+**/obj/
+
+# Godot generated state
+src/StarCluster.Game/.godot/
+
+# Local validation output
+out/
+
+# IDE and user files
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,3 @@
+# Simulation Development Guidelines
+
+Use deterministic mechanics/parity → focused causal studies → response surfaces/interactions → legal-build populations → whole-system integration → explicit promotion. Balance means diverse viable choices, not numerical equality. Keep unusual legal builds for stress analysis and standard cruiser references separately. AI uses observer-legitimate information only. Additional TP is option value and must not compel a worse action. Closed isolated subsystem values reopen only when integrated evidence demonstrates a pathology. Active discovery prefers stable current paths and excludes archive/validation evidence.

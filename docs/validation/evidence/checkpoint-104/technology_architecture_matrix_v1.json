@@ -1,0 +1,873 @@
+{
+  "schemaVersion": 1,
+  "id": "technology-architecture-matrix-v1",
+  "checkpoint": 104,
+  "status": "cp103_native_accepted_substantive_with_cp104_diagnostic_closure_candidate",
+  "purpose": "Whole-ladder roadmap for durable technology progression roles and current working/candidate states. Checkpoint evidence and simulation methodology remain external.",
+  "authority": {
+    "concept": "docs/Star_Cluster_Game_Concept_v0.7d.docx",
+    "matrixMarkdown": "docs/design/player_technology/Technology_Architecture_Matrix_v1.md",
+    "matrixWorkbook": "docs/design/player_technology/StarCluster_Technology_Architecture_Matrix_v1.xlsx",
+    "productionDataChanged": false,
+    "automaticPromotion": false,
+    "componentInstallationSpaceCatalog": "docs/design/player_technology/component_installation_space_catalog_v1.json",
+    "tl3ExecutableImplementationProfile": "docs/design/player_technology/tl3_executable_implementation_profile_v0_1.json"
+  },
+  "statusDefinitions": {
+    "current_working": "Current accepted/working architecture or numerical value already supported by contemporary evidence; may still be explicitly provisional where noted.",
+    "legacy_candidate": "Previously accepted or tested value from an older architecture retained as a candidate requiring revalidation under the current rules.",
+    "hypothesis": "New design proposal for future testing; not production data.",
+    "deferred": "Conceptual role or question intentionally left without a numerical commitment.",
+    "validated_working_candidate": "Supported strongly enough for continued integration, but still subject to cross-TL validation and explicit human promotion.",
+    "cross_tl_validated_candidate": "Survived broader mixed-tech or exact-edge cross-TL integration and remains a candidate pending final production promotion."
+  },
+  "researchCategoryOwnership": {
+    "tacticalComputer": "Computing / Fire Control",
+    "sensor": "Sensors / EW",
+    "ecm": "Sensors / EW",
+    "eccm": "Sensors / EW",
+    "note": "Sensor, ECM, and ECCM remain separate progression streams inside Sensors / EW; weapon families keep distinct progression identities; the matrix does not create extra player-visible research categories.",
+    "powerReactor": "Power / Reactor",
+    "shield": "Defensive Systems / Shields",
+    "armor": "Defensive Systems / Armor"
+  },
+  "globalGuardrails": [
+    "Technology levels are discipline-specific capability levels, not a global multiplier or fixed TL-versus-TL win target.",
+    "Do not require every stream or statistic to improve at every TL; advancement may be capability, efficiency, resilience, mode, integration, miniaturization, or frontier performance.",
+    "Subsystem-family identity is mandatory: higher TL advances each family only along appropriate directions; shared sensitivity axes such as APEN/SPEN do not imply universal stat progression.",
+    "Use introduction -> maturation/integration -> peak only where it fits naturally; do not force a repeating cadence.",
+    "Older technology may continue to mature after a successor appears when it retains a real niche.",
+    "Progression must remain coherent under Installation Space, Tactical Power, prerequisite, stacking, and mixed-TL constraints.",
+    "Cross-category prerequisites must be sparse, causal, and normally limited to one or two genuinely enabling dependencies.",
+    "Mixed-TL ships are mandatory stress cases; broad low-TL research never synthesizes a de facto high-TL capability.",
+    "Degraded direct fire remains weapon-specific permission plus Tactical Computer-owned penalty; degraded fire must remain materially inferior to restoring Firm with ECCM.",
+    "Sensor reach, discrimination, ECM, ECCM, and Tactical Computer progression must be reviewed together when an interacting dependency changes.",
+    "Higher-TL systems may legitimately demand more Tactical Power when they push a capability frontier; power efficiency is a separate progression axis and is never granted implicitly.",
+    "Tall research may expose real reactor and opportunity-cost constraints, but technology progression must broaden or improve viable solutions rather than systematically make advanced equipment unusable; high-demand tall builds and reactor constraints must remain viable integration cases.",
+    "Ordinary missiles retain their separate Firm-terminal architecture; future Approximate-volume missile capabilities are missile-specific rather than inherited from direct-fire degraded fire.",
+    "Power / Reactor is a first-class progression stream. Reactor output, output density, efficiency, condition mapping, overload behavior, storage, auxiliary generation, and footprint are separate axes; changing one does not silently improve the others.",
+    "Do not ban stacking mature legacy reactors merely to force a frontier reactor to dominate. Compare real Installation Space, Tactical Power, reliability, and opportunity costs under the current hull architecture.",
+    "Shield progression is factored by capacity, recharge, hardening, condition behavior, Tactical Power maintenance/boost, and Installation Space. Integer damage/recharge breakpoints are real effects to review, not uniform percentage progression.",
+    "Armor Protection and Armor Integrity are separate progression axes. Preserve weapon APEN counterplay and do not bundle AP, AI, footprint, repair, ablative behavior, or special materials without independent evidence.",
+    "Every ordinary legal combat ship requires at least one Main Weapon, one Reactor, and one installed Sensor. A second Main Weapon, second Reactor, or both remain optional explicit design choices; ECM/ECCM remain optional. Sensorless configurations are reserved for explicit diagnostics, special scenario objects, or post-damage states rather than normal construction.",
+    "Multiple ECM or ECCM installations may provide redundancy, but same-type ratings never add. Use the highest applicable functional rating; cooperative allied effects remain separately capped mechanics.",
+    "The TL3 base row is a standard technology table, not the complete future catalog: later pinnacle legacy-family items and additional Aux/specialist components may be added without changing base-row identity."
+  ],
+  "tiers": [
+    {
+      "technologyLevel": 1,
+      "tacticalComputer": {
+        "status": "current_working",
+        "role": "Electronic fire-control baseline: ordinary direct-fire assistance plus support for weapon-specific Approximate-track fire.",
+        "ordinaryTargetingAssistanceOperationalPp": 10,
+        "ordinaryTargetingAssistanceDegradedPp": 5,
+        "approximateTrackPenaltyPp": -25,
+        "evasiveCompensationPp": 0,
+        "notes": "-25 applies only when the weapon explicitly supports degraded fire. Computer damage-condition effects on degraded fire remain deferred."
+      },
+      "sensor": {
+        "status": "current_working",
+        "role": "Baseline radio/optical sensing with passive-first doctrine and one normal Active mode; physical reach and EW discrimination remain separate.",
+        "sensorDiscriminationResistance": 0,
+        "sameHexBurnThroughResistance": 1,
+        "activeSensorWorkingSpace": 3,
+        "rangeFixture": {
+          "status": "candidate_fixture_not_production",
+          "passiveFirm": 1,
+          "passiveApproximate": 3,
+          "activeFirm": 3,
+          "activeApproximate": 4,
+          "overloadFirm": 4,
+          "overloadApproximate": 5,
+          "normalActiveTp": 1,
+          "overloadAdditionalTp": 1
+        },
+        "notes": "Balanced-0 remains a calibration fixture, not a production range promotion."
+      },
+      "ecm": {
+        "status": "current_working",
+        "role": "Baseline conventional powered jamming; conspicuous active emission attacks discrimination rather than physical sensor reach.",
+        "normalRatingCeiling": 1,
+        "tpPerRating": 1,
+        "safeOverloadBonusRating": 1,
+        "safeOverloadAdditionalTp": 1,
+        "safeOverloadStrain": 1,
+        "installationSpace": 1,
+        "multiplicityAllowedForRedundancy": true,
+        "sameTypeRatingsAdditive": false,
+        "sameTypeResolution": "highest_applicable_functional_rating"
+      },
+      "eccm": {
+        "status": "current_working",
+        "role": "Baseline powered counter-jamming; offsets ECM discrimination margin but does not extend sensor reach or promote a baseline Approximate observation to Firm.",
+        "normalRatingCeiling": 1,
+        "tpPerRating": 1,
+        "safeOverloadBonusRating": 1,
+        "safeOverloadAdditionalTp": 1,
+        "safeOverloadStrain": 1,
+        "installationSpace": 1,
+        "multiplicityAllowedForRedundancy": true,
+        "sameTypeRatingsAdditive": false,
+        "sameTypeResolution": "highest_applicable_functional_rating"
+      },
+      "powerReactor": {
+        "status": "current_working",
+        "role": "Peak fission: mature dependable baseline power architecture.",
+        "installationSpace": 6,
+        "operationalTacticalPower": 5,
+        "degradedTacticalPower": 3,
+        "disabledEmergencyTacticalPower": 1,
+        "destroyedTacticalPower": 0,
+        "notes": "TL1 safe overload remains the current working behavior where legal; no TL2 inference is made from it."
+      },
+      "shield": {
+        "status": "current_working",
+        "role": "Baseline shield generator and field capacity.",
+        "installationSpace": 3,
+        "shieldCapacity": 2,
+        "baseRechargePerTurn": 1,
+        "tacticalRechargePerPower": 1,
+        "tacticalRechargePowerCap": 2,
+        "shieldArmor": 0
+      },
+      "armor": {
+        "status": "current_working",
+        "role": "Rolled Alloy Plating baseline.",
+        "basePrimaryArmorInstallationSpace": 0,
+        "armorProtection": 0,
+        "armorIntegrity": 4
+      }
+    },
+    {
+      "technologyLevel": 2,
+      "tacticalComputer": {
+        "status": "validated_working_candidate",
+        "role": "Refined track fusion and conventional targeting; retain the TL1 degraded-fire penalty initially so improved ordinary targeting does not also weaken the EW guardrail.",
+        "ordinaryTargetingAssistanceOperationalPp": 12,
+        "approximateTrackPenaltyPp": -25,
+        "notes": "Ordinary targeting +12 is the current local working candidate; degraded-fire penalty -25 and Evasive Compensation 0 remain held.",
+        "evasiveCompensationPp": 0
+      },
+      "sensor": {
+        "status": "validated_working_candidate",
+        "role": "First discrimination-focused maturation: better intrinsic resistance to obsolete jamming before adding more reach or more Active modes.",
+        "sensorDiscriminationResistance": 1,
+        "rangeFixture": {
+          "status": "hold_tl1_balanced0_candidate_for_isolation",
+          "passiveFirm": 1,
+          "passiveApproximate": 3,
+          "activeFirm": 3,
+          "activeApproximate": 4,
+          "overloadFirm": 4,
+          "overloadApproximate": 5,
+          "normalActiveTp": 1
+        },
+        "notes": "DR1 is the current local working candidate. Physical reach remains on the unchanged Balanced-0 study fixture; no TL2 range increase is promoted."
+      },
+      "ecm": {
+        "status": "validated_working_candidate",
+        "role": "Strength refinement through scalable normal rating while preserving one Tactical Power per rating as the initial comparison point.",
+        "normalRatingCeiling": 2,
+        "tpPerRating": 1,
+        "overload": "deferred_not_promoted_for_tl2",
+        "notes": "Normal ceiling 2 at 1 TP/rating is the current local working candidate. New TL2 overload/efficiency behavior remains deferred.",
+        "installationSpace": 1,
+        "multiplicityAllowedForRedundancy": true,
+        "sameTypeRatingsAdditive": false,
+        "sameTypeResolution": "highest_applicable_functional_rating"
+      },
+      "eccm": {
+        "status": "validated_working_candidate",
+        "role": "Counter-strength refinement through scalable normal rating; works with intrinsic Sensor Discrimination Resistance rather than replacing it.",
+        "normalRatingCeiling": 2,
+        "tpPerRating": 1,
+        "overload": "deferred_not_promoted_for_tl2",
+        "notes": "Normal ceiling 2 at 1 TP/rating is the current local working candidate. The wide old-Sensor route remains mechanically valid but more power-hungry than DR1 + ECCM1.",
+        "installationSpace": 1,
+        "multiplicityAllowedForRedundancy": true,
+        "sameTypeRatingsAdditive": false,
+        "sameTypeResolution": "highest_applicable_functional_rating"
+      },
+      "powerReactor": {
+        "status": "validated_working_candidate",
+        "role": "Early practical fusion: validated current-architecture Operational-output density candidate.",
+        "installationSpace": 6,
+        "notes": "6 Operational TP at 6 Space is the current local working candidate. All other reactor properties remain separate and unpromoted.",
+        "operationalTacticalPower": 6
+      },
+      "shield": {
+        "status": "cross_tl_validated_candidate",
+        "role": "First validated Shield progression step: Capacity 3 at the unchanged 3-Space footprint.",
+        "installationSpace": 3,
+        "shieldCapacityReference": 2,
+        "shieldCapacityPrimaryCandidate": 3,
+        "shieldCapacityUpperSensitivity": 4,
+        "baseRechargeHeld": 1,
+        "tacticalRechargePerPowerHeld": 1,
+        "tacticalRechargePowerCapHeld": 2,
+        "shieldArmorHeld": 0,
+        "shieldCapacity": 3,
+        "notes": "Capacity 3 at 3 Space is now a cross-TL validated candidate. Capacity 4 remains upper sensitivity; no other shield property is promoted."
+      },
+      "armor": {
+        "status": "cross_tl_validated_candidate",
+        "role": "Ceramic-composite durability maturation with Armor Integrity emphasized before flat Protection.",
+        "basePrimaryArmorInstallationSpace": 0,
+        "armorProtection": 0,
+        "armorIntegrity": 5,
+        "notes": "AP0/AI5 is now a cross-TL validated candidate. AP1 was not promoted at TL2; CP102 implements AP1/AI5 as the distinct TL3 executable candidate while leaving calibration and production promotion unresolved."
+      }
+    },
+    {
+      "technologyLevel": 3,
+      "tacticalComputer": {
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "role": "Mature integrated fire control: retain TL2 ordinary solution quality while reducing the ship own-fire cost of Evasive posture.",
+        "ordinaryTargetingAssistanceOperationalPp": 12,
+        "approximateTrackPenaltyPp": -25,
+        "evasiveCompensationPp": 5,
+        "installationSpace": 3,
+        "notes": "CP102 native-accepted executable binding; CP101 value unchanged. Evasive Compensation offsets only the own-fire Evasive penalty to a minimum of zero and never becomes a positive bonus."
+      },
+      "sensor": {
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "role": "Mature active-sensor integration: preserve DR1 and passive reach while adding Low/High normal Active modes.",
+        "sensorDiscriminationResistance": 1,
+        "installationSpace": 3,
+        "rangeFixture": {
+          "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+          "passiveFirm": 1,
+          "passiveApproximate": 3,
+          "lowActiveFirm": 3,
+          "lowActiveApproximate": 4,
+          "lowActiveTp": 1,
+          "highActiveFirm": 4,
+          "highActiveApproximate": 5,
+          "highActiveTp": 2,
+          "highActiveStrain": 0
+        },
+        "overloadBeyondHighActive": "deferred_not_promoted",
+        "notes": "High Active converts the current overload-level 4/5 reach into a normal 2-TP mode without Strain; no 5/6 overload is assumed."
+      },
+      "ecm": {
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "role": "Mature rating-2 ECM through power efficiency rather than stronger jamming.",
+        "normalRatingCeiling": 2,
+        "fullStrengthNormalTp": 1,
+        "installationSpace": 1,
+        "sameTypeRatingsAdditive": false,
+        "sameTypeResolution": "highest_applicable_functional_rating",
+        "overload": "deferred_not_promoted"
+      },
+      "eccm": {
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "role": "Mature rating-2 ECCM through power efficiency rather than stronger counter-jamming.",
+        "normalRatingCeiling": 2,
+        "fullStrengthNormalTp": 1,
+        "installationSpace": 1,
+        "sameTypeRatingsAdditive": false,
+        "sameTypeResolution": "highest_applicable_functional_rating",
+        "overload": "deferred_not_promoted"
+      },
+      "powerReactor": {
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "role": "Mature Compact Fusion: miniaturize the TL2 fusion output package rather than raising raw output.",
+        "installationSpace": 5,
+        "operationalTacticalPower": 6,
+        "degradedTacticalPowerHeld": 3,
+        "disabledEmergencyTacticalPowerHeld": 1,
+        "destroyedTacticalPowerHeld": 0,
+        "notes": "CP102 native-accepted executable binding; CP101 value unchanged. Footprint improves from 6 to 5 Space; no new output, overload, storage, or reliability benefit is bundled."
+      },
+      "shield": {
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "role": "Mature shield integration: hold primary Capacity 3 and unlock a separate powered Shield Hardener option.",
+        "installationSpace": 3,
+        "shieldCapacity": 3,
+        "baseRechargeHeld": 1,
+        "tacticalRechargePerPowerHeld": 1,
+        "tacticalRechargePowerCapHeld": 2,
+        "shieldArmorHeld": 0,
+        "shieldHardenerCandidate": {
+          "installationSpace": 1,
+          "normalShieldArmor": 1,
+          "sustainedTacticalPower": 1,
+          "stacking": "nonstacking",
+          "overload": "deferred_not_promoted"
+        },
+        "notes": "Initial TL3 candidate; the hardener is a separate optional support component rather than an automatic base-shield increase."
+      },
+      "armor": {
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "role": "Mature composite protection: convert material maturity into actual flat Protection while holding TL2 Integrity.",
+        "basePrimaryArmorInstallationSpace": 0,
+        "armorProtection": 1,
+        "armorIntegrity": 5,
+        "notes": "Initial TL3 candidate AP1/AI5. This exposes a natural breakpoint for existing Kinetic APEN1 without promoting another Kinetic penetration increase."
+      },
+      "hull": {
+        "id": "tl3-cruiser-integration-platform",
+        "technologyRole": "Mature cruiser structural integration",
+        "installationSpaceCapacity": 36,
+        "hullPointsHeld": 12,
+        "crewHeld": 100,
+        "marinesHeld": 10,
+        "minimumOperatingCrewHeld": 10,
+        "cargoApproximateHeld": 100,
+        "shuttleCapacityHeld": 1,
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "notes": "Capacity rises by the minimum integer step 35->36. Hull durability, personnel, cargo and shuttle capacity do not also increase. Structural refit requires drydock/rare equivalent."
+      },
+      "stlDrive": {
+        "id": "tl3-stl-drive",
+        "technologyRole": "Mature tactical propulsion",
+        "installationSpace": 5,
+        "normalMove": 3,
+        "fuelPerTraversedHexHeld": 2,
+        "overloadI": {
+          "moveBonus": 1,
+          "tacticalPower": 1,
+          "extraFuel": 2,
+          "strain": 1,
+          "strainLimitHeld": 2
+        },
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "notes": "Normal Move follows installed STL TL. The bounded overload remains +1 Move rather than scaling multiplicatively with base Move; no footprint reduction is bundled."
+      },
+      "ftlDrive": {
+        "id": "tl3-ftl-drive",
+        "technologyRole": "Mature strategic propulsion",
+        "installationSpace": 5,
+        "strategicMove": 3,
+        "unknownSectorConsumesRemainingMove": true,
+        "frontierTravelInterruptionRulesHeld": true,
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "notes": "Strategic Move follows installed FTL TL. No footprint reduction, faster preparation, or exploration-bypass benefit is bundled."
+      },
+      "kineticMainWeapon": {
+        "id": "tl3-kinetic-main-base",
+        "technologyRole": "Mature low-Tactical-Power kinetic battery",
+        "installationSpace": 6,
+        "accuracyPp": 20,
+        "damage": 4,
+        "shieldPenetration": 1,
+        "armorPenetration": 1,
+        "maximumRange": 4,
+        "ordinaryFiringTacticalPower": 0,
+        "ammunitionPackagesHeld": 100,
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "notes": "Hold packet, range, accuracy and penetration; maturation removes the ordinary discretionary Tactical-Power firing burden. Finite ammunition remains the family cost. No Approximate-fire permission is bundled."
+      },
+      "energyMainWeapon": {
+        "id": "tl3-energy-main-base",
+        "technologyRole": "Mature safe-output energy battery",
+        "installationSpace": 6,
+        "maximumRange": 5,
+        "modes": [
+          {
+            "id": "low",
+            "tacticalPower": 1,
+            "damage": 2,
+            "accuracyPp": 10,
+            "shieldPenetration": 0,
+            "armorPenetration": 0,
+            "strain": 0
+          },
+          {
+            "id": "standard",
+            "tacticalPower": 2,
+            "damage": 3,
+            "accuracyPp": 25,
+            "shieldPenetration": 1,
+            "armorPenetration": 1,
+            "strain": 0
+          },
+          {
+            "id": "high",
+            "tacticalPower": 3,
+            "damage": 4,
+            "accuracyPp": 25,
+            "shieldPenetration": 1,
+            "armorPenetration": 1,
+            "strain": 0
+          }
+        ],
+        "overloadBeyondHighOutput": "deferred_not_promoted",
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "notes": "The former TL1 overload-level DAM4 output becomes a rated safe High mode. No automatic DAM5/4-TP overload is created."
+      },
+      "missileMainWeapon": {
+        "id": "tl3-missile-main-base",
+        "technologyRole": "Mature autonomous missile architecture",
+        "launcherInstallationSpace": 6,
+        "launchTacticalPower": 0,
+        "warheadDamage": 5,
+        "shieldPenetration": 1,
+        "armorPenetration": 2,
+        "maximumRangeHeld": 6,
+        "missileFlightsHeld": 25,
+        "missileDriveTechnologyLevel": 3,
+        "missileMove": 4,
+        "guidanceBaseHitChanceHeld": 55,
+        "standardOnboardNavigationSensor": true,
+        "terminalSeekerStandard": false,
+        "launcherDatalinkRetained": true,
+        "ordinaryTerminalFirmRequired": true,
+        "approximateTerminalAttack": false,
+        "navigationSensorDetailedProfile": "deferred_subcomponent_profile",
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "notes": "Maturation is propulsion/autonomy rather than a larger warhead. Onboard navigation sensing becomes standard for local tracking/reacquisition; seeker remains an optional later subcomponent/variant."
+      },
+      "kineticPds": {
+        "id": "tl3-kinetic-pds-base",
+        "technologyRole": "Mature conventional CIWS hold",
+        "installationSpace": 2,
+        "pdsBaseChanceHeld": 13,
+        "targetingAssistanceReferencePpHeld": 12,
+        "reactionCapacity": 1,
+        "tacticalPowerReadiness": 1,
+        "ammunitionHeld": 60,
+        "status": "implemented_executable_hold_not_calibrated_not_promoted",
+        "notes": "Deliberate base TL3 hold; no placeholder improvement. Existing local/self-contained PDS rules remain."
+      },
+      "energyPds": {
+        "id": "tl3-energy-pds-efficient",
+        "technologyRole": "Mature ammunition-free point defense",
+        "installationSpace": 2,
+        "pdsBaseChanceHeld": 16,
+        "targetingAssistanceReferencePpHeld": 12,
+        "reactionCapacity": 1,
+        "tacticalPowerReadiness": 1,
+        "ammunition": null,
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "notes": "Principal maturation is readiness efficiency from 2 TP to 1 TP; accuracy and RC are held."
+      },
+      "ammPds": {
+        "id": "tl3-amm-pds-scalable-readiness",
+        "technologyRole": "Mature anti-saturation interceptor battery",
+        "installationSpace": 2,
+        "pdsBaseChanceHeld": 20,
+        "targetingAssistanceReferencePpHeld": 12,
+        "ammunitionHeld": 25,
+        "readinessModes": [
+          {
+            "tacticalPower": 1,
+            "reactionCapacity": 1
+          },
+          {
+            "tacticalPower": 2,
+            "reactionCapacity": 2
+          }
+        ],
+        "perFlightAttemptCapHeld": 2,
+        "automaticRandomThreatAllocationHeld": true,
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+        "notes": "Accuracy and magazine are held; the player may spend another readiness TP for a second total reaction, preserving the normal two-attempt-per-flight cap and automatic seeded allocation."
+      },
+      "baseTableStatus": "complete_base_executable_candidate_not_calibrated_not_promoted",
+      "combatConsumerEnabled": true,
+      "baseTableProfile": "docs/design/player_technology/tl3_base_technology_candidates_v0_2.json",
+      "buildSanityProfile": "docs/design/player_technology/tl3_base_build_sanity_v0_1.json"
+    },
+    {
+      "technologyLevel": 4,
+      "tacticalComputer": {
+        "status": "deferred",
+        "role": "Predictive multi-variable fire-control foundation; emphasize new solution quality or integration rather than a generic accuracy increment."
+      },
+      "sensor": {
+        "status": "deferred",
+        "role": "New/exotic signature-channel or environmental-tolerance frontier; exact fiction and mechanics remain open."
+      },
+      "ecm": {
+        "status": "deferred",
+        "role": "Adaptive/cooperative screen capability; possible qualitative mode rather than simple rating inflation."
+      },
+      "eccm": {
+        "status": "deferred",
+        "role": "Adaptive discrimination/anti-deception capability; must remain distinct from physical sensor reach."
+      },
+      "powerReactor": {
+        "status": "deferred",
+        "role": "High-output fusion: mature fusion pushes the usable-output frontier or another genuinely output-related capability."
+      },
+      "shield": {
+        "status": "deferred",
+        "role": "Future shield progression role intentionally deferred until lower-TL capacity/recharge/power interactions are calibrated."
+      },
+      "armor": {
+        "status": "deferred",
+        "role": "Advanced composite/layered protection with explicit APEN counterplay."
+      }
+    },
+    {
+      "technologyLevel": 5,
+      "tacticalComputer": {
+        "status": "deferred",
+        "role": "Predictive engagement maturation. Evasive Compensation becomes a candidate capability if contemporary movement/EW tests justify it."
+      },
+      "sensor": {
+        "status": "deferred",
+        "role": "Advanced trajectory/signature awareness and reacquisition; a gravitic-style sensing principle is a conceptual candidate, not a locked name."
+      },
+      "ecm": {
+        "status": "deferred",
+        "role": "Deception sophistication or target-picture manipulation while remaining an observable active emission when powered."
+      },
+      "eccm": {
+        "status": "deferred",
+        "role": "Deeper integration with sensor fusion and deceptive-signal rejection."
+      },
+      "powerReactor": {
+        "status": "deferred",
+        "role": "Early antimatter plus peak fusion: new high-energy family appears while mature fusion retains a final strategically relevant niche."
+      },
+      "shield": {
+        "status": "deferred",
+        "role": "Future shield progression role intentionally deferred until lower-TL capacity/recharge/power interactions are calibrated."
+      },
+      "armor": {
+        "status": "deferred",
+        "role": "High-energy or ablative specialization may introduce new armor roles rather than universal scalar growth."
+      }
+    },
+    {
+      "technologyLevel": 6,
+      "tacticalComputer": {
+        "status": "deferred",
+        "role": "Distributed/resilient tactical computing; emphasize coordination and graceful operation under component damage or network disruption."
+      },
+      "sensor": {
+        "status": "deferred",
+        "role": "Advanced discrimination, track freshness, and resilience; exact range growth remains a separate decision."
+      },
+      "ecm": {
+        "status": "deferred",
+        "role": "Higher reliability/strength frontier with explicit Tactical Power and counterplay costs."
+      },
+      "eccm": {
+        "status": "deferred",
+        "role": "Higher reliability/strength frontier without becoming a reach extender."
+      },
+      "powerReactor": {
+        "status": "deferred",
+        "role": "Mature antimatter: containment, conditioning, integration, reliability, or miniaturization improve."
+      },
+      "shield": {
+        "status": "deferred",
+        "role": "Future shield progression role intentionally deferred until lower-TL capacity/recharge/power interactions are calibrated."
+      },
+      "armor": {
+        "status": "deferred",
+        "role": "Resilient smart materials, damage localization, or repair behavior as separate properties."
+      }
+    },
+    {
+      "technologyLevel": 7,
+      "tacticalComputer": {
+        "status": "deferred",
+        "role": "Low-latency networked tactical coordination across ship systems and legitimate shared information."
+      },
+      "sensor": {
+        "status": "deferred",
+        "role": "Advanced-drive/FTL-signature sensing and high-quality network integration, preserving fog-of-war."
+      },
+      "ecm": {
+        "status": "deferred",
+        "role": "Networked/distributed jamming or cooperative emission management."
+      },
+      "eccm": {
+        "status": "deferred",
+        "role": "Networked/distributed discrimination processing and counter-jamming coordination."
+      },
+      "powerReactor": {
+        "status": "deferred",
+        "role": "High-output antimatter: mature antimatter reaches a strong performance form."
+      },
+      "shield": {
+        "status": "deferred",
+        "role": "Future shield progression role intentionally deferred until lower-TL capacity/recharge/power interactions are calibrated."
+      },
+      "armor": {
+        "status": "deferred",
+        "role": "Adaptive/metamaterial protection with explicit weapon-family counters."
+      }
+    },
+    {
+      "technologyLevel": 8,
+      "tacticalComputer": {
+        "status": "deferred",
+        "role": "Causal/predictive inference and very high integration efficiency; no omniscience and no automatic removal of uncertainty."
+      },
+      "sensor": {
+        "status": "deferred",
+        "role": "Metric-gradient/high-precision sensing with efficiency and discrimination emphasis."
+      },
+      "ecm": {
+        "status": "deferred",
+        "role": "Selective shaping/efficiency improvements rather than unlimited brute-force rating."
+      },
+      "eccm": {
+        "status": "deferred",
+        "role": "Predictive filtering/efficiency improvements against sophisticated jamming."
+      },
+      "powerReactor": {
+        "status": "deferred",
+        "role": "Direct/fractional matter conversion plus peak antimatter: a new conversion frontier appears while antimatter receives its final mature option."
+      },
+      "shield": {
+        "status": "deferred",
+        "role": "Future shield progression role intentionally deferred until lower-TL capacity/recharge/power interactions are calibrated."
+      },
+      "armor": {
+        "status": "deferred",
+        "role": "Exotic material or field-assisted armor with explicit footprint/power requirements."
+      }
+    },
+    {
+      "technologyLevel": 9,
+      "tacticalComputer": {
+        "status": "deferred",
+        "role": "Pinnacle tactical cognition/support architecture. It remains a fire-control aid rather than an autonomous omniscient commander."
+      },
+      "sensor": {
+        "status": "deferred",
+        "role": "Pinnacle information advantage while preserving uncertainty, line of sight, and game-relevant fog-of-war."
+      },
+      "ecm": {
+        "status": "deferred",
+        "role": "Pinnacle multi-spectrum denial with meaningful power/emission/counter-EW tradeoffs."
+      },
+      "eccm": {
+        "status": "deferred",
+        "role": "Pinnacle discrimination support that still cannot create physical reach or manufacture Firm from intrinsically Approximate information."
+      },
+      "powerReactor": {
+        "status": "deferred",
+        "role": "Total matter conversion: pinnacle player power architecture; exact output/efficiency/resilience profile remains future design."
+      },
+      "shield": {
+        "status": "deferred",
+        "role": "Future shield progression role intentionally deferred until lower-TL capacity/recharge/power interactions are calibrated."
+      },
+      "armor": {
+        "status": "deferred",
+        "role": "Pinnacle structural protection that still preserves Hull and penetration relevance."
+      }
+    }
+  ],
+  "tl2CandidateInteractionExamples": [
+    {
+      "case": "TL1 ECM against TL2 Sensor",
+      "ecm": 1,
+      "eccm": 0,
+      "sensorResistance": 1,
+      "burnThrough": 0,
+      "effectiveJammingMargin": 0,
+      "meaning": "A TL2 discrimination upgrade can resist the obsolete TL1 jammer without powered ECCM in ordinary non-same-hex geometry."
+    },
+    {
+      "case": "TL2 ECM against TL2 Sensor",
+      "ecm": 2,
+      "eccm": 0,
+      "sensorResistance": 1,
+      "burnThrough": 0,
+      "effectiveJammingMargin": 1,
+      "meaning": "A contemporary TL2 jammer still degrades an otherwise Firm observation."
+    },
+    {
+      "case": "TL2 ECM against TL2 Sensor + ECCM 1",
+      "ecm": 2,
+      "eccm": 1,
+      "sensorResistance": 1,
+      "burnThrough": 0,
+      "effectiveJammingMargin": 0,
+      "meaning": "One powered ECCM point plus the sensor's intrinsic resistance restores the discrimination contest; jammer spends 2 TP while the observer spends 1 ECCM TP."
+    },
+    {
+      "case": "TL2 ECM against TL1 Sensor + TL2 ECCM 2",
+      "ecm": 2,
+      "eccm": 2,
+      "sensorResistance": 0,
+      "burnThrough": 0,
+      "effectiveJammingMargin": 0,
+      "meaning": "A wide research path can counter the stronger jammer by paying the full 2-TP ECCM cost even with the old sensor."
+    },
+    {
+      "case": "TL2 ECM against TL1 Sensor + TL1 ECCM 1",
+      "ecm": 2,
+      "eccm": 1,
+      "sensorResistance": 0,
+      "burnThrough": 0,
+      "effectiveJammingMargin": 1,
+      "meaning": "The taller jammer defeats the old defensive package, preserving a meaningful technology frontier."
+    }
+  ],
+  "workingPackages": {
+    "tl2ComputingSensorEw": "docs/design/player_technology/tl2_computing_sensor_ew_working_profile_v0_2.json",
+    "tl2PowerReactorCandidate": "docs/design/player_technology/tl2_power_reactor_candidate_profile_v0_2.json",
+    "tl2PowerReactorWorking": "docs/design/player_technology/tl2_power_reactor_candidate_profile_v0_2.json",
+    "tl2ShieldCapacityCandidate": "docs/design/player_technology/tl2_shield_capacity_candidate_profile_v0_2.json",
+    "tl2ShieldCapacityWorking": "docs/design/player_technology/tl2_shield_capacity_candidate_profile_v0_2.json",
+    "tl2ArmorApAiCandidate": "docs/design/player_technology/tl2_armor_ap_ai_candidate_profile_v0_2.json",
+    "tl3BaseCandidates": "docs/design/player_technology/tl3_base_technology_candidates_v0_2.json",
+    "tl3BaseBuildSanity": "docs/design/player_technology/tl3_base_build_sanity_v0_1.json"
+  },
+  "powerReactorCandidate": {
+    "profile": "docs/design/player_technology/tl2_power_reactor_candidate_profile_v0_2.json",
+    "tl1Reference": {
+      "technologyRole": "Peak fission",
+      "installationSpace": 6,
+      "operationalTacticalPower": 5
+    },
+    "tl2Candidate": {
+      "technologyRole": "Early practical fusion",
+      "installationSpace": 6,
+      "operationalTacticalPower": 6,
+      "status": "validated_working_candidate"
+    },
+    "automaticPromotion": false,
+    "tl3Candidate": {
+      "technologyRole": "Mature Compact Fusion",
+      "installationSpace": 5,
+      "operationalTacticalPower": 6,
+      "status": "implemented_executable_candidate_not_calibrated_not_promoted"
+    }
+  },
+  "weaponFamilyPenetrationArchitecture": {
+    "status": "family_specific_working_and_experimental_architecture",
+    "profile": "docs/design/player_technology/tl2_weapon_penetration_working_profile_v0_2.json",
+    "currentReferences": {
+      "Kinetic": {
+        "shieldPenetration": 1,
+        "armorPenetration": 0
+      },
+      "Energy": {
+        "shieldPenetration": 1,
+        "armorPenetration": 1
+      },
+      "Missile": {
+        "shieldPenetration": 1,
+        "armorPenetration": 2
+      }
+    },
+    "tl2WorkingCandidates": {
+      "Kinetic": {
+        "shieldPenetration": 1,
+        "armorPenetration": 1,
+        "status": "locally_validated_working_candidate"
+      },
+      "Energy": null,
+      "Missile": null
+    },
+    "experimentalSensitivities": {
+      "KineticSPEN2": "experimental_sensitivity",
+      "KineticCombined": "upper_integration_sensitivity_not_bundled",
+      "EnergySPEN2": "not_ordinary_tl2_candidate",
+      "EnergyAPEN2": "no_current_envelope_benefit",
+      "MissileAPEN3": "no_current_envelope_benefit",
+      "MissileSPEN2": "no_current_envelope_benefit"
+    },
+    "automaticSymmetricPromotion": false,
+    "notes": "Kinetic APEN1 is carried as the locally validated TL2 penetration candidate. Energy and Missile retain their current penetration profiles for cross-TL integration; future progression may use different family-appropriate properties."
+  },
+  "integrationArchitecture": {
+    "simulationGuidelines": "docs/development/Simulation_Development_Guidelines.md",
+    "standingPermutationSuite": "docs/design/testing/technology_integration_permutation_suite_v0_19.json",
+    "crossTlBuildFoundation": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_1.json",
+    "principle": "CP99 v6 remains the frozen TL1/TL2 exact-edge regression consumer. CP102 v7 is the native-accepted executable TL3 construction/transition baseline. CP103 v8 is native-accepted substantive population/all-tier screening evidence. CP104 adds one zero-weight targeted TL3 diagnostic closure and then hands planning to higher-TL subsystem-chart expansion unless an architectural defect blocks broader work.",
+    "currentLegalBuildEnvelope": 164160,
+    "currentBoundedCombatScreenVariants": 1252,
+    "constructionGuardrails": {
+      "minimumMainWeaponCount": 1,
+      "minimumReactorCount": 1,
+      "optionalSecondMainWeapon": true,
+      "optionalSecondReactor": true,
+      "simultaneousTacticalPowerSufficiencyRequired": false,
+      "ecmSameTypeRatingsAdditive": false,
+      "eccmSameTypeRatingsAdditive": false,
+      "redundantEwInstallationsAllowed": true,
+      "minimumSensorCount": 1,
+      "sensorlessDiagnosticsAllowedOutsideLegalPopulation": true
+    },
+    "componentInstallationSpaceCatalog": "docs/design/player_technology/component_installation_space_catalog_v1.json",
+    "currentExecutableCrossTlBuildFoundation": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_1.json",
+    "tl3CandidateRegistry": "docs/design/player_technology/tl3_base_technology_candidates_v0_2.json",
+    "tl3CombatConsumerEnabled": true,
+    "acceptedTl1Tl2RegressionFoundation": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v0_8.json",
+    "cp102ConstructionEnvelope": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v0_9.json",
+    "cp102TransitionSmoke": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_0.json",
+    "tl3ImplementationProfile": "docs/design/player_technology/tl3_executable_implementation_profile_v0_1.json",
+    "cp102NativeAccepted": true,
+    "cp103PrimaryPopulation": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_1.json",
+    "cp103LegacyDiagnosticOverlay": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_2.json",
+    "cp103PrimaryLegalBuildCount": 164160,
+    "cp103PrimaryGeneratedVariants": 1152,
+    "cp103LegacyDiagnosticVariants": 100,
+    "cp103SubstantiveTrials": 313000,
+    "cp103AutomaticPromotion": false,
+    "cp103NativeAccepted": true,
+    "cp104DiagnosticClosure": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_3.json",
+    "cp104DiagnosticVariants": 256,
+    "cp104SubstantiveTrials": 128000,
+    "cp104AutomaticPromotion": false,
+    "postCp104DefaultPhase": "extend_basic_subsystem_tl_chart_beyond_tl3"
+  },
+  "integrationCoverage": {
+    "standingPermutationSuite": "v0.17",
+    "acceptedRegressionFoundation": "v0.8 (native-accepted CP99 TL1/TL2)",
+    "acceptedRegressionLegalBuildCount": 11776,
+    "acceptedRegressionProgressionEdges": 37184,
+    "acceptedRegressionVariants": 724,
+    "cp102ConstructionFoundation": "v0.9 / v7 construction_envelope",
+    "cp102ConstructionPath": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v0_9.json",
+    "cp102ConstructionRawCombinationCount": 221184,
+    "cp102ConstructionLegalBuildCount": 51264,
+    "cp102ConstructionExactFillBuildCount": 10752,
+    "cp102TransitionFoundation": "v1.0 / v7 transition_smoke",
+    "cp102TransitionPath": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_0.json",
+    "cp102TransitionRawCombinationCount": 43008,
+    "cp102TransitionLegalBuildCount": 38400,
+    "cp102ProgressionLatticeLegalEdges": 220416,
+    "cp102RegisteredTransitionCount": 16,
+    "cp102NamedLogicalPairings": 16,
+    "cp102MovementOrderGeometries": 2,
+    "cp102TinySmokeVariants": 32,
+    "cp102TrialsPerVariant": 1,
+    "tl3CombatConsumerEnabled": true,
+    "tl3Lifecycle": "implemented_executable_candidate_not_calibrated_not_promoted",
+    "note": "CP102 executable counts are native-accepted implementation/integration evidence. Its 32 one-trial variants are pipeline smoke only and must not be interpreted as balance evidence; CP103 adds substantive review-only measurement without automatic promotion.",
+    "cp103PrimaryPopulation": {
+      "rawCombinationCount": 921600,
+      "legalBuildCount": 164160,
+      "exactFillBuildCount": 43584,
+      "nearFillBuildCount": 82848,
+      "underfilledBuildCount": 37728,
+      "populationCellCount": 96,
+      "statisticalBasePairs": 240,
+      "generatedVariants": 1152,
+      "substantiveTrials": 288000,
+      "status": "candidate_pending_native_acceptance",
+      "conceptualUnorderedDistinctPairingEnvelope": 13474170720,
+      "populationAccounting": "bucket_combinatorial_no_full_pair_materialization",
+      "tacticalFrontierAdditionalAxes": [
+        "hull",
+        "shieldHardener",
+        "stl",
+        "pds"
+      ],
+      "tacticalFrontierExcludesStrategicFtl": true,
+      "equalLowAdvancedMaximum": 5,
+      "equalHighAdvancedMinimum": 6
+    },
+    "cp103LegacyDiagnosticOverlay": {
+      "declaredRawAxisProduct": 1417176,
+      "namedRecipeCount": 33,
+      "materializedUniqueBuildCount": 28,
+      "generatedVariants": 100,
+      "substantiveTrials": 25000,
+      "populationInferenceWeight": 0,
+      "status": "candidate_pending_native_acceptance"
+    }
+  }
+}

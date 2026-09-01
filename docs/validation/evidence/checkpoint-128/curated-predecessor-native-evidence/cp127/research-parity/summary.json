@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "cases": 25,
+  "errors": [],
+  "gates": {
+    "failed": [],
+    "passed": true
+  },
+  "failedGates": 0
+}

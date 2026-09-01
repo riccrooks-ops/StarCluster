@@ -1,0 +1,346 @@
+{
+  "schemaVersion": "star-cluster-cp129-whole-ladder-pure-tl-sensitivity-v0.1",
+  "checkpoint": 129,
+  "title": "Whole-Ladder Pure-TL Sensitivity and Subsystem Attribution Study",
+  "status": "candidate",
+  "acceptedBaselineCheckpoint": 128,
+  "acceptedStabilizationCheckpoint": 127,
+  "acceptedImplementationBaseline": 122,
+  "sourceMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_5.json",
+  "shipTechnologyPolicy": "pure_same_tl_components_per_ship",
+  "mixedTlShipsExecuted": false,
+  "counterfactualHoldbacksAreLegalMixedTlBuilds": false,
+  "automaticPromotion": false,
+  "balanceValidated": false,
+  "technologyValuesChanged": false,
+  "productionSourceChanged": false,
+  "scenarioDefinitionsChanged": false,
+  "researchSimulationChanged": true,
+  "pairingSeed": 12520260816,
+  "masterSeed": 12720260817,
+  "recommendedJobs": 24,
+  "wholeLadderTrialsPerVariant": 100,
+  "mainOnlyAdjacentTrialsPerVariant": 100,
+  "sensitivityTrialsPerVariant": 50,
+  "symmetryGate": {
+    "blocking": true,
+    "casesPerTl": 5,
+    "trialsPerCase": 25,
+    "expectedComparisons": 2250,
+    "expectedCombatExecutions": 4500,
+    "requireZeroMismatches": true
+  },
+  "wholeLadderControl": {
+    "allLegalBuildsEveryOpponentTl": true,
+    "bothSideAssignments": true,
+    "bothMovementOrders": true,
+    "fullRadius5SystemMap": true,
+    "populationWeighting": "canonical legal-build pair population divided by sampled base pairings in each unordered TL cell",
+    "acceptedCp127AdjacentReplicationIsBlocking": true,
+    "acceptedCp127AdjacentSummary": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/main-subsystem-stabilization-study/adjacent_population_summary.csv"
+  },
+  "mainOnlyAdjacentControl": {
+    "purpose": "Measure adjacent-TL progression without optional deferred PDS and Shield-Hardener choices while retaining all stabilized main subsystems, ECM/ECCM, shields, duplicate mains/reactors, and Missile payload branches.",
+    "excludedOptionalChoices": [
+      "PDS",
+      "Shield Hardener"
+    ],
+    "allOtherLegalChoicesRetained": true,
+    "allBuildsEveryAdjacentOpponentTl": true
+  },
+  "performanceHoldbackBoundary": {
+    "purpose": "For matched adjacent-TL compositions, replace only the higher-TL package's combat-relevant performance fields with the immediately lower-TL values. Preserve the higher-TL construction footprint, Hull capacity, branch availability, and build composition. These are counterfactual causal probes, not legal mixed-TL ship designs.",
+    "constructionFieldsExcluded": [
+      "*.space",
+      "hull.capacity",
+      "profileSourceTl",
+      "technology",
+      "notes",
+      "newTech",
+      "hardPrereq",
+      "special"
+    ],
+    "notExercisedMainProfiles": [
+      "damage_control",
+      "ftl"
+    ],
+    "packages": [
+      {
+        "id": "hull",
+        "profiles": {
+          "hull": [
+            "hullPoints"
+          ]
+        }
+      },
+      {
+        "id": "armor",
+        "profiles": {
+          "armor": [
+            "ap",
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "reactor",
+        "profiles": {
+          "reactor": [
+            "operationalTp",
+            "degradedTp",
+            "emergencyTp",
+            "overloadGain",
+            "strainLimit"
+          ]
+        }
+      },
+      {
+        "id": "stl",
+        "profiles": {
+          "stl": [
+            "move",
+            "fuelPerHex",
+            "overloadMoveBonus",
+            "overloadTp",
+            "overloadExtraFuel",
+            "strainLimit"
+          ]
+        }
+      },
+      {
+        "id": "computer",
+        "profiles": {
+          "computer": [
+            "targetingPp",
+            "degradedTargetingPp",
+            "approxPenaltyPp",
+            "evasiveCompensationPp"
+          ]
+        }
+      },
+      {
+        "id": "sensor",
+        "profiles": {
+          "sensor": [
+            "dr",
+            "passiveFirm",
+            "passiveApprox",
+            "activeLowFirm",
+            "activeLowApprox",
+            "activeLowTp",
+            "activeHighFirm",
+            "activeHighApprox",
+            "activeHighTp",
+            "overloadFirm",
+            "overloadApprox"
+          ]
+        }
+      },
+      {
+        "id": "ecm",
+        "profiles": {
+          "ecm": [
+            "rating",
+            "fullStrengthTp",
+            "overloadBonusRating",
+            "overloadAdditionalTp",
+            "strainLimit"
+          ]
+        }
+      },
+      {
+        "id": "eccm",
+        "profiles": {
+          "eccm": [
+            "rating",
+            "fullStrengthTp",
+            "overloadBonusRating",
+            "overloadAdditionalTp",
+            "strainLimit"
+          ]
+        }
+      },
+      {
+        "id": "shield",
+        "profiles": {
+          "shield": [
+            "capacity",
+            "baseRecharge",
+            "tacticalRechargePerTp",
+            "tacticalRechargeCapTp",
+            "shieldArmor"
+          ]
+        }
+      },
+      {
+        "id": "offense",
+        "profiles": {
+          "kinetic_main": [
+            "accuracyPp",
+            "damage",
+            "spen",
+            "apen",
+            "range",
+            "firingTp",
+            "ammo"
+          ],
+          "energy_main": [
+            "range",
+            "accuracyPp",
+            "lowTp",
+            "lowDamage",
+            "standardTp",
+            "standardDamage",
+            "highTp",
+            "highDamage",
+            "highSafe",
+            "spen",
+            "apen"
+          ],
+          "missile_delivery": [
+            "range",
+            "missileMove",
+            "launchTp",
+            "flights"
+          ],
+          "missile_guidance": [
+            "guidanceBaseHit",
+            "commandDatalink",
+            "onboardNav",
+            "terminalSeeker",
+            "localApproxCanAcquire"
+          ],
+          "missile_gp_warhead": [
+            "damage",
+            "spen",
+            "apen",
+            "usesGenericMissileFlightMagazine",
+            "automaticContemporaryGpPayload"
+          ],
+          "missile_swarmer": [
+            "packetCount",
+            "packetDamage",
+            "spen",
+            "apen",
+            "terminalGuidanceBonusPp",
+            "pdsInterceptPenaltyPp",
+            "oneFlightCounter",
+            "oneTerminalAttackRoll",
+            "usesGenericMissileFlightMagazine",
+            "firmTerminalRequired",
+            "extraPdsWindows",
+            "extraCriticalRolls"
+          ]
+        }
+      }
+    ]
+  },
+  "constructionEnvelopeSensitivity": {
+    "purpose": "Separately enumerate how one-step Hull-capacity and main-subsystem Space progressions change the legal pure-TL build envelope. No combat result is attributed to a construction field through the performance holdback lane.",
+    "packages": [
+      {
+        "id": "hull_capacity",
+        "profiles": {
+          "hull": [
+            "capacity"
+          ]
+        }
+      },
+      {
+        "id": "reactor_space",
+        "profiles": {
+          "reactor": [
+            "space"
+          ]
+        }
+      },
+      {
+        "id": "stl_space",
+        "profiles": {
+          "stl": [
+            "space"
+          ]
+        }
+      },
+      {
+        "id": "ftl_space",
+        "profiles": {
+          "ftl": [
+            "space"
+          ]
+        }
+      },
+      {
+        "id": "computer_space",
+        "profiles": {
+          "computer": [
+            "space"
+          ]
+        }
+      },
+      {
+        "id": "sensor_space",
+        "profiles": {
+          "sensor": [
+            "space"
+          ]
+        }
+      },
+      {
+        "id": "shield_space",
+        "profiles": {
+          "shield": [
+            "space"
+          ]
+        }
+      },
+      {
+        "id": "offense_space",
+        "profiles": {
+          "kinetic_main": [
+            "space"
+          ],
+          "energy_main": [
+            "space"
+          ],
+          "missile_delivery": [
+            "space"
+          ]
+        }
+      }
+    ],
+    "auxiliarySpaceProgressionDeferred": true
+  },
+  "interpretationBoundary": {
+    "adjacentTlWinRatesAreTargets": false,
+    "holdbackEffectsAreMarginalCausalSignalsNotAdditiveShares": true,
+    "counterfactualsDoNotPromoteLegalMixedTlShips": true,
+    "strongEraOrMaturationStepsMayRemain": true,
+    "auxiliaryNumericalStabilizationDeferred": true,
+    "mainSubsystemBaselineReopenedOnlyForConcretePathology": true,
+    "internalCriticalDamageSimulated": false,
+    "damageControlScheduledInCombat": false,
+    "ftlUsedInTacticalCombat": false
+  },
+  "expected": {
+    "rawBuildCombinations": 14112,
+    "legalBuilds": 9427,
+    "canonicalTlCells": 45,
+    "wholeLadderBasePairings": 70034,
+    "wholeLadderVariants": 280136,
+    "mainOnlyLegalBuilds": 1856,
+    "mainOnlyAdjacentBasePairings": 1784,
+    "mainOnlyAdjacentVariants": 7136,
+    "matchedCompositionTasks": 7699,
+    "matchedCompositionVariantsPerCondition": 30796,
+    "sensitivityConditions": 11,
+    "sensitivityVariants": 338756,
+    "generatedVariants": 626028,
+    "pipelineSmokeTrials": 626028,
+    "wholeLadderSubstantiveTrials": 28013600,
+    "mainOnlyAdjacentSubstantiveTrials": 713600,
+    "sensitivitySubstantiveTrials": 16937800,
+    "substantiveTrials": 45665000,
+    "telemetryMetrics": 61
+  }
+}

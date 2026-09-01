@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "star-cluster-architecture-checkpoint-v1",
+  "checkpointId": "105",
+  "title": "Checkpoint 105 - Technology Family Architecture Foundation",
+  "scope": "technology_architecture_only",
+  "numericalTlTableChanged": false,
+  "simulationOrCalibrationRun": false,
+  "declaredTrials": 0,
+  "dotnetBuildRequired": false,
+  "pythonRequired": false,
+  "normalPlayerTlRange": [1, 9],
+  "precursorTl10Shorthand": true,
+  "expectedDisciplines": 10,
+  "expectedLineages": 31,
+  "expectedIdeaCount": 120,
+  "nativeDependencyPrecheck": {
+    "required": true,
+    "script": "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+    "powerShellPaths": [
+      "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+      "tools/checkpoints/checkpoint-105/apply_checkpoint_105.ps1",
+      "tools/checkpoints/checkpoint-105/test_checkpoint_105_contract.ps1"
+    ],
+    "checkpointDefinitionPaths": [
+      "tools/checkpoints/checkpoint-105/checkpoint_105_architecture_definition.json"
+    ],
+    "allowedInterpreters": []
+  },
+  "stages": []
+}

@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-tl1-pds-calibration-v1",
+  "title": "Star Cluster TL1 PDS Calibration Study",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "baselineSha256",
+    "masterSeed",
+    "trialsPerVariant",
+    "variants"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-tl1-pds-calibration-v1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baselineSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{64}$"
+    },
+    "masterSeed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "trialsPerVariant": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 59,
+      "maxItems": 59,
+      "items": {
+        "$ref": "#/$defs/variant"
+      }
+    }
+  },
+  "$defs": {
+    "variant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "pairId",
+        "shieldCapacity",
+        "shieldArmor",
+        "baseShieldRecharge",
+        "armorProtection",
+        "armorIntegrity",
+        "hull",
+        "rangeHexes",
+        "rangePenaltyPerHex",
+        "turnCap",
+        "sideA",
+        "sideB"
+      ],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "label": { "type": "string", "minLength": 1 },
+        "pairId": { "type": ["string", "null"] },
+        "shieldCapacity": { "type": "integer", "minimum": 0 },
+        "shieldArmor": { "type": "integer", "minimum": 0 },
+        "baseShieldRecharge": { "type": "integer", "minimum": 0 },
+        "armorProtection": { "type": "integer", "minimum": 0 },
+        "armorIntegrity": { "type": "integer", "minimum": 0 },
+        "hull": { "type": "integer", "minimum": 1 },
+        "rangeHexes": { "type": "integer", "minimum": 0 },
+        "rangePenaltyPerHex": { "type": "integer", "minimum": 0 },
+        "turnCap": { "type": "integer", "minimum": 1 },
+        "sideA": { "$ref": "#/$defs/side" },
+        "sideB": { "$ref": "#/$defs/side" }
+      }
+    },
+    "side": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family",
+        "doctrine",
+        "accuracy",
+        "computerBonus",
+        "evasive",
+        "reactorOutput",
+        "ammunition",
+        "missileGuidance",
+        "missileDamage",
+        "missileShieldPenetration",
+        "missileArmorPenetration",
+        "missileSpeed",
+        "missileRange",
+        "targetMovePerTurn",
+        "missileLaunchesPerTurn",
+        "pdsFamily",
+        "pdsPowerCost",
+        "pdsReactionCapacity",
+        "pdsInterceptionChance",
+        "pdsAmmunition",
+        "pdsUnlimitedAmmunition"
+      ],
+      "properties": {
+        "family": {
+          "enum": ["kinetic", "energy", "missile"]
+        },
+        "doctrine": { "type": "string", "minLength": 1 },
+        "accuracy": { "type": "integer" },
+        "computerBonus": { "type": "integer" },
+        "evasive": { "type": "boolean" },
+        "reactorOutput": { "type": "integer", "minimum": 0 },
+        "ammunition": { "type": "integer", "minimum": 0 },
+        "missileGuidance": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "missileDamage": { "type": "integer", "minimum": 0 },
+        "missileShieldPenetration": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missileArmorPenetration": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missileSpeed": { "type": "integer", "minimum": 0 },
+        "missileRange": { "type": "integer", "minimum": 0 },
+        "targetMovePerTurn": { "type": "integer", "minimum": 0 },
+        "missileLaunchesPerTurn": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "pdsFamily": {
+          "enum": ["none", "kinetic", "amm", "energy"]
+        },
+        "pdsPowerCost": { "type": "integer", "minimum": 0 },
+        "pdsReactionCapacity": { "type": "integer", "minimum": 0 },
+        "pdsInterceptionChance": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "pdsAmmunition": { "type": "integer", "minimum": 0 },
+        "pdsUnlimitedAmmunition": { "type": "boolean" }
+      }
+    }
+  }
+}

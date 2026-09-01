@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "star-cluster-canonical-numerical-authority-v0.1",
+  "checkpoint": 122,
+  "damagePointScale": 2,
+  "legacyPointEqualsCanonicalPoints": 2,
+  "canonicalTl1Baseline": "docs/design/player_technology/tl1_core_combat_numerical_baseline_v0_4.csv",
+  "canonicalWholeLadderMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_2.json",
+  "canonicalWholeLadderHumanReference": "docs/design/player_technology/TL1_TL9_Canonical_Numerical_Technology_Matrix_v0_2.md",
+  "canonicalTl1Tl3RuntimeProfiles": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl3-standard-runtime-profiles-v0_5.json",
+  "canonicalTl1Tl2AuxiliaryRuntimeProfiles": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl2-auxiliary-runtime-profiles-v0_4.json",
+  "canonicalTl1Tl4RuntimeProfiles": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl4-standard-runtime-profiles-v0_3.json",
+  "canonicalTl3Tl4AuxiliaryRuntimeProfiles": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl3-tl4-production-auxiliary-profiles-v0_3.json",
+  "historicalMatrixPreserved": "docs/design/player_technology/technology_numerical_matrix_v0_1.json",
+  "historicalTl1BaselinePreserved": "docs/design/player_technology/tl1_core_combat_numerical_baseline_v0_3.csv",
+  "productionDamageControlHullPerRepairKit": 1,
+  "parityOnlyHullPerRepairKit": 2,
+  "criticalCadenceMigrationDeferred": true,
+  "oddHalfStepValuesPromoted": false,
+  "balanceChangeIntended": false
+}

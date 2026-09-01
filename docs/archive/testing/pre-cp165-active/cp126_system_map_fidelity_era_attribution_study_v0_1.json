@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "star-cluster-cp126-system-map-fidelity-era-attribution-v0.1",
+  "checkpoint": 126,
+  "title": "System Map Fidelity and Era-Boundary Attribution Study",
+  "status": "candidate",
+  "acceptedPureTlStudy": 125,
+  "acceptedReferenceBaseline": 123,
+  "acceptedInstrumentationBaseline": 124,
+  "acceptedImplementationBaseline": 122,
+  "sourceMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_3.json",
+  "cp125NativeArchive": "docs/validation/evidence/checkpoint-126/CP125_NATIVE_RESULTS_ORIGINAL.zip",
+  "cp125NativeArchiveSha256": "e26f4a79075cd3bb395213d9a4da7d9e3708fecd3dbd3b5a29911c24ea63ecf0",
+  "shipTechnologyPolicy": "pure_same_tl_components_per_ship",
+  "mixedTlShipsExecuted": false,
+  "automaticPromotion": false,
+  "balanceValidated": false,
+  "pairingSeed": 12520260816,
+  "masterSeed": 12620260816,
+  "substantiveTrialsPerVariant": 250,
+  "recommendedJobs": 24,
+  "technologyEras": {
+    "tl1": "baseline",
+    "tl2_to_tl4": "low_technology_discoveries",
+    "tl5_to_tl7": "mid_technology_discoveries",
+    "tl8_to_tl9": "high_technology_discoveries",
+    "note": "Era boundaries are design context, not automatic balance gates; individual lineages may introduce or mature on different schedules."
+  },
+  "fullMap": {
+    "radius": 5,
+    "cells": 91,
+    "oppositeEdgeStartRange": 10,
+    "preContactSearchHexesPerActivation": 1,
+    "observerSafeSearch": true,
+    "adaptiveEngageBlackboard": true,
+    "demonstratedStandoff": true,
+    "hardFiniteMapBoundary": true,
+    "actualMissilePursuit": true,
+    "missileRangeExhaustion": true,
+    "orientationInvariantTieBreak": true
+  },
+  "symmetryGate": {
+    "blocking": true,
+    "casesPerTl": 5,
+    "trialsPerCase": 25,
+    "expectedComparisons": 2250,
+    "expectedCombatExecutions": 4500,
+    "requireZeroMismatches": true,
+    "note": "Same physical ships under side-swap and mover-swap mirrors must reproduce the same combat, information, EW, power, missile, and damage outcomes."
+  },
+  "studyLanes": {
+    "adjacentPopulation": "Exact CP125 adjacent-TL pairing design re-executed on the full System Map; measures total coherent generation advantage and provides direct axial/full-map control comparison.",
+    "matchedComposition": "Every lower-TL legal composition with an exact higher-TL counterpart; holds build composition fixed to isolate coherent stat/capability progression.",
+    "movementHotspots": "Exact CP125 same-TL TL2 and TL7 pairing IDs re-executed on the full map to quantify movement-order sensitivity and geometry effects.",
+    "swarmerLifecycle": "TL7-TL9 matched GP/Swarmer attackers crossed with matched no-PDS/AMM defenders; tests whether mature Swarmer retains an anti-PDS niche without assuming TL8/TL9 upgrades.",
+    "energyIsolation": "TL7-TL9 matched Energy/Kinetic attackers crossed with matched no-Shield/Shield defenders; separates shield-facing advantage from general late-Energy strength.",
+    "lateMissileGeometry": "TL8-TL9 exact CP125 same-TL Missile-vs-Missile pairing IDs re-executed on the full map; directly tests whether late unresolved duration survives actual missile pursuit, rerouting, and finite-map geometry."
+  },
+  "analysis": {
+    "balanceSignalsAreBlockingGates": false,
+    "primaryOutputs": [
+      "era_boundary_attribution_summary.csv",
+      "geometry_delta_summary.csv",
+      "movement_geometry_comparison.csv",
+      "late_missile_geometry_summary.csv",
+      "swarmer_lifecycle_summary.csv",
+      "energy_isolation_summary.csv",
+      "adjacent_telemetry_summary.csv",
+      "normalized_pairing_outcomes.csv"
+    ],
+    "rawTelemetryAuthority": "docs/design/testing/telemetry_instrumentation_contract_v0_2.json",
+    "internalCriticalDamageSimulated": false,
+    "mixedTlShipsExecuted": false
+  },
+  "expected": {
+    "legalBuilds": 9427,
+    "adjacentPopulationTasks": 9220,
+    "matchedCompositionTasks": 7699,
+    "movementHotspotTasks": 4008,
+    "swarmerLifecycleTasks": 1296,
+    "energyIsolationTasks": 1728,
+    "compactTasks": 25678,
+    "generatedVariants": 139000,
+    "pipelineSmokeTrials": 139000,
+    "substantiveTrials": 34750000,
+    "telemetryMetrics": 61,
+    "lateMissileGeometryTasks": 1727
+  }
+}

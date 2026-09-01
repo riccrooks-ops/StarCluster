@@ -1,0 +1,352 @@
+{
+  "schemaVersion": "star-cluster-tl1-phase-a-v1",
+  "id": "tl1-a09-safe-and-forced-overload",
+  "matrixScenarioId": "TL1-A09",
+  "name": "Safe and forced Reactor overload",
+  "baselineVersion": "tl1-core-combat-v0.1",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "cases": [
+    {
+      "id": "a09-c01",
+      "name": "First safe overload succeeds automatically",
+      "operation": "reactorOverload",
+      "input": {
+        "startingCondition": "operational",
+        "startingStrain": 0,
+        "attempts": [
+          {}
+        ]
+      },
+      "expected": {
+        "attempts": [
+          {
+            "result": {
+              "outcome": "SafeSuccess",
+              "wasForced": false,
+              "roll": null,
+              "benefitApplied": true,
+              "powerGained": {
+                "$baseline": "reactor_overload_output"
+              },
+              "strainGained": 1,
+              "finalStrain": 1,
+              "finalCondition": "Operational"
+            },
+            "power": {
+              "envelope": {
+                "$add": [
+                  {
+                    "$baseline": "reactor_output"
+                  },
+                  {
+                    "$baseline": "reactor_overload_output"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "finalStrain": 1,
+        "finalCondition": "Operational"
+      }
+    },
+    {
+      "id": "a09-c02",
+      "name": "Overload reaching the Strain Limit remains safe",
+      "operation": "reactorOverload",
+      "input": {
+        "startingCondition": "operational",
+        "startingStrain": {
+          "$subtract": [
+            {
+              "$baseline": "reactor_strain_limit"
+            },
+            1
+          ]
+        },
+        "attempts": [
+          {}
+        ]
+      },
+      "expected": {
+        "attempts": [
+          {
+            "result": {
+              "outcome": "SafeSuccess",
+              "wasForced": false,
+              "finalStrain": {
+                "$baseline": "reactor_strain_limit"
+              }
+            },
+            "power": {
+              "envelope": {
+                "$add": [
+                  {
+                    "$baseline": "reactor_output"
+                  },
+                  {
+                    "$baseline": "reactor_overload_output"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "a09-c03",
+      "name": "Forced overload at threshold succeeds on the listed roll",
+      "operation": "reactorOverload",
+      "input": {
+        "startingCondition": "operational",
+        "startingStrain": {
+          "$baseline": "reactor_strain_limit"
+        },
+        "attempts": [
+          {
+            "roll": {
+              "$baseline": "forced_overload_success"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "attempts": [
+          {
+            "result": {
+              "outcome": "ForcedSuccess",
+              "wasForced": true,
+              "roll": {
+                "$baseline": "forced_overload_success"
+              },
+              "benefitApplied": true,
+              "finalStrain": {
+                "$add": [
+                  {
+                    "$baseline": "reactor_strain_limit"
+                  },
+                  1
+                ]
+              }
+            },
+            "power": {
+              "envelope": {
+                "$add": [
+                  {
+                    "$baseline": "reactor_output"
+                  },
+                  {
+                    "$baseline": "reactor_overload_output"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "a09-c04",
+      "name": "Forced overload failure grants no power but adds Strain",
+      "operation": "reactorOverload",
+      "input": {
+        "startingCondition": "operational",
+        "startingStrain": {
+          "$baseline": "reactor_strain_limit"
+        },
+        "attempts": [
+          {
+            "roll": {
+              "$add": [
+                {
+                  "$baseline": "forced_overload_success"
+                },
+                1
+              ]
+            }
+          }
+        ]
+      },
+      "expected": {
+        "attempts": [
+          {
+            "result": {
+              "outcome": "Failure",
+              "roll": {
+                "$add": [
+                  {
+                    "$baseline": "forced_overload_success"
+                  },
+                  1
+                ]
+              },
+              "benefitApplied": false,
+              "powerGained": 0,
+              "strainGained": 1,
+              "finalStrain": {
+                "$add": [
+                  {
+                    "$baseline": "reactor_strain_limit"
+                  },
+                  1
+                ]
+              }
+            },
+            "power": {
+              "envelope": {
+                "$baseline": "reactor_output"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "a09-c05",
+      "name": "Natural 100 is a critical success with no added Strain",
+      "operation": "reactorOverload",
+      "input": {
+        "startingCondition": "operational",
+        "startingStrain": {
+          "$baseline": "reactor_strain_limit"
+        },
+        "attempts": [
+          {
+            "roll": {
+              "$baseline": "forced_overload_critical_success"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "attempts": [
+          {
+            "result": {
+              "outcome": "CriticalSuccess",
+              "roll": {
+                "$baseline": "forced_overload_critical_success"
+              },
+              "benefitApplied": true,
+              "strainGained": 0,
+              "finalStrain": {
+                "$baseline": "reactor_strain_limit"
+              }
+            },
+            "power": {
+              "envelope": {
+                "$add": [
+                  {
+                    "$baseline": "reactor_output"
+                  },
+                  {
+                    "$baseline": "reactor_overload_output"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "a09-c06",
+      "name": "Natural 1 is a critical failure and worsens condition",
+      "operation": "reactorOverload",
+      "input": {
+        "startingCondition": "operational",
+        "startingStrain": {
+          "$baseline": "reactor_strain_limit"
+        },
+        "attempts": [
+          {
+            "roll": {
+              "$baseline": "forced_overload_critical_failure"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "attempts": [
+          {
+            "result": {
+              "outcome": "CriticalFailure",
+              "roll": {
+                "$baseline": "forced_overload_critical_failure"
+              },
+              "benefitApplied": false,
+              "strainGained": 1,
+              "finalStrain": {
+                "$add": [
+                  {
+                    "$baseline": "reactor_strain_limit"
+                  },
+                  1
+                ]
+              },
+              "finalCondition": "Degraded"
+            },
+            "power": {
+              "envelope": {
+                "$baseline": "reactor_output"
+              }
+            }
+          }
+        ],
+        "finalCondition": "Degraded"
+      }
+    },
+    {
+      "id": "a09-c07",
+      "name": "Once-per-turn overload refreshes on a new turn",
+      "operation": "reactorOverload",
+      "input": {
+        "startingCondition": "operational",
+        "startingStrain": 0,
+        "attempts": [
+          {},
+          {
+            "beginNewTurn": true
+          },
+          {
+            "beginNewTurn": true,
+            "roll": {
+              "$baseline": "forced_overload_success"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "attempts": [
+          {
+            "result": {
+              "outcome": "SafeSuccess",
+              "finalStrain": 1
+            }
+          },
+          {
+            "result": {
+              "outcome": "SafeSuccess",
+              "finalStrain": {
+                "$baseline": "reactor_strain_limit"
+              }
+            }
+          },
+          {
+            "result": {
+              "outcome": "ForcedSuccess",
+              "finalStrain": {
+                "$add": [
+                  {
+                    "$baseline": "reactor_strain_limit"
+                  },
+                  1
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

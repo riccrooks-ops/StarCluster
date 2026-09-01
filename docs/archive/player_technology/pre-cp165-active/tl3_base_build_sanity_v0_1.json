@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "star-cluster-tl3-base-build-sanity-v1",
+  "id": "tl3-base-build-sanity-v0_1",
+  "checkpoint": 101,
+  "status": "conceptual_arithmetic_sanity_not_combat_calibration",
+  "purpose": "Deterministic Installation-Space and Tactical-Power sanity checks for the completed TL3 base candidate row. These arithmetic checks do not activate TL3 runtime mechanics or promote balance.",
+  "space": {
+    "tl1Tl2CurrentCruiserCapacity": 35,
+    "tl3BaseCandidateCruiserCapacity": 36,
+    "fixedPrimaryShell": {
+      "stlDrive": 5,
+      "ftlDrive": 5,
+      "tacticalComputer": 3,
+      "sensor": 3
+    },
+    "mainWeaponSpace": 6,
+    "tl1Tl2ReactorSpace": 6,
+    "tl3ReactorSpace": 5,
+    "architectures": [
+      {
+        "id": "single-main-single-reactor",
+        "tl1Tl2Used": 28,
+        "tl1Tl2Free": 7,
+        "tl3Used": 27,
+        "tl3Free": 9,
+        "tl3Legal": true
+      },
+      {
+        "id": "dual-main-single-reactor",
+        "tl1Tl2Used": 34,
+        "tl1Tl2Free": 1,
+        "tl3Used": 33,
+        "tl3Free": 3,
+        "tl3Legal": true,
+        "interpretation": "first becomes a credible complete outlier at TL3 because 3 discretionary Space can fit one Shield Generator or a focused 2-Space PDS + 1-Space support choice"
+      },
+      {
+        "id": "single-main-dual-reactor",
+        "tl1Tl2Used": 34,
+        "tl1Tl2Free": 1,
+        "tl3Used": 32,
+        "tl3Free": 4,
+        "tl3Legal": true,
+        "interpretation": "TL3 compact fusion makes dual-reactor resilience/power a practical outlier while preserving substantial Space cost"
+      },
+      {
+        "id": "dual-main-dual-reactor",
+        "tl1Tl2Used": 40,
+        "tl1Tl2Free": -5,
+        "tl3Used": 38,
+        "tl3Free": -2,
+        "tl3Legal": false,
+        "interpretation": "remains illegal by 2 Space at TL3; no special prohibition required"
+      }
+    ],
+    "futureMilestones": {
+      "firstLegalDualMainDualReactorEffectiveSpace": 38,
+      "dualMainDualReactorPlusMeaningfulThreeSpacePackage": 41,
+      "forcedUnlockTechnologyLevel": null
+    }
+  },
+  "representativeTl3Builds": [
+    {
+      "id": "generalist",
+      "usedSpace": 35,
+      "freeSpace": 1,
+      "components": "1 Main, 1 Reactor, STL, FTL, Computer, Sensor, Shield, Hardener, PDS, ECM, ECCM",
+      "note": "Uses 2-Space standing PDS footprint; magazine expansions are separate optional support."
+    },
+    {
+      "id": "dual-main-shielded-striker",
+      "usedSpace": 36,
+      "freeSpace": 0,
+      "components": "2 Main, 1 Reactor, STL, FTL, Computer, Sensor, Shield"
+    },
+    {
+      "id": "dual-main-focused-support",
+      "usedSpace": 36,
+      "freeSpace": 0,
+      "components": "2 Main, 1 Reactor, STL, FTL, Computer, Sensor, PDS, one 1-Space ECM/ECCM/support"
+    },
+    {
+      "id": "dual-reactor-hardened-shield",
+      "usedSpace": 36,
+      "freeSpace": 0,
+      "components": "1 Main, 2 Reactors, STL, FTL, Computer, Sensor, Shield, Hardener"
+    },
+    {
+      "id": "dual-reactor-information-defense",
+      "usedSpace": 36,
+      "freeSpace": 0,
+      "components": "1 Main, 2 Reactors, STL, FTL, Computer, Sensor, PDS, ECM, ECCM"
+    }
+  ],
+  "power": {
+    "singleTl3ReactorOperationalTp": 6,
+    "dualTl3ReactorOperationalTp": 12,
+    "dualEnergySingleReactor": [
+      {
+        "package": "two Standard Energy shots + High Active Sensor",
+        "weaponTp": 4,
+        "sensorTp": 2,
+        "otherTp": 0,
+        "totalTp": 6,
+        "margin": 0
+      },
+      {
+        "package": "two Standard Energy shots + Low Active Sensor",
+        "weaponTp": 4,
+        "sensorTp": 1,
+        "otherTp": 0,
+        "totalTp": 5,
+        "margin": 1
+      },
+      {
+        "package": "two High Energy shots + High Active Sensor",
+        "weaponTp": 6,
+        "sensorTp": 2,
+        "otherTp": 0,
+        "totalTp": 8,
+        "margin": -2
+      }
+    ],
+    "generalistSupportPackage": {
+      "highActiveSensor": 2,
+      "pdsReadiness": 1,
+      "ecm": 1,
+      "eccm": 1,
+      "shieldHardener": 1,
+      "totalBeforeWeaponEvasionOrTacticalRecharge": 6,
+      "marginBeforeWeaponEvasionOrTacticalRecharge": 0
+    },
+    "dualReactorDamageResilience": {
+      "operationalPlusOperational": 12,
+      "operationalPlusDegraded": 9,
+      "operationalPlusDisabled": 7,
+      "operationalPlusDestroyed": 6
+    },
+    "interpretation": "Six TP does not make all installed TL3 systems free to operate simultaneously. A dual-main single-reactor ship can fire both mains when family/mode costs permit, but support/EW/defense options compete directly for the remaining pool. Power insufficiency remains operational tradeoff, not construction illegality."
+  },
+  "guardrails": [
+    "Do not convert the outlier status into a one-reactor-per-weapon rule.",
+    "Do not increase TL3 reactor output merely to power every installed system.",
+    "Do not shrink TL3 Main Weapons or STL/FTL drives in this base pass; those are future progression levers.",
+    "Keep dual-main/dual-reactor illegality emergent from Space arithmetic rather than a special class restriction."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "star-cluster-cp125-authoring-mini-smoke-v0.1",
+  "checkpoint": 125,
+  "purpose": "Authoring-only representative execution probe; not native acceptance and not balance evidence.",
+  "canonicalTlCellsSampled": 45,
+  "orderedTlCellsObserved": 81,
+  "variantsExecuted": 180,
+  "trialErrors": 0,
+  "winners": {
+    "A": 87,
+    "B": 87,
+    "Draw": 5,
+    "Unresolved": 1
+  },
+  "fullPipelineSmokeRequiredNatively": 280136,
+  "substantiveTrialsRequiredNatively": 56027200
+}

@@ -1,0 +1,604 @@
+{
+  "schemaVersion": "star-cluster-cross-tl-build-permutation-v6",
+  "id": "cross-tl-build-permutation-foundation-v0_8",
+  "checkpoint": "99",
+  "status": "sensor_required_exact_edge_progression_screening_foundation",
+  "purpose": "Require at least one installed Sensor in every ordinary legal combat build, preserve sensorless configurations only as explicit diagnostics outside the normal construction envelope, and sample exact same-Space single-axis TL1->TL2 progression edges for causal Adaptive Engage screening. No TL3 value or initiative rule is introduced.",
+  "totalInstallationSpace": 35,
+  "fixedShellSpace": 10,
+  "fixedShell": {
+    "description": "Cruiser shell holds only mandatory STL and FTL drives constant; PDS and other optional combat systems move into enumerated axes.",
+    "stlDriveSpace": 5,
+    "ftlDriveSpace": 5,
+    "kineticPdsSpace": 0,
+    "kineticPdsCount": 0
+  },
+  "baselineProfileId": "tl1-production",
+  "auxiliaryProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl2-auxiliary-runtime-profiles-v0_3.json",
+  "auxiliaryProfileId": "aux-r53-none-tl1",
+  "sensorEwProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/SensorEw/tl2-sew01-sensor-discrimination-isolation.json",
+  "aiDoctrineCatalog": "docs/archive/ai/pre-cp165-active/ai_doctrine_registry_v0_2.json",
+  "aiDoctrineId": "tl1-ew-preserve-combat-package-v1",
+  "variantIdPrefix": "c99",
+  "constructionGuardrails": {
+    "minimumMainWeaponCount": 1,
+    "minimumReactorCount": 1,
+    "additionalMainWeaponsOptional": true,
+    "additionalReactorsOptional": true,
+    "duplicationMustBeExplicit": true,
+    "redundantEwInstallationsAllowed": true,
+    "ecmSameTypeRatingsAdditive": false,
+    "eccmSameTypeRatingsAdditive": false,
+    "ewDuplicateResolution": "highest_applicable_functional_rating",
+    "powerSufficiencyIsConstructionLegalityFilter": false,
+    "minimumSensorCount": 1,
+    "sensorlessDiagnosticsAllowedOutsideLegalPopulation": true
+  },
+  "generatedStudyId": "tl2-itc19-exact-edge-progression-screening",
+  "masterSeed": 990100,
+  "trialsPerVariant": 250,
+  "expectedRawCombinationCount": 82944,
+  "expectedLegalBuildCount": 11776,
+  "expectedExactFillBuildCount": 2944,
+  "expectedNamedRecipeCount": 0,
+  "expectedNamedLogicalPairingCount": 0,
+  "expectedStratifiedLogicalPairingCount": 0,
+  "expectedLogicalPairingCount": 362,
+  "expectedGeometryCount": 2,
+  "expectedGeneratedVariantCount": 724,
+  "expectedOrientedPairingEnvelope": 138674176,
+  "expectedUnorderedWithSelfPairingEnvelope": 69342976,
+  "stratifiedPairingSelection": {
+    "enabled": false,
+    "nearDistanceMaximum": 2,
+    "equalLowAdvancedMaximum": 3,
+    "nearFillMinimumUsedSpace": 32,
+    "informationControlNearDistanceMaximum": 2,
+    "note": "Broad population sampling is disabled for CP99 exact-edge screening, but shared build/pair classifiers still consume these inherited classification thresholds. Keep them explicit and aligned with CP98."
+  },
+  "axes": [
+    {
+      "id": "weapon",
+      "code": "w",
+      "options": [
+        {
+          "id": "k1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 6,
+          "family": "Kinetic",
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "mainWeaponCount": 1,
+          "note": "TL1 Kinetic reference."
+        },
+        {
+          "id": "k2",
+          "technologyLevel": 2,
+          "status": "locally_validated_working_candidate",
+          "space": 6,
+          "family": "Kinetic",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "mainWeaponCount": 1,
+          "note": "CP86a Kinetic APEN1 working candidate; no SPEN increase."
+        },
+        {
+          "id": "e1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 6,
+          "family": "Energy",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "mainWeaponCount": 1,
+          "note": "Current Energy penetration profile; no TL2 penetration promotion."
+        },
+        {
+          "id": "m1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 6,
+          "family": "Missile",
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "mainWeaponCount": 1,
+          "note": "Current Missile penetration profile; no TL2 penetration promotion."
+        },
+        {
+          "id": "k1x2",
+          "technologyLevel": 1,
+          "status": "explicit_duplicate_reference",
+          "space": 12,
+          "family": "Kinetic",
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "mainWeaponCount": 2,
+          "note": "Two homogeneous TL1 Kinetic Main Weapons; explicit player/AI design choice."
+        },
+        {
+          "id": "k2x2",
+          "technologyLevel": 2,
+          "status": "explicit_duplicate_working_candidate",
+          "space": 12,
+          "family": "Kinetic",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "mainWeaponCount": 2,
+          "note": "Two homogeneous TL2-working Kinetic Main Weapons; explicit player/AI design choice."
+        },
+        {
+          "id": "e1x2",
+          "technologyLevel": 1,
+          "status": "explicit_duplicate_reference",
+          "space": 12,
+          "family": "Energy",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "mainWeaponCount": 2,
+          "note": "Two homogeneous Energy Main Weapons; current first multiplicity envelope."
+        },
+        {
+          "id": "m1x2",
+          "technologyLevel": 1,
+          "status": "explicit_duplicate_reference",
+          "space": 12,
+          "family": "Missile",
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "mainWeaponCount": 2,
+          "note": "Two homogeneous Missile Main Weapons; current first multiplicity envelope."
+        }
+      ]
+    },
+    {
+      "id": "reactor",
+      "code": "r",
+      "options": [
+        {
+          "id": "r1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 6,
+          "reactorOutput": 5,
+          "reactorCount": 1,
+          "note": "One Peak Fission Main Reactor."
+        },
+        {
+          "id": "r2",
+          "technologyLevel": 2,
+          "status": "locally_validated_working_candidate",
+          "space": 6,
+          "reactorOutput": 6,
+          "reactorCount": 1,
+          "note": "One Early Practical Fusion Main Reactor."
+        },
+        {
+          "id": "r1x2",
+          "technologyLevel": 1,
+          "status": "explicit_duplicate_reference",
+          "space": 12,
+          "reactorOutput": 5,
+          "reactorCount": 2,
+          "note": "Two homogeneous TL1 Main Reactors; output is per reactor."
+        },
+        {
+          "id": "r2x2",
+          "technologyLevel": 2,
+          "status": "explicit_duplicate_working_candidate",
+          "space": 12,
+          "reactorOutput": 6,
+          "reactorCount": 2,
+          "note": "Two homogeneous TL2-working Main Reactors; output is per reactor."
+        }
+      ]
+    },
+    {
+      "id": "computer",
+      "code": "c",
+      "options": [
+        {
+          "id": "c1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 3,
+          "targetingBonus": 10
+        },
+        {
+          "id": "c2",
+          "technologyLevel": 2,
+          "status": "locally_validated_working_candidate",
+          "space": 3,
+          "targetingBonus": 12
+        }
+      ]
+    },
+    {
+      "id": "sensor",
+      "code": "s",
+      "options": [
+        {
+          "id": "s0",
+          "technologyLevel": 1,
+          "status": "not_installed",
+          "space": 0,
+          "installed": false,
+          "sensorEwProfileId": "tl1-balanced-0-control"
+        },
+        {
+          "id": "s1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 3,
+          "installed": true,
+          "sensorEwProfileId": "tl1-balanced-0-control"
+        },
+        {
+          "id": "s2",
+          "technologyLevel": 2,
+          "status": "locally_validated_working_candidate",
+          "space": 3,
+          "installed": true,
+          "sensorEwProfileId": "tl2-discrimination-1-candidate"
+        }
+      ]
+    },
+    {
+      "id": "shield",
+      "code": "h",
+      "options": [
+        {
+          "id": "sh0",
+          "technologyLevel": 1,
+          "status": "not_installed",
+          "space": 0,
+          "installed": false,
+          "shieldCapacity": 0
+        },
+        {
+          "id": "sh1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 3,
+          "installed": true,
+          "shieldCapacity": 2
+        },
+        {
+          "id": "sh2",
+          "technologyLevel": 2,
+          "status": "locally_validated_working_candidate",
+          "space": 3,
+          "installed": true,
+          "shieldCapacity": 3
+        }
+      ]
+    },
+    {
+      "id": "armor",
+      "code": "a",
+      "options": [
+        {
+          "id": "a1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 0,
+          "armorProtection": 0,
+          "armorIntegrity": 4
+        },
+        {
+          "id": "a2",
+          "technologyLevel": 2,
+          "status": "locally_validated_working_candidate",
+          "space": 0,
+          "armorProtection": 0,
+          "armorIntegrity": 5
+        }
+      ]
+    },
+    {
+      "id": "ecm",
+      "code": "e",
+      "options": [
+        {
+          "id": "ecm0",
+          "technologyLevel": 1,
+          "status": "not_installed",
+          "space": 0,
+          "installed": false,
+          "ewRatings": []
+        },
+        {
+          "id": "ecm1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 1,
+          "installed": true,
+          "ewRatings": [
+            1
+          ]
+        },
+        {
+          "id": "ecm2",
+          "technologyLevel": 2,
+          "status": "locally_validated_working_candidate",
+          "space": 1,
+          "installed": true,
+          "ewRatings": [
+            2
+          ]
+        },
+        {
+          "id": "ecm1x2",
+          "technologyLevel": 1,
+          "status": "explicit_redundancy",
+          "space": 2,
+          "installed": true,
+          "ewRatings": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "ecm2x2",
+          "technologyLevel": 2,
+          "status": "explicit_redundancy",
+          "space": 2,
+          "installed": true,
+          "ewRatings": [
+            2,
+            2
+          ]
+        },
+        {
+          "id": "ecm1plus2",
+          "technologyLevel": 2,
+          "status": "explicit_mixed_redundancy",
+          "space": 2,
+          "installed": true,
+          "ewRatings": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eccm",
+      "code": "x",
+      "options": [
+        {
+          "id": "eccm0",
+          "technologyLevel": 1,
+          "status": "not_installed",
+          "space": 0,
+          "installed": false,
+          "ewRatings": []
+        },
+        {
+          "id": "eccm1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 1,
+          "installed": true,
+          "ewRatings": [
+            1
+          ]
+        },
+        {
+          "id": "eccm2",
+          "technologyLevel": 2,
+          "status": "locally_validated_working_candidate",
+          "space": 1,
+          "installed": true,
+          "ewRatings": [
+            2
+          ]
+        },
+        {
+          "id": "eccm1x2",
+          "technologyLevel": 1,
+          "status": "explicit_redundancy",
+          "space": 2,
+          "installed": true,
+          "ewRatings": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "eccm2x2",
+          "technologyLevel": 2,
+          "status": "explicit_redundancy",
+          "space": 2,
+          "installed": true,
+          "ewRatings": [
+            2,
+            2
+          ]
+        },
+        {
+          "id": "eccm1plus2",
+          "technologyLevel": 2,
+          "status": "explicit_mixed_redundancy",
+          "space": 2,
+          "installed": true,
+          "ewRatings": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pds",
+      "code": "p",
+      "options": [
+        {
+          "id": "p0",
+          "technologyLevel": 1,
+          "status": "not_installed",
+          "space": 0,
+          "installed": false,
+          "pdsCount": 0
+        },
+        {
+          "id": "p1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 2,
+          "installed": true,
+          "pdsCount": 1
+        }
+      ]
+    }
+  ],
+  "namedRecipes": [],
+  "pairingGroups": [],
+  "geometries": [
+    {
+      "id": "adaptive-a-first",
+      "movementMode": "EngageAdaptive",
+      "movementOrder": "SideAFirst",
+      "initialRangeHexes": 10
+    },
+    {
+      "id": "adaptive-b-first",
+      "movementMode": "EngageAdaptive",
+      "movementOrder": "SideBFirst",
+      "initialRangeHexes": 10
+    }
+  ],
+  "expectedNearFillBuildCount": 6656,
+  "expectedUnderfilledBuildCount": 2176,
+  "expectedUnorderedDistinctPairingEnvelope": 69331200,
+  "expectedOrientedDistinctPairingEnvelope": 138662400,
+  "progressionLattice": {
+    "enabled": true,
+    "requireSameInstallationSpace": true,
+    "expectedTotalLegalEdgeCount": 37184,
+    "transitions": [
+      {
+        "id": "weapon-single-k1-to-k2",
+        "axisId": "weapon",
+        "fromOptionId": "k1",
+        "toOptionId": "k2",
+        "expectedLegalEdgeCount": 2864,
+        "expectedExactFillEdgeCount": 672,
+        "expectedAdvancedComponentDelta": 1
+      },
+      {
+        "id": "weapon-double-k1-to-k2",
+        "axisId": "weapon",
+        "fromOptionId": "k1x2",
+        "toOptionId": "k2x2",
+        "expectedLegalEdgeCount": 80,
+        "expectedExactFillEdgeCount": 64,
+        "expectedAdvancedComponentDelta": 2
+      },
+      {
+        "id": "reactor-single-r1-to-r2",
+        "axisId": "reactor",
+        "fromOptionId": "r1",
+        "toOptionId": "r2",
+        "expectedLegalEdgeCount": 5728,
+        "expectedExactFillEdgeCount": 1344,
+        "expectedAdvancedComponentDelta": 1
+      },
+      {
+        "id": "reactor-double-r1-to-r2",
+        "axisId": "reactor",
+        "fromOptionId": "r1x2",
+        "toOptionId": "r2x2",
+        "expectedLegalEdgeCount": 160,
+        "expectedExactFillEdgeCount": 128,
+        "expectedAdvancedComponentDelta": 2
+      },
+      {
+        "id": "computer-c1-to-c2",
+        "axisId": "computer",
+        "fromOptionId": "c1",
+        "toOptionId": "c2",
+        "expectedLegalEdgeCount": 5888,
+        "expectedExactFillEdgeCount": 1472,
+        "expectedAdvancedComponentDelta": 1
+      },
+      {
+        "id": "sensor-s1-to-s2",
+        "axisId": "sensor",
+        "fromOptionId": "s1",
+        "toOptionId": "s2",
+        "expectedLegalEdgeCount": 5888,
+        "expectedExactFillEdgeCount": 1472,
+        "expectedAdvancedComponentDelta": 1
+      },
+      {
+        "id": "shield-sh1-to-sh2",
+        "axisId": "shield",
+        "fromOptionId": "sh1",
+        "toOptionId": "sh2",
+        "expectedLegalEdgeCount": 3264,
+        "expectedExactFillEdgeCount": 1216,
+        "expectedAdvancedComponentDelta": 1
+      },
+      {
+        "id": "armor-a1-to-a2",
+        "axisId": "armor",
+        "fromOptionId": "a1",
+        "toOptionId": "a2",
+        "expectedLegalEdgeCount": 5888,
+        "expectedExactFillEdgeCount": 1472,
+        "expectedAdvancedComponentDelta": 1
+      },
+      {
+        "id": "ecm-single-ecm1-to-ecm2",
+        "axisId": "ecm",
+        "fromOptionId": "ecm1",
+        "toOptionId": "ecm2",
+        "expectedLegalEdgeCount": 2048,
+        "expectedExactFillEdgeCount": 384,
+        "expectedAdvancedComponentDelta": 1
+      },
+      {
+        "id": "ecm-double-ecm1-to-ecm2",
+        "axisId": "ecm",
+        "fromOptionId": "ecm1x2",
+        "toOptionId": "ecm2x2",
+        "expectedLegalEdgeCount": 1664,
+        "expectedExactFillEdgeCount": 512,
+        "expectedAdvancedComponentDelta": 2
+      },
+      {
+        "id": "eccm-single-eccm1-to-eccm2",
+        "axisId": "eccm",
+        "fromOptionId": "eccm1",
+        "toOptionId": "eccm2",
+        "expectedLegalEdgeCount": 2048,
+        "expectedExactFillEdgeCount": 384,
+        "expectedAdvancedComponentDelta": 1
+      },
+      {
+        "id": "eccm-double-eccm1-to-eccm2",
+        "axisId": "eccm",
+        "fromOptionId": "eccm1x2",
+        "toOptionId": "eccm2x2",
+        "expectedLegalEdgeCount": 1664,
+        "expectedExactFillEdgeCount": 512,
+        "expectedAdvancedComponentDelta": 2
+      }
+    ]
+  },
+  "exactEdgePairingSelection": {
+    "enabled": true,
+    "representativesPerStratum": 2,
+    "expectedStratumCount": 181,
+    "expectedLogicalPairingCount": 362,
+    "strata": [
+      "transition",
+      "weaponFamily",
+      "compositionClass",
+      "spaceUtilizationClass"
+    ],
+    "ordering": "transition_then_weapon_family_then_composition_then_space_then_lower_build_id_then_higher_build_id",
+    "note": "Select the first two deterministic exact lower->higher edges in every populated transition x weapon-family x composition x Space-utilization stratum. Mover order is mirrored by the two EngageAdaptive geometries; side identity remains lower-tech Side A vs higher-tech Side B."
+  }
+}

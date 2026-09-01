@@ -1,0 +1,315 @@
+{
+  "schemaVersion": "star-cluster-tl1-phase-a-v1",
+  "id": "tl1-a02-armor-ai-ap-sequence",
+  "matrixScenarioId": "TL1-A02",
+  "name": "Armor Integrity, Armor Protection hardening, and Hull overflow",
+  "baselineVersion": "tl1-core-combat-v0.1",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "cases": [
+    {
+      "id": "a02-c01",
+      "name": "Armor Protection is hardening only; ordinary damage reduces Integrity",
+      "operation": "resolveDamage",
+      "input": {
+        "defense": {
+          "currentShieldCapacity": 0,
+          "shieldArmor": 0,
+          "currentHull": 12,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "packet": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0
+        }
+      },
+      "expected": {
+        "resolution": {
+          "damageToArmor": 4,
+          "armorLayers": [
+            {
+              "armorHardening": 2,
+              "effectiveArmorPenetration": 0,
+              "armorPenetrationResisted": 0,
+              "armorBypass": 0,
+              "armorFacingDamage": 4,
+              "integrityDamage": 4,
+              "protectionDamage": 0,
+              "overflowDamage": 0
+            }
+          ]
+        },
+        "defense": {
+          "currentShieldCapacity": 0,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "currentProtection": 2,
+              "currentIntegrity": 2
+            }
+          ],
+          "currentHull": 12
+        }
+      }
+    },
+    {
+      "id": "a02-c02",
+      "name": "Exact Armor Integrity depletion leaves Armor Protection stored",
+      "operation": "resolveDamage",
+      "input": {
+        "defense": {
+          "currentShieldCapacity": 0,
+          "shieldArmor": 0,
+          "currentHull": 12,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "packet": {
+          "damage": 6,
+          "shieldPenetration": 0,
+          "armorPenetration": 0
+        }
+      },
+      "expected": {
+        "resolution": {
+          "armorLayers": [
+            {
+              "armorHardening": 2,
+              "effectiveArmorPenetration": 0,
+              "armorPenetrationResisted": 0,
+              "armorBypass": 0,
+              "armorFacingDamage": 6,
+              "integrityDamage": 6,
+              "protectionDamage": 0,
+              "overflowDamage": 0
+            }
+          ],
+          "hullDamage": 0
+        },
+        "defense": {
+          "currentShieldCapacity": 0,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "currentProtection": 2,
+              "currentIntegrity": 0
+            }
+          ],
+          "currentHull": 12
+        }
+      }
+    },
+    {
+      "id": "a02-c03",
+      "name": "Damage beyond Armor Integrity flows directly to Hull; AP is not a second pool",
+      "operation": "resolveDamage",
+      "input": {
+        "defense": {
+          "currentShieldCapacity": 0,
+          "shieldArmor": 0,
+          "currentHull": 12,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "packet": {
+          "damage": 10,
+          "shieldPenetration": 0,
+          "armorPenetration": 0
+        }
+      },
+      "expected": {
+        "resolution": {
+          "armorLayers": [
+            {
+              "armorHardening": 2,
+              "effectiveArmorPenetration": 0,
+              "armorPenetrationResisted": 0,
+              "armorBypass": 0,
+              "armorFacingDamage": 10,
+              "integrityDamage": 6,
+              "protectionDamage": 0,
+              "overflowDamage": 4
+            }
+          ],
+          "hullDamage": 4
+        },
+        "defense": {
+          "currentShieldCapacity": 0,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "currentProtection": 2,
+              "currentIntegrity": 0
+            }
+          ],
+          "currentHull": 8
+        }
+      }
+    },
+    {
+      "id": "a02-c04",
+      "name": "AP hardening reduces APEN; bypass and Integrity overflow both reach Hull",
+      "operation": "resolveDamage",
+      "input": {
+        "defense": {
+          "currentShieldCapacity": 0,
+          "shieldArmor": 0,
+          "currentHull": 12,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "packet": {
+          "damage": 8,
+          "shieldPenetration": 0,
+          "armorPenetration": 3
+        }
+      },
+      "expected": {
+        "resolution": {
+          "armorLayers": [
+            {
+              "armorHardening": 2,
+              "effectiveArmorPenetration": 1,
+              "armorPenetrationResisted": 2,
+              "armorBypass": 1,
+              "armorFacingDamage": 7,
+              "integrityDamage": 6,
+              "protectionDamage": 0,
+              "overflowDamage": 2
+            }
+          ],
+          "hullDamage": 2,
+          "overkillDamage": 0
+        },
+        "defense": {
+          "currentShieldCapacity": 0,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "currentProtection": 2,
+              "currentIntegrity": 0
+            }
+          ],
+          "currentHull": 10
+        }
+      }
+    },
+    {
+      "id": "a02-c05",
+      "name": "APEN remains fixed and is hardened independently across multiple Armor layers",
+      "operation": "resolveDamage",
+      "input": {
+        "defense": {
+          "currentShieldCapacity": 0,
+          "shieldArmor": 0,
+          "currentHull": 12,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "outer",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 3,
+              "currentIntegrity": 3
+            },
+            {
+              "id": "inner",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 3,
+              "currentIntegrity": 3
+            }
+          ]
+        },
+        "packet": {
+          "damage": 12,
+          "shieldPenetration": 0,
+          "armorPenetration": 3
+        }
+      },
+      "expected": {
+        "resolution": {
+          "armorLayers": [
+            {
+              "layerId": "outer",
+              "incomingDamage": 12,
+              "armorHardening": 2,
+              "effectiveArmorPenetration": 1,
+              "armorPenetrationResisted": 2,
+              "armorBypass": 1,
+              "armorFacingDamage": 11,
+              "integrityDamage": 3,
+              "protectionDamage": 0,
+              "overflowDamage": 9
+            },
+            {
+              "layerId": "inner",
+              "incomingDamage": 9,
+              "armorHardening": 2,
+              "effectiveArmorPenetration": 1,
+              "armorPenetrationResisted": 2,
+              "armorBypass": 1,
+              "armorFacingDamage": 8,
+              "integrityDamage": 3,
+              "protectionDamage": 0,
+              "overflowDamage": 6
+            }
+          ],
+          "hullDamage": 6
+        },
+        "defense": {
+          "currentHull": 6,
+          "armorLayers": [
+            {
+              "id": "outer",
+              "currentIntegrity": 0,
+              "currentProtection": 2
+            },
+            {
+              "id": "inner",
+              "currentIntegrity": 0,
+              "currentProtection": 2
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

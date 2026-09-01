@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "star-cluster-cp145-stage-a-diagnostic-attribution-result-v0.1",
+  "checkpoint": 145,
+  "baseCheckpoint": 144,
+  "passed": true,
+  "failedGates": 0,
+  "acceptedCp144SubstantiveTrials": 3425000,
+  "acceptedCp144Scenarios": 6850,
+  "diagnosticScenarios": 252,
+  "diagnosticTrialsPerScenario": 25,
+  "diagnosticCombatTrials": 6300,
+  "pdsOpportunityScenarios": 204,
+  "tpStarvationScenarios": 48,
+  "sourceMatrixUnmodified": true,
+  "tuningAllowed": false,
+  "automaticPromotion": false,
+  "stageBAutomatic": false,
+  "originalParetoWinFastCorrelation": 0.9987839612452755,
+  "originalParetoSingleSurvivorContexts": 1441,
+  "strategicParetoRows": 35,
+  "kineticAttributionRows": 350,
+  "kineticVsEnergyAttributionRows": 350,
+  "energyResourceRows": 45,
+  "pdsBaselineRows": 255,
+  "interpretation": "Accepted CP144 evidence decomposition plus exact-seed observation-only replays; no numerical tuning or promotion.",
+  "gates": {
+    "failed": [],
+    "passed": true
+  }
+}

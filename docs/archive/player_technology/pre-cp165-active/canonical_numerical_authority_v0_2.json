@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "star-cluster-canonical-numerical-authority-v0.2",
+  "checkpoint": 123,
+  "acceptedImplementationBaseline": 122,
+  "status": "reference_baseline_for_future_testing_not_production_promotion",
+  "damagePointScale": 2,
+  "primaryReferenceMatrix": "technology_numerical_matrix_v0_3.json",
+  "primaryTechnologyTable": "technology_component_table_v0_5.json",
+  "storyboard": "technology_family_storyboard_v1_5.json",
+  "productionRuntimeChanged": false,
+  "scenarioDefinitionsChanged": false,
+  "balanceCalibrationRun": false,
+  "newScenarioCount": 0,
+  "criticalCadenceMigrated": false,
+  "productionRepairHullPerKitTl1": 1,
+  "authorityBoundary": "CP122 remains the accepted executable implementation baseline. CP123 revises the design/reference TL1-TL9 baseline that subsequent tests should consume; production/runtime promotion requires later evidence and an explicit checkpoint."
+}

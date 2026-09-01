@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "star-cluster-weapon-ammunition-missile-family-architecture-v0.4",
+  "checkpoint": 123,
+  "status": "revised_reference_baseline_no_balance_calibration",
+  "automaticPromotion": false,
+  "familyIdentity": {
+    "Energy": {
+      "primaryFlexibility": "power_output_modes",
+      "normalLoadoutSelector": false
+    },
+    "Kinetic": {
+      "primaryFlexibility": "automatic_projectile_and_accuracy_maturation",
+      "normalAmmoSelector": false,
+      "genericMagazine": true
+    },
+    "Missile": {
+      "primaryFlexibility": "gp_yield_plus_distinct_flight_families",
+      "normalWarheadSelector": false,
+      "genericMagazine": true
+    }
+  },
+  "missileGpMilestones": {
+    "TL1-2": {
+      "damage": 10,
+      "spen": 2,
+      "apen": 4,
+      "identity": "fission-era GP"
+    },
+    "TL3-4": {
+      "damage": 11,
+      "spen": 2,
+      "apen": 4,
+      "identity": "mature fission GP"
+    },
+    "TL5-6": {
+      "damage": 13,
+      "spen": 2,
+      "apen": 4,
+      "identity": "Fusion GP",
+      "hardPrereq": "Power TL2"
+    },
+    "TL7-9": {
+      "damage": 15,
+      "spen": 2,
+      "apen": 4,
+      "identity": "Antimatter GP",
+      "hardPrereq": "Power TL5"
+    }
+  },
+  "swarmer": {
+    "window": [
+      2,
+      9
+    ],
+    "referenceOnly": true,
+    "distinctFlightFamily": true,
+    "oneFlightCounter": true,
+    "oneTerminalAttackRoll": true,
+    "firmTerminalRequired": true,
+    "usesGenericMissileFlightMagazine": true,
+    "packets": 2,
+    "milestones": {
+      "TL2": {
+        "packetDamage": 4,
+        "guidanceBonusPp": 10,
+        "pdsInterceptPenaltyPp": 10
+      },
+      "TL3": {
+        "packetDamage": 5,
+        "guidanceBonusPp": 10,
+        "pdsInterceptPenaltyPp": 10
+      },
+      "TL5": {
+        "packetDamage": 7,
+        "guidanceBonusPp": 10,
+        "pdsInterceptPenaltyPp": 10
+      },
+      "TL7": {
+        "packetDamage": 8,
+        "guidanceBonusPp": 15,
+        "pdsInterceptPenaltyPp": 15
+      }
+    },
+    "penetration": {
+      "spen": 0,
+      "apen": 0
+    },
+    "extraPdsWindows": 0,
+    "extraCriticalRolls": 0
+  },
+  "specialistWarheads": {
+    "baselineMenu": false,
+    "preservedConcepts": [
+      "shaped_armor_penetrator",
+      "directed_pulse_shield_disruption",
+      "radiation_electronics",
+      "antimatter_catalyzed_bridge",
+      "matter_conversion_exotic"
+    ]
+  },
+  "calibrationPriority": {
+    "primary": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "advanced": [
+      7
+    ],
+    "endpointStress": [
+      8,
+      9
+    ]
+  },
+  "retiredFromActiveBaseline": [
+    "kinetic_dense_ammo_selector",
+    "kinetic_saturation_ammo_selector",
+    "kinetic_tandem_ammo_selector",
+    "normal_shaped_warhead_menu",
+    "normal_shield_disruption_warhead_menu",
+    "tl9_first_balance_inference"
+  ],
+  "separation": {
+    "deliveryProfile": "missile_delivery",
+    "guidanceProfile": "missile_guidance",
+    "gpWarheadProfile": "missile_gp_warhead",
+    "swarmerProfile": "missile_swarmer",
+    "normalMissileInventory": "generic Missile Flight",
+    "warheadCommittedAtLaunch": true
+  }
+}

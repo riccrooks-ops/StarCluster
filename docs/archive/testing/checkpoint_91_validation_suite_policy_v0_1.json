@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-91-validation-suite-policy-v0_1",
+  "checkpoint": "91",
+  "status": "current",
+  "purpose": "Validate external reference-mining infrastructure while freezing the accepted CP90a implementation and avoiding unrelated Monte Carlo reruns.",
+  "mustAlwaysRun": {
+    "repositoryContract": true,
+    "nativeBuildWarningsAsErrors": true,
+    "fullUnitTests": true,
+    "deterministicMechanics": true,
+    "scenarioRunnerSelfTests": true,
+    "referenceMiningContracts": true,
+    "acceptedCp90aProvenance": true
+  },
+  "referenceMining": {
+    "minedSourceCount": 6,
+    "observationCount": 70,
+    "queuedSourceCount": 24,
+    "automaticAuthorityPromotion": false,
+    "standaloneOverlapMustBeDeduplicated": true
+  },
+  "unchangedDependencies": {
+    "gameplayRuntime": true,
+    "simulationStudies": true,
+    "concept": true,
+    "technologyMatrix": true,
+    "componentCatalog": true,
+    "aiDoctrine": true,
+    "standingPermutationSuite": "v0.9"
+  },
+  "monteCarlo": {
+    "required": false,
+    "reason": "No gameplay/runtime/simulation dependency changed."
+  },
+  "deepCalibration": {
+    "applicable": false,
+    "additionalStudies": []
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "star-cluster-cp159-aux-closure-study-v0.1",
+  "checkpoint": 159,
+  "baseCheckpoint": 158,
+  "title": "AUX Pending-Finalization Promotion and Specialist Closure",
+  "masterSeed": 15920260830,
+  "researchExecutionBaseline": "CP159-PF3",
+  "stageAExperimentManifest": "docs/design/testing/cp144_stage_a_experiment_manifest.csv",
+  "resourceEnsemble": "docs/design/testing/cp144_stage_a_resource_ensemble.csv",
+  "resourceEnsembleTl": "docs/design/testing/cp144_stage_a_resource_ensemble_tl.csv",
+  "combatDoctrine": "cp147_tactical_utility",
+  "damageModel": "def-res-v1",
+  "promotionFrontEnd": {
+    "status": "PENDING_FINALIZATION_RESEARCH_AUTHORITY",
+    "promotedFromCp158": [
+      "Shield Battery RISING_FULL",
+      "Shield Booster RISING_FULL",
+      "Shield Hardener RISING_FULL",
+      "Ablative Armor RISING_FULL",
+      "Energized Armor RISING_FULL",
+      "Kinetic Magazine +25 endurance-only",
+      "Missile Magazine +25 endurance-only"
+    ],
+    "boundaryPromoted": [
+      "Crystalline Armor RISING_FULL"
+    ],
+    "mechanicPromotedMagnitudeOpen": [
+      "Field Stabilizer anti-SPEN"
+    ],
+    "mechanicPromotedEnduranceOpen": [
+      "Repair Drone +1 parallel distinct-target Damage Control action"
+    ]
+  },
+  "fieldStabilizerSweep": {
+    "tls": [
+      7,
+      8,
+      9
+    ],
+    "spenReduction": [
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24
+    ],
+    "tacticalPower": [
+      0,
+      1,
+      2
+    ],
+    "space": 1,
+    "attacker": "Energy only (E7 PF3), because Field Stabilizer is intentionally SPEN-specific",
+    "comparison": "same-context promoted Shield Hardener execution-center profile",
+    "purpose": "find a specialist region where Field Stabilizer is rational against high-SPEN Energy without becoming a general Shield bonus"
+  },
+  "crystallineHeadroomSweep": {
+    "tls": [
+      8,
+      9
+    ],
+    "capacityBonus": [
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "resBonusPp": [
+      15,
+      20,
+      25,
+      30
+    ],
+    "space": 0,
+    "purpose": "bracket the CP158 +8 capacity/+15 RES boundary without reopening the TL6-TL9 broad surface"
+  },
+  "repairDroneClosure": {
+    "firstTl": 2,
+    "mechanic": "+1 parallel Damage Control action per Damage Control phase",
+    "sameTargetRerollAllowed": false,
+    "usesNormalTargetSpecificChance": true,
+    "usesNormalAttemptTp": true,
+    "usesOneRepairKitPerAttempt": true,
+    "extraKitSweep": "every integer from 0 through the ship default prepared Repair Kit count, inclusive",
+    "totalKitRange": "100% through 200% of default ship prepared Repair Kits",
+    "fullMapLimitation": "accepted Python full-map corpus is Hull-only Damage Control; CP159 therefore uses a dedicated multi-target Damage Control microstudy rather than inventing same-target Hull rerolls",
+    "workloads": [
+      "SINGLE_HULL",
+      "TWO_DEGRADED",
+      "DISABLED_PLUS_HULL",
+      "THREE_MIXED",
+      "HEAVY_FOUR",
+      "SUSTAINED_ATTRITION"
+    ],
+    "availableDamageControlTp": [
+      1,
+      2
+    ]
+  },
+  "guardrails": [
+    "balance is not equality",
+    "no global 50 percent target",
+    "CP158 broad AUX response surfaces are reused and preserved",
+    "do not reopen mains, PDS, Hull, Shield, Armor, DEF, RES, Shield recharge, or Armor repair",
+    "Repair Drone never rerolls the same target in the same Damage Control phase",
+    "Field Stabilizer must remain SPEN-specific and cannot become a universal Shield Hardener clone",
+    "Crystalline headroom is TL8-TL9 only",
+    "final Reactor/TP tuning remains last and is forbidden here"
+  ],
+  "automaticPostStudyPromotion": false,
+  "tuningAllowed": false,
+  "nextStage": "zero-combat PF4 consolidation if CP159 closes Field Stabilizer/Repair Drone/Crystalline; then Reactor/TP Scarcity and Whole-Ship Equilibrium",
+  "plannedScale": {
+    "baselineContexts": 2400,
+    "fieldCandidateTlPoints": 99,
+    "fieldContexts": 540,
+    "fieldScreenCells": 17820,
+    "crystallineCandidateTlPoints": 40,
+    "crystallineContexts": 1600,
+    "crystallineScreenCells": 32000,
+    "fieldDeepPackages": 7,
+    "fieldDeepCells": 3780,
+    "crystallineDeepPackages": 6,
+    "crystallineDeepCells": 9600,
+    "fieldHardenerInteractionPackages": 9,
+    "fieldHardenerInteractionCells": 1620,
+    "substantiveCombatTrials": 3390000,
+    "repairDroneCandidateTlPoints": 48,
+    "repairDroneMicroCells": 576,
+    "repairDroneMicroTrials": 1728000
+  }
+}

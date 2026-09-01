@@ -1,0 +1,29 @@
+{
+  "checkpoint": 114,
+  "acceptedBaseline": 113,
+  "checkpointType": "payload_characteristic_space_and_prepackage_hygiene",
+  "productionSourceChanged": false,
+  "numericalMatrixChanged": false,
+  "reactorCandidateChanged": false,
+  "conceptChanged": false,
+  "simulationSourceChanged": true,
+  "automaticPromotion": false,
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "expected": {
+    "pythonSelfTests": 49,
+    "parityCases": 25,
+    "payloadProfiles": 34,
+    "variants": 3184,
+    "missileVariants": 2720,
+    "kineticVariants": 464,
+    "exactFillBuilds": 138,
+    "authoringTrialsPerVariant": 20,
+    "authoringEngagements": 63680,
+    "nativeTrialsPerVariant": 2000,
+    "nativeEngagements": 6368000,
+    "frozenCSharpAndTests": 561,
+    "frozenUnchangedSimulationFiles": 18
+  },
+  "repositoryOwnedFiles": 2303
+}

@@ -1,0 +1,390 @@
+{
+  "checkpoint": 116,
+  "authoringTrialsPerVariant": 25,
+  "variants": 2976,
+  "totalTrials": 74400,
+  "failedGates": [],
+  "sameDamageGpControls": [
+    {
+      "tl": 4,
+      "attacker": "balanced",
+      "pure": 0.32776284584980236,
+      "spen": 0.4076231884057971,
+      "apen": 0.3898405797101449,
+      "bundled": 0.38366666666666666,
+      "anchor": 0.5209565217391304
+    },
+    {
+      "tl": 4,
+      "attacker": "dual-main",
+      "pure": 0.5605785337850555,
+      "spen": 0.5514483838053632,
+      "apen": 0.5477583793242697,
+      "bundled": 0.5199342972054642,
+      "anchor": 0.6837429833593516
+    },
+    {
+      "tl": 5,
+      "attacker": "balanced",
+      "pure": 0.5807101449275363,
+      "spen": 0.6407463768115942,
+      "apen": 0.5812292490118577,
+      "bundled": 0.6049552042160738,
+      "anchor": 0.6922971014492754
+    },
+    {
+      "tl": 5,
+      "attacker": "dual-main",
+      "pure": 0.6671372106154715,
+      "spen": 0.6603985507246377,
+      "apen": 0.7065108225108225,
+      "bundled": 0.6885013175230567,
+      "anchor": 0.8154846751265515
+    },
+    {
+      "tl": 7,
+      "attacker": "balanced",
+      "pure": 0.8168571428571428,
+      "spen": 0.869,
+      "apen": 0.816,
+      "bundled": 0.868,
+      "anchor": 0.864
+    },
+    {
+      "tl": 7,
+      "attacker": "dual-main",
+      "pure": 0.7824163372859024,
+      "spen": 0.7926001317523057,
+      "apen": 0.7889150197628458,
+      "bundled": 0.7653087709392057,
+      "anchor": 0.864556277056277
+    },
+    {
+      "tl": 9,
+      "attacker": "balanced",
+      "pure": 0.24152898550724639,
+      "spen": 0.7796666666666666,
+      "apen": 0.43532241671372107,
+      "bundled": 0.804,
+      "anchor": 0.6083333333333334
+    },
+    {
+      "tl": 9,
+      "attacker": "dual-main",
+      "pure": 0.4719067105102911,
+      "spen": 0.47523923444976074,
+      "apen": 0.5345231639705323,
+      "bundled": 0.6195443879791706,
+      "anchor": 0.5950103519668737
+    }
+  ],
+  "tl9BalancedTargetControls": [
+    {
+      "fixture": "shield-heavy-legal",
+      "pure": 0.0,
+      "spen": 0.0,
+      "apen": 0.0,
+      "bundled": 0.04,
+      "anchor": 0.0
+    },
+    {
+      "fixture": "shield-isolated-legal",
+      "pure": 0.10347826086956521,
+      "spen": 0.94,
+      "apen": 0.31636363636363635,
+      "bundled": 0.98,
+      "anchor": 0.4716666666666667
+    },
+    {
+      "fixture": "balanced-layered-legal",
+      "pure": 0.10416666666666666,
+      "spen": 0.9583333333333333,
+      "apen": 0.36024844720496896,
+      "bundled": 1.0,
+      "anchor": 0.5700000000000001
+    },
+    {
+      "fixture": "armor-exposed-legal",
+      "pure": 1.0,
+      "spen": 1.0,
+      "apen": 1.0,
+      "bundled": 1.0,
+      "anchor": 1.0
+    },
+    {
+      "fixture": "pds-heavy-legal",
+      "pure": 0.0,
+      "spen": 1.0,
+      "apen": 0.5,
+      "bundled": 1.0,
+      "anchor": 1.0
+    },
+    {
+      "fixture": "shield-overmatch-fixture",
+      "pure": 0.0,
+      "spen": 0.8722826086956521,
+      "apen": 0.020833333333333332,
+      "bundled": 1.0,
+      "anchor": 0.0
+    }
+  ],
+  "generationalVsStaticSpecialists": [
+    {
+      "tl": 4,
+      "role": "armor",
+      "generational": 0.3908333333333333,
+      "static": 0.22783333333333336
+    },
+    {
+      "tl": 4,
+      "role": "shield-pressure",
+      "generational": 0.6281738189346885,
+      "static": 0.18593290043290042
+    },
+    {
+      "tl": 4,
+      "role": "shield-recharge",
+      "generational": 0.5558530020703933,
+      "static": 0.2048333333333333
+    },
+    {
+      "tl": 5,
+      "role": "armor",
+      "generational": 0.5941818181818181,
+      "static": 0.32182608695652176
+    },
+    {
+      "tl": 5,
+      "role": "shield-pressure",
+      "generational": 0.7435013175230566,
+      "static": 0.10198757763975155
+    },
+    {
+      "tl": 5,
+      "role": "shield-recharge",
+      "generational": 0.6373913043478261,
+      "static": 0.20383333333333334
+    },
+    {
+      "tl": 7,
+      "role": "armor",
+      "generational": 0.8075,
+      "static": 0.212
+    },
+    {
+      "tl": 7,
+      "role": "shield-pressure",
+      "generational": 0.952,
+      "static": 0.192
+    },
+    {
+      "tl": 7,
+      "role": "shield-recharge",
+      "generational": 0.864,
+      "static": 0.2
+    },
+    {
+      "tl": 9,
+      "role": "armor",
+      "generational": 0.5447971014492754,
+      "static": 0.2
+    },
+    {
+      "tl": 9,
+      "role": "shield-pressure",
+      "generational": 0.7878333333333334,
+      "static": 0.0
+    },
+    {
+      "tl": 9,
+      "role": "shield-recharge",
+      "generational": 0.764,
+      "static": 0.10454545454545454
+    }
+  ],
+  "dualMainPairLegalAverages": [
+    {
+      "tl": 4,
+      "gp": 0.6837429833593516,
+      "armor": 0.604057277581305,
+      "shield-bypass": 0.5664520738605408,
+      "shield-pressure": 0.7044867933998369,
+      "shield-recharge": 0.6685766045548655
+    },
+    {
+      "tl": 5,
+      "gp": 0.8154846751265515,
+      "armor": 0.6758080808080809,
+      "shield-bypass": 0.6577368520114516,
+      "shield-pressure": 0.8127898550724638,
+      "shield-recharge": 0.7754399585921325
+    },
+    {
+      "tl": 7,
+      "gp": 0.864556277056277,
+      "armor": 0.8119914361001318,
+      "shield-bypass": 0.7548603425559948,
+      "shield-pressure": 0.8631313131313131,
+      "shield-recharge": 0.8321212121212122
+    },
+    {
+      "tl": 9,
+      "gp": 0.5950103519668737,
+      "armor": 0.5628575308495216,
+      "shield-bypass": 0.44729164313946923,
+      "shield-pressure": 0.6876265763222285,
+      "shield-recharge": 0.6689169960474308
+    }
+  ],
+  "kineticTargetNiches": [
+    {
+      "tl": 6,
+      "profile": "gp-current",
+      "light-fixture": 1.0,
+      "armor-heavy-fixture": 0.8435714285714285,
+      "shield-heavy-legal": 0.0825
+    },
+    {
+      "tl": 6,
+      "profile": "kinetic-dense-b",
+      "light-fixture": 1.0,
+      "armor-heavy-fixture": 0.8065789473684211,
+      "shield-heavy-legal": 0.02
+    },
+    {
+      "tl": 6,
+      "profile": "kinetic-saturation-tl6-a",
+      "light-fixture": 1.0,
+      "armor-heavy-fixture": 0.0,
+      "shield-heavy-legal": 0.0
+    },
+    {
+      "tl": 6,
+      "profile": "kinetic-saturation-tl6-b",
+      "light-fixture": 1.0,
+      "armor-heavy-fixture": 0.0,
+      "shield-heavy-legal": 0.0
+    },
+    {
+      "tl": 6,
+      "profile": "kinetic-smart-plus10",
+      "light-fixture": 1.0,
+      "armor-heavy-fixture": 0.974937343358396,
+      "shield-heavy-legal": 0.31250000000000006
+    },
+    {
+      "tl": 6,
+      "profile": "kinetic-tandem-tl6",
+      "light-fixture": 1.0,
+      "armor-heavy-fixture": 0.9520833333333334,
+      "shield-heavy-legal": 0.052083333333333336
+    },
+    {
+      "tl": 6,
+      "profile": "kinetic-tandem-tl6-reverse",
+      "light-fixture": 1.0,
+      "armor-heavy-fixture": 0.9661904761904762,
+      "shield-heavy-legal": 0.10497835497835498
+    },
+    {
+      "tl": 8,
+      "profile": "gp-current",
+      "light-fixture": 0.95,
+      "armor-heavy-fixture": 0.707872807017544,
+      "shield-heavy-legal": 0.08469202898550725
+    },
+    {
+      "tl": 8,
+      "profile": "kinetic-dense-b",
+      "light-fixture": 0.9578804347826086,
+      "armor-heavy-fixture": 0.5718285337850555,
+      "shield-heavy-legal": 0.0
+    },
+    {
+      "tl": 8,
+      "profile": "kinetic-saturation-tl8-a",
+      "light-fixture": 0.9558823529411764,
+      "armor-heavy-fixture": 0.0,
+      "shield-heavy-legal": 0.0
+    },
+    {
+      "tl": 8,
+      "profile": "kinetic-saturation-tl8-b",
+      "light-fixture": 0.9880952380952381,
+      "armor-heavy-fixture": 0.0,
+      "shield-heavy-legal": 0.0
+    },
+    {
+      "tl": 8,
+      "profile": "kinetic-smart-plus10",
+      "light-fixture": 0.9431818181818181,
+      "armor-heavy-fixture": 0.8289473684210527,
+      "shield-heavy-legal": 0.20984189723320157
+    },
+    {
+      "tl": 8,
+      "profile": "kinetic-tandem-tl8",
+      "light-fixture": 0.99,
+      "armor-heavy-fixture": 0.6164473684210526,
+      "shield-heavy-legal": 0.03125
+    },
+    {
+      "tl": 8,
+      "profile": "kinetic-tandem-tl8-reverse",
+      "light-fixture": 1.0,
+      "armor-heavy-fixture": 0.7338080495356036,
+      "shield-heavy-legal": 0.041666666666666664
+    },
+    {
+      "tl": 9,
+      "profile": "gp-current",
+      "light-fixture": 1.0,
+      "armor-heavy-fixture": 0.865,
+      "shield-heavy-legal": 0.5278533785055525
+    },
+    {
+      "tl": 9,
+      "profile": "kinetic-dense-b",
+      "light-fixture": 0.99,
+      "armor-heavy-fixture": 0.85,
+      "shield-heavy-legal": 0.14583333333333334
+    },
+    {
+      "tl": 9,
+      "profile": "kinetic-saturation-tl9-a",
+      "light-fixture": 1.0,
+      "armor-heavy-fixture": 0.0,
+      "shield-heavy-legal": 0.0
+    },
+    {
+      "tl": 9,
+      "profile": "kinetic-saturation-tl9-b",
+      "light-fixture": 1.0,
+      "armor-heavy-fixture": 0.0,
+      "shield-heavy-legal": 0.0
+    },
+    {
+      "tl": 9,
+      "profile": "kinetic-smart-plus10",
+      "light-fixture": 1.0,
+      "armor-heavy-fixture": 0.9136363636363636,
+      "shield-heavy-legal": 0.6939935064935066
+    },
+    {
+      "tl": 9,
+      "profile": "kinetic-tandem-tl9",
+      "light-fixture": 1.0,
+      "armor-heavy-fixture": 0.8420454545454545,
+      "shield-heavy-legal": 0.0
+    },
+    {
+      "tl": 9,
+      "profile": "kinetic-tandem-tl9-reverse",
+      "light-fixture": 1.0,
+      "armor-heavy-fixture": 0.9135588972431078,
+      "shield-heavy-legal": 0.0
+    }
+  ],
+  "adaptivePairRows": 128,
+  "adaptivePairRowsWithSwitches": 20
+}

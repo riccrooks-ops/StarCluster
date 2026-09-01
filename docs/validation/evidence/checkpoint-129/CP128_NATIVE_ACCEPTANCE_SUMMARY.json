@@ -1,0 +1,41 @@
+﻿{
+    "schemaVersion":  "star-cluster-cp128-native-acceptance-summary-v0.1",
+    "checkpoint":  128,
+    "acceptedEvidenceCheckpoint":  127,
+    "startingImplementationBaseline":  122,
+    "repositoryOnly":  true,
+    "python":  "Python 3.13.14",
+    "dotnetSdk":  "8.0.423",
+    "buildWarningsAsErrors":  true,
+    "buildPassed":  true,
+    "pythonTests":  171,
+    "pythonTestsPassed":  171,
+    "pythonDependencyPolicy":  "stdlib-only",
+    "thirdPartyPythonPackagesAllowed":  [
+
+                                        ],
+    "xunitTotal":  907,
+    "xunitPassed":  907,
+    "xunitFailed":  0,
+    "xunitSkipped":  0,
+    "scenarioRunnerSelfTests":  70,
+    "scenarioRunnerSelfTestsPassed":  70,
+    "researchParityCases":  25,
+    "researchParityPassed":  25,
+    "productionSourceChanged":  false,
+    "technologyValuesChanged":  false,
+    "numericLeafChangesFromAcceptedCp127":  0,
+    "scenarioDefinitionsChanged":  false,
+    "researchSimulationChanged":  false,
+    "monteCarloStudy":  false,
+    "generatedVariants":  0,
+    "substantiveTrials":  0,
+    "mainSubsystemPureTlStabilized":  true,
+    "mixedTlShipsExecuted":  false,
+    "auxiliaryNumericalStabilizationDeferred":  true,
+    "largePredecessorNativeArchivesExternalized":  2,
+    "validationEvidenceZipBudgetEnforced":  true,
+    "failedGates":  [
+
+                    ]
+}

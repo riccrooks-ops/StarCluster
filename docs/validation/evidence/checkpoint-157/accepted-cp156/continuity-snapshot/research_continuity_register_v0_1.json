@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "star-cluster-research-continuity-register-v0.1",
+  "checkpoint": 156,
+  "purpose": "Preserve native-validated research findings, viable alternatives, rejected-method lessons, promotion status, authority boundaries and future pass goals without new tuning or combat.",
+  "acceptedBaseline": 155,
+  "cp155NativeResultsArchiveSha256": "f368612abdbf44b1eb78f0695cc6b72be491834c22564be063a74f8823298b52",
+  "substantiveCombatTrials": 0,
+  "tuningAllowed": false,
+  "automaticPromotion": false,
+  "files": {
+    "authoritySnapshot": "authority_snapshot_v0_1.json",
+    "promotionAudit": "promotion_audit_v0_1.csv",
+    "findingsLedger": "research_findings_ledger_v0_1.csv",
+    "viableLadders": "viable_ladder_register_v0_1.csv",
+    "guardrails": "guardrail_registry_v0_1.json",
+    "futurePassContract": "future_pass_contract_v0_1.json",
+    "evidenceHashes": "evidence_chain_sha256_v0_1.csv"
+  },
+  "promotionConclusion": "No missed CP149-CP155 numerical promotion was found: all seven checkpoint contracts explicitly prohibited automatic promotion. Their native findings are preserved as research evidence and candidate envelopes. Existing active numerical/mechanical authority remains separately identified and hash-locked.",
+  "nextStage": "Defense/AUX lifetime viability, then final Reactor/TP scarcity tuning."
+}

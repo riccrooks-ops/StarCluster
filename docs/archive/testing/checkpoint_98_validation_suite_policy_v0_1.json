@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-98-validation-suite-policy-v0_1",
+  "checkpoint": "98",
+  "status": "cross_progression_adaptive_engage_integration_release_policy",
+  "mustAlwaysRun": {
+    "nativeDependencyPrecheck": true,
+    "repositoryContract": true,
+    "manifestAndPowerShellSyntax": true,
+    "pinnedSdk": true,
+    "warningsAsErrorsBuild": true,
+    "unitTests": true,
+    "deterministicAndMechanicsGates": true,
+    "resourceRegressionGates": true,
+    "acceptedCp96GeneratedOneTrialRegression": true,
+    "acceptedCp97AdaptiveEngageOneTrialRegression": true,
+    "cp98ProgressionGeneratorPreflight": true,
+    "cp98ProgressionGeneration": true,
+    "cp98ActualConsumerPreflight": true,
+    "cp98OneTrialSmoke": true,
+    "cp98BoundedSubstantiveStudy": true,
+    "runnerSelfTests": true,
+    "acceptedCp97SubstantiveReplay": false
+  },
+  "acceptedBaseline": {
+    "checkpoint": 97,
+    "checkpointDefinitionSha256": "d261eb01efde0919bb55f36e9fa58a5cf8885845af89310c12a92ebba0689055",
+    "checkpointManifestSha256": "888e8c85f1fa3db5b95abc435d1bc51103ef7f7b99d5f79be5c8492bd6269ad4",
+    "adaptiveEngageSummarySha256": "24b2d6745dc71995b12a5cc449da3a8dd4239d08ec9bfbcac04a2e38af7a6bbc"
+  },
+  "aiRefinement": {
+    "safeStrainExhaustionRemembered": true,
+    "safeStrainExhaustionSuppressesRetry": true,
+    "closerRangeRestoresSafeStrain": false,
+    "observableEnemyStateChangeRestoresSafeStrain": false,
+    "powerDeniedRetryMayReenterAfterOwnPowerStateChange": true
+  },
+  "crossProgression": {
+    "foundation": "v0.7",
+    "standingSuite": "v0.13",
+    "rawCombinations": 82944,
+    "legalBuilds": 22592,
+    "progressionTransitions": 12,
+    "progressionLegalEdges": 65648,
+    "logicalPairings": 480,
+    "geometries": 2,
+    "generatedVariants": 960,
+    "pairSelectionSeed": 940177,
+    "combatMasterSeed": 980100,
+    "trialsPerVariant": 250,
+    "substantiveTrials": 240000
+  },
+  "study": {
+    "id": "tl2-itc18-cross-tl-adaptive-engage-progression-screening",
+    "cp96RegressionSmokeTrials": 1440,
+    "cp97RegressionSmokeTrials": 36,
+    "cp98SmokeTrials": 960,
+    "cp98SubstantiveTrials": 240000,
+    "totalTrialExecutionsAtDefault": 242436
+  },
+  "authorityBoundary": {
+    "technologyPromotion": false,
+    "componentTuning": false,
+    "newTl3Values": false,
+    "initiativeRuleChange": false,
+    "automaticCandidatePromotion": false,
+    "adaptiveAiCapabilityReasoningChange": true
+  },
+  "preflight": {
+    "independentProgressionLatticeCountCheck": true,
+    "generatedRuntimeIdResolution": true,
+    "studyDispatchBinding": true,
+    "policyTelemetrySharedGateBinding": true,
+    "safeStrainRequestSuppressionBinding": true,
+    "knownCompilerPatternAudit": true
+  },
+  "deepCalibration": {
+    "applicable": false,
+    "aliasUsesSameBoundedWorkload": true
+  }
+}

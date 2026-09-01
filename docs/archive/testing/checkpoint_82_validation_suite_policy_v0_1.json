@@ -1,0 +1,45 @@
+{
+  "checkpoint": 82,
+  "suiteTier": "must_always_run",
+  "acceptedBaseline": "81a",
+  "blockingBalanceTargets": false,
+  "normal": {
+    "stageCount": 8,
+    "monteCarloVariantCount": 0,
+    "substantiveTrials": 0,
+    "smokeVariants": 0,
+    "smokeTrials": 0,
+    "totalTrialExecutions": 0
+  },
+  "deepCalibration": {
+    "stageCount": 33,
+    "monteCarloVariantCount": 1694,
+    "substantiveTrials": 16940000,
+    "smokeVariants": 150,
+    "smokeTrials": 150,
+    "totalTrialExecutions": 16940150
+  },
+  "validatedWorkingCandidates": {
+    "tacticalComputerTargetingPp": 12,
+    "degradedFirePenaltyPp": 25,
+    "evasiveCompensationPp": 0,
+    "sensorDiscriminationResistance": 1,
+    "ecmNormalCeiling": 2,
+    "eccmNormalCeiling": 2,
+    "ewTpPerRating": 1
+  },
+  "explicitNonPromotions": {
+    "completeTl2ProductionCombatProfile": false,
+    "sensorRangeIncrease": false,
+    "reactorOutputIncrease": false,
+    "newTl2SensorEwOverloadMode": false,
+    "productionWeaponDegradedFireEnabled": false,
+    "missileApproximateTerminalCapability": false
+  },
+  "acceptedEvidence": {
+    "checkpoint79a": "eecbdf5a935d984655416c3fe4fae61308493cad778c89b2272f84ea5b761c61",
+    "checkpoint80": "596a90b51ae73691e5571b270785f445faed7ed443177f52aa5effff429cb992",
+    "checkpoint81a": "e0e351298a5c276179b20a72376aeef02a93c9c995031acebfab4d6b643d1c6c"
+  },
+  "standingPermutationSuite": "technology-integration-permutation-suite-v0_2"
+}

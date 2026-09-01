@@ -1,0 +1,14 @@
+{
+  "checkpoint": 116,
+  "status": "pre_handoff_passed",
+  "pythonSelfTests": {"passed": 77, "failed": 0},
+  "parity": {"passed": 25, "failed": 0},
+  "cp114RegressionSmoke": {"variants": 3184, "trials": 3184, "failedGates": []},
+  "cp115aRegressionSmoke": {"variants": 4064, "trials": 4064, "failedGates": []},
+  "cp116Smoke": {"variants": 2976, "trials": 2976, "failedGates": []},
+  "authoring": {"variants": 2976, "trialsPerVariant": 25, "totalTrials": 74400, "failedGates": []},
+  "nativePlanned": {"variants": 2976, "trialsPerVariant": 2000, "totalTrials": 5952000},
+  "automaticPromotion": false,
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false
+}

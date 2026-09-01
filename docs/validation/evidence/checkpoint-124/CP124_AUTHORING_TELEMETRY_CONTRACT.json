@@ -1,0 +1,288 @@
+{
+  "schemaVersion": "star-cluster-telemetry-contract-v0.1",
+  "checkpoint": 124,
+  "metrics": [
+    {
+      "metric": "movement_hexes",
+      "dimension": "movement",
+      "owner": "actor",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "movement_fuel",
+      "dimension": "fuel",
+      "owner": "actor",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "map_boundary_blocks",
+      "dimension": "movement",
+      "owner": "actor",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "range_changes",
+      "dimension": "geometry",
+      "owner": "actor",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "track_driven_closure_hexes",
+      "dimension": "geometry",
+      "owner": "actor",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "firm_track_turns",
+      "dimension": "information",
+      "owner": "observer",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "approximate_track_turns",
+      "dimension": "information",
+      "owner": "observer",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "no_track_turns",
+      "dimension": "information",
+      "owner": "observer",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "ecm_active_turns",
+      "dimension": "ew",
+      "owner": "actor",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "eccm_active_turns",
+      "dimension": "ew",
+      "owner": "actor",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "ecm_downgrade_events",
+      "dimension": "ew",
+      "owner": "observer",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "eccm_restore_events",
+      "dimension": "ew",
+      "owner": "observer",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "burnthrough_preservation_events",
+      "dimension": "ew",
+      "owner": "observer",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "power_available_total",
+      "dimension": "power",
+      "owner": "actor",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "power_spent_total",
+      "dimension": "power",
+      "owner": "actor",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "power_sensor",
+      "dimension": "power",
+      "owner": "actor",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "power_ecm",
+      "dimension": "power",
+      "owner": "actor",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "power_eccm",
+      "dimension": "power",
+      "owner": "actor",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "power_pds",
+      "dimension": "power",
+      "owner": "actor",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "power_weapons",
+      "dimension": "power",
+      "owner": "actor",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "power_shield_recharge",
+      "dimension": "power",
+      "owner": "actor",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "power_shield_hardener",
+      "dimension": "power",
+      "owner": "actor",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "power_shortfall_events",
+      "dimension": "power",
+      "owner": "actor",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "reactor_overload_activations",
+      "dimension": "overload",
+      "owner": "actor",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "direct_fire_eligible_actions",
+      "dimension": "attack_eligibility",
+      "owner": "attacker",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "missile_launch_eligible_actions",
+      "dimension": "attack_eligibility",
+      "owner": "attacker",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "direct_shots",
+      "dimension": "weapon",
+      "owner": "attacker",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "direct_hits",
+      "dimension": "weapon",
+      "owner": "attacker",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "missile_launches",
+      "dimension": "missile",
+      "owner": "attacker",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "missile_terminal_arrivals",
+      "dimension": "missile",
+      "owner": "target",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "missile_guidance_attempts",
+      "dimension": "missile",
+      "owner": "target",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "missile_hits",
+      "dimension": "missile",
+      "owner": "target",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "pds_attempts",
+      "dimension": "pds",
+      "owner": "defender",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "pds_intercepts",
+      "dimension": "pds",
+      "owner": "defender",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "damage_packets_resolved",
+      "dimension": "damage",
+      "owner": "target",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "raw_damage_on_hit",
+      "dimension": "damage",
+      "owner": "target",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "shield_penetration_bypassed",
+      "dimension": "damage",
+      "owner": "target",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "shield_armor_prevented",
+      "dimension": "damage",
+      "owner": "target",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "shield_absorbed",
+      "dimension": "damage",
+      "owner": "target",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "armor_penetration_bypassed",
+      "dimension": "damage",
+      "owner": "target",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "armor_prevented",
+      "dimension": "damage",
+      "owner": "target",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "armor_integrity_damage",
+      "dimension": "damage",
+      "owner": "target",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "armor_protection_damage",
+      "dimension": "damage",
+      "owner": "target",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "hull_damage",
+      "dimension": "damage",
+      "owner": "target",
+      "kind": "raw_quantity"
+    },
+    {
+      "metric": "damage_control_attempts",
+      "dimension": "damage_control",
+      "owner": "repairing_ship",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "damage_control_successes",
+      "dimension": "damage_control",
+      "owner": "repairing_ship",
+      "kind": "raw_counter"
+    },
+    {
+      "metric": "damage_control_hull_restored",
+      "dimension": "damage_control",
+      "owner": "repairing_ship",
+      "kind": "raw_quantity"
+    }
+  ]
+}

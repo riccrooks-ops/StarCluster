@@ -1,0 +1,11 @@
+{
+  "checkpoint": "104",
+  "status": "native-accepted",
+  "acceptedDate": "2026-08-14",
+  "nativeResultsArchiveSha256": "4819182f19f9e5b9248846eacad0cb3a1385cc23dd745a40378062a9f0b37550",
+  "checkpointDefinitionSha256": "ecaa1d598e626d599d8f80c46fbe2b892f62cec06c31e19dbe987845b9bf4ed5",
+  "repositoryManifestSha256": "03edf5b92afb5f6dc8073040b6e9bd58fb0c73f603f8d5cdc284ae00f6e9ace4",
+  "acceptanceSummary": "checkpoint-104-native-acceptance-summary.json",
+  "analysis": "cp104-analysis.json",
+  "notes": "Frozen native evidence copied into CP105 so the architecture-only checkpoint can prove its accepted CP104 baseline without rerunning calibration."
+}

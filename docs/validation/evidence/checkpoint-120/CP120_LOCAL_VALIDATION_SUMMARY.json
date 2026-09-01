@@ -1,0 +1,81 @@
+{
+  "checkpoint": 120,
+  "status": "local_pre_handoff_validation_passed",
+  "acceptedBaseline": 119,
+  "pythonVersion": "3.13.5",
+  "selfTests": {
+    "passed": 109,
+    "failed": 0
+  },
+  "parity": {
+    "passed": 25,
+    "failed": 0
+  },
+  "regressionSmokes": {
+    "cp114": {
+      "variants": 3184,
+      "failedGates": 0
+    },
+    "cp115a": {
+      "variants": 4064,
+      "failedGates": 0
+    },
+    "cp116": {
+      "variants": 2976,
+      "failedGates": 0
+    },
+    "cp118": {
+      "variants": 1824,
+      "failedGates": 0
+    },
+    "cp119": {
+      "variants": 1152,
+      "failedGates": 0
+    }
+  },
+  "cp120Smoke": {
+    "variants": 4284,
+    "trials": 4284,
+    "failedGates": 0
+  },
+  "authoring": {
+    "variants": 4284,
+    "trialsPerVariant": 5,
+    "engagements": 21420,
+    "failedGates": 0,
+    "interpretation": "plumbing_and_directional_only"
+  },
+  "plannedNative": {
+    "variants": 4284,
+    "trialsPerVariant": 2000,
+    "engagements": 8568000
+  },
+  "studyShape": {
+    "missileVariants": 2952,
+    "kineticVariants": 1008,
+    "energyVariants": 324,
+    "primaryTl1ToTl6Variants": 3060,
+    "advancedTl7Variants": 576,
+    "endpointTl8ToTl9Variants": 648,
+    "exactFillBuilds": 135,
+    "targetFixtures": 9,
+    "controlledFixtures": 3,
+    "sensitivityComparisons": 22,
+    "candidateProgressionPaths": 9
+  },
+  "workbookQa": {
+    "sheets": 9,
+    "formulaErrorLiterals": 0,
+    "gridlinesHiddenAll": true,
+    "freezePanesSetAll": true,
+    "renderer": "openpyxl structural QA; artifact renderer unavailable in this runtime"
+  },
+  "productionRuntime": "C#/Godot",
+  "pythonRole": "research/testing/checkpoint validation",
+  "internalDamageCriticalsSimulated": false,
+  "automaticPromotion": false,
+  "acceptedCp119NativeArchiveSha256": "1cd438a3ab74a47a20cee20115f972fa92bf4ac6f2b7a592cf54327ee8f3e18c",
+  "studySha256": "18d1c3997028be058b5ebe4f88947b651f238c0f45959308fa322fa9ce9ad18d",
+  "analysisModuleSha256": "c43df32aee3a5768b5a146b5a3801096474696084aa8ecc6fdb38ef331a11cca",
+  "cliSha256": "e1f40adad792c82955eac08a157ad1dc5292f642bfe20b33b7e8e0f6434b718d"
+}

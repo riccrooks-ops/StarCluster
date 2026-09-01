@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "star-cluster-tl2-computing-sensor-ew-working-profile-v1",
+  "id": "tl2-computing-sensor-ew-working-profile-v0_1",
+  "checkpoint": 82,
+  "status": "validated_working_candidate_not_production_component_data",
+  "purpose": "Machine-readable consolidation of the current TL2 Tactical Computer, Sensor, ECM, and ECCM working candidates supported by Checkpoints 79a, 80, and 81a.",
+  "researchOwnership": {
+    "tacticalComputer": "Computing / Fire Control",
+    "sensor": "Sensors / EW",
+    "ecm": "Sensors / EW",
+    "eccm": "Sensors / EW"
+  },
+  "tacticalComputer": {
+    "ordinaryTargetingAssistanceOperationalPp": 12,
+    "approximateTrackDirectFirePenaltyPp": -25,
+    "evasiveCompensationPp": 0,
+    "degradedOrDisabledConditionMapping": "deferred_holistic_computer_damage_design",
+    "weaponPermissionRequiredForApproximateTrackFire": true,
+    "appliesToOrdinaryMissileTerminalAttacks": false
+  },
+  "sensor": {
+    "discriminationResistance": 1,
+    "rangeStatus": "unchanged_study_fixture_not_tl2_promotion",
+    "rangeFixture": {
+      "passiveFirm": 1,
+      "passiveApproximate": 3,
+      "activeFirm": 3,
+      "activeApproximate": 4,
+      "overloadFirm": 4,
+      "overloadApproximate": 5,
+      "normalActiveTp": 1
+    },
+    "newTl2ActiveModes": "deferred"
+  },
+  "ecm": {
+    "normalRatingCeiling": 2,
+    "tpPerRating": 1,
+    "newTl2OverloadBehavior": "deferred_not_promoted",
+    "newTl2EfficiencyChange": "none"
+  },
+  "eccm": {
+    "normalRatingCeiling": 2,
+    "tpPerRating": 1,
+    "newTl2OverloadBehavior": "deferred_not_promoted",
+    "newTl2EfficiencyChange": "none"
+  },
+  "referenceEnvironment": {
+    "tacticalPowerReference": 5,
+    "reactorSixStatus": "diagnostic_sensitivity_only_not_promoted",
+    "degradedFireGuardrail": "Firm restoration through appropriate ECCM remains materially more effective than the -25 Approximate-track fallback.",
+    "tallViabilityGuardrail": "Advanced systems may create real power pressure but must broaden viable design choices rather than become systematic self-traps."
+  },
+  "acceptedEvidence": [
+    {
+      "checkpoint": "79a",
+      "studyId": "tl2-itc06-sensor-ew-discrimination-isolation",
+      "summarySha256": "eecbdf5a935d984655416c3fe4fae61308493cad778c89b2272f84ea5b761c61"
+    },
+    {
+      "checkpoint": "80",
+      "studyId": "tl2-itc07-ew-power-pressure-tall-viability",
+      "summarySha256": "596a90b51ae73691e5571b270785f445faed7ed443177f52aa5effff429cb992"
+    },
+    {
+      "checkpoint": "81a",
+      "studyId": "tl2-itc08-tactical-computer-ew-integration-permutations",
+      "summarySha256": "e0e351298a5c276179b20a72376aeef02a93c9c995031acebfab4d6b643d1c6c"
+    }
+  ],
+  "explicitNonPromotions": [
+    "No complete TL2 production combat profile is created by this file.",
+    "No TL2 Sensor physical-range increase is promoted.",
+    "No TL2 reactor-output increase is promoted.",
+    "No new TL2 Sensor/ECM/ECCM overload mode is promoted.",
+    "No weapon is granted degraded fire merely because the Tactical Computer supports the penalty.",
+    "Ordinary missile Firm-terminal rules remain unchanged."
+  ],
+  "historicalCompatibility": "Historical study/runtime identifiers named tl2-production are retained for reproducibility and are not current design authority merely because of their identifier."
+}

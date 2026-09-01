@@ -1,0 +1,85 @@
+{
+  "checkpoint": 84,
+  "suiteTier": "must_always_run",
+  "acceptedBaseline": "83",
+  "blockingBalanceTargets": false,
+  "normal": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 216,
+    "substantiveTrials": 2160000,
+    "smokeVariants": 216,
+    "smokeTrials": 216,
+    "totalTrialExecutions": 2160216
+  },
+  "deepCalibration": {
+    "stageCount": 36,
+    "monteCarloVariantCount": 1910,
+    "substantiveTrials": 19100000,
+    "smokeVariants": 366,
+    "smokeTrials": 366,
+    "totalTrialExecutions": 19100366
+  },
+  "acceptedTl2WorkingPackage": {
+    "tacticalComputerTargetingPp": 12,
+    "degradedFirePenaltyPp": 25,
+    "evasiveCompensationPp": 0,
+    "sensorDiscriminationResistance": 1,
+    "ecmNormalCeiling": 2,
+    "eccmNormalCeiling": 2,
+    "ewTpPerRating": 1,
+    "earlyPracticalFusionOperationalTp": 6,
+    "earlyPracticalFusionSpace": 6
+  },
+  "shieldCapacityControls": {
+    "tl1ReferenceCapacity": 2,
+    "primaryTl2CandidateCapacity": 3,
+    "upperSensitivityCapacity": 4,
+    "shieldGeneratorSpaceHeld": 3,
+    "baseRechargeHeld": 1,
+    "tacticalRechargePerPowerHeld": 1,
+    "tacticalRechargePowerCapHeld": 2,
+    "shieldArmorHeld": 0,
+    "hardeningChanged": false,
+    "conditionMappingChanged": false,
+    "productionShieldPromoted": false
+  },
+  "permutationSuiteControls": {
+    "suiteId": "technology-integration-permutation-suite-v0_4",
+    "studyId": "tl2-itc10-shield-capacity-power-integration-permutations",
+    "sideAWeaponFamilies": [
+      "Kinetic",
+      "Energy"
+    ],
+    "opponentFamilies": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "geometryCount": 3,
+    "informationControlEnvironments": [
+      "firm-reference",
+      "tall-dr1-eccm1"
+    ],
+    "shieldCapacities": [
+      2,
+      3,
+      4
+    ],
+    "reactorOutputs": [
+      5,
+      6
+    ],
+    "comparisonGroupCount": 18,
+    "variantsPerComparisonGroup": 12,
+    "pairedCommonRandomStreams": true,
+    "statefulTurnPowerPlanning": true,
+    "automaticFullCartesianRerun": false
+  },
+  "promotionBoundary": {
+    "automaticPromotion": false,
+    "shield3MayAdvanceAfterHumanReview": true,
+    "shield4IsUpperSensitivityByDefault": true,
+    "otherShieldPropertiesRemainDeferred": true,
+    "cp83ReactorWorkingCandidateCarriedForward": true
+  }
+}

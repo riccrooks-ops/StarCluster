@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "93",
+  "acceptedUtc": "2026-08-12T20:18:58.3188107Z",
+  "status": "Success",
+  "sdk": {
+    "expected": "8.0.423",
+    "actual": "8.0.423"
+  },
+  "build": {
+    "succeeded": true,
+    "warnings": 0,
+    "errors": 0
+  },
+  "tests": {
+    "total": 863,
+    "passed": 863,
+    "failed": 0,
+    "skipped": 0
+  },
+  "runner": {
+    "configuredStages": 13,
+    "passedStages": 13,
+    "failedStages": 0,
+    "deterministicCases": 7,
+    "mechanicsCases": 90,
+    "selfTests": 57,
+    "failedGates": 0
+  },
+  "primaryStudy": {
+    "id": "tl2-itc16-cross-tl-matched-readiness-space-screening",
+    "variantCount": 720,
+    "trialsPerVariant": 2000,
+    "totalTrials": 1440000
+  },
+  "checkpointDefinitionSha256": "160adb4fee4fb419136916da0b99e7ebeb2f495c43513033fc93dd0852e970cb",
+  "repositoryManifestSha256": "b1653b049655961474518872286c6bb044d83bcf3d349c5ecdce0224f118baec",
+  "sourceResultsArchive": "user-supplied checkpoint-93.zip",
+  "note": "Compact accepted-native provenance embedded by Checkpoint 94. Full CP93 results remain external to the repository archive. CP93 established v0.10 matched/readiness/Space/population analysis and exposed the need for adaptive within-cell sampling, individual observed-engagement diagnostics, and mover-order-neutral reporting."
+}

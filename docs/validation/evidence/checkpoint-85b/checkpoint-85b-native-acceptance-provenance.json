@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": "85b",
+  "purpose": "Accepted native evidence anchoring the CP86 continuation baseline. Detailed output remains in the external result bundle.",
+  "acceptanceSummary": {
+    "status": "Success",
+    "checkpointDefinition": "tools/calibration/checkpoints/checkpoint-85b.json",
+    "checkpointDefinitionSha256": "57fefdcf631da199cca52efa5e5a60e411c357688d227f4e829b0b0b1b59c073",
+    "checkpointManifest": "CHECKPOINT_85b_SHA256SUMS.txt",
+    "checkpointManifestSha256": "88b21a2879847a8c50a454b9f904e6e490a2a803b59ce6e083121b275f27ac45",
+    "sdkExpected": "8.0.423",
+    "sdkActual": "8.0.423",
+    "buildWarnings": 0,
+    "buildErrors": 0,
+    "testsTotal": 863,
+    "testsPassed": 863,
+    "testsFailed": 0,
+    "runnerStagesPassed": 11,
+    "runnerStagesFailed": 0,
+    "selfTests": 50,
+    "failedGates": 0
+  },
+  "substantiveStudy": {
+    "id": "tl2-itc11-armor-ap-ai-shield-integration-permutations",
+    "variantCount": 288,
+    "trialsPerVariant": 10000,
+    "totalTrials": 2880000,
+    "summarySha256": "7e381283cfdb8ba8bfe85ed9146e7b9c4fb662cef6f4e2005ec98c2bfb96851b"
+  },
+  "designDisposition": {
+    "armorAp0Ai5": "locally_validated_working_candidate",
+    "armorAp1Ai4": "experimental_deferred_candidate",
+    "armorAp1Ai5": "upper_integration_sensitivity_not_promoted",
+    "shieldCapacity3Space3": "carried_locally_validated_working_candidate",
+    "reactor6Tp6Space": "carried_locally_validated_working_candidate",
+    "deepCalibrationRequired": false
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "checkpoint": 83,
+  "suiteTier": "must_always_run",
+  "acceptedBaseline": "82a",
+  "blockingBalanceTargets": false,
+  "normal": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 96,
+    "substantiveTrials": 960000,
+    "smokeVariants": 96,
+    "smokeTrials": 96,
+    "totalTrialExecutions": 960096
+  },
+  "deepCalibration": {
+    "stageCount": 36,
+    "monteCarloVariantCount": 1790,
+    "substantiveTrials": 17900000,
+    "smokeVariants": 246,
+    "smokeTrials": 246,
+    "totalTrialExecutions": 17900246
+  },
+  "validatedInformationControlWorkingCandidates": {
+    "tacticalComputerTargetingPp": 12,
+    "degradedFirePenaltyPp": 25,
+    "evasiveCompensationPp": 0,
+    "sensorDiscriminationResistance": 1,
+    "ecmNormalCeiling": 2,
+    "eccmNormalCeiling": 2,
+    "ewTpPerRating": 1
+  },
+  "powerReactorCandidateControls": {
+    "tl1ReferenceRole": "Peak Fission",
+    "tl2CandidateRole": "Early Practical Fusion",
+    "mainReactorSpaceHeld": 6,
+    "tl1OperationalTp": 5,
+    "tl2CandidateOperationalTp": 6,
+    "sideBOperationalTpHeld": 5,
+    "degradedOutputPromoted": false,
+    "disabledOutputPromoted": false,
+    "overloadChanged": false,
+    "efficiencyChanged": false,
+    "storageChanged": false,
+    "auxiliaryGenerationChanged": false,
+    "productionTl2ReactorPromoted": false
+  },
+  "permutationSuiteControls": {
+    "suiteId": "technology-integration-permutation-suite-v0_3",
+    "studyId": "tl2-itc09-power-reactor-progression-permutations",
+    "weaponFamilies": [
+      "Kinetic",
+      "Energy"
+    ],
+    "opponentFamilies": [
+      "Missile",
+      "Kinetic"
+    ],
+    "geometryCount": 3,
+    "informationControlEnvironments": [
+      "firm-reference",
+      "wide-eccm2",
+      "tall-dr1-eccm1",
+      "degraded-p25"
+    ],
+    "reactorOutputs": [
+      5,
+      6
+    ],
+    "comparisonGroupCount": 12,
+    "variantsPerComparisonGroup": 8,
+    "pairedCommonRandomStreams": true,
+    "dependencyRelevantSubmatrixOnly": true,
+    "automaticFullCartesianRerun": false
+  },
+  "degradedFireControls": {
+    "studyOnlyPenaltyPercentagePoints": 25,
+    "productionWeaponDegradedFireEnabled": false,
+    "eccmEconomicValueGuardrailRequired": true
+  },
+  "missileControls": {
+    "ordinaryTerminalAttackRequiresFirm": true,
+    "directFireDegradedTraitAppliesToMissiles": false,
+    "approximateTargetMissileCapabilityImplemented": false
+  },
+  "promotionBoundary": {
+    "automaticPromotion": false,
+    "candidateMayAdvanceToValidatedWorkingAfterHumanReview": true,
+    "otherReactorPropertiesRemainDeferred": true
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "checkpoint": 81,
+  "suiteTier": "must_always_run",
+  "acceptedBaseline": "80",
+  "blockingBalanceTargets": false,
+  "normal": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 96,
+    "substantiveTrials": 960000,
+    "smokeVariants": 96,
+    "smokeTrials": 96,
+    "totalTrialExecutions": 960096
+  },
+  "deepCalibration": {
+    "stageCount": 33,
+    "monteCarloVariantCount": 1694,
+    "substantiveTrials": 16940000,
+    "smokeVariants": 150,
+    "smokeTrials": 150,
+    "totalTrialExecutions": 16940150
+  },
+  "candidateControls": {
+    "tl1TacticalComputerTargetingPp": 10,
+    "tl2CandidateTacticalComputerTargetingPp": 12,
+    "tl1TacticalComputerDegradedFirePenaltyPercentagePoints": 25,
+    "evasiveCompensationPp": 0,
+    "sensorRangeChanged": false,
+    "sensorOverloadChanged": false,
+    "ewOverloadChanged": false,
+    "tl2CandidateSensorDiscriminationResistance": 1,
+    "tl2CandidateNormalEwRating": 2,
+    "ewPowerPerRating": 1,
+    "productionReactorOutput": 5,
+    "productionTl2ValuesPromoted": false
+  },
+  "permutationSuiteControls": {
+    "suiteId": "technology-integration-permutation-suite-v0.1",
+    "studyId": "tl2-itc08-tactical-computer-ew-integration-permutations",
+    "weaponFamilies": [
+      "Kinetic",
+      "Energy"
+    ],
+    "opponentFamilies": [
+      "Missile",
+      "Kinetic"
+    ],
+    "geometryCount": 3,
+    "ewPackages": [
+      "firm-reference",
+      "wide-eccm2",
+      "tall-dr1-eccm1",
+      "degraded-p25"
+    ],
+    "tacticalComputerCandidatesPp": [
+      10,
+      12
+    ],
+    "comparisonGroupCount": 12,
+    "variantsPerComparisonGroup": 8,
+    "pairedCommonRandomStreams": true,
+    "dependencyRelevantSubmatrixOnly": true,
+    "automaticFullCartesianRerun": false
+  },
+  "degradedFireControls": {
+    "studyOnlyPenaltyPercentagePoints": 25,
+    "productionWeaponDegradedFireEnabled": false,
+    "eccmEconomicValueGuardrailRequired": true
+  },
+  "missileControls": {
+    "ordinaryTerminalAttackRequiresFirm": true,
+    "directFireDegradedTraitAppliesToMissiles": false,
+    "approximateTargetMissileCapabilityImplemented": false
+  }
+}

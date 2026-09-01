@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "authority": "current-design",
+  "profiles": [
+    {
+      "id": "tl1-tactical-computer-fire-control",
+      "technologyLevel": 1,
+      "approximateTrackDirectFireAccuracyPenaltyPercentagePoints": 25,
+      "requiresExplicitWeaponCapability": true,
+      "appliesToMissileTerminalAttacks": false,
+      "conditionMappingStatus": "deferred"
+    }
+  ],
+  "guardrails": {
+    "degradedFireRemainsMateriallyInferiorToFirm": true,
+    "eccmCounterplayMustRemainEconomicallyRelevant": true,
+    "higherTechnologyLevelsAreNotAssumedLinear": true,
+    "revalidateWhenComputerEcmEccmOrSensorProgressionChanges": true
+  }
+}

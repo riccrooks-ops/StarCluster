@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "star-cluster-cp166-change-scope-v0.1",
+  "base": "CP165-CR3",
+  "productionRuntimeFilesModified": 0,
+  "currentAuthorityFilesModified": 0,
+  "existingRepositoryFilesModified": [
+    "README.md",
+    "CHAT_README.md"
+  ],
+  "newFiles": [
+    "docs/validation/Checkpoint_166_Same_TL_Whole_System_Architecture_And_Tactical_Diagnostic.md",
+    "docs/validation/evidence/checkpoint-166/CP165_ACCEPTED_NATIVE_PROVENANCE.json",
+    "docs/validation/evidence/checkpoint-166/CP166_AUTHORING_VALIDATION_SUMMARY.json",
+    "docs/validation/evidence/checkpoint-166/CP166_CHANGE_SCOPE.json",
+    "docs/validation/evidence/checkpoint-166/CP166_CURRENT_AUTHORITY_SHA256.json",
+    "docs/validation/evidence/checkpoint-166/cp166_same_tl_whole_system_study_v0_1.json",
+    "tools/checkpoints/checkpoint-166/apply_checkpoint_166.ps1",
+    "tools/checkpoints/checkpoint-166/checkpoint_166_definition.json",
+    "tools/checkpoints/checkpoint-166/preflight_checkpoint_166.py",
+    "tools/checkpoints/checkpoint-166/test_checkpoint_166_contract.py",
+    "tools/simulation/starcluster_research/current_working_combat.py",
+    "tools/simulation/starcluster_research/same_tl_whole_system.py",
+    "tools/simulation/tests/test_cp166_same_tl_whole_system.py"
+  ],
+  "removedFiles": [],
+  "tuningAllowed": false,
+  "automaticPromotion": false
+}

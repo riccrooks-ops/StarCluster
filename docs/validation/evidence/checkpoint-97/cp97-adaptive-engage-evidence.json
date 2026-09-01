@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": 97,
+  "status": "native_accepted",
+  "checkpointDefinitionSha256": "d261eb01efde0919bb55f36e9fa58a5cf8885845af89310c12a92ebba0689055",
+  "repositoryManifestSha256": "888e8c85f1fa3db5b95abc435d1bc51103ef7f7b99d5f79be5c8492bd6269ad4",
+  "nativeResultsZipSha256": "4f73d0af4fb297d51af986412b0e5e058df774948ddd56f1ed97d742e8cc00c3",
+  "sdk": "8.0.423",
+  "buildWarnings": 0,
+  "buildErrors": 0,
+  "tests": {
+    "total": 875,
+    "passed": 875,
+    "failed": 0
+  },
+  "runnerStages": {
+    "configured": 15,
+    "passed": 15,
+    "failed": 0
+  },
+  "selfTests": 62,
+  "failedGates": 0,
+  "substantiveStudy": {
+    "id": "tl2-itc17-adaptive-engage-encounter-foundation",
+    "variants": 36,
+    "trialsPerVariant": 3000,
+    "totalTrials": 108000,
+    "summarySha256": "24b2d6745dc71995b12a5cc449da3a8dd4239d08ec9bfbcac04a2e38af7a6bbc"
+  },
+  "regressionHashes": {
+    "cp97SmokeSummarySha256": "3ff34adf7b44b9875faaf8c517ad02427824fe55b55ba4ed7cc221aefdb88fa0",
+    "acceptedCp96OneTrialSummarySha256": "084a3e719f25c070c87e083a3ea5d2de34ca7b4da8b4f7a0620c1b3c79d8cb7d"
+  }
+}

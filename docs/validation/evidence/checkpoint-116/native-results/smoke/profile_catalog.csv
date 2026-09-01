@@ -1,0 +1,48 @@
+family,profile_id,profile_class,generation,study_tls,damage,damage_delta,spen,spen_delta,apen,apen_delta,accuracy_delta,packets,ordered_packets,shield_bonus_damage,shield_armor_reduction,recharge_suppression,role
+Missile,gp-current,legacy_gp_control,legacy,"4,5,7,9",,0,,0,,0,0,1,[],0,0,0,Current CP109 D5/SP1/AP2 GP control retained only as the legacy baseline.
+Missile,missile-fission-gp-yield-a,gp_pure_yield,fission,4,6,0,1,0,2,0,0,1,[],0,0,0,Pure-yield fission GP lower envelope: energetic maturation without added SPEN/APEN.
+Missile,missile-fission-gp-yield-b,gp_pure_yield,fission,4,7,0,1,0,2,0,0,1,[],0,0,0,"Pure-yield fission GP upper envelope: larger packet, baseline penetration unchanged."
+Missile,missile-fission-gp-penetration-control,gp_penetration_bundled_control,fission,4,6,0,2,0,3,0,0,1,[],0,0,0,Matched-DAM control bundling both extra SPEN and APEN into fission GP; measures compounded specialization leakage.
+Missile,missile-fission-specialist-armor,specialist_armor,fission,4,6,0,0,0,4,0,0,1,[],0,0,0,Generational armor specialist: trades Shield performance and one yield point versus the fission GP anchor for higher APEN.
+Missile,missile-fission-specialist-shield-bypass,specialist_shield_bypass,fission,4,6,0,3,0,0,0,0,1,[],0,0,0,Generational Shield-bypass specialist: trades Armor performance and one yield point for high SPEN.
+Missile,missile-fission-specialist-shield-pressure,specialist_shield_pressure,fission,4,5,0,1,0,0,0,0,1,[],4,0,0,Generational Shield-pressure specialist: lower structural packet plus Shield-capacity-specific damage.
+Missile,missile-fission-specialist-shield-recharge,specialist_shield_recharge,fission,4,6,0,1,0,1,0,0,1,[],0,0,3,Generational Shield-sustain specialist: modest structural tradeoff plus bounded recharge suppression.
+Missile,missile-fusion-gp-yield-a,gp_pure_yield,fusion,5,7,0,1,0,2,0,0,1,[],0,0,0,Pure-yield fusion GP lower envelope: energetic maturation without added SPEN/APEN.
+Missile,missile-fusion-gp-yield-b,gp_pure_yield,fusion,5,8,0,1,0,2,0,0,1,[],0,0,0,"Pure-yield fusion GP upper envelope: larger packet, baseline penetration unchanged."
+Missile,missile-fusion-gp-penetration-control,gp_penetration_bundled_control,fusion,5,7,0,2,0,3,0,0,1,[],0,0,0,Matched-DAM control bundling both extra SPEN and APEN into fusion GP; measures compounded specialization leakage.
+Missile,missile-fusion-specialist-armor,specialist_armor,fusion,5,7,0,0,0,4,0,0,1,[],0,0,0,"Generational armor specialist: contemporary fusion yield minus one, lower Shield performance, higher APEN."
+Missile,missile-fusion-specialist-shield-bypass,specialist_shield_bypass,fusion,5,7,0,3,0,0,0,0,1,[],0,0,0,"Generational Shield-bypass specialist: contemporary fusion yield minus one, high SPEN, weak Armor penetration."
+Missile,missile-fusion-specialist-shield-pressure,specialist_shield_pressure,fusion,5,6,0,1,0,0,0,0,1,[],5,0,0,Generational Shield-pressure specialist with contemporary fusion-era structural packet and extra Shield-capacity pressure.
+Missile,missile-fusion-specialist-shield-recharge,specialist_shield_recharge,fusion,5,7,0,1,0,1,0,0,1,[],0,0,4,Generational Shield-sustain specialist with bounded recharge suppression and reduced Armor penetration.
+Missile,missile-antimatter-gp-yield-a,gp_pure_yield,antimatter,"7,9",9,0,1,0,2,0,0,1,[],0,0,0,Pure-yield antimatter GP lower envelope: energetic maturation without added SPEN/APEN.
+Missile,missile-antimatter-gp-yield-b,gp_pure_yield,antimatter,"7,9",10,0,1,0,2,0,0,1,[],0,0,0,"Pure-yield antimatter GP upper envelope: high raw yield, baseline penetration unchanged."
+Missile,missile-antimatter-gp-penetration-control,gp_penetration_bundled_control,antimatter,"7,9",9,0,3,0,3,0,0,1,[],0,0,0,Matched-DAM control bundling strong SPEN and APEN into antimatter GP; measures compounded specialization leakage.
+Missile,missile-antimatter-specialist-armor,specialist_armor,antimatter,"7,9",9,0,0,0,4,0,0,1,[],0,0,0,"Generational armor specialist: contemporary antimatter yield minus one, poor Shield performance, higher APEN."
+Missile,missile-antimatter-specialist-shield-bypass,specialist_shield_bypass,antimatter,"7,9",9,0,4,0,0,0,0,1,[],0,0,0,"Generational Shield-bypass specialist: contemporary antimatter yield minus one, strong SPEN, weak Armor penetration."
+Missile,missile-antimatter-specialist-shield-pressure,specialist_shield_pressure,antimatter,"7,9",8,0,1,0,0,0,0,1,[],6,0,0,Generational Shield-pressure specialist with a still-modern structural packet plus extra Shield-capacity pressure.
+Missile,missile-antimatter-specialist-shield-recharge,specialist_shield_recharge,antimatter,"7,9",9,0,1,0,1,0,0,1,[],0,0,5,Generational Shield-sustain specialist with bounded recharge suppression and reduced Armor penetration.
+Missile,missile-static-specialist-armor,legacy_static_specialist,static_cp115,"4,5,7,9",5,0,1,0,3,0,0,1,[],0,0,0,CP115-style static shaped-warhead control retained to measure artificial specialist obsolescence.
+Missile,missile-static-specialist-shield-pressure,legacy_static_specialist,static_cp115,"4,5,7,9",3,0,1,0,0,0,0,1,[],4,0,0,CP115-style static Shield-pressure control.
+Missile,missile-static-specialist-shield-recharge,legacy_static_specialist,static_cp115,"4,5,7,9",4,0,1,0,0,0,0,1,[],0,0,4,CP115-style static recharge-suppression control.
+Missile,missile-static-specialist-shield-armor,legacy_static_specialist,static_cp115,"4,5,7,9",4,0,1,0,0,0,0,1,[],0,1,0,CP115-style static Shield-Armor-reduction control.
+Missile,missile-fission-gp-spen-control,gp_single_axis_control,fission,4,6,0,2,0,2,0,0,1,[],0,0,0,Matched-DAM fission GP control adding SPEN only.
+Missile,missile-fission-gp-apen-control,gp_single_axis_control,fission,4,6,0,1,0,3,0,0,1,[],0,0,0,Matched-DAM fission GP control adding APEN only.
+Missile,missile-fusion-gp-spen-control,gp_single_axis_control,fusion,5,7,0,2,0,2,0,0,1,[],0,0,0,Matched-DAM fusion GP control adding SPEN only.
+Missile,missile-fusion-gp-apen-control,gp_single_axis_control,fusion,5,7,0,1,0,3,0,0,1,[],0,0,0,Matched-DAM fusion GP control adding APEN only.
+Missile,missile-antimatter-gp-spen-control,gp_single_axis_control,antimatter,"7,9",9,0,3,0,2,0,0,1,[],0,0,0,Matched-DAM antimatter GP control adding SPEN only.
+Missile,missile-antimatter-gp-apen-control,gp_single_axis_control,antimatter,"7,9",9,0,1,0,3,0,0,1,[],0,0,0,Matched-DAM antimatter GP control adding APEN only.
+Kinetic,gp-current,gp_control,,"6,8,9",,0,,0,,0,0,1,[],0,0,0,Current contemporary Kinetic projectile control.
+Kinetic,kinetic-smart-plus10,automatic_accuracy,,"6,8,9",,0,,0,,0,10,1,[],0,0,0,Automatic maneuvering/smart-projectile +10 ACC control.
+Kinetic,kinetic-dense-b,specialist_armor,,"6,8,9",,-1,,-1,,2,0,1,[],0,0,0,"Dense penetrator tradeoff: -1 damage, -1 SPEN, +2 APEN."
+Kinetic,kinetic-saturation-tl6-a,specialist_coverage,,6,3,0,1,0,0,0,10,2,[],0,0,0,TL6 contemporary coverage package: two D3 packets and +10 ACC.
+Kinetic,kinetic-saturation-tl6-b,specialist_coverage,,6,2,0,0,0,0,0,15,3,[],0,0,0,TL6 extreme coverage package: three D2 packets and +15 ACC.
+Kinetic,kinetic-saturation-tl8-a,specialist_coverage,,8,3,0,1,0,0,0,15,2,[],0,0,0,TL8 coverage package derived from the contemporary D6 projectile budget: two D3 packets and +15 ACC.
+Kinetic,kinetic-saturation-tl8-b,specialist_coverage,,8,2,0,0,0,0,0,20,3,[],0,0,0,TL8 high-coverage package: three D2 packets and +20 ACC.
+Kinetic,kinetic-saturation-tl9-a,specialist_coverage,,9,4,0,1,0,0,0,15,2,[],0,0,0,TL9 matured coverage package: two D4 packets and +15 ACC.
+Kinetic,kinetic-saturation-tl9-b,specialist_coverage,,9,3,0,0,0,0,0,20,3,[],0,0,0,TL9 extreme coverage package: three D3 packets and +20 ACC.
+Kinetic,kinetic-tandem-tl6,specialist_tandem,,6,,0,,0,,0,5,1,"[{""damage"":2,""spen"":2,""apen"":0},{""damage"":4,""spen"":0,""apen"":3}]",0,0,0,TL6 ordered Shield-facing precursor then Armor-facing penetrator; one attack roll.
+Kinetic,kinetic-tandem-tl6-reverse,sequencing_control,,6,,0,,0,,0,5,1,"[{""damage"":4,""spen"":0,""apen"":3},{""damage"":2,""spen"":2,""apen"":0}]",0,0,0,TL6 sequencing control with identical packet budget reversed.
+Kinetic,kinetic-tandem-tl8,specialist_tandem,,8,,0,,0,,0,5,1,"[{""damage"":3,""spen"":3,""apen"":0},{""damage"":4,""spen"":0,""apen"":4}]",0,0,0,TL8 matured tandem package: Shield-facing D3/SP3 precursor then D4/AP4 penetrator.
+Kinetic,kinetic-tandem-tl8-reverse,sequencing_control,,8,,0,,0,,0,5,1,"[{""damage"":4,""spen"":0,""apen"":4},{""damage"":3,""spen"":3,""apen"":0}]",0,0,0,TL8 sequencing control with identical packet budget reversed.
+Kinetic,kinetic-tandem-tl9,specialist_tandem,,9,,0,,0,,0,5,1,"[{""damage"":3,""spen"":4,""apen"":0},{""damage"":5,""spen"":0,""apen"":5}]",0,0,0,TL9 matured tandem package: Shield-facing D3/SP4 precursor then D5/AP5 penetrator.
+Kinetic,kinetic-tandem-tl9-reverse,sequencing_control,,9,,0,,0,,0,5,1,"[{""damage"":5,""spen"":0,""apen"":5},{""damage"":3,""spen"":4,""apen"":0}]",0,0,0,TL9 sequencing control with identical packet budget reversed.

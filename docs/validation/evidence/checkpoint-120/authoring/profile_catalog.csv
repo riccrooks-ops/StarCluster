@@ -1,0 +1,40 @@
+family,profile_id,classification,study_tls,role,damage,spen,apen,accuracy_delta,guidance_delta,packets,pds_intercept_penalty_pp,first_tl_effective_total_nominal_damage
+Energy,energy-native,reference,"1,2,3,4,5,6,7,8,9",Native Energy reference; unchanged.,mode-driven,native,native,0,0,1,0,mode-driven
+Missile,gp-current,reference,"1,2,3,4,5,6,7,8,9",Current CP109 D5/SP1/AP2 GP Missile reference.,native,native,native,0,0,1,0,5
+Missile,missile-gp-d4,gp_yield_lower_control,"1,2",Lower-yield D4 control with fixed GP SPEN/APEN.,4,1,2,0,0,1,0,4
+Missile,missile-gp-d6,gp_yield_sensitivity,"1,2,3,4,5,6",D6 GP yield sensitivity with fixed GP SPEN/APEN.,6,1,2,0,0,1,0,6
+Missile,missile-gp-d7,gp_yield_sensitivity,"3,4,5,6,7,8,9",D7 GP yield sensitivity with fixed GP SPEN/APEN.,7,1,2,0,0,1,0,7
+Missile,missile-gp-d8,gp_yield_sensitivity,"5,6,7,8,9",D8 GP yield sensitivity with fixed GP SPEN/APEN.,8,1,2,0,0,1,0,8
+Missile,missile-gp-d9,gp_yield_upper_control,"7,8,9",D9 upper yield control with fixed GP SPEN/APEN; advanced/endpoint sensitivity only.,9,1,2,0,0,1,0,9
+Missile,sw-e-d2-a0-p0,swarmer_main_effect,"2,3",Early packet-only anchor.,2,0,0,0,0,2,0,4
+Missile,sw-e-d2-a5-p0,swarmer_main_effect,"2,3",Early +5 coverage control.,2,0,0,0,5,2,0,4
+Missile,sw-e-d2-a10-p0,swarmer_main_effect,"2,3",Early +10 coverage control.,2,0,0,0,10,2,0,4
+Missile,sw-e-d2-a10-p5,swarmer_main_effect,"2,3",Early +10 coverage with modest PDS saturation.,2,0,0,0,10,2,5,4
+Missile,sw-e-d2-a10-p10,swarmer_candidate_region,"2,3",Early +10 coverage with stronger PDS saturation.,2,0,0,0,10,2,10,4
+Missile,sw-e-d2-a15-p10,swarmer_upper_control,"2,3",Early high-coverage control.,2,0,0,0,15,2,10,4
+Missile,sw-e-d3-a10-p10,swarmer_packet_upper_control,3,TL3 larger-packet maturation control.,3,0,0,0,10,2,10,6
+Missile,sw-m-d2-a10-p10,swarmer_packet_lower_control,"4,5",Mid lower-packet control.,2,0,0,0,10,2,10,4
+Missile,sw-m-d3-a0-p0,swarmer_main_effect,"4,5",Mid packet-only anchor.,3,0,0,0,0,2,0,6
+Missile,sw-m-d3-a5-p0,swarmer_main_effect,"4,5",Mid +5 coverage control.,3,0,0,0,5,2,0,6
+Missile,sw-m-d3-a10-p0,swarmer_main_effect,"4,5",Mid +10 coverage control.,3,0,0,0,10,2,0,6
+Missile,sw-m-d3-a10-p5,swarmer_main_effect,"4,5",Mid +10 coverage with modest PDS saturation.,3,0,0,0,10,2,5,6
+Missile,sw-m-d3-a10-p10,swarmer_candidate_region,"4,5",Mid +10 coverage with stronger PDS saturation.,3,0,0,0,10,2,10,6
+Missile,sw-m-d3-a15-p10,swarmer_upper_control,"4,5",Mid high-coverage control.,3,0,0,0,15,2,10,6
+Missile,sw-m-d4-a10-p10,swarmer_packet_upper_control,"4,5",Mid larger-packet control; intentionally over contemporary payload in some lanes.,4,0,0,0,10,2,10,8
+Missile,sw-u-d3-a15-p15,swarmer_packet_lower_control,"6,7",Mature conservative-packet control with strong coverage/PDS saturation.,3,0,0,0,15,2,15,6
+Missile,sw-u-d4-a0-p0,swarmer_main_effect,"6,7",Mature packet-only anchor.,4,0,0,0,0,2,0,8
+Missile,sw-u-d4-a5-p0,swarmer_main_effect,"6,7",Mature +5 coverage control.,4,0,0,0,5,2,0,8
+Missile,sw-u-d4-a10-p0,swarmer_main_effect,"6,7",Mature +10 coverage control.,4,0,0,0,10,2,0,8
+Missile,sw-u-d4-a10-p5,swarmer_main_effect,"6,7",Mature +10 coverage with light PDS saturation.,4,0,0,0,10,2,5,8
+Missile,sw-u-d4-a10-p10,swarmer_candidate_region,"6,7",Mature +10 coverage with moderate PDS saturation.,4,0,0,0,10,2,10,8
+Missile,sw-u-d4-a10-p15,swarmer_main_effect,"6,7",Mature +10 coverage with strong PDS saturation.,4,0,0,0,10,2,15,8
+Missile,sw-u-d4-a15-p15,swarmer_upper_control,"6,7",Mature high-coverage/high-saturation control.,4,0,0,0,15,2,15,8
+Missile,sw-u-d5-a15-p15,swarmer_packet_upper_control,6,TL6 intentionally over-budget packet control to identify raw-payload contamination.,5,0,0,0,15,2,15,10
+Missile,sw-x-d3-a15-p15,swarmer_endpoint_control,"8,9",Endpoint conservative packet control.,3,0,0,0,15,2,15,6
+Missile,sw-x-d4-a15-p15,swarmer_endpoint_control,"8,9",Endpoint mature packet control; no further branch escalation.,4,0,0,0,15,2,15,8
+Kinetic,gp-current,reference,"1,2,3,4,5,6,7,8,9",Current same-TL Kinetic projectile reference.,native,native,native,0,0,1,0,4
+Kinetic,kinetic-acc-plus5,smart_accuracy_sensitivity,"4,5,6,7,8,9",Automatic +5 ACC control; no DAM/SPEN/APEN change.,native,native,native,5,0,1,0,5
+Kinetic,kinetic-acc-plus10,smart_accuracy_sensitivity,"4,5,6,7",Automatic +10 ACC upper sensitivity control.,native,native,native,10,0,1,0,5
+Kinetic,kinetic-acc-plus15,smart_accuracy_upper_control,"4,5,6",Automatic +15 ACC upper-bound control in primary TLs.,native,native,native,15,0,1,0,5
+Kinetic,kinetic-damage-plus1,single_axis_damage_control,"4,5,6",Single-axis +1 DAM control to distinguish accelerator/packet growth from smart guidance.,native,native,native,0,0,1,0,6
+Kinetic,kinetic-apen-plus1,single_axis_apen_control,"4,5,6",Single-axis +1 APEN control to expose physical-penetration sensitivity.,native,native,native,0,0,1,0,5

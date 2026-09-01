@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "trialsPerVariant": 100,
+  "variants": 1188,
+  "engagements": 118800,
+  "csvAndJsonlOutputsCompared": 11,
+  "byteForByteIdentical": true,
+  "analysisSemanticallyIdenticalIgnoringElapsedSeconds": true,
+  "note": "The finalized CP111 study/code was rerun after instrumentation and movement/PDS consumer fixes. All deterministic CSV/JSONL evidence reproduced byte-for-byte; analysis content reproduced semantically with elapsedSeconds excluded."
+}

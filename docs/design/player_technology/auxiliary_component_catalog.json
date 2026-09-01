@@ -1,0 +1,494 @@
+{
+  "schemaVersion": "1.0",
+  "id": "starcluster-current-auxiliary-component-catalog",
+  "checkpoint": 165,
+  "status": "CURRENT_WORKING_DESIGN_PRE_WHOLE_SYSTEM_PROMOTION",
+  "naming": {
+    "apu": "APU means Auxiliary Power Unit: 2-Space Tactical Power augmentation. Older core-power-only naming is retired to archive."
+  },
+  "components": [
+    {
+      "id": "apu",
+      "name": "Auxiliary Power Unit (APU)",
+      "firstTl": 1,
+      "space": 2,
+      "status": "CURRENT_WORKING_SELECTED_POWER_CLOSURE_CP164",
+      "mechanic": "Independent auxiliary tactical-power generator; Operational output stacks additively.",
+      "byTl": {
+        "1": {
+          "operationalTp": 1
+        },
+        "2": {
+          "operationalTp": 1
+        },
+        "3": {
+          "operationalTp": 1
+        },
+        "4": {
+          "operationalTp": 1
+        },
+        "5": {
+          "operationalTp": 2
+        },
+        "6": {
+          "operationalTp": 2
+        },
+        "7": {
+          "operationalTp": 2
+        },
+        "8": {
+          "operationalTp": 2
+        },
+        "9": {
+          "operationalTp": 2
+        }
+      },
+      "stacking": "No arbitrary count cap; damaged behavior remains whole-system integration."
+    },
+    {
+      "status": "CURRENT_WORKING_SELECTED_PRE_WHOLE_SYSTEM_PROMOTION",
+      "sourceCheckpoint": 158,
+      "sourceLadder": "SHIELD_BATTERY-L8",
+      "firstTl": 1,
+      "space": 1,
+      "mechanic": "finite emergency Shield restoration; automatic research-AI discharge below 50 percent Shield only; finite charges",
+      "byTl": {
+        "1": {
+          "restore": 2,
+          "charges": 1,
+          "tp": 0
+        },
+        "2": {
+          "restore": 2,
+          "charges": 1,
+          "tp": 0
+        },
+        "3": {
+          "restore": 2,
+          "charges": 1,
+          "tp": 0
+        },
+        "4": {
+          "restore": 4,
+          "charges": 2,
+          "tp": 0
+        },
+        "5": {
+          "restore": 4,
+          "charges": 2,
+          "tp": 0
+        },
+        "6": {
+          "restore": 6,
+          "charges": 3,
+          "tp": 0
+        },
+        "7": {
+          "restore": 6,
+          "charges": 3,
+          "tp": 0
+        },
+        "8": {
+          "restore": 8,
+          "charges": 3,
+          "tp": 0
+        },
+        "9": {
+          "restore": 8,
+          "charges": 3,
+          "tp": 0
+        }
+      },
+      "id": "shield_battery",
+      "name": "Shield Battery"
+    },
+    {
+      "status": "CURRENT_WORKING_SELECTED_PRE_WHOLE_SYSTEM_PROMOTION",
+      "sourceCheckpoint": 158,
+      "sourceLadder": "SHIELD_BOOSTER-L8",
+      "firstTl": 2,
+      "space": 1,
+      "mechanic": "passive increase to maximum Shield Capacity",
+      "byTl": {
+        "2": {
+          "capacityBonus": 2,
+          "tp": 0
+        },
+        "3": {
+          "capacityBonus": 2,
+          "tp": 0
+        },
+        "4": {
+          "capacityBonus": 4,
+          "tp": 0
+        },
+        "5": {
+          "capacityBonus": 4,
+          "tp": 0
+        },
+        "6": {
+          "capacityBonus": 6,
+          "tp": 0
+        },
+        "7": {
+          "capacityBonus": 6,
+          "tp": 0
+        },
+        "8": {
+          "capacityBonus": 8,
+          "tp": 0
+        },
+        "9": {
+          "capacityBonus": 8,
+          "tp": 0
+        }
+      },
+      "id": "shield_booster",
+      "name": "Shield Booster"
+    },
+    {
+      "status": "CURRENT_WORKING_SELECTED_PRE_WHOLE_SYSTEM_PROMOTION",
+      "sourceCheckpoint": 158,
+      "sourceLadder": "SHIELD_HARDENER-L8",
+      "firstTl": 3,
+      "space": 1,
+      "mechanic": "powered Shield DEF bonus; broad protection, strongest against Energy but not SPEN-specific",
+      "byTl": {
+        "3": {
+          "defBonusPp": 5,
+          "tp": 1
+        },
+        "4": {
+          "defBonusPp": 5,
+          "tp": 1
+        },
+        "5": {
+          "defBonusPp": 10,
+          "tp": 1
+        },
+        "6": {
+          "defBonusPp": 10,
+          "tp": 1
+        },
+        "7": {
+          "defBonusPp": 15,
+          "tp": 1
+        },
+        "8": {
+          "defBonusPp": 15,
+          "tp": 1
+        },
+        "9": {
+          "defBonusPp": 20,
+          "tp": 1
+        }
+      },
+      "id": "shield_hardener",
+      "name": "Shield Hardener"
+    },
+    {
+      "status": "CURRENT_WORKING_SELECTED_PRE_WHOLE_SYSTEM_PROMOTION",
+      "sourceCheckpoint": 158,
+      "sourceLadder": "ABLATIVE_ARMOR-L8",
+      "firstTl": 1,
+      "space": 1,
+      "mechanic": "one expendable outer layer that absorbs raw post-Shield damage before primary Armor; no tactical repair",
+      "byTl": {
+        "1": {
+          "ablativeIntegrity": 2,
+          "tp": 0
+        },
+        "2": {
+          "ablativeIntegrity": 2,
+          "tp": 0
+        },
+        "3": {
+          "ablativeIntegrity": 2,
+          "tp": 0
+        },
+        "4": {
+          "ablativeIntegrity": 4,
+          "tp": 0
+        },
+        "5": {
+          "ablativeIntegrity": 4,
+          "tp": 0
+        },
+        "6": {
+          "ablativeIntegrity": 8,
+          "tp": 0
+        },
+        "7": {
+          "ablativeIntegrity": 8,
+          "tp": 0
+        },
+        "8": {
+          "ablativeIntegrity": 10,
+          "tp": 0
+        },
+        "9": {
+          "ablativeIntegrity": 10,
+          "tp": 0
+        }
+      },
+      "id": "ablative_armor",
+      "name": "Ablative Armor"
+    },
+    {
+      "status": "CURRENT_WORKING_SELECTED_PRE_WHOLE_SYSTEM_PROMOTION",
+      "sourceCheckpoint": 158,
+      "sourceLadder": "ENERGIZED_ARMOR-L8",
+      "firstTl": 5,
+      "space": 1,
+      "mechanic": "powered Armor RES bonus; passive Armor remains functional when unpowered",
+      "byTl": {
+        "5": {
+          "resBonusPp": 5,
+          "tp": 1
+        },
+        "6": {
+          "resBonusPp": 5,
+          "tp": 1
+        },
+        "7": {
+          "resBonusPp": 10,
+          "tp": 1
+        },
+        "8": {
+          "resBonusPp": 15,
+          "tp": 1
+        },
+        "9": {
+          "resBonusPp": 20,
+          "tp": 1
+        }
+      },
+      "id": "energized_armor",
+      "name": "Energized Armor"
+    },
+    {
+      "status": "CURRENT_WORKING_SELECTED_PRE_WHOLE_SYSTEM_PROMOTION",
+      "sourceCheckpoint": 159,
+      "sourceLadder": "CRY_RISE_A",
+      "firstTl": 6,
+      "space": 0,
+      "mechanic": "non-regenerative Crystalline Armor branch: additional Armor capacity plus RES; sacrifices tactical Armor regeneration",
+      "byTl": {
+        "6": {
+          "capacityBonus": 2,
+          "resBonusPp": 0,
+          "tp": 0
+        },
+        "7": {
+          "capacityBonus": 4,
+          "resBonusPp": 5,
+          "tp": 0
+        },
+        "8": {
+          "capacityBonus": 8,
+          "resBonusPp": 15,
+          "tp": 0
+        },
+        "9": {
+          "capacityBonus": 10,
+          "resBonusPp": 20,
+          "tp": 0
+        }
+      },
+      "selectionRationale": "CP159 late-TL headroom closure: RISE_A corrects TL9 decay without consuming the much larger defensive headroom demonstrated by RISE_B/C and flat-max candidates.",
+      "id": "crystalline_armor",
+      "name": "Crystalline Armor"
+    },
+    {
+      "status": "CURRENT_WORKING_SELECTED_PRE_WHOLE_SYSTEM_PROMOTION",
+      "sourceCheckpoint": 159,
+      "firstTl": 7,
+      "space": 1,
+      "mechanic": "anti-SPEN Shield tuner: while active, subtract its rating from incoming SPEN before effective Shield DEF is calculated; cannot reduce SPEN below zero",
+      "identity": "specialist counter to high-SPEN attacks; unlike Shield Hardener it provides no benefit against SPEN 0 attacks",
+      "byTl": {
+        "7": {
+          "spenReduction": 16,
+          "tp": 1
+        },
+        "8": {
+          "spenReduction": 18,
+          "tp": 1
+        },
+        "9": {
+          "spenReduction": 20,
+          "tp": 1
+        }
+      },
+      "sourceLadder": "FST_HIGH",
+      "selectionRationale": "CP159 specialist sweep bracketed the response through complete SPEN nullification. FST_HIGH preserves strong niche value with diminishing-return headroom above it; 1 TP remains the provisional powered execution center pending final Reactor/TP equilibrium.",
+      "id": "field_stabilizer",
+      "name": "Field Stabilizer"
+    },
+    {
+      "status": "CURRENT_WORKING_SELECTED_PRE_WHOLE_SYSTEM_PROMOTION",
+      "sourceCheckpoint": 159,
+      "firstTl": 2,
+      "space": 1,
+      "mechanic": "adds one additional Damage Control action per Damage Control phase; crew and Drone actions must target different eligible repair targets in that phase; never a same-target reroll",
+      "attemptRules": "Drone action uses the normal target-specific Damage Control success chance, the normal Damage Control per-attempt Tactical Power cost, and one Repair Kit per attempt; destroyed components remain non-field-repairable unless the underlying Damage Control rules change",
+      "repairKitRule": "Repair Drone Bay carries one additional prepared Repair Kit load equal to the ship default prepared kit reserve at that TL; total prepared kits with one Bay are therefore 200 percent of the normal ship reserve.",
+      "byTl": {
+        "2": {
+          "additionalActionsPerPhase": 1,
+          "additionalPreparedRepairKits": 3,
+          "droneAttemptTp": 1,
+          "differentTargetRequired": true,
+          "sameTargetRerollAllowed": false
+        },
+        "3": {
+          "additionalActionsPerPhase": 1,
+          "additionalPreparedRepairKits": 4,
+          "droneAttemptTp": 1,
+          "differentTargetRequired": true,
+          "sameTargetRerollAllowed": false
+        },
+        "4": {
+          "additionalActionsPerPhase": 1,
+          "additionalPreparedRepairKits": 4,
+          "droneAttemptTp": 1,
+          "differentTargetRequired": true,
+          "sameTargetRerollAllowed": false
+        },
+        "5": {
+          "additionalActionsPerPhase": 1,
+          "additionalPreparedRepairKits": 5,
+          "droneAttemptTp": 1,
+          "differentTargetRequired": true,
+          "sameTargetRerollAllowed": false
+        },
+        "6": {
+          "additionalActionsPerPhase": 1,
+          "additionalPreparedRepairKits": 5,
+          "droneAttemptTp": 1,
+          "differentTargetRequired": true,
+          "sameTargetRerollAllowed": false
+        },
+        "7": {
+          "additionalActionsPerPhase": 1,
+          "additionalPreparedRepairKits": 6,
+          "droneAttemptTp": 1,
+          "differentTargetRequired": true,
+          "sameTargetRerollAllowed": false
+        },
+        "8": {
+          "additionalActionsPerPhase": 1,
+          "additionalPreparedRepairKits": 6,
+          "droneAttemptTp": 1,
+          "differentTargetRequired": true,
+          "sameTargetRerollAllowed": false
+        },
+        "9": {
+          "additionalActionsPerPhase": 1,
+          "additionalPreparedRepairKits": 7,
+          "droneAttemptTp": 1,
+          "differentTargetRequired": true,
+          "sameTargetRerollAllowed": false
+        }
+      },
+      "sourceLadder": "DISTINCT_TARGET_PLUS_DEFAULT_KIT_LOAD",
+      "selectionRationale": "CP159 microstudy showed that the extra action is a parallelism upgrade rather than free healing: TP or kit scarcity naturally limits use. The +100 percent kit endpoint supplies the Drone with one complete additional repair load and is the cleanest KISS execution center.",
+      "id": "repair_drone_bay",
+      "name": "Repair Drone Bay"
+    },
+    {
+      "status": "CURRENT_WORKING_SELECTED_PRE_WHOLE_SYSTEM_PROMOTION",
+      "sourceCheckpoint": 158,
+      "firstTl": 1,
+      "space": 1,
+      "mechanic": "+25 Kinetic ammunition; duel outcome effectively nonbinding in CP158; value is endurance/logistics",
+      "byTl": {
+        "1": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "2": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "3": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "4": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "5": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "6": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "7": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "8": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "9": {
+          "ammoBonus": 25,
+          "tp": 0
+        }
+      },
+      "id": "kinetic_magazine",
+      "name": "Kinetic Magazine"
+    },
+    {
+      "status": "CURRENT_WORKING_SELECTED_PRE_WHOLE_SYSTEM_PROMOTION",
+      "sourceCheckpoint": 158,
+      "firstTl": 1,
+      "space": 1,
+      "mechanic": "+25 Missile Flights; duel outcome effectively nonbinding in CP158; value is endurance/logistics",
+      "byTl": {
+        "1": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "2": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "3": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "4": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "5": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "6": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "7": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "8": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "9": {
+          "ammoBonus": 25,
+          "tp": 0
+        }
+      },
+      "id": "missile_magazine",
+      "name": "Missile Magazine"
+    }
+  ]
+}

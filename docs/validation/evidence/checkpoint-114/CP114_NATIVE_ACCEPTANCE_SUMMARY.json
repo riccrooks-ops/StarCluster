@@ -1,0 +1,16 @@
+{
+  "checkpoint": 114,
+  "nativeAccepted": true,
+  "acceptedOn": "2026-08-15",
+  "pythonVersion": "3.13.14",
+  "variants": 3184,
+  "trialsPerVariant": 2000,
+  "totalTrials": 6368000,
+  "elapsedSeconds": 359.19123479997506,
+  "failedGates": [],
+  "automaticPromotion": false,
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "nativeResultsZipSha256": "6937351ae68392673e3443b3b7d55d6826796f19a7c3b3ba02c7c42f232921c6",
+  "assessment": "Accepted native payload characteristic-space and prepackage-hygiene diagnostic baseline; no numerical promotion."
+}

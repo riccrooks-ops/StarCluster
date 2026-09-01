@@ -1,0 +1,15 @@
+{
+  "acceptedCheckpoint": 119,
+  "status": "accepted_native_baseline_for_cp120",
+  "acceptedOn": "2026-08-16",
+  "archiveSha256": "1cd438a3ab74a47a20cee20115f972fa92bf4ac6f2b7a592cf54327ee8f3e18c",
+  "nativeStudy": {
+    "variants": 1152,
+    "trialsPerVariant": 2000,
+    "totalTrials": 2304000,
+    "elapsedSeconds": 111.46376839996083,
+    "failedGates": []
+  },
+  "parityCases": 25,
+  "keyInterpretation": "CP119 native integration accepted. +5 Kinetic ACC was restrained and consistent; the CP119 D6/D7/D8 GP Missile ladder was directionally correct but too strong as a package; TL2 Swarmer architecture held while mature 2xD4 was likely overpowered by stacking payload with coverage/PDS resistance."
+}

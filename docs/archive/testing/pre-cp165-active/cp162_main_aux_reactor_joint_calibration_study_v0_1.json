@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "star-cluster-cp162-main-aux-reactor-joint-calibration-v0.1",
+  "checkpoint": 162,
+  "acceptedBaselineCheckpoint": 161,
+  "pendingFinalizationBaselineId": "CP160-PF4",
+  "matrixPath": "docs/design/player_technology/technology_research_execution_baseline_pending_finalization_v0_4.json",
+  "masterSeed": 16220260830,
+  "jobsDefault": 24,
+  "researchQuestion": "With the 6-Space Main Reactor held fixed in footprint, what PF4-1/PF4/PF4+1 output region and what Auxiliary Reactor Space/TP economics preserve tactical scarcity and meaningful ship-design tradeoffs without allowing unrestricted Auxiliary Reactor stacking to collapse the power economy?",
+  "mainReactorSpace": 6,
+  "mainReactorOffsetsFromPf4": [-1, 0, 1],
+  "auxiliaryReactorSpaceSweep": [1, 2, 3, 4],
+  "auxiliaryReactorTpSweep": [1, 2, 3, 4],
+  "auxiliaryReactorAvailability": "TL1+",
+  "stackingPolicy": {
+    "installationCountCapImposed": false,
+    "screenEveryLegalCountStatic": true,
+    "stochasticAndCombatTiers": [1, 2, 3, "MAX"],
+    "purpose": "Do not assume one-copy-only. Measure whether Space economics alone bound stacking; identify if an explicit count cap is actually required."
+  },
+  "stochasticDoctrines": ["OFFENSE", "EW_CONTEST", "MISSILE_DEFENSE", "DAMAGE_CRISIS", "PURSUIT_BURST", "MIXED"],
+  "stochasticTurnSamplesPerVariant": 2000,
+  "combatTrialsPerCell": 500,
+  "combatWeaponFamilies": ["K", "E", "M"],
+  "combatComparison": "Matched legal one-Main-Reactor carrier with N Auxiliary Reactors versus the identical carrier with zero Auxiliary Reactors; remaining Space is mission/noncombat capacity so only installed renewable TP differs in the combat kernel.",
+  "mainReactorDamageStateBoundary": "Operational output is varied by -1/0/+1. Existing Degraded/Emergency values remain fixed and are reported against the same static/stochastic demand surfaces; full component-damage Reactor state transitions remain a later integration item.",
+  "auxiliaryReactorDamageBoundary": "This pass calibrates Operational TP/Space and stack safety first. Historical Auxiliary Reactor damage identity is preserved conceptually but degraded/cooldown scaling for candidates above +1 TP is not invented before the viable Operational region is known.",
+  "interpretationPolicy": {
+    "automaticPromotion": false,
+    "productionAuthorityChanged": false,
+    "conceptChanged": false,
+    "tuningAllowed": false,
+    "noTargetWinRate": true,
+    "noUniversalUtilizationTarget": true,
+    "balanceMeansDistinctViableChoices": true,
+    "mainReactorSixSpaceFrozenForThisPass": true,
+    "unrestrictedAuxStackingMustBeExplicitlyScreened": true,
+    "countCapMayBeRecommendedOnlyIfEconomicsFailToBoundStacking": true,
+    "auxiliaryReactorMustNotEconomicallyReplaceFullMainReactor": true,
+    "playerBaseCruiserAndBroadLegalEnvelopeBothRetained": true
+  },
+  "expectedStudyProducts": [
+    "PF4-1/PF4/PF4+1 Main Reactor support curves at fixed 6 Space",
+    "1-4 Space x +1-4 TP Auxiliary Reactor density and Main-Reactor-equivalence tables",
+    "exact unrestricted legal stacking envelopes across the full powered architecture population",
+    "explicit player-base-cruiser Auxiliary Reactor fit limits by TL",
+    "stochastic doctrine allocation response for 1/2/3/MAX legal stacks",
+    "matched full-map combat response for Auxiliary Reactor stacks across all 16 Space/TP candidates and all three Main Reactor offsets",
+    "stack-risk diagnostics without automatic count caps, tuning, or PF5 promotion"
+  ]
+}

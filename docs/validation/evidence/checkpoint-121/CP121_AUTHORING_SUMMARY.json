@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "star-cluster-cp121-authoring-summary-v0.1",
+  "checkpoint": 121,
+  "acceptedBaseline": 119,
+  "supersedesCandidate": 120,
+  "damageScale": 2,
+  "equivalenceVariants": 4284,
+  "equivalenceTrialsPerVariant": 5,
+  "equivalencePairedTrials": 21420,
+  "equivalenceMismatchedTrials": 0,
+  "halfStepVariants": 2424,
+  "halfStepTrialsPerVariant": 25,
+  "halfStepEngagements": 60600,
+  "failedGates": [],
+  "automaticPromotion": false,
+  "note": "Bounded authoring evidence only; native acceptance requires 20 paired equivalence trials per CP120 variant and 2,000 half-step trials per CP121 variant."
+}

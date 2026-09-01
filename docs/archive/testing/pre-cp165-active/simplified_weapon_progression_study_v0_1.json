@@ -1,0 +1,429 @@
+{
+  "schemaVersion": "star-cluster-simplified-weapon-progression-v0.1",
+  "checkpoint": 118,
+  "acceptedBaseline": 117,
+  "status": "diagnostic_candidate_space_no_automatic_promotion",
+  "purpose": "Calibrate a KISS-focused weapon progression: GP Missile yield and Swarmer maturation across the full ladder, plus automatic Kinetic accuracy/damage/APEN progression controls. TL1-TL6 drive inference, TL7 is advanced validation, and TL8-TL9 are endpoint stress checks.",
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "automaticPromotion": false,
+  "masterSeed": 118031,
+  "trialsPerVariant": 2000,
+  "authoringTrialsPerVariant": 50,
+  "primaryCalibrationTls": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "advancedValidationTls": [
+    7
+  ],
+  "endpointStressTls": [
+    8,
+    9
+  ],
+  "missileStudyTls": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "kineticStudyTls": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "energyReferenceTls": [],
+  "contemporaryGpByTl": {
+    "1": [
+      "gp-current"
+    ],
+    "2": [
+      "gp-current"
+    ],
+    "3": [
+      "gp-current"
+    ],
+    "4": [
+      "gp-current"
+    ],
+    "5": [
+      "gp-current"
+    ],
+    "6": [
+      "gp-current"
+    ],
+    "7": [
+      "gp-current"
+    ],
+    "8": [
+      "gp-current"
+    ],
+    "9": [
+      "gp-current"
+    ]
+  },
+  "specialistPairingIds": [],
+  "adaptivePairingIds": [],
+  "targetFixtures": [
+    {
+      "id": "balanced-layered-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "balanced",
+      "classification": "legal_build",
+      "role": "General legal layered-defense reference."
+    },
+    {
+      "id": "shield-heavy-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "legal_build",
+      "role": "Shield + Hardener + Energy PDS package; exposes the natural difficulty of small packets against layered Shields."
+    },
+    {
+      "id": "armor-exposed-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "legal_build",
+      "removeShield": true,
+      "removePds": true,
+      "removeHardener": true,
+      "role": "Legal exact-fill no-Shield control exposing Armor/Hull directly."
+    },
+    {
+      "id": "pds-heavy-legal",
+      "baseFamily": "Missile",
+      "baseArchetype": "missile-defense",
+      "classification": "legal_build",
+      "role": "AMM/PDS-heavy legal target for ordinary Missile versus Swarmer differentiation."
+    },
+    {
+      "id": "armor-heavy-fixture",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "controlled_fixture",
+      "removeShield": true,
+      "removePds": true,
+      "removeHardener": true,
+      "armorProtectionDelta": 1,
+      "armorIntegrityDelta": 4,
+      "role": "Controlled Armor-heavy fixture used only to expose Kinetic damage/APEN progression; not a legal-build balance gate."
+    },
+    {
+      "id": "light-fixture",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "controlled_fixture",
+      "removeShield": true,
+      "removePds": true,
+      "removeHardener": true,
+      "armorProtectionOverride": 0,
+      "armorIntegrityOverride": 2,
+      "role": "Controlled lightly protected fixture for accuracy/coverage behavior; not a legal-build balance gate."
+    }
+  ],
+  "missileProfiles": [
+    {
+      "id": "gp-current",
+      "family": "Missile",
+      "classification": "reference",
+      "role": "Current CP109 GP Missile payload reference; D5/SP1/AP2 at every TL.",
+      "studyTls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "missile-fission-gp-d6",
+      "family": "Missile",
+      "classification": "yield_control",
+      "generation": "mature_fission",
+      "role": "Late lower-SF/fission-era yield maturation control with no penetration creep.",
+      "studyTls": [
+        3,
+        4
+      ],
+      "damage": 6,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "missile-fusion-gp-d6",
+      "family": "Missile",
+      "classification": "yield_control",
+      "generation": "fusion",
+      "role": "Conservative Fusion GP yield candidate; penetration held at the baseline GP identity.",
+      "studyTls": [
+        5,
+        6
+      ],
+      "damage": 6,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "missile-fusion-gp-d7",
+      "family": "Missile",
+      "classification": "yield_control",
+      "generation": "fusion",
+      "role": "Higher Fusion GP yield candidate; penetration held at the baseline GP identity.",
+      "studyTls": [
+        5,
+        6
+      ],
+      "damage": 7,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "missile-antimatter-gp-d7",
+      "family": "Missile",
+      "classification": "yield_control",
+      "generation": "antimatter",
+      "role": "Conservative Antimatter GP yield candidate; penetration held at the baseline GP identity.",
+      "studyTls": [
+        7,
+        8,
+        9
+      ],
+      "damage": 7,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "missile-antimatter-gp-d8",
+      "family": "Missile",
+      "classification": "yield_control",
+      "generation": "antimatter",
+      "role": "Higher Antimatter GP yield candidate; penetration held at the baseline GP identity.",
+      "studyTls": [
+        7,
+        8,
+        9
+      ],
+      "damage": 8,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "swarmer-early-a",
+      "family": "Missile",
+      "classification": "swarmer_introduction",
+      "generation": "early_cluster",
+      "role": "Early low-complexity cluster/Swarmer: two small packets and +10 terminal guidance; no intrinsic PDS resistance.",
+      "studyTls": [
+        1,
+        2,
+        3
+      ],
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10
+    },
+    {
+      "id": "swarmer-early-b",
+      "family": "Missile",
+      "classification": "swarmer_introduction",
+      "generation": "early_cluster",
+      "role": "Early cluster/Swarmer with the same coverage but a modest -10 pp PDS interception penalty candidate.",
+      "studyTls": [
+        1,
+        2,
+        3
+      ],
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "swarmer-mid-a",
+      "family": "Missile",
+      "classification": "swarmer_maturation",
+      "generation": "mid_cluster",
+      "role": "Mid-ladder Swarmer emphasizing coverage and bounded PDS saturation while retaining low packet strength.",
+      "studyTls": [
+        4,
+        5
+      ],
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 15,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "swarmer-mid-b",
+      "family": "Missile",
+      "classification": "swarmer_maturation",
+      "generation": "mid_cluster",
+      "role": "Mid-ladder Swarmer with stronger submunition payload while preserving one terminal attack package.",
+      "studyTls": [
+        4,
+        5
+      ],
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "swarmer-mature-a",
+      "family": "Missile",
+      "classification": "swarmer_maturation",
+      "generation": "mature_swarm",
+      "role": "Mature Swarmer emphasizing many small packets, high coverage, and stronger but bounded PDS saturation.",
+      "studyTls": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 3,
+      "guidanceDelta": 15,
+      "pdsInterceptPenaltyPp": 15
+    },
+    {
+      "id": "swarmer-mature-b",
+      "family": "Missile",
+      "classification": "swarmer_maturation",
+      "generation": "mature_swarm",
+      "role": "Mature Swarmer with two higher-yield submunition packets, high coverage, and bounded PDS saturation; tests whether the branch can remain relevant without adding penetration mechanics.",
+      "studyTls": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "damage": 4,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 15,
+      "pdsInterceptPenaltyPp": 15
+    }
+  ],
+  "kineticProfiles": [
+    {
+      "id": "gp-current",
+      "family": "Kinetic",
+      "classification": "reference",
+      "role": "Current CP109 contemporary Kinetic projectile reference.",
+      "studyTls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-smart-plus5",
+      "family": "Kinetic",
+      "classification": "automatic_accuracy_control",
+      "role": "Automatic smart-projectile progression control: +5 accuracy only.",
+      "studyTls": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "accuracyDelta": 5
+    },
+    {
+      "id": "kinetic-smart-plus10",
+      "family": "Kinetic",
+      "classification": "automatic_accuracy_control",
+      "role": "Automatic smart-projectile progression control: +10 accuracy only.",
+      "studyTls": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "accuracyDelta": 10
+    },
+    {
+      "id": "kinetic-smart-plus15",
+      "family": "Kinetic",
+      "classification": "automatic_accuracy_control",
+      "role": "Higher-maturity smart-projectile progression control: +15 accuracy only.",
+      "studyTls": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "accuracyDelta": 15
+    },
+    {
+      "id": "kinetic-damage-plus1",
+      "family": "Kinetic",
+      "classification": "single_axis_control",
+      "role": "Single-axis comparison: +1 projectile damage without accuracy or penetration change.",
+      "studyTls": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "damageDelta": 1
+    },
+    {
+      "id": "kinetic-apen-plus1",
+      "family": "Kinetic",
+      "classification": "single_axis_control",
+      "role": "Single-axis comparison: +1 APEN without accuracy, damage, or SPEN change.",
+      "studyTls": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "apenDelta": 1
+    }
+  ]
+}

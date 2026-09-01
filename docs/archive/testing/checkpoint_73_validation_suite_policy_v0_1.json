@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": "73",
+  "normal": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 24,
+    "substantiveTrials": 240000,
+    "smokeTrials": 24,
+    "totalTrialExecutions": 240024,
+    "actualConsumerPreflightRequired": true,
+    "fullPipelineSmokeRequired": true
+  },
+  "deepCalibration": {
+    "stageCount": 30,
+    "monteCarloVariantCount": 1568,
+    "substantiveTrials": 15680000,
+    "smokeTrials": 24,
+    "totalTrialExecutions": 15680024,
+    "defaultRequired": false
+  },
+  "blockingBalanceTargets": false,
+  "productionControls": {
+    "reactorOutput": 5,
+    "sensorProfile": "balanced-0",
+    "sensorDiscriminationResistance": 0,
+    "sameHexBurnThroughResistance": 1,
+    "ecmNormalRating": 1,
+    "ecmNormalPowerCost": 1,
+    "eccmNormalRating": 1,
+    "eccmNormalPowerCost": 1,
+    "preCombatEwSubphase": true,
+    "movementPhaseFireImplementedByCheckpoint73": false,
+    "degradedFireImplementedByCheckpoint73": false
+  },
+  "aiDoctrineControls": {
+    "registryVersion": "0.1",
+    "acceptedReactiveEccmDoctrineId": "tl1-ew-reactive-eccm-v1",
+    "acceptedReactiveEccmCheckpoint": "72",
+    "experimentalEcmDoctrineCount": 3,
+    "studyDoctrineCount": 4,
+    "studyVariantCount": 24,
+    "promotionAutomatic": false,
+    "playerInformationParityRequired": true,
+    "evidenceDraftRequired": true,
+    "dependencyTriggeredRevalidation": true
+  },
+  "studyControls": {
+    "weaponPairingCount": 3,
+    "movementOrderCount": 2,
+    "variantsPerDoctrine": 6,
+    "ecmBeforeEccm": true,
+    "ewInitiativeReroll": false,
+    "reservedPowerMeansUncommittedPower": true
+  },
+  "nativeAcceptanceDependencyContract": {
+    "powerShellAndPinnedDotNetOnly": true,
+    "pythonRuntimeDependencyRejected": true
+  },
+  "mustAlwaysRunStageIds": [
+    "deterministic",
+    "tl1-phase-a",
+    "tl1-phase-b",
+    "tl1-installation-space-envelope",
+    "tl1-sensor-ew-foundation",
+    "tl1-ew-ai-doctrine-preflight",
+    "tl1-ew-ai-doctrine-smoke",
+    "tl1-ew-ai-doctrine",
+    "auxiliary-resource-endurance",
+    "checkpoint-53-resource-semantics-lock",
+    "runner-self-tests"
+  ],
+  "notes": "CP73 makes AI doctrine evidence/version/dependency capture first-class. CP72 reactive ECCM is preserved as accepted evidence; ECM activation candidates remain experimental until native results are reviewed. No doctrine is automatically promoted by a release gate or win rate."
+}

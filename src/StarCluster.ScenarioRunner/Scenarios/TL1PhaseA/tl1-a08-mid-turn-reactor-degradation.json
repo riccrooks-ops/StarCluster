@@ -1,0 +1,184 @@
+{
+  "schemaVersion": "star-cluster-tl1-phase-a-v1",
+  "id": "tl1-a08-mid-turn-reactor-degradation",
+  "matrixScenarioId": "TL1-A08",
+  "name": "Turn Power Envelope under reactor damage",
+  "baselineVersion": "tl1-core-combat-v0.1",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "cases": [
+    {
+      "id": "a08-c01",
+      "name": "Operational to Degraded changes only the next turn",
+      "operation": "reactorEnvelope",
+      "input": {
+        "startingCondition": "operational",
+        "midTurnCondition": "degraded",
+        "poweredBeforeDamage": 1,
+        "spentBeforeDamage": 2
+      },
+      "expected": {
+        "beforeDamage": {
+          "envelope": {
+            "$baseline": "reactor_output"
+          },
+          "powered": 1,
+          "spent": 2,
+          "available": {
+            "$subtract": [
+              {
+                "$subtract": [
+                  {
+                    "$baseline": "reactor_output"
+                  },
+                  1
+                ]
+              },
+              2
+            ]
+          }
+        },
+        "afterDamage": {
+          "envelope": {
+            "$baseline": "reactor_output"
+          },
+          "powered": 1,
+          "spent": 2,
+          "available": {
+            "$subtract": [
+              {
+                "$subtract": [
+                  {
+                    "$baseline": "reactor_output"
+                  },
+                  1
+                ]
+              },
+              2
+            ]
+          }
+        },
+        "nextTurn": {
+          "envelope": {
+            "$baseline": "reactor_degraded_output"
+          },
+          "available": {
+            "$baseline": "reactor_degraded_output"
+          }
+        },
+        "reactorCondition": "Degraded"
+      }
+    },
+    {
+      "id": "a08-c02",
+      "name": "Degraded to Disabled preserves current output then uses Emergency Output",
+      "operation": "reactorEnvelope",
+      "input": {
+        "startingCondition": "degraded",
+        "midTurnCondition": "disabled",
+        "poweredBeforeDamage": 1,
+        "spentBeforeDamage": 1
+      },
+      "expected": {
+        "beforeDamage": {
+          "envelope": {
+            "$baseline": "reactor_degraded_output"
+          },
+          "available": {
+            "$subtract": [
+              {
+                "$subtract": [
+                  {
+                    "$baseline": "reactor_degraded_output"
+                  },
+                  1
+                ]
+              },
+              1
+            ]
+          }
+        },
+        "afterDamage": {
+          "envelope": {
+            "$baseline": "reactor_degraded_output"
+          },
+          "available": {
+            "$subtract": [
+              {
+                "$subtract": [
+                  {
+                    "$baseline": "reactor_degraded_output"
+                  },
+                  1
+                ]
+              },
+              1
+            ]
+          }
+        },
+        "nextTurn": {
+          "envelope": {
+            "$baseline": "reactor_emergency_output"
+          },
+          "available": {
+            "$baseline": "reactor_emergency_output"
+          }
+        },
+        "reactorCondition": "Disabled"
+      }
+    },
+    {
+      "id": "a08-c03",
+      "name": "Disabled to Destroyed preserves the current emergency envelope then falls to zero",
+      "operation": "reactorEnvelope",
+      "input": {
+        "startingCondition": "disabled",
+        "midTurnCondition": "destroyed",
+        "poweredBeforeDamage": 0,
+        "spentBeforeDamage": 1
+      },
+      "expected": {
+        "beforeDamage": {
+          "envelope": {
+            "$baseline": "reactor_emergency_output"
+          },
+          "available": {
+            "$subtract": [
+              {
+                "$subtract": [
+                  {
+                    "$baseline": "reactor_emergency_output"
+                  },
+                  0
+                ]
+              },
+              1
+            ]
+          }
+        },
+        "afterDamage": {
+          "envelope": {
+            "$baseline": "reactor_emergency_output"
+          },
+          "available": {
+            "$subtract": [
+              {
+                "$subtract": [
+                  {
+                    "$baseline": "reactor_emergency_output"
+                  },
+                  0
+                ]
+              },
+              1
+            ]
+          }
+        },
+        "nextTurn": {
+          "envelope": 0,
+          "available": 0
+        },
+        "reactorCondition": "Destroyed"
+      }
+    }
+  ]
+}

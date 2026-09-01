@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "star-cluster-future-balance-pass-contract-v0.2",
+  "checkpoint": 157,
+  "nextSubstantivePass": {
+    "name": "Defense/AUX Lifetime Viability",
+    "goal": "Evaluate remaining Shield/Armor/support AUX viability across their TL lifetimes using preserved main/PDS candidate envelopes.",
+    "mustReuse": [
+      "CP157-PF1 pending-finalization research execution baseline",
+      "CP153 main-weapon viable ladders",
+      "CP155 PDS viable architectures",
+      "current Shield/Armor/DEF/RES environment"
+    ],
+    "mustNotDo": [
+      "global family equality optimization",
+      "broad K/E/M/Swarmer resweep",
+      "broad PDS resweep",
+      "final Reactor/TP retuning",
+      "directly load raw technology_numerical_matrix_v0_9.json as the substantive execution matrix"
+    ],
+    "outputsRequired": [
+      "AUX sensitivity ledger",
+      "AUX viable-region/Pareto table",
+      "technology-valid AUX lifecycles",
+      "dependency invalidation report",
+      "research-baseline conformance report"
+    ]
+  },
+  "finalMajorPass": {
+    "name": "Reactor/TP Scarcity and Whole-Ship Equilibrium",
+    "precondition": "AUX lifetime viability closed",
+    "goal": "Tune TP supply only after demand is stable so competent builds face meaningful tactical choices without universal starvation or surplus.",
+    "mustMeasure": [
+      "allocated vs requested TP",
+      "frequency/type of denied tactical choices",
+      "Energy Low/Standard/Overload behavior",
+      "E-PDS overcharge/safe use",
+      "PDS readiness competition",
+      "AUX activation competition",
+      "legal-build viability"
+    ]
+  },
+  "reopenRule": "Any later pass that resweeps a topic marked CLOSED_RESPONSE must name the changed dependency, show why prior evidence is no longer applicable, and preserve the old evidence as historical control.",
+  "researchExecutionBaseline": {
+    "required": true,
+    "baselineId": "CP157-PF1",
+    "path": "docs/design/player_technology/technology_research_execution_baseline_pending_finalization_v0_1.json",
+    "loader": "tools.simulation.starcluster_research.research_execution_baseline.load_research_execution_baseline",
+    "rawProductionMatrixAllowedForSubstantive": false
+  }
+}

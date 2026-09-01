@@ -1,0 +1,365 @@
+{
+  "schemaVersion": "star-cluster-evidence-retention-ledger-v0.1",
+  "checkpoint": 128,
+  "policy": "Successor full-repository archives preserve acceptance summaries, exact archive/content hashes, and compact decision-relevant outputs; large raw predecessor native-results archives are not recursively embedded unless explicitly exempted.",
+  "archiveBenchmarks": {
+    "cp125FullRepository": {
+      "bytes": 128712912,
+      "sha256": "6f37f9e042302bc08f59f42f0bc0c9c9dea5a939bb9071ffdbe44100a2b44ebf"
+    },
+    "cp126FullRepository": {
+      "bytes": 183393471,
+      "sha256": "84cdf0d1ee1c81d11952199c307cb204f88ffe2a3796175474402d50160c86d6"
+    },
+    "cp127CorrectedReplacement1FullRepository": {
+      "bytes": 209650996,
+      "sha256": "f91bb10cd16269bf3765148d44bc7eb420c9aabfa6a901cce8a59f413b7439c9"
+    }
+  },
+  "externalizedNativeArchives": [
+    {
+      "checkpoint": 125,
+      "originalArchiveSha256": "e26f4a79075cd3bb395213d9a4da7d9e3708fecd3dbd3b5a29911c24ea63ecf0",
+      "originalArchiveBytes": 54357183,
+      "archiveBundledInCp128": false,
+      "contentsManifest": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp125/CP125_NATIVE_RESULTS_CONTENTS_SHA256SUMS.txt",
+      "curatedFiles": [
+        {
+          "sourcePath": "checkpoint-125/CP125_NATIVE_ACCEPTANCE_SUMMARY.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp125/CP125_NATIVE_ACCEPTANCE_SUMMARY.json",
+          "sha256": "86777ccc2fb6ae188838203b4411a84e655766ae1f93eab687c616e9ea9868c8",
+          "bytes": 1214
+        },
+        {
+          "sourcePath": "checkpoint-125/pairing-plan/analysis.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp125/pairing-plan/analysis.json",
+          "sha256": "dc43d47b6db0c1e7884c1dff740915ff49e7994f08921a67e2d807a417c52f82",
+          "bytes": 1665
+        },
+        {
+          "sourcePath": "checkpoint-125/pairing-plan/summary.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp125/pairing-plan/summary.json",
+          "sha256": "fec5b7d8c875fd4bf175d01ba340b6fe0b5263cc37d735b33e375be89ca766b8",
+          "bytes": 1920
+        },
+        {
+          "sourcePath": "checkpoint-125/pure-tl-whole-ladder-study/analysis.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp125/pure-tl-whole-ladder-study/analysis.json",
+          "sha256": "bc5576c8a62c71d870dee9394204f8b867fe03858183c053ccece3bd3dd3a8b1",
+          "bytes": 3100
+        },
+        {
+          "sourcePath": "checkpoint-125/pure-tl-whole-ladder-study/delta_tl_summary.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp125/pure-tl-whole-ladder-study/delta_tl_summary.csv",
+          "sha256": "d32ef10bf74945ab84a7a042dddcbf8363bc512ab3466c8ac5faed6a1fe1893c",
+          "bytes": 745
+        },
+        {
+          "sourcePath": "checkpoint-125/pure-tl-whole-ladder-study/family_matchup_summary.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp125/pure-tl-whole-ladder-study/family_matchup_summary.csv",
+          "sha256": "32301fc1149ba9de7ea5656c6d16095bc2bbdd759e11a67117c8e837fda126ef",
+          "bytes": 124182
+        },
+        {
+          "sourcePath": "checkpoint-125/pure-tl-whole-ladder-study/movement_order_summary.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp125/pure-tl-whole-ladder-study/movement_order_summary.csv",
+          "sha256": "8950540c320d31744d2a7db8a7f41c55dd21578357aa2bea67c9f7cd306c942f",
+          "bytes": 3586
+        },
+        {
+          "sourcePath": "checkpoint-125/pure-tl-whole-ladder-study/plan/analysis.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp125/pure-tl-whole-ladder-study/plan/analysis.json",
+          "sha256": "dc43d47b6db0c1e7884c1dff740915ff49e7994f08921a67e2d807a417c52f82",
+          "bytes": 1665
+        },
+        {
+          "sourcePath": "checkpoint-125/pure-tl-whole-ladder-study/summary.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp125/pure-tl-whole-ladder-study/summary.json",
+          "sha256": "03fd64eb2363f2311a23817536c4f218986d2976ac4c6724d0c822228fe14be0",
+          "bytes": 3411
+        },
+        {
+          "sourcePath": "checkpoint-125/pure-tl-whole-ladder-study/tl_matchup_summary.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp125/pure-tl-whole-ladder-study/tl_matchup_summary.csv",
+          "sha256": "8bec1db15d0675da281c9cf9ce0f24dafba86319e0e19e893155c615ec0e8dcf",
+          "bytes": 8281
+        },
+        {
+          "sourcePath": "checkpoint-125/pure-tl-whole-ladder-study/tl_telemetry_summary.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp125/pure-tl-whole-ladder-study/tl_telemetry_summary.csv",
+          "sha256": "aa0477be519a5229ef4ee10a041b47a0f11abb749cec49f7d636584328c9c6e9",
+          "bytes": 123146
+        },
+        {
+          "sourcePath": "checkpoint-125/research-parity/summary.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp125/research-parity/summary.json",
+          "sha256": "c31df855826456afd403c9454440fc9f9dda338536c41508ce5c2ab106877e0c",
+          "bytes": 137
+        }
+      ]
+    },
+    {
+      "checkpoint": 126,
+      "originalArchiveSha256": "a82e8e1f98f9af5589666d091f4773cd3f98b881c82c108a7da7ab2d1c74edb0",
+      "originalArchiveBytes": 24612025,
+      "archiveBundledInCp128": false,
+      "contentsManifest": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/CP126_NATIVE_RESULTS_CONTENTS_SHA256SUMS.txt",
+      "curatedFiles": [
+        {
+          "sourcePath": "checkpoint-126/CP126_NATIVE_ACCEPTANCE_SUMMARY.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/CP126_NATIVE_ACCEPTANCE_SUMMARY.json",
+          "sha256": "d2ad1c3385b754824045aa03e3f0f6fad15291e0d6786775c819850c82c2067f",
+          "bytes": 1633
+        },
+        {
+          "sourcePath": "checkpoint-126/fidelity-era-attribution-study/adjacent_population_summary.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/fidelity-era-attribution-study/adjacent_population_summary.csv",
+          "sha256": "518376d23b4621232c3d7d3f4da67260d5f8a108925bf291d60647f57378ea8a",
+          "bytes": 792
+        },
+        {
+          "sourcePath": "checkpoint-126/fidelity-era-attribution-study/analysis.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/fidelity-era-attribution-study/analysis.json",
+          "sha256": "35ab0a7664bd0006416ff7d2db9f39afd03bebd7b55e79ce96df816f7193cfc1",
+          "bytes": 13203
+        },
+        {
+          "sourcePath": "checkpoint-126/fidelity-era-attribution-study/energy_isolation_summary.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/fidelity-era-attribution-study/energy_isolation_summary.csv",
+          "sha256": "d1b2cd4ca6043987f5ab966185765636a43d09d5d4481ea3076229ddc91c0c21",
+          "bytes": 2909
+        },
+        {
+          "sourcePath": "checkpoint-126/fidelity-era-attribution-study/era_boundary_attribution_summary.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/fidelity-era-attribution-study/era_boundary_attribution_summary.csv",
+          "sha256": "a4fac05b91b48a64e0c53a739cb05bd815102399e8643f850073002aa1f18751",
+          "bytes": 1191
+        },
+        {
+          "sourcePath": "checkpoint-126/fidelity-era-attribution-study/geometry_delta_summary.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/fidelity-era-attribution-study/geometry_delta_summary.csv",
+          "sha256": "763e9d358199af644b9115074f745b2901ab819aad7d4367ef05bc963e734aec",
+          "bytes": 1929
+        },
+        {
+          "sourcePath": "checkpoint-126/fidelity-era-attribution-study/late_missile_geometry_summary.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/fidelity-era-attribution-study/late_missile_geometry_summary.csv",
+          "sha256": "6b6f2f5113e63c643f4b6b44c88398ef39cf094270d66a11c79d03cfd1733911",
+          "bytes": 761
+        },
+        {
+          "sourcePath": "checkpoint-126/fidelity-era-attribution-study/matched_composition_summary.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/fidelity-era-attribution-study/matched_composition_summary.csv",
+          "sha256": "8659c4519db2aeb735956adb737247b10d7e13d6d5dbae040e9e7eb5bef464b8",
+          "bytes": 792
+        },
+        {
+          "sourcePath": "checkpoint-126/fidelity-era-attribution-study/movement_geometry_comparison.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/fidelity-era-attribution-study/movement_geometry_comparison.csv",
+          "sha256": "081aafdbb05abf5eb3b72a41f6aa83233bc5de3802240c186f65e88343c91ee5",
+          "bytes": 544
+        },
+        {
+          "sourcePath": "checkpoint-126/fidelity-era-attribution-study/plan/analysis.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/fidelity-era-attribution-study/plan/analysis.json",
+          "sha256": "249b37c798aa6b01c2a1860bad5efc052b4dabe45d96c0c594f6da78388b5917",
+          "bytes": 1040
+        },
+        {
+          "sourcePath": "checkpoint-126/fidelity-era-attribution-study/plan/build_envelope_transitions.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/fidelity-era-attribution-study/plan/build_envelope_transitions.csv",
+          "sha256": "7dcb62851d65ffc9e01f0e11497517b53803accfeedc0fe1adf113be6929dab5",
+          "bytes": 648
+        },
+        {
+          "sourcePath": "checkpoint-126/fidelity-era-attribution-study/plan/technology_transition_delta_ledger.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/fidelity-era-attribution-study/plan/technology_transition_delta_ledger.csv",
+          "sha256": "c32d6aa297a32643a8c314d91a879a45208c0c9d523e1e2fd092c2e0a8b6be1c",
+          "bytes": 50587
+        },
+        {
+          "sourcePath": "checkpoint-126/fidelity-era-attribution-study/summary.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/fidelity-era-attribution-study/summary.json",
+          "sha256": "0d8c8f8ca39d3ec20265d54e68b9d8601988aa7cb1bfe3ad751ef9df3b5bb644",
+          "bytes": 14040
+        },
+        {
+          "sourcePath": "checkpoint-126/fidelity-era-attribution-study/swarmer_lifecycle_summary.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/fidelity-era-attribution-study/swarmer_lifecycle_summary.csv",
+          "sha256": "d4cca7918d75bdd782d21977590f1a7a7195c9e7a3386f966cae05f025b26b19",
+          "bytes": 3716
+        },
+        {
+          "sourcePath": "checkpoint-126/research-parity/summary.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/research-parity/summary.json",
+          "sha256": "c31df855826456afd403c9454440fc9f9dda338536c41508ce5c2ab106877e0c",
+          "bytes": 137
+        },
+        {
+          "sourcePath": "checkpoint-126/study-plan/analysis.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/study-plan/analysis.json",
+          "sha256": "249b37c798aa6b01c2a1860bad5efc052b4dabe45d96c0c594f6da78388b5917",
+          "bytes": 1040
+        },
+        {
+          "sourcePath": "checkpoint-126/study-plan/build_envelope_transitions.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/study-plan/build_envelope_transitions.csv",
+          "sha256": "7dcb62851d65ffc9e01f0e11497517b53803accfeedc0fe1adf113be6929dab5",
+          "bytes": 648
+        },
+        {
+          "sourcePath": "checkpoint-126/study-plan/summary.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/study-plan/summary.json",
+          "sha256": "6ddcc98f9334770b6d7f2da551151be741103872274e0a4f381cffd40da6591d",
+          "bytes": 1243
+        },
+        {
+          "sourcePath": "checkpoint-126/study-plan/technology_transition_delta_ledger.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/study-plan/technology_transition_delta_ledger.csv",
+          "sha256": "c32d6aa297a32643a8c314d91a879a45208c0c9d523e1e2fd092c2e0a8b6be1c",
+          "bytes": 50587
+        },
+        {
+          "sourcePath": "checkpoint-126/symmetry-gate/analysis.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/symmetry-gate/analysis.json",
+          "sha256": "5be8a8c6110d38710f964e91525b521c5223e1f7f6b5b2e77c0f74010718f9bd",
+          "bytes": 241
+        },
+        {
+          "sourcePath": "checkpoint-126/symmetry-gate/summary.json",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/symmetry-gate/summary.json",
+          "sha256": "b6b7cd64d7e9a8d8abed15191592ea6d475e9f90355583c1bd7bec3df6717433",
+          "bytes": 376
+        },
+        {
+          "sourcePath": "checkpoint-126/symmetry-gate/symmetry_mismatches.csv",
+          "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp126/symmetry-gate/symmetry_mismatches.csv",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "acceptedCp127Evidence": {
+    "checkpoint": 127,
+    "originalArchiveSha256": "ebf5c8c8a38e74d14302f26f5138fe71b14e6565e8043605834cce7de78899bf",
+    "originalArchiveBytes": 16248280,
+    "archiveBundledInCp128": false,
+    "contentsManifest": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/CP127_NATIVE_RESULTS_CONTENTS_SHA256SUMS.txt",
+    "curatedFiles": [
+      {
+        "sourcePath": "checkpoint-127/CP127_NATIVE_ACCEPTANCE_SUMMARY.json",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/CP127_NATIVE_ACCEPTANCE_SUMMARY.json",
+        "sha256": "151b5b73484974f052565f68c21e3916978a03d4529e27da83d0d3c77a5a1287",
+        "bytes": 2032
+      },
+      {
+        "sourcePath": "checkpoint-127/main-subsystem-stabilization-study/adjacent_population_summary.csv",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/main-subsystem-stabilization-study/adjacent_population_summary.csv",
+        "sha256": "35336f76c646b9efd51e2bcc6385e81fe759ce2a6ceb733e807967539e935d94",
+        "bytes": 631
+      },
+      {
+        "sourcePath": "checkpoint-127/main-subsystem-stabilization-study/analysis.json",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/main-subsystem-stabilization-study/analysis.json",
+        "sha256": "3c782dce0f2def486f1e73883ed47d112e931a58154c917aaaf422dcc1e5bb0c",
+        "bytes": 13512
+      },
+      {
+        "sourcePath": "checkpoint-127/main-subsystem-stabilization-study/cp126_transition_comparison.csv",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/main-subsystem-stabilization-study/cp126_transition_comparison.csv",
+        "sha256": "3dc2c72158f0b8db3cff21c0708bb5970a6ee53d268a3b2b7e68a375333d8b66",
+        "bytes": 2123
+      },
+      {
+        "sourcePath": "checkpoint-127/main-subsystem-stabilization-study/late_missile_summary.csv",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/main-subsystem-stabilization-study/late_missile_summary.csv",
+        "sha256": "f0a513a69e237b639517808b521cbc4a634f3513da56373a432970432205f724",
+        "bytes": 167
+      },
+      {
+        "sourcePath": "checkpoint-127/main-subsystem-stabilization-study/matched_composition_summary.csv",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/main-subsystem-stabilization-study/matched_composition_summary.csv",
+        "sha256": "11c8f21cdc29472057a637e35c5499d9a25669e5837f0c932d9a0ffaf11f7d0e",
+        "bytes": 630
+      },
+      {
+        "sourcePath": "checkpoint-127/main-subsystem-stabilization-study/plan/analysis.json",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/main-subsystem-stabilization-study/plan/analysis.json",
+        "sha256": "9d40a3cfdcbb8adf49b0650ba1056abfd50233b6e1943f99168d7ea5571b8481",
+        "bytes": 714
+      },
+      {
+        "sourcePath": "checkpoint-127/main-subsystem-stabilization-study/plan/numerical_change_ledger.csv",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/main-subsystem-stabilization-study/plan/numerical_change_ledger.csv",
+        "sha256": "28f2986d8396be00f66a8b9f9e6f222b4ddd4a064ae8776548bd56941a67e338",
+        "bytes": 337
+      },
+      {
+        "sourcePath": "checkpoint-127/main-subsystem-stabilization-study/summary.json",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/main-subsystem-stabilization-study/summary.json",
+        "sha256": "db0981eed77534501be07aa4dfe26c4b7684b4d5794d0ac90b5e1bee091d0317",
+        "bytes": 14329
+      },
+      {
+        "sourcePath": "checkpoint-127/main-subsystem-stabilization-study/tl5_tl6_ablation_summary.csv",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/main-subsystem-stabilization-study/tl5_tl6_ablation_summary.csv",
+        "sha256": "c82bd09e4dd70dc06c54e605eb66d0ff13f0597e853ea808ad8989f5da8677ac",
+        "bytes": 1593
+      },
+      {
+        "sourcePath": "checkpoint-127/main-subsystem-stabilization-study/tl8_energy_factorial_summary.csv",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/main-subsystem-stabilization-study/tl8_energy_factorial_summary.csv",
+        "sha256": "a23c913681c60f9f23554edf59e827c6ec410d108d78e67d96ef6521a22183e6",
+        "bytes": 717
+      },
+      {
+        "sourcePath": "checkpoint-127/research-parity/summary.json",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/research-parity/summary.json",
+        "sha256": "c31df855826456afd403c9454440fc9f9dda338536c41508ce5c2ab106877e0c",
+        "bytes": 137
+      },
+      {
+        "sourcePath": "checkpoint-127/study-plan/analysis.json",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/study-plan/analysis.json",
+        "sha256": "9d40a3cfdcbb8adf49b0650ba1056abfd50233b6e1943f99168d7ea5571b8481",
+        "bytes": 714
+      },
+      {
+        "sourcePath": "checkpoint-127/study-plan/numerical_change_ledger.csv",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/study-plan/numerical_change_ledger.csv",
+        "sha256": "28f2986d8396be00f66a8b9f9e6f222b4ddd4a064ae8776548bd56941a67e338",
+        "bytes": 337
+      },
+      {
+        "sourcePath": "checkpoint-127/study-plan/summary.json",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/study-plan/summary.json",
+        "sha256": "5b4195b191401e2866765d2b7db1b95d3e26c4464461f0e92328e34cc089a5a5",
+        "bytes": 877
+      },
+      {
+        "sourcePath": "checkpoint-127/symmetry-gate/analysis.json",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/symmetry-gate/analysis.json",
+        "sha256": "46bd9928ee888934fc80df68fc9c6da2bef86af0067eb2e719a1cbb88e3ef203",
+        "bytes": 234
+      },
+      {
+        "sourcePath": "checkpoint-127/symmetry-gate/summary.json",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/symmetry-gate/summary.json",
+        "sha256": "97f5df2025f5632e40b8096c48106b858e6d528d3652a546ae5bfbecc4f5e84d",
+        "bytes": 369
+      },
+      {
+        "sourcePath": "checkpoint-127/symmetry-gate/symmetry_mismatches.csv",
+        "curatedPath": "docs/validation/evidence/checkpoint-128/curated-predecessor-native-evidence/cp127/symmetry-gate/symmetry_mismatches.csv",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    ]
+  },
+  "validationEvidenceZipLimits": {
+    "maxSingleBytes": 5242880,
+    "maxTotalBytes": 16777216
+  },
+  "referencesExcludedFromLimit": true
+}

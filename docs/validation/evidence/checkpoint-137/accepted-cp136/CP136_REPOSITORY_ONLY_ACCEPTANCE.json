@@ -1,0 +1,52 @@
+﻿{
+    "schemaVersion":  "star-cluster-cp136-repository-only-acceptance-v0.1",
+    "checkpoint":  136,
+    "repositoryOnly":  true,
+    "acceptedMechanicsResearchBaseline":  135,
+    "previousCandidateNumericalBaseline":  135,
+    "python":  "Python 3.13.14",
+    "dotnetSdk":  "8.0.423",
+    "buildPassed":  true,
+    "pythonTestsPassed":  218,
+    "xunitTotal":  913,
+    "xunitPassed":  913,
+    "xunitFailed":  0,
+    "xunitSkipped":  0,
+    "scenarioRunnerSelfTestsPassed":  70,
+    "deterministicScenarioCorpusPassed":  true,
+    "tl1PhaseACorpusPassed":  true,
+    "researchParityPassed":  25,
+    "cp136KernelTestsPassed":  7,
+    "canonicalKernelVersion":  "0.3",
+    "canonicalDamageModel":  "penetration-hardening-v1",
+    "logicalContexts":  196,
+    "generatedVariants":  392,
+    "tl6Variants":  136,
+    "symmetryComparisons":  50,
+    "symmetryMismatches":  0,
+    "smokeTrials":  392,
+    "smokeTrialErrors":  0,
+    "smokeMechanicsFlags":  0,
+    "mandatoryDefenses":  [
+                              "shield",
+                              "armor"
+                          ],
+    "tl6ArmorProfiles":  [
+                             "mainline",
+                             "A_b1"
+                         ],
+    "pdsContextsForMissileLanes":  [
+                                       "off",
+                                       "AMM"
+                                   ],
+    "damageControlStudyDoctrine":  "HullOnlyWhenDamaged",
+    "commonRandomNumberBaseline":  135,
+    "masterSeed":  134001,
+    "balanceTargets":  null,
+    "mixedTlShipsExecuted":  false,
+    "automaticPromotion":  false,
+    "substantiveTrials":  0,
+    "failedGates":  [
+
+                    ]
+}

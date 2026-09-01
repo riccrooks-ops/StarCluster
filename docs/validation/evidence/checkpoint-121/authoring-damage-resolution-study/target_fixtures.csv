@@ -1,0 +1,129 @@
+tl,target_fixture,classification,underlying_build,used_space,capacity,initial_shield,shield_base_recharge,armor_protection,armor_integrity,hull,pds_family,hardener,role,initial_shield_legacy_equivalent,shield_base_recharge_legacy_equivalent,armor_protection_legacy_equivalent,armor_integrity_legacy_equivalent,hull_legacy_equivalent
+2,armor-integrity-full-control,controlled_fixture,tl2-kinetic-balanced,35,35,6,2,0,12,24,-,False,Research-only +2 scaled Armor Integrity points (= +1 legacy point).,3.0,1.0,0.0,6.0,12.0
+2,armor-integrity-half-control,controlled_fixture,tl2-kinetic-balanced,35,35,6,2,0,11,24,-,False,Research-only +1 scaled Armor Integrity point (= +0.5 legacy point).,3.0,1.0,0.0,5.5,12.0
+2,armor-protection-full-control,controlled_fixture,tl2-kinetic-balanced,35,35,6,2,2,10,24,-,False,Research-only +2 scaled Armor Protection points (= +1 legacy point).,3.0,1.0,1.0,5.0,12.0
+2,armor-protection-half-control,controlled_fixture,tl2-kinetic-balanced,35,35,6,2,1,10,24,-,False,Research-only +1 scaled Armor Protection point (= +0.5 legacy point).,3.0,1.0,0.5,5.0,12.0
+2,energy-balanced-legal,legal_build,tl2-energy-balanced,35,35,6,2,0,10,24,-,False,General Energy-family layered target.,3.0,1.0,0.0,5.0,12.0
+2,energy-defense-legal,legal_build,tl2-energy-defense-specialist,35,35,6,2,0,10,24,Energy,False,Shield/Hardener/Energy-PDS defensive specialist.,3.0,1.0,0.0,5.0,12.0
+2,hull-full-control,controlled_fixture,tl2-energy-balanced,35,35,6,2,0,10,26,-,False,Research-only +2 scaled Hull points (= +1 legacy point).,3.0,1.0,0.0,5.0,13.0
+2,hull-half-control,controlled_fixture,tl2-energy-balanced,35,35,6,2,0,10,25,-,False,Research-only +1 scaled Hull point (= +0.5 legacy point).,3.0,1.0,0.0,5.0,12.5
+2,kinetic-balanced-legal,legal_build,tl2-kinetic-balanced,35,35,6,2,0,10,24,-,False,General Kinetic-family layered target.,3.0,1.0,0.0,5.0,12.0
+2,kinetic-ew-legal,legal_build,tl2-kinetic-ew-specialist,35,35,0,0,0,10,24,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.,0.0,0.0,0.0,5.0,12.0
+2,missile-balanced-legal,legal_build,tl2-missile-balanced,35,35,6,2,0,10,24,-,False,General Missile-family layered target.,3.0,1.0,0.0,5.0,12.0
+2,missile-defense-legal,legal_build,tl2-missile-missile-defense,35,35,6,2,0,10,24,AMM,False,Shield/AMM Missile-defense specialist target.,3.0,1.0,0.0,5.0,12.0
+2,shield-capacity-full-control,controlled_fixture,tl2-energy-defense-specialist,35,35,8,2,0,10,24,Energy,False,Research-only +2 scaled Shield-capacity points (= +1 legacy point).,4.0,1.0,0.0,5.0,12.0
+2,shield-capacity-half-control,controlled_fixture,tl2-energy-defense-specialist,35,35,7,2,0,10,24,Energy,False,Research-only +1 scaled Shield-capacity point (= +0.5 legacy point).,3.5,1.0,0.0,5.0,12.0
+2,shield-recharge-full-control,controlled_fixture,tl2-energy-defense-specialist,35,35,6,4,0,10,24,Energy,False,Research-only +2 scaled Shield recharge per turn (= +1 legacy point).,3.0,2.0,0.0,5.0,12.0
+2,shield-recharge-half-control,controlled_fixture,tl2-energy-defense-specialist,35,35,6,3,0,10,24,Energy,False,Research-only +1 scaled Shield recharge per turn (= +0.5 legacy point).,3.0,1.5,0.0,5.0,12.0
+3,armor-integrity-full-control,controlled_fixture,tl3-kinetic-balanced,36,36,6,2,2,12,24,-,False,Research-only +2 scaled Armor Integrity points (= +1 legacy point).,3.0,1.0,1.0,6.0,12.0
+3,armor-integrity-half-control,controlled_fixture,tl3-kinetic-balanced,36,36,6,2,2,11,24,-,False,Research-only +1 scaled Armor Integrity point (= +0.5 legacy point).,3.0,1.0,1.0,5.5,12.0
+3,armor-protection-full-control,controlled_fixture,tl3-kinetic-balanced,36,36,6,2,4,10,24,-,False,Research-only +2 scaled Armor Protection points (= +1 legacy point).,3.0,1.0,2.0,5.0,12.0
+3,armor-protection-half-control,controlled_fixture,tl3-kinetic-balanced,36,36,6,2,3,10,24,-,False,Research-only +1 scaled Armor Protection point (= +0.5 legacy point).,3.0,1.0,1.5,5.0,12.0
+3,energy-balanced-legal,legal_build,tl3-energy-balanced,36,36,6,2,2,10,24,-,False,General Energy-family layered target.,3.0,1.0,1.0,5.0,12.0
+3,energy-defense-legal,legal_build,tl3-energy-defense-specialist,36,36,6,2,2,10,24,Energy,True,Shield/Hardener/Energy-PDS defensive specialist.,3.0,1.0,1.0,5.0,12.0
+3,hull-full-control,controlled_fixture,tl3-energy-balanced,36,36,6,2,2,10,26,-,False,Research-only +2 scaled Hull points (= +1 legacy point).,3.0,1.0,1.0,5.0,13.0
+3,hull-half-control,controlled_fixture,tl3-energy-balanced,36,36,6,2,2,10,25,-,False,Research-only +1 scaled Hull point (= +0.5 legacy point).,3.0,1.0,1.0,5.0,12.5
+3,kinetic-balanced-legal,legal_build,tl3-kinetic-balanced,36,36,6,2,2,10,24,-,False,General Kinetic-family layered target.,3.0,1.0,1.0,5.0,12.0
+3,kinetic-ew-legal,legal_build,tl3-kinetic-ew-specialist,36,36,0,0,2,10,24,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.,0.0,0.0,1.0,5.0,12.0
+3,missile-balanced-legal,legal_build,tl3-missile-balanced,36,36,6,2,2,10,24,-,False,General Missile-family layered target.,3.0,1.0,1.0,5.0,12.0
+3,missile-defense-legal,legal_build,tl3-missile-missile-defense,36,36,6,2,2,10,24,AMM,True,Shield/AMM Missile-defense specialist target.,3.0,1.0,1.0,5.0,12.0
+3,shield-capacity-full-control,controlled_fixture,tl3-energy-defense-specialist,36,36,8,2,2,10,24,Energy,True,Research-only +2 scaled Shield-capacity points (= +1 legacy point).,4.0,1.0,1.0,5.0,12.0
+3,shield-capacity-half-control,controlled_fixture,tl3-energy-defense-specialist,36,36,7,2,2,10,24,Energy,True,Research-only +1 scaled Shield-capacity point (= +0.5 legacy point).,3.5,1.0,1.0,5.0,12.0
+3,shield-recharge-full-control,controlled_fixture,tl3-energy-defense-specialist,36,36,6,4,2,10,24,Energy,True,Research-only +2 scaled Shield recharge per turn (= +1 legacy point).,3.0,2.0,1.0,5.0,12.0
+3,shield-recharge-half-control,controlled_fixture,tl3-energy-defense-specialist,36,36,6,3,2,10,24,Energy,True,Research-only +1 scaled Shield recharge per turn (= +0.5 legacy point).,3.0,1.5,1.0,5.0,12.0
+4,armor-integrity-full-control,controlled_fixture,tl4-kinetic-balanced,37,37,8,2,2,14,24,-,False,Research-only +2 scaled Armor Integrity points (= +1 legacy point).,4.0,1.0,1.0,7.0,12.0
+4,armor-integrity-half-control,controlled_fixture,tl4-kinetic-balanced,37,37,8,2,2,13,24,-,False,Research-only +1 scaled Armor Integrity point (= +0.5 legacy point).,4.0,1.0,1.0,6.5,12.0
+4,armor-protection-full-control,controlled_fixture,tl4-kinetic-balanced,37,37,8,2,4,12,24,-,False,Research-only +2 scaled Armor Protection points (= +1 legacy point).,4.0,1.0,2.0,6.0,12.0
+4,armor-protection-half-control,controlled_fixture,tl4-kinetic-balanced,37,37,8,2,3,12,24,-,False,Research-only +1 scaled Armor Protection point (= +0.5 legacy point).,4.0,1.0,1.5,6.0,12.0
+4,energy-balanced-legal,legal_build,tl4-energy-balanced,37,37,8,2,2,12,24,-,False,General Energy-family layered target.,4.0,1.0,1.0,6.0,12.0
+4,energy-defense-legal,legal_build,tl4-energy-defense-specialist,37,37,8,2,2,12,24,Energy,True,Shield/Hardener/Energy-PDS defensive specialist.,4.0,1.0,1.0,6.0,12.0
+4,hull-full-control,controlled_fixture,tl4-energy-balanced,37,37,8,2,2,12,26,-,False,Research-only +2 scaled Hull points (= +1 legacy point).,4.0,1.0,1.0,6.0,13.0
+4,hull-half-control,controlled_fixture,tl4-energy-balanced,37,37,8,2,2,12,25,-,False,Research-only +1 scaled Hull point (= +0.5 legacy point).,4.0,1.0,1.0,6.0,12.5
+4,kinetic-balanced-legal,legal_build,tl4-kinetic-balanced,37,37,8,2,2,12,24,-,False,General Kinetic-family layered target.,4.0,1.0,1.0,6.0,12.0
+4,kinetic-ew-legal,legal_build,tl4-kinetic-ew-specialist,37,37,0,0,2,12,24,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.,0.0,0.0,1.0,6.0,12.0
+4,missile-balanced-legal,legal_build,tl4-missile-balanced,37,37,8,2,2,12,24,-,False,General Missile-family layered target.,4.0,1.0,1.0,6.0,12.0
+4,missile-defense-legal,legal_build,tl4-missile-missile-defense,37,37,8,2,2,12,24,AMM,True,Shield/AMM Missile-defense specialist target.,4.0,1.0,1.0,6.0,12.0
+4,shield-capacity-full-control,controlled_fixture,tl4-energy-defense-specialist,37,37,10,2,2,12,24,Energy,True,Research-only +2 scaled Shield-capacity points (= +1 legacy point).,5.0,1.0,1.0,6.0,12.0
+4,shield-capacity-half-control,controlled_fixture,tl4-energy-defense-specialist,37,37,9,2,2,12,24,Energy,True,Research-only +1 scaled Shield-capacity point (= +0.5 legacy point).,4.5,1.0,1.0,6.0,12.0
+4,shield-recharge-full-control,controlled_fixture,tl4-energy-defense-specialist,37,37,8,4,2,12,24,Energy,True,Research-only +2 scaled Shield recharge per turn (= +1 legacy point).,4.0,2.0,1.0,6.0,12.0
+4,shield-recharge-half-control,controlled_fixture,tl4-energy-defense-specialist,37,37,8,3,2,12,24,Energy,True,Research-only +1 scaled Shield recharge per turn (= +0.5 legacy point).,4.0,1.5,1.0,6.0,12.0
+5,armor-integrity-full-control,controlled_fixture,tl5-kinetic-balanced,38,38,10,2,4,14,24,-,False,Research-only +2 scaled Armor Integrity points (= +1 legacy point).,5.0,1.0,2.0,7.0,12.0
+5,armor-integrity-half-control,controlled_fixture,tl5-kinetic-balanced,38,38,10,2,4,13,24,-,False,Research-only +1 scaled Armor Integrity point (= +0.5 legacy point).,5.0,1.0,2.0,6.5,12.0
+5,armor-protection-full-control,controlled_fixture,tl5-kinetic-balanced,38,38,10,2,6,12,24,-,False,Research-only +2 scaled Armor Protection points (= +1 legacy point).,5.0,1.0,3.0,6.0,12.0
+5,armor-protection-half-control,controlled_fixture,tl5-kinetic-balanced,38,38,10,2,5,12,24,-,False,Research-only +1 scaled Armor Protection point (= +0.5 legacy point).,5.0,1.0,2.5,6.0,12.0
+5,energy-balanced-legal,legal_build,tl5-energy-balanced,38,38,10,2,4,12,24,-,False,General Energy-family layered target.,5.0,1.0,2.0,6.0,12.0
+5,energy-defense-legal,legal_build,tl5-energy-defense-specialist,38,38,10,2,4,12,24,Energy,True,Shield/Hardener/Energy-PDS defensive specialist.,5.0,1.0,2.0,6.0,12.0
+5,hull-full-control,controlled_fixture,tl5-energy-balanced,38,38,10,2,4,12,26,-,False,Research-only +2 scaled Hull points (= +1 legacy point).,5.0,1.0,2.0,6.0,13.0
+5,hull-half-control,controlled_fixture,tl5-energy-balanced,38,38,10,2,4,12,25,-,False,Research-only +1 scaled Hull point (= +0.5 legacy point).,5.0,1.0,2.0,6.0,12.5
+5,kinetic-balanced-legal,legal_build,tl5-kinetic-balanced,38,38,10,2,4,12,24,-,False,General Kinetic-family layered target.,5.0,1.0,2.0,6.0,12.0
+5,kinetic-ew-legal,legal_build,tl5-kinetic-ew-specialist,38,38,0,0,4,12,24,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.,0.0,0.0,2.0,6.0,12.0
+5,missile-balanced-legal,legal_build,tl5-missile-balanced,38,38,10,2,4,12,24,-,False,General Missile-family layered target.,5.0,1.0,2.0,6.0,12.0
+5,missile-defense-legal,legal_build,tl5-missile-missile-defense,38,38,10,2,4,12,24,AMM,True,Shield/AMM Missile-defense specialist target.,5.0,1.0,2.0,6.0,12.0
+5,shield-capacity-full-control,controlled_fixture,tl5-energy-defense-specialist,38,38,12,2,4,12,24,Energy,True,Research-only +2 scaled Shield-capacity points (= +1 legacy point).,6.0,1.0,2.0,6.0,12.0
+5,shield-capacity-half-control,controlled_fixture,tl5-energy-defense-specialist,38,38,11,2,4,12,24,Energy,True,Research-only +1 scaled Shield-capacity point (= +0.5 legacy point).,5.5,1.0,2.0,6.0,12.0
+5,shield-recharge-full-control,controlled_fixture,tl5-energy-defense-specialist,38,38,10,4,4,12,24,Energy,True,Research-only +2 scaled Shield recharge per turn (= +1 legacy point).,5.0,2.0,2.0,6.0,12.0
+5,shield-recharge-half-control,controlled_fixture,tl5-energy-defense-specialist,38,38,10,3,4,12,24,Energy,True,Research-only +1 scaled Shield recharge per turn (= +0.5 legacy point).,5.0,1.5,2.0,6.0,12.0
+6,armor-integrity-full-control,controlled_fixture,tl6-kinetic-balanced,39,39,10,4,4,16,24,-,False,Research-only +2 scaled Armor Integrity points (= +1 legacy point).,5.0,2.0,2.0,8.0,12.0
+6,armor-integrity-half-control,controlled_fixture,tl6-kinetic-balanced,39,39,10,4,4,15,24,-,False,Research-only +1 scaled Armor Integrity point (= +0.5 legacy point).,5.0,2.0,2.0,7.5,12.0
+6,armor-protection-full-control,controlled_fixture,tl6-kinetic-balanced,39,39,10,4,6,14,24,-,False,Research-only +2 scaled Armor Protection points (= +1 legacy point).,5.0,2.0,3.0,7.0,12.0
+6,armor-protection-half-control,controlled_fixture,tl6-kinetic-balanced,39,39,10,4,5,14,24,-,False,Research-only +1 scaled Armor Protection point (= +0.5 legacy point).,5.0,2.0,2.5,7.0,12.0
+6,energy-balanced-legal,legal_build,tl6-energy-balanced,39,39,10,4,4,14,24,-,False,General Energy-family layered target.,5.0,2.0,2.0,7.0,12.0
+6,energy-defense-legal,legal_build,tl6-energy-defense-specialist,39,39,10,4,4,14,24,Energy,True,Shield/Hardener/Energy-PDS defensive specialist.,5.0,2.0,2.0,7.0,12.0
+6,hull-full-control,controlled_fixture,tl6-energy-balanced,39,39,10,4,4,14,26,-,False,Research-only +2 scaled Hull points (= +1 legacy point).,5.0,2.0,2.0,7.0,13.0
+6,hull-half-control,controlled_fixture,tl6-energy-balanced,39,39,10,4,4,14,25,-,False,Research-only +1 scaled Hull point (= +0.5 legacy point).,5.0,2.0,2.0,7.0,12.5
+6,kinetic-balanced-legal,legal_build,tl6-kinetic-balanced,39,39,10,4,4,14,24,-,False,General Kinetic-family layered target.,5.0,2.0,2.0,7.0,12.0
+6,kinetic-ew-legal,legal_build,tl6-kinetic-ew-specialist,39,39,0,0,4,14,24,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.,0.0,0.0,2.0,7.0,12.0
+6,missile-balanced-legal,legal_build,tl6-missile-balanced,39,39,10,4,4,14,24,-,False,General Missile-family layered target.,5.0,2.0,2.0,7.0,12.0
+6,missile-defense-legal,legal_build,tl6-missile-missile-defense,39,39,10,4,4,14,24,AMM,True,Shield/AMM Missile-defense specialist target.,5.0,2.0,2.0,7.0,12.0
+6,shield-capacity-full-control,controlled_fixture,tl6-energy-defense-specialist,39,39,12,4,4,14,24,Energy,True,Research-only +2 scaled Shield-capacity points (= +1 legacy point).,6.0,2.0,2.0,7.0,12.0
+6,shield-capacity-half-control,controlled_fixture,tl6-energy-defense-specialist,39,39,11,4,4,14,24,Energy,True,Research-only +1 scaled Shield-capacity point (= +0.5 legacy point).,5.5,2.0,2.0,7.0,12.0
+6,shield-recharge-full-control,controlled_fixture,tl6-energy-defense-specialist,39,39,10,6,4,14,24,Energy,True,Research-only +2 scaled Shield recharge per turn (= +1 legacy point).,5.0,3.0,2.0,7.0,12.0
+6,shield-recharge-half-control,controlled_fixture,tl6-energy-defense-specialist,39,39,10,5,4,14,24,Energy,True,Research-only +1 scaled Shield recharge per turn (= +0.5 legacy point).,5.0,2.5,2.0,7.0,12.0
+7,armor-integrity-full-control,controlled_fixture,tl7-kinetic-balanced,41,41,14,4,4,16,24,-,False,Research-only +2 scaled Armor Integrity points (= +1 legacy point).,7.0,2.0,2.0,8.0,12.0
+7,armor-integrity-half-control,controlled_fixture,tl7-kinetic-balanced,41,41,14,4,4,15,24,-,False,Research-only +1 scaled Armor Integrity point (= +0.5 legacy point).,7.0,2.0,2.0,7.5,12.0
+7,armor-protection-full-control,controlled_fixture,tl7-kinetic-balanced,41,41,14,4,6,14,24,-,False,Research-only +2 scaled Armor Protection points (= +1 legacy point).,7.0,2.0,3.0,7.0,12.0
+7,armor-protection-half-control,controlled_fixture,tl7-kinetic-balanced,41,41,14,4,5,14,24,-,False,Research-only +1 scaled Armor Protection point (= +0.5 legacy point).,7.0,2.0,2.5,7.0,12.0
+7,energy-balanced-legal,legal_build,tl7-energy-balanced,41,41,14,4,4,14,24,-,False,General Energy-family layered target.,7.0,2.0,2.0,7.0,12.0
+7,energy-defense-legal,legal_build,tl7-energy-defense-specialist,41,41,14,4,4,14,24,Energy,True,Shield/Hardener/Energy-PDS defensive specialist.,7.0,2.0,2.0,7.0,12.0
+7,hull-full-control,controlled_fixture,tl7-energy-balanced,41,41,14,4,4,14,26,-,False,Research-only +2 scaled Hull points (= +1 legacy point).,7.0,2.0,2.0,7.0,13.0
+7,hull-half-control,controlled_fixture,tl7-energy-balanced,41,41,14,4,4,14,25,-,False,Research-only +1 scaled Hull point (= +0.5 legacy point).,7.0,2.0,2.0,7.0,12.5
+7,kinetic-balanced-legal,legal_build,tl7-kinetic-balanced,41,41,14,4,4,14,24,-,False,General Kinetic-family layered target.,7.0,2.0,2.0,7.0,12.0
+7,kinetic-ew-legal,legal_build,tl7-kinetic-ew-specialist,41,41,0,0,4,14,24,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.,0.0,0.0,2.0,7.0,12.0
+7,missile-balanced-legal,legal_build,tl7-missile-balanced,41,41,14,4,4,14,24,-,False,General Missile-family layered target.,7.0,2.0,2.0,7.0,12.0
+7,missile-defense-legal,legal_build,tl7-missile-missile-defense,41,41,14,4,4,14,24,AMM,True,Shield/AMM Missile-defense specialist target.,7.0,2.0,2.0,7.0,12.0
+7,shield-capacity-full-control,controlled_fixture,tl7-energy-defense-specialist,41,41,16,4,4,14,24,Energy,True,Research-only +2 scaled Shield-capacity points (= +1 legacy point).,8.0,2.0,2.0,7.0,12.0
+7,shield-capacity-half-control,controlled_fixture,tl7-energy-defense-specialist,41,41,15,4,4,14,24,Energy,True,Research-only +1 scaled Shield-capacity point (= +0.5 legacy point).,7.5,2.0,2.0,7.0,12.0
+7,shield-recharge-full-control,controlled_fixture,tl7-energy-defense-specialist,41,41,14,6,4,14,24,Energy,True,Research-only +2 scaled Shield recharge per turn (= +1 legacy point).,7.0,3.0,2.0,7.0,12.0
+7,shield-recharge-half-control,controlled_fixture,tl7-energy-defense-specialist,41,41,14,5,4,14,24,Energy,True,Research-only +1 scaled Shield recharge per turn (= +0.5 legacy point).,7.0,2.5,2.0,7.0,12.0
+8,armor-integrity-full-control,controlled_fixture,tl8-kinetic-balanced,43,43,18,4,4,16,24,-,False,Research-only +2 scaled Armor Integrity points (= +1 legacy point).,9.0,2.0,2.0,8.0,12.0
+8,armor-integrity-half-control,controlled_fixture,tl8-kinetic-balanced,43,43,18,4,4,15,24,-,False,Research-only +1 scaled Armor Integrity point (= +0.5 legacy point).,9.0,2.0,2.0,7.5,12.0
+8,armor-protection-full-control,controlled_fixture,tl8-kinetic-balanced,43,43,18,4,6,14,24,-,False,Research-only +2 scaled Armor Protection points (= +1 legacy point).,9.0,2.0,3.0,7.0,12.0
+8,armor-protection-half-control,controlled_fixture,tl8-kinetic-balanced,43,43,18,4,5,14,24,-,False,Research-only +1 scaled Armor Protection point (= +0.5 legacy point).,9.0,2.0,2.5,7.0,12.0
+8,energy-balanced-legal,legal_build,tl8-energy-balanced,43,43,18,4,4,14,24,-,False,General Energy-family layered target.,9.0,2.0,2.0,7.0,12.0
+8,energy-defense-legal,legal_build,tl8-energy-defense-specialist,43,43,18,4,4,14,24,Energy,True,Shield/Hardener/Energy-PDS defensive specialist.,9.0,2.0,2.0,7.0,12.0
+8,hull-full-control,controlled_fixture,tl8-energy-balanced,43,43,18,4,4,14,26,-,False,Research-only +2 scaled Hull points (= +1 legacy point).,9.0,2.0,2.0,7.0,13.0
+8,hull-half-control,controlled_fixture,tl8-energy-balanced,43,43,18,4,4,14,25,-,False,Research-only +1 scaled Hull point (= +0.5 legacy point).,9.0,2.0,2.0,7.0,12.5
+8,kinetic-balanced-legal,legal_build,tl8-kinetic-balanced,43,43,18,4,4,14,24,-,False,General Kinetic-family layered target.,9.0,2.0,2.0,7.0,12.0
+8,kinetic-ew-legal,legal_build,tl8-kinetic-ew-specialist,43,43,0,0,4,14,24,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.,0.0,0.0,2.0,7.0,12.0
+8,missile-balanced-legal,legal_build,tl8-missile-balanced,43,43,18,4,4,14,24,-,False,General Missile-family layered target.,9.0,2.0,2.0,7.0,12.0
+8,missile-defense-legal,legal_build,tl8-missile-missile-defense,43,43,18,4,4,14,24,AMM,True,Shield/AMM Missile-defense specialist target.,9.0,2.0,2.0,7.0,12.0
+8,shield-capacity-full-control,controlled_fixture,tl8-energy-defense-specialist,43,43,20,4,4,14,24,Energy,True,Research-only +2 scaled Shield-capacity points (= +1 legacy point).,10.0,2.0,2.0,7.0,12.0
+8,shield-capacity-half-control,controlled_fixture,tl8-energy-defense-specialist,43,43,19,4,4,14,24,Energy,True,Research-only +1 scaled Shield-capacity point (= +0.5 legacy point).,9.5,2.0,2.0,7.0,12.0
+8,shield-recharge-full-control,controlled_fixture,tl8-energy-defense-specialist,43,43,18,6,4,14,24,Energy,True,Research-only +2 scaled Shield recharge per turn (= +1 legacy point).,9.0,3.0,2.0,7.0,12.0
+8,shield-recharge-half-control,controlled_fixture,tl8-energy-defense-specialist,43,43,18,5,4,14,24,Energy,True,Research-only +1 scaled Shield recharge per turn (= +0.5 legacy point).,9.0,2.5,2.0,7.0,12.0
+9,armor-integrity-full-control,controlled_fixture,tl9-kinetic-balanced,45,45,24,6,6,18,24,-,False,Research-only +2 scaled Armor Integrity points (= +1 legacy point).,12.0,3.0,3.0,9.0,12.0
+9,armor-integrity-half-control,controlled_fixture,tl9-kinetic-balanced,45,45,24,6,6,17,24,-,False,Research-only +1 scaled Armor Integrity point (= +0.5 legacy point).,12.0,3.0,3.0,8.5,12.0
+9,armor-protection-full-control,controlled_fixture,tl9-kinetic-balanced,45,45,24,6,8,16,24,-,False,Research-only +2 scaled Armor Protection points (= +1 legacy point).,12.0,3.0,4.0,8.0,12.0
+9,armor-protection-half-control,controlled_fixture,tl9-kinetic-balanced,45,45,24,6,7,16,24,-,False,Research-only +1 scaled Armor Protection point (= +0.5 legacy point).,12.0,3.0,3.5,8.0,12.0
+9,energy-balanced-legal,legal_build,tl9-energy-balanced,45,45,24,6,6,16,24,-,False,General Energy-family layered target.,12.0,3.0,3.0,8.0,12.0
+9,energy-defense-legal,legal_build,tl9-energy-defense-specialist,45,45,24,6,6,16,24,Energy,True,Shield/Hardener/Energy-PDS defensive specialist.,12.0,3.0,3.0,8.0,12.0
+9,hull-full-control,controlled_fixture,tl9-energy-balanced,45,45,24,6,6,16,26,-,False,Research-only +2 scaled Hull points (= +1 legacy point).,12.0,3.0,3.0,8.0,13.0
+9,hull-half-control,controlled_fixture,tl9-energy-balanced,45,45,24,6,6,16,25,-,False,Research-only +1 scaled Hull point (= +0.5 legacy point).,12.0,3.0,3.0,8.0,12.5
+9,kinetic-balanced-legal,legal_build,tl9-kinetic-balanced,45,45,24,6,6,16,24,-,False,General Kinetic-family layered target.,12.0,3.0,3.0,8.0,12.0
+9,kinetic-ew-legal,legal_build,tl9-kinetic-ew-specialist,45,45,0,0,6,16,24,Kinetic,False,Kinetic ECM/ECCM/PDS specialist target.,0.0,0.0,3.0,8.0,12.0
+9,missile-balanced-legal,legal_build,tl9-missile-balanced,45,45,24,6,6,16,24,-,False,General Missile-family layered target.,12.0,3.0,3.0,8.0,12.0
+9,missile-defense-legal,legal_build,tl9-missile-missile-defense,45,45,24,6,6,16,24,AMM,True,Shield/AMM Missile-defense specialist target.,12.0,3.0,3.0,8.0,12.0
+9,shield-capacity-full-control,controlled_fixture,tl9-energy-defense-specialist,45,45,26,6,6,16,24,Energy,True,Research-only +2 scaled Shield-capacity points (= +1 legacy point).,13.0,3.0,3.0,8.0,12.0
+9,shield-capacity-half-control,controlled_fixture,tl9-energy-defense-specialist,45,45,25,6,6,16,24,Energy,True,Research-only +1 scaled Shield-capacity point (= +0.5 legacy point).,12.5,3.0,3.0,8.0,12.0
+9,shield-recharge-full-control,controlled_fixture,tl9-energy-defense-specialist,45,45,24,8,6,16,24,Energy,True,Research-only +2 scaled Shield recharge per turn (= +1 legacy point).,12.0,4.0,3.0,8.0,12.0
+9,shield-recharge-half-control,controlled_fixture,tl9-energy-defense-specialist,45,45,24,7,6,16,24,Energy,True,Research-only +1 scaled Shield recharge per turn (= +0.5 legacy point).,12.0,3.5,3.0,8.0,12.0

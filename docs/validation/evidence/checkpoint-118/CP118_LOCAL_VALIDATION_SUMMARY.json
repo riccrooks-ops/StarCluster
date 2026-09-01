@@ -1,0 +1,62 @@
+{
+  "checkpoint": 118,
+  "status": "local_pre_handoff_validation_passed",
+  "acceptedBaseline": 117,
+  "pythonRuntime": "CPython 3.13",
+  "pythonSelfTests": {
+    "passed": 87,
+    "failed": 0
+  },
+  "parity": {
+    "passed": true,
+    "cases": 25,
+    "errors": 0
+  },
+  "regressionSmokes": {
+    "cp114": {"variants": 3184, "trials": 3184, "failedGates": 0},
+    "cp115a": {"variants": 4064, "trials": 4064, "failedGates": 0},
+    "cp116": {"variants": 2976, "trials": 2976, "failedGates": 0}
+  },
+  "cp118Smoke": {
+    "variants": 1824,
+    "trials": 1824,
+    "failedGates": 0
+  },
+  "authoring": {
+    "variants": 1824,
+    "trialsPerVariant": 50,
+    "totalTrials": 91200,
+    "failedGates": 0
+  },
+  "nativePlanned": {
+    "variants": 1824,
+    "trialsPerVariant": 2000,
+    "totalTrials": 3648000
+  },
+  "studyShape": {
+    "exactFillBuilds": 135,
+    "missileVariants": 936,
+    "kineticVariants": 888,
+    "primaryTlVariants": 1032,
+    "advancedTlVariants": 264,
+    "endpointStressVariants": 528,
+    "missileProfiles": 12,
+    "kineticProfiles": 6,
+    "targetFixtures": 6,
+    "controlledFixtures": 2
+  },
+  "workbookQa": {
+    "toolRecalculationSucceeded": true,
+    "sheetsRendered": 9,
+    "visualReviewPassed": true,
+    "formulaErrorsObserved": false
+  },
+  "scope": {
+    "automaticPromotion": false,
+    "productionSourceChanged": false,
+    "numericalMatrixChanged": false,
+    "conceptChanged": false,
+    "damageModel": "layered_defense_hull_only",
+    "internalDamageCriticalsSimulated": false
+  }
+}

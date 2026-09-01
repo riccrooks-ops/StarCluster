@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "star-cluster-tl1-phase-a-v1",
+  "id": "tl1-a06-held-interception-unused",
+  "matrixScenarioId": "TL1-A06",
+  "name": "Unused held-interception earmarks",
+  "baselineVersion": "tl1-core-combat-v0.1",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "cases": [
+    {
+      "id": "a06-c01",
+      "name": "Unused energy hold releases its power after the window",
+      "operation": "heldInterception",
+      "input": {
+        "envelope": 5,
+        "holdId": "energy-hold",
+        "powerCost": 2,
+        "startingAmmunition": 0,
+        "ammunitionCost": 0,
+        "triggered": false
+      },
+      "expected": {
+        "afterDeclaration": {
+          "available": 5,
+          "spendable": 3,
+          "earmarked": 2
+        },
+        "finalPower": {
+          "available": 5,
+          "spendable": 5,
+          "earmarked": 0,
+          "spent": 0
+        },
+        "remainingAmmunition": 0,
+        "attackOpportunityReserved": true,
+        "attackOpportunityUsed": false
+      }
+    },
+    {
+      "id": "a06-c02",
+      "name": "Unused kinetic hold releases its 1-TP earmark and preserves ammunition",
+      "operation": "heldInterception",
+      "input": {
+        "envelope": 5,
+        "holdId": "kinetic-hold",
+        "powerCost": 1,
+        "startingAmmunition": 12,
+        "ammunitionCost": 1,
+        "triggered": false
+      },
+      "expected": {
+        "afterDeclaration": {
+          "earmarked": 1,
+          "spendable": 4
+        },
+        "finalPower": {
+          "spent": 0,
+          "available": 5,
+          "earmarked": 0,
+          "spendable": 5
+        },
+        "remainingAmmunition": 12,
+        "attackOpportunityUsed": false
+      }
+    }
+  ]
+}

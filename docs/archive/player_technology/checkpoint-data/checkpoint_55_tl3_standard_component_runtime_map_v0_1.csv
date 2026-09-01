@@ -1,0 +1,5 @@
+﻿profile_id,role,hull,armor_integrity,armor_protection,shield_capacity,reactor_output,targeting_bonus,ship_move,kinetic,energy,missile,status
+tl3-lowtech-control,structural_control,12,5,0,2,6,12,2,DAM 4 / APEN 0 / Acc +23 / R4 / 1 TP,DAM 3 / SPEN 1 / APEN 1 / Acc +28 / R5 / 2 TP,DAM 5 / SPEN 1 / APEN 2 / Guide 60 / R7,checkpoint_55_not_promoted
+tl3-offense-refinement,offense_attribution,12,5,0,2,6,13,2,DAM 4 / APEN 0 / Acc +24 / R4 / 1 TP,DAM 3 / SPEN 1 / APEN 1 / Acc +29 / R5 / 2 TP,DAM 5 / SPEN 1 / APEN 2 / Guide 62 / R7,checkpoint_55_not_promoted
+tl3-defense-refinement,defense_attribution,13,6,0,3,6,12,2,DAM 4 / APEN 0 / Acc +23 / R4 / 1 TP,DAM 3 / SPEN 1 / APEN 1 / Acc +28 / R5 / 2 TP,DAM 5 / SPEN 1 / APEN 2 / Guide 60 / R7,checkpoint_55_not_promoted
+tl3-mature-lowtech-candidate,primary_candidate,13,6,0,3,7,13,2,DAM 4 / APEN 0 / Acc +24 / R4 / 1 TP,DAM 3 / SPEN 1 / APEN 1 / Acc +29 / R5 / 2 TP,DAM 5 / SPEN 1 / APEN 2 / Guide 62 / R7,checkpoint_55_not_promoted

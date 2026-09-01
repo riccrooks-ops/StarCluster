@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-97-validation-suite-policy-v0_1",
+  "checkpoint": "97",
+  "status": "encounter_adaptive_engage_foundation_release_policy",
+  "mustAlwaysRun": {
+    "nativeDependencyPrecheck": true,
+    "repositoryContract": true,
+    "manifestAndPowerShellSyntax": true,
+    "pinnedSdk": true,
+    "warningsAsErrorsBuild": true,
+    "unitTests": true,
+    "deterministicAndMechanicsGates": true,
+    "resourceRegressionGates": true,
+    "acceptedCp96CrossTlGeneratorPreflight": true,
+    "acceptedCp96GeneratedStudyActualConsumerPreflight": true,
+    "acceptedCp96GeneratedStudyOneTrialSmoke": true,
+    "acceptedCp96SubstantiveReplay": false,
+    "adaptiveEngageActualConsumerPreflight": true,
+    "adaptiveEngageOneTrialSmoke": true,
+    "adaptiveEngageBoundedStudy": true,
+    "runnerSelfTests": true
+  },
+  "acceptedBaseline": {
+    "checkpoint": 96,
+    "checkpointDefinitionSha256": "6c5ffdd09669137f892e88c678c9b3536ac61a456174eea24e85fd1108377d89",
+    "checkpointManifestSha256": "f4906ecdc98a782e16ce0be3e5230261d9a867653abc8489505b4edc00d0f512",
+    "crossTlFoundation": "v0.6",
+    "pairSelectionSeed": 940177,
+    "combatMasterSeed": 940100
+  },
+  "encounter": {
+    "mapRadius": 5,
+    "oppositeEdgeStartingRange": 10,
+    "preContactSearch": "one_hex_toward_center",
+    "preContactHiddenTargetCoordinateAvailableToPolicy": false,
+    "contactDoesNotImplyFirmTrack": true
+  },
+  "informationParity": {
+    "targetSpecificCombatBlackboard": true,
+    "ownCapabilitiesAllowed": true,
+    "observedTrackAllowed": true,
+    "observedAttacksAllowed": true,
+    "observedEmissionsAllowed": true,
+    "observedMovementAllowed": true,
+    "hiddenOpponentTlAllowed": false,
+    "hiddenOpponentEcmEccmRatingsAllowed": false,
+    "internalJammingMarginAllowed": false,
+    "undisclosedOpponentComponentsAllowed": false,
+    "futureOutcomeLookaheadAllowed": false,
+    "retroactiveTurnDecisionChangesAllowed": false
+  },
+  "engage": {
+    "preserveObservedAsymmetricStandoff": true,
+    "hardcodedOpponentFamilyRangeUsed": false,
+    "failedFirmDrivesLaterClosure": true,
+    "sameHexClosureAllowed": true,
+    "ordinaryMovementBeforeOverload": true,
+    "eccmOverloadBeforeActiveSensorOverloadWhenBothPlausible": true,
+    "activeSensorOverloadLastDitch": true,
+    "failedOverloadSameOrFartherRetryWithoutObservableStateChange": false,
+    "failedOverloadCloserRetryAllowed": true,
+    "failedOverloadRetryAfterMaterialObservableStateChangeAllowed": true
+  },
+  "study": {
+    "id": "tl2-itc17-adaptive-engage-encounter-foundation",
+    "masterSeed": 970100,
+    "comparisonGroups": 18,
+    "variants": 36,
+    "moverOrdersPerGroup": 2,
+    "trialsPerVariant": 3000,
+    "substantiveTrials": 108000,
+    "cp96RegressionSmokeTrials": 1440,
+    "cp97SmokeTrials": 36,
+    "totalTrialExecutionsAtDefault": 109476,
+    "harnessOverloadFixturesTechnologyEvidence": false
+  },
+  "authorityBoundary": {
+    "adaptiveAiArchitectureChanges": true,
+    "acceptedEwDoctrineRegistryChanged": false,
+    "componentTuning": false,
+    "gameplayNumericalRuleChanges": false,
+    "technologyPromotion": false,
+    "automaticCandidatePromotion": false,
+    "instrumentationOnlyPass": false
+  },
+  "developmentDirection": {
+    "instrumentationSupportsSubstantiveWork": true,
+    "broaderMechanicsAndTechnologyWorkContinues": true,
+    "reopenInstrumentationOnlyForMeasurementBlocker": true
+  },
+  "deepCalibration": {
+    "applicable": false,
+    "aliasUsesSameBoundedWorkload": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "star-cluster-checkpoint-113-architecture-v1",
+  "checkpoint": 113,
+  "acceptedBaseline": "112",
+  "checkpointType": "weapon_ammunition_warhead_architecture_and_docs_hygiene",
+  "productionSourceChanged": false,
+  "simulationSourceChanged": false,
+  "numericalMatrixChanged": false,
+  "reactorCandidateChanged": false,
+  "conceptChanged": true,
+  "calibrationRun": false,
+  "monteCarloTrials": 0,
+  "expected": {
+    "disciplines": 10,
+    "lineages": 32,
+    "storyboardBeats": 214,
+    "ideas": 137,
+    "foundationDomains": 20,
+    "optionalSupportCandidates": 35,
+    "hardExternalPrerequisiteBeats": 3,
+    "kineticAmmoProgressionRows": 6,
+    "missileWarheadProgressionRows": 7,
+    "suspendedCp109PayloadCandidates": 5,
+    "frozenCSharpAndTests": 561,
+    "frozenSimulationFiles": 21
+  },
+  "repositoryOwnedFiles": 2281
+}

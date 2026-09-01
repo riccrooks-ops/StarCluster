@@ -1,0 +1,28 @@
+{
+  "id": "checkpoint-57-tl4-foundation-transition-v0_1",
+  "checkpoint": 57,
+  "status": "screening_only_no_automatic_promotion",
+  "acceptedTl3Production": {
+    "profileId": "tl3-production",
+    "weaponBayCapacity": 1,
+    "auxiliaryCapacity": 2,
+    "defensiveMicrostep": "none",
+    "combatBattery": "B4G1 (4 charges x +1 TP)",
+    "powerCapacitor": "C2D1 (capacity 2, charge 1, discharge +1 TP)"
+  },
+  "provisionalTl4Foundation": {
+    "profileId": "tl4-foundation-control",
+    "weaponBayCapacity": 2,
+    "auxiliaryCapacity": 2,
+    "componentStatistics": "exact copy of accepted TL3 production",
+    "weaponOperation": "both installed main weapons operate normally when legal; no artificial fire-control restriction"
+  },
+  "fallback": "If unrestricted dual-main TL4 broadly invalidates mature specialized TL3 ships, prefer one main weapon throughout TL1-TL9 and express generational progression through component characteristics rather than artificial operating restrictions.",
+  "newStudies": [
+    "tl4-itc01-foundation-transition",
+    "tl4-itc02-two-bay-loadout-screening",
+    "tl4-itc03-tl3-specialization-resistance",
+    "tl4-pwr01-natural-two-bay-power",
+    "tl4-pwr02-mixed-power-flexibility"
+  ]
+}

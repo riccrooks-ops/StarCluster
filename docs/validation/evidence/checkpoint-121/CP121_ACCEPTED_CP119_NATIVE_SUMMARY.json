@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "star-cluster-cp121-accepted-baseline-v0.1",
+  "checkpoint": 121,
+  "acceptedCheckpoint": 119,
+  "status": "accepted_native_baseline_for_cp121",
+  "archivePath": "docs/validation/evidence/checkpoint-120/checkpoint-119-native-results.zip",
+  "archiveSha256": "1cd438a3ab74a47a20cee20115f972fa92bf4ac6f2b7a592cf54327ee8f3e18c",
+  "note": "CP121 is simulation-research only and preserves the CP119 accepted production/player baseline."
+}

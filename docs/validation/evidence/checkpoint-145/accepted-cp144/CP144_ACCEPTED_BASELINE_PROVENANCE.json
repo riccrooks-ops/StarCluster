@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "star-cluster-cp145-accepted-cp144-provenance-v0.1",
+  "checkpoint": 144,
+  "acceptedDate": "2026-08-26",
+  "fullRepositoryArchiveSha256": "dfb5284184603e66faba19afcba4ed514774f777b25815c9492b9c2305bd79cc",
+  "nativeResultsArchiveSha256": "71bd2b81980701292d6cd463b2a225752274a1045ea4e813c83e5728e9f961fd",
+  "nativeAcceptanceSummary": "docs/validation/evidence/checkpoint-145/accepted-cp144/CP144_NATIVE_ACCEPTANCE_SUMMARY.json",
+  "nativeAcceptanceSummarySha256": "ce3eef4f9a9b31d12c99bedb84715f27549d6e4ec79f2ec02163beedea21dd93",
+  "stageAScenarioSurfaceSha256": "ffa17024e0aed42be2def3f6b9e64a492da5c52d7d512cc31552aa19d6a132fd",
+  "stageAParetoChoiceSurfaceSha256": "a60975cb58afdf735d27aac4692182eb7080dfcf10f15c419194177fc2df6e15",
+  "stageAPairwiseSymmetricResponseSha256": "deb412591a006278c823b1cd24429e2412046390d123d41e7d3e812fa59078ad",
+  "note": "CP145 starts from the user-uploaded, native-accepted CP144 full repository and native results. Large predecessor result archives are not nested in the successor repository. The original CP144 native-results ZIP is referenced by SHA-256; CP145 retains only the exact hash-matching accepted CP144 scenario and Pareto response tables it actually analyzes, plus the native acceptance summary and compact provenance.",
+  "nativeResultsArchiveRetention": "external-by-hash-only",
+  "retainedAcceptedScenarioSurface": "docs/validation/evidence/checkpoint-145/accepted-cp144/CP144_ACCEPTED_SCENARIO_RESPONSE_SURFACE.csv",
+  "retainedAcceptedParetoSurface": "docs/validation/evidence/checkpoint-145/accepted-cp144/CP144_ACCEPTED_PARETO_CHOICE_SURFACE.csv"
+}

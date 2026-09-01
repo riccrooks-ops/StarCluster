@@ -1,0 +1,9 @@
+low_tl,high_tl,era_class,low_legal_builds,high_legal_builds,common_compositions,high_only_compositions,low_only_compositions,low_dual_main,high_dual_main,low_dual_reactor,high_dual_reactor
+1,2,baseline_to_low_entry,207,276,207,69,0,9,12,9,12
+2,3,low_maturation,276,616,276,340,0,12,72,12,124
+3,4,low_maturation,616,736,616,120,0,72,124,124,180
+4,5,low_to_mid_boundary,736,864,736,128,0,124,184,180,252
+5,6,mid_maturation_integration,864,1544,864,680,0,184,680,252,680
+6,7,mid_maturation,1544,1728,1544,184,0,680,864,680,864
+7,8,mid_to_high_boundary,1728,1728,1728,0,0,864,864,864,864
+8,9,high_maturation,1728,1728,1728,0,0,864,864,864,864

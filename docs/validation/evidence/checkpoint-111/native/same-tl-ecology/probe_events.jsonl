@@ -1,0 +1,60 @@
+{"chance": 70, "damage": 4, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 2, "side": "A", "turn": 4}
+{"chance": 75, "damage": 3, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 2, "side": "B", "turn": 4}
+{"chance": 65, "damage": 4, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "A", "turn": 5}
+{"chance": 70, "damage": 2, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "B", "turn": 5}
+{"chance": 65, "damage": 4, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "A", "turn": 6}
+{"chance": 70, "damage": 2, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "B", "turn": 6}
+{"chance": 65, "damage": 4, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "A", "turn": 7}
+{"chance": 70, "damage": 2, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "B", "turn": 7}
+{"chance": 65, "damage": 4, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "A", "turn": 8}
+{"chance": 70, "damage": 2, "event": "direct_fire", "hit": false, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "B", "turn": 8}
+{"chance": 65, "damage": 4, "event": "direct_fire", "hit": false, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "A", "turn": 9}
+{"chance": 70, "damage": 2, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "B", "turn": 9}
+{"chance": 65, "damage": 4, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "A", "turn": 10}
+{"chance": 70, "damage": 3, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "B", "turn": 10}
+{"chance": 65, "damage": 4, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "A", "turn": 11}
+{"chance": 70, "damage": 2, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "B", "turn": 11}
+{"chance": 65, "damage": 4, "event": "direct_fire", "hit": false, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "A", "turn": 12}
+{"chance": 70, "damage": 2, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "B", "turn": 12}
+{"chance": 65, "damage": 4, "event": "direct_fire", "hit": true, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "A", "turn": 13}
+{"chance": 70, "damage": 3, "event": "direct_fire", "hit": false, "probe_id": "tl1-kinetic-vs-energy", "range": 3, "side": "B", "turn": 13}
+{"chance": 32, "event": "pds_intercept", "probe_id": "tl3-missile-vs-amm", "target": "B", "turn": 3}
+{"chance": 32, "event": "pds_intercept", "probe_id": "tl3-missile-vs-amm", "target": "B", "turn": 4}
+{"damage": 5, "event": "missile_hit", "probe_id": "tl3-missile-vs-amm", "target": "A", "turn": 5}
+{"damage": 5, "event": "missile_hit", "probe_id": "tl3-missile-vs-amm", "target": "B", "turn": 5}
+{"damage": 5, "event": "missile_hit", "probe_id": "tl3-missile-vs-amm", "target": "A", "turn": 6}
+{"chance": 32, "event": "pds_intercept", "probe_id": "tl3-missile-vs-amm", "target": "B", "turn": 6}
+{"chance": 32, "event": "pds_intercept", "probe_id": "tl3-missile-vs-amm", "target": "B", "turn": 7}
+{"damage": 5, "event": "missile_hit", "probe_id": "tl3-missile-vs-amm", "target": "A", "turn": 8}
+{"damage": 5, "event": "missile_hit", "probe_id": "tl3-missile-vs-amm", "target": "B", "turn": 8}
+{"damage": 5, "event": "missile_hit", "probe_id": "tl3-missile-vs-amm", "target": "A", "turn": 9}
+{"damage": 5, "event": "missile_hit", "probe_id": "tl3-missile-vs-amm", "target": "B", "turn": 9}
+{"damage": 5, "event": "missile_hit", "probe_id": "tl3-missile-vs-amm", "target": "A", "turn": 10}
+{"chance": 32, "event": "pds_intercept", "probe_id": "tl3-missile-vs-amm", "target": "B", "turn": 10}
+{"chance": 32, "event": "pds_intercept", "probe_id": "tl3-missile-vs-amm", "target": "B", "turn": 11}
+{"chance": 32, "event": "pds_intercept", "probe_id": "tl3-missile-vs-amm", "target": "B", "turn": 12}
+{"damage": 5, "event": "missile_hit", "probe_id": "tl3-missile-vs-amm", "target": "A", "turn": 13}
+{"chance": 32, "event": "pds_intercept", "probe_id": "tl3-missile-vs-amm", "target": "B", "turn": 13}
+{"damage": 5, "event": "missile_hit", "probe_id": "tl3-missile-vs-amm", "target": "A", "turn": 14}
+{"damage": 5, "event": "missile_hit", "probe_id": "tl3-missile-vs-amm", "target": "B", "turn": 14}
+{"chance": 85, "damage": 5, "event": "direct_fire", "hit": false, "probe_id": "tl5-ew-vs-balanced", "range": 0, "side": "A", "turn": 3}
+{"chance": 95, "damage": 5, "event": "direct_fire", "hit": true, "probe_id": "tl5-ew-vs-balanced", "range": 0, "side": "B", "turn": 3}
+{"chance": 60, "damage": 5, "event": "direct_fire", "hit": true, "probe_id": "tl5-ew-vs-balanced", "range": 5, "side": "A", "turn": 4}
+{"chance": 70, "damage": 5, "event": "direct_fire", "hit": true, "probe_id": "tl5-ew-vs-balanced", "range": 5, "side": "B", "turn": 4}
+{"chance": 60, "damage": 5, "event": "direct_fire", "hit": false, "probe_id": "tl5-ew-vs-balanced", "range": 5, "side": "A", "turn": 5}
+{"chance": 70, "damage": 5, "event": "direct_fire", "hit": true, "probe_id": "tl5-ew-vs-balanced", "range": 5, "side": "B", "turn": 5}
+{"chance": 60, "damage": 5, "event": "direct_fire", "hit": false, "probe_id": "tl5-ew-vs-balanced", "range": 5, "side": "A", "turn": 6}
+{"chance": 70, "damage": 5, "event": "direct_fire", "hit": false, "probe_id": "tl5-ew-vs-balanced", "range": 5, "side": "B", "turn": 6}
+{"chance": 60, "damage": 5, "event": "direct_fire", "hit": false, "probe_id": "tl5-ew-vs-balanced", "range": 5, "side": "A", "turn": 7}
+{"chance": 70, "damage": 5, "event": "direct_fire", "hit": true, "probe_id": "tl5-ew-vs-balanced", "range": 5, "side": "B", "turn": 7}
+{"chance": 60, "damage": 5, "event": "direct_fire", "hit": true, "probe_id": "tl5-ew-vs-balanced", "range": 5, "side": "A", "turn": 8}
+{"chance": 70, "damage": 5, "event": "direct_fire", "hit": true, "probe_id": "tl5-ew-vs-balanced", "range": 5, "side": "B", "turn": 8}
+{"chance": 70, "damage": 7, "event": "direct_fire", "hit": true, "probe_id": "tl9-power-vs-dual-main", "range": 8, "side": "A", "turn": 1}
+{"chance": 70, "damage": 7, "event": "direct_fire", "hit": false, "probe_id": "tl9-power-vs-dual-main", "range": 8, "side": "B", "turn": 1}
+{"chance": 70, "damage": 7, "event": "direct_fire", "hit": false, "probe_id": "tl9-power-vs-dual-main", "range": 8, "side": "B", "turn": 1}
+{"chance": 65, "damage": 7, "event": "direct_fire", "hit": true, "probe_id": "tl9-power-vs-dual-main", "range": 9, "side": "A", "turn": 2}
+{"chance": 65, "damage": 7, "event": "direct_fire", "hit": true, "probe_id": "tl9-power-vs-dual-main", "range": 9, "side": "B", "turn": 2}
+{"chance": 65, "damage": 7, "event": "direct_fire", "hit": true, "probe_id": "tl9-power-vs-dual-main", "range": 9, "side": "B", "turn": 2}
+{"chance": 65, "damage": 7, "event": "direct_fire", "hit": true, "probe_id": "tl9-power-vs-dual-main", "range": 9, "side": "A", "turn": 3}
+{"chance": 65, "damage": 7, "event": "direct_fire", "hit": true, "probe_id": "tl9-power-vs-dual-main", "range": 9, "side": "B", "turn": 3}
+{"chance": 65, "damage": 7, "event": "direct_fire", "hit": true, "probe_id": "tl9-power-vs-dual-main", "range": 9, "side": "B", "turn": 3}

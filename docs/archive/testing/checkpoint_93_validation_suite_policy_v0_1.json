@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-93-validation-suite-policy-v0_1",
+  "checkpoint": "93",
+  "status": "current",
+  "purpose": "Harden the standing generalized cross-TL analysis architecture with structural engagement-readiness classification, deterministic matched bidirectional sampling, Space-utilization strata, legal-population accounting/weighting, and side-specific contextual combat-activity gates before wider sampling or component tuning.",
+  "mustAlwaysRun": {
+    "repositoryContract": true,
+    "nativeBuildWarningsAsErrors": true,
+    "fullUnitTests": true,
+    "deterministicMechanics": true,
+    "scenarioRunnerSelfTests": true,
+    "crossTlGeneratorPreflight": true,
+    "generatedStudyActualConsumerPreflight": true,
+    "generatedStudyOneTrialSmoke": true,
+    "boundedCrossTlPrimaryStudy": true
+  },
+  "legalBuildEnvelope": {
+    "rawCombinationCount": 82944,
+    "legalBuildCount": 22592,
+    "exactFillBuildCount": 4672,
+    "nearFillBuildCount": 11328,
+    "underfilledBuildCount": 6592,
+    "unorderedDistinctPairingEnvelope": 255187936,
+    "orientedDistinctPairingEnvelope": 510375872
+  },
+  "matchedScreen": {
+    "compositionClasses": 4,
+    "progressionMagnitudeStrata": 4,
+    "spacePairStrata": 6,
+    "populationCellCount": 96,
+    "sampledUnorderedBasePairs": 96,
+    "matchedBidirectional": true,
+    "stratifiedLogicalPairings": 192,
+    "namedLogicalPairings": 48,
+    "logicalPairings": 240,
+    "geometryCount": 3,
+    "generatedVariantCount": 720,
+    "defaultTrialsPerVariant": 2000,
+    "defaultPrimaryTrials": 1440000,
+    "oneTrialSmokeExecutions": 720
+  },
+  "readiness": {
+    "classes": [
+      "reference_ready",
+      "closing_ready",
+      "engagement_denied"
+    ],
+    "separateFromObservedActivity": true,
+    "fixedRangeExpectedActive": [
+      "reference_ready"
+    ],
+    "dynamicExpectedActive": [
+      "reference_ready",
+      "closing_ready"
+    ]
+  },
+  "populationAnalysis": {
+    "populationUnit": "unordered_distinct_legal_pair",
+    "populationCountsAnalytical": true,
+    "rawAndPopulationWeightedReports": true,
+    "namedDiagnosticsExcludedFromWeightedInference": true,
+    "singleSampleDoesNotExhaustCell": true
+  },
+  "activityGuards": {
+    "sideSpecificTelemetry": true,
+    "familyContextualGates": true,
+    "directFireFamilies": [
+      "Kinetic",
+      "Energy"
+    ],
+    "missileFamilyUsesLaunchTelemetry": true,
+    "engagementDeniedZeroActivityAllowed": true
+  },
+  "authorityBoundary": {
+    "componentTuning": false,
+    "gameplayRuleChanges": false,
+    "aiDoctrineChanges": false,
+    "spacedockCandidatePromotion": false,
+    "automaticCandidatePromotion": false
+  },
+  "deepCalibration": {
+    "applicable": false,
+    "reason": "CP93 first proves the new bounded analysis architecture; wider or higher-trial escalation is deferred until its native evidence is reviewed."
+  }
+}

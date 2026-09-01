@@ -1,0 +1,31 @@
+{
+  "checkpointId": "107a",
+  "acceptedBaseline": "106",
+  "contentCheckpoint": "107",
+  "scope": "checkpoint_107_acceptance_hotfix_alias_safe_powershell_contract",
+  "numericalTlTableChanged": false,
+  "newTl4Tl9BalanceValuesAssigned": false,
+  "simulationOrCalibrationRun": false,
+  "declaredTrials": 0,
+  "dotnetBuildRequired": false,
+  "pythonRequired": false,
+  "hotfix": {
+    "designContentChanged": false,
+    "reason": "The unaccepted CP107 contract used one-letter PowerShell helper names that collided case-insensitively with built-in aliases such as h/Get-History and r/Invoke-History.",
+    "contractRepair": "Use descriptive helper names throughout the CP107a contract.",
+    "precheckHardening": "Reject alias-colliding PowerShell function definitions during the native dependency precheck before checkpoint contract execution.",
+    "precheckHardened": true
+  },
+  "nativeDependencyPrecheck": {
+    "required": true,
+    "powerShellPaths": [
+      "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+      "tools/checkpoints/checkpoint-107a/apply_checkpoint_107a.ps1",
+      "tools/checkpoints/checkpoint-107a/test_checkpoint_107a_contract.ps1"
+    ],
+    "checkpointDefinitionPaths": [
+      "tools/checkpoints/checkpoint-107a/checkpoint_107a_architecture_definition.json"
+    ],
+    "allowedInterpreters": []
+  }
+}

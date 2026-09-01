@@ -1,0 +1,24 @@
+{
+  "checkpointId": "107",
+  "acceptedBaseline": "106",
+  "scope": "provisional_tl1_tl9_technology_component_table_architecture_only",
+  "numericalTlTableChanged": false,
+  "newTl4Tl9BalanceValuesAssigned": false,
+  "simulationOrCalibrationRun": false,
+  "declaredTrials": 0,
+  "dotnetBuildRequired": false,
+  "pythonRequired": false,
+  "stages": [],
+  "nativeDependencyPrecheck": {
+    "required": true,
+    "powerShellPaths": [
+      "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+      "tools/checkpoints/checkpoint-107/apply_checkpoint_107.ps1",
+      "tools/checkpoints/checkpoint-107/test_checkpoint_107_contract.ps1"
+    ],
+    "checkpointDefinitionPaths": [
+      "tools/checkpoints/checkpoint-107/checkpoint_107_architecture_definition.json"
+    ],
+    "allowedInterpreters": []
+  }
+}

@@ -1,0 +1,575 @@
+low_tl,high_tl,era_class,profile,field,low_value,high_value,numeric_delta
+1,2,baseline_to_low_entry,hull,notes,"""Baseline bounded cruiser; Space is mass/volume/integration budget. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""","""Qualitative maintainability/integration improvement; no filler Space increase. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""",
+1,2,baseline_to_low_entry,hull,technology,"""Mature aerospace/composite cruiser construction""","""Distributed structural monitoring and modular service architecture""",
+1,2,baseline_to_low_entry,damage_control,newTech,true,false,
+1,2,baseline_to_low_entry,damage_control,technology,"""Expert crew, distributed spares and diagnostic access""","""TL1 Damage Control baseline (held)""",
+1,2,baseline_to_low_entry,armor,ai,8,9,1
+1,2,baseline_to_low_entry,armor,technology,"""Advanced alloy/ceramic composite armor""","""Toughened ceramic-composite laminate""",
+1,2,baseline_to_low_entry,reactor,emergencyTp,1,0,-1
+1,2,baseline_to_low_entry,reactor,family,"""fission""","""fusion""",
+1,2,baseline_to_low_entry,reactor,notes,"""Mature, resilient baseline.""","""Revised upward from the earlier 6-TP seed so Fusion is a genuine output-frontier leap; immature containment is less resilient than Peak Fission.""",
+1,2,baseline_to_low_entry,reactor,operationalTp,5,7,2
+1,2,baseline_to_low_entry,reactor,technology,"""Peak Fission""","""Early Practical Fusion""",
+1,2,baseline_to_low_entry,stl,move,1,2,1
+1,2,baseline_to_low_entry,stl,technology,"""High-power electric/plasma cruiser drive""","""Pulsed high-energy plasma drive""",
+1,2,baseline_to_low_entry,ftl,strategicMove,1,2,1
+1,2,baseline_to_low_entry,ftl,technology,"""First-generation practical FTL""","""Stabilized FTL transit""",
+1,2,baseline_to_low_entry,computer,degradedTargetingPp,5,6,1
+1,2,baseline_to_low_entry,computer,targetingPp,10,12,2
+1,2,baseline_to_low_entry,computer,technology,"""Integrated electronic fire control""","""Refined conventional fire control""",
+1,2,baseline_to_low_entry,sensor,dr,0,1,1
+1,2,baseline_to_low_entry,sensor,notes,"""Uses the later Balanced-0 architecture rather than the stale early 3/5 passive seed.""",null,
+1,2,baseline_to_low_entry,sensor,technology,"""Integrated multimodal sensor suite""","""Improved discrimination resistance""",
+1,2,baseline_to_low_entry,ecm,fullStrengthTp,1,2,1
+1,2,baseline_to_low_entry,ecm,notes,null,"""Strength leap costs proportionally more TP.""",
+1,2,baseline_to_low_entry,ecm,rating,1,2,1
+1,2,baseline_to_low_entry,ecm,technology,"""Conventional noise/deception ECM""","""High-strength conventional ECM""",
+1,2,baseline_to_low_entry,eccm,fullStrengthTp,1,2,1
+1,2,baseline_to_low_entry,eccm,notes,null,"""Strength leap costs proportionally more TP.""",
+1,2,baseline_to_low_entry,eccm,rating,1,2,1
+1,2,baseline_to_low_entry,eccm,technology,"""Conventional filtering and emitter analysis""","""High-strength conventional ECCM""",
+1,2,baseline_to_low_entry,shield,capacity,4,5,1
+1,2,baseline_to_low_entry,shield,technology,"""Baseline defensive field""","""Higher-capacity field""",
+1,2,baseline_to_low_entry,kinetic_main,apen,0,2,2
+1,2,baseline_to_low_entry,kinetic_main,newTech,true,false,
+1,2,baseline_to_low_entry,kinetic_main,notes,null,"""No new accelerator at TL2; the strict payload improvement is folded into the representative standard attack package.""",
+1,2,baseline_to_low_entry,kinetic_main,profileSourceTl,null,1,
+1,2,baseline_to_low_entry,kinetic_main,technology,"""Mature electromagnetic mass driver""","""TL1 mass driver + improved penetrator materials""",
+1,2,baseline_to_low_entry,kinetic_pds,newTech,true,false,
+1,2,baseline_to_low_entry,kinetic_pds,notes,null,"""CP108 Storyboard has no independent TL2 Kinetic-PDS beat; improvement comes only from the TL2 ship computer unless another payload/support is installed.""",
+1,2,baseline_to_low_entry,kinetic_pds,profileSourceTl,null,1,
+1,2,baseline_to_low_entry,kinetic_pds,technology,"""Rapid-fire kinetic PDS""","""TL1 rapid-fire kinetic PDS (held)""",
+1,2,baseline_to_low_entry,energy_main,accuracyPp,25,30,5
+1,2,baseline_to_low_entry,energy_main,notes,null,"""Explicit TL2 optics/pulse improvement; this was missing from the older numerical table.""",
+1,2,baseline_to_low_entry,energy_main,range,5,6,1
+1,2,baseline_to_low_entry,energy_main,technology,"""High-energy coherent laser""","""Improved optics and pulse conditioning""",
+1,2,baseline_to_low_entry,energy_pds,baseChancePp,12,16,4
+1,2,baseline_to_low_entry,energy_pds,technology,"""Baseline beam point defense""","""Improved beam tracking and pulse control""",
+1,2,baseline_to_low_entry,missile_delivery,missileMove,2,3,1
+1,2,baseline_to_low_entry,missile_delivery,range,6,8,2
+1,2,baseline_to_low_entry,missile_delivery,technology,"""Command-guided missile flight""","""Improved propulsion/endurance package""",
+1,2,baseline_to_low_entry,missile_guidance,newTech,true,false,
+1,2,baseline_to_low_entry,missile_guidance,technology,"""Ship-command guidance / datalink""","""Improved datalink/guidance processing""",
+1,2,baseline_to_low_entry,missile_gp_warhead,newTech,true,false,
+1,2,baseline_to_low_entry,missile_swarmer,apen,null,0,
+1,2,baseline_to_low_entry,missile_swarmer,available,false,true,
+1,2,baseline_to_low_entry,missile_swarmer,extraCriticalRolls,null,0,
+1,2,baseline_to_low_entry,missile_swarmer,extraPdsWindows,null,0,
+1,2,baseline_to_low_entry,missile_swarmer,firmTerminalRequired,null,true,
+1,2,baseline_to_low_entry,missile_swarmer,notes,null,"""Distinct Missile Flight family; two bounded internal packets improve coverage/PDS saturation without specialist penetration.""",
+1,2,baseline_to_low_entry,missile_swarmer,oneFlightCounter,null,true,
+1,2,baseline_to_low_entry,missile_swarmer,oneTerminalAttackRoll,null,true,
+1,2,baseline_to_low_entry,missile_swarmer,packetCount,null,2,
+1,2,baseline_to_low_entry,missile_swarmer,packetDamage,null,4,
+1,2,baseline_to_low_entry,missile_swarmer,pdsInterceptPenaltyPp,null,10,
+1,2,baseline_to_low_entry,missile_swarmer,spen,null,0,
+1,2,baseline_to_low_entry,missile_swarmer,technology,"""Unavailable""","""Early cluster/submunition Flight""",
+1,2,baseline_to_low_entry,missile_swarmer,terminalGuidanceBonusPp,null,10,
+1,2,baseline_to_low_entry,missile_swarmer,usesGenericMissileFlightMagazine,null,true,
+1,2,baseline_to_low_entry,amm_pds,baseChancePp,15,20,5
+1,2,baseline_to_low_entry,amm_pds,notes,null,"""Extended-range AMM is a separate branch.""",
+1,2,baseline_to_low_entry,amm_pds,technology,"""Baseline local AMM point defense""","""Improved local AMM guidance""",
+2,3,low_maturation,hull,capacity,35,36,1
+2,3,low_maturation,hull,hullPoints,24,25,1
+2,3,low_maturation,hull,notes,"""Qualitative maintainability/integration improvement; no filler Space increase. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""","""Retains the accepted +1 Space direction. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""",
+2,3,low_maturation,hull,technology,"""Distributed structural monitoring and modular service architecture""","""Integrated cruiser architecture""",
+2,3,low_maturation,damage_control,degradedToOperationalChancePp,70,75,5
+2,3,low_maturation,damage_control,disabledToDegradedChancePp,50,55,5
+2,3,low_maturation,damage_control,hullRepairChancePp,40,45,5
+2,3,low_maturation,damage_control,newTech,false,true,
+2,3,low_maturation,damage_control,technology,"""TL1 Damage Control baseline (held)""","""Predictive diagnostics and better service distribution""",
+2,3,low_maturation,armor,ai,9,10,1
+2,3,low_maturation,armor,ap,0,2,2
+2,3,low_maturation,armor,technology,"""Toughened ceramic-composite laminate""","""Protected layered composite""",
+2,3,low_maturation,reactor,degradedTp,3,4,1
+2,3,low_maturation,reactor,emergencyTp,0,1,1
+2,3,low_maturation,reactor,notes,"""Revised upward from the earlier 6-TP seed so Fusion is a genuine output-frontier leap; immature containment is less resilient than Peak Fission.""","""Maturation: same frontier output, smaller footprint and better damaged behavior.""",
+2,3,low_maturation,reactor,space,6,5,-1
+2,3,low_maturation,reactor,technology,"""Early Practical Fusion""","""Mature Compact Fusion""",
+2,3,low_maturation,stl,hardPrereq,null,"""Power TL2""",
+2,3,low_maturation,stl,move,2,3,1
+2,3,low_maturation,stl,technology,"""Pulsed high-energy plasma drive""","""Fusion-assisted torch / mature high-energy STL""",
+2,3,low_maturation,ftl,strategicMove,2,3,1
+2,3,low_maturation,ftl,technology,"""Stabilized FTL transit""","""Integrated FTL navigation""",
+2,3,low_maturation,computer,evasiveCompensationPp,0,5,5
+2,3,low_maturation,computer,technology,"""Refined conventional fire control""","""Mature integrated fire control / Evasive Compensation""",
+2,3,low_maturation,sensor,activeHighApprox,null,5,
+2,3,low_maturation,sensor,activeHighFirm,null,4,
+2,3,low_maturation,sensor,activeHighTp,null,2,
+2,3,low_maturation,sensor,notes,null,"""The prior overload-level 4/5 envelope becomes a safe normal High mode.""",
+2,3,low_maturation,sensor,overloadApprox,5,null,
+2,3,low_maturation,sensor,overloadFirm,4,null,
+2,3,low_maturation,sensor,technology,"""Improved discrimination resistance""","""Dual normal active modes""",
+2,3,low_maturation,ecm,fullStrengthTp,2,1,-1
+2,3,low_maturation,ecm,notes,"""Strength leap costs proportionally more TP.""","""Maturation is efficiency, not rating inflation.""",
+2,3,low_maturation,ecm,technology,"""High-strength conventional ECM""","""Efficient full-strength ECM""",
+2,3,low_maturation,eccm,fullStrengthTp,2,1,-1
+2,3,low_maturation,eccm,notes,"""Strength leap costs proportionally more TP.""","""Maturation is efficiency, not rating inflation.""",
+2,3,low_maturation,eccm,technology,"""High-strength conventional ECCM""","""Efficient full-strength ECCM""",
+2,3,low_maturation,shield,baseRecharge,2,3,1
+2,3,low_maturation,shield,capacity,5,6,1
+2,3,low_maturation,shield,notes,null,"""Base profile holds; Shield Hardener is a separate branch.""",
+2,3,low_maturation,shield,technology,"""Higher-capacity field""","""Mature stabilized field generator""",
+2,3,low_maturation,kinetic_main,firingTp,1,0,-1
+2,3,low_maturation,kinetic_main,newTech,false,true,
+2,3,low_maturation,kinetic_main,notes,"""No new accelerator at TL2; the strict payload improvement is folded into the representative standard attack package.""",null,
+2,3,low_maturation,kinetic_main,profileSourceTl,1,null,
+2,3,low_maturation,kinetic_main,technology,"""TL1 mass driver + improved penetrator materials""","""Power-efficient mature accelerator""",
+2,3,low_maturation,kinetic_pds,ammo,50,60,10
+2,3,low_maturation,kinetic_pds,baseChancePp,10,13,3
+2,3,low_maturation,kinetic_pds,newTech,false,true,
+2,3,low_maturation,kinetic_pds,notes,"""CP108 Storyboard has no independent TL2 Kinetic-PDS beat; improvement comes only from the TL2 ship computer unless another payload/support is installed.""",null,
+2,3,low_maturation,kinetic_pds,profileSourceTl,1,null,
+2,3,low_maturation,kinetic_pds,technology,"""TL1 rapid-fire kinetic PDS (held)""","""Mature local fire-control / effective-ammo PDS""",
+2,3,low_maturation,energy_main,highSafe,false,true,
+2,3,low_maturation,energy_main,notes,"""Explicit TL2 optics/pulse improvement; this was missing from the older numerical table.""",null,
+2,3,low_maturation,energy_main,technology,"""Improved optics and pulse conditioning""","""Safe high-output beam mode""",
+2,3,low_maturation,energy_pds,readinessTp,2,1,-1
+2,3,low_maturation,energy_pds,technology,"""Improved beam tracking and pulse control""","""Efficient beam-PDS readiness""",
+2,3,low_maturation,missile_delivery,missileMove,3,4,1
+2,3,low_maturation,missile_delivery,technology,"""Improved propulsion/endurance package""","""Autonomous navigation-enabled missile""",
+2,3,low_maturation,missile_guidance,newTech,false,true,
+2,3,low_maturation,missile_guidance,onboardNav,false,true,
+2,3,low_maturation,missile_guidance,technology,"""Improved datalink/guidance processing""","""Onboard navigation and local reacquisition""",
+2,3,low_maturation,missile_gp_warhead,damage,10,11,1
+2,3,low_maturation,missile_gp_warhead,newTech,false,true,
+2,3,low_maturation,missile_gp_warhead,technology,"""Conventional / fission-era general-purpose warhead""","""Mature fission general-purpose payload integration""",
+2,3,low_maturation,missile_swarmer,packetDamage,4,5,1
+2,3,low_maturation,missile_swarmer,technology,"""Early cluster/submunition Flight""","""Coordinated submunition bus""",
+2,3,low_maturation,amm_pds,notes,"""Extended-range AMM is a separate branch.""","""Scalable 1 TP/RC1 or 2 TP/RC2 readiness.""",
+2,3,low_maturation,amm_pds,reactionCapacity,1,2,1
+2,3,low_maturation,amm_pds,readinessTp,1,2,1
+2,3,low_maturation,amm_pds,technology,"""Improved local AMM guidance""","""Mature AMM readiness""",
+3,4,low_maturation,hull,capacity,36,37,1
+3,4,low_maturation,hull,hullPoints,25,26,1
+3,4,low_maturation,hull,notes,"""Retains the accepted +1 Space direction. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""","""First advanced-material packaging step; durability remains represented elsewhere. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""",
+3,4,low_maturation,hull,technology,"""Integrated cruiser architecture""","""Nanostructured load-bearing frame""",
+3,4,low_maturation,damage_control,newTech,true,false,
+3,4,low_maturation,damage_control,technology,"""Predictive diagnostics and better service distribution""","""TL3 predictive Damage Control baseline (held)""",
+3,4,low_maturation,armor,ai,10,11,1
+3,4,low_maturation,armor,technology,"""Protected layered composite""","""Nanostructured armor matrix""",
+3,4,low_maturation,reactor,degradedTp,4,5,1
+3,4,low_maturation,reactor,notes,"""Maturation: same frontier output, smaller footprint and better damaged behavior.""","""Pushes the mature Fusion output frontier.""",
+3,4,low_maturation,reactor,operationalTp,7,9,2
+3,4,low_maturation,reactor,technology,"""Mature Compact Fusion""","""High-Output Fusion""",
+3,4,low_maturation,stl,hardPrereq,"""Power TL2""",null,
+3,4,low_maturation,stl,move,3,4,1
+3,4,low_maturation,stl,technology,"""Fusion-assisted torch / mature high-energy STL""","""Mature fusion torch architecture""",
+3,4,low_maturation,ftl,strategicMove,3,4,1
+3,4,low_maturation,ftl,technology,"""Integrated FTL navigation""","""High-throughput FTL field""",
+3,4,low_maturation,computer,degradedTargetingPp,6,8,2
+3,4,low_maturation,computer,targetingPp,12,15,3
+3,4,low_maturation,computer,technology,"""Mature integrated fire control / Evasive Compensation""","""Photonic/optical combat computing""",
+3,4,low_maturation,sensor,activeHighApprox,5,6,1
+3,4,low_maturation,sensor,activeHighFirm,4,5,1
+3,4,low_maturation,sensor,activeLowApprox,4,5,1
+3,4,low_maturation,sensor,activeLowFirm,3,4,1
+3,4,low_maturation,sensor,dr,1,2,1
+3,4,low_maturation,sensor,notes,"""The prior overload-level 4/5 envelope becomes a safe normal High mode.""",null,
+3,4,low_maturation,sensor,passiveApprox,3,4,1
+3,4,low_maturation,sensor,passiveFirm,1,2,1
+3,4,low_maturation,sensor,technology,"""Dual normal active modes""","""Multimodal fusion and cooperative apertures""",
+3,4,low_maturation,ecm,notes,"""Maturation is efficiency, not rating inflation.""",null,
+3,4,low_maturation,ecm,special,null,"""bounded deception capability""",
+3,4,low_maturation,ecm,technology,"""Efficient full-strength ECM""","""Digital deception / false-track synthesis""",
+3,4,low_maturation,eccm,notes,"""Maturation is efficiency, not rating inflation.""",null,
+3,4,low_maturation,eccm,special,null,"""bounded anti-deception capability""",
+3,4,low_maturation,eccm,technology,"""Efficient full-strength ECCM""","""Sensor-fusion anti-deception""",
+3,4,low_maturation,shield,capacity,6,7,1
+3,4,low_maturation,shield,notes,"""Base profile holds; Shield Hardener is a separate branch.""",null,
+3,4,low_maturation,shield,special,null,"""segmented/adaptive operating mode; exact reactive benefit TBD""",
+3,4,low_maturation,shield,technology,"""Mature stabilized field generator""","""Segmented/adaptive field geometry""",
+3,4,low_maturation,kinetic_main,accuracyPp,20,25,5
+3,4,low_maturation,kinetic_main,damage,8,10,2
+3,4,low_maturation,kinetic_main,firingTp,0,1,1
+3,4,low_maturation,kinetic_main,notes,null,"""Maneuvering/programmable smart projectile maturation supplies +5 pp ACC automatically on compatible accelerators.""",
+3,4,low_maturation,kinetic_main,range,4,5,1
+3,4,low_maturation,kinetic_main,technology,"""Power-efficient mature accelerator""","""Superconducting coil/induction accelerator""",
+3,4,low_maturation,kinetic_pds,ammo,60,50,-10
+3,4,low_maturation,kinetic_pds,baseChancePp,13,18,5
+3,4,low_maturation,kinetic_pds,technology,"""Mature local fire-control / effective-ammo PDS""","""Guided intercept projectile PDS""",
+3,4,low_maturation,energy_main,highDamage,8,10,2
+3,4,low_maturation,energy_main,lowDamage,4,5,1
+3,4,low_maturation,energy_main,range,6,7,1
+3,4,low_maturation,energy_main,spen,2,3,1
+3,4,low_maturation,energy_main,standardDamage,6,8,2
+3,4,low_maturation,energy_main,technology,"""Safe high-output beam mode""","""Short-wavelength / advanced focusing beam""",
+3,4,low_maturation,energy_pds,baseChancePp,16,20,4
+3,4,low_maturation,energy_pds,technology,"""Efficient beam-PDS readiness""","""Rapid-steering beam director""",
+3,4,low_maturation,missile_delivery,missileMove,4,5,1
+3,4,low_maturation,missile_delivery,range,8,9,1
+3,4,low_maturation,missile_delivery,technology,"""Autonomous navigation-enabled missile""","""Terminal maneuver / multi-stage propulsion""",
+3,4,low_maturation,missile_guidance,guidanceBaseHit,55,60,5
+3,4,low_maturation,missile_guidance,localApproxCanAcquire,false,true,
+3,4,low_maturation,missile_guidance,technology,"""Onboard navigation and local reacquisition""","""Multi-mode terminal seeker""",
+3,4,low_maturation,missile_guidance,terminalSeeker,false,true,
+3,4,low_maturation,missile_gp_warhead,newTech,true,false,
+3,4,low_maturation,amm_pds,newTech,true,false,
+3,4,low_maturation,amm_pds,notes,"""Scalable 1 TP/RC1 or 2 TP/RC2 readiness.""",null,
+3,4,low_maturation,amm_pds,profileSourceTl,null,3,
+3,4,low_maturation,amm_pds,technology,"""Mature AMM readiness""","""TL3 mature AMM readiness (held)""",
+4,5,low_to_mid_boundary,hull,capacity,37,38,1
+4,5,low_to_mid_boundary,hull,hullPoints,26,27,1
+4,5,low_to_mid_boundary,hull,notes,"""First advanced-material packaging step; durability remains represented elsewhere. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""","""Better material gradients/services, not larger hull size. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""",
+4,5,low_to_mid_boundary,hull,technology,"""Nanostructured load-bearing frame""","""Atomically engineered structural composites""",
+4,5,low_to_mid_boundary,armor,ai,11,12,1
+4,5,low_to_mid_boundary,armor,ap,2,3,1
+4,5,low_to_mid_boundary,armor,technology,"""Nanostructured armor matrix""","""Gradient/diamondoid composite armor""",
+4,5,low_to_mid_boundary,reactor,degradedTp,5,4,-1
+4,5,low_to_mid_boundary,reactor,emergencyTp,1,0,-1
+4,5,low_to_mid_boundary,reactor,family,"""fusion""","""antimatter""",
+4,5,low_to_mid_boundary,reactor,notes,"""Pushes the mature Fusion output frontier.""","""Large new-family output leap with intentionally poor damaged-state resilience so mature Fusion remains relevant.""",
+4,5,low_to_mid_boundary,reactor,operationalTp,9,12,3
+4,5,low_to_mid_boundary,reactor,technology,"""High-Output Fusion""","""Early Antimatter Reactor""",
+4,5,low_to_mid_boundary,stl,hardPrereq,null,"""Power TL5""",
+4,5,low_to_mid_boundary,stl,move,4,6,2
+4,5,low_to_mid_boundary,stl,notes,null,"""Deliberate larger frontier jump at a genuine enabling-science boundary.""",
+4,5,low_to_mid_boundary,stl,technology,"""Mature fusion torch architecture""","""Antimatter-catalyzed fusion drive""",
+4,5,low_to_mid_boundary,ftl,notes,null,"""Quiet raw-speed step: value is transition flexibility/geometry, not forced +Move.""",
+4,5,low_to_mid_boundary,ftl,technology,"""High-throughput FTL field""","""Adaptive transition geometry""",
+4,5,low_to_mid_boundary,computer,approxPenaltyPp,-25,-20,5
+4,5,low_to_mid_boundary,computer,technology,"""Photonic/optical combat computing""","""Adaptive AI battle manager""",
+4,5,low_to_mid_boundary,sensor,special,null,"""LPI/adaptive-waveform mode; emission benefit TBD, no extra range assumed.""",
+4,5,low_to_mid_boundary,sensor,technology,"""Multimodal fusion and cooperative apertures""","""Low-probability active sensing / adaptive waveform suite""",
+4,5,low_to_mid_boundary,ecm,fullStrengthTp,1,2,1
+4,5,low_to_mid_boundary,ecm,rating,2,3,1
+4,5,low_to_mid_boundary,ecm,special,"""bounded deception capability""",null,
+4,5,low_to_mid_boundary,ecm,technology,"""Digital deception / false-track synthesis""","""Adaptive cognitive EW""",
+4,5,low_to_mid_boundary,eccm,fullStrengthTp,1,2,1
+4,5,low_to_mid_boundary,eccm,rating,2,3,1
+4,5,low_to_mid_boundary,eccm,special,"""bounded anti-deception capability""",null,
+4,5,low_to_mid_boundary,eccm,technology,"""Sensor-fusion anti-deception""","""Adaptive classifier / signature memory""",
+4,5,low_to_mid_boundary,shield,capacity,7,9,2
+4,5,low_to_mid_boundary,shield,special,"""segmented/adaptive operating mode; exact reactive benefit TBD""",null,
+4,5,low_to_mid_boundary,shield,tacticalRechargeCapTp,2,3,1
+4,5,low_to_mid_boundary,shield,technology,"""Segmented/adaptive field geometry""","""Frequency/phase-tuned shielding""",
+4,5,low_to_mid_boundary,kinetic_main,apen,2,3,1
+4,5,low_to_mid_boundary,kinetic_main,newTech,true,false,
+4,5,low_to_mid_boundary,kinetic_main,notes,"""Maneuvering/programmable smart projectile maturation supplies +5 pp ACC automatically on compatible accelerators.""","""Canonical APEN3 is a graded penetrator-material maturation; not a new ammunition selector.""",
+4,5,low_to_mid_boundary,kinetic_main,profileSourceTl,null,4,
+4,5,low_to_mid_boundary,kinetic_main,technology,"""Superconducting coil/induction accelerator""","""TL4 superconducting accelerator (held)""",
+4,5,low_to_mid_boundary,kinetic_pds,newTech,true,false,
+4,5,low_to_mid_boundary,kinetic_pds,profileSourceTl,null,4,
+4,5,low_to_mid_boundary,kinetic_pds,technology,"""Guided intercept projectile PDS""","""TL4 guided intercept projectile PDS (held)""",
+4,5,low_to_mid_boundary,energy_main,newTech,true,false,
+4,5,low_to_mid_boundary,energy_main,notes,null,"""Primary coherent beam is quiet; FEL/tunable and particle systems are branches.""",
+4,5,low_to_mid_boundary,energy_main,profileSourceTl,null,4,
+4,5,low_to_mid_boundary,energy_main,technology,"""Short-wavelength / advanced focusing beam""","""TL4 advanced focusing beam (held)""",
+4,5,low_to_mid_boundary,energy_pds,notes,null,"""May fund only 1 TP for RC1; 2 TP exposes full RC2.""",
+4,5,low_to_mid_boundary,energy_pds,reactionCapacity,1,2,1
+4,5,low_to_mid_boundary,energy_pds,readinessTp,1,2,1
+4,5,low_to_mid_boundary,energy_pds,technology,"""Rapid-steering beam director""","""Multi-threat phased beam defense""",
+4,5,low_to_mid_boundary,missile_delivery,newTech,true,false,
+4,5,low_to_mid_boundary,missile_delivery,profileSourceTl,null,4,
+4,5,low_to_mid_boundary,missile_delivery,technology,"""Terminal maneuver / multi-stage propulsion""","""TL4 standard delivery package (held)""",
+4,5,low_to_mid_boundary,missile_guidance,technology,"""Multi-mode terminal seeker""","""Cooperative seeker network""",
+4,5,low_to_mid_boundary,missile_gp_warhead,damage,11,13,2
+4,5,low_to_mid_boundary,missile_gp_warhead,hardPrereq,null,"""Power TL2""",
+4,5,low_to_mid_boundary,missile_gp_warhead,newTech,false,true,
+4,5,low_to_mid_boundary,missile_gp_warhead,technology,"""Mature fission general-purpose payload integration""","""Fusion microcharge general-purpose warhead""",
+4,5,low_to_mid_boundary,missile_swarmer,packetDamage,5,7,2
+4,5,low_to_mid_boundary,missile_swarmer,technology,"""Coordinated submunition bus""","""Cooperative Swarmer Flight""",
+4,5,low_to_mid_boundary,amm_pds,baseChancePp,20,24,4
+4,5,low_to_mid_boundary,amm_pds,newTech,false,true,
+4,5,low_to_mid_boundary,amm_pds,profileSourceTl,3,null,
+4,5,low_to_mid_boundary,amm_pds,special,null,"""capped cooperative allocation/validation; no simple rating stacking""",
+4,5,low_to_mid_boundary,amm_pds,technology,"""TL3 mature AMM readiness (held)""","""Cooperative AMM screen""",
+5,6,mid_maturation_integration,hull,capacity,38,39,1
+5,6,mid_maturation_integration,hull,hullPoints,27,28,1
+5,6,mid_maturation_integration,hull,notes,"""Better material gradients/services, not larger hull size. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""","""Smart lattice improves integration/repair support; only a modest Space step. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""",
+5,6,mid_maturation_integration,hull,technology,"""Atomically engineered structural composites""","""Self-monitoring smart lattice""",
+5,6,mid_maturation_integration,armor,ai,12,14,2
+5,6,mid_maturation_integration,armor,ap,3,4,1
+5,6,mid_maturation_integration,armor,notes,null,"""Self-healing identity is bounded repairability; no free in-combat regeneration number is assigned yet.""",
+5,6,mid_maturation_integration,armor,technology,"""Gradient/diamondoid composite armor""","""Self-healing smart laminate""",
+5,6,mid_maturation_integration,reactor,degradedTp,4,7,3
+5,6,mid_maturation_integration,reactor,emergencyTp,0,1,1
+5,6,mid_maturation_integration,reactor,notes,"""Large new-family output leap with intentionally poor damaged-state resilience so mature Fusion remains relevant.""","""Maturation: compactness and resilience rather than more raw output.""",
+5,6,mid_maturation_integration,reactor,space,5,4,-1
+5,6,mid_maturation_integration,reactor,technology,"""Early Antimatter Reactor""","""Mature Antimatter""",
+5,6,mid_maturation_integration,stl,notes,"""Deliberate larger frontier jump at a genuine enabling-science boundary.""","""Maturation holds Move and improves integration/reliability qualitatively; no filler movement increase.""",
+5,6,mid_maturation_integration,stl,technology,"""Antimatter-catalyzed fusion drive""","""Antimatter plasma drive""",
+5,6,mid_maturation_integration,ftl,notes,"""Quiet raw-speed step: value is transition flexibility/geometry, not forced +Move.""",null,
+5,6,mid_maturation_integration,ftl,strategicMove,4,6,2
+5,6,mid_maturation_integration,ftl,technology,"""Adaptive transition geometry""","""Deep-route FTL navigation""",
+5,6,mid_maturation_integration,computer,degradedTargetingPp,8,10,2
+5,6,mid_maturation_integration,computer,evasiveCompensationPp,5,10,5
+5,6,mid_maturation_integration,computer,space,3,2,-1
+5,6,mid_maturation_integration,computer,technology,"""Adaptive AI battle manager""","""Distributed resilient combat cloud""",
+5,6,mid_maturation_integration,sensor,activeHighApprox,6,7,1
+5,6,mid_maturation_integration,sensor,activeHighFirm,5,6,1
+5,6,mid_maturation_integration,sensor,activeLowApprox,5,6,1
+5,6,mid_maturation_integration,sensor,activeLowFirm,4,5,1
+5,6,mid_maturation_integration,sensor,dr,2,3,1
+5,6,mid_maturation_integration,sensor,passiveApprox,4,5,1
+5,6,mid_maturation_integration,sensor,passiveFirm,2,3,1
+5,6,mid_maturation_integration,sensor,special,"""LPI/adaptive-waveform mode; emission benefit TBD, no extra range assumed.""",null,
+5,6,mid_maturation_integration,sensor,technology,"""Low-probability active sensing / adaptive waveform suite""","""Quantum-limited / precision field sensors""",
+5,6,mid_maturation_integration,ecm,special,null,"""cooperative capped effect; no simple additive stacking""",
+5,6,mid_maturation_integration,ecm,technology,"""Adaptive cognitive EW""","""Distributed cooperative EW""",
+5,6,mid_maturation_integration,eccm,special,null,"""cooperative capped effect; no simple additive stacking""",
+5,6,mid_maturation_integration,eccm,technology,"""Adaptive classifier / signature memory""","""Cooperative track validation""",
+5,6,mid_maturation_integration,shield,baseRecharge,3,4,1
+5,6,mid_maturation_integration,shield,capacity,9,10,1
+5,6,mid_maturation_integration,shield,notes,null,"""Maturation emphasizes recharge/placement rather than another capacity step.""",
+5,6,mid_maturation_integration,shield,technology,"""Frequency/phase-tuned shielding""","""Predictive localized reinforcement""",
+5,6,mid_maturation_integration,kinetic_main,accuracyPp,25,30,5
+5,6,mid_maturation_integration,kinetic_main,apen,3,4,1
+5,6,mid_maturation_integration,kinetic_main,damage,10,11,1
+5,6,mid_maturation_integration,kinetic_main,newTech,false,true,
+5,6,mid_maturation_integration,kinetic_main,notes,"""Canonical APEN3 is a graded penetrator-material maturation; not a new ammunition selector.""","""Mature smart correction reaches +10 pp ACC from TL1 baseline; Kinetic retains Armor-facing identity.""",
+5,6,mid_maturation_integration,kinetic_main,profileSourceTl,4,null,
+5,6,mid_maturation_integration,kinetic_main,range,5,6,1
+5,6,mid_maturation_integration,kinetic_main,space,6,5,-1
+5,6,mid_maturation_integration,kinetic_main,technology,"""TL4 superconducting accelerator (held)""","""Smart hypervelocity mass driver""",
+5,6,mid_maturation_integration,kinetic_pds,technology,"""TL4 guided intercept projectile PDS (held)""","""TL4 guided intercept PDS (held; distributed-grid branch available)""",
+5,6,mid_maturation_integration,energy_main,accuracyPp,30,35,5
+5,6,mid_maturation_integration,energy_main,highDamage,10,11,1
+5,6,mid_maturation_integration,energy_main,lowDamage,5,6,1
+5,6,mid_maturation_integration,energy_main,newTech,false,true,
+5,6,mid_maturation_integration,energy_main,notes,"""Primary coherent beam is quiet; FEL/tunable and particle systems are branches.""",null,
+5,6,mid_maturation_integration,energy_main,profileSourceTl,4,null,
+5,6,mid_maturation_integration,energy_main,range,7,8,1
+5,6,mid_maturation_integration,energy_main,space,6,5,-1
+5,6,mid_maturation_integration,energy_main,spen,3,4,1
+5,6,mid_maturation_integration,energy_main,standardDamage,8,9,1
+5,6,mid_maturation_integration,energy_main,technology,"""TL4 advanced focusing beam (held)""","""Distributed/phased beam director""",
+5,6,mid_maturation_integration,energy_pds,baseChancePp,20,24,4
+5,6,mid_maturation_integration,energy_pds,notes,"""May fund only 1 TP for RC1; 2 TP exposes full RC2.""","""Scalable 1 TP/RC1 or 2 TP/RC2 readiness remains.""",
+5,6,mid_maturation_integration,energy_pds,technology,"""Multi-threat phased beam defense""","""Adaptive-spectrum interception""",
+5,6,mid_maturation_integration,missile_delivery,missileMove,5,7,2
+5,6,mid_maturation_integration,missile_delivery,newTech,false,true,
+5,6,mid_maturation_integration,missile_delivery,profileSourceTl,4,null,
+5,6,mid_maturation_integration,missile_delivery,range,9,10,1
+5,6,mid_maturation_integration,missile_delivery,space,6,5,-1
+5,6,mid_maturation_integration,missile_delivery,technology,"""TL4 standard delivery package (held)""","""High-energy fusion sprint missile""",
+5,6,mid_maturation_integration,missile_guidance,guidanceBaseHit,60,65,5
+5,6,mid_maturation_integration,missile_guidance,technology,"""Cooperative seeker network""","""Adaptive anti-jam seeker""",
+5,6,mid_maturation_integration,missile_gp_warhead,newTech,true,false,
+5,6,mid_maturation_integration,amm_pds,newTech,true,false,
+5,6,mid_maturation_integration,amm_pds,profileSourceTl,null,5,
+5,6,mid_maturation_integration,amm_pds,special,"""capped cooperative allocation/validation; no simple rating stacking""",null,
+5,6,mid_maturation_integration,amm_pds,technology,"""Cooperative AMM screen""","""TL5 cooperative AMM screen (held)""",
+6,7,mid_maturation,hull,capacity,39,41,2
+6,7,mid_maturation,hull,hullPoints,28,30,2
+6,7,mid_maturation,hull,notes,"""Smart lattice improves integration/repair support; only a modest Space step. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""","""Active load management earns a larger integration step. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""",
+6,7,mid_maturation,hull,technology,"""Self-monitoring smart lattice""","""Active load-distribution structure""",
+6,7,mid_maturation,damage_control,degradedToOperationalChancePp,75,80,5
+6,7,mid_maturation,damage_control,disabledToDegradedChancePp,55,60,5
+6,7,mid_maturation,damage_control,hullRepairChancePp,45,50,5
+6,7,mid_maturation,damage_control,hullRestoredPerSuccessfulKit,1,2,1
+6,7,mid_maturation,damage_control,newTech,false,true,
+6,7,mid_maturation,damage_control,technology,"""TL3 predictive Damage Control baseline (held)""","""Self-healing structural materials""",
+6,7,mid_maturation,armor,newTech,true,false,
+6,7,mid_maturation,armor,notes,"""Self-healing identity is bounded repairability; no free in-combat regeneration number is assigned yet.""","""Primary passive Armor is intentionally quiet at TL7; reactive branch is separate.""",
+6,7,mid_maturation,armor,profileSourceTl,null,6,
+6,7,mid_maturation,armor,technology,"""Self-healing smart laminate""","""TL6 Self-healing smart laminate (held)""",
+6,7,mid_maturation,reactor,degradedTp,7,8,1
+6,7,mid_maturation,reactor,notes,"""Maturation: compactness and resilience rather than more raw output.""","""Second Antimatter frontier push.""",
+6,7,mid_maturation,reactor,operationalTp,12,15,3
+6,7,mid_maturation,reactor,technology,"""Mature Antimatter""","""High-Output Antimatter""",
+6,7,mid_maturation,stl,hardPrereq,"""Power TL5""",null,
+6,7,mid_maturation,stl,move,6,7,1
+6,7,mid_maturation,stl,notes,"""Maturation holds Move and improves integration/reliability qualitatively; no filler movement increase.""",null,
+6,7,mid_maturation,stl,space,5,4,-1
+6,7,mid_maturation,stl,technology,"""Antimatter plasma drive""","""Beam-core / ultra-high-energy propulsion""",
+6,7,mid_maturation,ftl,strategicMove,6,7,1
+6,7,mid_maturation,ftl,technology,"""Deep-route FTL navigation""","""Resilient high-energy FTL""",
+6,7,mid_maturation,computer,degradedTargetingPp,10,12,2
+6,7,mid_maturation,computer,targetingPp,15,18,3
+6,7,mid_maturation,computer,technology,"""Distributed resilient combat cloud""","""Quantum-assisted optimization""",
+6,7,mid_maturation,sensor,activeHighApprox,7,8,1
+6,7,mid_maturation,sensor,activeHighFirm,6,7,1
+6,7,mid_maturation,sensor,activeLowApprox,6,7,1
+6,7,mid_maturation,sensor,passiveApprox,5,6,1
+6,7,mid_maturation,sensor,space,3,2,-1
+6,7,mid_maturation,sensor,technology,"""Quantum-limited / precision field sensors""","""Integrated penetrating multimodal sensing""",
+6,7,mid_maturation,ecm,fullStrengthTp,2,1,-1
+6,7,mid_maturation,ecm,special,"""cooperative capped effect; no simple additive stacking""","""emitter-targeted capability""",
+6,7,mid_maturation,ecm,technology,"""Distributed cooperative EW""","""Emitter-targeted electronic attack""",
+6,7,mid_maturation,eccm,fullStrengthTp,2,1,-1
+6,7,mid_maturation,eccm,special,"""cooperative capped effect; no simple additive stacking""","""emitter-targeted capability""",
+6,7,mid_maturation,eccm,technology,"""Cooperative track validation""","""Counter-emitter localization""",
+6,7,mid_maturation,shield,capacity,10,14,4
+6,7,mid_maturation,shield,notes,"""Maturation emphasizes recharge/placement rather than another capacity step.""",null,
+6,7,mid_maturation,shield,shieldArmor,0,1,1
+6,7,mid_maturation,shield,space,3,2,-1
+6,7,mid_maturation,shield,technology,"""Predictive localized reinforcement""","""Stand-off shear field""",
+6,7,mid_maturation,kinetic_main,newTech,true,false,
+6,7,mid_maturation,kinetic_main,notes,"""Mature smart correction reaches +10 pp ACC from TL1 baseline; Kinetic retains Armor-facing identity.""","""Primary accelerator is quiet; macron/dust remains a branch.""",
+6,7,mid_maturation,kinetic_main,profileSourceTl,null,6,
+6,7,mid_maturation,kinetic_main,technology,"""Smart hypervelocity mass driver""","""TL6 smart hypervelocity mass driver (held)""",
+6,7,mid_maturation,kinetic_pds,technology,"""TL4 guided intercept PDS (held; distributed-grid branch available)""","""TL4 guided intercept PDS (held)""",
+6,7,mid_maturation,energy_main,newTech,true,false,
+6,7,mid_maturation,energy_main,notes,null,"""Extreme-frequency beam remains a branch, not the default.""",
+6,7,mid_maturation,energy_main,profileSourceTl,null,6,
+6,7,mid_maturation,energy_main,technology,"""Distributed/phased beam director""","""TL6 distributed/phased beam director (held)""",
+6,7,mid_maturation,energy_pds,newTech,true,false,
+6,7,mid_maturation,energy_pds,notes,"""Scalable 1 TP/RC1 or 2 TP/RC2 readiness remains.""",null,
+6,7,mid_maturation,energy_pds,profileSourceTl,null,6,
+6,7,mid_maturation,energy_pds,technology,"""Adaptive-spectrum interception""","""TL6 adaptive-spectrum Energy PDS (held)""",
+6,7,mid_maturation,missile_delivery,hardPrereq,null,"""Power TL5""",
+6,7,mid_maturation,missile_delivery,missileMove,7,8,1
+6,7,mid_maturation,missile_delivery,technology,"""High-energy fusion sprint missile""","""Antimatter-catalyzed missile drive""",
+6,7,mid_maturation,missile_guidance,technology,"""Adaptive anti-jam seeker""","""Anti-emitter seeker mode""",
+6,7,mid_maturation,missile_gp_warhead,damage,13,15,2
+6,7,mid_maturation,missile_gp_warhead,hardPrereq,"""Power TL2""","""Power TL5""",
+6,7,mid_maturation,missile_gp_warhead,newTech,false,true,
+6,7,mid_maturation,missile_gp_warhead,technology,"""Fusion microcharge general-purpose warhead""","""Antimatter general-purpose warhead""",
+6,7,mid_maturation,missile_swarmer,packetDamage,7,8,1
+6,7,mid_maturation,missile_swarmer,pdsInterceptPenaltyPp,10,15,5
+6,7,mid_maturation,missile_swarmer,technology,"""Cooperative Swarmer Flight""","""Autonomous distributed Swarmer""",
+6,7,mid_maturation,missile_swarmer,terminalGuidanceBonusPp,10,15,5
+6,7,mid_maturation,amm_pds,baseChancePp,24,28,4
+6,7,mid_maturation,amm_pds,interceptRange,0,1,1
+6,7,mid_maturation,amm_pds,newTech,false,true,
+6,7,mid_maturation,amm_pds,profileSourceTl,5,null,
+6,7,mid_maturation,amm_pds,technology,"""TL5 cooperative AMM screen (held)""","""Hit-to-kill / extreme-sprint AMM""",
+7,8,mid_to_high_boundary,hull,capacity,41,43,2
+7,8,mid_to_high_boundary,hull,hullPoints,30,32,2
+7,8,mid_to_high_boundary,hull,notes,"""Active load management earns a larger integration step. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""","""Science-fantasy support expands the viable installation envelope without immunity. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""",
+7,8,mid_to_high_boundary,hull,technology,"""Active load-distribution structure""","""Field-assisted structural support""",
+7,8,mid_to_high_boundary,damage_control,newTech,true,false,
+7,8,mid_to_high_boundary,damage_control,technology,"""Self-healing structural materials""","""TL7 self-healing Damage Control baseline (held)""",
+7,8,mid_to_high_boundary,armor,notes,"""Primary passive Armor is intentionally quiet at TL7; reactive branch is separate.""","""Primary passive Armor is intentionally quiet at TL8; field-assisted branch is separate.""",
+7,8,mid_to_high_boundary,reactor,degradedTp,8,6,-2
+7,8,mid_to_high_boundary,reactor,emergencyTp,1,0,-1
+7,8,mid_to_high_boundary,reactor,family,"""antimatter""","""matter_conversion""",
+7,8,mid_to_high_boundary,reactor,notes,"""Second Antimatter frontier push.""","""New science-fantasy family expands output density but is deliberately immature/brittle.""",
+7,8,mid_to_high_boundary,reactor,operationalTp,15,17,2
+7,8,mid_to_high_boundary,reactor,technology,"""High-Output Antimatter""","""Fractional / Direct Matter-Conversion Reactor""",
+7,8,mid_to_high_boundary,stl,move,7,9,2
+7,8,mid_to_high_boundary,stl,notes,null,"""Science-fantasy principle creates another nonuniform movement frontier.""",
+7,8,mid_to_high_boundary,stl,technology,"""Beam-core / ultra-high-energy propulsion""","""Inertial-coupled drive""",
+7,8,mid_to_high_boundary,ftl,space,5,4,-1
+7,8,mid_to_high_boundary,ftl,strategicMove,7,9,2
+7,8,mid_to_high_boundary,ftl,technology,"""Resilient high-energy FTL""","""Metric-transition FTL""",
+7,8,mid_to_high_boundary,computer,approxPenaltyPp,-20,-15,5
+7,8,mid_to_high_boundary,computer,degradedTargetingPp,12,15,3
+7,8,mid_to_high_boundary,computer,targetingPp,18,20,2
+7,8,mid_to_high_boundary,computer,technology,"""Quantum-assisted optimization""","""Predictive battle-state synthesis""",
+7,8,mid_to_high_boundary,sensor,activeHighApprox,8,9,1
+7,8,mid_to_high_boundary,sensor,activeHighFirm,7,8,1
+7,8,mid_to_high_boundary,sensor,activeLowApprox,7,8,1
+7,8,mid_to_high_boundary,sensor,activeLowFirm,5,6,1
+7,8,mid_to_high_boundary,sensor,dr,3,4,1
+7,8,mid_to_high_boundary,sensor,passiveApprox,6,7,1
+7,8,mid_to_high_boundary,sensor,passiveFirm,3,4,1
+7,8,mid_to_high_boundary,sensor,technology,"""Integrated penetrating multimodal sensing""","""Spacetime/FTL-wake sensing""",
+7,8,mid_to_high_boundary,ecm,fullStrengthTp,1,2,1
+7,8,mid_to_high_boundary,ecm,rating,3,4,1
+7,8,mid_to_high_boundary,ecm,special,"""emitter-targeted capability""",null,
+7,8,mid_to_high_boundary,ecm,technology,"""Emitter-targeted electronic attack""","""Field/signature spoofing""",
+7,8,mid_to_high_boundary,eccm,fullStrengthTp,1,2,1
+7,8,mid_to_high_boundary,eccm,rating,3,4,1
+7,8,mid_to_high_boundary,eccm,special,"""emitter-targeted capability""",null,
+7,8,mid_to_high_boundary,eccm,technology,"""Counter-emitter localization""","""Exotic-channel correlation""",
+7,8,mid_to_high_boundary,shield,baseRecharge,4,5,1
+7,8,mid_to_high_boundary,shield,capacity,14,18,4
+7,8,mid_to_high_boundary,shield,shieldArmor,1,2,1
+7,8,mid_to_high_boundary,shield,tacticalRechargeCapTp,3,4,1
+7,8,mid_to_high_boundary,shield,tacticalRechargePerTp,2,4,2
+7,8,mid_to_high_boundary,shield,technology,"""Stand-off shear field""","""Metric barrier field""",
+7,8,mid_to_high_boundary,kinetic_main,apen,4,5,1
+7,8,mid_to_high_boundary,kinetic_main,damage,11,12,1
+7,8,mid_to_high_boundary,kinetic_main,firingTp,1,2,1
+7,8,mid_to_high_boundary,kinetic_main,newTech,false,true,
+7,8,mid_to_high_boundary,kinetic_main,notes,"""Primary accelerator is quiet; macron/dust remains a branch.""",null,
+7,8,mid_to_high_boundary,kinetic_main,profileSourceTl,6,null,
+7,8,mid_to_high_boundary,kinetic_main,range,6,7,1
+7,8,mid_to_high_boundary,kinetic_main,spen,2,3,1
+7,8,mid_to_high_boundary,kinetic_main,technology,"""TL6 smart hypervelocity mass driver (held)""","""Field-assisted mass accelerator""",
+7,8,mid_to_high_boundary,energy_main,apen,2,3,1
+7,8,mid_to_high_boundary,energy_main,highDamage,11,13,2
+7,8,mid_to_high_boundary,energy_main,highTp,3,4,1
+7,8,mid_to_high_boundary,energy_main,lowDamage,6,8,2
+7,8,mid_to_high_boundary,energy_main,lowTp,1,2,1
+7,8,mid_to_high_boundary,energy_main,newTech,false,true,
+7,8,mid_to_high_boundary,energy_main,notes,"""Extreme-frequency beam remains a branch, not the default.""",null,
+7,8,mid_to_high_boundary,energy_main,profileSourceTl,6,null,
+7,8,mid_to_high_boundary,energy_main,range,8,9,1
+7,8,mid_to_high_boundary,energy_main,spen,4,5,1
+7,8,mid_to_high_boundary,energy_main,standardDamage,9,11,2
+7,8,mid_to_high_boundary,energy_main,standardTp,2,3,1
+7,8,mid_to_high_boundary,energy_main,technology,"""TL6 distributed/phased beam director (held)""","""Field-guided coherent lance""",
+7,8,mid_to_high_boundary,missile_delivery,hardPrereq,"""Power TL5""",null,
+7,8,mid_to_high_boundary,missile_delivery,profileSourceTl,null,7,
+7,8,mid_to_high_boundary,missile_delivery,technology,"""Antimatter-catalyzed missile drive""","""TL7 delivery held; exotic-field seeker is native, field terminal maneuver is branch""",
+7,8,mid_to_high_boundary,missile_guidance,guidanceBaseHit,65,70,5
+7,8,mid_to_high_boundary,missile_guidance,technology,"""Anti-emitter seeker mode""","""Exotic-field seeker""",
+7,8,mid_to_high_boundary,missile_gp_warhead,newTech,true,false,
+7,8,mid_to_high_boundary,amm_pds,newTech,true,false,
+7,8,mid_to_high_boundary,amm_pds,profileSourceTl,null,7,
+7,8,mid_to_high_boundary,amm_pds,technology,"""Hit-to-kill / extreme-sprint AMM""","""TL7 extreme-sprint AMM (held)""",
+8,9,high_maturation,hull,capacity,43,45,2
+8,9,high_maturation,hull,hullPoints,32,34,2
+8,9,high_maturation,hull,notes,"""Science-fantasy support expands the viable installation envelope without immunity. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""","""Pinnacle bounded cruiser; still not an unlimited capital-hull progression. CP123 durability reference uses the canonical x2 ruler and remains a bounded cruiser.""",
+8,9,high_maturation,hull,technology,"""Field-assisted structural support""","""Dynamic programmable cruiser architecture""",
+8,9,high_maturation,damage_control,degradedToOperationalChancePp,80,85,5
+8,9,high_maturation,damage_control,disabledToDegradedChancePp,60,65,5
+8,9,high_maturation,damage_control,hullRepairChancePp,50,55,5
+8,9,high_maturation,damage_control,hullRestoredPerSuccessfulKit,2,3,1
+8,9,high_maturation,damage_control,newTech,false,true,
+8,9,high_maturation,damage_control,technology,"""TL7 self-healing Damage Control baseline (held)""","""Autonomous reconstruction architecture""",
+8,9,high_maturation,armor,ai,14,16,2
+8,9,high_maturation,armor,ap,4,6,2
+8,9,high_maturation,armor,newTech,false,true,
+8,9,high_maturation,armor,notes,"""Primary passive Armor is intentionally quiet at TL8; field-assisted branch is separate.""","""Pinnacle passive material; reconfiguration remains bounded and resource-dependent.""",
+8,9,high_maturation,armor,profileSourceTl,6,null,
+8,9,high_maturation,armor,technology,"""TL6 Self-healing smart laminate (held)""","""Programmable matter armor""",
+8,9,high_maturation,reactor,degradedTp,6,12,6
+8,9,high_maturation,reactor,emergencyTp,0,2,2
+8,9,high_maturation,reactor,notes,"""New science-fantasy family expands output density but is deliberately immature/brittle.""","""Pinnacle output density and mature damaged-state behavior; still bounded enough that multiple high-demand systems create choices.""",
+8,9,high_maturation,reactor,operationalTp,17,20,3
+8,9,high_maturation,reactor,space,4,3,-1
+8,9,high_maturation,reactor,technology,"""Fractional / Direct Matter-Conversion Reactor""","""Total Matter Conversion""",
+8,9,high_maturation,stl,move,9,10,1
+8,9,high_maturation,stl,notes,"""Science-fantasy principle creates another nonuniform movement frontier.""","""Fuel-per-hex remains held pending Resources/endurance economy design.""",
+8,9,high_maturation,stl,technology,"""Inertial-coupled drive""","""Gravitic/metric sublight drive""",
+8,9,high_maturation,ftl,notes,null,"""Unknown-sector interruption/frontier-discovery rules remain; high Move does not erase exploration.""",
+8,9,high_maturation,ftl,strategicMove,9,12,3
+8,9,high_maturation,ftl,technology,"""Metric-transition FTL""","""Pinnacle topology-control FTL""",
+8,9,high_maturation,computer,approxPenaltyPp,-15,-10,5
+8,9,high_maturation,computer,degradedTargetingPp,15,18,3
+8,9,high_maturation,computer,notes,null,"""No precognition/hidden-state access; pinnacle gains robustness and bounded degraded-track competence.""",
+8,9,high_maturation,computer,technology,"""Predictive battle-state synthesis""","""Pinnacle self-verifying battle synthesis""",
+8,9,high_maturation,sensor,activeHighApprox,9,10,1
+8,9,high_maturation,sensor,activeHighFirm,8,9,1
+8,9,high_maturation,sensor,activeLowApprox,8,9,1
+8,9,high_maturation,sensor,activeLowFirm,6,7,1
+8,9,high_maturation,sensor,dr,4,5,1
+8,9,high_maturation,sensor,notes,null,"""Still probabilistic and provenance-bound; no omniscience.""",
+8,9,high_maturation,sensor,passiveApprox,7,8,1
+8,9,high_maturation,sensor,passiveFirm,4,5,1
+8,9,high_maturation,sensor,technology,"""Spacetime/FTL-wake sensing""","""Pinnacle multi-domain inference suite""",
+8,9,high_maturation,ecm,fullStrengthTp,2,1,-1
+8,9,high_maturation,ecm,notes,null,"""Pinnacle efficiency/cross-spectrum breadth; no invisibility or truth oracle.""",
+8,9,high_maturation,ecm,technology,"""Field/signature spoofing""","""Pinnacle adaptive cross-spectrum deception""",
+8,9,high_maturation,eccm,fullStrengthTp,2,1,-1
+8,9,high_maturation,eccm,notes,null,"""Pinnacle efficiency/cross-spectrum breadth; no invisibility or truth oracle.""",
+8,9,high_maturation,eccm,technology,"""Exotic-channel correlation""","""Pinnacle provenance-weighted track validation""",
+8,9,high_maturation,shield,baseRecharge,5,6,1
+8,9,high_maturation,shield,capacity,18,24,6
+8,9,high_maturation,shield,technology,"""Metric barrier field""","""Pinnacle adaptive barrier""",
+8,9,high_maturation,kinetic_main,accuracyPp,30,35,5
+8,9,high_maturation,kinetic_main,apen,5,6,1
+8,9,high_maturation,kinetic_main,damage,12,14,2
+8,9,high_maturation,kinetic_main,firingTp,2,3,1
+8,9,high_maturation,kinetic_main,range,7,8,1
+8,9,high_maturation,kinetic_main,spen,3,4,1
+8,9,high_maturation,kinetic_main,technology,"""Field-assisted mass accelerator""","""Relativistic kinetic lance""",
+8,9,high_maturation,kinetic_pds,notes,null,"""Later effectiveness still rises through better ship fire control; no filler PDS family is invented.""",
+8,9,high_maturation,energy_main,accuracyPp,35,40,5
+8,9,high_maturation,energy_main,apen,3,4,1
+8,9,high_maturation,energy_main,highDamage,13,15,2
+8,9,high_maturation,energy_main,highTp,4,5,1
+8,9,high_maturation,energy_main,lowDamage,8,9,1
+8,9,high_maturation,energy_main,range,9,10,1
+8,9,high_maturation,energy_main,spen,5,6,1
+8,9,high_maturation,energy_main,standardDamage,11,13,2
+8,9,high_maturation,energy_main,technology,"""Field-guided coherent lance""","""Pinnacle coherent-energy lance""",
+8,9,high_maturation,missile_delivery,missileMove,8,9,1
+8,9,high_maturation,missile_delivery,profileSourceTl,7,null,
+8,9,high_maturation,missile_delivery,technology,"""TL7 delivery held; exotic-field seeker is native, field terminal maneuver is branch""","""Integrated field-coupled strike vehicle""",
+8,9,high_maturation,missile_guidance,guidanceBaseHit,70,75,5
+8,9,high_maturation,missile_guidance,technology,"""Exotic-field seeker""","""Pinnacle provenance-aware seeker suite""",

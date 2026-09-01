@@ -1,0 +1,2445 @@
+{
+  "schemaVersion": 1,
+  "id": "player-technology-architecture-v0_7",
+  "title": "Star Cluster Player Technology Architecture v0.7",
+  "checkpoint": 55,
+  "status": "tl3_lowtech_capstone_candidate_screening",
+  "date": "2026-08-07",
+  "scope": "Checkpoint 55 adopts a three-generation capacity cadence, freezes accepted TL1/TL2 plus Checkpoint 54a as historical evidence, and re-screens TL3 as the one-main/two-AUX culmination of low technology. TL4 dual-main and TL7 three-main foundations remain provisional until later transition studies.",
+  "principles": [
+    "Use Family -> Sub-family -> TL-specific implementation as the governing hierarchy.",
+    "Family rules apply to every sub-family unless an explicit later decision creates an exception.",
+    "Sub-families remain similar enough to compare and distinct enough to support meaningful choices.",
+    "No flavor text, name, or assumed technology silently creates a new mechanic, target class, bonus, or interaction.",
+    "Standard components are the best mature technology normally available at that TL.",
+    "AUX components are specialized, experimental, theorycrafting, R&D, or constrained additions and should normally provide modest same-TL marginal advantages.",
+    "Not every characteristic improves at every TL; improvements follow the purpose and characteristic family of the sub-family.",
+    "Hull TL controls bounded cruiser installation density and major refit milestones without changing the player ship into a larger class.",
+    "Historical scenario capacity used for screening does not automatically define normal production-hull capacity.",
+    "Exact parity is not required; broad compulsory choice or practical irrelevance is the concern.",
+    "All three standard PDS sub-families exist at TL1; availability is distinct from effectiveness, and early implementations remain deliberately modest.",
+    "Finite tactical resources and reusable stored-power systems are evaluated on their intended timescale; a single duel is not required to value campaign endurance components.",
+    "Tactical shield recharge is a core ship capability when power and shield condition permit; a power-support Auxiliary may supply or shift Tactical Power but never unlocks the recharge action itself.",
+    "Treat TL1-3, TL4-6, and TL7-9 as three technology generations. TL1/TL4/TL7 are foundational changes, TL2/TL5/TL8 are refinements, and TL3/TL6/TL9 are mature culminations.",
+    "Main-weapon capacity is provisionally 1/1/1, 2/2/2, 3/3/3 across the three generations; do not add arbitrary firing restrictions to compensate for an unhealthy capacity jump.",
+    "AUX Capacity is 1/1/2, 2/2/3, 3/3/4 so each generation gains additional support flexibility at its mature endpoint.",
+    "Checkpoint 54a dual-main TL3 results remain frozen sensitivity evidence explaining the architecture correction; they are not legal current TL3 configurations.",
+    "Checkpoint 55 TL3 runtime uses exactly one main weapon and two AUX Capacity. Standard numerical changes remain conservative and candidate-only.",
+    "If the later TL4 dual-main transition remains unbalanceable even with conservative component values, prefer a single-main TL1-TL9 architecture over artificial fire-control prohibitions."
+  ],
+  "eras": [
+    {
+      "tl": 1,
+      "eraId": "realistic_sf",
+      "era": "Realistic science fiction",
+      "theme": "Foundation: first practical interstellar combat cruiser."
+    },
+    {
+      "tl": 2,
+      "eraId": "realistic_sf",
+      "era": "Realistic science fiction",
+      "theme": "Refinement: improve low-tech components and integration."
+    },
+    {
+      "tl": 3,
+      "eraId": "realistic_sf",
+      "era": "Realistic science fiction",
+      "theme": "Maturity: pinnacle low-tech design; second AUX point, still one main weapon."
+    },
+    {
+      "tl": 4,
+      "eraId": "future_sf",
+      "era": "Future science fiction",
+      "theme": "Foundation: provisional mid-tech dual-main hull architecture."
+    },
+    {
+      "tl": 5,
+      "eraId": "future_sf",
+      "era": "Future science fiction",
+      "theme": "Refinement: improve the dual-main generation without structural inflation."
+    },
+    {
+      "tl": 6,
+      "eraId": "future_sf",
+      "era": "Future science fiction",
+      "theme": "Maturity: culmination of mid-tech; third AUX point."
+    },
+    {
+      "tl": 7,
+      "eraId": "science_fantasy",
+      "era": "Science fantasy",
+      "theme": "Foundation: provisional high-tech three-main hull architecture."
+    },
+    {
+      "tl": 8,
+      "eraId": "science_fantasy",
+      "era": "Science fantasy",
+      "theme": "Refinement: improve the high-tech generation without structural inflation."
+    },
+    {
+      "tl": 9,
+      "eraId": "science_fantasy",
+      "era": "Science fantasy",
+      "theme": "Maturity: pinnacle standard player technology; fourth AUX point."
+    }
+  ],
+  "installationCapacityProposals": {
+    "status": "accepted_checkpoint_55_design_direction_pending_transition_validation",
+    "auxiliaryCapacity": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 3,
+      "7": 3,
+      "8": 3,
+      "9": 4
+    },
+    "weaponBayCapacity": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 3,
+      "8": 3,
+      "9": 3
+    },
+    "weaponBayMilestones": {
+      "1": 1,
+      "4": 2,
+      "7": 3
+    },
+    "shuttleCapacity": {
+      "tl1": 1,
+      "lateCruiserGoal": 2,
+      "exactSecondBerthTl": "deferred"
+    },
+    "notes": [
+      "TL1-TL3 retain one main weapon; TL3 is the first AUX-capacity expansion and the mature low-tech cruiser.",
+      "TL4 provisionally introduces the second main weapon as the foundation of mid-tech; TL5 refines it and TL6 adds the third AUX point.",
+      "TL7 provisionally introduces the third main weapon as the foundation of high-tech; TL8 refines it and TL9 adds the fourth AUX point.",
+      "Checkpoint 54a dual-main TL3 scenarios remain historical sensitivity controls and are no longer architecture-legal production TL3 configurations.",
+      "No rule limits legal installed weapons from firing normally; power, ammunition, condition, range, and targeting remain the natural constraints.",
+      "Exact second-shuttle-berth placement and other high-TL capstones remain deferred."
+    ]
+  },
+  "standardFamilies": [
+    {
+      "familyId": "armor",
+      "displayName": "Standard Armor",
+      "technologyId": "armor",
+      "technologyName": "Armor",
+      "identity": "material",
+      "implementations": [
+        {
+          "tl": 1,
+          "componentId": "armor_standard_tl_01",
+          "displayName": "Rolled Alloy Plating",
+          "progressionBasis": "material",
+          "mechanicalPromise": "Baseline passive Armor Protection and Integrity; inexpensive and straightforward to repair.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 2,
+          "componentId": "armor_standard_tl_02",
+          "displayName": "Ceramic Composite Plating",
+          "progressionBasis": "material",
+          "mechanicalPromise": "Improved protection-to-mass ratio and better resistance to heat and fragmentation.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 3,
+          "componentId": "armor_standard_tl_03",
+          "displayName": "Titanium-Carbide Laminate",
+          "progressionBasis": "laminate construction",
+          "mechanicalPromise": "Higher Integrity and more consistent per-packet protection.",
+          "status": "checkpoint_55_lowtech_capstone_candidate"
+        },
+        {
+          "tl": 4,
+          "componentId": "armor_standard_tl_04",
+          "displayName": "Nanobonded Armor",
+          "progressionBasis": "nanoengineering",
+          "mechanicalPromise": "Improved layer adhesion, reduced spalling, and better repair compatibility.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 5,
+          "componentId": "armor_standard_tl_05",
+          "displayName": "Diamondoid Composite Armor",
+          "progressionBasis": "advanced material",
+          "mechanicalPromise": "Mature midgame passive armor with high hardness and efficient structural support.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 6,
+          "componentId": "armor_standard_tl_06",
+          "displayName": "Metamaterial Weave Armor",
+          "progressionBasis": "metamaterial",
+          "mechanicalPromise": "Engineered impact and energy-path control; candidate improved penetration resistance.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 7,
+          "componentId": "armor_standard_tl_07",
+          "displayName": "Shape-Memory Lattice Armor",
+          "progressionBasis": "adaptive material",
+          "mechanicalPromise": "Improved field repair and bounded recovery of deformed armor structure.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 8,
+          "componentId": "armor_standard_tl_08",
+          "displayName": "Ultradense Lattice Armor",
+          "progressionBasis": "ultradense material",
+          "mechanicalPromise": "Very high passive protection and Integrity per installed capacity.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 9,
+          "componentId": "armor_standard_tl_09",
+          "displayName": "Degenerate-Matter Laminate",
+          "progressionBasis": "exotic passive material",
+          "mechanicalPromise": "Pinnacle passive protection without requiring Tactical Power; exceptionally difficult to manufacture and repair.",
+          "status": "existing_provisional_standard_chart"
+        }
+      ]
+    },
+    {
+      "familyId": "beam_weapon",
+      "displayName": "Standard Beam Battery",
+      "technologyId": "beam_weapons",
+      "technologyName": "Beam Weapons",
+      "identity": "photon emission",
+      "implementations": [
+        {
+          "tl": 1,
+          "componentId": "beam_weapons_beam_weapon_tl_01",
+          "displayName": "Solid-State Laser Cannon",
+          "progressionBasis": "photon emission",
+          "mechanicalPromise": "Accurate starter beam with moderate damage, power demand, and interception utility.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 2,
+          "componentId": "beam_weapons_beam_weapon_tl_02",
+          "displayName": "Pulsed Laser Cannon",
+          "progressionBasis": "pulsed photon emission",
+          "mechanicalPromise": "Higher peak output and better combat effectiveness at the cost of heat and power spikes.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 3,
+          "componentId": "beam_weapons_beam_weapon_tl_03",
+          "displayName": "Free-Electron Laser",
+          "progressionBasis": "tunable photon emission",
+          "mechanicalPromise": "Tunable wavelength improves range, target interaction, and efficiency.",
+          "status": "checkpoint_55_lowtech_capstone_candidate"
+        },
+        {
+          "tl": 4,
+          "componentId": "beam_weapons_beam_weapon_tl_04",
+          "displayName": "Ion Beam Cannon",
+          "progressionBasis": "charged-particle beam",
+          "mechanicalPromise": "Transitional particle weapon with strong shield and subsystem interaction.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 5,
+          "componentId": "beam_weapons_beam_weapon_tl_05",
+          "displayName": "Neutral Particle Beam",
+          "progressionBasis": "neutral-particle beam",
+          "mechanicalPromise": "Mature midgame beam with good range and reduced electromagnetic deflection.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 6,
+          "componentId": "beam_weapons_beam_weapon_tl_06",
+          "displayName": "Gamma-Ray Laser",
+          "progressionBasis": "high-energy photon emission",
+          "mechanicalPromise": "High penetration and compact energy delivery with demanding cooling and shielding.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 7,
+          "componentId": "beam_weapons_beam_weapon_tl_07",
+          "displayName": "Phased Particle Lance",
+          "progressionBasis": "phase-controlled beam",
+          "mechanicalPromise": "Phase control improves cohesion and candidate shield-penetration behavior.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 8,
+          "componentId": "beam_weapons_beam_weapon_tl_08",
+          "displayName": "Gravitic Shear Beam",
+          "progressionBasis": "gravitic field projection",
+          "mechanicalPromise": "Applies concentrated tidal stress rather than ordinary thermal or particle damage.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 9,
+          "componentId": "beam_weapons_beam_weapon_tl_09",
+          "displayName": "Metric Disruption Lance",
+          "progressionBasis": "metric field projection",
+          "mechanicalPromise": "Pinnacle directed-energy weapon that disrupts local spacetime geometry along a controlled firing path.",
+          "status": "existing_provisional_standard_chart"
+        }
+      ]
+    },
+    {
+      "familyId": "computing_fire_control",
+      "displayName": "Standard Command and Fire-Control Computer",
+      "technologyId": "computing_fire_control",
+      "technologyName": "Computing / Fire Control",
+      "identity": "computing architecture",
+      "implementations": [
+        {
+          "tl": 1,
+          "componentId": "computing_fire_control_standard_tl_01",
+          "displayName": "Electronic Fire-Control Computer",
+          "progressionBasis": "computing architecture",
+          "mechanicalPromise": "Baseline targeting, communications, and guidance computation.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 2,
+          "componentId": "computing_fire_control_standard_tl_02",
+          "displayName": "Photonic Tactical Computer",
+          "progressionBasis": "computing architecture",
+          "mechanicalPromise": "Faster track fusion and improved targeting efficiency.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 3,
+          "componentId": "computing_fire_control_standard_tl_03",
+          "displayName": "Neural-Pattern Combat Computer",
+          "progressionBasis": "adaptive computing",
+          "mechanicalPromise": "Adaptive pattern recognition improves maneuver-fire correction and target classification.",
+          "status": "checkpoint_55_lowtech_capstone_candidate"
+        },
+        {
+          "tl": 4,
+          "componentId": "computing_fire_control_standard_tl_04",
+          "displayName": "Quantum Fire-Control Core",
+          "progressionBasis": "quantum computing",
+          "mechanicalPromise": "Improved multi-variable fire solutions and high-TL guidance support.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 5,
+          "componentId": "computing_fire_control_standard_tl_05",
+          "displayName": "Predictive Engagement Core",
+          "progressionBasis": "predictive control",
+          "mechanicalPromise": "Mature midgame combat prediction, coordinated fire, and Evasive Compensation.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 6,
+          "componentId": "computing_fire_control_standard_tl_06",
+          "displayName": "Distributed Tactical Matrix",
+          "progressionBasis": "distributed computing",
+          "mechanicalPromise": "Redundant processing across the ship improves resilience and multi-system coordination.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 7,
+          "componentId": "computing_fire_control_standard_tl_07",
+          "displayName": "Entangled Command Matrix",
+          "progressionBasis": "entangled processing",
+          "mechanicalPromise": "Low-latency coordination among sensors, weapons, missiles, and defensive systems.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 8,
+          "componentId": "computing_fire_control_standard_tl_08",
+          "displayName": "Causal Analysis Core",
+          "progressionBasis": "advanced inference",
+          "mechanicalPromise": "Rapid causal modeling anticipates likely maneuvers without revealing hidden authoritative state.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 9,
+          "componentId": "computing_fire_control_standard_tl_09",
+          "displayName": "Strategic Cognition Matrix",
+          "progressionBasis": "machine cognition",
+          "mechanicalPromise": "Pinnacle decision-support and coordination while leaving command authority with the crew.",
+          "status": "existing_provisional_standard_chart"
+        }
+      ]
+    },
+    {
+      "familyId": "ftl_drive",
+      "displayName": "Standard FTL Drive",
+      "technologyId": "propulsion",
+      "technologyName": "Propulsion",
+      "identity": "spacetime folding",
+      "implementations": [
+        {
+          "tl": 1,
+          "componentId": "propulsion_ftl_drive_tl_01",
+          "displayName": "Prototype Fold Drive",
+          "progressionBasis": "spacetime folding",
+          "mechanicalPromise": "First practical interstellar drive; short, inefficient, but reliable enough for the second starship.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 2,
+          "componentId": "propulsion_ftl_drive_tl_02",
+          "displayName": "Stabilized Fold Drive",
+          "progressionBasis": "spacetime folding",
+          "mechanicalPromise": "Improved route reliability, efficiency, and strategic movement allowance.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 3,
+          "componentId": "propulsion_ftl_drive_tl_03",
+          "displayName": "Deep-Fold Drive",
+          "progressionBasis": "spacetime folding",
+          "mechanicalPromise": "Sustains a deeper fold geometry for faster charted-sector travel.",
+          "status": "checkpoint_55_lowtech_capstone_candidate"
+        },
+        {
+          "tl": 4,
+          "componentId": "propulsion_ftl_drive_tl_04",
+          "displayName": "Slipstream Drive",
+          "progressionBasis": "sustained transit channel",
+          "mechanicalPromise": "Maintains a stable moving corridor rather than repeatedly initiating short folds.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 5,
+          "componentId": "propulsion_ftl_drive_tl_05",
+          "displayName": "Subspace Corridor Drive",
+          "progressionBasis": "subspace transit",
+          "mechanicalPromise": "Mature midgame FTL using engineered transit corridors with improved range and interruption recovery.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 6,
+          "componentId": "propulsion_ftl_drive_tl_06",
+          "displayName": "Phase-Transit Drive",
+          "progressionBasis": "phase-space transit",
+          "mechanicalPromise": "Moves through a controlled phase offset, improving travel efficiency and hazard tolerance.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 7,
+          "componentId": "propulsion_ftl_drive_tl_07",
+          "displayName": "Metric Translation Drive",
+          "progressionBasis": "metric engineering",
+          "mechanicalPromise": "Translates the ship by reshaping local spacetime geometry with high precision.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 8,
+          "componentId": "propulsion_ftl_drive_tl_08",
+          "displayName": "Horizon Passage Drive",
+          "progressionBasis": "horizon engineering",
+          "mechanicalPromise": "Uses bounded artificial horizons to sustain very rapid but still interruptible strategic passage.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 9,
+          "componentId": "propulsion_ftl_drive_tl_09",
+          "displayName": "Continuum Passage Drive",
+          "progressionBasis": "continuum engineering",
+          "mechanicalPromise": "Pinnacle strategic propulsion with a visible campaign-defining travel capability.",
+          "status": "existing_provisional_standard_chart"
+        }
+      ]
+    },
+    {
+      "familyId": "hull",
+      "displayName": "Standard Cruiser Hull",
+      "technologyId": "hull",
+      "technologyName": "Hull",
+      "identity": "structural architecture",
+      "implementations": [
+        {
+          "tl": 1,
+          "componentId": "hull_standard_tl_01",
+          "displayName": "Welded Pressure Hull",
+          "progressionBasis": "structural architecture",
+          "mechanicalPromise": "Baseline cruiser structure with one main Weapon Bay and one AUX Capacity.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 2,
+          "componentId": "hull_standard_tl_02",
+          "displayName": "Reinforced Spaceframe",
+          "progressionBasis": "structural architecture",
+          "mechanicalPromise": "Low-tech structural refinement; one main Weapon Bay and one AUX Capacity remain unchanged.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 3,
+          "componentId": "hull_standard_tl_03",
+          "displayName": "Modular Truss Hull",
+          "progressionBasis": "structural architecture",
+          "mechanicalPromise": "Mature low-tech integration: one main Weapon Bay and two AUX Capacity; support flexibility expands without an offensive slot jump.",
+          "status": "checkpoint_55_lowtech_capstone_candidate"
+        },
+        {
+          "tl": 4,
+          "componentId": "hull_standard_tl_04",
+          "displayName": "Cellular Compartment Hull",
+          "progressionBasis": "compartmentation",
+          "mechanicalPromise": "Mid-tech foundation: major drydock refit introduces the second main Weapon Bay while AUX remains at two.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 5,
+          "componentId": "hull_standard_tl_05",
+          "displayName": "Integrated Monocoque Hull",
+          "progressionBasis": "integrated architecture",
+          "mechanicalPromise": "Mid-tech structural refinement with two main Weapon Bays and two AUX Capacity.",
+          "status": "reviewed_capacity_candidate"
+        },
+        {
+          "tl": 6,
+          "componentId": "hull_standard_tl_06",
+          "displayName": "Distributed Loadframe",
+          "progressionBasis": "load distribution",
+          "mechanicalPromise": "Mature mid-tech integration: two main Weapon Bays and three AUX Capacity.",
+          "status": "reviewed_capacity_candidate"
+        },
+        {
+          "tl": 7,
+          "componentId": "hull_standard_tl_07",
+          "displayName": "Metamaterial Stressframe",
+          "progressionBasis": "metamaterial structure",
+          "mechanicalPromise": "High-tech foundation: provisional third main Weapon Bay with three AUX Capacity.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 8,
+          "componentId": "hull_standard_tl_08",
+          "displayName": "Adaptive Lattice Hull",
+          "progressionBasis": "adaptive structure",
+          "mechanicalPromise": "High-tech structural refinement with three main Weapon Bays and three AUX Capacity.",
+          "status": "reviewed_capacity_candidate"
+        },
+        {
+          "tl": 9,
+          "componentId": "hull_standard_tl_09",
+          "displayName": "Programmable-Matter Hull",
+          "progressionBasis": "programmable matter",
+          "mechanicalPromise": "Mature high-tech pinnacle: three main Weapon Bays and four AUX Capacity while retaining cruiser-scale lineage.",
+          "status": "reviewed_capacity_candidate"
+        }
+      ]
+    },
+    {
+      "familyId": "kinetic_weapon",
+      "displayName": "Standard Kinetic Battery",
+      "technologyId": "kinetic_weapons",
+      "technologyName": "Kinetic Weapons",
+      "identity": "chemical acceleration",
+      "implementations": [
+        {
+          "tl": 1,
+          "componentId": "kinetic_weapons_kinetic_weapon_tl_01",
+          "displayName": "Caseless Autocannon",
+          "progressionBasis": "chemical acceleration",
+          "mechanicalPromise": "Reliable starter kinetic weapon with modest range and ammunition efficiency.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 2,
+          "componentId": "kinetic_weapons_kinetic_weapon_tl_02",
+          "displayName": "Coil Cannon",
+          "progressionBasis": "electromagnetic acceleration",
+          "mechanicalPromise": "Improved projectile velocity, accuracy, and armor interaction.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 3,
+          "componentId": "kinetic_weapons_kinetic_weapon_tl_03",
+          "displayName": "Rail Cannon",
+          "progressionBasis": "electromagnetic acceleration",
+          "mechanicalPromise": "Higher velocity and penetration with greater power and maintenance demands.",
+          "status": "checkpoint_55_lowtech_capstone_candidate"
+        },
+        {
+          "tl": 4,
+          "componentId": "kinetic_weapons_kinetic_weapon_tl_04",
+          "displayName": "Hypervelocity Rail Cannon",
+          "progressionBasis": "advanced rail acceleration",
+          "mechanicalPromise": "Transitional high-energy projectile weapon with better range and armor penetration.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 5,
+          "componentId": "kinetic_weapons_kinetic_weapon_tl_05",
+          "displayName": "Plasma-Armature Mass Driver",
+          "progressionBasis": "plasma armature acceleration",
+          "mechanicalPromise": "Mature midgame mass driver using plasma armatures for higher projectile energy and barrel life.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 6,
+          "componentId": "kinetic_weapons_kinetic_weapon_tl_06",
+          "displayName": "Gravitic Mass Driver",
+          "progressionBasis": "gravitic acceleration",
+          "mechanicalPromise": "Supplements electromagnetic launch with controlled gravity gradients.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 7,
+          "componentId": "kinetic_weapons_kinetic_weapon_tl_07",
+          "displayName": "Inertial-Compensated Impactor",
+          "progressionBasis": "inertial engineering",
+          "mechanicalPromise": "Launches heavier projectiles while reducing recoil and mount stress.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 8,
+          "componentId": "kinetic_weapons_kinetic_weapon_tl_08",
+          "displayName": "Relativistic Impactor Cannon",
+          "progressionBasis": "relativistic acceleration",
+          "mechanicalPromise": "Extremely high projectile energy; likely demanding in power, mount, and fire-control requirements.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 9,
+          "componentId": "kinetic_weapons_kinetic_weapon_tl_09",
+          "displayName": "Metric Impactor",
+          "progressionBasis": "metric acceleration",
+          "mechanicalPromise": "Pinnacle physical-projectile weapon using metric control to impart extreme velocity or bypass ordinary launch limits.",
+          "status": "existing_provisional_standard_chart"
+        }
+      ]
+    },
+    {
+      "familyId": "missile_flight",
+      "displayName": "Standard Missile Flight",
+      "technologyId": "missile_weapons",
+      "technologyName": "Missile Weapons",
+      "identity": "warhead generation",
+      "implementations": [
+        {
+          "tl": 1,
+          "componentId": "missile_weapons_missile_flight_tl_01",
+          "displayName": "Nuclear Missile Flight",
+          "progressionBasis": "warhead generation",
+          "mechanicalPromise": "Baseline guided Missile Flight with nuclear warhead, limited endurance, and simple guidance.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 2,
+          "componentId": "missile_weapons_missile_flight_tl_02",
+          "displayName": "Fusion Missile Flight",
+          "progressionBasis": "warhead generation",
+          "mechanicalPromise": "Higher damage and improved flight performance using compact fusion warheads.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 3,
+          "componentId": "missile_weapons_missile_flight_tl_03",
+          "displayName": "Directed-Fusion Missile Flight",
+          "progressionBasis": "directed-energy warhead",
+          "mechanicalPromise": "Shapes fusion output toward the target for improved armor interaction and efficiency.",
+          "status": "checkpoint_55_lowtech_capstone_candidate"
+        },
+        {
+          "tl": 4,
+          "componentId": "missile_weapons_missile_flight_tl_04",
+          "displayName": "Antimatter-Catalyzed Missile Flight",
+          "progressionBasis": "catalyzed warhead",
+          "mechanicalPromise": "Uses trace antimatter to increase warhead yield and propulsion efficiency.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 5,
+          "componentId": "missile_weapons_missile_flight_tl_05",
+          "displayName": "Antimatter Missile Flight",
+          "progressionBasis": "antimatter warhead",
+          "mechanicalPromise": "Mature midgame high-damage flight with demanding containment and interception consequences.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 6,
+          "componentId": "missile_weapons_missile_flight_tl_06",
+          "displayName": "Phase-Penetrator Missile Flight",
+          "progressionBasis": "phase-controlled terminal package",
+          "mechanicalPromise": "Advanced terminal package with a candidate shield-penetration or hardening-counter role.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 7,
+          "componentId": "missile_weapons_missile_flight_tl_07",
+          "displayName": "Gravitic Implosion Missile Flight",
+          "progressionBasis": "gravitic warhead",
+          "mechanicalPromise": "Creates a localized inward gravity pulse for severe structural and armor stress.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 8,
+          "componentId": "missile_weapons_missile_flight_tl_08",
+          "displayName": "Quantum Rupture Missile Flight",
+          "progressionBasis": "quantum warhead",
+          "mechanicalPromise": "Destabilizes target material or fields through a bounded quantum-coherence failure.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 9,
+          "componentId": "missile_weapons_missile_flight_tl_09",
+          "displayName": "Metric Collapse Missile Flight",
+          "progressionBasis": "metric warhead",
+          "mechanicalPromise": "Pinnacle player Missile Flight producing a tightly bounded local spacetime collapse at impact.",
+          "status": "existing_provisional_standard_chart"
+        }
+      ]
+    },
+    {
+      "familyId": "reactor",
+      "displayName": "Standard Reactor",
+      "technologyId": "power",
+      "technologyName": "Power / Reactor",
+      "identity": "energy source",
+      "implementations": [
+        {
+          "tl": 1,
+          "componentId": "power_reactor_tl_01",
+          "displayName": "Fission Reactor",
+          "progressionBasis": "energy source",
+          "mechanicalPromise": "Baseline Tactical Power Capacity, core power, and small emergency output.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 2,
+          "componentId": "power_reactor_tl_02",
+          "displayName": "Fusion Reactor",
+          "progressionBasis": "energy source",
+          "mechanicalPromise": "Higher Tactical Power and improved efficiency with lower fuel burden.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 3,
+          "componentId": "power_reactor_tl_03",
+          "displayName": "High-Flux Fusion Reactor",
+          "progressionBasis": "reactor architecture",
+          "mechanicalPromise": "Greater peak Tactical Power and improved support for multiple active combat systems.",
+          "status": "checkpoint_55_lowtech_capstone_candidate"
+        },
+        {
+          "tl": 4,
+          "componentId": "power_reactor_tl_04",
+          "displayName": "Antimatter-Catalyzed Fusion Core",
+          "progressionBasis": "catalyzed reaction",
+          "mechanicalPromise": "Transitional reactor using tiny antimatter quantities to increase fusion yield and compactness.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 5,
+          "componentId": "power_reactor_tl_05",
+          "displayName": "Antimatter Reactor",
+          "progressionBasis": "matter conversion",
+          "mechanicalPromise": "Mature midgame high-output reactor enabling demanding shields, beams, and drives.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 6,
+          "componentId": "power_reactor_tl_06",
+          "displayName": "Direct-Conversion Antimatter Core",
+          "progressionBasis": "direct conversion",
+          "mechanicalPromise": "Improved conversion efficiency, power conditioning, and reduced waste heat.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 7,
+          "componentId": "power_reactor_tl_07",
+          "displayName": "Vacuum Flux Reactor",
+          "progressionBasis": "quantum vacuum engineering",
+          "mechanicalPromise": "Exotic but controllable power source with improved endurance and candidate reliability benefits.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 8,
+          "componentId": "power_reactor_tl_08",
+          "displayName": "Micro-Singularity Core",
+          "progressionBasis": "singularity engineering",
+          "mechanicalPromise": "Extremely dense power generation with major containment and integration requirements.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 9,
+          "componentId": "power_reactor_tl_09",
+          "displayName": "Metric Conversion Core",
+          "progressionBasis": "metric engineering",
+          "mechanicalPromise": "Pinnacle reactor that converts controlled spacetime stress into usable power; must provide a memorable TL9 benefit.",
+          "status": "existing_provisional_standard_chart"
+        }
+      ]
+    },
+    {
+      "familyId": "sensors_ew",
+      "displayName": "Standard Sensor and EW Suite",
+      "technologyId": "sensors_ew",
+      "technologyName": "Sensors / EW",
+      "identity": "sensor spectrum",
+      "implementations": [
+        {
+          "tl": 1,
+          "componentId": "sensors_ew_standard_tl_01",
+          "displayName": "Radio-Optical Survey Suite",
+          "progressionBasis": "sensor spectrum",
+          "mechanicalPromise": "Baseline passive/active sensing, communications, and limited electronic countermeasures.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 2,
+          "componentId": "sensors_ew_standard_tl_02",
+          "displayName": "Multispectral Sensor Suite",
+          "progressionBasis": "sensor fusion",
+          "mechanicalPromise": "Improved target discrimination and more reliable passive track formation.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 3,
+          "componentId": "sensors_ew_standard_tl_03",
+          "displayName": "Phased-Aperture Sensor Suite",
+          "progressionBasis": "aperture synthesis",
+          "mechanicalPromise": "Better range, angular resolution, and ECCM through coordinated apertures.",
+          "status": "checkpoint_55_lowtech_capstone_candidate"
+        },
+        {
+          "tl": 4,
+          "componentId": "sensors_ew_standard_tl_04",
+          "displayName": "Neutrino Sensor Suite",
+          "progressionBasis": "exotic particle sensing",
+          "mechanicalPromise": "Detects reactor and drive signatures through clutter and some occlusion conditions.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 5,
+          "componentId": "sensors_ew_standard_tl_05",
+          "displayName": "Gravitic Interferometer Suite",
+          "progressionBasis": "gravitic sensing",
+          "mechanicalPromise": "Mature midgame detection of mass movement, drive stress, and subtle trajectory changes.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 6,
+          "componentId": "sensors_ew_standard_tl_06",
+          "displayName": "Quantum Baseline Array",
+          "progressionBasis": "quantum interferometry",
+          "mechanicalPromise": "Improved precision, track freshness, and resistance to deceptive emissions.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 7,
+          "componentId": "sensors_ew_standard_tl_07",
+          "displayName": "Subspace Resonance Array",
+          "progressionBasis": "subspace sensing",
+          "mechanicalPromise": "Detects FTL, datalink, and advanced drive disturbances across broader conditions.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 8,
+          "componentId": "sensors_ew_standard_tl_08",
+          "displayName": "Metric Gradient Array",
+          "progressionBasis": "metric sensing",
+          "mechanicalPromise": "Measures engineered spacetime gradients for high-end tracking and ECCM.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 9,
+          "componentId": "sensors_ew_standard_tl_09",
+          "displayName": "Deep-Metric Sensor Matrix",
+          "progressionBasis": "deep metric sensing",
+          "mechanicalPromise": "Pinnacle player sensing with a memorable information advantage that still preserves fog of war.",
+          "status": "existing_provisional_standard_chart"
+        }
+      ]
+    },
+    {
+      "familyId": "shields",
+      "displayName": "Standard Shield Generator",
+      "technologyId": "shields",
+      "technologyName": "Shields",
+      "identity": "field architecture",
+      "implementations": [
+        {
+          "tl": 1,
+          "componentId": "shields_standard_tl_01",
+          "displayName": "Magnetic Deflector Array",
+          "progressionBasis": "field architecture",
+          "mechanicalPromise": "Minimal starter shield capacity; strong dependence on reactor support and limited recharge.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 2,
+          "componentId": "shields_standard_tl_02",
+          "displayName": "Magnetoplasma Screen",
+          "progressionBasis": "field architecture",
+          "mechanicalPromise": "Improved capacity and broader protection against charged particles and energetic debris.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 3,
+          "componentId": "shields_standard_tl_03",
+          "displayName": "Deflector Shield Array",
+          "progressionBasis": "field architecture",
+          "mechanicalPromise": "Reliable general-purpose shield with practical recharge and overload behavior.",
+          "status": "checkpoint_55_lowtech_capstone_candidate"
+        },
+        {
+          "tl": 4,
+          "componentId": "shields_standard_tl_04",
+          "displayName": "Vector Shield Matrix",
+          "progressionBasis": "field steering",
+          "mechanicalPromise": "Better field shaping, directional load handling, and shield-booster compatibility.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 5,
+          "componentId": "shields_standard_tl_05",
+          "displayName": "Phased Shield Matrix",
+          "progressionBasis": "phase control",
+          "mechanicalPromise": "Mature midgame field with improved efficiency and candidate resistance to shield penetration.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 6,
+          "componentId": "shields_standard_tl_06",
+          "displayName": "Harmonic Barrier",
+          "progressionBasis": "resonant field control",
+          "mechanicalPromise": "Adaptive frequency management improves overload resistance and recharge stability.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 7,
+          "componentId": "shields_standard_tl_07",
+          "displayName": "Quantum Barrier Matrix",
+          "progressionBasis": "quantum field control",
+          "mechanicalPromise": "High field coherence, improved hardening, and efficient support for advanced boosters.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 8,
+          "componentId": "shields_standard_tl_08",
+          "displayName": "Metric Gradient Barrier",
+          "progressionBasis": "metric engineering",
+          "mechanicalPromise": "Uses controlled spacetime gradients to redirect damaging energy and momentum.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 9,
+          "componentId": "shields_standard_tl_09",
+          "displayName": "Continuum Shield Matrix",
+          "progressionBasis": "continuum engineering",
+          "mechanicalPromise": "Pinnacle player shield with a visible campaign-defining capability, not merely more capacity.",
+          "status": "existing_provisional_standard_chart"
+        }
+      ]
+    },
+    {
+      "familyId": "stl_drive",
+      "displayName": "Standard Sublight Drive",
+      "technologyId": "propulsion",
+      "technologyName": "Propulsion",
+      "identity": "reaction propulsion",
+      "implementations": [
+        {
+          "tl": 1,
+          "componentId": "propulsion_stl_drive_tl_01",
+          "displayName": "Nuclear Pulse Drive",
+          "progressionBasis": "reaction propulsion",
+          "mechanicalPromise": "Baseline in-system movement and fuel use for an early FTL cruiser.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 2,
+          "componentId": "propulsion_stl_drive_tl_02",
+          "displayName": "Fusion Torch Drive",
+          "progressionBasis": "fusion propulsion",
+          "mechanicalPromise": "Higher sustained thrust and improved fuel efficiency.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 3,
+          "componentId": "propulsion_stl_drive_tl_03",
+          "displayName": "Magnetoplasma Drive",
+          "progressionBasis": "plasma propulsion",
+          "mechanicalPromise": "Better maneuver authority and efficient continuous thrust.",
+          "status": "checkpoint_55_lowtech_capstone_candidate"
+        },
+        {
+          "tl": 4,
+          "componentId": "propulsion_stl_drive_tl_04",
+          "displayName": "Antimatter-Catalyzed Plasma Drive",
+          "progressionBasis": "catalyzed plasma propulsion",
+          "mechanicalPromise": "Transitional high-energy drive with improved acceleration and endurance.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 5,
+          "componentId": "propulsion_stl_drive_tl_05",
+          "displayName": "Antimatter Impulse Drive",
+          "progressionBasis": "antimatter propulsion",
+          "mechanicalPromise": "Mature midgame high-performance sublight drive for pursuit and withdrawal.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 6,
+          "componentId": "propulsion_stl_drive_tl_06",
+          "displayName": "Inertial-Compensated Drive",
+          "progressionBasis": "inertial control",
+          "mechanicalPromise": "Reduces maneuver penalties and permits higher thrust without overwhelming ship structure and crew.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 7,
+          "componentId": "propulsion_stl_drive_tl_07",
+          "displayName": "Gravitic Impulse Drive",
+          "progressionBasis": "gravitic propulsion",
+          "mechanicalPromise": "Uses controlled gravity gradients for strong maneuver authority and reduced reaction mass.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 8,
+          "componentId": "propulsion_stl_drive_tl_08",
+          "displayName": "Metric-Gradient Drive",
+          "progressionBasis": "metric propulsion",
+          "mechanicalPromise": "Directly shapes local spacetime gradients for rapid system-map movement.",
+          "status": "existing_provisional_standard_chart"
+        },
+        {
+          "tl": 9,
+          "componentId": "propulsion_stl_drive_tl_09",
+          "displayName": "Inertialess Translation Drive",
+          "progressionBasis": "advanced metric propulsion",
+          "mechanicalPromise": "Pinnacle local propulsion with a campaign-defining movement or withdrawal capability.",
+          "status": "existing_provisional_standard_chart"
+        }
+      ]
+    }
+  ],
+  "familyRules": {
+    "pds": [
+      "All PDS sub-families may engage missile flights, boarding craft, and any other close-range terminal threat explicitly approved by the rules.",
+      "Standard PDS cannot attack enemy ships.",
+      "PDS resolves before the eligible terminal threat resolves.",
+      "Sub-families differ through approved characteristics such as accuracy, reaction capacity, Tactical Power, ammunition, reliability, and evasive compensation; target eligibility is not silently changed."
+    ],
+    "power_support": [
+      "AUX power systems supplement but do not replace the best standard same-TL reactor.",
+      "Finite storage, operation-specific storage, renewable generation, and core-power continuity remain distinct identities.",
+      "No AUX power system grants unbounded or free Tactical Power."
+    ],
+    "shield_support": [
+      "Shield AUX systems modify one bounded aspect of the installed standard shield system.",
+      "Capacity, recharge efficiency, finite restoration, and Shield Protection remain distinct roles.",
+      "A same-TL shield AUX must not make the standard shield generator appear incomplete."
+    ],
+    "armor_support": [
+      "Armor AUX systems preserve the distinction between a passive expendable outer layer and a powered protection enhancement.",
+      "AUX armor does not replace the standard same-TL armor installation."
+    ],
+    "maneuver_support": [
+      "Evasive Maneuvering retains the agreed full-turn posture, defensive benefit, own-fire penalty, and increased fuel cost unless a later explicit decision revises them.",
+      "Later progress should normally improve efficiency or compensation rather than increase every characteristic at every TL."
+    ],
+    "sensor_ew_support": [
+      "Active sensors, ECM, ECCM, and communications relays remain distinct functions within the sensing and information family.",
+      "No sensor or EW AUX receives an unapproved weapon, concealment, or direct-damage capability.",
+      "Production behavior must use legitimately known, estimated, or observed enemy capabilities; ideal calibration may use complete information only when labeled."
+    ],
+    "repair_support": [
+      "TL1-TL3 damage control is performed primarily by human crews using progressively better tools, procedures, access, and materials.",
+      "TL4-TL6 may introduce robotic repair and autonomous diagnostics.",
+      "TL7-TL9 may introduce nanotechnological, adaptive-material, biological, or other self-healing systems, subject to explicit later mechanics.",
+      "No repair AUX creates free supplies or extra repair steps unless explicitly approved."
+    ],
+    "utility_support": [
+      "Strategic and utility AUX systems are evaluated in scenarios where their intended role can occur.",
+      "A low combat score does not imply irrelevance for a laboratory, mining, cargo, fabrication, hangar, or endurance component."
+    ]
+  },
+  "subfamilies": [
+    {
+      "id": "aux_kinetic_pds",
+      "familyId": "pds",
+      "displayName": "Kinetic Point-Defense Battery",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 1,
+      "identity": "Conventional ammunition-fed close-range defense.",
+      "strengths": [
+        "broad PDS target eligibility",
+        "conventional installation",
+        "reaction-capacity growth"
+      ],
+      "weaknesses": [
+        "finite ammunition",
+        "accuracy and ammunition burden"
+      ],
+      "tuningKnobs": [
+        "accuracy",
+        "reaction capacity",
+        "ammunition efficiency",
+        "Tactical Power readiness",
+        "evasive compensation",
+        "reliability"
+      ],
+      "milestones": {
+        "1": "Entry: modest accuracy; ammo-fed",
+        "2": "Accuracy refinement",
+        "3": "Ammunition efficiency",
+        "4": "Reaction-capacity review",
+        "5": "Evasive compensation",
+        "6": "Accuracy/reliability",
+        "7": "Reaction-capacity review",
+        "8": "Ammo/power efficiency",
+        "9": "Pinnacle conventional PDS"
+      }
+    },
+    {
+      "id": "aux_energy_pds",
+      "familyId": "pds",
+      "displayName": "Energy Point-Defense Array",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 1,
+      "identity": "Power-intensive, ammunition-free close-range defense.",
+      "strengths": [
+        "no conventional ammunition",
+        "accuracy potential"
+      ],
+      "weaknesses": [
+        "Tactical Power demand",
+        "sustained readiness competition"
+      ],
+      "tuningKnobs": [
+        "accuracy",
+        "reaction capacity",
+        "Tactical Power cost",
+        "evasive compensation",
+        "reliability"
+      ],
+      "milestones": {
+        "1": "Entry: modest powered, ammunition-free defense",
+        "2": "Accuracy refinement",
+        "3": "Power efficiency",
+        "4": "Accuracy refinement",
+        "5": "Reaction-capacity review",
+        "6": "Evasive compensation",
+        "7": "Power efficiency",
+        "8": "Accuracy/reliability",
+        "9": "Pinnacle energy PDS"
+      }
+    },
+    {
+      "id": "aux_amm_pds",
+      "familyId": "pds",
+      "displayName": "Anti-Missile Missile Battery",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 1,
+      "identity": "Finite-ammunition interceptor PDS with strong missile-defense specialization while retaining the common PDS target-eligibility contract.",
+      "strengths": [
+        "high missile-interception potential",
+        "independent interceptor package"
+      ],
+      "weaknesses": [
+        "finite ammunition",
+        "specialized opportunity cost"
+      ],
+      "tuningKnobs": [
+        "accuracy",
+        "reaction capacity",
+        "interceptor ammunition",
+        "Tactical Power readiness",
+        "reliability",
+        "target-specific modifiers only if explicitly approved"
+      ],
+      "milestones": {
+        "1": "Entry: modest finite-interceptor defense; 25 rounds; 1 TP readiness",
+        "2": "Seeker/reliability refinement; 25 rounds; 1 TP readiness",
+        "3": "Salvo/ammunition efficiency",
+        "4": "Seeker accuracy",
+        "5": "Salvo/ammo efficiency",
+        "6": "Reaction-capacity review",
+        "7": "Counter-countermeasures",
+        "8": "Reliability",
+        "9": "Pinnacle interceptor PDS"
+      },
+      "initialEstimate": {
+        "tl1Rounds": 25,
+        "tl2Rounds": 25,
+        "tl1Power": 1,
+        "tl2Power": 1,
+        "status": "checkpoint_53_primary_candidate"
+      }
+    },
+    {
+      "id": "aux_apu",
+      "familyId": "power_support",
+      "displayName": "Auxiliary Power Unit",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 1,
+      "identity": "Core-power continuity without ordinary Tactical Power output.",
+      "strengths": [
+        "continuity",
+        "low direct combat leverage"
+      ],
+      "weaknesses": [
+        "does not provide ordinary Tactical Power"
+      ],
+      "tuningKnobs": [
+        "continuity duration",
+        "reliability",
+        "capacity cost"
+      ],
+      "milestones": {
+        "1": "Entry: core continuity only",
+        "2": "-",
+        "3": "Endurance/reliability",
+        "4": "-",
+        "5": "Isolation improvement",
+        "6": "-",
+        "7": "Resilience refinement",
+        "8": "-",
+        "9": "Pinnacle continuity"
+      }
+    },
+    {
+      "id": "aux_combat_battery",
+      "familyId": "power_support",
+      "displayName": "Combat Battery",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 1,
+      "identity": "Finite emergency Tactical Power injection using three expendable charges that persist until replenished; at most one charge may discharge per tactical turn, with no per-encounter cap.",
+      "strengths": [
+        "flexible short burst",
+        "simple emergency use"
+      ],
+      "weaknesses": [
+        "finite charges",
+        "does not replace reactor output"
+      ],
+      "tuningKnobs": [
+        "power per use",
+        "number of uses",
+        "once-per-turn limit",
+        "resupply",
+        "capacity cost",
+        "reliability"
+      ],
+      "initialEstimate": {
+        "tl": 1,
+        "tacticalPowerPerUse": 1,
+        "uses": 3,
+        "dischargeLimitPerTurn": 1,
+        "status": "checkpoint_53_primary_candidate",
+        "encounterDischargeCap": null
+      },
+      "milestones": {
+        "1": "Entry: +1 TP; 3 finite charges; max 1 discharge/turn; no encounter cap",
+        "2": "-",
+        "3": "Charge-density review",
+        "4": "-",
+        "5": "Output/uses trade study",
+        "6": "-",
+        "7": "Storage efficiency",
+        "8": "Reliability",
+        "9": "Pinnacle finite burst"
+      }
+    },
+    {
+      "id": "aux_power_capacitor",
+      "familyId": "power_support",
+      "displayName": "Power Capacitor",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 2,
+      "identity": "Reusable stored Tactical Power: discharge +1 TP, then spend 1 TP on a later turn to recharge before another discharge.",
+      "strengths": [
+        "operation-specific timing",
+        "planned burst"
+      ],
+      "weaknesses": [
+        "charging time",
+        "assignment limits"
+      ],
+      "tuningKnobs": [
+        "charge rate",
+        "stored power",
+        "eligible operation",
+        "discharge timing",
+        "reliability"
+      ],
+      "milestones": {
+        "1": "Not available",
+        "2": "Entry: +1 TP discharge; later-turn 1 TP recharge",
+        "3": "Charge efficiency",
+        "4": "-",
+        "5": "Stored-power review",
+        "6": "-",
+        "7": "Timing/reliability",
+        "8": "-",
+        "9": "Pinnacle capacitor"
+      },
+      "initialEstimate": {
+        "tl": 2,
+        "storedPower": 1,
+        "dischargePower": 1,
+        "rechargeCost": 1,
+        "rechargeRate": 1,
+        "sameTurnChargeAndDischarge": false,
+        "status": "checkpoint_53_primary_candidate"
+      }
+    },
+    {
+      "id": "aux_auxiliary_reactor",
+      "familyId": "power_support",
+      "displayName": "Auxiliary Reactor",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 3,
+      "identity": "Renewable Tactical Power generation with high integration and capacity cost.",
+      "strengths": [
+        "renewable output"
+      ],
+      "weaknesses": [
+        "capacity 2 candidate",
+        "damage and containment risk",
+        "threshold-crossing risk"
+      ],
+      "tuningKnobs": [
+        "output",
+        "capacity cost",
+        "degraded output",
+        "cooldown",
+        "reliability",
+        "support requirements"
+      ],
+      "milestones": {
+        "1": "Not available",
+        "2": "Not available",
+        "3": "Entry: renewable output; cap 2",
+        "4": "Containment/reliability",
+        "5": "Output efficiency",
+        "6": "Degraded-output refinement",
+        "7": "-",
+        "8": "Containment/output review",
+        "9": "Pinnacle auxiliary generation"
+      }
+    },
+    {
+      "id": "aux_shield_battery",
+      "familyId": "shield_support",
+      "displayName": "Shield Battery",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 3,
+      "identity": "Finite emergency shield restoration.",
+      "strengths": [
+        "immediate bounded restoration"
+      ],
+      "weaknesses": [
+        "finite charges",
+        "does not improve normal recharge"
+      ],
+      "tuningKnobs": [
+        "restoration amount",
+        "charges",
+        "activation timing",
+        "capacity cost",
+        "reliability"
+      ],
+      "milestones": {
+        "1": "Not available",
+        "2": "Not available",
+        "3": "Entry: finite shield restoration",
+        "4": "-",
+        "5": "Storage efficiency",
+        "6": "-",
+        "7": "Restoration efficiency",
+        "8": "-",
+        "9": "Pinnacle shield reserve"
+      }
+    },
+    {
+      "id": "aux_shield_booster",
+      "familyId": "shield_support",
+      "displayName": "Shield Booster",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 3,
+      "identity": "Increases maximum shield capacity; optional overcharge remains stress-limited.",
+      "strengths": [
+        "capacity increase"
+      ],
+      "weaknesses": [
+        "stress and power if overcharged",
+        "lost when disabled"
+      ],
+      "tuningKnobs": [
+        "capacity bonus",
+        "overcharge amount",
+        "power cost",
+        "stress chance",
+        "reliability"
+      ],
+      "milestones": {
+        "1": "Not available",
+        "2": "Not available",
+        "3": "Entry: bounded capacity boost",
+        "4": "Overcharge reliability",
+        "5": "-",
+        "6": "Capacity efficiency",
+        "7": "-",
+        "8": "Stress control",
+        "9": "Pinnacle shield boost"
+      }
+    },
+    {
+      "id": "aux_power_stabilizer",
+      "familyId": "shield_support",
+      "displayName": "Shield Power Stabilizer",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 3,
+      "identity": "Improves shield recharge efficiency per Tactical Power.",
+      "strengths": [
+        "efficient recharge"
+      ],
+      "weaknesses": [
+        "requires Tactical Power and an operating shield generator"
+      ],
+      "tuningKnobs": [
+        "recharge efficiency",
+        "power requirement",
+        "reliability"
+      ],
+      "milestones": {
+        "1": "Not available",
+        "2": "Not available",
+        "3": "Entry: recharge efficiency",
+        "4": "-",
+        "5": "Power efficiency",
+        "6": "-",
+        "7": "Overload stability",
+        "8": "-",
+        "9": "Pinnacle stabilization"
+      }
+    },
+    {
+      "id": "aux_shield_hardener",
+      "familyId": "shield_support",
+      "displayName": "Shield Hardener",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 4,
+      "identity": "Provides bounded Shield Protection or reduces shield-penetration effectiveness.",
+      "strengths": [
+        "flat protection"
+      ],
+      "weaknesses": [
+        "sustained power",
+        "high balance risk against weak attacks"
+      ],
+      "tuningKnobs": [
+        "Shield Protection",
+        "SPEN interaction",
+        "Tactical Power cost",
+        "capacity cost",
+        "reliability"
+      ],
+      "milestones": {
+        "1": "Not available",
+        "2": "Not available",
+        "3": "Not available",
+        "4": "Entry: bounded shield hardening",
+        "5": "Power efficiency",
+        "6": "-",
+        "7": "Protection refinement",
+        "8": "-",
+        "9": "Pinnacle hardening"
+      }
+    },
+    {
+      "id": "aux_ablative_armor",
+      "familyId": "armor_support",
+      "displayName": "Ablative Armor Layer",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 2,
+      "identity": "Expendable outer armor layer resolving before primary armor; begins at TL2 to keep the base TL1 Auxiliary vocabulary compact.",
+      "strengths": [
+        "passive outer protection"
+      ],
+      "weaknesses": [
+        "normally nonrepairable in combat",
+        "consumed by damage"
+      ],
+      "tuningKnobs": [
+        "Armor Protection",
+        "Armor Integrity",
+        "capacity cost",
+        "mass or maneuver tradeoff"
+      ],
+      "milestones": {
+        "1": "Not available",
+        "2": "Entry: expendable outer layer; leading candidate AP0 / AI2",
+        "3": "Material efficiency",
+        "4": "-",
+        "5": "AP/AI efficiency",
+        "6": "-",
+        "7": "Capacity efficiency",
+        "8": "-",
+        "9": "Pinnacle ablative layer"
+      }
+    },
+    {
+      "id": "aux_energized_armor_controller",
+      "familyId": "armor_support",
+      "displayName": "Energized Armor Controller",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 4,
+      "identity": "Consumes sustained Tactical Power to add an armor-protection bonus while passive armor remains intact when unpowered.",
+      "strengths": [
+        "powered protection"
+      ],
+      "weaknesses": [
+        "sustained power",
+        "brownout sensitivity"
+      ],
+      "tuningKnobs": [
+        "protection bonus",
+        "Tactical Power cost",
+        "reliability",
+        "capacity cost"
+      ],
+      "milestones": {
+        "1": "Not available",
+        "2": "Not available",
+        "3": "Not available",
+        "4": "Entry: powered armor bonus",
+        "5": "Power efficiency",
+        "6": "-",
+        "7": "Protection refinement",
+        "8": "-",
+        "9": "Pinnacle energized armor"
+      }
+    },
+    {
+      "id": "aux_evasive_maneuver_system",
+      "familyId": "maneuver_support",
+      "displayName": "Evasive Maneuver System",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 1,
+      "identity": "Supports the agreed full-turn evasive posture without changing movement allowance.",
+      "strengths": [
+        "defensive posture support"
+      ],
+      "weaknesses": [
+        "own-fire penalty",
+        "increased fuel cost",
+        "full-turn commitment"
+      ],
+      "tuningKnobs": [
+        "defense bonus",
+        "own-fire penalty",
+        "fuel multiplier",
+        "stationary cost",
+        "evasive compensation",
+        "reliability"
+      ],
+      "initialEstimate": {
+        "tl": 1,
+        "usesExistingEvasiveRule": true,
+        "status": "mechanical rule retained; AUX-specific benefit remains provisional"
+      },
+      "milestones": {
+        "1": "Entry: conventional EvM support",
+        "2": "-",
+        "3": "Compensation support",
+        "4": "Fuel/power efficiency",
+        "5": "-",
+        "6": "Reliability",
+        "7": "-",
+        "8": "Compensation efficiency",
+        "9": "Pinnacle maneuver support"
+      }
+    },
+    {
+      "id": "aux_active_sensor_array",
+      "familyId": "sensor_ew_support",
+      "displayName": "Active Sensor Array",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 1,
+      "identity": "Improves active-search range and local reacquisition support.",
+      "strengths": [
+        "active search",
+        "reacquisition"
+      ],
+      "weaknesses": [
+        "emissions",
+        "Tactical Power when active"
+      ],
+      "tuningKnobs": [
+        "active range",
+        "reacquisition modifier",
+        "Tactical Power cost",
+        "reliability"
+      ],
+      "milestones": {
+        "1": "Entry: active range/reacquisition",
+        "2": "Discrimination",
+        "3": "Power efficiency",
+        "4": "Range refinement",
+        "5": "Reacquisition",
+        "6": "ECCM support",
+        "7": "Precision",
+        "8": "Efficiency",
+        "9": "Pinnacle active sensing"
+      }
+    },
+    {
+      "id": "aux_ecm_suite",
+      "familyId": "sensor_ew_support",
+      "displayName": "Electronic Countermeasures Suite",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 1,
+      "identity": "Degrades opposing track quality and participates in the agreed cooperative ECM screen.",
+      "strengths": [
+        "track-quality pressure"
+      ],
+      "weaknesses": [
+        "sustained Tactical Power",
+        "observable emissions",
+        "ECCM counterplay"
+      ],
+      "tuningKnobs": [
+        "ECM strength",
+        "Tactical Power cost",
+        "cooperative-screen contribution",
+        "reliability"
+      ],
+      "milestones": {
+        "1": "Entry: modest conventional ECM",
+        "2": "Strength refinement",
+        "3": "Power efficiency",
+        "4": "Screen efficiency",
+        "5": "-",
+        "6": "Strength/reliability",
+        "7": "Network integration",
+        "8": "Efficiency",
+        "9": "Pinnacle ECM"
+      }
+    },
+    {
+      "id": "aux_eccm_suite",
+      "familyId": "sensor_ew_support",
+      "displayName": "Electronic Counter-Countermeasures Suite",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 1,
+      "identity": "Improves powered discrimination against ECM without revealing hidden enemy values.",
+      "strengths": [
+        "ECM counterplay"
+      ],
+      "weaknesses": [
+        "sustained Tactical Power",
+        "situational value"
+      ],
+      "tuningKnobs": [
+        "ECCM strength",
+        "Tactical Power cost",
+        "reliability"
+      ],
+      "milestones": {
+        "1": "Entry: modest conventional ECCM",
+        "2": "Strength refinement",
+        "3": "Power efficiency",
+        "4": "Discrimination",
+        "5": "-",
+        "6": "Strength/reliability",
+        "7": "Network integration",
+        "8": "Efficiency",
+        "9": "Pinnacle ECCM"
+      }
+    },
+    {
+      "id": "aux_communications_relay",
+      "familyId": "sensor_ew_support",
+      "displayName": "Tactical Communications Relay",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 2,
+      "identity": "Supports datalink reach, coordination, and relay functions under line-of-sight and observer-safe information rules.",
+      "strengths": [
+        "datalink support",
+        "coordination"
+      ],
+      "weaknesses": [
+        "network stacking risk",
+        "line-of-sight and latency constraints"
+      ],
+      "tuningKnobs": [
+        "relay reach",
+        "latency",
+        "power cost",
+        "relay chaining",
+        "reliability"
+      ],
+      "milestones": {
+        "1": "Not available",
+        "2": "Entry: tactical relay",
+        "3": "Reliability",
+        "4": "Reach",
+        "5": "Relay efficiency",
+        "6": "Latency/reliability",
+        "7": "Network resilience",
+        "8": "Reach",
+        "9": "Pinnacle relay"
+      }
+    },
+    {
+      "id": "aux_tractor_projector",
+      "familyId": "maneuver_support",
+      "displayName": "Tractor Projector",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 4,
+      "identity": "Sustained high-power movement denial and hold effects under explicit conflict and cap rules.",
+      "strengths": [
+        "movement control"
+      ],
+      "weaknesses": [
+        "high Tactical Power",
+        "capacity 2 candidate",
+        "control and stacking risk"
+      ],
+      "tuningKnobs": [
+        "hold strength",
+        "Tactical Power cost",
+        "range",
+        "capacity cost",
+        "conflict rules",
+        "reliability"
+      ],
+      "milestones": {
+        "1": "Not available",
+        "2": "Not available",
+        "3": "Not available",
+        "4": "Entry: bounded tractor control",
+        "5": "Power efficiency",
+        "6": "Strength review",
+        "7": "-",
+        "8": "Control precision",
+        "9": "Pinnacle tractor control"
+      }
+    },
+    {
+      "id": "standard_human_damage_control",
+      "familyId": "repair_support",
+      "displayName": "Human Damage-Control Crews",
+      "installationClass": "dedicated_core_integration",
+      "entryTl": 1,
+      "identity": "Human crews perform in-combat repair using Damage Control Capacity, supplies, tools, access, and procedures.",
+      "strengths": [
+        "baseline repair method"
+      ],
+      "weaknesses": [
+        "crew time",
+        "supplies",
+        "uncertain repair rolls"
+      ],
+      "tuningKnobs": [
+        "Damage Control Capacity",
+        "assistance",
+        "tools and access",
+        "supply efficiency",
+        "crew quality"
+      ],
+      "milestones": {
+        "1": "Entry: human crews",
+        "2": "Tools/procedures",
+        "3": "Access/materials",
+        "4": "Retained alongside robotics",
+        "5": "Retained",
+        "6": "Retained",
+        "7": "Retained",
+        "8": "Retained",
+        "9": "Retained"
+      }
+    },
+    {
+      "id": "aux_repair_drone_bay",
+      "familyId": "repair_support",
+      "displayName": "Repair Drone Bay",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 4,
+      "identity": "Robotic repair assistance and autonomous diagnostics augment, rather than replace, Damage Control allocation.",
+      "strengths": [
+        "repair assistance",
+        "hazardous-access work"
+      ],
+      "weaknesses": [
+        "power or supplies",
+        "assistance cap",
+        "no free extra repair step"
+      ],
+      "tuningKnobs": [
+        "repair modifier",
+        "supply efficiency",
+        "assistance cap",
+        "Tactical Power",
+        "reliability"
+      ],
+      "milestones": {
+        "1": "Not available",
+        "2": "Not available",
+        "3": "Not available",
+        "4": "Entry: robotic repair assistance",
+        "5": "Robotics efficiency",
+        "6": "Autonomous diagnostics/fabrication",
+        "7": "Superseded or paired with self-healing",
+        "8": "-",
+        "9": "-"
+      }
+    },
+    {
+      "id": "aux_self_healing_repair",
+      "familyId": "repair_support",
+      "displayName": "Self-Healing Repair System",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 7,
+      "identity": "Candidate nanotechnological, adaptive-material, biological, or comparable self-healing support; exact implementation remains unresolved.",
+      "strengths": [
+        "late-era autonomous recovery potential"
+      ],
+      "weaknesses": [
+        "power, material, reliability, or rate limits to be defined"
+      ],
+      "tuningKnobs": [
+        "repair rate",
+        "eligible damage",
+        "power",
+        "materials",
+        "reliability",
+        "capacity cost"
+      ],
+      "milestones": {
+        "1": "Not available",
+        "2": "Not available",
+        "3": "Not available",
+        "4": "Not available",
+        "5": "Not available",
+        "6": "Not available",
+        "7": "Entry: bounded self-healing",
+        "8": "Efficiency/reliability",
+        "9": "Pinnacle self-healing"
+      },
+      "status": "concept_proposal"
+    },
+    {
+      "id": "aux_hangar_bay",
+      "familyId": "utility_support",
+      "displayName": "Auxiliary Hangar Bay",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 3,
+      "identity": "Adds shuttle or small-craft capacity under explicit launch, recovery, replacement, and boarding rules.",
+      "strengths": [
+        "additional craft capacity"
+      ],
+      "weaknesses": [
+        "capacity 2 candidate",
+        "force-multiplication risk"
+      ],
+      "tuningKnobs": [
+        "craft capacity",
+        "launch/recovery tempo",
+        "capacity cost",
+        "support requirements"
+      ],
+      "milestones": {
+        "1": "Not available",
+        "2": "Not available",
+        "3": "Entry: additional craft capacity",
+        "4": "-",
+        "5": "Launch/recovery efficiency",
+        "6": "-",
+        "7": "Capacity/integration",
+        "8": "-",
+        "9": "Pinnacle hangar support"
+      }
+    },
+    {
+      "id": "aux_laboratory_module",
+      "familyId": "utility_support",
+      "displayName": "Laboratory Module",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 1,
+      "identity": "Research, analysis, and discovery support with bounded strategic returns.",
+      "strengths": [
+        "research support"
+      ],
+      "weaknesses": [
+        "indirect combat value",
+        "diminishing returns"
+      ],
+      "tuningKnobs": [
+        "task bonus",
+        "throughput",
+        "time",
+        "power",
+        "diminishing returns"
+      ],
+      "milestones": {
+        "1": "Entry: specialist laboratory",
+        "2": "-",
+        "3": "Throughput/analysis",
+        "4": "-",
+        "5": "Efficiency",
+        "6": "-",
+        "7": "Advanced analysis",
+        "8": "-",
+        "9": "Pinnacle laboratory"
+      }
+    },
+    {
+      "id": "aux_mining_module",
+      "familyId": "utility_support",
+      "displayName": "Mining Module",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 1,
+      "identity": "Resource extraction constrained by site, time, cargo, and throughput.",
+      "strengths": [
+        "resource generation"
+      ],
+      "weaknesses": [
+        "time exposure",
+        "site and cargo limits"
+      ],
+      "tuningKnobs": [
+        "throughput",
+        "power",
+        "time",
+        "site cap",
+        "cargo interaction"
+      ],
+      "milestones": {
+        "1": "Entry: specialist mining",
+        "2": "-",
+        "3": "Throughput",
+        "4": "-",
+        "5": "Efficiency",
+        "6": "-",
+        "7": "Advanced extraction",
+        "8": "-",
+        "9": "Pinnacle mining"
+      }
+    },
+    {
+      "id": "aux_fabrication_module",
+      "familyId": "utility_support",
+      "displayName": "Fabrication Module",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 3,
+      "identity": "Converts compatible cargo or salvage into supplies using time, power, recipes, and material input.",
+      "strengths": [
+        "resource conversion"
+      ],
+      "weaknesses": [
+        "capacity 2 candidate",
+        "anti-loop constraints",
+        "time and input cost"
+      ],
+      "tuningKnobs": [
+        "recipe efficiency",
+        "throughput",
+        "power",
+        "time",
+        "material compatibility"
+      ],
+      "milestones": {
+        "1": "Not available",
+        "2": "Not available",
+        "3": "Entry: bounded fabrication",
+        "4": "Process control",
+        "5": "-",
+        "6": "Efficiency",
+        "7": "-",
+        "8": "Advanced conversion",
+        "9": "Pinnacle fabrication"
+      }
+    },
+    {
+      "id": "aux_cargo_expansion",
+      "familyId": "utility_support",
+      "displayName": "Cargo Expansion Module",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 1,
+      "identity": "Adds general cargo capacity within hull and mass limits.",
+      "strengths": [
+        "flexible logistics"
+      ],
+      "weaknesses": [
+        "low direct combat value",
+        "possible maneuver or signature tradeoff"
+      ],
+      "tuningKnobs": [
+        "cargo capacity",
+        "mass or maneuver cost",
+        "capacity cost"
+      ],
+      "milestones": {
+        "1": "Entry: cargo expansion",
+        "2": "-",
+        "3": "Capacity efficiency",
+        "4": "-",
+        "5": "Integration efficiency",
+        "6": "-",
+        "7": "Advanced storage",
+        "8": "-",
+        "9": "Pinnacle cargo support"
+      }
+    },
+    {
+      "id": "aux_kinetic_magazine_expansion",
+      "familyId": "utility_support",
+      "displayName": "Kinetic Magazine Expansion",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 1,
+      "identity": "Adds Kinetic ammunition reserve while loaded Ready Packages remain with their weapons.",
+      "strengths": [
+        "Kinetic endurance"
+      ],
+      "weaknesses": [
+        "damageable finite store",
+        "situational in short engagements"
+      ],
+      "tuningKnobs": [
+        "reserve capacity",
+        "protection",
+        "reload efficiency",
+        "capacity cost"
+      ],
+      "milestones": {
+        "1": "Entry: extra Kinetic reserve",
+        "2": "-",
+        "3": "Protection/capacity",
+        "4": "-",
+        "5": "Reload efficiency",
+        "6": "-",
+        "7": "Capacity efficiency",
+        "8": "-",
+        "9": "Pinnacle Kinetic stores"
+      }
+    },
+    {
+      "id": "aux_missile_magazine_expansion",
+      "familyId": "utility_support",
+      "displayName": "Missile Magazine Expansion",
+      "installationClass": "auxiliary_capacity",
+      "entryTl": 1,
+      "identity": "Adds Missile Flight reserve while loaded Ready Packages remain with their launchers.",
+      "strengths": [
+        "Missile endurance"
+      ],
+      "weaknesses": [
+        "damageable finite store",
+        "situational in short engagements"
+      ],
+      "tuningKnobs": [
+        "reserve capacity",
+        "protection",
+        "reload efficiency",
+        "capacity cost"
+      ],
+      "milestones": {
+        "1": "Entry: extra Missile reserve",
+        "2": "-",
+        "3": "Protection/capacity",
+        "4": "-",
+        "5": "Reload efficiency",
+        "6": "-",
+        "7": "Capacity efficiency",
+        "8": "-",
+        "9": "Pinnacle Missile stores"
+      }
+    }
+  ],
+  "auxiliaryEntryDisposition": [
+    {
+      "id": "aux_kinetic_pds",
+      "displayName": "Kinetic Point-Defense Battery",
+      "previousCandidateEntryTl": 1,
+      "proposedEntryTl": 1,
+      "change": "unchanged",
+      "familyId": "pds",
+      "capacityCost": 1,
+      "status": "accepted_entry_floor_provisional_characteristics",
+      "rationale": "Conventional gun-based close-in defense exists at TL1; its early accuracy and reaction performance remain deliberately modest."
+    },
+    {
+      "id": "aux_amm_pds",
+      "displayName": "Anti-Missile Missile Battery",
+      "previousCandidateEntryTl": 3,
+      "proposedEntryTl": 1,
+      "change": "moved_earlier",
+      "familyId": "pds",
+      "capacityCost": 1,
+      "status": "accepted_entry_floor_provisional_characteristics",
+      "rationale": "All three PDS sub-families remain available at TL1. AMM keeps 25 rounds at TL1 and TL2 so campaign endurance matters without forcing a reload after every fight."
+    },
+    {
+      "id": "aux_energy_pds",
+      "displayName": "Energy Point-Defense Array",
+      "previousCandidateEntryTl": 2,
+      "proposedEntryTl": 1,
+      "change": "moved_earlier",
+      "familyId": "pds",
+      "capacityCost": 1,
+      "status": "accepted_entry_floor_provisional_characteristics",
+      "rationale": "Directed-energy point defense exists in recognizable real-world precursor form; TL1 availability does not imply high effectiveness or low power demand."
+    },
+    {
+      "id": "aux_auxiliary_reactor",
+      "displayName": "Auxiliary Reactor",
+      "previousCandidateEntryTl": 2,
+      "proposedEntryTl": 3,
+      "change": "moved_later",
+      "familyId": "power_support",
+      "capacityCost": 2,
+      "status": "provisional_architecture",
+      "rationale": "Renewable Tactical Power is too consequential for the earliest tiers."
+    },
+    {
+      "id": "aux_apu",
+      "displayName": "Auxiliary Power Unit",
+      "previousCandidateEntryTl": 1,
+      "proposedEntryTl": 1,
+      "change": "unchanged",
+      "familyId": "power_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional."
+    },
+    {
+      "id": "aux_combat_battery",
+      "displayName": "Combat Battery",
+      "previousCandidateEntryTl": 1,
+      "proposedEntryTl": 1,
+      "change": "unchanged",
+      "familyId": "power_support",
+      "capacityCost": 1,
+      "status": "checkpoint_53_primary_candidate",
+      "rationale": "Three +1 TP charges are a finite campaign reserve. A charge may be used whenever needed, at most once per tactical turn; a prolonged fight may consume all three charges."
+    },
+    {
+      "id": "aux_power_capacitor",
+      "displayName": "Power Capacitor",
+      "previousCandidateEntryTl": 2,
+      "proposedEntryTl": 2,
+      "change": "unchanged",
+      "familyId": "power_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional."
+    },
+    {
+      "id": "aux_shield_battery",
+      "displayName": "Shield Battery",
+      "previousCandidateEntryTl": 1,
+      "proposedEntryTl": 3,
+      "change": "moved_later",
+      "familyId": "shield_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "TL1 standard shields should not require a strong emergency-restoration AUX."
+    },
+    {
+      "id": "aux_shield_booster",
+      "displayName": "Shield Booster",
+      "previousCandidateEntryTl": 2,
+      "proposedEntryTl": 3,
+      "change": "moved_later",
+      "familyId": "shield_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Capacity growth belongs after the TL2 standard shield package is established."
+    },
+    {
+      "id": "aux_power_stabilizer",
+      "displayName": "Shield Power Stabilizer",
+      "previousCandidateEntryTl": 2,
+      "proposedEntryTl": 3,
+      "change": "moved_later",
+      "familyId": "shield_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Recharge-efficiency manipulation is deferred with other shield-support systems."
+    },
+    {
+      "id": "aux_shield_hardener",
+      "displayName": "Shield Hardener",
+      "previousCandidateEntryTl": 3,
+      "proposedEntryTl": 4,
+      "change": "moved_later",
+      "familyId": "shield_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Flat protection is a future-SF capability with high weak-attack suppression risk."
+    },
+    {
+      "id": "aux_ablative_armor",
+      "displayName": "Ablative Armor Layer",
+      "previousCandidateEntryTl": 1,
+      "proposedEntryTl": 2,
+      "change": "moved_later",
+      "familyId": "armor_support",
+      "capacityCost": 1,
+      "status": "checkpoint_53_entry_floor_candidate",
+      "rationale": "TL1 is the base technology tier and should establish a compact Auxiliary vocabulary. Ablative Armor begins at TL2, where its entry profile is tuned separately from the primary armor system."
+    },
+    {
+      "id": "aux_energized_armor_controller",
+      "displayName": "Energized Armor Controller",
+      "previousCandidateEntryTl": 3,
+      "proposedEntryTl": 4,
+      "change": "moved_later",
+      "familyId": "armor_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional."
+    },
+    {
+      "id": "aux_evasive_maneuver_system",
+      "displayName": "Evasive Maneuver System",
+      "previousCandidateEntryTl": 2,
+      "proposedEntryTl": 1,
+      "change": "moved_earlier",
+      "familyId": "maneuver_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Conventional maneuver-control support is realistic TL1 technology; its effect remains modest and tradeoff-bound."
+    },
+    {
+      "id": "aux_active_sensor_array",
+      "displayName": "Active Sensor Array",
+      "previousCandidateEntryTl": 1,
+      "proposedEntryTl": 1,
+      "change": "unchanged",
+      "familyId": "sensor_ew_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional."
+    },
+    {
+      "id": "aux_ecm_suite",
+      "displayName": "Electronic Countermeasures Suite",
+      "previousCandidateEntryTl": 2,
+      "proposedEntryTl": 1,
+      "change": "moved_earlier",
+      "familyId": "sensor_ew_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Conventional ECM exists at TL1 in a modest form."
+    },
+    {
+      "id": "aux_eccm_suite",
+      "displayName": "Electronic Counter-Countermeasures Suite",
+      "previousCandidateEntryTl": 2,
+      "proposedEntryTl": 1,
+      "change": "moved_earlier",
+      "familyId": "sensor_ew_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "A TL1 ECM counter must exist in the same early technology environment."
+    },
+    {
+      "id": "aux_tractor_projector",
+      "displayName": "Tractor Projector",
+      "previousCandidateEntryTl": 3,
+      "proposedEntryTl": 4,
+      "change": "moved_later",
+      "familyId": "maneuver_support",
+      "capacityCost": 2,
+      "status": "provisional_architecture",
+      "rationale": "Direct movement denial is deferred to the future-SF era."
+    },
+    {
+      "id": "aux_repair_drone_bay",
+      "displayName": "Repair Drone Bay",
+      "previousCandidateEntryTl": 2,
+      "proposedEntryTl": 4,
+      "change": "moved_later",
+      "familyId": "repair_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "TL1-TL3 repair remains human-crewed; robotic repair begins at TL4."
+    },
+    {
+      "id": "aux_hangar_bay",
+      "displayName": "Auxiliary Hangar Bay",
+      "previousCandidateEntryTl": 3,
+      "proposedEntryTl": 3,
+      "change": "unchanged",
+      "familyId": "utility_support",
+      "capacityCost": 2,
+      "status": "provisional_architecture",
+      "rationale": "Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional."
+    },
+    {
+      "id": "aux_laboratory_module",
+      "displayName": "Laboratory Module",
+      "previousCandidateEntryTl": 1,
+      "proposedEntryTl": 1,
+      "change": "unchanged",
+      "familyId": "utility_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional."
+    },
+    {
+      "id": "aux_mining_module",
+      "displayName": "Mining Module",
+      "previousCandidateEntryTl": 1,
+      "proposedEntryTl": 1,
+      "change": "unchanged",
+      "familyId": "utility_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional."
+    },
+    {
+      "id": "aux_fabrication_module",
+      "displayName": "Fabrication Module",
+      "previousCandidateEntryTl": 2,
+      "proposedEntryTl": 3,
+      "change": "moved_later",
+      "familyId": "utility_support",
+      "capacityCost": 2,
+      "status": "provisional_architecture",
+      "rationale": "Broad resource conversion is deferred to peak conventional engineering."
+    },
+    {
+      "id": "aux_cargo_expansion",
+      "displayName": "Cargo Expansion Module",
+      "previousCandidateEntryTl": 1,
+      "proposedEntryTl": 1,
+      "change": "unchanged",
+      "familyId": "utility_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional."
+    },
+    {
+      "id": "aux_kinetic_magazine_expansion",
+      "displayName": "Kinetic Magazine Expansion",
+      "previousCandidateEntryTl": 1,
+      "proposedEntryTl": 1,
+      "change": "unchanged",
+      "familyId": "utility_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional."
+    },
+    {
+      "id": "aux_missile_magazine_expansion",
+      "displayName": "Missile Magazine Expansion",
+      "previousCandidateEntryTl": 1,
+      "proposedEntryTl": 1,
+      "change": "unchanged",
+      "familyId": "utility_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional."
+    },
+    {
+      "id": "aux_communications_relay",
+      "displayName": "Tactical Communications Relay",
+      "previousCandidateEntryTl": 2,
+      "proposedEntryTl": 2,
+      "change": "unchanged",
+      "familyId": "sensor_ew_support",
+      "capacityCost": 1,
+      "status": "provisional_architecture",
+      "rationale": "Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional."
+    },
+    {
+      "id": "aux_self_healing_repair",
+      "displayName": "Self-Healing Repair System",
+      "previousCandidateEntryTl": null,
+      "proposedEntryTl": 7,
+      "change": "new_concept_lineage",
+      "familyId": "repair_support",
+      "capacityCost": null,
+      "status": "concept_proposal",
+      "rationale": "Represents the proposed TL7-TL9 nanotechnological, adaptive-material, biological, or comparable self-healing era; exact mechanics are unresolved."
+    }
+  ],
+  "simulationPolicy": {
+    "checkpoint48ScenariosPreserved": true,
+    "checkpoint50ScenariosPreserved": true,
+    "checkpoint51StudyPreserved": true,
+    "currentScenarioValuesRemain": "Accepted TL1/TL2 and Checkpoint 54a evidence are frozen; Checkpoint 55 adds corrected one-main TL3 capstone studies.",
+    "tableDrivenScenarioGeneration": "tl1_tl2_frozen_plus_tl3_lowtech_capstone_candidate_screening",
+    "bridgeFile": "docs/design/player_technology/scenario_architecture_bridge_v0_7.json",
+    "standardRuntimeProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl3-standard-runtime-profiles-v0_2.json",
+    "auxiliaryRuntimeProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl3-auxiliary-capstone-profiles-v0_2.json",
+    "statefulCombatStudy": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-itc04-tl1-tl2-auxiliary-refinement.json",
+    "resourceEnduranceStudy": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end02-resource-semantics-lock.json",
+    "nextUse": "Select a conservative mature TL3 profile, verify one-main/two-AUX combination health, and only then open TL4 as a separate dual-main generational-transition study.",
+    "checkpoint52ScenariosPreserved": true,
+    "ablativeCandidateStudy": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-abl01-tl2-ablative-candidate-study.json",
+    "tacticalPowerStressStudy": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-pwr01-tactical-power-stress.json",
+    "pdsCharacteristics": "docs/design/player_technology/pds_tl1_tl2_characteristics_v0_3.json",
+    "resourceLifecycle": "docs/design/player_technology/auxiliary_resource_lifecycle_v0_2.json",
+    "earlyAuxiliaryInventory": "docs/design/player_technology/checkpoint_53_early_auxiliary_matrix_inventory_v0_3.json",
+    "checkpoint53aScenariosPreserved": true,
+    "tl3StandardProfileStudy": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl3-itc03-low-tech-capstone-profile-screening.json",
+    "tl3TwoBayStudy": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl3-itc02-two-bay-loadout-screening.json",
+    "tl3AuxiliaryStudy": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl3-aux02-low-tech-capstone-two-capacity-screening.json",
+    "tl3PowerEnvelopeStudy": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl3-pwr02-single-main-power-envelope.json",
+    "checkpoint54aScenariosPreserved": true,
+    "tl3AuxiliaryIsolationStudy": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl3-aux03-component-isolation.json"
+  },
+  "generationModel": {
+    "lowTech": {
+      "tls": [
+        1,
+        2,
+        3
+      ],
+      "foundationTl": 1,
+      "refinementTl": 2,
+      "maturityTl": 3,
+      "mainWeaponCapacity": 1,
+      "auxiliaryCapacityByTl": [
+        1,
+        1,
+        2
+      ]
+    },
+    "midTech": {
+      "tls": [
+        4,
+        5,
+        6
+      ],
+      "foundationTl": 4,
+      "refinementTl": 5,
+      "maturityTl": 6,
+      "mainWeaponCapacity": 2,
+      "auxiliaryCapacityByTl": [
+        2,
+        2,
+        3
+      ]
+    },
+    "highTech": {
+      "tls": [
+        7,
+        8,
+        9
+      ],
+      "foundationTl": 7,
+      "refinementTl": 8,
+      "maturityTl": 9,
+      "mainWeaponCapacity": 3,
+      "auxiliaryCapacityByTl": [
+        3,
+        3,
+        4
+      ]
+    },
+    "fallback": "If multi-main generational transitions prove structurally unhealthy, retain one main weapon through TL9 and express generations through component progression rather than arbitrary firing restrictions."
+  }
+}

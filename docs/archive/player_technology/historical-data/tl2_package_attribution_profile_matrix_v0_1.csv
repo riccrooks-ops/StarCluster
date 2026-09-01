@@ -1,0 +1,20 @@
+﻿profile_id,label,status,analysis_role,attribution_group,hull,armor_integrity,armor_protection,shield_capacity,shield_base_recharge,reactor_output,targeting_bonus,effective_pds_chance,standard_power_commitment,ship_move,missile_move,kinetic_damage,kinetic_spen,kinetic_apen,kinetic_accuracy,kinetic_range,energy_damage,energy_spen,energy_apen,energy_accuracy,energy_range,missile_damage,missile_spen,missile_apen,missile_guidance,missile_range,promotion_status
+tl2-attr-null-control,TL2 Null-Vector Control,diagnostic-control-not-promoted,null_control,,12,4,0,2,1,5,10,45,2,1,2,4,1,0,20,4,3,1,1,25,5,5,1,2,55,6,not_promoted
+tl2-attr-add-structure,Add Structure,attribution-probe-not-promoted,additive_probe,structure,13,5,0,2,1,5,10,45,2,1,2,4,1,0,20,4,3,1,1,25,5,5,1,2,55,6,not_promoted
+tl2-attr-remove-structure,Remove Structure,attribution-probe-not-promoted,leave_one_out_probe,structure,12,4,0,3,1,6,15,48,3,2,3,4,0,0,25,4,3,1,1,30,5,5,1,2,60,7,not_promoted
+tl2-attr-add-shields,Add Shields,attribution-probe-not-promoted,additive_probe,shields,12,4,0,3,1,5,10,45,2,1,2,4,1,0,20,4,3,1,1,25,5,5,1,2,55,6,not_promoted
+tl2-attr-remove-shields,Remove Shields,attribution-probe-not-promoted,leave_one_out_probe,shields,13,5,0,2,1,6,15,48,3,2,3,4,0,0,25,4,3,1,1,30,5,5,1,2,60,7,not_promoted
+tl2-attr-add-fire-control,Add Fire Control,attribution-probe-not-promoted,additive_probe,fire-control,12,4,0,2,1,5,15,48,2,1,2,4,1,0,20,4,3,1,1,25,5,5,1,2,55,6,not_promoted
+tl2-attr-remove-fire-control,Remove Fire Control,attribution-probe-not-promoted,leave_one_out_probe,fire-control,13,5,0,3,1,6,10,45,3,2,3,4,0,0,25,4,3,1,1,30,5,5,1,2,60,7,not_promoted
+tl2-attr-add-propulsion,Add Propulsion,attribution-probe-not-promoted,additive_probe,propulsion,12,4,0,2,1,5,10,45,2,2,3,4,1,0,20,4,3,1,1,25,5,5,1,2,55,6,not_promoted
+tl2-attr-remove-propulsion,Remove Propulsion,attribution-probe-not-promoted,leave_one_out_probe,propulsion,13,5,0,3,1,6,15,48,3,1,2,4,0,0,25,4,3,1,1,30,5,5,1,2,60,7,not_promoted
+tl2-attr-add-direct-fire,Add Direct-Fire Weapons,attribution-probe-not-promoted,additive_probe,direct-fire,12,4,0,2,1,5,10,45,2,1,2,4,0,0,25,4,3,1,1,30,5,5,1,2,55,6,not_promoted
+tl2-attr-remove-direct-fire,Remove Direct-Fire Weapons,attribution-probe-not-promoted,leave_one_out_probe,direct-fire,13,5,0,3,1,6,15,48,3,2,3,4,1,0,20,4,3,1,1,25,5,5,1,2,60,7,not_promoted
+tl2-attr-add-missile-guidance,Add Missile Guidance,attribution-probe-not-promoted,additive_probe,missile-guidance,12,4,0,2,1,5,10,45,2,1,2,4,1,0,20,4,3,1,1,25,5,5,1,2,60,7,not_promoted
+tl2-attr-remove-missile-guidance,Remove Missile Guidance,attribution-probe-not-promoted,leave_one_out_probe,missile-guidance,13,5,0,3,1,6,15,48,3,2,3,4,0,0,25,4,3,1,1,30,5,5,1,2,55,6,not_promoted
+tl2-attr-add-power-logistics,Add Power and Logistics,attribution-probe-not-promoted,additive_probe,power-logistics,12,4,0,2,1,6,10,45,3,1,2,4,1,0,20,4,3,1,1,25,5,5,1,2,55,6,not_promoted
+tl2-attr-remove-power-logistics,Remove Power and Logistics,attribution-probe-not-promoted,leave_one_out_probe,power-logistics,13,5,0,3,1,5,15,48,2,2,3,4,0,0,25,4,3,1,1,30,5,5,1,2,60,7,not_promoted
+tl2-identity-preserving-refinement,Identity-Preserving Refinement,source-candidate-not-promoted,identity_source_control,,13,5,0,3,1,6,15,48,3,2,3,4,0,0,25,4,3,1,1,30,5,5,1,2,60,7,not_promoted
+tl2-refine-moderated-control,Moderated Control Refinement,refinement-probe-not-promoted,refinement_probe,,13,5,0,3,1,6,12,46,3,2,3,4,0,0,25,4,3,1,1,30,5,5,1,2,60,7,not_promoted
+tl2-refine-control-shield-tempered,Control and Shield-Tempered Refinement,refinement-probe-not-promoted,refinement_probe,,13,5,0,2,1,6,12,46,3,2,3,4,0,0,25,4,3,1,1,30,5,5,1,2,60,7,not_promoted
+tl2-refine-control-structure-tempered,Control and Structure-Tempered Refinement,refinement-probe-not-promoted,refinement_probe,,12,4,0,3,1,6,12,46,3,2,3,4,0,0,25,4,3,1,1,30,5,5,1,2,60,7,not_promoted

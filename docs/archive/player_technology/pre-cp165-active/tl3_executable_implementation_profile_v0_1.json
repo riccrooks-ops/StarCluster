@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "star-cluster-tl3-executable-implementation-profile-v1",
+  "id": "tl3-executable-implementation-profile-v0_1",
+  "checkpoint": 102,
+  "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+  "purpose": "Bind the complete CP101 TL3 base candidate table to the CP102 executable construction/progression/integrated-combat consumers without changing accepted TL3 values or implying calibration/promotion.",
+  "authorities": {
+    "candidateTable": "docs/design/player_technology/tl3_base_technology_candidates_v0_2.json",
+    "buildSanity": "docs/design/player_technology/tl3_base_build_sanity_v0_1.json",
+    "technologyMatrix": "docs/design/player_technology/technology_architecture_matrix_v1.json",
+    "standingSuite": "docs/design/testing/technology_integration_permutation_suite_v0_17.json",
+    "constructionEnvelope": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v0_9.json",
+    "transitionSmoke": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_0.json",
+    "runtimeProfiles": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl3-standard-runtime-profiles-v0_4.json"
+  },
+  "lifecycle": {
+    "candidateValuesChanged": false,
+    "implemented": true,
+    "actualConsumerPreflightRequired": true,
+    "tinyFullPipelineSmokeRequired": true,
+    "calibrated": false,
+    "promoted": false,
+    "balanceEvidence": false
+  },
+  "constructionConsumer": {
+    "schema": "star-cluster-cross-tl-build-permutation-v7",
+    "variableHullCapacity": true,
+    "explicitStlFtlAxes": true,
+    "explicitShieldHardenerAxis": true,
+    "streamingEnumeration": true,
+    "spaceChangingProgressionSupported": true,
+    "capacityChangingProgressionSupported": true,
+    "optionalUnlockProgressionSupported": true,
+    "constructionEnvelope": {
+      "rawCombinationCount": 221184,
+      "legalBuildCount": 51264,
+      "exactFillBuildCount": 10752,
+      "generatedCombatVariants": 0,
+      "spaceIsomorphicStatesCollapsed": true
+    }
+  },
+  "transitionConsumer": {
+    "declaredTransitionCount": 16,
+    "legalProgressionEdgeCount": 220416,
+    "namedTransitionPairs": 16,
+    "movementOrderGeometries": 2,
+    "tinySmokeVariants": 32,
+    "trialsPerVariant": 1,
+    "transitionKinds": [
+      "autonomy_propulsion",
+      "capability_addition",
+      "capacity_integration",
+      "explicit_hold",
+      "miniaturization",
+      "operating_mode_addition",
+      "optional_component_unlock",
+      "power_efficiency",
+      "primary_performance",
+      "protection_maturation",
+      "readiness_mode_addition",
+      "safe_output_maturation"
+    ]
+  },
+  "runtimeBindings": {
+    "hull": "36-Space capacity is consumed by v7 construction legality; lower-TL 35-Space Hull remains distinct.",
+    "tacticalComputer": "EvComp5 is carried on the build and reduces only own Evasive direct-fire penalty to a minimum of zero; condition state applies.",
+    "sensor": "Low 3/4 @1 TP and High 4/5 @2 TP are separate data-driven normal operating levels; High is not Strain-producing overload. CP102 transition variants keep sensor overload disabled.",
+    "ecmEccm": "Rating2 remains non-additive; an explicit full-strength normal-cost field permits TL3 1 TP total without changing legacy 1 TP/rating semantics.",
+    "reactor": "6 TP per reactor at 5 Space; multiple reactors remain explicit and additive under existing condition logic.",
+    "stl": "Move3 flows into the tactical movement override; existing bounded overload costs/Strain remain unchanged.",
+    "ftl": "Strategic Move3 is represented on the executable build; strategic campaign integration remains outside the tactical smoke.",
+    "shieldHardener": "Optional 1-Space damageable component; while functional and powered at 1 TP it contributes SA1. It requires an installed Shield Generator and does not stack with the selected auxiliary hardener path.",
+    "armor": "AP1/AI5 flows through independent armor overrides.",
+    "kineticMain": "ordinary Kinetic firing uses 0 discretionary TP while packet/range/ammunition remain held.",
+    "energyMain": "Low 1TP/DAM2/+10, Standard 2TP/DAM3/+25, and High 3TP/DAM4/+25 remain explicit safe rated modes. CP102 transition smoke selects High to exercise the new path; deterministic tests cover Low and High family-local overrides. Tactical mode-selection UI/AI remains future work.",
+    "missileMain": "Move4 and standard onboard navigation-sensor presence are represented; seeker remains optional and no detailed navigation-sensor track statistics are invented. Ordinary terminal Firm requirements remain unchanged.",
+    "kineticPds": "TL2 base13/RC1/1TP/Ammo60 is explicitly held.",
+    "energyPds": "base16/RC1 becomes ready at 1 TP; ammunition remains unlimited.",
+    "ammPds": "preferred readiness 2 TP -> RC2 automatically falls back to 1 TP -> RC1 when only one TP is available; seeded automatic target allocation and two-attempt-per-flight cap remain unchanged."
+  },
+  "deferred": [
+    "Substantive TL3 Monte Carlo/balance screening",
+    "Production promotion",
+    "Tactical UI/player controls for choosing Energy rated mode",
+    "Detailed missile navigation-sensor/seeker statistics",
+    "Sensor overload beyond TL3 High Active",
+    "Additional TL3 Auxiliaries/specialist weapons",
+    "Production initiative"
+  ]
+}

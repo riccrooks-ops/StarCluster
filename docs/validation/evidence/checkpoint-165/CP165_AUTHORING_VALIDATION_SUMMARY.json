@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "star-cluster-cp165-authoring-validation-v0.1",
+  "checkpoint": 165,
+  "pythonTestsPassed": 792,
+  "pythonTestModules": 56,
+  "cp165FocusedTestsPassed": 32,
+  "authorityAuditPassed": 44,
+  "authorityAuditTotal": 44,
+  "conceptRenderedPages": 5,
+  "technologyWorkbookSheets": 9,
+  "technologyWorkbookFormulaCount": 0,
+  "technologyWorkbookErrors": 0,
+  "productionRuntimeFrozenFromCp164": true,
+  "substantiveCombatTrials": 0,
+  "dotnetNativeAcceptanceRunInAuthoringEnvironment": false,
+  "note": "CR3 authoring validation preserves the 792-test/56-module Python baseline and 32 focused tests, with 44 authority checks. CR3 adds a guard that ScenarioRunner historical defaults resolve retired TL1/v0.3/AUX fixtures from archive. Native Windows .NET/xUnit/ScenarioRunner acceptance remains the handoff gate.",
+  "candidateRevision": "CR3",
+  "nativeWrapperCorrection": "CR1 retained: renamed Python-discovery helper from Py to Get-Cpython313Command so Windows PowerShell resolves py.exe instead of recursively invoking the helper function.",
+  "nativeXunitFixturePathCorrection": "CR2: updated five .NET parity-test fixture lookups from retired docs/design/testing paths to preserved docs/archive/testing/pre-cp165-active paths; these five stale paths caused six xUnit failures because the canonical kernel fixture is consumed by two tests.",
+  "nativeScenarioRunnerFixturePathCorrection": "CR3: replaced 20 ScenarioRunner default bindings to retired docs/design/player_technology fixtures with LegacyPlayerTechnologyFile(), resolving preserved docs/archive/player_technology/pre-cp165-active bytes for TL1 v0.1/v0.3 baselines and the legacy AUX catalog/schema."
+}

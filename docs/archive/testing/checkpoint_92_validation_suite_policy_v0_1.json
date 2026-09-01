@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-92-validation-suite-policy-v0_1",
+  "checkpoint": "92",
+  "status": "current",
+  "purpose": "Extend Checkpoint 91's controlled external reference-mining corpus, complete its 24-source Spacedock queue, and freeze accepted gameplay/simulation authority without unrelated Monte Carlo reruns.",
+  "mustAlwaysRun": {
+    "repositoryContract": true,
+    "nativeBuildWarningsAsErrors": true,
+    "fullUnitTests": true,
+    "deterministicMechanics": true,
+    "scenarioRunnerSelfTests": true,
+    "referenceMiningContracts": true,
+    "acceptedCp91Provenance": true
+  },
+  "referenceMining": {
+    "minedSourceCount": 30,
+    "queuedSourceCount": 0,
+    "completedPriorQueueCount": 24,
+    "reviewedDuplicateSourceCount": 16,
+    "observationBearingSourceCount": 14,
+    "observationCount": 195,
+    "automaticAuthorityPromotion": false,
+    "standaloneOverlapMustBeDeduplicated": true,
+    "duplicateStandaloneObservationIdsMustRemainEmpty": true
+  },
+  "unchangedDependencies": {
+    "gameplayRuntime": true,
+    "simulationStudies": true,
+    "concept": true,
+    "technologyMatrix": true,
+    "componentCatalog": true,
+    "aiDoctrine": true,
+    "standingPermutationSuite": "v0.9"
+  },
+  "monteCarlo": {
+    "required": false,
+    "reason": "No gameplay/runtime/simulation dependency changed."
+  },
+  "deepCalibration": {
+    "applicable": false,
+    "additionalStudies": []
+  }
+}

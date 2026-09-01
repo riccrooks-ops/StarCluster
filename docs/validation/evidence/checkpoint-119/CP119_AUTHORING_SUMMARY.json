@@ -1,0 +1,48 @@
+{
+  "checkpoint": 119,
+  "acceptedBaseline": 118,
+  "status": "bounded_authoring_diagnostic_only",
+  "variants": 1152,
+  "trialsPerVariant": 50,
+  "totalTrials": 57600,
+  "elapsedSeconds": 26.02607748399896,
+  "failedGates": [],
+  "automaticPromotion": false,
+  "priorityVariantCounts": {
+    "advanced": 144,
+    "endpoint_stress": 288,
+    "primary": 720
+  },
+  "variantCounts": {
+    "energy_family_reference": 216,
+    "kinetic_family_characteristic": 360,
+    "missile_family_characteristic": 576
+  },
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "reviewSignals": {
+    "kineticPlus5AccDeltaPp": {
+      "4": 7.666,
+      "5": 8.83,
+      "6": 8.529,
+      "7": 4.615
+    },
+    "missileWorkingGpDeltaPp": {
+      "3": 15.96,
+      "4": 16.416,
+      "5": 25.739,
+      "6": 28.311,
+      "7": 48.907
+    },
+    "swarmerDeltaPp": {
+      "2": -11.305,
+      "3": -33.231,
+      "4": 14.223,
+      "5": -11.105,
+      "6": 29.795,
+      "7": 32.121
+    },
+    "maxWorkingMovementOrderSwingPp": 38.372093023255815
+  },
+  "interpretation": "Review evidence only. Kinetic +5 ACC is moderate; working GP Missile yield steps are potent and require native shared-ecology review; Swarmer shows a lifecycle rather than universal dominance."
+}

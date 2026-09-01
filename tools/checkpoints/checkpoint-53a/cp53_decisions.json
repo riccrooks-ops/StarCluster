@@ -1,0 +1,42 @@
+[
+  {
+    "id": "D-491",
+    "text": "Move Ablative Armor Layer from TL1 to TL2 so the base TL1 Auxiliary catalog remains compact and easier to learn.",
+    "status": "Current direction; Checkpoint 53 candidate"
+  },
+  {
+    "id": "D-492",
+    "text": "Use AP0 / AI2 as the leading TL2 Ablative entry candidate; compare AP0 / AI3 and AP1 / AI1 while retaining AP1 / AI2 only as the Checkpoint 52 historical control.",
+    "status": "Simulation review required"
+  },
+  {
+    "id": "D-493",
+    "text": "Keep AMM ammunition at 25 rounds at both TL1 and TL2 for now; retain 1 TP readiness and the current accuracy progression.",
+    "status": "Current direction; provisional numerical profile"
+  },
+  {
+    "id": "D-494",
+    "text": "Combat Battery provides three finite +1 TP charges. At most one charge may discharge per tactical turn, but there is no per-encounter cap; a prolonged fight may consume all three charges over three turns.",
+    "status": "Current direction; mechanics lock"
+  },
+  {
+    "id": "D-495",
+    "text": "Combat Battery charges persist after use until a valid replenishment opportunity; do not auto-refill between ordinary tactical encounters.",
+    "status": "Current direction; mechanics lock"
+  },
+  {
+    "id": "D-496",
+    "text": "Power Capacitor remains TL2 and shifts, rather than generates, Tactical Power: +1 TP discharge followed by a later-turn 1 TP recharge; no same-turn charge/discharge.",
+    "status": "Current direction; mechanics lock"
+  },
+  {
+    "id": "D-497",
+    "text": "Use a separate common sustained-Tactical-Power-load diagnostic to evaluate Battery/Capacitor role expression. This diagnostic does not establish a new universal hotel-load rule.",
+    "status": "Checkpoint 53 diagnostic policy"
+  },
+  {
+    "id": "D-498",
+    "text": "Preserve Checkpoint 52 as frozen regression evidence and defer TL3 runtime generation until the TL2 Ablative candidate and power-stress review are accepted.",
+    "status": "Current checkpoint boundary"
+  }
+]

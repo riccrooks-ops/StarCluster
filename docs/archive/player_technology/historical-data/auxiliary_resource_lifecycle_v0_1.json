@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-52-auxiliary-resource-lifecycle-v0_1",
+  "checkpoint": 52,
+  "status": "provisional_test_contract",
+  "combatBattery": {
+    "entryTl": 1,
+    "primaryCharges": 3,
+    "diagnosticCharges": [
+      2,
+      3
+    ],
+    "tacticalPowerPerCharge": 1,
+    "dischargeLimitPerTurn": 1,
+    "replenishment": "Charges persist across encounters and do not refresh at ordinary turn start or combat start; strategic replenishment remains a later logistics rule.",
+    "fallback": "If the intended +1 TP / 3-charge implementation remains a compulsory TL1 choice, test 2 charges before considering a TL2 entry-floor move."
+  },
+  "powerCapacitor": {
+    "entryTl": 2,
+    "storedPower": 1,
+    "dischargePower": 1,
+    "rechargeCost": 1,
+    "rechargeRate": 1,
+    "startsCharged": true,
+    "sameTurnChargeAndDischarge": false,
+    "tacticalRule": "After discharge the capacitor is empty. On a later turn the ship may spend 1 otherwise available TP to recharge it; the recharged point becomes usable on a subsequent turn.",
+    "campaignRule": "Unlike a Combat Battery, the capacitor is not a finite consumable; between-encounter charging remains abstracted by existing strategic/FTL reset rules pending later strategic-power implementation."
+  },
+  "shieldRecharge": {
+    "coreCapability": true,
+    "rule": "Any functional ship may allocate Tactical Power to shield recharge subject to the shield/recharge profile and available power. Combat Battery and Power Capacitor may alter available power but do not unlock recharge."
+  },
+  "amm": {
+    "readinessPower": 1,
+    "tl1PrimaryRounds": 25,
+    "tl2PrimaryRounds": 30,
+    "stressCandidates": [
+      15,
+      20,
+      25,
+      30
+    ],
+    "rule": "Finite interceptor ammunition is a multi-combat endurance constraint. Single-fight parity is not required and normal play should not force routine return-to-port reloads after every missile engagement."
+  },
+  "magazineExpansions": {
+    "rule": "Kinetic and Missile Magazine Expansions are endurance/logistics choices and require repeated-engagement stress evidence in addition to single-duel results."
+  }
+}

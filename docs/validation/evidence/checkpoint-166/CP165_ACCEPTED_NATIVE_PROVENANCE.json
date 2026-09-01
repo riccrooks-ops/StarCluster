@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "star-cluster-cp166-accepted-base-provenance-v0.1",
+  "acceptedBaseCheckpoint": 165,
+  "acceptedRevision": "CR3",
+  "repositoryArchive": {
+    "fileName": "StarCluster_Checkpoint_165_CR3_Current_Design_Authority_Reconciliation_Documentation_Consolidation_And_Repository_Cleanup_Full_Repository.zip",
+    "sha256": "0fbd74321cde0c97b640c52ecdbd9d17941eb63b7f43b651d9fce1a680085a7c",
+    "embedded": false
+  },
+  "nativeResultsArchive": {
+    "fileName": "StarCluster_CP165_native_results_20260831_060459.zip",
+    "sha256": "f3bb765629aead0ca733854f1ee7adc6b14e92fe2a7cf0638c41d0fba635fa7f",
+    "embedded": false
+  },
+  "acceptedNativeSummary": {
+    "pythonTestsPassed": 792,
+    "xunitPassed": 934,
+    "xunitFailed": 0,
+    "xunitSkipped": 0,
+    "scenarioRunnerSelfTestsPassed": 70,
+    "researchParityPassed": 25,
+    "cp165FocusedTestsPassed": 32,
+    "substantiveCombatTrials": 0,
+    "documentationReconciliation": true,
+    "productionRuntimeMechanicsChanged": false,
+    "wholeSystemIntegrationNext": true
+  }
+}

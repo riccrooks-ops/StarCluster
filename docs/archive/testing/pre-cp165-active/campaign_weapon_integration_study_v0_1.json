@@ -1,0 +1,318 @@
+{
+  "schemaVersion": "star-cluster-campaign-weapon-integration-v0.1",
+  "checkpoint": 119,
+  "acceptedBaseline": 118,
+  "status": "diagnostic_same_tl_integration_no_automatic_promotion",
+  "purpose": "Confirm the simplified CP117/CP118 weapon-family direction in a shared same-TL combat ecology. Compare native Energy, restrained automatic Kinetic smart-projectile maturation, simple GP Missile yield milestones, and a TL2+ two-packet Swarmer branch against the same legal exact-fill target packages. TL1-TL6 drive inference, TL7 is advanced validation, and TL8-TL9 are endpoint stress checks.",
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "automaticPromotion": false,
+  "masterSeed": 119041,
+  "trialsPerVariant": 2000,
+  "authoringTrialsPerVariant": 50,
+  "primaryCalibrationTls": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "advancedValidationTls": [
+    7
+  ],
+  "endpointStressTls": [
+    8,
+    9
+  ],
+  "missileStudyTls": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "kineticStudyTls": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "energyReferenceTls": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "workingMissileGpByTl": {
+    "1": "gp-current",
+    "2": "gp-current",
+    "3": "missile-working-fission-d6",
+    "4": "missile-working-fission-d6",
+    "5": "missile-working-fusion-d7",
+    "6": "missile-working-fusion-d7",
+    "7": "missile-working-antimatter-d8",
+    "8": "missile-working-antimatter-d8",
+    "9": "missile-working-antimatter-d8"
+  },
+  "workingSwarmerByTl": {
+    "1": null,
+    "2": "swarmer-early-tl2",
+    "3": "swarmer-early-tl2",
+    "4": "swarmer-mid",
+    "5": "swarmer-mid",
+    "6": "swarmer-mature",
+    "7": "swarmer-mature",
+    "8": "swarmer-mature",
+    "9": "swarmer-mature"
+  },
+  "workingKineticByTl": {
+    "1": "gp-current",
+    "2": "gp-current",
+    "3": "gp-current",
+    "4": "kinetic-working-smart-plus5",
+    "5": "kinetic-working-smart-plus5",
+    "6": "kinetic-working-smart-plus5",
+    "7": "kinetic-working-smart-plus5",
+    "8": "kinetic-working-smart-plus5",
+    "9": "kinetic-working-smart-plus5"
+  },
+  "contemporaryGpByTl": {
+    "1": [
+      "gp-current"
+    ],
+    "2": [
+      "gp-current"
+    ],
+    "3": [
+      "gp-current"
+    ],
+    "4": [
+      "gp-current"
+    ],
+    "5": [
+      "gp-current"
+    ],
+    "6": [
+      "gp-current"
+    ],
+    "7": [
+      "gp-current"
+    ],
+    "8": [
+      "gp-current"
+    ],
+    "9": [
+      "gp-current"
+    ]
+  },
+  "specialistPairingIds": [],
+  "adaptivePairingIds": [],
+  "targetFixtures": [
+    {
+      "id": "energy-balanced-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "balanced",
+      "classification": "legal_build",
+      "role": "General Energy-family layered target."
+    },
+    {
+      "id": "energy-defense-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "legal_build",
+      "role": "Shield/Hardener/Energy-PDS defensive specialist."
+    },
+    {
+      "id": "kinetic-balanced-legal",
+      "baseFamily": "Kinetic",
+      "baseArchetype": "balanced",
+      "classification": "legal_build",
+      "role": "General Kinetic-family layered target."
+    },
+    {
+      "id": "kinetic-ew-legal",
+      "baseFamily": "Kinetic",
+      "baseArchetype": "ew-specialist",
+      "classification": "legal_build",
+      "role": "Kinetic ECM/ECCM/PDS specialist target."
+    },
+    {
+      "id": "missile-balanced-legal",
+      "baseFamily": "Missile",
+      "baseArchetype": "balanced",
+      "classification": "legal_build",
+      "role": "General Missile-family layered target."
+    },
+    {
+      "id": "missile-defense-legal",
+      "baseFamily": "Missile",
+      "baseArchetype": "missile-defense",
+      "classification": "legal_build",
+      "role": "Shield/AMM Missile-defense specialist target."
+    }
+  ],
+  "missileProfiles": [
+    {
+      "id": "gp-current",
+      "family": "Missile",
+      "classification": "reference",
+      "role": "Current CP109 D5/SP1/AP2 GP Missile reference.",
+      "studyTls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "missile-working-fission-d6",
+      "family": "Missile",
+      "classification": "working_integration_candidate",
+      "generation": "mature_fission",
+      "role": "Working TL3-TL4 GP yield candidate; yield only, no penetration creep.",
+      "studyTls": [
+        3,
+        4
+      ],
+      "damage": 6,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "missile-working-fusion-d7",
+      "family": "Missile",
+      "classification": "working_integration_candidate",
+      "generation": "fusion",
+      "role": "Working TL5-TL6 GP yield candidate; yield only, no penetration creep.",
+      "studyTls": [
+        5,
+        6
+      ],
+      "damage": 7,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "missile-working-antimatter-d8",
+      "family": "Missile",
+      "classification": "working_integration_candidate",
+      "generation": "antimatter",
+      "role": "Working TL7+ GP yield candidate used for advanced/endpoint validation; yield only, no penetration creep.",
+      "studyTls": [
+        7,
+        8,
+        9
+      ],
+      "damage": 8,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "swarmer-early-tl2",
+      "family": "Missile",
+      "classification": "working_swarmer_branch",
+      "generation": "early_cluster",
+      "role": "TL2 introduction candidate: one Flight, one terminal roll, two D2 internal packets, +10 guidance, modest PDS saturation.",
+      "studyTls": [
+        2,
+        3
+      ],
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "swarmer-mid",
+      "family": "Missile",
+      "classification": "working_swarmer_branch",
+      "generation": "mid_cluster",
+      "role": "TL4-TL5 maturation candidate: two D3 packets with bounded coverage/PDS-saturation improvement.",
+      "studyTls": [
+        4,
+        5
+      ],
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "swarmer-mature",
+      "family": "Missile",
+      "classification": "working_swarmer_branch",
+      "generation": "mature_swarm",
+      "role": "TL6+ mature branch candidate: two D4 packets, +15 guidance, stronger but bounded PDS saturation; endpoint relevance may naturally fade.",
+      "studyTls": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "damage": 4,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 15,
+      "pdsInterceptPenaltyPp": 15
+    }
+  ],
+  "kineticProfiles": [
+    {
+      "id": "gp-current",
+      "family": "Kinetic",
+      "classification": "reference",
+      "role": "Current CP109 contemporary Kinetic projectile reference.",
+      "studyTls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-working-smart-plus5",
+      "family": "Kinetic",
+      "classification": "working_automatic_progression_candidate",
+      "role": "Restrained automatic smart-projectile schedule: +5 accuracy relative to the current same-TL projectile from TL4 onward; no selectable ammo mode and no DAM/SPEN/APEN change.",
+      "studyTls": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "accuracyDelta": 5
+    }
+  ]
+}

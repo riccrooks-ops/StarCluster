@@ -1,0 +1,59 @@
+{
+  "checkpoint": 119,
+  "title": "Campaign-Weighted Weapon Integration",
+  "acceptedBaseline": 118,
+  "status": "candidate_pending_native_acceptance",
+  "automaticPromotion": false,
+  "productionSourceChanged": false,
+  "simulationResearchChanged": true,
+  "numericalMatrixChanged": false,
+  "conceptChanged": false,
+  "playerAuthorityChanged": false,
+  "substantiveMonteCarloTrials": 2304000,
+  "expected": {
+    "repositoryOwnedFiles": 2521,
+    "jsonFilesMinimum": 720,
+    "pythonSelfTests": 97,
+    "parityCases": 25,
+    "frozenCSharpAndTests": 561,
+    "frozenResearchUnchanged": 35,
+    "frozenPlayerAuthorityFiles": 11,
+    "frozenCp118CheckpointAuthorityFiles": 15,
+    "studyVariants": 1152,
+    "missileVariants": 576,
+    "kineticVariants": 360,
+    "energyVariants": 216,
+    "exactFillBuilds": 108,
+    "missileProfiles": 7,
+    "kineticProfiles": 2,
+    "energyProfiles": 1,
+    "targetFixtures": 6,
+    "controlledFixtures": 0,
+    "primaryVariants": 720,
+    "advancedVariants": 144,
+    "endpointVariants": 288,
+    "authoringTrialsPerVariant": 50,
+    "authoringEngagements": 57600,
+    "nativeTrialsPerVariant": 2000,
+    "nativeEngagements": 2304000,
+    "cp114RegressionVariants": 3184,
+    "cp115aRegressionVariants": 4064,
+    "cp116RegressionVariants": 2976,
+    "cp118RegressionVariants": 1824,
+    "primaryCalibrationTls": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "advancedValidationTls": [
+      7
+    ],
+    "endpointStressTls": [
+      8,
+      9
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "checkpoint": "103",
+  "accepted": true,
+  "acceptedCandidate": "Corrected Replacement 6",
+  "acceptedOn": "2026-08-14",
+  "normalDefinitionSha256": "f9fa4ae6bb2063f504d8a347757ae503a8d7594167c19ba92b185ba71db92caf",
+  "repositoryManifestSha256": "ecc3b0c4db276f8302d320143cfee9e9e649d8ad601efb193aa5e600414a4ae2",
+  "nativeResultsZipSha256": "6247ffcdc9a8b5cfcb56f44621800021e9562bc7ab303bc206d8d4ee9d9eafff",
+  "nativeStatus": "Success",
+  "dotnetSdk": "8.0.423",
+  "xunitPassed": 876,
+  "runnerStagesPassed": 25,
+  "scenarioRunnerSelfTestsPassed": 70,
+  "pythonUnitTestsPassed": 6,
+  "pythonParityCasesPassed": 25,
+  "primarySubstantiveTrials": 288000,
+  "overlaySubstantiveTrials": 25000,
+  "failedGates": 0,
+  "note": "CP103 screening evidence is accepted as simulation evidence only; it does not automatically promote or rebalance technology values."
+}

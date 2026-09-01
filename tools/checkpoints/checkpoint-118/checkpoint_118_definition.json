@@ -1,0 +1,54 @@
+{
+  "checkpoint": 118,
+  "title": "Simplified Weapon Progression",
+  "acceptedBaseline": 117,
+  "status": "candidate_pending_native_acceptance",
+  "automaticPromotion": false,
+  "productionSourceChanged": false,
+  "simulationResearchChanged": true,
+  "numericalMatrixChanged": false,
+  "conceptChanged": false,
+  "substantiveMonteCarloTrials": 3648000,
+  "expected": {
+    "repositoryOwnedFiles": 2488,
+    "jsonFilesMinimum": 710,
+    "pythonSelfTests": 87,
+    "parityCases": 25,
+    "frozenCSharpAndTests": 561,
+    "frozenResearchUnchanged": 31,
+    "frozenPlayerAuthorityFiles": 11,
+    "studyVariants": 1824,
+    "missileVariants": 936,
+    "kineticVariants": 888,
+    "exactFillBuilds": 135,
+    "missileProfiles": 12,
+    "kineticProfiles": 6,
+    "targetFixtures": 6,
+    "controlledFixtures": 2,
+    "primaryVariants": 1032,
+    "advancedVariants": 264,
+    "endpointVariants": 528,
+    "authoringTrialsPerVariant": 50,
+    "authoringEngagements": 91200,
+    "nativeTrialsPerVariant": 2000,
+    "nativeEngagements": 3648000,
+    "cp114RegressionVariants": 3184,
+    "cp115aRegressionVariants": 4064,
+    "cp116RegressionVariants": 2976,
+    "primaryCalibrationTls": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "advancedValidationTls": [
+      7
+    ],
+    "endpointStressTls": [
+      8,
+      9
+    ]
+  }
+}

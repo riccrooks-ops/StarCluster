@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-95-validation-suite-policy-v0_1",
+  "checkpoint": "95",
+  "status": "post_movement_readiness_instrumentation_hardening_release_policy",
+  "mustAlwaysRun": {
+    "nativeDependencyPrecheck": true,
+    "repositoryContract": true,
+    "manifestAndPowerShellSyntax": true,
+    "pinnedSdk": true,
+    "warningsAsErrorsBuild": true,
+    "unitTests": true,
+    "deterministicAndMechanicsGates": true,
+    "crossTlGeneratorPreflight": true,
+    "generatedStudyActualConsumerPreflight": true,
+    "generatedStudyOneTrialSmoke": true,
+    "boundedCrossTlPrimaryStudy": true,
+    "resourceRegressionGates": true,
+    "runnerSelfTests": true
+  },
+  "adaptiveScreen": {
+    "populationCellCount": 96,
+    "statisticalBasePairBudget": 192,
+    "minimumStatisticalPairsPerCell": 1,
+    "maximumStatisticalPairsPerCell": 5,
+    "allocationExponent": 0.5,
+    "statisticalLogicalPairings": 384,
+    "diversityTopCellCount": 12,
+    "diversityPairsPerCell": 2,
+    "diversityBasePairCount": 24,
+    "diversityLogicalPairings": 48,
+    "namedLogicalPairings": 48,
+    "logicalPairings": 480,
+    "geometryCount": 3,
+    "generatedVariantCount": 1440,
+    "defaultTrialsPerVariant": 1500,
+    "defaultPrimaryTrials": 2160000,
+    "oneTrialSmokeExecutions": 1440,
+    "totalTrialExecutionsAtDefault": 2161440
+  },
+  "populationAnalysis": {
+    "populationCountsAnalytical": true,
+    "statisticalWeightSplitWithinCell": true,
+    "statisticalForwardWeightMustRecoverUnorderedDistinctPopulation": 255187936,
+    "diversityOverlayInferenceWeight": 0,
+    "namedDiagnosticsInferenceWeight": 0,
+    "rawAndPopulationWeightedReports": true,
+    "allLegalCohort": true,
+    "structurallyMutualReadyCohort": true,
+    "observedActiveCohort": true
+  },
+  "secondaryCoverage": {
+    "weaponFamilyPair": true,
+    "informationControlDistanceBand": true,
+    "informationControlNearMaximum": 2,
+    "diversityOverlayDiagnosticOnly": true
+  },
+  "readiness": {
+    "classes": [
+      "reference_ready",
+      "closing_ready",
+      "engagement_denied"
+    ],
+    "exactMaximumReadyRangeReported": true,
+    "separateFromObservedActivity": true,
+    "movementDidNotReachMutualReadyRangeDiagnostic": true,
+    "readyGeometryReachedButNoActionsBlockingForSubstantiveRun": true,
+    "oneTrialSmokeZeroActionNotBalanceBlocking": true,
+    "oneSideInactiveDiagnostic": true,
+    "observedActiveRequiresBothSides": true,
+    "postMovementFiringWindowTelemetry": true,
+    "pathClosestApproachSeparate": true,
+    "sideSpecificReadyWindowTrialPercent": true,
+    "explicitRuntimeReadinessMetadata": true,
+    "fixedReferenceReadyWindowMustBeObserved": true
+  },
+  "moverOrder": {
+    "retainBothBounds": true,
+    "neutralEstimate": true,
+    "initiativeGapReported": true,
+    "sensitivityClasses": {
+      "low": "<5pp",
+      "moderate": "5-<15pp",
+      "high": "15-<30pp",
+      "extreme": ">=30pp"
+    },
+    "sensitivityIsGameplayGate": false
+  },
+  "activityGuards": {
+    "sideSpecificTelemetry": true,
+    "aggregateTelemetryReconciliation": true,
+    "individualMatchedDiagnostics": true,
+    "familyAppropriateActions": true,
+    "familyContextualGates": true,
+    "readyGeometryReachedFilter": true,
+    "movementDeniedExcludedFromBlockingCohort": true,
+    "actionsRequireObservedReadyWindow": false,
+    "consolidatedOutlierReview": true,
+    "runtimeActionOutsideStructuralReadyEstimateReviewOnly": true
+  },
+  "authorityBoundary": {
+    "componentTuning": false,
+    "gameplayRuleChanges": false,
+    "aiDoctrineChanges": false,
+    "technologyPromotion": false,
+    "spacedockCandidatePromotion": false,
+    "referenceMiningChanges": false,
+    "automaticCandidatePromotion": false
+  },
+  "deepCalibration": {
+    "applicable": false,
+    "aliasUsesSameBoundedWorkload": true
+  },
+  "causalReplay": {
+    "cp94PairSelectionSeed": 940177,
+    "cp94CombatMasterSeed": 940100,
+    "sameLegalEnvelope": true,
+    "sameSamplingAllocation": true,
+    "gameplayChangesAllowed": false
+  }
+}

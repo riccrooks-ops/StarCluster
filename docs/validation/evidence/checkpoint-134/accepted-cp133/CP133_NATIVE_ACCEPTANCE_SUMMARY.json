@@ -1,0 +1,39 @@
+﻿{
+    "schemaVersion":  "star-cluster-cp133-native-acceptance-summary-v0.1",
+    "checkpoint":  133,
+    "repositoryOnly":  false,
+    "acceptedMechanicsBaseline":  132,
+    "previousAcceptedNumericalReference":  128,
+    "python":  "Python 3.13.14",
+    "dotnetSdk":  "8.0.423",
+    "pythonTestsPassed":  196,
+    "xunitTotal":  910,
+    "xunitPassed":  910,
+    "xunitFailed":  0,
+    "xunitSkipped":  0,
+    "scenarioRunnerSelfTestsPassed":  70,
+    "researchParityPassed":  25,
+    "canonicalKernelTestsPassed":  6,
+    "technologyValuesChanged":  true,
+    "productionSourceChanged":  false,
+    "researchSimulationChanged":  false,
+    "scenarioDefinitionsChanged":  false,
+    "conceptChanged":  false,
+    "storyboardChanged":  false,
+    "balanceCalibrationRun":  false,
+    "monteCarloStudy":  false,
+    "substantiveTrials":  0,
+    "mixedTlShipsExecuted":  false,
+    "automaticPromotion":  false,
+    "candidateMatrix":  "technology_numerical_matrix_v0_6.json",
+    "candidateTable":  "technology_component_table_v0_8.json",
+    "approximateTrackPenaltyPp":  -25,
+    "extendedRangePenaltyPp":  -10,
+    "mandatorySameTlDefenses":  [
+                                    "shield",
+                                    "armor"
+                                ],
+    "failedGates":  [
+
+                    ]
+}

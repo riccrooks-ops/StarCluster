@@ -1,0 +1,15 @@
+{
+  "checkpoint": "115a",
+  "nativeAccepted": true,
+  "pythonVersion": "3.13.14",
+  "variants": 4064,
+  "trialsPerVariant": 2000,
+  "totalTrials": 8128000,
+  "elapsedSeconds": 299.29001110000536,
+  "failedGates": [],
+  "adaptivePairRows": 384,
+  "adaptivePairRowsWithSwitches": 0,
+  "automaticPromotion": false,
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false
+}

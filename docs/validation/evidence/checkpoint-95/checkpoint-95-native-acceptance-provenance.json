@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "95",
+  "acceptedUtc": "2026-08-12T22:49:42.1444205Z",
+  "status": "Success",
+  "sourceResultsArchive": "checkpoint-95.zip",
+  "sourceResultsArchiveSha256": "dcbe31976263bb70a8ba3c04a67a08452471d619989356f4ff6931de17b29026",
+  "acceptedRepositoryArchive": "StarCluster_Checkpoint_95_Post_Movement_Readiness_Instrumentation_Hardening_Full_Repository_CORRECTED_REPLACEMENT_2.zip",
+  "acceptedRepositoryArchiveSha256": "df057daf4d431b104447032d905628ba902b758b2b0efbd8c5e8d66c0a7f94d2",
+  "checkpointDefinition": "tools/calibration/checkpoints/checkpoint-95.json",
+  "checkpointDefinitionSha256": "de57c2069e7e20cf1fb8e4ec6af26f32f9d18df3fae4e758cbc5c406e7e091d3",
+  "checkpointManifest": "CHECKPOINT_95_SHA256SUMS.txt",
+  "checkpointManifestSha256": "3753fb2b41ff55027eef0bd37ba5ab2304f3022c67cd7fdda43da18041c3dcdf",
+  "sdk": {
+    "expected": "8.0.423",
+    "actual": "8.0.423"
+  },
+  "build": {
+    "cleanExecuted": true,
+    "succeeded": true,
+    "warnings": 0,
+    "errors": 0,
+    "elapsedSeconds": 5.7258276
+  },
+  "tests": {
+    "succeeded": true,
+    "total": 863,
+    "passed": 863,
+    "failed": 0,
+    "skipped": 0,
+    "elapsedSeconds": 1.9589173999999998,
+    "trxPath": "out/checkpoint-95/test-results/checkpoint-tests.trx"
+  },
+  "aggregates": {
+    "configuredRunnerStages": 13,
+    "runnerStagesPassed": 13,
+    "runnerStagesFailed": 0,
+    "deterministicCases": 7,
+    "mechanicsCases": 90,
+    "variants": 1440,
+    "trials": 2161440,
+    "selfTests": 59,
+    "failedGates": 0
+  },
+  "primaryStudy": {
+    "id": "tl2-itc16-cross-tl-matched-readiness-space-screening",
+    "variantCount": 1440,
+    "trialsPerVariant": 1500,
+    "totalTrials": 2160000
+  },
+  "substantiveSummarySha256": "8292cac5ac145aae8e205028d9b7a4fc095abb5a0e26f289a53ae182706893d8",
+  "note": "CP95 native acceptance validated post-Movement readiness instrumentation without changing CP94 gameplay/RNG outcomes. Human review then identified that the legacy observed_active cohort is conditioned by the static reference-context mutual-readiness estimate and is not identical to true runtime bilateral activity; CP96 closes that interpretation boundary without balance changes."
+}

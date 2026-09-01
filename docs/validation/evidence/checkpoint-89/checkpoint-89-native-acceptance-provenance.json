@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "89",
+  "checkpointDefinitionSha256": "664ab740d50e8950d13563fde139bd331de983e86ae69a4fe41a5e19c5738a91",
+  "checkpointManifestSha256": "e049ed2d8260de30cdca9719af2b9487c62a7c25979c0649a0542752eaa4f1ec",
+  "status": "Success",
+  "sdkExpected": "8.0.423",
+  "sdkActual": "8.0.423",
+  "buildWarnings": 0,
+  "buildErrors": 0,
+  "testsTotal": 863,
+  "testsPassed": 863,
+  "testsFailed": 0,
+  "configuredRunnerStages": 8,
+  "runnerStagesPassed": 8,
+  "runnerStagesFailed": 0,
+  "runnerSelfTests": 54,
+  "failedGates": 0,
+  "primaryStudyVariantCount": 0,
+  "primaryStudyTotalTrials": 0,
+  "source": "native_windows_acceptance",
+  "note": "Compact accepted Checkpoint 89 provenance retained for Checkpoint 90 baseline verification."
+}

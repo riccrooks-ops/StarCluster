@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "star-cluster-tl2-armor-ap-ai-candidate-profile-v1",
+  "id": "tl2-armor-ap-ai-candidate-profile-v0_2",
+  "status": "ai5_locally_validated_ap1_deferred",
+  "researchOwnership": "Defensive Systems / Armor",
+  "purpose": "Current TL2 armor working/candidate state after local layered-defense integration evidence; not production data.",
+  "tl1Reference": {
+    "technologyRole": "Rolled Alloy Plating",
+    "basePrimaryArmorInstallationSpace": 0,
+    "armorProtection": 0,
+    "armorIntegrity": 4,
+    "status": "current_working_reference"
+  },
+  "tl2WorkingCandidate": {
+    "id": "tl2-armor-ai5-working",
+    "technologyRole": "Ceramic Composite Plating - integrity emphasis",
+    "armorProtection": 0,
+    "armorIntegrity": 5,
+    "status": "locally_validated_working_candidate",
+    "productionPromotion": false
+  },
+  "deferredCandidates": [
+    {
+      "id": "tl2-armor-ap1-deferred",
+      "armorProtection": 1,
+      "armorIntegrity": 4,
+      "status": "experimental_deferred_candidate",
+      "reason": "Strong family-dependent breakpoint against APEN0 Kinetic, especially behind Shield 3; requires contemporary penetration counterplay and broader integration evidence."
+    },
+    {
+      "id": "armor-ap1-ai5-upper",
+      "armorProtection": 1,
+      "armorIntegrity": 5,
+      "status": "upper_integration_sensitivity_not_promoted"
+    }
+  ],
+  "guardrails": {
+    "protectionAndIntegrityRemainSeparate": true,
+    "weaponApenCounterplayMustRemainMeaningful": true,
+    "footprintRepairAblativeAndSpecialMaterialsRemainSeparate": true,
+    "automaticPromotion": false
+  }
+}

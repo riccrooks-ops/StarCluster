@@ -1,0 +1,27 @@
+{
+  "trialsPerVariant": 5,
+  "variants": 1200,
+  "outputs": {
+    "variants.csv": {
+      "byteIdentical": true,
+      "sha256": "88c517610898918c95435990470c3908bac6291d9b8f7e1d3c256b8c9845df9e"
+    },
+    "builds.csv": {
+      "byteIdentical": true,
+      "sha256": "25c9af8a5a72ab23ff8fc1333b1e17549a99553a62d9a7f53ede7f2df83f3f1b"
+    },
+    "energy_defense_ablation.csv": {
+      "byteIdentical": true,
+      "sha256": "4b32f25c9afd5c3f1a46b713ed45bb656f49fc750aa4d92d79463a563733eb69"
+    },
+    "movement_order_geometry.csv": {
+      "byteIdentical": true,
+      "sha256": "c09cdad8eec11928f16edd6cf09f918c1540dc7170ff38dd58a9fe5f0fccf0e5"
+    },
+    "missile_attrition_ablation.csv": {
+      "byteIdentical": true,
+      "sha256": "b6897bfd0a6bd406d2cb2ba0cce2a3bf5a6096141d42bb2d26a2f397bbf3672d"
+    },
+    "analysisSemanticIdentical": true
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "star-cluster-technology-integration-permutation-suite-v1",
+  "id": "technology-integration-permutation-suite-v0_5",
+  "checkpoint": 85,
+  "status": "standing_scenario_coverage_definition",
+  "purpose": "Reusable technology-integration axes with accepted TL2 information-control, Power/Reactor, and Shield working candidates plus separately factored Armor Protection/Integrity sensitivity for sequential TL design.",
+  "supersedesForCurrentPlanning": "technology-integration-permutation-suite-v0_4",
+  "retainedHistoricalStudy": {
+    "id": "tl2-itc10-shield-capacity-power-integration-permutations",
+    "checkpoint": "84",
+    "variantCount": 216,
+    "status": "accepted_native_evidence"
+  },
+  "validatedTechnologyPackages": {
+    "tl1-information-control": {
+      "tacticalComputerTargetingPp": 10,
+      "sensorDiscriminationResistance": 0,
+      "ecmNormalCeiling": 1,
+      "eccmNormalCeiling": 1,
+      "ewTpPerRating": 1
+    },
+    "tl2-information-control-working": {
+      "profile": "docs/design/player_technology/tl2_computing_sensor_ew_working_profile_v0_1.json",
+      "tacticalComputerTargetingPp": 12,
+      "sensorDiscriminationResistance": 1,
+      "ecmNormalCeiling": 2,
+      "eccmNormalCeiling": 2,
+      "ewTpPerRating": 1
+    }
+  },
+  "reusableAxes": {
+    "sideAWeaponFamily": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "opponentFamily": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "geometry": [
+      "fixed-range",
+      "dynamic-side-a-first",
+      "dynamic-side-b-first"
+    ],
+    "informationControlPackage": [
+      "tl1-information-control",
+      "tl2-information-control-working",
+      "mixed-tech-explicit"
+    ],
+    "powerEnvironment": [
+      "accepted-reference",
+      "diagnostic-sensitivity"
+    ],
+    "degradedFirePermission": [
+      "firm-only",
+      "explicit-weapon-capability-diagnostic"
+    ],
+    "doctrine": [
+      "accepted-policy",
+      "explicit-diagnostic-policy"
+    ],
+    "powerReactorPackage": [
+      "tl1-peak-fission-5tp",
+      "tl2-early-fusion-6tp-working",
+      "mixed-tech-explicit"
+    ],
+    "shieldCapacityPackage": [
+      "tl1-shield-2",
+      "tl2-shield-3-working",
+      "shield-4-upper-sensitivity",
+      "mixed-tech-explicit"
+    ],
+    "armorPackage": [
+      "tl1-armor-ap0-ai4",
+      "tl2-armor-ai5-candidate",
+      "tl2-armor-ap1-candidate",
+      "armor-ap1-ai5-upper-integration",
+      "mixed-tech-explicit"
+    ]
+  },
+  "pairingPolicy": {
+    "sharedRandomStreamKey": "comparisonGroup",
+    "useCommonRandomStreamsWherePractical": true,
+    "note": "Candidate/control variants should share random streams whenever the changed dimension permits a clean paired comparison."
+  },
+  "activationPolicy": [
+    "Activate only the smallest dependency-relevant submatrix needed to answer the checkpoint question.",
+    "Include mixed-TL and high-power-demand contexts whenever a new component can change power, reach, EW, targeting, or defense opportunity cost.",
+    "Use actual-consumer preflight plus one-trial full-pipeline smoke before substantive Monte Carlo for any new or materially changed integrated study.",
+    "Audit dispatch, pre-run validation, all shared/global release-gate classifications, study-family whitelists, study-specific gates, report routing, schema/baseline bindings, and checkpoint stage definitions before handoff.",
+    "Keep outcome/balance targets review-only unless the checkpoint explicitly promotes a deterministic invariant; never make one-trial smoke depend on statistical outcomes.",
+    "When Power/Reactor is the changed dependency, pair reactor candidates at identical combat, information-control, and doctrine settings; treat power output, efficiency, condition mapping, overload, and Space as separate axes unless the checkpoint explicitly changes more than one.",
+    "When Shield progression is the changed dependency, vary capacity, recharge, hardening, condition behavior, power maintenance, and Installation Space as separate axes unless the checkpoint explicitly combines them.",
+    "When Armor progression is the changed dependency, vary Armor Protection and Armor Integrity separately; preserve the current weapon APEN values so protection counterplay is measured rather than hidden by simultaneous weapon changes."
+  ],
+  "currentCoverage": {
+    "acceptedStudies": [
+      "tl2-itc06-sensor-ew-discrimination-isolation",
+      "tl2-itc07-ew-power-pressure-tall-viability",
+      "tl2-itc08-tactical-computer-ew-integration-permutations",
+      "tl2-itc09-power-reactor-progression-permutations",
+      "tl2-itc10-shield-capacity-power-integration-permutations"
+    ],
+    "currentStudy": {
+      "id": "tl2-itc11-armor-ap-ai-shield-integration-permutations",
+      "checkpoint": 85,
+      "variantCount": 288,
+      "status": "candidate_study_pending_native_acceptance"
+    },
+    "currentExpansion": "Armor AP and AI are now separately factored. CP85 crosses AP0/1 x AI4/5 with Shield 2/3 across two information-control environments, six Kinetic/Energy-vs-Kinetic/Energy/Missile family pairings, and three geometry/order contexts while holding Side-A Reactor 6.",
+    "nextExpansion": "After CP85 review, promote only the armor property/package supported by evidence. Do not assume AP and AI mature together; choose the next progression dimension only after checking layered-defense and weapon-family consequences."
+  },
+  "powerReactorPackages": {
+    "tl1-peak-fission-5tp": {
+      "status": "current_working_reference",
+      "technologyRole": "Peak fission",
+      "installationSpace": 6,
+      "operationalTacticalPower": 5
+    },
+    "tl2-early-fusion-6tp-working": {
+      "status": "validated_working_candidate",
+      "profile": "docs/design/player_technology/tl2_power_reactor_candidate_profile_v0_1.json",
+      "technologyRole": "Early practical fusion",
+      "installationSpace": 6,
+      "operationalTacticalPower": 6,
+      "productionPromotion": false
+    }
+  },
+  "shieldCapacityPackages": {
+    "tl1-shield-2": {
+      "status": "current_working_reference",
+      "installationSpace": 3,
+      "shieldCapacity": 2,
+      "baseRecharge": 1,
+      "tacticalRechargePerPower": 1,
+      "tacticalRechargePowerCap": 2,
+      "shieldArmor": 0
+    },
+    "shield-4-upper-sensitivity": {
+      "status": "diagnostic_upper_sensitivity",
+      "profile": "docs/design/player_technology/tl2_shield_capacity_candidate_profile_v0_1.json",
+      "installationSpace": 3,
+      "shieldCapacity": 4,
+      "productionPromotion": false
+    },
+    "tl2-shield-3-working": {
+      "status": "validated_working_candidate",
+      "profile": "docs/design/player_technology/tl2_shield_capacity_candidate_profile_v0_1.json",
+      "installationSpace": 3,
+      "shieldCapacity": 3,
+      "productionPromotion": false,
+      "nativeEvidenceCheckpoint": "84",
+      "summarySha256": "8dcba60f0b0239eefbf75cb1a7a03f0aa18fa4862a9d38134e435c770165e26c"
+    }
+  },
+  "armorPackages": {
+    "tl1-armor-ap0-ai4": {
+      "status": "current_working_reference",
+      "basePrimaryArmorInstallationSpace": 0,
+      "armorProtection": 0,
+      "armorIntegrity": 4
+    },
+    "tl2-armor-ai5-candidate": {
+      "status": "current_architecture_sensitivity_candidate",
+      "profile": "docs/design/player_technology/tl2_armor_ap_ai_candidate_profile_v0_1.json",
+      "armorProtection": 0,
+      "armorIntegrity": 5,
+      "productionPromotion": false
+    },
+    "tl2-armor-ap1-candidate": {
+      "status": "current_architecture_sensitivity_candidate",
+      "profile": "docs/design/player_technology/tl2_armor_ap_ai_candidate_profile_v0_1.json",
+      "armorProtection": 1,
+      "armorIntegrity": 4,
+      "productionPromotion": false
+    },
+    "armor-ap1-ai5-upper-integration": {
+      "status": "diagnostic_upper_integration_sensitivity",
+      "profile": "docs/design/player_technology/tl2_armor_ap_ai_candidate_profile_v0_1.json",
+      "armorProtection": 1,
+      "armorIntegrity": 5,
+      "productionPromotion": false
+    }
+  }
+}

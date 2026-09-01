@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "66c",
+  "title": "Checkpoint 66c TL1 Scripted Bounded Overload Tactics - Technology Profile Baseline Binding Hotfix",
+  "sdkVersion": "8.0.423",
+  "configuration": "Debug",
+  "calibrationSolution": "StarCluster.Calibration.sln",
+  "testProject": "tests/StarCluster.Tests/StarCluster.Tests.csproj",
+  "runnerProject": "src/StarCluster.ScenarioRunner/StarCluster.ScenarioRunner.csproj",
+  "manifestFile": "CHECKPOINT_66C_SHA256SUMS.txt",
+  "outputRoot": "out/checkpoint-66c",
+  "defaultTrials": 10000,
+  "defaultJobs": 24,
+  "documentation": [
+    "docs/Star_Cluster_Game_Concept_v0.6e.docx",
+    "docs/design/player_technology/TL1_35_Space_Construction_Envelope_v0_1.md",
+    "docs/design/player_technology/tl1_integrated_tactical_combat_schema_v0_12.json",
+    "docs/design/player_technology/tl1_35_space_player_cruiser_baseline_v0_8.json",
+    "docs/design/player_technology/TL1_Scripted_Overload_Tactics_Study_v0_1.md",
+    "docs/design/testing/checkpoint_66_validation_suite_policy_v0_1.json",
+    "docs/design/testing/Checkpoint_66_Validation_Tiers.md",
+    "docs/validation/Checkpoint_66c_Technology_Profile_Baseline_Binding_Hotfix.md"
+  ],
+  "stages": [
+    {
+      "id": "deterministic",
+      "name": "Accepted deterministic moving-missile scenarios",
+      "command": "run-all",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios",
+        "--output-dir",
+        "{OutputRoot}/deterministic"
+      ],
+      "metrics": {
+        "deterministicCases": 7
+      }
+    },
+    {
+      "id": "tl1-phase-a",
+      "name": "TL1 Phase A mechanics corpus",
+      "command": "tl1-phase-a",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1PhaseA",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-a"
+      ],
+      "metrics": {
+        "caseCount": 54
+      }
+    },
+    {
+      "id": "tl1-phase-b",
+      "name": "TL1 Phase B direct-fire corpus",
+      "command": "tl1-phase-b",
+      "arguments": [
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-b"
+      ],
+      "metrics": {
+        "caseCount": 36
+      }
+    },
+    {
+      "id": "tl1-installation-space-envelope",
+      "name": "TL1 35-Space deterministic construction envelope and nominal power diagnostics",
+      "command": "tl1-installation-space-envelope",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-space01-35-space-construction-envelope.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-installation-space-envelope"
+      ],
+      "metrics": {
+        "macroLoadoutCount": 27,
+        "weaponPowerVariantCount": 96,
+        "exactFillMacroLoadoutCount": 4,
+        "usesTrials": false
+      }
+    },
+    {
+      "id": "tl1-scripted-overload-tactics",
+      "name": "TL1 finite-map scripted STL and Active Sensor overload tactics study",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc09-scripted-overload-tactics.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_2.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-scripted-overload-tactics"
+      ],
+      "metrics": {
+        "buildCount": 1,
+        "orderedWeaponPairCount": 5,
+        "bilateralEwRegimeCount": 2,
+        "sideAOverloadPlanCount": 4,
+        "movementOrderCount": 2,
+        "variantCount": 80,
+        "usesTrials": true,
+        "balanceTargetsBlocking": false,
+        "productionReactorOutput": 5,
+        "powerDoctrine": "FullVolleyFirst",
+        "tacticalMapRadius": 5,
+        "startingFuel": 200,
+        "movementFuelPerHex": 2,
+        "evasiveManeuverFuelCost": 1,
+        "fullTacticalAiImplemented": false
+      }
+    },
+    {
+      "id": "auxiliary-resource-endurance",
+      "name": "Deterministic finite-resource and recharge endurance stress study",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end01-resource-endurance-stress.json",
+        "--output-dir",
+        "{OutputRoot}/auxiliary-resource-endurance"
+      ],
+      "metrics": {
+        "combatBatteryCandidateCount": 2,
+        "capacitorPatternCount": 3,
+        "ammRoundCandidateCount": 4,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "checkpoint-53-resource-semantics-lock",
+      "name": "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end02-resource-semantics-lock.json",
+        "--output-dir",
+        "{OutputRoot}/checkpoint-53-resource-semantics-lock"
+      ],
+      "metrics": {
+        "combatBatteryPrimaryCharges": 3,
+        "combatBatteryPowerPerCharge": 1,
+        "combatBatteryDischargeLimitPerTurn": 1,
+        "combatBatteryEncounterDischargeCap": null,
+        "ammRounds": 25,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "runner-self-tests",
+      "name": "ScenarioRunner self-tests",
+      "command": "self-test",
+      "arguments": [
+        "--scenario-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/terminal-two-window-hit.json"
+      ],
+      "metrics": {
+        "selfTestCount": 46
+      }
+    }
+  ],
+  "checkpointMetrics": {
+    "stageCount": 8,
+    "monteCarloVariantCount": 80,
+    "trialsAtDefault": 800000,
+    "suiteTier": "must_always_run"
+  },
+  "nativeDependencyPrecheck": {
+    "required": true,
+    "script": "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+    "blockedInterpreters": [
+      "python",
+      "python3",
+      "py"
+    ],
+    "powerShellPaths": [
+      "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+      "tools/checkpoints/checkpoint-66c/apply_checkpoint_66c.ps1",
+      "tools/checkpoints/checkpoint-66c/test_checkpoint_66c_contract.ps1",
+      "tools/calibration/run_calibration_checkpoint.ps1"
+    ],
+    "checkpointDefinitionPaths": [
+      "tools/calibration/checkpoints/checkpoint-66c.json",
+      "tools/calibration/checkpoints/checkpoint-66c-deep-calibration.json"
+    ]
+  },
+  "primaryStudy": {
+    "id": "tl1-scripted-overload-tactics",
+    "variantCount": 80
+  }
+}

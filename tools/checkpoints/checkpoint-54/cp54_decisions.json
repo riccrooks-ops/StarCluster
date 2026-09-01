@@ -1,0 +1,41 @@
+{
+  "checkpoint": 54,
+  "decisions": [
+    {
+      "id": "D-499",
+      "text": "Checkpoint 53a is accepted as the frozen TL1/TL2 architecture, mechanics, and balance reference for TL3 integration work."
+    },
+    {
+      "id": "D-500",
+      "text": "TL3 is the first major cruiser refit and provides exactly two Weapon Bays and two AUX Capacity; Checkpoint 54 does not reopen the accepted capacity curve."
+    },
+    {
+      "id": "D-501",
+      "text": "Each TL3 Weapon Bay is one separately resolved attack package. Checkpoint 54 screens all nine ordered Kinetic/Energy/Missile two-bay combinations; same-family ammunition-fed bays draw from the same shipwide family reserve."
+    },
+    {
+      "id": "D-502",
+      "text": "Checkpoint 54 mixed-weapon screening uses the primary bay to drive opponent-aware range doctrine while the secondary bay fires opportunistically when legal; this is a screening abstraction, not the final player tactical-control policy."
+    },
+    {
+      "id": "D-503",
+      "text": "At TL3, two AUX Capacity may support two distinct capacity-1 systems or one capacity-2 system. Same-source stacking is prohibited unless a later component contract explicitly permits it."
+    },
+    {
+      "id": "D-504",
+      "text": "The TL3 Auxiliary Reactor candidate costs both AUX Capacity and supplies +1 renewable Tactical Power; Combat Battery and Power Capacitor retain their accepted distinct resource semantics."
+    },
+    {
+      "id": "D-505",
+      "text": "Shield Battery, Shield Booster, and Shield Power Stabilizer receive modest TL3 candidate implementations for screening only; none is promoted automatically by Checkpoint 54."
+    },
+    {
+      "id": "D-506",
+      "text": "Checkpoint 54 screens three TL3 standard vectors: a TL2-equivalent capacity-control vector, a modest balanced candidate, and an output-forward sensitivity control. No vector is promoted automatically."
+    },
+    {
+      "id": "D-507",
+      "text": "Automated TL4-TL9 runtime generation remains deferred until TL3 first-refit evidence is reviewed and a TL3 standard package is explicitly selected."
+    }
+  ]
+}

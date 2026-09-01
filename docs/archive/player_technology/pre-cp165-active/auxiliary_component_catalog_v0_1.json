@@ -1,0 +1,1284 @@
+{
+  "schemaVersion": "star-cluster-auxiliary-component-catalog-v1",
+  "id": "player-standard-auxiliary-component-catalog-v0_1",
+  "title": "Player Standard Auxiliary Component Candidate Catalog",
+  "status": "candidate_only",
+  "checkpoint": 43,
+  "installationClasses": [
+    {
+      "id": "dedicated_core",
+      "displayName": "Dedicated Core Integration",
+      "description": "Baseline ship systems installed through dedicated hull integration channels rather than generic Auxiliary Capacity.",
+      "consumesGenericAuxiliaryCapacity": false,
+      "notFreeFactors": [
+        "construction_or_refit_cost",
+        "hull_integration_and_service_access",
+        "tactical_power_fuel_or_ammunition",
+        "crew_maintenance_and_repair_burden",
+        "critical_exposure_and_damage_consequences",
+        "technology_and_compatibility_requirements"
+      ],
+      "duplicateRule": "Additional or duplicate instances are not automatically core; they require an explicit dedicated mount or consume the appropriate Weapon Bay or Auxiliary Capacity."
+    },
+    {
+      "id": "weapon_bay",
+      "displayName": "Weapon Bay",
+      "description": "Direct-fire batteries, launchers, and other primary attack packages installed in explicit weapon-bay capacity.",
+      "consumesGenericAuxiliaryCapacity": false,
+      "notFreeFactors": [
+        "weapon_bay_capacity",
+        "construction_or_refit_cost",
+        "tactical_power_or_ammunition",
+        "critical_exposure_and_damage_consequences",
+        "technology_and_compatibility_requirements"
+      ],
+      "duplicateRule": "Every additional battery or launcher consumes its declared Weapon Bay capacity unless a specific hull or component grants a dedicated mount."
+    },
+    {
+      "id": "auxiliary_capacity",
+      "displayName": "Auxiliary Capacity",
+      "description": "Optional defensive, support, utility, logistics, and specialist modules that compete for generic Auxiliary Capacity.",
+      "consumesGenericAuxiliaryCapacity": true,
+      "notFreeFactors": [
+        "auxiliary_capacity",
+        "construction_or_refit_cost",
+        "tactical_power_finite_stores_or_activation_limits",
+        "critical_exposure_when_damageable",
+        "technology_and_compatibility_requirements"
+      ],
+      "duplicateRule": "Every installed copy consumes its declared capacity, obeys stacking limits, and remains separately damageable when its profile says so."
+    }
+  ],
+  "foundation": {
+    "standardAuxiliaryResearchTree": false,
+    "coreMeansFree": false,
+    "existingCombatMechanicsRevisedByThisCheckpoint": false,
+    "strippedCalibrationFixtureMayUseZeroAuxiliaryCapacity": true,
+    "normalPlayerHullBaselineAuxiliaryCapacity": "expected_small_positive_allowance_exact_value_not_promoted",
+    "hullTlRole": "Hull TL governs cruiser-scale integration and may expand Auxiliary Capacity; TL3 is an expansion milestone, not necessarily the first existence of AUX capacity.",
+    "availabilityFormula": "max(candidateFirstStandardItemTl, minimumPrimaryResearchTl, every support floor, minimumHullTl, compatibility and capacity legality, balanceEntryGate)",
+    "availabilityInterpretation": "The formula gives the earliest candidate review point, not automatic production availability.",
+    "tl1FixtureEvidencePolicy": "A TL1 mechanics fixture proves rule behavior only. It does not prove that the component is a valid standard TL1 player choice.",
+    "balanceEntryPolicy": "When a component is overpowered at its proposed entry TL, first move its candidate starting TL upward. Change its established mechanical identity only if it remains unhealthy at the later floor.",
+    "highRiskFunctions": [
+      "renewable_power",
+      "flat_damage_prevention",
+      "extra_action_capacity",
+      "movement_denial",
+      "economy_multiplier",
+      "cooperative_stacking"
+    ],
+    "highRiskMinimumCandidateFloor": 2,
+    "excludedStandardCapabilities": [
+      "cloak"
+    ],
+    "alienAndPrecursorPolicy": "Alien, Precursor, and rare rule-breaking components remain outside this standard player catalog."
+  },
+  "components": [
+    {
+      "id": "aux_kinetic_pds",
+      "displayName": "Kinetic Point-Defense Battery",
+      "role": "terminal missile and boarding-craft defense",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 1,
+      "primaryResearchCategory": "kinetic_weapons",
+      "minimumPrimaryResearchTl": 1,
+      "supportFloors": [
+        {
+          "technologyId": "computing_fire_control",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 1,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "powered_readiness_plus_ammunition",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "pooled_reaction_capacity; normal two-attempt-per-flight cap",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "TL1 PDS mechanics and calibration fixtures exist",
+      "balanceRisk": {
+        "tier": "moderate",
+        "flags": [
+          "reaction_capacity"
+        ]
+      },
+      "blockingConcerns": [
+        "confirm early reaction capacity and ammunition burden"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Candidate early conventional PDS; fixture evidence does not promote availability."
+    },
+    {
+      "id": "aux_amm_pds",
+      "displayName": "Anti-Missile Missile Battery",
+      "role": "finite-ammunition terminal interception",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 1,
+      "primaryResearchCategory": "missile_weapons",
+      "minimumPrimaryResearchTl": 1,
+      "supportFloors": [
+        {
+          "technologyId": "computing_fire_control",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 1,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "powered_readiness_plus_ammunition",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "pooled_reaction_capacity; normal two-attempt-per-flight cap",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "TL1 PDS calibration includes ammunition-fed interception behavior",
+      "balanceRisk": {
+        "tier": "moderate",
+        "flags": [
+          "reaction_capacity",
+          "finite_store"
+        ]
+      },
+      "blockingConcerns": [
+        "confirm magazine pressure and comparison with kinetic PDS"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Candidate early ammunition-intensive alternative to kinetic PDS."
+    },
+    {
+      "id": "aux_energy_pds",
+      "displayName": "Energy Point-Defense Array",
+      "role": "power-intensive ammunition-free terminal interception",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 2,
+      "primaryResearchCategory": "beam_weapons",
+      "minimumPrimaryResearchTl": 2,
+      "supportFloors": [
+        {
+          "technologyId": "power",
+          "minimumTl": 2
+        },
+        {
+          "technologyId": "computing_fire_control",
+          "minimumTl": 2
+        }
+      ],
+      "minimumHullTl": 2,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "sustained_powered_readiness",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "pooled_reaction_capacity; normal two-attempt-per-flight cap",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Energy PDS behavior exists as a comparison concept, not a promoted TL1 item",
+      "balanceRisk": {
+        "tier": "high",
+        "flags": [
+          "reaction_capacity",
+          "unlimited_ammunition",
+          "renewable_power"
+        ]
+      },
+      "blockingConcerns": [
+        "prove that power cost prevents universal replacement of finite-ammunition PDS"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Starts no earlier than TL2 because ammunition independence can dominate low-TL defenses."
+    },
+    {
+      "id": "aux_auxiliary_reactor",
+      "displayName": "Auxiliary Reactor",
+      "role": "renewable Tactical Power generation",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 2,
+      "primaryResearchCategory": "power",
+      "minimumPrimaryResearchTl": 2,
+      "supportFloors": [
+        {
+          "technologyId": "hull",
+          "minimumTl": 2
+        }
+      ],
+      "minimumHullTl": 2,
+      "capacityCost": 2,
+      "tacticalPowerBehavior": {
+        "mode": "renewable_output",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "normally one; additional copies require explicit stacking permission",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "TL1 comparison overlays test +1 output and degraded cooldown behavior",
+      "balanceRisk": {
+        "tier": "high",
+        "flags": [
+          "renewable_power",
+          "threshold_crossing"
+        ]
+      },
+      "blockingConcerns": [
+        "test action-threshold crossings, degraded output, cooldown, and reactor stacking"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Candidate floor is TL2; TL1 overlays are calibration controls only."
+    },
+    {
+      "id": "aux_apu",
+      "displayName": "Auxiliary Power Unit",
+      "role": "core-power continuity without normal Tactical Power",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 1,
+      "primaryResearchCategory": "power",
+      "minimumPrimaryResearchTl": 1,
+      "supportFloors": [
+        {
+          "technologyId": "hull",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 1,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "core_power_only",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "normally one",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "APU core-power-only rule is established",
+      "balanceRisk": {
+        "tier": "low",
+        "flags": [
+          "continuity"
+        ]
+      },
+      "blockingConcerns": [
+        "confirm it cannot supply ordinary Tactical Power or shield recharge unless explicitly stated"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Low tactical leverage because it preserves core operation rather than adding action power."
+    },
+    {
+      "id": "aux_combat_battery",
+      "displayName": "Combat Battery",
+      "role": "finite emergency Tactical Power injection",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 1,
+      "primaryResearchCategory": "power",
+      "minimumPrimaryResearchTl": 1,
+      "supportFloors": [
+        {
+          "technologyId": "hull",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 1,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "finite_discharge_once_per_turn",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "multiple units allowed; each has its own finite store",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "TL1 power-envelope fixtures include Combat Battery injection",
+      "balanceRisk": {
+        "tier": "moderate",
+        "flags": [
+          "stored_power",
+          "extra_action_capacity"
+        ]
+      },
+      "blockingConcerns": [
+        "set finite charges and refit/resupply rules"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Candidate early stored-power option; finite supply is the primary limiter."
+    },
+    {
+      "id": "aux_power_capacitor",
+      "displayName": "Power Capacitor",
+      "role": "operation-specific stored power and charge timing",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 2,
+      "primaryResearchCategory": "power",
+      "minimumPrimaryResearchTl": 2,
+      "supportFloors": [
+        {
+          "technologyId": "computing_fire_control",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 2,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "charge_then_single_operation_discharge",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "multiple units allowed only when each is assigned to a legal operation",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Capacitor discharge and charge reporting exists in TL1 power studies",
+      "balanceRisk": {
+        "tier": "high",
+        "flags": [
+          "stored_power",
+          "extra_action_capacity",
+          "timing"
+        ]
+      },
+      "blockingConcerns": [
+        "prevent same-turn charge/discharge loops and universal power substitution"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Starts at TL2 because operation-specific burst power can bypass normal turn envelopes."
+    },
+    {
+      "id": "aux_shield_battery",
+      "displayName": "Shield Battery",
+      "role": "finite emergency shield restoration",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 1,
+      "primaryResearchCategory": "shields",
+      "minimumPrimaryResearchTl": 1,
+      "supportFloors": [
+        {
+          "technologyId": "power",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 1,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "finite_shield_only_discharge",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "multiple units allowed; each has its own finite store",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Shield Battery is established as player-reserved emergency power",
+      "balanceRisk": {
+        "tier": "moderate",
+        "flags": [
+          "stored_defense",
+          "finite_store"
+        ]
+      },
+      "blockingConcerns": [
+        "set charges, restoration amount, and no automatic expenditure policy"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Candidate early emergency defense that does not add general Tactical Power."
+    },
+    {
+      "id": "aux_shield_booster",
+      "displayName": "Shield Booster",
+      "role": "increased maximum Shield Capacity or bounded overcharge",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 2,
+      "primaryResearchCategory": "shields",
+      "minimumPrimaryResearchTl": 2,
+      "supportFloors": [
+        {
+          "technologyId": "power",
+          "minimumTl": 2
+        }
+      ],
+      "minimumHullTl": 2,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "sustained_or_overcharge_power",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "normally one effective booster; explicit profiles may permit diminishing returns",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Shield overcapacity and booster concepts are already modeled",
+      "balanceRisk": {
+        "tier": "high",
+        "flags": [
+          "defense_capacity",
+          "overcharge"
+        ]
+      },
+      "blockingConcerns": [
+        "separate passive capacity, powered bonus, and risky overcharge"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Starts at TL2 so extra renewable capacity does not erase baseline TL1 weapon pacing."
+    },
+    {
+      "id": "aux_power_stabilizer",
+      "displayName": "Shield Power Stabilizer",
+      "role": "improved shield-recharge efficiency per Tactical Power",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 2,
+      "primaryResearchCategory": "power",
+      "minimumPrimaryResearchTl": 2,
+      "supportFloors": [
+        {
+          "technologyId": "shields",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 2,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "powered_efficiency_modifier",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "normally one; no multiplicative stacking",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Tactical shield restoration and recharge-efficiency concepts exist",
+      "balanceRisk": {
+        "tier": "moderate",
+        "flags": [
+          "efficiency_multiplier"
+        ]
+      },
+      "blockingConcerns": [
+        "bound efficiency and avoid zero-cost recharge loops"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Candidate TL2 efficiency component rather than raw Shield Capacity."
+    },
+    {
+      "id": "aux_shield_hardener",
+      "displayName": "Shield Hardener",
+      "role": "flat Shield Armor protection",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 3,
+      "primaryResearchCategory": "shields",
+      "minimumPrimaryResearchTl": 3,
+      "supportFloors": [],
+      "minimumHullTl": 1,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "sustained_powered_protection",
+        "amount": 1,
+        "notes": "Initial TL3 candidate: commit 1 Tactical Power for Shield Armor 1 while active. No separate Power-TL prerequisite is imposed; ordinary installed power sufficiency is enough."
+      },
+      "stackingRule": "normally one; initial TL3 candidate Shield Armor 1 is nonstacking",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Shield Armor mechanics and TL1 diagnostic fixtures exist",
+      "balanceRisk": {
+        "tier": "high",
+        "flags": [
+          "flat_damage_prevention",
+          "renewable_defense"
+        ]
+      },
+      "blockingConcerns": [
+        "validate low-damage weapon progress, SPEN counterplay, and contemporary power opportunity cost when TL3 combat integration begins"
+      ],
+      "availabilityStatus": "tl3_executable_candidate_not_calibrated_not_promoted",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Accepted TL3 base candidate values are implemented by CP102 as an executable optional unlock: 1 Space, sustained 1 TP, Shield Armor 1, nonstacking. Starts in Shields at TL3; no arbitrary Power-TL or Hull-TL gate is required. Calibration, production promotion, and overload remain deferred.",
+      "candidateProfile": {
+        "shieldArmor": 1,
+        "sustainedTacticalPower": 1,
+        "overload": "deferred_not_promoted",
+        "status": "implemented_executable_candidate_not_calibrated_not_promoted"
+      }
+    },
+    {
+      "id": "aux_ablative_armor",
+      "displayName": "Ablative Armor Layer",
+      "role": "expendable outer armor layer",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 1,
+      "primaryResearchCategory": "armor",
+      "minimumPrimaryResearchTl": 1,
+      "supportFloors": [
+        {
+          "technologyId": "hull",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 1,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "passive_expendable_layer",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "one outer ablative layer maximum",
+      "damageProfile": {
+        "damageable": false,
+        "criticalExposure": 0,
+        "notes": "Resolved as a layer or passive store rather than an independently damageable component in this candidate foundation."
+      },
+      "tl1FixtureEvidence": "Layered armor rules already support one Auxiliary ablative layer",
+      "balanceRisk": {
+        "tier": "moderate",
+        "flags": [
+          "extra_defense_layer"
+        ]
+      },
+      "blockingConcerns": [
+        "set AP/AI and strategic replacement cost without making it routine in-combat repair"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Candidate early expendable protection with strict one-layer limit."
+    },
+    {
+      "id": "aux_energized_armor_controller",
+      "displayName": "Energized Armor Controller",
+      "role": "powered armor-protection enhancement",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 3,
+      "primaryResearchCategory": "armor",
+      "minimumPrimaryResearchTl": 3,
+      "supportFloors": [
+        {
+          "technologyId": "power",
+          "minimumTl": 3
+        }
+      ],
+      "minimumHullTl": 3,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "sustained_powered_armor_bonus",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "normally one; no additive protection stacking",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Energized Armor has an established conceptual role",
+      "balanceRisk": {
+        "tier": "high",
+        "flags": [
+          "flat_damage_prevention",
+          "renewable_defense"
+        ]
+      },
+      "blockingConcerns": [
+        "ensure unpowered armor remains passive and powered bonus cannot stall common weapons"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Starts at TL3 because powered flat protection has the same stall risk as Shield Armor."
+    },
+    {
+      "id": "aux_evasive_maneuver_system",
+      "displayName": "Evasive Maneuver System",
+      "role": "full-turn defensive posture support",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 2,
+      "primaryResearchCategory": "propulsion",
+      "minimumPrimaryResearchTl": 2,
+      "supportFloors": [
+        {
+          "technologyId": "computing_fire_control",
+          "minimumTl": 2
+        }
+      ],
+      "minimumHullTl": 2,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "activation_power_plus_fuel_multiplier",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "one effective system; no defense-bonus stacking",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "EvM is implemented as a separate damageable Auxiliary",
+      "balanceRisk": {
+        "tier": "high",
+        "flags": [
+          "accuracy_denial",
+          "fuel_multiplier",
+          "action_tradeoff"
+        ]
+      },
+      "blockingConcerns": [
+        "validate defense bonus, own-fire penalty, fuel and power costs together"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Starts at TL2 because a universal accuracy modifier is stronger than an ordinary stat refinement."
+    },
+    {
+      "id": "aux_active_sensor_array",
+      "displayName": "Active Sensor Array",
+      "role": "active search range and reacquisition support",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 1,
+      "primaryResearchCategory": "sensors_ew",
+      "minimumPrimaryResearchTl": 1,
+      "supportFloors": [
+        {
+          "technologyId": "power",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 1,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "sustained_or_windowed_active_power",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "normally one effective array; range bonuses do not stack additively",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Active Sensors are implemented in TL1 defensive fixtures",
+      "balanceRisk": {
+        "tier": "moderate",
+        "flags": [
+          "information_advantage",
+          "emissions"
+        ]
+      },
+      "blockingConcerns": [
+        "retain emissions cost and range-only baseline before adding accuracy bonuses"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Candidate early active search capability; fixture evidence is not an availability promotion."
+    },
+    {
+      "id": "aux_ecm_suite",
+      "displayName": "Electronic Countermeasures Suite",
+      "role": "track-quality degradation and cooperative screening",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 2,
+      "primaryResearchCategory": "sensors_ew",
+      "minimumPrimaryResearchTl": 2,
+      "supportFloors": [
+        {
+          "technologyId": "power",
+          "minimumTl": 2
+        },
+        {
+          "technologyId": "computing_fire_control",
+          "minimumTl": 2
+        }
+      ],
+      "minimumHullTl": 2,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "sustained_powered_emission",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "cooperative effect follows explicit non-additive or capped rule",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "ECM is implemented in TL1 defensive fixtures",
+      "balanceRisk": {
+        "tier": "high",
+        "flags": [
+          "cooperative_stacking",
+          "information_denial",
+          "emissions"
+        ]
+      },
+      "blockingConcerns": [
+        "test multi-ship screens, ECCM response, emissions, and non-disclosure UI"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Starts at TL2 because cooperative information denial can scale faster than individual combat stats."
+    },
+    {
+      "id": "aux_eccm_suite",
+      "displayName": "Electronic Counter-Countermeasures Suite",
+      "role": "powered discrimination against ECM",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 2,
+      "primaryResearchCategory": "sensors_ew",
+      "minimumPrimaryResearchTl": 2,
+      "supportFloors": [
+        {
+          "technologyId": "computing_fire_control",
+          "minimumTl": 2
+        },
+        {
+          "technologyId": "power",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 2,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "sustained_powered_processing",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "full Powered rating applies independently; multiple suites use an explicit cap",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "ECCM is implemented in TL1 defensive fixtures",
+      "balanceRisk": {
+        "tier": "high",
+        "flags": [
+          "cooperative_counter",
+          "information_advantage"
+        ]
+      },
+      "blockingConcerns": [
+        "keep floor paired with ECM and prevent unrestricted additive stacking"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Starts with ECM at TL2 so the counter exists at the same standard availability floor."
+    },
+    {
+      "id": "aux_tractor_projector",
+      "displayName": "Tractor Projector",
+      "role": "movement denial and hold effects",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 3,
+      "primaryResearchCategory": "propulsion",
+      "minimumPrimaryResearchTl": 3,
+      "supportFloors": [
+        {
+          "technologyId": "power",
+          "minimumTl": 3
+        },
+        {
+          "technologyId": "computing_fire_control",
+          "minimumTl": 2
+        }
+      ],
+      "minimumHullTl": 3,
+      "capacityCost": 2,
+      "tacticalPowerBehavior": {
+        "mode": "sustained_high_power_projection",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "multiple tractors use explicit conflict and cap rules",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Tractor mechanics exist, but inherited Power 3 requires recalibration against TL-scaled movement",
+      "balanceRisk": {
+        "tier": "high",
+        "flags": [
+          "movement_denial",
+          "cooperative_stacking",
+          "high_power"
+        ]
+      },
+      "blockingConcerns": [
+        "recalibrate against ship Move = Drive TL and define multi-tractor conflicts"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Starts at TL3 because movement denial is a qualitative control capability."
+    },
+    {
+      "id": "aux_repair_drone_bay",
+      "displayName": "Repair Drone Bay",
+      "role": "Damage Control assistance",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 2,
+      "primaryResearchCategory": "computing_fire_control",
+      "minimumPrimaryResearchTl": 2,
+      "supportFloors": [
+        {
+          "technologyId": "hull",
+          "minimumTl": 2
+        }
+      ],
+      "minimumHullTl": 2,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "powered_or_supply_limited_assistance",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "assistance cap applies; no extra repair roll unless explicitly stated",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Repair drones are listed as support items; Damage Control capacity rules exist",
+      "balanceRisk": {
+        "tier": "high",
+        "flags": [
+          "action_capacity",
+          "repair_efficiency"
+        ]
+      },
+      "blockingConcerns": [
+        "avoid creating extra condition steps or free supplies; test assistance cap"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Starts at TL2 because extra repair capacity can compound survival and resource efficiency."
+    },
+    {
+      "id": "aux_hangar_bay",
+      "displayName": "Auxiliary Hangar Bay",
+      "role": "additional shuttle or small-craft capacity",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 3,
+      "primaryResearchCategory": "hull",
+      "minimumPrimaryResearchTl": 3,
+      "supportFloors": [
+        {
+          "technologyId": "computing_fire_control",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 3,
+      "capacityCost": 2,
+      "tacticalPowerBehavior": {
+        "mode": "core_supported_with_launch_limits",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "limited by hull hangar capacity and explicit launch/recovery rules",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Starting-ship shuttle assumptions and hangar Auxiliary concept exist",
+      "balanceRisk": {
+        "tier": "high",
+        "flags": [
+          "extra_unit_capacity",
+          "boarding_capacity"
+        ]
+      },
+      "blockingConcerns": [
+        "define launch/recovery tempo, craft replacement, and boarding interaction"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Starts at TL3 because an extra craft is a qualitative force-multiplication milestone."
+    },
+    {
+      "id": "aux_laboratory_module",
+      "displayName": "Laboratory Module",
+      "role": "research, analysis, and discovery support",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 1,
+      "primaryResearchCategory": "sensors_ew",
+      "minimumPrimaryResearchTl": 1,
+      "supportFloors": [
+        {
+          "technologyId": "computing_fire_control",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 1,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "core_supported_or_task_power",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "multiple laboratories use diminishing returns by task",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Laboratories are listed as independent support items",
+      "balanceRisk": {
+        "tier": "moderate",
+        "flags": [
+          "economy_multiplier",
+          "research_acceleration"
+        ]
+      },
+      "blockingConcerns": [
+        "define strategic benefit and diminishing returns before promotion"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Candidate early specialist module; strategic payoff must be bounded."
+    },
+    {
+      "id": "aux_mining_module",
+      "displayName": "Mining Module",
+      "role": "resource extraction",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 1,
+      "primaryResearchCategory": "hull",
+      "minimumPrimaryResearchTl": 1,
+      "supportFloors": [
+        {
+          "technologyId": "power",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 1,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "task_power_and_time",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "multiple modules use site and throughput caps",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Mining gear is listed as an independent support item",
+      "balanceRisk": {
+        "tier": "moderate",
+        "flags": [
+          "economy_multiplier",
+          "resource_generation"
+        ]
+      },
+      "blockingConcerns": [
+        "define site depletion, time exposure, cargo interaction, and throughput cap"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Candidate early utility component; combat value is indirect."
+    },
+    {
+      "id": "aux_fabrication_module",
+      "displayName": "Fabrication Module",
+      "role": "conversion of cargo or salvage into supplies",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 2,
+      "primaryResearchCategory": "hull",
+      "minimumPrimaryResearchTl": 2,
+      "supportFloors": [
+        {
+          "technologyId": "power",
+          "minimumTl": 2
+        },
+        {
+          "technologyId": "computing_fire_control",
+          "minimumTl": 2
+        }
+      ],
+      "minimumHullTl": 2,
+      "capacityCost": 2,
+      "tacticalPowerBehavior": {
+        "mode": "task_power_time_and_material_input",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "multiple modules use throughput caps and no recursive free-resource loop",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Fabrication is established as a strategic source of Repair Supplies",
+      "balanceRisk": {
+        "tier": "high",
+        "flags": [
+          "economy_multiplier",
+          "resource_conversion"
+        ]
+      },
+      "blockingConcerns": [
+        "define recipes, efficiency, time, and anti-loop constraints"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Starts at TL2 because broad resource conversion can dominate campaign logistics."
+    },
+    {
+      "id": "aux_cargo_expansion",
+      "displayName": "Cargo Expansion Module",
+      "role": "additional general cargo capacity",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 1,
+      "primaryResearchCategory": "hull",
+      "minimumPrimaryResearchTl": 1,
+      "supportFloors": [],
+      "minimumHullTl": 1,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "core_supported_passive",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "multiple modules allowed within hull and mass limits",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Cargo transfer and strategic resource use are established",
+      "balanceRisk": {
+        "tier": "low",
+        "flags": [
+          "capacity"
+        ]
+      },
+      "blockingConcerns": [
+        "set capacity and any maneuver or signature tradeoff"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Candidate baseline logistics option with low direct combat leverage."
+    },
+    {
+      "id": "aux_kinetic_magazine_expansion",
+      "displayName": "Kinetic Magazine Expansion",
+      "role": "additional Kinetic ammunition reserve",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 1,
+      "primaryResearchCategory": "kinetic_weapons",
+      "minimumPrimaryResearchTl": 1,
+      "supportFloors": [
+        {
+          "technologyId": "hull",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 1,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "passive_finite_store",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "multiple modules allowed; broad Kinetic magazine family",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Broad Kinetic magazine damage and ready-package rules exist",
+      "balanceRisk": {
+        "tier": "moderate",
+        "flags": [
+          "finite_store",
+          "endurance"
+        ]
+      },
+      "blockingConcerns": [
+        "set capacity and damage consequences without per-weapon placement bookkeeping"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Candidate early endurance option; loaded Ready Packages remain separate."
+    },
+    {
+      "id": "aux_missile_magazine_expansion",
+      "displayName": "Missile Magazine Expansion",
+      "role": "additional Missile Flight reserve",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 1,
+      "primaryResearchCategory": "missile_weapons",
+      "minimumPrimaryResearchTl": 1,
+      "supportFloors": [
+        {
+          "technologyId": "hull",
+          "minimumTl": 1
+        }
+      ],
+      "minimumHullTl": 1,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "passive_finite_store",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "multiple modules allowed; broad Missile magazine family",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Broad Missile magazine damage and ready-package rules exist",
+      "balanceRisk": {
+        "tier": "moderate",
+        "flags": [
+          "finite_store",
+          "endurance"
+        ]
+      },
+      "blockingConcerns": [
+        "set capacity, reload assumptions, and loss on magazine disablement"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Candidate early endurance option for finite Missile Flights."
+    },
+    {
+      "id": "aux_communications_relay",
+      "displayName": "Tactical Communications Relay",
+      "role": "datalink reach, coordination, and relay support",
+      "installationClass": "auxiliary_capacity",
+      "candidateFirstStandardItemTl": 2,
+      "primaryResearchCategory": "sensors_ew",
+      "minimumPrimaryResearchTl": 2,
+      "supportFloors": [
+        {
+          "technologyId": "computing_fire_control",
+          "minimumTl": 2
+        }
+      ],
+      "minimumHullTl": 2,
+      "capacityCost": 1,
+      "tacticalPowerBehavior": {
+        "mode": "sustained_or_core_supported_relay",
+        "amount": "profile_defined",
+        "notes": "Existing mechanical behavior is retained; exact standard-player values remain subject to later calibration."
+      },
+      "stackingRule": "network effects require explicit range and non-additive relay rules",
+      "damageProfile": {
+        "damageable": true,
+        "criticalExposure": 1,
+        "notes": "Explicitly damageable AUX systems use Critical Exposure 1 unless a later profile states otherwise."
+      },
+      "tl1FixtureEvidence": "Missile datalink and communications architecture exist; no standard relay item is promoted",
+      "balanceRisk": {
+        "tier": "high",
+        "flags": [
+          "cooperative_stacking",
+          "information_advantage",
+          "datalink"
+        ]
+      },
+      "blockingConcerns": [
+        "define line of sight, relay chaining, latency, and observer-safe information"
+      ],
+      "availabilityStatus": "candidate_only",
+      "firstStandardItemTlMayOnlyMoveUpUntilPromoted": true,
+      "standardPlayerAvailability": "not_promoted",
+      "entryPolicy": "raise_starting_tl_before_reducing_established_mechanical_identity",
+      "notes": "Starts at TL2 because network multiplication can amplify every missile and sensor platform."
+    }
+  ]
+}

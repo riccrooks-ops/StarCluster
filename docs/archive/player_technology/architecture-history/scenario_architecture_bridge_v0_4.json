@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "id": "scenario-architecture-bridge-v0_4",
+  "checkpoint": 52,
+  "status": "limited_tl1_tl2_stateful_resource_bridge",
+  "architectureFile": "docs/design/player_technology/player_technology_architecture_v0_4.json",
+  "tableDrivenScenarioGeneration": true,
+  "standardProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl2-standard-runtime-profiles-v0_2.json",
+  "standardProfiles": [
+    {
+      "scenarioProfileId": "tl1-production",
+      "technologyLevel": 1,
+      "status": "table_backed_frozen_equivalent"
+    },
+    {
+      "scenarioProfileId": "tl2-production",
+      "technologyLevel": 2,
+      "status": "table_backed_accepted_equivalent"
+    }
+  ],
+  "auxiliaryProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl2-auxiliary-runtime-profiles-v0_2.json",
+  "auxiliaryMappings": [
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-none-tl1",
+      "technologyLevel": 1,
+      "counterfactual": true,
+      "architectureSubfamilyId": null,
+      "architectureEntryTl": null,
+      "architectureLegalAtProfileTl": null,
+      "capacityCost": 0,
+      "status": "counterfactual_diagnostic"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-none-tl2",
+      "technologyLevel": 2,
+      "counterfactual": true,
+      "architectureSubfamilyId": null,
+      "architectureEntryTl": null,
+      "architectureLegalAtProfileTl": null,
+      "capacityCost": 0,
+      "status": "counterfactual_diagnostic"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl1-kinetic-pds",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_kinetic_pds",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl1-energy-pds",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_energy_pds",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl1-amm-pds",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_amm_pds",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl2-kinetic-pds",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_kinetic_pds",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl2-energy-pds",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_energy_pds",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl2-amm-pds",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_amm_pds",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl1-combat-battery",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_combat_battery",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl1-ablative-armor",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_ablative_armor",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl1-evasive-maneuver-system",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_evasive_maneuver_system",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl1-kinetic-magazine",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_kinetic_magazine_expansion",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl1-missile-magazine",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_missile_magazine_expansion",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl2-combat-battery",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_combat_battery",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl2-ablative-armor",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_ablative_armor",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl2-evasive-maneuver-system",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_evasive_maneuver_system",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl2-kinetic-magazine",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_kinetic_magazine_expansion",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl2-missile-magazine",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_missile_magazine_expansion",
+      "architectureEntryTl": 1,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r52-tl2-power-capacitor",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_power_capacitor",
+      "architectureEntryTl": 2,
+      "architectureLegalAtProfileTl": true,
+      "capacityCost": 1,
+      "status": "checkpoint_52_stateful_candidate"
+    }
+  ],
+  "historicalRegression": {
+    "checkpoint51Study": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-itc02-architecture-derived-tl1-tl2-pds.json",
+    "checkpoint51ScenarioHashFile": "tools/checkpoints/checkpoint-52/checkpoint_51_scenario_hashes.txt",
+    "requireByteIdenticalCheckpoint51Scenarios": true
+  },
+  "matrixPolicy": {
+    "normalTl1AuxCapacity": 1,
+    "normalTl2AuxCapacity": 1,
+    "noAuxIsDiagnosticOnly": true,
+    "automaticPromotion": false,
+    "statefulPowerPolicy": "checkpoint_52_only",
+    "tl3ThroughTl9RuntimeGeneration": "deferred"
+  },
+  "resourcePolicy": {
+    "combatBattery": "+1 TP, 3 finite charges primary; 2-charge diagnostic",
+    "powerCapacitor": "+1 discharge, later-turn 1 TP recharge",
+    "amm": "1 TP readiness; 15/20/25/30 round endurance sensitivity",
+    "shieldRecharge": "core capability, not AUX-gated"
+  }
+}

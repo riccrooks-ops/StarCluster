@@ -1,0 +1,9 @@
+{
+  "checkpoint": 165,
+  "moved": {
+    "docs/design/ai/AI_Doctrine_Registry_Architecture_v0_7.md": "docs/archive/ai/pre-cp165-active/AI_Doctrine_Registry_Architecture_v0_7.md",
+    "docs/design/ai/adaptive_engage_policy_v0_2.json": "docs/archive/ai/pre-cp165-active/adaptive_engage_policy_v0_2.json",
+    "docs/design/ai/ai_doctrine_registry_v0_1.json": "docs/archive/ai/pre-cp165-active/ai_doctrine_registry_v0_1.json",
+    "docs/design/ai/ai_doctrine_registry_v0_2.json": "docs/archive/ai/pre-cp165-active/ai_doctrine_registry_v0_2.json"
+  }
+}

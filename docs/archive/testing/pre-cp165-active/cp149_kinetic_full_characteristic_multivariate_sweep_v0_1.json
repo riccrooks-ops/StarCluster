@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "star-cluster-cp149-kinetic-full-characteristic-sweep-study-v0.1",
+  "checkpoint": 149,
+  "baseCheckpoint": 148,
+  "name": "Kinetic Full-Characteristic Multivariate Response-Surface Sweep",
+  "scope": "broad-multivariate-kinetic-characteristic-response-surface",
+  "matrix": "docs/design/player_technology/technology_numerical_matrix_v0_9.json",
+  "stageAExperimentManifest": "docs/design/testing/cp144_stage_a_experiment_manifest.csv",
+  "resourceEnsemble": "docs/design/testing/cp144_stage_a_resource_ensemble.csv",
+  "resourceEnsembleTl": "docs/design/testing/cp144_stage_a_resource_ensemble_tl.csv",
+  "masterSeed": 140001,
+  "canonicalCombatKernelVersion": "0.7",
+  "combatDoctrine": "cp147_tactical_utility",
+  "acceptedBaselineCheckpoint": 148,
+  "acceptedCp148NativeResultsArchiveSha256": "b00c97b620cc7824760a8af5b41e0e888bb1d7ace16e3d51d426473c6a86788e",
+  "expectedKineticContexts": 2600,
+  "contextPolicy": "all accepted CP148 same-TL Stage-A scenario cells containing exactly one Kinetic main weapon and one non-Kinetic opponent; preserve both side assignments, all five resource environments, all ten strata, and every TL where the opponent family exists",
+  "factors": 7,
+  "operationalFactors": [
+    {
+      "id": "accuracy_delta_pp",
+      "low": -10,
+      "center": 0,
+      "high": 10,
+      "meaning": "delta from executable CP148 Kinetic accuracyPp"
+    },
+    {
+      "id": "damage_delta",
+      "low": -2,
+      "center": 0,
+      "high": 2,
+      "meaning": "delta from executable CP148 Kinetic damage"
+    },
+    {
+      "id": "apen_delta",
+      "low": -2,
+      "center": 0,
+      "high": 2,
+      "meaning": "delta from executable CP148 Kinetic APEN"
+    },
+    {
+      "id": "firing_tp_delta",
+      "low": -1,
+      "center": 0,
+      "high": 1,
+      "meaning": "delta from each executable CP148 resource-environment Kinetic firing TP; preserves the resource ensemble crossing"
+    },
+    {
+      "id": "standard_range_delta",
+      "low": -1,
+      "center": 0,
+      "high": 1,
+      "meaning": "delta from executable CP148 standard range"
+    },
+    {
+      "id": "extended_band_delta",
+      "low": -1,
+      "center": 0,
+      "high": 1,
+      "meaning": "delta from maxRange-standardRange; maxRange is recomputed so the range envelope remains legal"
+    },
+    {
+      "id": "ammo_level",
+      "low": 25,
+      "center": 100,
+      "high": 200,
+      "meaning": "absolute Kinetic main magazine depth; CP148 baseline is 100"
+    }
+  ],
+  "spaceSweep": {
+    "deltas": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "policy": "construction-envelope-only",
+    "reason": "Space changes Stage-A legality/headroom but fixed Stage-A combat packages do not automatically spend freed Space on invented AUX; therefore Space is swept as construction feasibility/headroom rather than falsely treated as direct combat DPS"
+  },
+  "kineticSpenPolicy": "fixed-zero-family-identity",
+  "kineticSpen": 0,
+  "design": {
+    "baseline": 1,
+    "singleFactorAxial": 14,
+    "allPairwiseResponsePoints": 84,
+    "resolutionSevenHalfFraction": 64,
+    "description": "Per TL: baseline + both directions for every factor + all four low/high combinations for every factor pair + a 64-run seven-factor resolution-VII half fraction (A-F free, G=ABCDEF). This directly estimates main effects and pairwise interactions while also probing higher-dimensional corners without the 3^7 Cartesian explosion."
+  },
+  "candidatesPerTl": 163,
+  "tlCandidateCount": 1467,
+  "trialsPerCandidateContext": 100,
+  "candidateContextCells": 423800,
+  "substantiveCombatTrials": 42380000,
+  "smokeTrialsPerCandidateContext": 1,
+  "smokeCombatTrials": 42380,
+  "batchCandidates": 16,
+  "recommendedJobs": 24,
+  "commonRandomNumbers": true,
+  "analysisPolicy": "preserve matched scenario identities and trial indices across every candidate; report TL/candidate, opponent, resource, stratum, Armor-role, TP, delivery, Held-Main/PDS, endurance, main-effect, pairwise-interaction, identity-stress, and combat-Pareto surfaces",
+  "familyIdentityPolicy": "SPEN remains exactly zero. Candidates exceeding contemporary Energy accuracy or range are retained as diagnostic identity-stress points, clearly flagged, and cannot be silently promoted.",
+  "spaceInterpretationBoundary": "Space is a real Kinetic characteristic and is swept thoroughly for legality/free-space. CP149 does not invent an automatic AUX filler to turn freed Space into combat output; later ship-design research may cross the viable combat candidates with explicit AUX loadouts.",
+  "tuningAllowed": false,
+  "automaticPromotion": false,
+  "stageBAutomatic": false,
+  "interpretationBoundary": "CP149 is a broad response-surface experiment, not a one-knob tweak and not an automatic optimizer. No candidate is promoted by threshold. The purpose is to identify sensitivities, interactions, thresholds, family-identity costs, and viable regions before a later refinement/confirmation pass.",
+  "smokeContextCount": 260,
+  "smokeContextPolicy": "per TL: every stratum with Energy under R1 central, every stratum with GP Missile under R4 tight, and every stratum with Swarmer under R4 tight where Swarmer exists; one side assignment per smoke cell"
+}

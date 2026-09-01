@@ -1,0 +1,6 @@
+component,status,cp138_execution,reason
+shield-battery,reject_legacy_numeric_rederive_later,no,Legacy pre-x2 restore 3 maps to 6 current points and would let Base + max Tactical Recharge + Battery reach or exceed full SC from collapse at every TL; this risks recreating the CP134 reset treadmill.
+shield-booster,reject_legacy_numeric_rederive_later,no,"Legacy pre-x2 +2 SC maps to +4 current SC, an outsized capacity increase relative to contemporary SC; rederive from current shield scale."
+shield-hardener,retain_existing_executable_candidate,yes,1 Space / 1 TP sustained / SA2 nonstacking affects penetration hardening rather than recharge and directly tests TP opportunity cost under the redesigned shield model.
+particle-deflection-screen,defer_specialist_threat,no,No current baseline attack tag cleanly represents particle/charged-beam specificity; universalizing the effect would defeat the specialist design.
+field-stabilizer,defer_specialist_overlap,no,Current anti-SPEN candidate overlaps Shield Hardener and needs a dedicated high-SPEN specialist lane before numerical promotion.

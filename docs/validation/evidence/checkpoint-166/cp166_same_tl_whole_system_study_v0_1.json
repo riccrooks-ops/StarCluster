@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "star-cluster-cp166-same-tl-whole-system-diagnostic-v0.1",
+  "checkpoint": 166,
+  "name": "Same-TL Whole-System Architecture and Tactical Diagnostic",
+  "baseCheckpoint": 165,
+  "acceptedBaselineRevision": "CP165-CR3",
+  "population": "pure_same_tl_current_working_effect_distinct",
+  "combatDoctrine": "cp147_tactical_utility",
+  "tlRange": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "representativesPerTl": 28,
+  "trialsPerVariant": 200,
+  "monotonicityTrialsPerVariant": 250,
+  "masterSeed": 16620260831,
+  "mixedTlShipsExecuted": false,
+  "differentTlCombatsExecuted": false,
+  "tuningAllowed": false,
+  "automaticPromotion": false,
+  "interpretation": {
+    "primaryPurpose": "Map the same-TL whole-ship architecture and tactical response surface before numerical tuning.",
+    "designBalanceAndTacticalPolicySeparated": true,
+    "balanceWatchesAreNotAcceptanceFailures": true,
+    "tacticsWatchesAreNotNumericalTuningAuthority": true,
+    "laterStageGuardrailsOnly": "Cross-TL and hybrid-TL substantive combat are not executed in CP166.",
+    "playerEnvelopeAndLegalExtremeEnvelopeRetained": true
+  },
+  "executionBoundary": {
+    "intactSystemDiagnostic": true,
+    "componentDamageStatesIntegrated": false,
+    "mixedFamilyMultipleMainWeaponsIntegrated": false,
+    "multipleSimultaneousPdsInstallationsIntegrated": false,
+    "repairDroneDistinctComponentTargetIntegrated": false,
+    "deferredMechanicsMustBeReportedNotApproximated": true
+  },
+  "strictAcceptanceGates": {
+    "authorityHashesMustMatch": true,
+    "plannedCountsMustMatch": true,
+    "combatErrorsAllowed": 0,
+    "mirrorSymmetryFailuresAllowed": 0,
+    "balanceWatchRowsAreFailures": false,
+    "tacticalWatchRowsAreFailures": false
+  },
+  "expected": {
+    "skeletons": 101207,
+    "representatives": 252,
+    "pairGroups": 3654,
+    "combatVariants": 14616,
+    "substantiveCombatTrials": 2923200,
+    "monotonicityVariants": 288,
+    "monotonicityCombatTrials": 72000,
+    "totalDiagnosticCombatTrials": 2995200,
+    "effectDistinctStackCombinations": 635428
+  }
+}

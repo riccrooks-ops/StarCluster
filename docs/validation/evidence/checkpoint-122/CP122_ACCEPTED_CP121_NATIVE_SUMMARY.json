@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "star-cluster-cp122-accepted-cp121-native-summary-v0.1",
+  "checkpoint": 122,
+  "acceptedBaseline": 121,
+  "sourceArchive": "CP121_NATIVE_RESULTS_ACCEPTED.zip",
+  "sourceArchiveSha256": "7292b23b559c1ebb0c551c0cd09c3588cc3127e72a131b6eabebbd50ed9aff1e",
+  "damageScale": 2,
+  "equivalenceVariants": 4284,
+  "equivalencePairedTrials": 85680,
+  "equivalenceMismatchedTrials": 0,
+  "equivalenceExact": true,
+  "halfStepVariants": 2424,
+  "halfStepTrials": 4848000,
+  "trialErrors": 0,
+  "failedGates": [],
+  "parityCasesPassed": 25,
+  "parityCasesTotal": 25,
+  "disposition": "accepted_as_cp122_baseline_and_evidence_for_canonical_x2_damage_domain_migration",
+  "acceptedCheckpoint": 121,
+  "status": "accepted_native_baseline_for_cp122",
+  "archiveSha256": "7292b23b559c1ebb0c551c0cd09c3588cc3127e72a131b6eabebbd50ed9aff1e"
+}

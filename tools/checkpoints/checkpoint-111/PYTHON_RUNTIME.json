@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "implementation": "CPython",
+  "majorMinor": "3.13",
+  "stdlibOnly": true,
+  "purpose": "Deterministic Star Cluster checkpoint validation and testing infrastructure",
+  "productionBoundary": "The shipped C# / Godot game runtime must not require Python."
+}

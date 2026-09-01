@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "100",
+  "checkpointTitle": "Checkpoint 100 - TL3 Core Technology Table Foundation",
+  "checkpointDefinition": "tools/calibration/checkpoints/checkpoint-100.json",
+  "checkpointDefinitionSha256": "4d9420008706b2970151159d4041a2b3ad81bad145b8985a1583416f82d54c13",
+  "checkpointManifest": "CHECKPOINT_100_SHA256SUMS.txt",
+  "checkpointManifestSha256": "e8104cc761e0807414ccf278a7bd9813cdd3ea99cfd5f58dab9ae7cce16faaf6",
+  "status": "Success",
+  "repositoryOnly": false,
+  "startedUtc": "2026-08-13T22:52:12.8542858Z",
+  "completedUtc": "2026-08-13T22:52:27.8842438Z",
+  "elapsedSeconds": 15.120709499999998,
+  "sdk": {
+    "expected": "8.0.423",
+    "actual": "8.0.423"
+  },
+  "configuration": "Debug",
+  "requested": {
+    "trialsPerVariant": 250,
+    "jobs": 24
+  },
+  "build": {
+    "cleanExecuted": true,
+    "succeeded": true,
+    "warnings": 0,
+    "errors": 0,
+    "elapsedSeconds": 6.3075233
+  },
+  "tests": {
+    "succeeded": true,
+    "total": 876,
+    "passed": 876,
+    "failed": 0,
+    "skipped": 0,
+    "elapsedSeconds": 2.0289034999999997,
+    "trxPath": "out/checkpoint-100/test-results/checkpoint-tests.trx"
+  },
+  "primaryStudy": {
+    "id": null,
+    "variantCount": 0,
+    "trialsPerVariant": 250,
+    "totalTrials": 0
+  },
+  "aggregates": {
+    "configuredRunnerStages": 10,
+    "runnerStagesPassed": 10,
+    "runnerStagesFailed": 0,
+    "deterministicCases": 7,
+    "mechanicsCases": 90,
+    "variants": 0,
+    "trials": 0,
+    "selfTests": 63,
+    "failedGates": 0
+  },
+  "stages": [
+    {
+      "id": "deterministic",
+      "name": "Accepted deterministic moving-missile scenarios",
+      "command": "run-all",
+      "status": "Passed",
+      "startedUtc": "2026-08-13T22:52:22.9181245Z",
+      "completedUtc": "2026-08-13T22:52:23.5295296Z",
+      "elapsedSeconds": 0.6044961,
+      "outputPath": "out/checkpoint-100/deterministic",
+      "failedGates": 0
+    },
+    {
+      "id": "tl1-phase-a",
+      "name": "TL1 Phase A mechanics corpus",
+      "command": "tl1-phase-a",
+      "status": "Passed",
+      "startedUtc": "2026-08-13T22:52:23.5416376Z",
+      "completedUtc": "2026-08-13T22:52:23.9421055Z",
+      "elapsedSeconds": 0.3986172,
+      "outputPath": "out/checkpoint-100/tl1-phase-a",
+      "failedGates": 0
+    },
+    {
+      "id": "tl1-phase-b",
+      "name": "TL1 Phase B direct-fire corpus",
+      "command": "tl1-phase-b",
+      "status": "Passed",
+      "startedUtc": "2026-08-13T22:52:23.9505398Z",
+      "completedUtc": "2026-08-13T22:52:24.3147155Z",
+      "elapsedSeconds": 0.363676,
+      "outputPath": "out/checkpoint-100/tl1-phase-b",
+      "failedGates": 0
+    },
+    {
+      "id": "tl1-installation-space-envelope",
+      "name": "TL1 35-Space deterministic construction envelope and nominal power diagnostics",
+      "command": "tl1-installation-space-envelope",
+      "status": "Passed",
+      "startedUtc": "2026-08-13T22:52:24.3229292Z",
+      "completedUtc": "2026-08-13T22:52:24.6862999Z",
+      "elapsedSeconds": 0.3554218,
+      "outputPath": "out/checkpoint-100/tl1-installation-space-envelope",
+      "failedGates": 0
+    },
+    {
+      "id": "tl1-sensor-ew-foundation",
+      "name": "TL1 deterministic sensor reach, emissions, discrimination resistance, burn-through, and EW sweep",
+      "command": "tl1-sensor-ew-foundation",
+      "status": "Passed",
+      "startedUtc": "2026-08-13T22:52:24.6983683Z",
+      "completedUtc": "2026-08-13T22:52:25.0467211Z",
+      "elapsedSeconds": 0.34228569999999997,
+      "outputPath": "out/checkpoint-100/tl1-sensor-ew-foundation",
+      "failedGates": 0
+    },
+    {
+      "id": "cross-tl-cp99-exact-edge-preflight",
+      "name": "CP99 mandatory-Sensor exact-edge foundation deterministic preflight",
+      "command": "cross-tl-build-permutation-preflight",
+      "status": "Passed",
+      "startedUtc": "2026-08-13T22:52:25.0507327Z",
+      "completedUtc": "2026-08-13T22:52:25.6505179Z",
+      "elapsedSeconds": 0.5967911,
+      "outputPath": "out/checkpoint-100/cross-tl-cp99-exact-edge-preflight",
+      "failedGates": 0
+    },
+    {
+      "id": "cross-tl-cp99-exact-edge-generation",
+      "name": "CP99 11,776-build / 37,184-edge / 724-variant exact-edge generation",
+      "command": "cross-tl-build-permutation",
+      "status": "Passed",
+      "startedUtc": "2026-08-13T22:52:25.6586050Z",
+      "completedUtc": "2026-08-13T22:52:26.3833867Z",
+      "elapsedSeconds": 0.7223419,
+      "outputPath": "out/checkpoint-100/cross-tl-cp99-exact-edge",
+      "failedGates": 0
+    },
+    {
+      "id": "auxiliary-resource-endurance",
+      "name": "Deterministic finite-resource and recharge endurance stress study",
+      "command": "auxiliary-resource-endurance",
+      "status": "Passed",
+      "startedUtc": "2026-08-13T22:52:26.3894575Z",
+      "completedUtc": "2026-08-13T22:52:26.7443135Z",
+      "elapsedSeconds": 0.3502671,
+      "outputPath": "out/checkpoint-100/auxiliary-resource-endurance",
+      "failedGates": 0
+    },
+    {
+      "id": "checkpoint-53-resource-semantics-lock",
+      "name": "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+      "command": "auxiliary-resource-endurance",
+      "status": "Passed",
+      "startedUtc": "2026-08-13T22:52:26.7505487Z",
+      "completedUtc": "2026-08-13T22:52:27.1067584Z",
+      "elapsedSeconds": 0.3517488,
+      "outputPath": "out/checkpoint-100/checkpoint-53-resource-semantics-lock",
+      "failedGates": 0
+    },
+    {
+      "id": "runner-self-tests",
+      "name": "ScenarioRunner self-tests",
+      "command": "self-test",
+      "status": "Passed",
+      "startedUtc": "2026-08-13T22:52:27.1129221Z",
+      "completedUtc": "2026-08-13T22:52:27.8781556Z",
+      "elapsedSeconds": 0.762366,
+      "outputPath": null,
+      "failedGates": 0
+    }
+  ],
+  "outputPaths": {
+    "root": "out/checkpoint-100",
+    "acceptanceJson": "out/checkpoint-100/acceptance-summary.json",
+    "acceptanceText": "out/checkpoint-100/acceptance-summary.txt"
+  },
+  "firstFailure": null
+}

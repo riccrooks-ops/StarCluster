@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "star-cluster-tl1-sensor-ew-foundation-v1",
+  "id": "tl1-sew02-sensor-ew-foundation-range-sweep",
+  "checkpoint": 69,
+  "status": "diagnostic-candidate-sweep-same-hex-causal-fix",
+  "policy": "Separate sensing reach from EW discrimination; preserve same-hex LOS while still resolving emissions and ECM/ECCM; add balanced-0 without promoting a candidate to production.",
+  "maxTacticalSeparationHexes": 10,
+  "candidates": [
+    {
+      "id": "legacy-cp67-control",
+      "isHistoricalControl": true,
+      "passiveFirmRange": 3,
+      "passiveApproximateRange": 5,
+      "activeFirmRange": 6,
+      "activeApproximateRange": 9,
+      "activePowerCost": 2,
+      "activeOverloadAdditionalPowerCost": 1,
+      "activeOverloadFirmBonus": 2,
+      "activeOverloadApproximateBonus": 2,
+      "rationale": "Frozen CP67 high-active control for scale comparison only; retains the historical 2-TP maximum setting as its one represented control envelope."
+    },
+    {
+      "id": "intimate-1",
+      "isHistoricalControl": false,
+      "passiveFirmRange": 1,
+      "passiveApproximateRange": 2,
+      "activeFirmRange": 2,
+      "activeApproximateRange": 3,
+      "activePowerCost": 1,
+      "activeOverloadAdditionalPowerCost": 1,
+      "activeOverloadFirmBonus": 1,
+      "activeOverloadApproximateBonus": 1,
+      "rationale": "Very intimate TL1 combat; overload extends the envelope one hex without matching most physical weapon reach."
+    },
+    {
+      "id": "intimate-2",
+      "isHistoricalControl": false,
+      "passiveFirmRange": 1,
+      "passiveApproximateRange": 2,
+      "activeFirmRange": 2,
+      "activeApproximateRange": 3,
+      "activePowerCost": 1,
+      "activeOverloadAdditionalPowerCost": 1,
+      "activeOverloadFirmBonus": 2,
+      "activeOverloadApproximateBonus": 2,
+      "rationale": "Same low normal envelope with a more dramatic bounded overload decision."
+    },
+    {
+      "id": "balanced-0",
+      "isHistoricalControl": false,
+      "passiveFirmRange": 1,
+      "passiveApproximateRange": 3,
+      "activeFirmRange": 3,
+      "activeApproximateRange": 4,
+      "activePowerCost": 1,
+      "activeOverloadAdditionalPowerCost": 1,
+      "activeOverloadFirmBonus": 1,
+      "activeOverloadApproximateBonus": 1,
+      "rationale": "Extends passive Approximate awareness to range 3 without increasing passive Firm targeting range; normal Active and overload match balanced-1."
+    },
+    {
+      "id": "balanced-1",
+      "isHistoricalControl": false,
+      "passiveFirmRange": 1,
+      "passiveApproximateRange": 2,
+      "activeFirmRange": 3,
+      "activeApproximateRange": 4,
+      "activePowerCost": 1,
+      "activeOverloadAdditionalPowerCost": 1,
+      "activeOverloadFirmBonus": 1,
+      "activeOverloadApproximateBonus": 1,
+      "rationale": "Moderate normal Active reach while leaving Energy/Missile physical range ahead of ordinary TL1 Firm sensing."
+    },
+    {
+      "id": "balanced-2",
+      "isHistoricalControl": false,
+      "passiveFirmRange": 1,
+      "passiveApproximateRange": 2,
+      "activeFirmRange": 3,
+      "activeApproximateRange": 4,
+      "activePowerCost": 1,
+      "activeOverloadAdditionalPowerCost": 1,
+      "activeOverloadFirmBonus": 2,
+      "activeOverloadApproximateBonus": 2,
+      "rationale": "Moderate normal Active reach with a strong overload that can temporarily exploit more of the weapon envelope."
+    },
+    {
+      "id": "passive-plus",
+      "isHistoricalControl": false,
+      "passiveFirmRange": 2,
+      "passiveApproximateRange": 3,
+      "activeFirmRange": 3,
+      "activeApproximateRange": 4,
+      "activePowerCost": 1,
+      "activeOverloadAdditionalPowerCost": 1,
+      "activeOverloadFirmBonus": 1,
+      "activeOverloadApproximateBonus": 1,
+      "rationale": "Tests whether stronger core passive sensing leaves enough reason to install and power the optional Active Sensor suite."
+    }
+  ]
+}

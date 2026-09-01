@@ -1,0 +1,29 @@
+﻿component_id,display_name,previous_candidate_entry_tl,proposed_entry_tl,change,family_id,capacity_cost,status,rationale
+aux_kinetic_pds,Kinetic Point-Defense Battery,1,1,unchanged,pds,1,accepted_entry_floor_provisional_characteristics,Conventional gun-based close-in defense exists at TL1; its early accuracy and reaction performance remain deliberately modest.
+aux_amm_pds,Anti-Missile Missile Battery,3,1,moved_earlier,pds,1,accepted_entry_floor_provisional_characteristics,TL1 and TL2 use 25 rounds and 1 TP readiness; campaign endurance remains the intended ammunition constraint.
+aux_energy_pds,Energy Point-Defense Array,2,1,moved_earlier,pds,1,accepted_entry_floor_provisional_characteristics,Directed-energy point defense exists in recognizable real-world precursor form; TL1 availability does not imply high effectiveness or low power demand.
+aux_auxiliary_reactor,Auxiliary Reactor,2,3,moved_later,power_support,2,provisional_architecture,Renewable Tactical Power is too consequential for the earliest tiers.
+aux_apu,Auxiliary Power Unit,1,1,unchanged,power_support,1,provisional_architecture,Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional.
+aux_combat_battery,Combat Battery,1,1,unchanged,power_support,1,checkpoint_53_primary_candidate,Three +1 TP finite charges; maximum one discharge per tactical turn; no per-encounter cap.
+aux_power_capacitor,Power Capacitor,2,2,unchanged,power_support,1,provisional_architecture,Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional.
+aux_shield_battery,Shield Battery,1,3,moved_later,shield_support,1,provisional_architecture,TL1 standard shields should not require a strong emergency-restoration AUX.
+aux_shield_booster,Shield Booster,2,3,moved_later,shield_support,1,provisional_architecture,Capacity growth belongs after the TL2 standard shield package is established.
+aux_power_stabilizer,Shield Power Stabilizer,2,3,moved_later,shield_support,1,provisional_architecture,Recharge-efficiency manipulation is deferred with other shield-support systems.
+aux_shield_hardener,Shield Hardener,3,4,moved_later,shield_support,1,provisional_architecture,Flat protection is a future-SF capability with high weak-attack suppression risk.
+aux_ablative_armor,Ablative Armor Layer,1,2,moved_later,armor_support,1,checkpoint_53_entry_floor_candidate,TL1 remains compact; Ablative Armor begins at TL2 with separately tuned entry characteristics.
+aux_energized_armor_controller,Energized Armor Controller,3,4,moved_later,armor_support,1,provisional_architecture,Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional.
+aux_evasive_maneuver_system,Evasive Maneuver System,2,1,moved_earlier,maneuver_support,1,provisional_architecture,Conventional maneuver-control support is realistic TL1 technology; its effect remains modest and tradeoff-bound.
+aux_active_sensor_array,Active Sensor Array,1,1,unchanged,sensor_ew_support,1,provisional_architecture,Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional.
+aux_ecm_suite,Electronic Countermeasures Suite,2,1,moved_earlier,sensor_ew_support,1,provisional_architecture,Conventional ECM exists at TL1 in a modest form.
+aux_eccm_suite,Electronic Counter-Countermeasures Suite,2,1,moved_earlier,sensor_ew_support,1,provisional_architecture,A TL1 ECM counter must exist in the same early technology environment.
+aux_tractor_projector,Tractor Projector,3,4,moved_later,maneuver_support,2,provisional_architecture,Direct movement denial is deferred to the future-SF era.
+aux_repair_drone_bay,Repair Drone Bay,2,4,moved_later,repair_support,1,provisional_architecture,TL1-TL3 repair remains human-crewed; robotic repair begins at TL4.
+aux_hangar_bay,Auxiliary Hangar Bay,3,3,unchanged,utility_support,2,provisional_architecture,Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional.
+aux_laboratory_module,Laboratory Module,1,1,unchanged,utility_support,1,provisional_architecture,Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional.
+aux_mining_module,Mining Module,1,1,unchanged,utility_support,1,provisional_architecture,Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional.
+aux_fabrication_module,Fabrication Module,2,3,moved_later,utility_support,2,provisional_architecture,Broad resource conversion is deferred to peak conventional engineering.
+aux_cargo_expansion,Cargo Expansion Module,1,1,unchanged,utility_support,1,provisional_architecture,Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional.
+aux_kinetic_magazine_expansion,Kinetic Magazine Expansion,1,1,unchanged,utility_support,1,provisional_architecture,Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional.
+aux_missile_magazine_expansion,Missile Magazine Expansion,1,1,unchanged,utility_support,1,provisional_architecture,Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional.
+aux_communications_relay,Tactical Communications Relay,2,2,unchanged,sensor_ew_support,1,provisional_architecture,Current entry floor remains a reasonable initial architecture proposal; exact characteristics remain provisional.
+aux_self_healing_repair,Self-Healing Repair System,,7,new_concept_lineage,repair_support,,concept_proposal,"Represents the proposed TL7-TL9 nanotechnological, adaptive-material, biological, or comparable self-healing era; exact mechanics are unresolved."

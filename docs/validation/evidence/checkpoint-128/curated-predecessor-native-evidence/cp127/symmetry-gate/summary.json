@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "analysis": {
+    "schemaVersion": "star-cluster-cp127-main-subsystem-stabilization-results-v0.1",
+    "checkpoint": 127,
+    "mode": "symmetry_gate",
+    "comparisons": 2250,
+    "combatExecutions": 4500,
+    "mismatches": 0,
+    "failedGates": []
+  },
+  "gates": {
+    "failed": [],
+    "passed": true
+  },
+  "failedGates": 0
+}

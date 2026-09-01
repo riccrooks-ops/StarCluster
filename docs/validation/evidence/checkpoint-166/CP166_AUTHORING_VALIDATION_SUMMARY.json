@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "star-cluster-cp166-authoring-validation-v0.1",
+  "checkpoint": 166,
+  "date": "2026-08-31",
+  "acceptedBase": "CP165-CR3",
+  "passed": true,
+  "pythonRegression": {
+    "testsPassed": 824,
+    "testModules": 57,
+    "failed": 0,
+    "skipped": 0,
+    "note": "Heavy CP162/CP164/CP166 modules were split into bounded commands in the authoring container; every test was accounted for and passed."
+  },
+  "cp166Focused": {
+    "testsPassed": 32,
+    "failed": 0
+  },
+  "preflight": {
+    "checksPassed": 38,
+    "checksTotal": 38
+  },
+  "plan": {
+    "passed": true,
+    "architectureSkeletons": 101207,
+    "effectDistinctStackCombinations": 635428,
+    "representatives": 252,
+    "pairGroups": 3654,
+    "combatVariants": 14616,
+    "substantiveCombatTrials": 2923200,
+    "monotonicityVariants": 288,
+    "monotonicityCombatTrials": 72000,
+    "totalDiagnosticCombatTrials": 2995200
+  },
+  "staticCensus": {
+    "passed": true,
+    "architectureSkeletons": 101207,
+    "effectDistinctStackCombinations": 635428,
+    "representatives": 252,
+    "coverageRows": 16
+  },
+  "liveSmoke": {
+    "passed": true,
+    "liveCombatTrials": 8,
+    "errors": 0,
+    "includesExactMirrorEquivalence": true
+  },
+  "contract": {
+    "syntheticRepositoryOnly": "PASS",
+    "syntheticFinal": "PASS"
+  },
+  "authority": {
+    "cp165CurrentAuthorityHashesMatch": true,
+    "cp165DocumentationStructureAuditPasses": true,
+    "productionRuntimeStillMatchesFrozenCP164Manifest": true,
+    "currentAuthorityMutated": false
+  },
+  "nativeWindowsAcceptanceRequired": {
+    "dotnetSdk": "8.0.423",
+    "xunitExpected": 934,
+    "scenarioRunnerSelfTestsExpected": 70,
+    "researchParityExpected": 25,
+    "substantiveStudyPending": true
+  }
+}

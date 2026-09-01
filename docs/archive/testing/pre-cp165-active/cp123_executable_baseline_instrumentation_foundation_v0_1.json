@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "star-cluster-cp123-executable-baseline-foundation-v0.1",
+  "checkpoint": 124,
+  "status": "executable_reference_and_instrumentation_foundation",
+  "purpose": "Bind accepted CP123 TL1-TL9 reference authorities to a reusable research catalog, exhaustively enumerate a broad same-TL legal-build envelope, and make raw instrumentation validation a blocking acceptance gate before larger statistical studies.",
+  "acceptedReferenceBaseline": 123,
+  "acceptedImplementationBaseline": 122,
+  "sourceMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_3.json",
+  "technologyLevels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "profileFamilies": 20,
+  "expectedProfileRows": 180,
+  "buildEnvelope": {
+    "sameTlOnly": true,
+    "mandatoryCore": [
+      "Hull",
+      "Armor",
+      "1-2 Main Weapons",
+      "1-2 Reactors",
+      "STL",
+      "FTL",
+      "Computer",
+      "Sensor"
+    ],
+    "optionalAxes": [
+      "Shield",
+      "0-2 ECM",
+      "0-2 ECCM",
+      "none/Kinetic/Energy/AMM PDS",
+      "Shield Hardener when available",
+      "GP or Swarmer Missile Flight when available"
+    ],
+    "sameTypeEwRedundancy": "permitted_for_redundancy_nonadditive",
+    "missionAuxFiller": "all residual Installation Space is explicitly recorded as zero-tactical-effect mission/AUX capacity",
+    "legality": "combat Space must not exceed same-TL Hull Installation Space capacity"
+  },
+  "mixedTlPopulation": {
+    "registered": true,
+    "executed": false,
+    "reason": "CP124 establishes catalog, legality, and telemetry contracts first. Mixed/nonadjacent TL becomes a larger follow-on study once the foundation is accepted."
+  },
+  "pipelineSmokeTrialsPerVariant": 1,
+  "pipelineSmokePolicy": "Zero-inference one-trial mirrors exercise every TL, all three Main Weapon families, GP Missile, and TL2+ Swarmer paths. Smoke outcomes are not balance evidence.",
+  "instrumentationAcceptanceGate": true,
+  "telemetryPolicy": {
+    "rawCountersFirst": true,
+    "derivedMetricsMustBeReconstructible": true,
+    "missileOwnership": "launches are attacker-side; terminal arrivals, guidance attempts, and missile hits are target-side",
+    "damageLayerAccounting": "raw damage, penetration contribution, Shield/Armor prevention/absorption, Integrity/Protection damage, Hull damage, and packet count remain separately observable",
+    "damageControl": "attempts, successes, and Hull restored are explicit raw counters even though Damage Control is not integrated into the CP124 combat smoke",
+    "internalCriticalTelemetry": false
+  },
+  "blockingGates": [
+    "accepted CP123 reference provenance",
+    "20x9 executable profile coverage",
+    "exhaustive same-TL legal-build enumeration with explicit mission/AUX fill",
+    "Kinetic/Energy/Missile GP coverage at TL1-TL9 and Swarmer coverage at TL2-TL9",
+    "same-type ECM/ECCM redundancy remains non-additive",
+    "70 zero-weight pipeline smoke variants complete with zero trial errors",
+    "raw telemetry schema contains all required analysis primitives",
+    "deterministic instrumentation probes pass",
+    "25 C#/Python research parity fixtures remain green",
+    "no production C#/Godot or C# ScenarioRunner scenario-definition changes"
+  ],
+  "substantiveMonteCarloTrials": 0,
+  "balanceValidated": false,
+  "automaticPromotion": false,
+  "expectedRawBuildCombinations": 14112,
+  "expectedLegalBuilds": 9427,
+  "expectedLegalBuildsByTl": {
+    "1": 207,
+    "2": 276,
+    "3": 616,
+    "4": 736,
+    "5": 864,
+    "6": 1544,
+    "7": 1728,
+    "8": 1728,
+    "9": 1728
+  },
+  "expectedPipelineSmokeVariants": 70,
+  "expectedInstrumentationProbes": 9,
+  "expectedTelemetryContractMetrics": 47,
+  "consumerLimitations": {
+    "internalCriticalSubsystemDamage": "not consumed by Python ecology; production C# authority remains separate and critical cadence stays deferred",
+    "damageControlInCombat": "raw Damage Control counters and deterministic profile resolution are validated, but DamCon is not scheduled into the 70-trial combat smoke",
+    "missileRangeExhaustion": "the current Python ecology uses bounded ETA-to-terminal Flight travel rather than the C# moving-target range-exhaustion model; future studies needing range-exhaustion inference must use/extend a parity-validated consumer",
+    "optionalBranchMechanics": "the exhaustive envelope covers the established executable Shield Hardener and baseline component axes; other CP123 optional/deferred branch mechanics remain registered reference concepts, not silently simulated"
+  }
+}

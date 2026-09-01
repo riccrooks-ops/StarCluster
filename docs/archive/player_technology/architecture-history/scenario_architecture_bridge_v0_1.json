@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "id": "scenario-architecture-bridge-v0_1",
+  "checkpoint": 49,
+  "status": "validation_bridge_only",
+  "architectureFile": "docs/design/player_technology/player_technology_architecture_v0_1.json",
+  "tableDrivenScenarioGeneration": false,
+  "standardProfiles": [
+    {
+      "scenarioProfileId": "tl1-production",
+      "technologyLevel": 1,
+      "status": "retained_checkpoint_48_profile",
+      "architectureUse": "accepted early anchor; future table-derived revision requires explicit checkpoint"
+    },
+    {
+      "scenarioProfileId": "tl2-production",
+      "technologyLevel": 2,
+      "status": "accepted_standard",
+      "architectureUse": "accepted TL2 anchor; future table-derived revision requires explicit checkpoint"
+    }
+  ],
+  "auxiliaryProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/AuxiliaryTechnology/auxiliary-combat-screening-profiles-v0_1.json",
+  "auxiliaryMappings": [
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-none-tl1",
+      "technologyLevel": 1,
+      "counterfactual": true,
+      "architectureSubfamilyId": null,
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-none-tl2",
+      "technologyLevel": 2,
+      "counterfactual": true,
+      "architectureSubfamilyId": null,
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl1-kinetic-pds",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_kinetic_pds",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl1-amm-pds",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_amm_pds",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl1-combat-battery",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_combat_battery",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl1-shield-battery",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_shield_battery",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl1-ablative-armor",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_ablative_armor",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl1-kinetic-magazine",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_kinetic_magazine_expansion",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl1-missile-magazine",
+      "technologyLevel": 1,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_missile_magazine_expansion",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl2-kinetic-pds",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_kinetic_pds",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl2-amm-pds",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_amm_pds",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl2-combat-battery",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_combat_battery",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl2-shield-battery",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_shield_battery",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl2-ablative-armor",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_ablative_armor",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl2-kinetic-magazine",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_kinetic_magazine_expansion",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl2-missile-magazine",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_missile_magazine_expansion",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl2-energy-pds",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_energy_pds",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl2-auxiliary-reactor",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_auxiliary_reactor",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl2-power-capacitor",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_power_capacitor",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl2-shield-booster",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_shield_booster",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl2-power-stabilizer",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_power_stabilizer",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl2-evasive-maneuver-system",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_evasive_maneuver_system",
+      "status": "retained_checkpoint_48_estimate"
+    },
+    {
+      "scenarioAuxiliaryProfileId": "aux-r48-tl2-repair-drone-bay",
+      "technologyLevel": 2,
+      "counterfactual": false,
+      "architectureSubfamilyId": "aux_repair_drone_bay",
+      "status": "retained_checkpoint_48_estimate"
+    }
+  ],
+  "preservation": {
+    "scenarioHashFile": "tools/checkpoints/checkpoint-49/checkpoint_48_scenario_hashes.txt",
+    "requireByteIdenticalCheckpoint48Scenarios": true,
+    "notes": "Checkpoint 49 preserves all Checkpoint 48 scenario files. The bridge records architecture lineage but does not change runtime values."
+  }
+}

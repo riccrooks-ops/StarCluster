@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "star-cluster-cp143-authoring-validation-summary-v0.1",
+  "checkpoint": 143,
+  "baseCheckpoint": 142,
+  "status": "candidate_pending_native_validation",
+  "pythonTestsPassed": 287,
+  "focusedCp143TestsPassed": 12,
+  "expectedNativeXunitTests": 915,
+  "expectedNativeScenarioRunnerSelfTests": 70,
+  "expectedNativeResearchParityCases": 25,
+  "missileMirrorScenarios": 1980,
+  "attributionBatches": 4,
+  "executionErrors": 0,
+  "instrumentationEquivalenceCases": 12,
+  "instrumentationEquivalencePassed": 12,
+  "cp142PairedOutcomeReferenceCases": 1980,
+  "cp142PairedOutcomeMatches": 1980,
+  "cp142PairedOutcomeReferenceSha256": "07752e40076604e16e1a525a999cfcc248e2716bbdd8d7138d0b0f805afa5e94",
+  "resolved": 1751,
+  "resolvedGe25": 1085,
+  "turnCapSentinels": 228,
+  "safeStalemates": 1,
+  "medianResolvedTurns": 29.0,
+  "p90ResolvedTurns": 46.0,
+  "p95ResolvedTurns": 52.0,
+  "meanFirstLaunchTurn": 3.216188524590164,
+  "meanFirstTerminalTurn": 3.2469262295081966,
+  "meanTerminalTransitTurns": 0.030303030303030304,
+  "meanLaunchGapTurns": 3.5577690703400324,
+  "terminalArrivals": 52692,
+  "pdsIntercepts": 7227,
+  "pdsInterceptFractionOfTerminals": 0.13715554543384195,
+  "guidanceAttempts": 45465,
+  "guidanceHits": 36891,
+  "guidanceSuccessFraction": 0.8114153744638734,
+  "rangeExhaustions": 0,
+  "noFirmTrackTurnFraction": 0.7120897889471758,
+  "noFirmGeometryOrAcquisitionTurnFraction": 0.7120897889471758,
+  "noFirmEwDowngradeTurnFraction": 0.0,
+  "effectiveRangeOpenTurnFraction": 0.18834634622422838,
+  "trackCloseTurnFraction": 0.35503842869342445,
+  "tpDeniedNoWeaponPlanTurnFraction": 0.022104123459802366,
+  "recoveryFractionOfMissileRawDamage": 0.2940100620449906,
+  "pacingSignalCounts": {
+    "HEALTHY_UNDER25": 666,
+    "OFFENSIVE_EXHAUSTION": 1,
+    "SENSOR_WEAPON_ENVELOPE_OSCILLATION": 1284,
+    "TP_LAUNCH_DENIAL": 29
+  },
+  "selectedStrata": {
+    "BALANCED_CORE_NO_PDS": {
+      "medianResolvedTurns": 26.0,
+      "turnCapSentinels": 3,
+      "resolvedGe25": 112,
+      "pdsInterceptFraction": 0.0,
+      "recoveryFraction": 0.27236904540859486,
+      "tpDeniedNoWeaponPlanTurnFraction": 0.0
+    },
+    "ARMOR_PRESSURE": {
+      "medianResolvedTurns": 16.0,
+      "turnCapSentinels": 0,
+      "resolvedGe25": 3,
+      "pdsInterceptFraction": 0.0,
+      "recoveryFraction": 0.14279268132923828,
+      "tpDeniedNoWeaponPlanTurnFraction": 0.0
+    },
+    "KINETIC_PDS_PRESSURE": {
+      "medianResolvedTurns": 35.0,
+      "turnCapSentinels": 19,
+      "resolvedGe25": 156,
+      "pdsInterceptFraction": 0.27180966113914923,
+      "recoveryFraction": 0.352734365964796,
+      "tpDeniedNoWeaponPlanTurnFraction": 0.0
+    },
+    "ENERGY_PDS_PRESSURE": {
+      "medianResolvedTurns": 34.0,
+      "turnCapSentinels": 23,
+      "resolvedGe25": 135,
+      "pdsInterceptFraction": 0.21786111552518672,
+      "recoveryFraction": 0.3348824867619572,
+      "tpDeniedNoWeaponPlanTurnFraction": 0.0
+    },
+    "AMM_PDS_PRESSURE": {
+      "medianResolvedTurns": 39.0,
+      "turnCapSentinels": 36,
+      "resolvedGe25": 144,
+      "pdsInterceptFraction": 0.31785953177257525,
+      "recoveryFraction": 0.36034041903598824,
+      "tpDeniedNoWeaponPlanTurnFraction": 0.0
+    },
+    "POWER_CRISIS": {
+      "medianResolvedTurns": 40.0,
+      "turnCapSentinels": 116,
+      "resolvedGe25": 68,
+      "pdsInterceptFraction": 0.3329158839490712,
+      "recoveryFraction": 0.3508334732838902,
+      "tpDeniedNoWeaponPlanTurnFraction": 0.12777015101000197
+    }
+  },
+  "selectedTl": {
+    "TL2": {
+      "medianResolvedTurns": 31.0,
+      "turnCapSentinels": 27,
+      "meanLaunchGapTurns": 3.0828101699570354,
+      "guidanceSuccessFraction": 0.7064205195229538
+    },
+    "TL3": {
+      "medianResolvedTurns": 33.0,
+      "turnCapSentinels": 46,
+      "meanLaunchGapTurns": 3.825641025641026,
+      "guidanceSuccessFraction": 0.7399716009939652
+    },
+    "TL4": {
+      "medianResolvedTurns": 32.0,
+      "turnCapSentinels": 44,
+      "meanLaunchGapTurns": 4.042504301254302,
+      "guidanceSuccessFraction": 0.7514500170590243
+    },
+    "TL5": {
+      "medianResolvedTurns": 34.0,
+      "turnCapSentinels": 59,
+      "meanLaunchGapTurns": 4.463945707070707,
+      "guidanceSuccessFraction": 0.7878787878787878
+    },
+    "TL6": {
+      "medianResolvedTurns": 33.0,
+      "turnCapSentinels": 22,
+      "meanLaunchGapTurns": 4.5114634690215185,
+      "guidanceSuccessFraction": 0.8502772643253235
+    },
+    "TL7": {
+      "medianResolvedTurns": 30.0,
+      "turnCapSentinels": 6,
+      "meanLaunchGapTurns": 3.788230373248756,
+      "guidanceSuccessFraction": 0.8465201465201465
+    },
+    "TL8": {
+      "medianResolvedTurns": 22.0,
+      "turnCapSentinels": 23,
+      "meanLaunchGapTurns": 3.054694803213194,
+      "guidanceSuccessFraction": 0.9012024699382516
+    },
+    "TL9": {
+      "medianResolvedTurns": 15.0,
+      "turnCapSentinels": 0,
+      "meanLaunchGapTurns": 1.9998263888888888,
+      "guidanceSuccessFraction": 0.9459459459459459
+    }
+  },
+  "sourceMatrixUnmodified": true,
+  "hardTurnSentinel": 60,
+  "longResolvedTurn": 25,
+  "substantiveCombatTrials": 0,
+  "tuningAllowed": false,
+  "automaticPromotion": false,
+  "diagnosticConclusion": "Missile flight transit is negligible after launch; the dominant baseline pacing mechanism is repeated Firm-track loss/reacquisition caused by Sensor-to-Missile-weapon-envelope oscillation, with PDS, defensive recovery, guidance loss, and POWER_CRISIS TP denial acting as amplifiers.",
+  "nextStage": "whole-combat substantive Stage A after collapsing metadata-only R5: 6,850 distinct scenarios x 500 trials = 3,425,000 trials"
+}

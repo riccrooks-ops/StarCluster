@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "star-cluster-architecture-checkpoint-v1",
+  "checkpointId": "107b",
+  "title": "Checkpoint 107b - Provisional TL1-TL9 Technology / Component Table Acceptance Hotfix",
+  "acceptedBaseline": "106",
+  "contentCheckpoint": "107",
+  "scope": "checkpoint_107_acceptance_hotfix_schema_safe_native_precheck",
+  "numericalTlTableChanged": false,
+  "newTl4Tl9BalanceValuesAssigned": false,
+  "simulationOrCalibrationRun": false,
+  "declaredTrials": 0,
+  "dotnetBuildRequired": false,
+  "pythonRequired": false,
+  "stages": [],
+  "hotfix": {
+    "designContentChanged": false,
+    "cp107Failure": "The unaccepted CP107 contract used one-letter PowerShell helper names that collided case-insensitively with built-in aliases.",
+    "cp107aFailure": "The CP107a shared native precheck directly accessed an optional stages property under Set-StrictMode, causing PropertyNotFoundStrict for an architecture-only definition that omitted stages.",
+    "contractRepair": "Retain descriptive helper names and normalize the CP107b architecture definition with an explicit empty stages array.",
+    "precheckHardening": "Read optional checkpoint-definition and stage properties through PSObject.Properties so missing optional fields are safe under Set-StrictMode; retain alias-collision rejection.",
+    "precheckHardened": true,
+    "schemaSafeOptionalProperties": true
+  },
+  "nativeDependencyPrecheck": {
+    "required": true,
+    "script": "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+    "powerShellPaths": [
+      "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+      "tools/checkpoints/checkpoint-107b/apply_checkpoint_107b.ps1",
+      "tools/checkpoints/checkpoint-107b/test_checkpoint_107b_contract.ps1"
+    ],
+    "checkpointDefinitionPaths": [
+      "tools/checkpoints/checkpoint-107b/checkpoint_107b_architecture_definition.json"
+    ],
+    "allowedInterpreters": []
+  }
+}

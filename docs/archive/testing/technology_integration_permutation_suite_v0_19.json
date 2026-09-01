@@ -1,0 +1,566 @@
+{
+  "schemaVersion": "star-cluster-technology-integration-permutation-suite-v1",
+  "id": "technology-integration-permutation-suite-v0_19",
+  "checkpoint": 104,
+  "status": "standing_cp103_accepted_with_cp104_targeted_tl3_diagnostic_closure_and_higher_tl_expansion_gate",
+  "purpose": "Preserve native-accepted CP103 C#/Godot mechanics plus Python research architecture, run one bounded CP104 TL3 diagnostic-closure pass on the four signals exposed by CP103, and then proceed to higher-TL subsystem-chart expansion unless CP104 exposes an architectural defect. CP104 is not an open-ended TL3 tuning loop and cannot automatically change technology values.",
+  "supersedesForCurrentPlanning": "technology-integration-permutation-suite-v0_18",
+  "retainedHistoricalStudy": {
+    "id": "tl2-itc12-weapon-penetration-layered-defense-permutations",
+    "checkpoint": "86a",
+    "status": "accepted_native_evidence"
+  },
+  "validatedTechnologyPackages": {
+    "tl1-information-control": {
+      "tacticalComputerTargetingPp": 10,
+      "sensorDiscriminationResistance": 0,
+      "ecmNormalCeiling": 1,
+      "eccmNormalCeiling": 1,
+      "ewTpPerRating": 1
+    },
+    "tl2-information-control-working": {
+      "profile": "docs/design/player_technology/tl2_computing_sensor_ew_working_profile_v0_2.json",
+      "tacticalComputerTargetingPp": 12,
+      "sensorDiscriminationResistance": 1,
+      "ecmNormalCeiling": 2,
+      "eccmNormalCeiling": 2,
+      "ewTpPerRating": 1
+    }
+  },
+  "reusableAxes": {
+    "sideAWeaponFamily": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "opponentFamily": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "geometry": [
+      "adaptive-engage-side-a-first",
+      "adaptive-engage-side-b-first"
+    ],
+    "informationControlPackage": [
+      "tl1-information-control",
+      "tl2-information-control-working",
+      "mixed-tech-explicit",
+      "tl3-base-executable-candidate"
+    ],
+    "powerEnvironment": [
+      "accepted-reference",
+      "diagnostic-sensitivity"
+    ],
+    "degradedFirePermission": [
+      "firm-only",
+      "explicit-weapon-capability-diagnostic"
+    ],
+    "doctrine": [
+      "accepted-policy",
+      "explicit-diagnostic-policy"
+    ],
+    "powerReactorPackage": [
+      "tl1-peak-fission-5tp",
+      "tl2-early-fusion-6tp-working",
+      "mixed-tech-explicit",
+      "tl3-mature-compact-fusion-executable-candidate"
+    ],
+    "shieldCapacityPackage": [
+      "tl1-shield-2",
+      "tl2-shield-3-working",
+      "shield-4-upper-sensitivity",
+      "mixed-tech-explicit"
+    ],
+    "armorPackage": [
+      "tl1-armor-ap0-ai4",
+      "tl2-armor-ai5-working",
+      "tl2-armor-ap1-deferred",
+      "armor-ap1-ai5-upper-integration",
+      "mixed-tech-explicit"
+    ],
+    "weaponPenetrationPackage": [
+      "family-current",
+      "family-apen-sensitivity",
+      "family-spen-sensitivity",
+      "family-combined-upper",
+      "mixed-tech-explicit"
+    ]
+  },
+  "pairingPolicy": {
+    "sharedRandomStreamKey": "comparisonGroup",
+    "useCommonRandomStreamsWherePractical": true,
+    "note": "Candidate/control variants should share random streams whenever the changed dimension permits a clean paired comparison."
+  },
+  "activationPolicy": [
+    "Activate the smallest dependency-relevant submatrix that answers the causal question, then carry locally validated candidates into broader mixed-TL integration.",
+    "A shared sensitivity axis does not imply symmetric promotion across subsystem families.",
+    "Include mixed-TL, high-power-demand, and unusual-but-legal construction contexts when the changed dependency can interact with them.",
+    "Use actual-consumer preflight plus one-trial smoke before substantive Monte Carlo for any new or materially changed integrated study.",
+    "Audit dispatch, pre-run validation, shared/global gate classifications, study-specific gates, report routing, schema/baseline bindings, checkpoint stages, and study-family helpers before handoff.",
+    "Keep outcome/balance targets review-only unless a deterministic invariant is genuinely being promoted.",
+    "Construction legality follows actual Installation Space/prerequisite/compatibility rules; simultaneous Tactical Power insufficiency is an operational tradeoff, not an automatic invalid-build filter.",
+    "Generated broad-permutation studies must pass deterministic generator validation, actual-consumer preflight, and one-trial full-pipeline smoke before substantive screening.",
+    "Every ordinary legal combat build must include at least one Main Weapon, one Reactor, and one installed Sensor; optional explicit Main Weapon/Reactor duplication remains legal, while ECM/ECCM remain optional. Sensorless configurations are diagnostic/special-state fixtures outside the normal legal population.",
+    "Generated doctrine must price rated systems at their actual effective Tactical Power cost before optional activation decisions.",
+    "Dynamic movement/range doctrine must preserve attack eligibility. Broad legal-build fixed references may legitimately be track-denied or strategically weak, but zero-attack lanes caused overwhelmingly by self-inflicted Tactical Power starvation are release failures.",
+    "Generalized enumeration may include optional absence of non-core Shield/PDS/EW systems and explicit component duplication; never prune a legal build merely because it appears strategically weak or power-constrained. Sensor is part of the normal combat core in v0.14.",
+    "Redundant same-type ECM/ECCM installations are physically distinct for damage/redundancy but resolve to the highest applicable functional rating rather than additive strength.",
+    "Bounded screens should stratify by progression distance and build composition so cross-TL cliffs and odd legal combinations are not hidden by named recipes alone.",
+    "Separate structural engagement readiness from observed runtime combat activity; readiness describes whether a build can legally engage under declared reference/closing geometry, not whether doctrine actually fired.",
+    "Matched broad screens should sample unordered distinct legal pairs and emit both A-vs-B and B-vs-A orientations where practical so side assignment is observable rather than silently confounded with progression.",
+    "Classify used-Space explicitly and report Space-pair strata/deltas so legitimate construction-envelope advantages are not mislabeled as technology advantages.",
+    "When stratification changes sample frequency, report legal population counts, inclusion fractions, and population-weighted screening estimates alongside raw sample summaries; weighting restores cell prevalence but does not make one sampled pair exhaustive of a cell.",
+    "Use side-specific family/context activity telemetry and release gates so a dead Kinetic, Energy, or Missile lane cannot be hidden by activity from the opposing side.",
+    "Do not collapse mixed-TL comparisons into a universal scalar technology score; report explicit progression magnitude/direction, Space, family, and information-control comparability dimensions.",
+    "When primary-cell population weights are concentrated, increase the number of statistical representatives in larger cells before merely increasing trials per representative; keep allocation deterministic, bounded, and explicit.",
+    "Separate inference samples from diagnostic diversity overlays. Only the inference/statistical sample receives population-representative weight; overlays and named anchors remain zero-weight review evidence.",
+    "A structurally mutual-ready zero-action pairing must be diagnosed individually. If TrackAware movement never reached the mutual ready range, report movement/doctrine denial; if ready geometry was reached and multi-trial activity remained zero, fail the integration/activity gate.",
+    "Retain both movement-order bounds and report mover-order-neutral matched estimates plus initiative sensitivity before selecting any production initiative rule.",
+    "Movement-path closest approach and post-Movement combat geometry are distinct telemetry. Never use path closest approach as proof that an ordinary post-Movement firing window was reached.",
+    "For structural-readiness activity diagnosis, carry side-specific readiness metadata into the runtime variant and record per-trial post-Movement ready-window reach; do not depend on profile-label parsing or mean minimum path range.",
+    "Outlier reporting should surface engagement/activity anomalies, path-versus-post-Movement geometry divergence, and mover-order sensitivity separately so review priority is explicit without turning diagnostic tails into automatic gameplay gates.",
+    "Represent a technology upgrade as an explicit legal same-design/same-Space single-axis edge when possible; compare those edges combinatorially without requiring the higher-TL endpoint to win every matchup.",
+    "Broad mixed-TL combat screening uses Encounter/Adaptive Engage from opposite radius-5 map edges rather than a TL1-derived preselected firing range.",
+    "Adaptive AI must treat safe-Strain exhaustion as unavailable own capability and suppress futile overload requests; power-denied retries may re-enter only after a real own-power-state change.",
+    "Do not infer a TL2 propulsion progression merely from historical monolithic runtime profiles; add propulsion to the independent progression lattice only when the current Technology Matrix explicitly owns a promoted/working candidate.",
+    "For marginal progression screening, select exact same-Space lower->higher edges from the legal progression lattice and stratify by transition, weapon family, composition class, and Space utilization.",
+    "A single construction-axis transition may advance one or two physical components depending on installation multiplicity; validate the declared expected advanced-component delta rather than assuming +1.",
+    "Exact-edge causal screening does not inherit broad population-weighting requirements unless the study explicitly claims population inference.",
+    "Keep the accepted CP99 v6 TL1/TL2 foundation unchanged as a regression consumer; TL3 uses v7 rather than retrofitting variable capacity/Space-changing semantics into frozen v6.",
+    "For v7, distinguish construction-envelope coverage from semantic transition smoke. Collapse only states that are Installation-Space-isomorphic for construction legality; preserve every registered semantic transition in the transition smoke.",
+    "Do not use CP102 one-trial smoke outcomes as balance evidence. Its only stochastic purpose is proving the generated study reaches the actual integrated consumer without exceptions or failed deterministic gates.",
+    "For variable-capacity Hull populations, classify exact/near/underfilled Space by free-Space headroom relative to each selected Hull capacity; do not reuse one global used-Space cutoff across 35- and 36-Space ships.",
+    "When tactically isomorphic held labels would duplicate a weighted population, collapse them from population inference and preserve them as zero-weight named negative controls instead of biasing the sample frequency.",
+    "Frontier-component counts are explicit stratification/attribution dimensions, not universal technology scores; CP103 v8 counts TL3 frontier components while older schema versions retain their historical semantics.",
+    "Keep the weighted representative construction population separate from a named diagnostic legacy overlay when full all-tier Cartesian enumeration would be computationally wasteful or semantically misleading. Diagnostic-overlay comparisons receive zero population-inference weight.",
+    "CP103 substantive studies remain human-review evidence. Population-weighted outcomes, Pareto/frontier diagnostics, legacy stacking, Space breakpoints, and Tactical Power pressure do not automatically promote or retune technology values."
+  ],
+  "currentCoverage": {
+    "acceptedRegressionFoundation": {
+      "id": "cross-tl-build-permutation-foundation-v0_8",
+      "schemaVersion": "v6",
+      "scope": "TL1/TL2",
+      "legalBuildCount": 11776,
+      "progressionEdges": 37184,
+      "generatedVariants": 724,
+      "status": "native_accepted_cp99_regression"
+    },
+    "cp102ConstructionEnvelope": {
+      "id": "cross-tl-build-permutation-foundation-v0_9",
+      "schemaVersion": "v7",
+      "coverageMode": "construction_envelope",
+      "rawCombinationCount": 221184,
+      "legalBuildCount": 51264,
+      "exactFillBuildCount": 10752,
+      "generatedVariants": 0,
+      "status": "native_accepted_cp102_executable_regression"
+    },
+    "cp102TransitionSmoke": {
+      "id": "cross-tl-build-permutation-foundation-v1_0",
+      "schemaVersion": "v7",
+      "coverageMode": "transition_smoke",
+      "rawCombinationCount": 43008,
+      "legalBuildCount": 38400,
+      "progressionEdges": 220416,
+      "registeredTransitions": 16,
+      "logicalPairings": 16,
+      "geometries": 2,
+      "generatedVariants": 32,
+      "trialsPerVariant": 1,
+      "status": "native_accepted_cp102_executable_regression"
+    },
+    "balanceStatus": "cp103_native_accepted_cp104_targeted_diagnostic_candidate_no_automatic_promotion",
+    "cp103PrimaryPopulationScreen": {
+      "id": "cross-tl-build-permutation-foundation-v1_1",
+      "schemaVersion": "v8",
+      "coverageMode": "integration_screening",
+      "rawCombinationCount": 921600,
+      "legalBuildCount": 164160,
+      "exactFillBuildCount": 43584,
+      "nearFillBuildCount": 82848,
+      "underfilledBuildCount": 37728,
+      "populationCellCount": 96,
+      "statisticalBasePairs": 240,
+      "statisticalLogicalPairings": 480,
+      "diversityBasePairs": 32,
+      "diversityLogicalPairings": 64,
+      "namedLogicalPairings": 32,
+      "logicalPairings": 576,
+      "geometries": 2,
+      "generatedVariants": 1152,
+      "trialsPerVariant": 250,
+      "substantiveTrials": 288000,
+      "status": "native_accepted_cp103_population_screening_evidence",
+      "capacityRelativeSpaceStrata": true,
+      "isomorphicHeldLabelsCollapsed": true,
+      "conceptualUnorderedDistinctPairingEnvelope": 13474170720,
+      "populationAccounting": "bucket_combinatorial_no_full_pair_materialization",
+      "frontierTechnologyLevel": 3,
+      "tacticalFrontierAdditionalAxes": [
+        "hull",
+        "shieldHardener",
+        "stl",
+        "pds"
+      ],
+      "tacticalFrontierExcludesStrategicFtl": true,
+      "equalLowAdvancedMaximum": 5,
+      "equalHighAdvancedMinimum": 6,
+      "researchEngine": "starcluster-python-research-v1",
+      "gameMechanicsAuthority": "native_accepted_cp102_csharp"
+    },
+    "cp103LegacyDiagnosticOverlay": {
+      "id": "cross-tl-build-permutation-foundation-v1_2",
+      "schemaVersion": "v8",
+      "coverageMode": "diagnostic_overlay",
+      "declaredRawAxisProduct": 1417176,
+      "materializedUniqueNamedBuilds": 28,
+      "namedRecipeCount": 33,
+      "logicalPairings": 50,
+      "geometries": 2,
+      "generatedVariants": 100,
+      "trialsPerVariant": 250,
+      "substantiveTrials": 25000,
+      "populationInferenceWeight": 0,
+      "status": "native_accepted_cp103_zero_weight_diagnostic_evidence",
+      "runtimeTierFromInstalledEffectiveSelections": true,
+      "researchEngine": "starcluster-python-research-v1",
+      "gameMechanicsAuthority": "native_accepted_cp102_csharp"
+    },
+    "cp104TargetedDiagnosticClosure": {
+      "id": "cross-tl-build-permutation-foundation-v1_3",
+      "schemaVersion": "v8",
+      "coverageMode": "diagnostic_overlay",
+      "declaredRawAxisProduct": 124002900,
+      "materializedUniqueNamedBuilds": 52,
+      "namedRecipeCount": 56,
+      "logicalPairings": 128,
+      "geometries": 2,
+      "generatedVariants": 256,
+      "trialsPerVariant": 500,
+      "substantiveTrials": 128000,
+      "populationInferenceWeight": 0,
+      "status": "cp104_candidate_targeted_diagnostic_closure",
+      "categories": {
+        "legacyFrontierResponseComparisons": 16,
+        "movementOrderComparisons": 10,
+        "energySynergyComparisons": 22,
+        "powerHotspotComparisons": 14,
+        "controlComparisons": 2
+      },
+      "researchEngine": "starcluster-python-research-v1",
+      "gameMechanicsAuthority": "native_accepted_cp103_csharp",
+      "automaticTechnologyChange": false
+    }
+  },
+  "powerReactorPackages": {
+    "tl1-peak-fission-5tp": {
+      "status": "current_working_reference",
+      "technologyRole": "Peak fission",
+      "installationSpace": 6,
+      "operationalTacticalPower": 5
+    },
+    "tl2-early-fusion-6tp-working": {
+      "status": "validated_working_candidate",
+      "profile": "docs/design/player_technology/tl2_power_reactor_candidate_profile_v0_2.json",
+      "technologyRole": "Early practical fusion",
+      "installationSpace": 6,
+      "operationalTacticalPower": 6,
+      "productionPromotion": false
+    }
+  },
+  "shieldCapacityPackages": {
+    "tl1-shield-2": {
+      "status": "current_working_reference",
+      "installationSpace": 3,
+      "shieldCapacity": 2,
+      "baseRecharge": 1,
+      "tacticalRechargePerPower": 1,
+      "tacticalRechargePowerCap": 2,
+      "shieldArmor": 0
+    },
+    "shield-4-upper-sensitivity": {
+      "status": "diagnostic_upper_sensitivity",
+      "profile": "docs/design/player_technology/tl2_shield_capacity_candidate_profile_v0_2.json",
+      "installationSpace": 3,
+      "shieldCapacity": 4,
+      "productionPromotion": false
+    },
+    "tl2-shield-3-working": {
+      "status": "cross_tl_validated_candidate",
+      "profile": "docs/design/player_technology/tl2_shield_capacity_candidate_profile_v0_2.json",
+      "installationSpace": 3,
+      "shieldCapacity": 3,
+      "productionPromotion": false
+    }
+  },
+  "armorPackages": {
+    "tl1-armor-ap0-ai4": {
+      "status": "current_working_reference",
+      "basePrimaryArmorInstallationSpace": 0,
+      "armorProtection": 0,
+      "armorIntegrity": 4
+    },
+    "tl2-armor-ai5-working": {
+      "status": "cross_tl_validated_candidate",
+      "profile": "docs/design/player_technology/tl2_armor_ap_ai_candidate_profile_v0_2.json",
+      "armorProtection": 0,
+      "armorIntegrity": 5,
+      "productionPromotion": false
+    },
+    "tl2-armor-ap1-deferred": {
+      "status": "experimental_deferred_candidate",
+      "profile": "docs/design/player_technology/tl2_armor_ap_ai_candidate_profile_v0_2.json",
+      "armorProtection": 1,
+      "armorIntegrity": 4,
+      "productionPromotion": false
+    },
+    "armor-ap1-ai5-upper-integration": {
+      "status": "diagnostic_upper_integration_sensitivity",
+      "profile": "docs/design/player_technology/tl2_armor_ap_ai_candidate_profile_v0_2.json",
+      "armorProtection": 1,
+      "armorIntegrity": 5,
+      "productionPromotion": false
+    }
+  },
+  "weaponPenetrationPackages": {
+    "profile": "docs/design/player_technology/tl2_weapon_penetration_working_profile_v0_2.json",
+    "promotionPolicy": "family_specific_human_review",
+    "automaticPromotion": false,
+    "kineticTl2Working": {
+      "shieldPenetration": 1,
+      "armorPenetration": 1,
+      "status": "locally_validated_working_candidate"
+    },
+    "kineticSpen2Status": "experimental_sensitivity",
+    "energyTl2PenetrationPromotion": null,
+    "missileTl2PenetrationPromotion": null
+  },
+  "legalBuildEnumeration": {
+    "acceptedTl1Tl2RegressionFoundation": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v0_8.json",
+    "cp102ConstructionEnvelope": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v0_9.json",
+    "cp102TransitionSmoke": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_0.json",
+    "cp102RuntimeProfiles": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl3-standard-runtime-profiles-v0_4.json",
+    "constructionEnvelopeRawCombinationCount": 221184,
+    "constructionEnvelopeLegalBuildCount": 51264,
+    "constructionEnvelopeExactFillBuildCount": 10752,
+    "transitionSmokeRawCombinationCount": 43008,
+    "transitionSmokeLegalBuildCount": 38400,
+    "transitionSmokeProgressionEdgeCount": 220416,
+    "constructionGuardrails": {
+      "minimumMainWeaponCount": 1,
+      "minimumReactorCount": 1,
+      "additionalMainWeaponsOptional": true,
+      "additionalReactorsOptional": true,
+      "duplicationMustBeExplicit": true,
+      "redundantEwInstallationsAllowed": true,
+      "ecmSameTypeRatingsAdditive": false,
+      "eccmSameTypeRatingsAdditive": false,
+      "ewDuplicateResolution": "highest_applicable_functional_rating",
+      "powerSufficiencyIsConstructionLegalityFilter": false,
+      "minimumSensorCount": 1,
+      "sensorlessDiagnosticsAllowedOutsideLegalPopulation": true
+    },
+    "status": "cp102_v7_native_accepted_cp103_v8_candidate",
+    "notes": [
+      "The construction envelope deliberately collapses Space-isomorphic family/mode states that cannot alter legality; semantic coverage is owned by the 16-transition smoke.",
+      "No legal v7 build fits two full Main Weapons plus two full Main Reactors in the current 35/36-Space envelopes.",
+      "Tactical Power insufficiency remains an operational tradeoff, not a construction rejection criterion.",
+      "CP103 v8 population inference uses capacity-relative free-Space headroom: exact=0 free, near=1-3 free, underfilled=>3 free.",
+      "The CP103 weighted population collapses tactically isomorphic held FTL2/FTL3 and Kinetic-PDS2/PDS3 labels; those transitions remain explicit zero-weight negative controls in the legacy diagnostic overlay.",
+      "The CP103 diagnostic overlay materializes only its declared named legal builds; its raw Cartesian axis product is a contract bound, not an inferred population."
+    ],
+    "cp103PrimaryPopulation": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_1.json",
+    "cp103LegacyDiagnosticOverlay": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_2.json",
+    "cp103PrimaryRawCombinationCount": 921600,
+    "cp103PrimaryLegalBuildCount": 164160,
+    "cp103PrimaryExactFillBuildCount": 43584,
+    "cp103PrimaryNearFillBuildCount": 82848,
+    "cp103PrimaryUnderfilledBuildCount": 37728,
+    "cp103PrimaryPopulationCellCount": 96,
+    "cp103LegacyOverlayDeclaredRawAxisProduct": 1417176,
+    "cp103LegacyOverlayMaterializedUniqueNamedBuilds": 28
+  },
+  "tl3CandidateRegistration": {
+    "profile": "docs/design/player_technology/tl3_base_technology_candidates_v0_2.json",
+    "status": "implemented_executable_candidate_not_calibrated_not_promoted",
+    "completeTl3ShipPackage": true,
+    "currentExecutableFoundation": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_0.json",
+    "registeredTransitions": [
+      {
+        "id": "hull-h2-to-h3",
+        "stream": "hull",
+        "kind": "capacity_integration",
+        "installationSpaceDelta": 1,
+        "summary": "Increase player-cruiser Installation Space capacity from 35 to 36 while holding Hull/personnel/cargo/shuttle values."
+      },
+      {
+        "id": "computer-c2-to-c3",
+        "stream": "tacticalComputer",
+        "kind": "capability_addition",
+        "installationSpaceDelta": 0,
+        "summary": "Hold +12 ordinary/-25 Approximate; add +5 Evasive Compensation."
+      },
+      {
+        "id": "sensor-s2-to-s3",
+        "stream": "sensor",
+        "kind": "operating_mode_addition",
+        "installationSpaceDelta": 0,
+        "summary": "Add normal High Active 4/5 at 2 TP/no Strain alongside Low 3/4 at 1 TP."
+      },
+      {
+        "id": "ecm-ecm2-to-ecm3",
+        "stream": "ecm",
+        "kind": "power_efficiency",
+        "installationSpaceDelta": 0,
+        "summary": "Hold rating2; full normal cost 2->1 TP."
+      },
+      {
+        "id": "eccm-eccm2-to-eccm3",
+        "stream": "eccm",
+        "kind": "power_efficiency",
+        "installationSpaceDelta": 0,
+        "summary": "Hold rating2; full normal cost 2->1 TP."
+      },
+      {
+        "id": "reactor-r2-to-r3",
+        "stream": "powerReactor",
+        "kind": "miniaturization",
+        "installationSpaceDelta": -1,
+        "summary": "Hold 6 TP; 6->5 Space."
+      },
+      {
+        "id": "stl-stl2-to-stl3",
+        "stream": "stlDrive",
+        "kind": "primary_performance",
+        "installationSpaceDelta": 0,
+        "summary": "Move3 at 5 Space; bounded Overload I remains +1 Move with current power/fuel/Strain costs."
+      },
+      {
+        "id": "ftl-ftl2-to-ftl3",
+        "stream": "ftlDrive",
+        "kind": "primary_performance",
+        "installationSpaceDelta": 0,
+        "summary": "Strategic Move3 at 5 Space; frontier stop rules held."
+      },
+      {
+        "id": "shield-sh2-to-tl3-hardener-unlock",
+        "stream": "shield",
+        "kind": "optional_component_unlock",
+        "installationSpaceDelta": 1,
+        "summary": "Hold Capacity3; optional 1-Space Hardener 1 TP -> SA1."
+      },
+      {
+        "id": "armor-a2-to-a3",
+        "stream": "armor",
+        "kind": "protection_maturation",
+        "installationSpaceDelta": 0,
+        "summary": "AP0/AI5 -> AP1/AI5."
+      },
+      {
+        "id": "weapon-k2-to-k3",
+        "stream": "kineticMainWeapon",
+        "kind": "power_efficiency",
+        "installationSpaceDelta": 0,
+        "summary": "Hold +20/DAM4/SPEN1/APEN1/Range4/Ammo100; ordinary firing 1->0 TP."
+      },
+      {
+        "id": "weapon-e2-to-e3",
+        "stream": "energyMainWeapon",
+        "kind": "safe_output_maturation",
+        "installationSpaceDelta": 0,
+        "summary": "Hold low/standard; normalize 3-TP DAM4 former overload-level output as a safe rated High mode with zero Strain."
+      },
+      {
+        "id": "weapon-m2-to-m3",
+        "stream": "missileMainWeapon",
+        "kind": "autonomy_propulsion",
+        "installationSpaceDelta": 0,
+        "summary": "Hold warhead/range/magazine; standard onboard navigation sensor plus TL3 missile drive Move4; seeker remains optional."
+      },
+      {
+        "id": "pds-k2-to-k3",
+        "stream": "kineticPds",
+        "kind": "explicit_hold",
+        "installationSpaceDelta": 0,
+        "summary": "Hold TL2 base13/RC1/1TP/Ammo60."
+      },
+      {
+        "id": "pds-e2-to-e3",
+        "stream": "energyPds",
+        "kind": "power_efficiency",
+        "installationSpaceDelta": 0,
+        "summary": "Hold base16/RC1; readiness 2->1 TP."
+      },
+      {
+        "id": "pds-amm2-to-amm3",
+        "stream": "ammPds",
+        "kind": "readiness_mode_addition",
+        "installationSpaceDelta": 0,
+        "summary": "Hold base20/Ammo25; add 2-TP readiness mode for total RC2 while retaining 1-TP RC1."
+      }
+    ],
+    "explicitHolds": {
+      "kineticPenetration": "SPEN1/APEN1",
+      "energyPenetration": "SPEN1/APEN1",
+      "missilePenetration": "SPEN1/APEN2",
+      "mainWeaponSpace": 6,
+      "stlDriveSpace": 5,
+      "ftlDriveSpace": 5
+    },
+    "deferredStreams": [
+      "Additional TL3 Auxiliary/support catalog beyond Shield Hardener",
+      "Pinnacle lower-TL legacy-family items such as a future Optimum Fission Reactor",
+      "Specialist Kinetic/Energy/Missile variants and missile seeker/detailed navigation-sensor subprofiles",
+      "Production initiative"
+    ],
+    "runtimeActivationRequirements": [
+      "Native CP102 RepositoryOnly must validate v7 bindings/counts/transition coverage and preserve CP99 v6 regression authority.",
+      "Native build/tests/self-tests must pass warning-as-error.",
+      "Actual v7 construction consumer must run preflight-only successfully.",
+      "Actual v7 transition consumer must generate exactly 32 variants and its one-trial integrated smoke must complete without failed gates/trial errors.",
+      "RepositoryOnly followed immediately by full acceptance in the same clean extraction must pass.",
+      "Those gates were satisfied by native-accepted CP102 Corrected Replacement 3; calibration/promotion remain separate future decisions."
+    ],
+    "buildSanityProfile": "docs/design/player_technology/tl3_base_build_sanity_v0_1.json",
+    "completeBaseTableOnly": true,
+    "implementationProfile": "docs/design/player_technology/tl3_executable_implementation_profile_v0_1.json",
+    "constructionEnvelope": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v0_9.json"
+  },
+  "tl3CombatConsumerEnabled": true,
+  "tl3BaseTableComplete": true,
+  "tl3BuildSanity": {
+    "hullSpace": 36,
+    "singleMainSingleReactorUsedSpace": 27,
+    "dualMainSingleReactorUsedSpace": 33,
+    "singleMainDualReactorUsedSpace": 32,
+    "dualMainDualReactorUsedSpace": 38,
+    "dualMainDualReactorLegal": false,
+    "singleReactorOperationalTp": 6,
+    "profile": "docs/design/player_technology/tl3_base_build_sanity_v0_1.json"
+  },
+  "tl3ExecutableImplementationProfile": "docs/design/player_technology/tl3_executable_implementation_profile_v0_1.json",
+  "cp102NoBalanceInference": true,
+  "cp103NoAutomaticPromotion": true,
+  "cp102NativeAccepted": true,
+  "cp103PrimaryFoundation": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_1.json",
+  "cp103LegacyDiagnosticOverlay": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v1_2.json",
+  "researchSimulation": {
+    "engine": "starcluster-python-research-v1",
+    "python": "CPython 3.13.x",
+    "stdlibOnly": true,
+    "gameMechanicsAuthority": "C#/Godot and accepted native deterministic regressions",
+    "csharpResearchExtension": false,
+    "executableStudyValidationRequired": true,
+    "fullVariantSmokeBeforeSubstantive": true,
+    "automaticPromotion": false,
+    "latestResearchCheckpoint": "104"
+  },
+  "cp103NativeAccepted": true,
+  "cp104NoAutomaticPromotion": true,
+  "higherTlExpansionGate": {
+    "afterCheckpoint104": true,
+    "defaultNextPhase": "extend basic subsystem Technology-Level chart beyond TL3",
+    "additionalTl3CalibrationOnlyForArchitecturalDefect": true
+  }
+}

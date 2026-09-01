@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "cp105-web-source-index-v1",
+  "checkpoint": 105,
+  "sources": [
+    {
+      "id": "CONCEPT-v0.7e",
+      "type": "project-authority",
+      "title": "Star Cluster Game Concept v0.7e",
+      "location": "docs/archive/concepts/Star_Cluster_Game_Concept_v0.7e.docx",
+      "use": "Authoritative research philosophy, current Power model, mixed-TL/legacy rules and Precursor boundary."
+    },
+    {
+      "id": "RM-SPACEDOCK",
+      "type": "project-reference-corpus",
+      "title": "Expanded Spacedock reference-mining corpus",
+      "location": "docs/references/reference-mining/",
+      "use": "Qualitative progression, weapon identity, power/storage/thermal separation, sensors/EW, missiles/PDS, Damage Control, FTL topology, stealth and exotic-tech candidates."
+    },
+    {
+      "id": "RI-ARCHIVE",
+      "type": "project-reference-synthesis",
+      "title": "Checkpoint 23 reference mining and design reconciliation",
+      "location": "docs/archive/player_technology/reference-mining/",
+      "use": "Broad-category research, miniaturization, qualitative milestones, separate STL/FTL, KISS/originality guardrails."
+    },
+    {
+      "id": "MOO2",
+      "type": "commercial-game-reference",
+      "title": "Master of Orion II manual",
+      "location": "docs/references/MOO2_GAME_MANUAL.PDF",
+      "use": "Pattern inspiration only: research fields with multiple applications, qualitative unlocks and later miniaturization. No names/tables/ladders copied."
+    },
+    {
+      "id": "GURPS-SPACE",
+      "type": "commercial-game-reference",
+      "title": "GURPS Space 4e",
+      "location": "docs/references/GURPS - 4th Edition - Space.pdf",
+      "use": "Pattern inspiration only: “taxonomy of miracles,” grounded-vs-superscience tone, drive/gravity/force-field/exotic-resource questions. No mechanics copied."
+    },
+    {
+      "id": "TI-TECH",
+      "type": "external-game-reference",
+      "title": "Terra Invicta Official Wiki - Technology / Tech List",
+      "url": "https://wiki.hoodedhorse.com/Terra_Invicta/Technology",
+      "use": "Inspiration for enabling-science webs, multiple engineering applications, lower-SF material/computing/power branches. No exact tree/names/stats copied."
+    },
+    {
+      "id": "TI-POWER",
+      "type": "external-game-reference",
+      "title": "Terra Invicta Official Wiki - Power Plant List / Advanced Fission Systems",
+      "url": "https://wiki.hoodedhorse.com/Terra_Invicta/Power_Plant_List",
+      "use": "Inspiration that fission/fusion can have parallel specialist architectures and that mature older reactor principles can receive later engineering revivals."
+    },
+    {
+      "id": "TI-MATERIALS",
+      "type": "external-game-reference",
+      "title": "Terra Invicta Official Wiki - Carbon Nanotubes / Superalloys / Advanced Superconductors",
+      "url": "https://wiki.hoodedhorse.com/Terra_Invicta/Carbon_Nanotubes",
+      "use": "Inspiration for cross-pollinating material breakthroughs affecting structure, armor, containment, thermal and electromagnetic systems."
+    },
+    {
+      "id": "TI-STORAGE",
+      "type": "external-game-reference",
+      "title": "Terra Invicta Official Wiki - Supercapacitors",
+      "url": "https://wiki.hoodedhorse.com/Terra_Invicta/Supercapacitors",
+      "use": "Inspiration for storage/discharge-rate progression distinct from sustained generation."
+    },
+    {
+      "id": "TI-THERMAL",
+      "type": "external-game-reference",
+      "title": "Terra Invicta Official Wiki - Advanced Heat Management Concepts",
+      "url": "https://wiki.hoodedhorse.com/Terra_Invicta/Advanced_Heat_Management_Concepts",
+      "use": "Inspiration for compact radiators and thermal engineering as enabling/support tech rather than a combat heat spreadsheet."
+    },
+    {
+      "id": "TI-COMPUTE",
+      "type": "external-game-reference",
+      "title": "Terra Invicta Official Wiki - Photonic Computing / Quantum Computing",
+      "url": "https://wiki.hoodedhorse.com/Terra_Invicta/Photonic_Computing",
+      "use": "Inspiration for qualitative computing-principle changes rather than simple processor-level scaling."
+    },
+    {
+      "id": "NASA-SNP",
+      "type": "primary-science-engineering",
+      "title": "NASA Space Nuclear Propulsion",
+      "url": "https://www.nasa.gov/space-technology-mission-directorate/tdm/space-nuclear-propulsion/",
+      "use": "Grounding for fission specialist propulsion branches and mission-dependent tradeoffs between nuclear thermal and nuclear electric propulsion."
+    },
+    {
+      "id": "NASA-SEP",
+      "type": "primary-science-engineering",
+      "title": "NASA Solar Electric Propulsion",
+      "url": "https://www.nasa.gov/space-technology-mission-directorate/tdm/solar-electric-propulsion/",
+      "use": "Grounding for efficient low-thrust electric/ion propulsion as specialist lower-SF technology."
+    },
+    {
+      "id": "NASA-FDR",
+      "type": "primary-concept-research",
+      "title": "NASA Fusion Driven Rocket concept",
+      "url": "https://www.nasa.gov/general/the-fusion-driven-rocket-nuclear-propulsion-through-direct-conversion-of-fusion-energy/",
+      "use": "Conceptual grounding for Fusion/propulsion cross-pollination and direct-energy conversion as an architecture rather than merely a bigger reactor number."
+    },
+    {
+      "id": "LLNL-NIF",
+      "type": "primary-science",
+      "title": "Lawrence Livermore National Laboratory - Fusion Ignition",
+      "url": "https://www.llnl.gov/news/ignition",
+      "use": "Grounding that controlled fusion is an extreme integration/engineering frontier, supporting Early -> Mature -> High-output Fusion story beats."
+    },
+    {
+      "id": "CERN-ANTIMATTER",
+      "type": "primary-science",
+      "title": "CERN - Antimatter",
+      "url": "https://home.cern/science/physics/antimatter/",
+      "use": "Grounding for antimatter’s extraordinary energy density plus severe production, vacuum, magnetic containment and handling constraints."
+    },
+    {
+      "id": "ARXIV-WARP",
+      "type": "primary-theory",
+      "title": "Miguel Alcubierre - The warp drive: hyper-fast travel within general relativity",
+      "url": "https://arxiv.org/abs/gr-qc/0009013",
+      "use": "Exotic/high-SF inspiration only; the paper itself requires exotic matter. Not evidence that a practical warp drive exists."
+    },
+    {
+      "id": "ARXIV-BH",
+      "type": "primary-theory",
+      "title": "Crane & Westmoreland - Are Black Hole Starships Possible",
+      "url": "https://arxiv.org/abs/0908.1803",
+      "use": "Exotic/Precursor inspiration for artificial-singularity power/propulsion/weapons; explicitly edge-of-possibility theory, not normal technology."
+    }
+  ]
+}

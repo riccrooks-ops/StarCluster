@@ -1,0 +1,40 @@
+id,name,owner,window,disposition,reason
+ablative-armor,Ablative Armor Layer,Armor,TL1,BROAD_COMBAT_SWEEP,Optional expendable outer armor layer; normally replaced rather than repaired in combat.
+communications-relay,Communications Relay / Mission Communications Suite,Computing / Fire Control,TL1-7,ARCHITECTURE_ONLY_OR_REUSE,"Improves contact, beacon, relay, or strategic communication options while preserving observability/provenance."
+scientific-laboratory,Scientific Laboratory,Computing / Fire Control,TL1-6,ARCHITECTURE_ONLY_OR_REUSE,"Improves analysis of anomalies, samples, ruins, artifacts, and Research Data."
+energy-pds,Energy / Beam Point-Defense Array,Energy Weapons,TL1+,ARCHITECTURE_ONLY_OR_REUSE,Power-intensive ammunition-free beam interception.
+mission-package,Boarding / Planetary Mission Package,Hull,TL1-5,ARCHITECTURE_ONLY_OR_REUSE,Swappable support package improving one mission class.
+cargo-expansion,Cargo Expansion,Hull,TL1-6,ARCHITECTURE_ONLY_OR_REUSE,Adds finite cargo capacity while competing directly with combat/support installations.
+medical-bay,Medical Bay,Hull,TL1-4,ARCHITECTURE_ONLY_OR_REUSE,Mitigates explicit crew casualty and recovery outcomes.
+mining-module,Mining and Extraction Module,Hull,TL1-6,ARCHITECTURE_ONLY_OR_REUSE,"Enables or improves extraction at eligible sites, trading time/exposure for yield."
+local-amm-pds,Local AMM Point-Defense Battery,Missile Weapons,TL1+,ARCHITECTURE_ONLY_OR_REUSE,Finite-ammunition guided terminal interception.
+missile-magazine,Missile Magazine Expansion,Missile Weapons,TL1-6,FIXED_ENDURANCE_AUDIT,Extends missile reserve; Ready Packages remain distinct.
+auxiliary-power-unit,Auxiliary Power Unit,Power,TL1+,DEFER_FINAL_TP_SUPPLY,Preserves core-power continuity only; not normal Tactical Power generation.
+auxiliary-reactor,Auxiliary Reactor,Power,TL1+,DEFER_FINAL_TP_SUPPLY,Small renewable Tactical Power source with bounded output/damage behavior.
+combat-battery,Combat Battery,Power,TL1+,DEFER_FINAL_TP_SUPPLY,Finite flexible Tactical Power injection for a later legal window.
+kinetic-magazine,Kinetic Magazine Expansion,Projectile Weapons,TL1-6,FIXED_ENDURANCE_AUDIT,Extends Kinetic ammunition endurance using broad magazine families.
+kinetic-pds,Kinetic Point-Defense Battery,Projectile Weapons,TL1+,ARCHITECTURE_ONLY_OR_REUSE,Finite-reaction kinetic interception with ammunition.
+expedition-endurance,Expedition Endurance Module,Propulsion,TL1-5,ARCHITECTURE_ONLY_OR_REUSE,Adds bounded Fuel/endurance support without tank-by-tank propellant bookkeeping.
+fuel-processor,Fuel Processor,Propulsion,TL1-4,ARCHITECTURE_ONLY_OR_REUSE,Converts eligible mined or traded Resources into the single Fuel resource at bounded time/efficiency cost.
+shield-battery,Shield Battery,Shields,TL1+,BROAD_COMBAT_SWEEP,Finite shield-specific support that does not become general Tactical Power.
+fabricator,General Fabrication Module,Hull,TL2-7,ARCHITECTURE_ONLY_OR_REUSE,Converts carried Resources into bounded repair or mission supplies over time.
+power-stabilizer,Power Stabilizer / Conditioner,Power,TL2+,DEFER_FINAL_TP_SUPPLY,Improves bounded power-quality/integration cases rather than adding free output.
+supercapacitor,Supercapacitor Pulse Bank,Power,TL2-4,DEFER_FINAL_TP_SUPPLY,Burst-power storage for a bounded operation/window; does not raise sustained reactor output.
+probe-survey-drone,Probe / Survey Drone Package,Sensors / EW,TL2-5,ARCHITECTURE_ONLY_OR_REUSE,Deployable disposable/reusable probes automate routine remote surveying and reconnaissance while preserving consequential player decisions about where to investigate and what risks to take.
+shield-booster,Shield Booster,Shields,TL2+,BROAD_COMBAT_SWEEP,Optional powered shield support distinct from the primary generator.
+shield-hardener,Shield Hardener,Shields,TL3+,BROAD_COMBAT_SWEEP,Existing TL3 optional powered hardening candidate.
+radiation-hardening,Particle / Radiation Hardening Package,Armor,TL4-7,DEFER_THREAT_TAGS,Specialized protection against explicit particle/radiation effects if those effects exist.
+repair-drone-bay,Damage-Control Drone Bay,Hull,TL4-6,BROAD_COMBAT_SWEEP,"Robotic inspection/repair support using existing repair capacity, supplies, and condition rules."
+smagnetic-store,Superconducting Magnetic Energy Store,Power,TL4-6,DEFER_FINAL_TP_SUPPLY,Advanced low-loss storage/conditioning branch.
+tractor-tow,Tractor / Tow Projector,Propulsion,TL4-7,ARCHITECTURE_ONLY_OR_REUSE,"Bounded manipulation/towing utility for ships, wreckage, cargo, or mission objects."
+powered-reactive-armor,Powered Reactive Armor System,Armor,TL5+,BROAD_COMBAT_SWEEP,Powered specialist protection layered onto passive armor; loses active bonus when unpowered.
+molecular-repair-fabricator,Molecular Repair Fabricator,Hull,TL5-7,ARCHITECTURE_ONLY_OR_REUSE,Advanced fabrication improves field repair using Resources without free resurrection.
+thermal-suppression,Thermal Suppression Module,Power,TL5-7,DEFER_FINAL_TP_SUPPLY,Finite low-signature/high-output window using thermal storage/retraction abstractions.
+particle-deflection-screen,Particle / Charged-Beam Deflection Screen,Shields,TL5+,DEFER_THREAT_TAGS,Optional powered shield-support field tuned against charged-particle/ion/plasma-like threats rather than universal Shield Armor growth.
+field-stabilizer,Field Stabilizer / Anti-Penetration Tuner,Shields,TL7+,BROAD_COMBAT_SWEEP,Late specialist shield support that alters a bounded penetration/field-stability interaction rather than adding a universal defensive layer.
+programmable-repair-patch,Programmable Matter Repair Patch System,Hull,TL8+,ARCHITECTURE_ONLY_OR_REUSE,Configurable matter patches accelerate bounded structural/component repair.
+hangar-mission-bay,Hangar / Mission Bay,Hull,TL2-6,ARCHITECTURE_ONLY_OR_REUSE,"May add small-craft capacity, support heavier craft, or improve turnaround/safety."
+crystalline-armor,Crystalline Armor branch,Armor,TL6+,BROAD_COMBAT_SWEEP,validated alternate armor seed; response magnitude/lifecycle remains open
+ECM,ECM,Sensors / EW,TL1+,REUSE_CLOSED_INTEGRATED,integrated standard system; current AUX pass does not reopen accepted EW ladder
+ECCM,ECCM,Sensors / EW,TL1+,REUSE_CLOSED_INTEGRATED,integrated standard system; current AUX pass does not reopen accepted EW ladder
+PDS,K/E/AMM PDS,PDS,TL1+,REUSE_CLOSED_CP155,dedicated PDS surfaces closed by CP155; consume PF2 only

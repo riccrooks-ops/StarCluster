@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "star-cluster-canonical-numerical-authority-v0.8",
+  "checkpoint": 137,
+  "acceptedMechanicsAndResearchBaseline": 136,
+  "previousCandidateNumericalBaseline": 136,
+  "status": "finite_armor_regeneration_reserve_candidate_pending_native_validation",
+  "damagePointScale": 2,
+  "primaryReferenceMatrix": "technology_numerical_matrix_v0_9.json",
+  "primaryTechnologyTable": "technology_component_table_v0_8d.json",
+  "primaryWorkbook": "StarCluster_Revised_TL1_TL9_Technology_Component_Table_v0_8d.xlsx",
+  "storyboard": "technology_family_storyboard_v1_5.json",
+  "storyboardReconciled": false,
+  "productionRuntimeChanged": true,
+  "technologyValuesChanged": false,
+  "changedMechanics": [
+    "finite in-combat Armor regeneration reserve"
+  ],
+  "frozenForComparison": [
+    "all CP136 numerical values",
+    "shield",
+    "damage_control",
+    "kinetic_main",
+    "energy_main",
+    "missile_delivery",
+    "missile_guidance",
+    "missile_gp_warhead",
+    "missile_swarmer",
+    "reactor",
+    "stl",
+    "computer",
+    "sensor",
+    "pds",
+    "hull",
+    "armor AP/AI"
+  ],
+  "sameTlComparison": "Exact CP136 context/variant population and master seed 134001; Hull-only DamCon/PDS/TL6 Armor strata retained.",
+  "authorityBoundary": "CP137 is a one-mechanic common-random-number comparison. Reactor TP remains deliberately untouched until finite Armor regeneration evidence is reviewed."
+}

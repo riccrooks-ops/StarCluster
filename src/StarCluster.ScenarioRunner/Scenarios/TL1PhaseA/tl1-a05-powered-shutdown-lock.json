@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "star-cluster-tl1-phase-a-v1",
+  "id": "tl1-a05-powered-shutdown-lock",
+  "matrixScenarioId": "TL1-A05",
+  "name": "Powered-system shutdown and same-turn lock",
+  "baselineVersion": "tl1-core-combat-v0.1",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "cases": [
+    {
+      "id": "a05-c01",
+      "name": "Voluntary shutdown ends the effect but retains locked power",
+      "operation": "powerScript",
+      "input": {
+        "envelope": 5,
+        "commands": [
+          {
+            "action": "powerSystem",
+            "id": "ecm",
+            "amount": 2
+          },
+          {
+            "action": "shutdown",
+            "id": "ecm"
+          },
+          {
+            "action": "powerSystem",
+            "id": "ecm",
+            "amount": 1,
+            "expectFailure": true
+          }
+        ]
+      },
+      "expected": {
+        "steps": [
+          {
+            "succeeded": true
+          },
+          {
+            "succeeded": true
+          },
+          {
+            "succeeded": false
+          }
+        ],
+        "finalPower": {
+          "powered": 2,
+          "available": 3,
+          "systems": [
+            {
+              "systemId": "ecm",
+              "lockedPower": 2,
+              "isActive": false,
+              "reactivationProhibited": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "a05-c02",
+      "name": "Component disablement ends the effect but does not release its commitment",
+      "operation": "powerScript",
+      "input": {
+        "envelope": 5,
+        "commands": [
+          {
+            "action": "powerSystem",
+            "id": "pds",
+            "amount": 1
+          },
+          {
+            "action": "disable",
+            "id": "pds"
+          },
+          {
+            "action": "spend",
+            "amount": 4
+          }
+        ]
+      },
+      "expected": {
+        "finalPower": {
+          "powered": 1,
+          "spent": 4,
+          "available": 0,
+          "systems": [
+            {
+              "systemId": "pds",
+              "lockedPower": 1,
+              "isActive": false,
+              "reactivationProhibited": true
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

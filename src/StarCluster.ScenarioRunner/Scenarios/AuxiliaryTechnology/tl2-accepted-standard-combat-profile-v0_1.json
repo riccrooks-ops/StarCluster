@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "star-cluster-tl2-accepted-standard-combat-profile-v1",
+  "id": "tl2-accepted-standard-combat-profile-v0_1",
+  "checkpoint": 48,
+  "status": "accepted_standard",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "sourceCandidateCatalog": "src/StarCluster.ScenarioRunner/Scenarios/TL2Scaling/tl2-opponent-aware-range-control-and-promotion-decision-v0_1.json",
+  "sourceCheckpointResults": "out/checkpoint-47/tl2-opponent-aware-range-control-and-promotion-decision",
+  "promotionDecision": "Armor Step plus Conservative Direct Fire is the accepted TL2 standard combat profile. Hull Step and earlier profiles remain historical analytical controls.",
+  "candidates": [
+    {
+      "id": "tl2-production",
+      "label": "Accepted TL2 Standard Combat Profile",
+      "status": "accepted_checkpoint_48_standard",
+      "analysisRole": "accepted_player_standard",
+      "designThesis": "Accepted Armor Step plus Conservative Direct Fire package after Checkpoints 45-47 confirmed reasonable cross-TL progression and credible Kinetic, Energy, and Missile roles.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 23,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 28,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Checkpoint 48 formally promotes this numerical vector as the accepted TL2 standard combat profile.",
+        "Armor Integrity advances by one; Hull and Shield capacity remain at TL1 values.",
+        "Direct-fire accuracy uses the conservative +3-point family-consistent progression; missile guidance advances to 60 percent."
+      ]
+    }
+  ]
+}

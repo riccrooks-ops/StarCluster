@@ -1,0 +1,296 @@
+{
+  "schemaVersion": "star-cluster-tl1-phase-a-v1",
+  "id": "tl1-a01-shield-bypass-capacity",
+  "matrixScenarioId": "TL1-A01",
+  "name": "Shield bypass, Shield Armor hardening, capacity, and overflow",
+  "baselineVersion": "tl1-core-combat-v0.1",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "cases": [
+    {
+      "id": "a01-c01",
+      "name": "Ordinary packet is fully absorbed by Shield Capacity",
+      "operation": "resolveDamage",
+      "input": {
+        "defense": {
+          "currentShieldCapacity": 6,
+          "shieldArmor": 0,
+          "currentHull": 12,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "packet": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 1
+        }
+      },
+      "expected": {
+        "resolution": {
+          "effectiveShieldPenetration": 0,
+          "shieldBypass": 0,
+          "shieldArmorPrevented": 0,
+          "shieldAbsorption": 4,
+          "shieldOverflow": 0,
+          "damageToArmor": 0,
+          "hullDamage": 0
+        },
+        "defense": {
+          "currentShieldCapacity": 2,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "currentProtection": 2,
+              "currentIntegrity": 6
+            }
+          ],
+          "currentHull": 12
+        }
+      }
+    },
+    {
+      "id": "a01-c02",
+      "name": "SPEN bypass reaches Armor; AP hardening cancels matched APEN",
+      "operation": "resolveDamage",
+      "input": {
+        "defense": {
+          "currentShieldCapacity": 6,
+          "shieldArmor": 0,
+          "currentHull": 12,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "packet": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2
+        }
+      },
+      "expected": {
+        "resolution": {
+          "effectiveShieldPenetration": 1,
+          "shieldPenetrationResisted": 0,
+          "shieldBypass": 1,
+          "shieldFacingDamage": 4,
+          "shieldAbsorption": 4,
+          "damageToArmor": 1,
+          "armorLayers": [
+            {
+              "armorHardening": 2,
+              "effectiveArmorPenetration": 0,
+              "armorPenetrationResisted": 2,
+              "armorBypass": 0,
+              "armorFacingDamage": 1,
+              "integrityDamage": 1,
+              "protectionDamage": 0,
+              "overflowDamage": 0
+            }
+          ],
+          "hullDamage": 0
+        },
+        "defense": {
+          "currentShieldCapacity": 2,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "currentProtection": 2,
+              "currentIntegrity": 5
+            }
+          ],
+          "currentHull": 12
+        }
+      }
+    },
+    {
+      "id": "a01-c03",
+      "name": "Shield Armor hardens SPEN without deleting ordinary damage",
+      "operation": "resolveDamage",
+      "input": {
+        "defense": {
+          "currentShieldCapacity": 6,
+          "shieldArmor": 1,
+          "currentHull": 12,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "packet": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1
+        }
+      },
+      "expected": {
+        "resolution": {
+          "effectiveShieldPenetration": 0,
+          "shieldPenetrationResisted": 1,
+          "shieldBypass": 0,
+          "shieldFacingDamage": 3,
+          "shieldArmorPrevented": 1,
+          "postShieldArmorDamage": 3,
+          "shieldAbsorption": 3,
+          "shieldOverflow": 0,
+          "damageToArmor": 0,
+          "hullDamage": 0
+        },
+        "defense": {
+          "currentShieldCapacity": 3,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "currentProtection": 2,
+              "currentIntegrity": 6
+            }
+          ],
+          "currentHull": 12
+        }
+      }
+    },
+    {
+      "id": "a01-c04",
+      "name": "Shield overflow reaches Armor; AP hardening resists APEN",
+      "operation": "resolveDamage",
+      "input": {
+        "defense": {
+          "currentShieldCapacity": 1,
+          "shieldArmor": 0,
+          "currentHull": 12,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "packet": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 1
+        }
+      },
+      "expected": {
+        "resolution": {
+          "effectiveShieldPenetration": 0,
+          "shieldAbsorption": 1,
+          "shieldOverflow": 3,
+          "damageToArmor": 3,
+          "armorLayers": [
+            {
+              "armorHardening": 2,
+              "effectiveArmorPenetration": 0,
+              "armorPenetrationResisted": 1,
+              "armorBypass": 0,
+              "armorFacingDamage": 3,
+              "integrityDamage": 3,
+              "protectionDamage": 0,
+              "overflowDamage": 0
+            }
+          ],
+          "hullDamage": 0
+        },
+        "defense": {
+          "currentShieldCapacity": 0,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "currentProtection": 2,
+              "currentIntegrity": 3
+            }
+          ],
+          "currentHull": 12
+        }
+      }
+    },
+    {
+      "id": "a01-c05",
+      "name": "SPEN is capped at packet damage and does not create damage",
+      "operation": "resolveDamage",
+      "input": {
+        "defense": {
+          "currentShieldCapacity": 6,
+          "shieldArmor": 0,
+          "currentHull": 12,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "pristineProtection": 2,
+              "currentProtection": 2,
+              "pristineIntegrity": 6,
+              "currentIntegrity": 6
+            }
+          ]
+        },
+        "packet": {
+          "damage": 3,
+          "shieldPenetration": 5,
+          "armorPenetration": 0
+        }
+      },
+      "expected": {
+        "resolution": {
+          "effectiveShieldPenetration": 5,
+          "shieldBypass": 3,
+          "shieldFacingDamage": 0,
+          "shieldAbsorption": 0,
+          "damageToArmor": 3,
+          "armorLayers": [
+            {
+              "armorHardening": 2,
+              "effectiveArmorPenetration": 0,
+              "armorPenetrationResisted": 0,
+              "armorBypass": 0,
+              "armorFacingDamage": 3,
+              "integrityDamage": 3,
+              "protectionDamage": 0,
+              "overflowDamage": 0
+            }
+          ],
+          "hullDamage": 0
+        },
+        "defense": {
+          "currentShieldCapacity": 6,
+          "temporaryShieldOvercapacity": 0,
+          "armorLayers": [
+            {
+              "id": "armor-1",
+              "currentProtection": 2,
+              "currentIntegrity": 3
+            }
+          ],
+          "currentHull": 12
+        }
+      }
+    }
+  ]
+}

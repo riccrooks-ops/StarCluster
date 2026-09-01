@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "star-cluster-cp126-authoring-all-lane-execution-probe-v0.1",
+  "checkpoint": 126,
+  "purpose": "Authoring-only one-task-per-lane execution probe; not a substitute for the native 139,000-variant smoke.",
+  "studyGroups": 6,
+  "variants": 48,
+  "trialErrors": 0,
+  "groups": [
+    {
+      "studyGroup": "adjacent_population",
+      "variants": 4,
+      "trialErrors": 0
+    },
+    {
+      "studyGroup": "energy_isolation",
+      "variants": 16,
+      "trialErrors": 0
+    },
+    {
+      "studyGroup": "late_missile_geometry",
+      "variants": 4,
+      "trialErrors": 0
+    },
+    {
+      "studyGroup": "matched_composition",
+      "variants": 4,
+      "trialErrors": 0
+    },
+    {
+      "studyGroup": "movement_hotspot",
+      "variants": 4,
+      "trialErrors": 0
+    },
+    {
+      "studyGroup": "swarmer_lifecycle",
+      "variants": 16,
+      "trialErrors": 0
+    }
+  ],
+  "errors": [],
+  "failedGates": []
+}

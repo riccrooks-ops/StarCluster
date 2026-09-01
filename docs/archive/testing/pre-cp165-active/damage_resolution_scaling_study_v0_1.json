@@ -1,0 +1,834 @@
+{
+  "schemaVersion": "star-cluster-damage-resolution-scale-study-v0.1",
+  "checkpoint": 121,
+  "acceptedBaseline": 119,
+  "supersedesCandidate": 120,
+  "status": "candidate_pending_native_acceptance",
+  "purpose": "Test whether an exact x2 integer damage/defense domain preserves current combat exactly and whether one new point (= 0.5 legacy point) gives useful intermediate offensive and defensive resolution around CP120 cliffs without changing production authority.",
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "automaticPromotion": false,
+  "damageScale": 2,
+  "equivalenceSourceStudy": "docs/design/testing/weapon_progression_sensitivity_study_v0_1.json",
+  "masterSeed": 121041,
+  "equivalenceTrialsPerVariant": 20,
+  "authoringEquivalenceTrialsPerVariant": 5,
+  "trialsPerVariant": 2000,
+  "authoringTrialsPerVariant": 25,
+  "primaryCalibrationTls": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "advancedValidationTls": [
+    7
+  ],
+  "endpointStressTls": [
+    8,
+    9
+  ],
+  "missileStudyTls": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "kineticStudyTls": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "energyReferenceTls": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "specialistPairingIds": [],
+  "adaptivePairingIds": [],
+  "contemporaryGpByTl": {
+    "2": [
+      "gp-current"
+    ],
+    "3": [
+      "gp-current"
+    ],
+    "4": [
+      "gp-current"
+    ],
+    "5": [
+      "gp-current"
+    ],
+    "6": [
+      "gp-current"
+    ],
+    "7": [
+      "gp-current"
+    ],
+    "8": [
+      "gp-current"
+    ],
+    "9": [
+      "gp-current"
+    ]
+  },
+  "targetFixtures": [
+    {
+      "id": "energy-balanced-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "balanced",
+      "classification": "legal_build",
+      "role": "General Energy-family layered target."
+    },
+    {
+      "id": "energy-defense-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "legal_build",
+      "role": "Shield/Hardener/Energy-PDS defensive specialist."
+    },
+    {
+      "id": "kinetic-balanced-legal",
+      "baseFamily": "Kinetic",
+      "baseArchetype": "balanced",
+      "classification": "legal_build",
+      "role": "General Kinetic-family layered target."
+    },
+    {
+      "id": "kinetic-ew-legal",
+      "baseFamily": "Kinetic",
+      "baseArchetype": "ew-specialist",
+      "classification": "legal_build",
+      "role": "Kinetic ECM/ECCM/PDS specialist target."
+    },
+    {
+      "id": "missile-balanced-legal",
+      "baseFamily": "Missile",
+      "baseArchetype": "balanced",
+      "classification": "legal_build",
+      "role": "General Missile-family layered target."
+    },
+    {
+      "id": "missile-defense-legal",
+      "baseFamily": "Missile",
+      "baseArchetype": "missile-defense",
+      "classification": "legal_build",
+      "role": "Shield/AMM Missile-defense specialist target."
+    },
+    {
+      "id": "shield-capacity-half-control",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "controlled_fixture",
+      "shieldCapacityDelta": 1,
+      "role": "Research-only +1 scaled Shield-capacity point (= +0.5 legacy point)."
+    },
+    {
+      "id": "shield-capacity-full-control",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "controlled_fixture",
+      "shieldCapacityDelta": 2,
+      "role": "Research-only +2 scaled Shield-capacity points (= +1 legacy point)."
+    },
+    {
+      "id": "shield-recharge-half-control",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "controlled_fixture",
+      "shieldRechargeBonus": 1,
+      "role": "Research-only +1 scaled Shield recharge per turn (= +0.5 legacy point)."
+    },
+    {
+      "id": "shield-recharge-full-control",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "controlled_fixture",
+      "shieldRechargeBonus": 2,
+      "role": "Research-only +2 scaled Shield recharge per turn (= +1 legacy point)."
+    },
+    {
+      "id": "armor-integrity-half-control",
+      "baseFamily": "Kinetic",
+      "baseArchetype": "balanced",
+      "classification": "controlled_fixture",
+      "armorIntegrityDelta": 1,
+      "role": "Research-only +1 scaled Armor Integrity point (= +0.5 legacy point)."
+    },
+    {
+      "id": "armor-integrity-full-control",
+      "baseFamily": "Kinetic",
+      "baseArchetype": "balanced",
+      "classification": "controlled_fixture",
+      "armorIntegrityDelta": 2,
+      "role": "Research-only +2 scaled Armor Integrity points (= +1 legacy point)."
+    },
+    {
+      "id": "armor-protection-half-control",
+      "baseFamily": "Kinetic",
+      "baseArchetype": "balanced",
+      "classification": "controlled_fixture",
+      "armorProtectionDelta": 1,
+      "role": "Research-only +1 scaled Armor Protection point (= +0.5 legacy point)."
+    },
+    {
+      "id": "armor-protection-full-control",
+      "baseFamily": "Kinetic",
+      "baseArchetype": "balanced",
+      "classification": "controlled_fixture",
+      "armorProtectionDelta": 2,
+      "role": "Research-only +2 scaled Armor Protection points (= +1 legacy point)."
+    },
+    {
+      "id": "hull-half-control",
+      "baseFamily": "Energy",
+      "baseArchetype": "balanced",
+      "classification": "controlled_fixture",
+      "hullDelta": 1,
+      "role": "Research-only +1 scaled Hull point (= +0.5 legacy point)."
+    },
+    {
+      "id": "hull-full-control",
+      "baseFamily": "Energy",
+      "baseArchetype": "balanced",
+      "classification": "controlled_fixture",
+      "hullDelta": 2,
+      "role": "Research-only +2 scaled Hull points (= +1 legacy point)."
+    }
+  ],
+  "offenseFixtureIds": [
+    "energy-balanced-legal",
+    "energy-defense-legal",
+    "kinetic-balanced-legal",
+    "kinetic-ew-legal",
+    "missile-balanced-legal",
+    "missile-defense-legal"
+  ],
+  "defensePerturbationFixtureIds": [
+    "shield-capacity-half-control",
+    "shield-capacity-full-control",
+    "shield-recharge-half-control",
+    "shield-recharge-full-control",
+    "armor-integrity-half-control",
+    "armor-integrity-full-control",
+    "armor-protection-half-control",
+    "armor-protection-full-control",
+    "hull-half-control",
+    "hull-full-control"
+  ],
+  "defenseReferenceProfiles": {
+    "Missile": "gp-current",
+    "Kinetic": "gp-current",
+    "Energy": "energy-native"
+  },
+  "defenseReferenceAttackerArchetype": "balanced",
+  "missileProfiles": [
+    {
+      "id": "gp-current",
+      "family": "Missile",
+      "classification": "reference",
+      "role": "Exact x2 CP109/CP119 GP Missile reference supplied by the scaled matrix.",
+      "studyTls": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "missile-gp-x2-d11",
+      "family": "Missile",
+      "classification": "gp_half_step",
+      "role": "D11 midpoint between legacy D5 and D6.",
+      "studyTls": [
+        3,
+        4
+      ],
+      "damage": 11,
+      "spen": 2,
+      "apen": 4
+    },
+    {
+      "id": "missile-gp-x2-d12",
+      "family": "Missile",
+      "classification": "gp_full_step",
+      "role": "Exact doubled legacy D6.",
+      "studyTls": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "damage": 12,
+      "spen": 2,
+      "apen": 4
+    },
+    {
+      "id": "missile-gp-x2-d13",
+      "family": "Missile",
+      "classification": "gp_half_step",
+      "role": "D13 midpoint between legacy D6 and D7.",
+      "studyTls": [
+        5,
+        6
+      ],
+      "damage": 13,
+      "spen": 2,
+      "apen": 4
+    },
+    {
+      "id": "missile-gp-x2-d14",
+      "family": "Missile",
+      "classification": "gp_full_step",
+      "role": "Exact doubled legacy D7.",
+      "studyTls": [
+        5,
+        6,
+        7
+      ],
+      "damage": 14,
+      "spen": 2,
+      "apen": 4
+    },
+    {
+      "id": "missile-gp-x2-d15",
+      "family": "Missile",
+      "classification": "gp_half_step",
+      "role": "D15 midpoint between legacy D7 and D8.",
+      "studyTls": [
+        7
+      ],
+      "damage": 15,
+      "spen": 2,
+      "apen": 4
+    },
+    {
+      "id": "missile-gp-x2-d16",
+      "family": "Missile",
+      "classification": "gp_full_step",
+      "role": "Exact doubled legacy D8.",
+      "studyTls": [
+        7,
+        8,
+        9
+      ],
+      "damage": 16,
+      "spen": 2,
+      "apen": 4
+    },
+    {
+      "id": "missile-gp-x2-d17",
+      "family": "Missile",
+      "classification": "gp_half_step",
+      "role": "D17 midpoint between legacy D8 and D9 endpoint control.",
+      "studyTls": [
+        8,
+        9
+      ],
+      "damage": 17,
+      "spen": 2,
+      "apen": 4
+    },
+    {
+      "id": "missile-gp-x2-d18",
+      "family": "Missile",
+      "classification": "gp_full_step",
+      "role": "Exact doubled legacy D9 endpoint control.",
+      "studyTls": [
+        8,
+        9
+      ],
+      "damage": 18,
+      "spen": 2,
+      "apen": 4
+    },
+    {
+      "id": "sw-x2-early-d4-a10-p10",
+      "family": "Missile",
+      "classification": "swarmer_packet_anchor",
+      "role": "Exact doubled legacy D2 early Swarmer packet.",
+      "studyTls": [
+        2,
+        3
+      ],
+      "damage": 4,
+      "spen": 0,
+      "apen": 0,
+      "generation": "swarmer",
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "sw-x2-early-d5-a10-p10",
+      "family": "Missile",
+      "classification": "swarmer_packet_half_step",
+      "role": "D5 midpoint between legacy packet D2 and D3.",
+      "studyTls": [
+        2,
+        3
+      ],
+      "damage": 5,
+      "spen": 0,
+      "apen": 0,
+      "generation": "swarmer",
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "sw-x2-early-d6-a10-p10",
+      "family": "Missile",
+      "classification": "swarmer_packet_full_step",
+      "role": "Exact doubled legacy D3 early Swarmer packet.",
+      "studyTls": [
+        2,
+        3
+      ],
+      "damage": 6,
+      "spen": 0,
+      "apen": 0,
+      "generation": "swarmer",
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "sw-x2-mid-d6-a10-p10",
+      "family": "Missile",
+      "classification": "swarmer_packet_anchor",
+      "role": "Exact doubled legacy D3 mid Swarmer packet.",
+      "studyTls": [
+        4,
+        5
+      ],
+      "damage": 6,
+      "spen": 0,
+      "apen": 0,
+      "generation": "swarmer",
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "sw-x2-mid-d7-a10-p10",
+      "family": "Missile",
+      "classification": "swarmer_packet_half_step",
+      "role": "D7 midpoint between legacy packet D3 and D4.",
+      "studyTls": [
+        4,
+        5
+      ],
+      "damage": 7,
+      "spen": 0,
+      "apen": 0,
+      "generation": "swarmer",
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "sw-x2-mid-d8-a10-p10",
+      "family": "Missile",
+      "classification": "swarmer_packet_full_step",
+      "role": "Exact doubled legacy D4 mid Swarmer packet.",
+      "studyTls": [
+        4,
+        5
+      ],
+      "damage": 8,
+      "spen": 0,
+      "apen": 0,
+      "generation": "swarmer",
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "sw-x2-mature-d8-a15-p15",
+      "family": "Missile",
+      "classification": "swarmer_packet_anchor",
+      "role": "Exact doubled legacy D4 mature Swarmer packet.",
+      "studyTls": [
+        6,
+        7
+      ],
+      "damage": 8,
+      "spen": 0,
+      "apen": 0,
+      "generation": "swarmer",
+      "packets": 2,
+      "guidanceDelta": 15,
+      "pdsInterceptPenaltyPp": 15
+    },
+    {
+      "id": "sw-x2-mature-d9-a15-p15",
+      "family": "Missile",
+      "classification": "swarmer_packet_half_step",
+      "role": "D9 midpoint between legacy packet D4 and D5.",
+      "studyTls": [
+        6,
+        7
+      ],
+      "damage": 9,
+      "spen": 0,
+      "apen": 0,
+      "generation": "swarmer",
+      "packets": 2,
+      "guidanceDelta": 15,
+      "pdsInterceptPenaltyPp": 15
+    },
+    {
+      "id": "sw-x2-mature-d10-a15-p15",
+      "family": "Missile",
+      "classification": "swarmer_packet_full_step",
+      "role": "Exact doubled legacy D5 mature Swarmer packet.",
+      "studyTls": [
+        6,
+        7
+      ],
+      "damage": 10,
+      "spen": 0,
+      "apen": 0,
+      "generation": "swarmer",
+      "packets": 2,
+      "guidanceDelta": 15,
+      "pdsInterceptPenaltyPp": 15
+    }
+  ],
+  "kineticProfiles": [
+    {
+      "id": "gp-current",
+      "family": "Kinetic",
+      "classification": "reference",
+      "role": "Exact x2 current same-TL Kinetic reference supplied by the scaled matrix.",
+      "studyTls": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-damage-half",
+      "family": "Kinetic",
+      "classification": "damage_half_step",
+      "role": "+1 scaled DAM (= +0.5 legacy DAM).",
+      "studyTls": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "damageDelta": 1
+    },
+    {
+      "id": "kinetic-damage-full",
+      "family": "Kinetic",
+      "classification": "damage_full_step",
+      "role": "+2 scaled DAM (= +1 legacy DAM).",
+      "studyTls": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "damageDelta": 2
+    },
+    {
+      "id": "kinetic-apen-half",
+      "family": "Kinetic",
+      "classification": "apen_half_step",
+      "role": "+1 scaled APEN (= +0.5 legacy APEN).",
+      "studyTls": [
+        5,
+        6,
+        7
+      ],
+      "apenDelta": 1
+    },
+    {
+      "id": "kinetic-apen-full",
+      "family": "Kinetic",
+      "classification": "apen_full_step",
+      "role": "+2 scaled APEN (= +1 legacy APEN).",
+      "studyTls": [
+        5,
+        6,
+        7
+      ],
+      "apenDelta": 2
+    },
+    {
+      "id": "kinetic-spen-half",
+      "family": "Kinetic",
+      "classification": "spen_half_step",
+      "role": "+1 scaled SPEN (= +0.5 legacy SPEN).",
+      "studyTls": [
+        6,
+        7,
+        8
+      ],
+      "spenDelta": 1
+    },
+    {
+      "id": "kinetic-spen-full",
+      "family": "Kinetic",
+      "classification": "spen_full_step",
+      "role": "+2 scaled SPEN (= +1 legacy SPEN).",
+      "studyTls": [
+        6,
+        7,
+        8
+      ],
+      "spenDelta": 2
+    }
+  ],
+  "offenseSeries": [
+    {
+      "id": "gp-d5-to-d6",
+      "family": "Missile",
+      "axis": "damage",
+      "profiles": [
+        "gp-current",
+        "missile-gp-x2-d11",
+        "missile-gp-x2-d12"
+      ],
+      "tls": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "gp-d6-to-d7",
+      "family": "Missile",
+      "axis": "damage",
+      "profiles": [
+        "missile-gp-x2-d12",
+        "missile-gp-x2-d13",
+        "missile-gp-x2-d14"
+      ],
+      "tls": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": "gp-d7-to-d8",
+      "family": "Missile",
+      "axis": "damage",
+      "profiles": [
+        "missile-gp-x2-d14",
+        "missile-gp-x2-d15",
+        "missile-gp-x2-d16"
+      ],
+      "tls": [
+        7
+      ]
+    },
+    {
+      "id": "gp-d8-to-d9-endpoint",
+      "family": "Missile",
+      "axis": "damage",
+      "profiles": [
+        "missile-gp-x2-d16",
+        "missile-gp-x2-d17",
+        "missile-gp-x2-d18"
+      ],
+      "tls": [
+        8,
+        9
+      ]
+    },
+    {
+      "id": "swarmer-d2-to-d3",
+      "family": "Missile",
+      "axis": "packet_damage",
+      "profiles": [
+        "sw-x2-early-d4-a10-p10",
+        "sw-x2-early-d5-a10-p10",
+        "sw-x2-early-d6-a10-p10"
+      ],
+      "tls": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "swarmer-d3-to-d4",
+      "family": "Missile",
+      "axis": "packet_damage",
+      "profiles": [
+        "sw-x2-mid-d6-a10-p10",
+        "sw-x2-mid-d7-a10-p10",
+        "sw-x2-mid-d8-a10-p10"
+      ],
+      "tls": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "swarmer-d4-to-d5",
+      "family": "Missile",
+      "axis": "packet_damage",
+      "profiles": [
+        "sw-x2-mature-d8-a15-p15",
+        "sw-x2-mature-d9-a15-p15",
+        "sw-x2-mature-d10-a15-p15"
+      ],
+      "tls": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "kinetic-damage-plus1",
+      "family": "Kinetic",
+      "axis": "damage",
+      "profiles": [
+        "gp-current",
+        "kinetic-damage-half",
+        "kinetic-damage-full"
+      ],
+      "tls": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "kinetic-apen-plus1",
+      "family": "Kinetic",
+      "axis": "apen",
+      "profiles": [
+        "gp-current",
+        "kinetic-apen-half",
+        "kinetic-apen-full"
+      ],
+      "tls": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "kinetic-spen-plus1",
+      "family": "Kinetic",
+      "axis": "spen",
+      "profiles": [
+        "gp-current",
+        "kinetic-spen-half",
+        "kinetic-spen-full"
+      ],
+      "tls": [
+        6,
+        7,
+        8
+      ]
+    }
+  ],
+  "defenseSeries": [
+    {
+      "id": "shield-capacity-plus1",
+      "axis": "shield_capacity",
+      "baselineFixture": "energy-defense-legal",
+      "halfFixture": "shield-capacity-half-control",
+      "fullFixture": "shield-capacity-full-control",
+      "tls": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "shield-recharge-plus1",
+      "axis": "shield_recharge",
+      "baselineFixture": "energy-defense-legal",
+      "halfFixture": "shield-recharge-half-control",
+      "fullFixture": "shield-recharge-full-control",
+      "tls": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "armor-integrity-plus1",
+      "axis": "armor_integrity",
+      "baselineFixture": "kinetic-balanced-legal",
+      "halfFixture": "armor-integrity-half-control",
+      "fullFixture": "armor-integrity-full-control",
+      "tls": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "armor-protection-plus1",
+      "axis": "armor_protection",
+      "baselineFixture": "kinetic-balanced-legal",
+      "halfFixture": "armor-protection-half-control",
+      "fullFixture": "armor-protection-full-control",
+      "tls": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "hull-plus1",
+      "axis": "hull",
+      "baselineFixture": "energy-balanced-legal",
+      "halfFixture": "hull-half-control",
+      "fullFixture": "hull-full-control",
+      "tls": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "interpretationRules": [
+    "Exact paired x2 equivalence is a hard gate before half-step results are interpreted.",
+    "Odd scaled-domain values are diagnostic candidates only; no numerical or scale promotion is automatic.",
+    "Primary conclusions come from TL2-TL6; TL7 validates maturation and TL8-TL9 are endpoint stress evidence.",
+    "Internal H/X criticals are not simulated here and require cadence scaling/audit before any canonical x2 adoption.",
+    "A useful half-step should occupy a meaningful intermediate outcome region across multiple legal targets, not merely relocate one threshold."
+  ]
+}

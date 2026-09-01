@@ -1,0 +1,5 @@
+probe_id,side_a,side_b,repetitions,winner_first,turns_first,error,direct_shots,missile_launches,pds_attempts,ecm_downgrades,eccm_restores,reactor_overloads,hull_damage
+tl1-kinetic-vs-energy,tl1-kinetic-balanced,tl1-energy-balanced,4,A,13,,86,0,0,0,86,0,61
+tl3-missile-vs-amm,tl3-missile-balanced,tl3-missile-missile-defense,32,B,14,,0,826,649,0,413,0,424
+tl5-ew-vs-balanced,tl5-kinetic-ew-specialist,tl5-energy-balanced,8,B,8,,102,0,0,0,86,0,96
+tl9-power-vs-dual-main,tl9-energy-dual-reactor,tl9-energy-dual-main,8,B,3,,81,0,0,0,0,0,149

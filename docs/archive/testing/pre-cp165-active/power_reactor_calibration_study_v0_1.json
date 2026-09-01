@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "star-cluster-power-reactor-calibration-v1",
+  "checkpoint": "110",
+  "status": "calibration_evidence_no_automatic_promotion",
+  "matrixPath": "docs/design/player_technology/technology_numerical_matrix_v0_1.json",
+  "masterSeed": 11020260815,
+  "reactorCountMaximum": 2,
+  "mainWeaponCountMaximum": 2,
+  "maxPdsBatteries": 5,
+  "minimumTurnSamples": 20000,
+  "maximumTurnSamples": 60000,
+  "turnSampleBatch": 5000,
+  "targetWilsonHalfWidth": 0.004,
+  "encountersPerVariant": 2500,
+  "turnsPerEncounter": 20,
+  "doctrines": [
+    "offense",
+    "ew_contested",
+    "defense",
+    "mixed"
+  ],
+  "studyQuestions": [
+    "Do the CP109 primary Reactor candidates create distinct and coherent frontier-versus-maturation steps across TL1-TL9?",
+    "Do legal one-reactor cruiser builds retain meaningful Tactical Power allocation pressure without making routine activity broadly impossible?",
+    "Do degraded and emergency outputs create intentional family-specific resilience tradeoffs rather than uniformly scaling with headline output?",
+    "Can mature legacy Reactor families remain useful through Space, resilience, or stacking tradeoffs without displacing the current frontier family?",
+    "Do branch-heavy legal designs still expose meaningful power pressure at high TL instead of making higher-TL generation effectively unlimited?",
+    "Does safe Reactor overload provide bounded relief for one-point shortfalls without erasing sustained power tradeoffs?"
+  ],
+  "interpretationPolicy": {
+    "noTargetWinRate": true,
+    "noRequiredFullSimultaneousDemandCoverage": true,
+    "candidateValuesMayChangeAfterHumanReview": true,
+    "automaticPromotion": false,
+    "productionRuntime": "C# / Godot",
+    "simulationRuntime": "CPython 3.13 stdlib-only",
+    "notes": "Full simultaneous demand is a stress diagnostic, not a requirement that one Reactor power every installed system at once. Routine impossibility, frontier domination, loss of legacy niches, or elimination of meaningful allocation pressure are stronger warning signals."
+  }
+}

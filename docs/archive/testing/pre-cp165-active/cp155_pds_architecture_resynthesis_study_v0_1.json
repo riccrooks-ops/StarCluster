@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "star-cluster-cp155-pds-architecture-resynthesis-study-v0.1",
+  "checkpoint": 155,
+  "baseCheckpoint": 154,
+  "status": "candidate_pending_native_windows_acceptance",
+  "scope": "Correct CP154's equality-oriented shortlist objective without repeating its broad PDS oversweep: extend the Kinetic RC2 lower boundary, rescore focused Energy/AMM architecture candidates in the CP153 direct-fire-versus-missile environment, enforce hard technology progression, and deep-confirm a stratified Pareto/viability set rather than a single equalized triad.",
+  "matrix": "docs/design/player_technology/technology_numerical_matrix_v0_9.json",
+  "resourceEnsemble": "docs/design/testing/cp144_stage_a_resource_ensemble.csv",
+  "resourceEnsembleTl": "docs/design/testing/cp144_stage_a_resource_ensemble_tl.csv",
+  "stageAExperimentManifest": "docs/design/testing/cp144_stage_a_experiment_manifest.csv",
+  "acceptedCp154NativeResultsArchiveSha256": "c93bbcb72fd0dba4625bdd5022f493a73daf239da53144d634cac345cae0e9bc",
+  "pointScale": 2,
+  "damageModel": "def-res-v1",
+  "combatDoctrine": "cp147_tactical_utility",
+  "balancePhilosophy": {
+    "primary": "Distinct strategically viable choices; numerical equality is not a goal. TL-specific swings and temporary superiority are acceptable. Persistent dominance, persistent obsolescence, or hard exclusion are failures.",
+    "forbiddenSelectorObjective": "No global distance-to-50-percent objective and no inter-family win-rate-variance minimization may select PDS ladders or triads.",
+    "missileAnchor": "The native-accepted CP153 main-weapon equilibrium remains fixed. GP/Swarmer against a non-PDS K/E defender is intentionally dangerous; PDS buys counterplay rather than erasing missile identity.",
+    "comparison": "K-PDS, E-PDS, and AMM may lead different TLs, missile matchups, and resource environments. Final evidence is Pareto/viability-oriented, not equalization-oriented."
+  },
+  "historicalPdsEvidence": {
+    "latestFullCombatReference": "Combat Model Lab v17-v19 as registered by CP142",
+    "knownSensitivities": [
+      "Reaction-capacity changes are discrete architecture breakpoints, not smooth stats.",
+      "Chance x reaction-capacity is a dominant PDS interaction.",
+      "Ammunition is primarily an exhaustion/endurance constraint once a practical threshold is reached.",
+      "The earlier research branch carried Kinetic RC2 from TL6 and a late AMM range-1 third opportunity; these are priors, not automatic restorations."
+    ]
+  },
+  "candidateDesign": {
+    "primaryDefenders": ["K1", "E7"],
+    "attackers": "GP M2, GP M3, and Swarmer SW2 where unlocked",
+    "strata": ["BALANCED_CORE_NO_PDS", "SHIELD_PRESSURE", "ARMOR_PRESSURE", "EW_CONTEST", "RECOVERY_ATTRITION", "POWER_CRISIS"],
+    "resources": "all five CP144 resource ensembles",
+    "kinetic": {
+      "baseChancePp": [0, 2, 5, 8, 10, 12, 15, 18],
+      "reactionCapacity": [1, 2],
+      "fullReadinessTp": [1, 2, 3, 4],
+      "ammo": 75,
+      "ammoPolicy": "Fixed endurance constant for this pass; not an optimization axis.",
+      "rangeOne": false,
+      "strain": false
+    },
+    "energy": {
+      "baseChancePp": [0, 5, 10, 15, 20],
+      "rc1Tp": [1, 2, 3],
+      "rc2IncrementalTp": [1, 2],
+      "states": ["RC1", "RC2_OVERCHARGED", "RC2_SAFE"],
+      "overchargedStrainLimit": [1, 2],
+      "overchargedStrainPerExtraAttempt": 1,
+      "ammo": null,
+      "rangeOne": false,
+      "note": "CP154 already mapped Strain 1-4 broadly; CP155 deep-confirms the doctrine-consistent 1-2 region and safe maturation."
+    },
+    "amm": {
+      "baseChancePp": [0, 5, 10, 15, 20],
+      "ammo": 25,
+      "ammoPolicy": "Fixed deliberately exhaustible magazine; not an optimization axis.",
+      "rc1Tp": [1, 2],
+      "rc2TpProfiles": [[1, 2], [1, 3], [2, 3]],
+      "rc3TpProfiles": [[1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 3, 4]],
+      "rc3EarliestTestTl": 5,
+      "rc3RequiresRangeOne": true
+    },
+    "screenTrialsPerCell": 30,
+    "baselineTrialsPerCell": 200
+  },
+  "technologyConstraints": {
+    "common": [
+      "Base interception chance never regresses.",
+      "Reaction capacity never regresses.",
+      "Quiet TLs are allowed.",
+      "Capability unlocks do not disappear at later TLs."
+    ],
+    "kinetic": [
+      "RC is limited to 1 or 2 and remains same-hex only.",
+      "If RC2 unlocks, it remains available thereafter.",
+      "Within an unchanged RC state, full readiness TP may hold or improve but may not worsen; an RC1-to-RC2 capability jump may require a higher full-readiness TP.",
+      "Ammunition is fixed at 75 throughout the ladder for this pass."
+    ],
+    "energy": [
+      "RC is limited to 1 or 2 and remains same-hex only.",
+      "RC2 requires more TP than RC1.",
+      "Overcharged RC2 may mature into safe RC2; safe RC2 may not regress into strain-requiring RC2.",
+      "Overcharged Strain Limit may hold or improve from 1 to 2 but may not regress.",
+      "Within the same capability state, readiness TP may hold or improve but may not worsen."
+    ],
+    "amm": [
+      "RC never regresses.",
+      "RC3 always and only means one range-1 opportunity plus the two terminal opportunities.",
+      "Once RC3/range-1 unlocks it remains available.",
+      "Within an unchanged RC state, full readiness TP may hold or improve but may not worsen; an RC capability jump may require a higher full-readiness TP.",
+      "Ammunition is fixed at 25 throughout the ladder for this pass."
+    ]
+  },
+  "selectionDesign": {
+    "method": "Build technology-valid whole-ladder paths from actually tested candidates; stratify by architecture and empirical protection-uplift strength; use Pareto/frontier and diversity sampling rather than a single scalar balance target.",
+    "laddersPerFamily": 10,
+    "requiredArchitectureCoverage": {
+      "kinetic": "Include RC1 controls and multiple natural-RC2 unlock trajectories spanning the late ladder.",
+      "energy": "Include RC1 controls, Strain-1 and Strain-2 overcharged-RC2 trajectories, and trajectories that mature from overcharged to safe RC2.",
+      "amm": "Include RC1/RC2 controls and multiple RC3/range-1 unlock trajectories."
+    },
+    "strengthSampling": "Low/mid/high protection-uplift frontier points are all eligible so deep confirmation observes trade space instead of preselecting a desired win rate.",
+    "automaticPromotion": false
+  },
+  "deepConfirmation": {
+    "primaryContexts": "Full K1/E7 defender x GP M2/GP M3/SW2 attacker x six strata x five resources crossing.",
+    "robustnessContexts": "Missile-armed defenders are retained only as secondary diagnostics at R1_CENTRAL_NO_MAJOR; they do not drive ladder selection.",
+    "noPdsBaseline": "A separate same-context no-PDS reference quantifies protection uplift and verifies preservation of the CP153 missile-threat anchor.",
+    "trialsPerCell": 100,
+    "triadAnalysis": "All 10 x 10 x 10 family combinations receive offline leadership/dominance/viability diagnostics. No equalization score is computed."
+  },
+  "heldFixed": "CP153 K1/E7/M2-or-M3/SW2 mains; current Hull/Shield/Armor/DEF/RES; current AUX, EW/Sensor, movement/cadence, PDS Space, and provisional Reactor/TP supply.",
+  "deferred": [
+    "simultaneous multi-Flight arrival balance weighting",
+    "cross-target AMM range-1 fleet-defense value",
+    "remaining Shield/Armor/AUX lifetime-value sweep",
+    "final Reactor/TP supply tuning",
+    "campaign reload/logistics tuning",
+    "production C# and active Concept/numerical-matrix promotion",
+    "Stage-B/campaign weighting"
+  ],
+  "masterSeed": 155001,
+  "recommendedJobs": 24,
+  "candidateBatchSize": 128,
+  "deepLadderBatchSize": 2,
+  "tuningAllowed": false,
+  "automaticPromotion": false,
+  "stageBAutomatic": false
+}

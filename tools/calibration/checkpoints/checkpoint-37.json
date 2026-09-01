@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "37",
+  "title": "Damage Control Eligibility, Doctrine, and Critical-Density Pacing",
+  "sdkVersion": "8.0.423",
+  "configuration": "Debug",
+  "calibrationSolution": "StarCluster.Calibration.sln",
+  "testProject": "tests/StarCluster.Tests/StarCluster.Tests.csproj",
+  "runnerProject": "src/StarCluster.ScenarioRunner/StarCluster.ScenarioRunner.csproj",
+  "manifestFile": "CHECKPOINT_37_SHA256SUMS.txt",
+  "outputRoot": "out/checkpoint-37",
+  "defaultTrials": 10000,
+  "defaultJobs": 24,
+  "documentation": [
+    "docs/Star_Cluster_Game_Concept_v0.4j.docx",
+    "docs/design/player_technology/StarCluster_Player_TL_Framework_Draft_v0_18.xlsx",
+    "docs/validation/Checkpoint_37_Damage_Control_Doctrine_And_Critical_Density_Pacing.md"
+  ],
+  "stages": [
+    {
+      "id": "deterministic",
+      "name": "Accepted deterministic moving-missile scenarios",
+      "command": "run-all",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios",
+        "--output-dir",
+        "{OutputRoot}/deterministic"
+      ],
+      "metrics": {
+        "deterministicCases": 7
+      }
+    },
+    {
+      "id": "tl1-phase-a",
+      "name": "TL1 Phase A mechanics corpus",
+      "command": "tl1-phase-a",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1PhaseA",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-a"
+      ],
+      "metrics": {
+        "caseCount": 54
+      }
+    },
+    {
+      "id": "tl1-phase-b",
+      "name": "TL1 Phase B direct-fire corpus",
+      "command": "tl1-phase-b",
+      "arguments": [
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-b"
+      ],
+      "metrics": {
+        "caseCount": 36
+      }
+    },
+    {
+      "id": "tl1-kinetic-calibration",
+      "name": "TL1 kinetic-interaction calibration",
+      "command": "tl1-kinetic-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-kc01-kinetic-interaction-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-kinetic-calibration"
+      ],
+      "metrics": {
+        "variantCount": 29,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-energy-calibration",
+      "name": "TL1 energy-interaction calibration",
+      "command": "tl1-energy-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-ec01-energy-interaction-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-energy-calibration"
+      ],
+      "metrics": {
+        "variantCount": 31,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-weapon-matrix",
+      "name": "Complete TL1 no-counter weapon matrix",
+      "command": "tl1-weapon-matrix",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-wm01-complete-weapon-matrix.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-weapon-matrix"
+      ],
+      "metrics": {
+        "variantCount": 48,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-pds-calibration",
+      "name": "Corrected TL1 PDS and interception calibration",
+      "command": "tl1-pds-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-pds01-interception-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-pds-calibration"
+      ],
+      "metrics": {
+        "variantCount": 59,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-defensive-calibration",
+      "name": "TL1 layered defensive-system calibration",
+      "command": "tl1-defensive-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-ds01-layered-defensive-systems-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-defensive-calibration"
+      ],
+      "metrics": {
+        "variantCount": 171,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-power-correction",
+      "name": "TL1 main-power and interception-order correction study",
+      "command": "tl1-power-envelope-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-pe02-main-power-interception-correction-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-power-correction"
+      ],
+      "metrics": {
+        "variantCount": 294,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-range-control-calibration",
+      "name": "TL1 scripted relative-range and missile-budget calibration",
+      "command": "tl1-range-control-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-rc01-scripted-relative-range-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-range-control-calibration"
+      ],
+      "metrics": {
+        "variantCount": 75,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-damage-control-calibration",
+      "name": "TL1 Damage Control eligibility and doctrine calibration",
+      "command": "tl1-damage-control-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-dc01-damage-control-doctrine-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-damage-control-calibration"
+      ],
+      "metrics": {
+        "variantCount": 64,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-combat-pacing",
+      "name": "TL1 critical-density, combat-pacing, and Immobile timing probe",
+      "command": "tl1-combat-pacing",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-cp01-critical-density-and-immobile-timing.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-combat-pacing"
+      ],
+      "metrics": {
+        "variantCount": 8,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "runner-self-tests",
+      "name": "ScenarioRunner self-tests",
+      "command": "self-test",
+      "arguments": [
+        "--scenario-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/terminal-two-window-hit.json"
+      ],
+      "metrics": {
+        "selfTestCount": 46
+      }
+    }
+  ],
+  "primaryStudy": {
+    "id": "tl1-dc01-damage-control-doctrine-study",
+    "variantCount": 64
+  }
+}

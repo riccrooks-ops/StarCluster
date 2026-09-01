@@ -1,0 +1,33 @@
+{
+  "checkpoint": 115,
+  "acceptedBaseline": 114,
+  "checkpointType": "weapon_family_payload_characteristic_space_refinement",
+  "productionSourceChanged": false,
+  "numericalMatrixChanged": false,
+  "reactorCandidateChanged": false,
+  "conceptChanged": false,
+  "simulationSourceChanged": true,
+  "automaticPromotion": false,
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "expected": {
+    "pythonSelfTests": 64,
+    "parityCases": 25,
+    "missileProfiles": 14,
+    "kineticProfiles": 11,
+    "targetFixtures": 8,
+    "controlledFixtures": 3,
+    "variants": 4064,
+    "missileVariants": 2272,
+    "kineticVariants": 1664,
+    "energyReferenceVariants": 128,
+    "exactFillBuilds": 138,
+    "authoringTrialsPerVariant": 20,
+    "authoringEngagements": 81280,
+    "nativeTrialsPerVariant": 2000,
+    "nativeEngagements": 8128000,
+    "frozenCSharpAndTests": 561,
+    "frozenPriorSimulationFiles": 21
+  },
+  "repositoryOwnedFiles": 2340
+}

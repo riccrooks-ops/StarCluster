@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "checkpoint-105-architecture-validation-policy-v0.1",
+  "checkpoint": "105",
+  "scope": "technology_architecture_only",
+  "required": {
+    "nativeDependencyPrecheck": true,
+    "architectureContract": true,
+    "repositoryManifest": true,
+    "conceptRenderQaBeforePackaging": true
+  },
+  "notApplicable": {
+    "dotnetBuild": true,
+    "xunit": true,
+    "scenarioRunner": true,
+    "pythonResearchEngine": true,
+    "monteCarlo": true,
+    "deepCalibration": true
+  },
+  "declaredTrials": 0,
+  "numericalTlChartChanged": false,
+  "simulationOrCalibrationRun": false,
+  "automaticTechnologyPromotion": false
+}

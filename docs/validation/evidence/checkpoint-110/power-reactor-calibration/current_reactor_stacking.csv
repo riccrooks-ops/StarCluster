@@ -1,0 +1,10 @@
+tl,reactor,single_reactor_space,single_reactor_operational_tp,single_reactor_legal_build_count,same_package_two_reactor_legal_count,same_package_two_reactor_legal_fraction,two_reactor_space,two_reactor_operational_tp,two_reactor_full_demand_supported_count,two_reactor_full_demand_supported_fraction,note
+1,reactor-tl1,6,5,294,9,0.030612244897959183,12,10,9,1.0,"Same non-reactor package; adding the second Reactor consumes additional Space and is optional, not required progression."
+2,reactor-tl2,6,7,294,9,0.030612244897959183,12,14,9,1.0,"Same non-reactor package; adding the second Reactor consumes additional Space and is optional, not required progression."
+3,reactor-tl3,5,7,609,75,0.12315270935960591,10,14,75,1.0,"Same non-reactor package; adding the second Reactor consumes additional Space and is optional, not required progression."
+4,reactor-tl4,5,9,843,123,0.14590747330960854,10,18,123,1.0,"Same non-reactor package; adding the second Reactor consumes additional Space and is optional, not required progression."
+5,reactor-tl5,5,12,1140,195,0.17105263157894737,10,24,195,1.0,"Same non-reactor package; adding the second Reactor consumes additional Space and is optional, not required progression."
+6,reactor-tl6,4,12,2730,1272,0.46593406593406594,8,24,1272,1.0,"Same non-reactor package; adding the second Reactor consumes additional Space and is optional, not required progression."
+7,reactor-tl7,4,15,4032,2880,0.7142857142857143,8,30,2880,1.0,"Same non-reactor package; adding the second Reactor consumes additional Space and is optional, not required progression."
+8,reactor-tl8,4,17,4032,3906,0.96875,8,34,3906,1.0,"Same non-reactor package; adding the second Reactor consumes additional Space and is optional, not required progression."
+9,reactor-tl9,3,20,4032,4032,1.0,6,40,4032,1.0,"Same non-reactor package; adding the second Reactor consumes additional Space and is optional, not required progression."

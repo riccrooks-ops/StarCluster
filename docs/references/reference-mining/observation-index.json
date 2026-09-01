@@ -1,0 +1,3754 @@
+{
+  "schemaVersion": 1,
+  "id": "external-reference-mining-observation-index-v1",
+  "checkpointIntroduced": "91",
+  "authority": "reference_only",
+  "adoptionRule": "No observation changes gameplay or development authority until an explicit human decision updates the owning authoritative document.",
+  "observationCount": 195,
+  "observations": [
+    {
+      "id": "SD-DC-001",
+      "sourceId": "SD-DC",
+      "timestamp": "1:03-1:30",
+      "idea": "Immediate stabilization/jury-rigging precedes proper restoration.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "DAMAGE_CONTROL",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "damage_control"
+      ],
+      "assessment": "Supports combat Damage Control versus later Ship Repair; no extra repair layer.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-DC-002",
+      "sourceId": "SD-DC",
+      "timestamp": "1:17-1:38",
+      "idea": "Distributed repair stores improve immediate response.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "DAMAGE_CONTROL",
+        "SHIP_ARCHITECTURE",
+        "LOGISTICS"
+      ],
+      "projectAreas": [
+        "damage_control",
+        "ship_architecture"
+      ],
+      "assessment": "Repair Kits can abstract lockers; future maintainability could reflect distribution.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-DC-003",
+      "sourceId": "SD-DC",
+      "timestamp": "2:51-3:44",
+      "idea": "Computer casualties can be hardware or software/control failures.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "COMPUTING",
+        "DAMAGE_CONTROL",
+        "CYBERWARFARE"
+      ],
+      "projectAreas": [
+        "computing",
+        "damage_control"
+      ],
+      "assessment": "Future crossover; do not increase ordinary damage granularity.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-DC-004",
+      "sourceId": "SD-DC",
+      "timestamp": "3:51-6:34",
+      "idea": "Fire/atmosphere/propellant casualties can remain ongoing hazards until contained.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "DAMAGE_CONTROL",
+        "INTERNAL_DAMAGE",
+        "AVOID_EXCESS_SIMULATION"
+      ],
+      "projectAreas": [
+        "damage_control",
+        "internal_damage"
+      ],
+      "assessment": "Candidate bounded Hazard state; avoid room-level simulation.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-DC-005",
+      "sourceId": "SD-DC",
+      "timestamp": "5:49-6:34",
+      "idea": "Emergency isolation can sacrifice a local area to save the ship.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "DAMAGE_CONTROL",
+        "CREW",
+        "COMMAND_DECISION"
+      ],
+      "projectAreas": [
+        "damage_control",
+        "crew"
+      ],
+      "assessment": "Potential future command decision after Hazard/crew abstractions mature.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-DC-006",
+      "sourceId": "SD-DC",
+      "timestamp": "6:34-7:13",
+      "idea": "Damage Control work is itself hazardous.",
+      "relationship": "corroborates_existing",
+      "disposition": "defer",
+      "tags": [
+        "DAMAGE_CONTROL",
+        "DEFERRED_CREW_EFFECTS"
+      ],
+      "projectAreas": [
+        "damage_control",
+        "crew"
+      ],
+      "assessment": "Supports future crew risk without current implementation.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-DC-007",
+      "sourceId": "SD-DC",
+      "timestamp": "7:13-7:29",
+      "idea": "Robots are well suited to vacuum/hazardous repair.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "DAMAGE_CONTROL",
+        "ROBOTICS",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "damage_control",
+        "technology"
+      ],
+      "assessment": "Good human->automation->robotics progression.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-DC-008",
+      "sourceId": "SD-DC",
+      "timestamp": "7:29-7:51",
+      "idea": "Repairability can be designed into ship architecture.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "DAMAGE_CONTROL",
+        "SHIP_ARCHITECTURE",
+        "ARCHITECTURAL_TECH_BREAKTHROUGH"
+      ],
+      "projectAreas": [
+        "damage_control",
+        "ship_architecture"
+      ],
+      "assessment": "Strong maintainability tradeoff candidate.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-DC-009",
+      "sourceId": "SD-DC",
+      "timestamp": "7:44-8:07",
+      "idea": "Self-sealing/self-repairing materials provide qualitative progression.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "DAMAGE_CONTROL",
+        "MATERIALS",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "damage_control",
+        "technology"
+      ],
+      "assessment": "Strong later-TL lineage.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-DC-010",
+      "sourceId": "SD-DC",
+      "timestamp": "7:58-8:15",
+      "idea": "Compartmentation/fire-resistant construction limits damage propagation.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "HULL",
+        "DAMAGE_CONTAINMENT",
+        "SHIP_ARCHITECTURE"
+      ],
+      "projectAreas": [
+        "hull",
+        "damage_control"
+      ],
+      "assessment": "Keep containment distinct from resistance, repair, and restoration.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-NL-001",
+      "sourceId": "SD-NL",
+      "timestamp": "2:03-3:23",
+      "idea": "Bomb-pumped lasers trade an expendable nuclear event for directed beam output.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "SPECIAL_WEAPON",
+        "RARE_WEAPON_EVENT"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "special_weapons"
+      ],
+      "assessment": "Potential sacrificial interceptor/Special Weapon rather than normal Main upgrade.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-NL-002",
+      "sourceId": "SD-NL",
+      "timestamp": "3:49-6:41",
+      "idea": "Nuclear reactor output can pump a laser directly.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "REACTORS",
+        "CROSS_CATEGORY_INTERACTION"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "reactors"
+      ],
+      "assessment": "Strong fiction for selective reactor-enabling prerequisites.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-NL-003",
+      "sourceId": "SD-NL",
+      "timestamp": "3:49-7:47",
+      "idea": "Different pumping architectures trade geometry/materials/complexity differently.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "QUALITATIVE_TECH_PROGRESSION",
+        "WEAPON_FAMILY_IDENTITY"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "technology"
+      ],
+      "assessment": "Supports architecture progression rather than one number ladder.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-NL-004",
+      "sourceId": "SD-NL",
+      "timestamp": "7:18-7:47",
+      "idea": "More extreme reactor states can unlock higher-output beam architectures.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "REACTORS",
+        "ENERGY_WEAPONS",
+        "ARCHITECTURAL_TECH_BREAKTHROUGH"
+      ],
+      "projectAreas": [
+        "reactors",
+        "energy_weapons"
+      ],
+      "assessment": "Reactor progress can expand the Energy design envelope.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-NL-005",
+      "sourceId": "SD-NL",
+      "timestamp": "4:43-4:59",
+      "idea": "Some high-output laser architectures may destroy their own active medium.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "OVERLOAD",
+        "STRAIN",
+        "RARE_WEAPON_EVENT"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "overload"
+      ],
+      "assessment": "Candidate architecture-specific destructive Forced Overload.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-NL-006",
+      "sourceId": "SD-NL",
+      "timestamp": "7:02-7:47",
+      "idea": "Thermal/material limits bound sustainable output.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "STRAIN",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "overload"
+      ],
+      "assessment": "Use Strain/Overload abstraction instead of heat meter.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-NL-007",
+      "sourceId": "SD-NL",
+      "timestamp": "7:47-8:10",
+      "idea": "Waste heat remains an engineering cost.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "POWER",
+        "AVOID_EXCESS_SIMULATION"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "power"
+      ],
+      "assessment": "Rationale for existing currencies, not detailed thermal simulation.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-NL-008",
+      "sourceId": "SD-NL",
+      "timestamp": "8:03-8:26",
+      "idea": "Different nuclear-laser architectures operate at different wavelengths.",
+      "relationship": "extends_candidate",
+      "disposition": "defer",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "BEAM_FOCUSING"
+      ],
+      "projectAreas": [
+        "energy_weapons"
+      ],
+      "assessment": "Combine with wavelength-focused source before mechanics.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-NL-009",
+      "sourceId": "SD-NL",
+      "timestamp": "8:10-8:26",
+      "idea": "Extreme-duty active media may have unusual component resilience.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "COMPONENT_RESILIENCE",
+        "ENERGY_WEAPONS"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "damage"
+      ],
+      "assessment": "Possible future trait; current damage model does not need it.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-NL-010",
+      "sourceId": "SD-NL",
+      "timestamp": "7:18-7:47",
+      "idea": "Shared high-temperature breakthroughs may cross reactor/propulsion/weapon categories.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "REACTORS",
+        "PROPULSION",
+        "ENERGY_WEAPONS",
+        "CROSS_CATEGORY_INTERACTION"
+      ],
+      "projectAreas": [
+        "reactors",
+        "propulsion",
+        "energy_weapons"
+      ],
+      "assessment": "Possible enabling discovery; avoid blanket prerequisite chains.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-EW-001",
+      "sourceId": "SD-EW",
+      "timestamp": "1:03-1:27",
+      "idea": "Laser physical reach can exceed practical targeting/engagement capability.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "ENGAGEMENT_ENVELOPE",
+        "SENSORS"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "sensors"
+      ],
+      "assessment": "Strong support for physical range != attack eligibility.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-EW-002",
+      "sourceId": "SD-EW",
+      "timestamp": "3:05-3:52",
+      "idea": "Shorter wavelength concentrates a smaller spot at range.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "RANGE",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "energy_weapons"
+      ],
+      "assessment": "Potential range/focusing progression independent of damage.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-EW-003",
+      "sourceId": "SD-EW",
+      "timestamp": "3:52-4:49",
+      "idea": "High-frequency beams require increasingly specialized generation/focusing.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "ARCHITECTURAL_TECH_BREAKTHROUGH",
+        "BEAM_FOCUSING"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "technology"
+      ],
+      "assessment": "Supports advanced branches/enabling technology.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-EW-004",
+      "sourceId": "SD-EW",
+      "timestamp": "4:52-6:21",
+      "idea": "Environment changes which wavelengths propagate well.",
+      "relationship": "context_only",
+      "disposition": "defer",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "ENVIRONMENT"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "environment"
+      ],
+      "assessment": "Future atmospheric-combat relevance.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-EW-005",
+      "sourceId": "SD-EW",
+      "timestamp": "3:24-3:39",
+      "idea": "Microwave energy may fit electronics/EW roles better than thermal drilling.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "ELECTRONIC_WARFARE",
+        "SPECIALIZED_COUNTERPLAY"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "electronic_warfare"
+      ],
+      "assessment": "Potential electronic-attack/Special Weapon crossover.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-EW-006",
+      "sourceId": "SD-EW",
+      "timestamp": "4:31-4:49",
+      "idea": "Very high-frequency beams can create ionizing secondary effects.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "RADIATION",
+        "DEFERRED_CREW_EFFECTS"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "crew",
+        "computing"
+      ],
+      "assessment": "Do not translate directly into penetration values.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-EW-007",
+      "sourceId": "SD-EW",
+      "timestamp": "6:21-8:15",
+      "idea": "Fixed-frequency and tunable emitters create different operating choices.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "QUALITATIVE_TECH_PROGRESSION",
+        "MULTI_MODE"
+      ],
+      "projectAreas": [
+        "energy_weapons"
+      ],
+      "assessment": "Strong adaptive-spectrum concept.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-EW-008",
+      "sourceId": "SD-EW",
+      "timestamp": "7:44-8:15",
+      "idea": "Free-electron lasers provide a broad tunable architecture.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "ARCHITECTURAL_TECH_BREAKTHROUGH",
+        "MULTI_MODE"
+      ],
+      "projectAreas": [
+        "energy_weapons"
+      ],
+      "assessment": "Strong long-term Energy branch candidate.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-EW-009",
+      "sourceId": "SD-EW",
+      "timestamp": "7:03-7:27",
+      "idea": "Frequency multiplication can be an enabling technology step.",
+      "relationship": "new_candidate",
+      "disposition": "retain_reference",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "TECHNOLOGY_FLAVOR"
+      ],
+      "projectAreas": [
+        "energy_weapons"
+      ],
+      "assessment": "Useful lineage/flavor without current mechanics.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-EW-010",
+      "sourceId": "SD-EW",
+      "timestamp": "1:17-1:27",
+      "idea": "Precision beam effectiveness may depend strongly on tracking/jitter quality.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "TACTICAL_COMPUTER",
+        "SENSORS",
+        "ENGAGEMENT_ENVELOPE"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "computing",
+        "sensors"
+      ],
+      "assessment": "Possible future family-specific degraded-fire/targeting interaction.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SM-001",
+      "sourceId": "SD-SM",
+      "timestamp": "2:51-3:20",
+      "idea": "Fixed integration permits a larger weapon architecture than a turret.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "MAIN_WEAPON",
+        "INSTALLATION_SPACE",
+        "SHIP_ARCHITECTURE"
+      ],
+      "projectAreas": [
+        "main_weapons",
+        "ship_architecture"
+      ],
+      "assessment": "Supports large Main Weapon Space abstraction.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SM-002",
+      "sourceId": "SD-SM",
+      "timestamp": "2:51-3:20",
+      "idea": "Longer acceleration structures can improve Kinetic/Particle velocity and range.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "KINETIC_WEAPONS",
+        "PARTICLE_WEAPONS",
+        "RANGE",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "kinetic_weapons",
+        "particle_weapons"
+      ],
+      "assessment": "Strong family-specific progression path.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SM-003",
+      "sourceId": "SD-SM",
+      "timestamp": "3:21-3:44",
+      "idea": "Rigid mounting can improve pointing stability.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "MAIN_WEAPON",
+        "ACCURACY",
+        "ENGAGEMENT_ENVELOPE"
+      ],
+      "projectAreas": [
+        "main_weapons"
+      ],
+      "assessment": "Potential spinal accuracy/range identity.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SM-004",
+      "sourceId": "SD-SM",
+      "timestamp": "3:36-4:07",
+      "idea": "Mount architecture reallocates structure between traverse/support and weapon/defense.",
+      "relationship": "context_only",
+      "disposition": "retain_reference",
+      "tags": [
+        "SHIP_ARCHITECTURE",
+        "INSTALLATION_SPACE"
+      ],
+      "projectAreas": [
+        "ship_architecture"
+      ],
+      "assessment": "Rationale for Space tradeoffs.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SM-005",
+      "sourceId": "SD-SM",
+      "timestamp": "4:15-5:15",
+      "idea": "Whole-ship aiming becomes vulnerable to fast close targets.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "MAIN_WEAPON",
+        "ENGAGEMENT_ENVELOPE",
+        "MOVEMENT",
+        "SPECIALIZED_COUNTERPLAY"
+      ],
+      "projectAreas": [
+        "main_weapons",
+        "movement"
+      ],
+      "assessment": "Natural long-range vs close-range counterplay.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SM-006",
+      "sourceId": "SD-SM",
+      "timestamp": "5:23-5:57",
+      "idea": "Forward-fixed fire can conflict with major maneuver direction.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "MAIN_WEAPON",
+        "MOVEMENT",
+        "COMMAND_DECISION",
+        "AVOID_EXCESS_SIMULATION"
+      ],
+      "projectAreas": [
+        "main_weapons",
+        "movement"
+      ],
+      "assessment": "Explore abstract alignment commitment before full facing.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SM-007",
+      "sourceId": "SD-SM",
+      "timestamp": "6:04-6:41",
+      "idea": "Spinal weapons favor specialized siege/anti-capital roles.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "SHIP_ARCHITECTURE",
+        "SPECIALIZATION",
+        "LEGAL_BUILD_EXTREMES"
+      ],
+      "projectAreas": [
+        "ship_architecture",
+        "legal_builds"
+      ],
+      "assessment": "Fits generalized legal extreme-build philosophy.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SM-008",
+      "sourceId": "SD-SM",
+      "timestamp": "6:55-7:21",
+      "idea": "Semi-fixed mounts can retain limited aim.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "MAIN_WEAPON",
+        "MOUNT_ARCHITECTURE"
+      ],
+      "projectAreas": [
+        "main_weapons"
+      ],
+      "assessment": "Potential intermediate architecture.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SM-009",
+      "sourceId": "SD-SM",
+      "timestamp": "7:21-7:46",
+      "idea": "Laser generators need not share Kinetic axial mount constraints.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "WEAPON_FAMILY_IDENTITY",
+        "MOUNT_ARCHITECTURE"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "main_weapons"
+      ],
+      "assessment": "Guardrail against generic cross-family spinal bonuses.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SM-010",
+      "sourceId": "SD-SM",
+      "timestamp": "7:46-8:08",
+      "idea": "Particle beams may permit limited steering despite axial accelerators.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "PARTICLE_WEAPONS",
+        "WEAPON_FAMILY_IDENTITY",
+        "MOUNT_ARCHITECTURE"
+      ],
+      "projectAreas": [
+        "particle_weapons"
+      ],
+      "assessment": "Potential distinct Particle identity.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SM-011",
+      "sourceId": "SD-SM",
+      "timestamp": "8:08-8:53",
+      "idea": "Broadside fixed mounts decouple fire direction from thrust axis.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "MOUNT_ARCHITECTURE",
+        "MOVEMENT",
+        "FACING"
+      ],
+      "projectAreas": [
+        "main_weapons",
+        "movement"
+      ],
+      "assessment": "Interesting only if facing/arcs earn their complexity.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-001",
+      "sourceId": "SD-SW",
+      "timestamp": "2:40-3:41",
+      "idea": "Unguided Kinetic hit probability depends on projectile speed, range and target acceleration.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "KINETIC_WEAPONS",
+        "ENGAGEMENT_ENVELOPE",
+        "MOVEMENT"
+      ],
+      "projectAreas": [
+        "kinetic_weapons",
+        "movement"
+      ],
+      "assessment": "Supports effective-range distinction.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-002",
+      "sourceId": "SD-SW",
+      "timestamp": "2:48-3:10",
+      "idea": "Threatening Kinetic fire can force maneuver/evasion expenditure.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "KINETIC_WEAPONS",
+        "MOVEMENT",
+        "FUEL",
+        "SPECIALIZED_COUNTERPLAY"
+      ],
+      "projectAreas": [
+        "kinetic_weapons",
+        "movement"
+      ],
+      "assessment": "Potential emergent suppression/evasion-pressure later.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-003",
+      "sourceId": "SD-SW",
+      "timestamp": "4:17-12:07; 1:56:45-2:05:53",
+      "idea": "Kinetic launcher architectures trade power, complexity, wear, timing and velocity differently.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "KINETIC_WEAPONS",
+        "QUALITATIVE_TECH_PROGRESSION",
+        "WEAPON_FAMILY_IDENTITY"
+      ],
+      "projectAreas": [
+        "kinetic_weapons",
+        "technology"
+      ],
+      "assessment": "Strong non-linear Kinetic progression model.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-004",
+      "sourceId": "SD-SW",
+      "timestamp": "13:10-20:42",
+      "idea": "Missiles are miniature spacecraft with modular propulsion/guidance/sensor/payload possibilities.",
+      "relationship": "corroborates_existing",
+      "disposition": "discuss",
+      "tags": [
+        "MISSILES",
+        "QUALITATIVE_TECH_PROGRESSION",
+        "GUIDANCE",
+        "SENSORS"
+      ],
+      "projectAreas": [
+        "missiles",
+        "sensors"
+      ],
+      "assessment": "Supports modular missile progression.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-005",
+      "sourceId": "SD-SW",
+      "timestamp": "18:13-18:52",
+      "idea": "Missile size trades salvo density against individual seeker/payload/protection capability.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "MISSILES",
+        "PDS",
+        "SALVO_ARCHITECTURE",
+        "SPECIALIZED_COUNTERPLAY"
+      ],
+      "projectAreas": [
+        "missiles",
+        "pds"
+      ],
+      "assessment": "Strong heavy-vs-saturation missile design axis.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-006",
+      "sourceId": "SD-SW",
+      "timestamp": "46:00-46:40",
+      "idea": "A laser generator can route output through multiple beam directors.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "MOUNT_ARCHITECTURE",
+        "REDUNDANCY"
+      ],
+      "projectAreas": [
+        "energy_weapons"
+      ],
+      "assessment": "Energy-specific director architecture; no free extra attack packages.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-007",
+      "sourceId": "SD-SW",
+      "timestamp": "51:12-1:02:23",
+      "idea": "Particle beams differ enough in propagation, impact and defenses to merit separate study.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "PARTICLE_WEAPONS",
+        "WEAPON_FAMILY_IDENTITY",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "particle_weapons"
+      ],
+      "assessment": "Serious future family candidate.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-008",
+      "sourceId": "SD-SW",
+      "timestamp": "1:02:33-1:11:12",
+      "idea": "Macron accelerators produce dense microscopic high-velocity projectile streams.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "KINETIC_WEAPONS",
+        "MACRONS",
+        "EXOTIC_WEAPON"
+      ],
+      "projectAreas": [
+        "kinetic_weapons"
+      ],
+      "assessment": "Potential late accelerator branch.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-009",
+      "sourceId": "SD-SW",
+      "timestamp": "1:11:15-1:19:41",
+      "idea": "Plausible plasma weapons often converge toward particle/direct-energy behavior.",
+      "relationship": "conflicts_or_warns",
+      "disposition": "retain_reference",
+      "tags": [
+        "PLASMA_WEAPONS",
+        "WEAPON_FAMILY_IDENTITY"
+      ],
+      "projectAreas": [
+        "weapon_architecture"
+      ],
+      "assessment": "Do not add Plasma by genre convention alone.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-010",
+      "sourceId": "SD-SW",
+      "timestamp": "1:29:00-1:38:20",
+      "idea": "PDS can branch into Kinetic/flak, laser and interceptor-missile architectures.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "PDS",
+        "QUALITATIVE_TECH_PROGRESSION",
+        "WEAPON_FAMILY_IDENTITY"
+      ],
+      "projectAreas": [
+        "pds"
+      ],
+      "assessment": "Strong future branching direction.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-011",
+      "sourceId": "SD-SW",
+      "timestamp": "1:37:03-1:37:34",
+      "idea": "PDS may use local sensing/control and ship-level information together.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "PDS",
+        "TACTICAL_COMPUTER",
+        "SENSORS"
+      ],
+      "projectAreas": [
+        "pds",
+        "computing",
+        "sensors"
+      ],
+      "assessment": "Strong support for current local PDS architecture.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-012",
+      "sourceId": "SD-SW",
+      "timestamp": "1:44:15-1:44:54",
+      "idea": "Active emitters can be targeted by anti-radiation/home-on-emission weapons.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ELECTRONIC_WARFARE",
+        "SENSORS",
+        "MISSILES",
+        "SPECIALIZED_COUNTERPLAY"
+      ],
+      "projectAreas": [
+        "electronic_warfare",
+        "sensors",
+        "missiles"
+      ],
+      "assessment": "Elegant future counterplay to strong active emissions.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-013",
+      "sourceId": "SD-SW",
+      "timestamp": "1:39:26-1:47:45",
+      "idea": "EW includes deception/false signatures/comms disruption, not only raw jamming.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ELECTRONIC_WARFARE",
+        "QUALITATIVE_TECH_PROGRESSION",
+        "DECEPTION"
+      ],
+      "projectAreas": [
+        "electronic_warfare"
+      ],
+      "assessment": "Strong qualitative EW progression.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-014",
+      "sourceId": "SD-SW",
+      "timestamp": "2:05:57-2:13:50",
+      "idea": "Space mines make most sense near strategic constraints; mobile/ranged mines blur toward missiles/platforms.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "MINES",
+        "STRATEGIC_LAYER",
+        "EXPLORATION"
+      ],
+      "projectAreas": [
+        "mines",
+        "campaign"
+      ],
+      "assessment": "Prefer system/chokepoint hazards over generic tactical mine spam.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-015",
+      "sourceId": "SD-SW",
+      "timestamp": "2:14:01 onward",
+      "idea": "Turrets include substantial internal support/feed/traverse architecture.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "MAIN_WEAPON",
+        "INSTALLATION_SPACE",
+        "MOUNT_ARCHITECTURE"
+      ],
+      "projectAreas": [
+        "main_weapons"
+      ],
+      "assessment": "Reinforces current Space abstraction.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-016",
+      "sourceId": "SD-SW",
+      "timestamp": "21:39-31:21; 56:21-57:37",
+      "idea": "Radiation can create crew/electronics effects distinct from hull damage.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "RADIATION",
+        "DEFERRED_CREW_EFFECTS",
+        "COMPUTING"
+      ],
+      "projectAreas": [
+        "crew",
+        "computing",
+        "damage"
+      ],
+      "assessment": "Wait for dedicated radiation source and mature crew/internal systems.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-017",
+      "sourceId": "SD-SW",
+      "timestamp": "recurring",
+      "idea": "Effective engagement range emerges from weapon physics, tracking, target mobility, guidance, EW and defenses.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "ENGAGEMENT_ENVELOPE",
+        "SENSORS",
+        "ELECTRONIC_WARFARE",
+        "MOVEMENT"
+      ],
+      "projectAreas": [
+        "combat_geometry",
+        "sensors",
+        "electronic_warfare"
+      ],
+      "assessment": "Strong cross-system confirmation of current architecture.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-018",
+      "sourceId": "SD-SW",
+      "timestamp": "recurring",
+      "idea": "Scientific categories blur; gameplay families should be based on coherent lineage/behavior.",
+      "relationship": "new_candidate",
+      "disposition": "retain_reference",
+      "tags": [
+        "WEAPON_FAMILY_IDENTITY",
+        "DESIGN_GUARDRAIL"
+      ],
+      "projectAreas": [
+        "weapon_architecture"
+      ],
+      "assessment": "Use gameplay identity rather than taxonomy purity.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-019",
+      "sourceId": "SD-SW",
+      "timestamp": "31:31-40:35",
+      "idea": "Exceptional weapons are memorable when firing requires buildup/commitment/consequence.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "RARE_WEAPON_EVENT",
+        "OVERLOAD",
+        "CHARGING",
+        "SPECIAL_WEAPON"
+      ],
+      "projectAreas": [
+        "special_weapons",
+        "overload"
+      ],
+      "assessment": "Strong principle for rare/Precursor/experimental systems.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SG-001",
+      "sourceId": "SD-SG",
+      "timestamp": "0:20-1:18",
+      "idea": "Long-duration zero-g causes health effects not fully solved by exercise.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "HABITABILITY",
+        "CREW",
+        "SHIP_ARCHITECTURE"
+      ],
+      "projectAreas": [
+        "habitation",
+        "crew"
+      ],
+      "assessment": "Star Cluster eventually needs a deliberate long-duration gravity answer.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SG-002",
+      "sourceId": "SD-SG",
+      "timestamp": "1:18-2:01",
+      "idea": "Artificial gravity can come from generated fields, linear acceleration or rotation.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "HABITABILITY",
+        "PROPULSION",
+        "ARCHITECTURAL_TECH_BREAKTHROUGH"
+      ],
+      "projectAreas": [
+        "habitation",
+        "propulsion"
+      ],
+      "assessment": "Foundational setting choice remains open.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SG-003",
+      "sourceId": "SD-SG",
+      "timestamp": "2:09-4:29",
+      "idea": "Small centrifuges require higher spin rates and harsher Coriolis/gradient conditions.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "HABITABILITY",
+        "SHIP_ARCHITECTURE",
+        "AVOID_EXCESS_SIMULATION"
+      ],
+      "projectAreas": [
+        "habitation",
+        "ship_architecture"
+      ],
+      "assessment": "Model quality/architecture, not RPM equations.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SG-004",
+      "sourceId": "SD-SG",
+      "timestamp": "4:37-5:15",
+      "idea": "Large rings suit stations/civilian habitats better than compact warships.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "SHIP_ARCHITECTURE",
+        "HABITABILITY",
+        "ROLE_DIFFERENTIATION"
+      ],
+      "projectAreas": [
+        "habitation",
+        "ship_architecture"
+      ],
+      "assessment": "Strong role/visual differentiation.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SG-005",
+      "sourceId": "SD-SG",
+      "timestamp": "4:59-5:15",
+      "idea": "Deployable/folding centrifuges suggest cruise versus combat configurations.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "HABITABILITY",
+        "COMBAT_READINESS",
+        "SHIP_ARCHITECTURE"
+      ],
+      "projectAreas": [
+        "habitation",
+        "combat_readiness"
+      ],
+      "assessment": "Good warship fiction; mechanize only if preparedness gameplay earns it.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SG-006",
+      "sourceId": "SD-SG",
+      "timestamp": "5:15-5:31",
+      "idea": "Rotating joints create power/fluid transfer and maintenance complexity.",
+      "relationship": "context_only",
+      "disposition": "retain_reference",
+      "tags": [
+        "HABITABILITY",
+        "MAINTENANCE",
+        "AVOID_EXCESS_SIMULATION"
+      ],
+      "projectAreas": [
+        "habitation"
+      ],
+      "assessment": "Rationale for architecture cost without component-level detail.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SG-007",
+      "sourceId": "SD-SG",
+      "timestamp": "5:31-6:40",
+      "idea": "Spin sections exchange angular momentum and create gyroscopic effects.",
+      "relationship": "context_only",
+      "disposition": "out_of_scope",
+      "tags": [
+        "MOVEMENT",
+        "HABITABILITY",
+        "AVOID_EXCESS_SIMULATION"
+      ],
+      "projectAreas": [
+        "movement",
+        "habitation"
+      ],
+      "assessment": "Keep as fiction; no gyro dynamics simulator.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SG-008",
+      "sourceId": "SD-SG",
+      "timestamp": "6:40-7:39",
+      "idea": "Whole-ship/tethered rotation offers alternative artificial-gravity layouts.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "EXPLORATION",
+        "HABITABILITY",
+        "CAMPAIGN_EVENT"
+      ],
+      "projectAreas": [
+        "exploration",
+        "habitation"
+      ],
+      "assessment": "Useful exploration/emergency flavor.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SG-009",
+      "sourceId": "SD-SG",
+      "timestamp": "8:12-8:51",
+      "idea": "Hub docking is naturally easier than rim docking on a rotating habitat.",
+      "relationship": "context_only",
+      "disposition": "retain_reference",
+      "tags": [
+        "STATIONS",
+        "HABITABILITY",
+        "WORLD_BUILDING"
+      ],
+      "projectAreas": [
+        "stations"
+      ],
+      "assessment": "Good station-layout logic without docking minigame.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SG-010",
+      "sourceId": "SD-SG",
+      "timestamp": "8:51-9:22",
+      "idea": "Generated gravity can distinguish later technological generations from spin gravity.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ARCHITECTURAL_TECH_BREAKTHROUGH",
+        "QUALITATIVE_TECH_PROGRESSION",
+        "HABITABILITY"
+      ],
+      "projectAreas": [
+        "habitation",
+        "technology"
+      ],
+      "assessment": "Strong design-envelope breakthrough candidate; preserve legacy spin usefulness.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-020",
+      "sourceId": "SD-SW",
+      "timestamp": "2:29:21-2:38:24",
+      "idea": "Kinetic and Energy weapon families can differ in resource burden: finite ammunition and magazines versus power/thermal demand, with hybrid technologies sometimes carrying both.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "WEAPON_FAMILY_IDENTITY",
+        "AMMUNITION",
+        "TACTICAL_POWER",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "weapon_architecture",
+        "kinetic_weapons",
+        "energy_weapons"
+      ],
+      "assessment": "Useful family identity axis; do not turn it into an absolute physics taxonomy.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-021",
+      "sourceId": "SD-SW",
+      "timestamp": "2:29:21-2:38:24",
+      "idea": "Kinetic systems can vary through projectile, accelerator and ammunition changes, while Energy systems can vary through emitter, focusing, steering and efficiency changes.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "WEAPON_FAMILY_IDENTITY",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "technology",
+        "weapon_architecture"
+      ],
+      "assessment": "Strong support for asymmetric family-specific TL progression.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-022",
+      "sourceId": "SD-SW",
+      "timestamp": "2:22:07-2:29:13",
+      "idea": "Radiation-oriented weapons can be countered by dedicated shielding/hardening, but that protection carries engineering cost.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "RADIATION",
+        "SPECIALIZED_COUNTERPLAY",
+        "SHIP_ARCHITECTURE"
+      ],
+      "projectAreas": [
+        "damage",
+        "defense"
+      ],
+      "assessment": "Prefer specialist hardening/traits over a universal radiation-resistance stat until radiation mechanics earn that complexity.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-023",
+      "sourceId": "SD-SW",
+      "timestamp": "2:22:07-2:29:13",
+      "idea": "Particle composition and mass can change how deeply energy is deposited and how strongly secondary ionizing effects threaten crew/electronics.",
+      "relationship": "extends_candidate",
+      "disposition": "defer",
+      "tags": [
+        "RADIATION",
+        "PARTICLE_WEAPONS",
+        "DEFERRED_CREW_EFFECTS"
+      ],
+      "projectAreas": [
+        "particle_weapons",
+        "damage",
+        "crew"
+      ],
+      "assessment": "Potential future specialization axis; avoid detailed dose simulation.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-024",
+      "sourceId": "SD-SW",
+      "timestamp": "2:22:07-2:29:13",
+      "idea": "Radiological contamination and lingering exposure can matter after an attack even when the immediate structural effect is limited.",
+      "relationship": "context_only",
+      "disposition": "defer",
+      "tags": [
+        "RADIATION",
+        "STRATEGIC_LAYER",
+        "SCENARIO"
+      ],
+      "projectAreas": [
+        "campaign",
+        "damage"
+      ],
+      "assessment": "Better suited to scenario/salvage consequences than universal tactical bookkeeping.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-025",
+      "sourceId": "SD-SW",
+      "timestamp": "2:05:57-2:13:50",
+      "idea": "Minefields derive much of their value from uncertainty and area denial rather than raw damage alone.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "MINES",
+        "INFORMATION",
+        "AREA_DENIAL"
+      ],
+      "projectAreas": [
+        "mines",
+        "sensors",
+        "campaign"
+      ],
+      "assessment": "Supports observer-safe hazard regions and route pressure rather than visible mine-counter spam.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-026",
+      "sourceId": "SD-SW",
+      "timestamp": "2:05:57-2:13:50",
+      "idea": "Mine counterplay can include sensing, probes, spoofing, sweeping, disposable clearing assets and route choice.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "MINES",
+        "SPECIALIZED_COUNTERPLAY",
+        "SENSORS",
+        "EXPLORATION"
+      ],
+      "projectAreas": [
+        "mines",
+        "sensors",
+        "campaign"
+      ],
+      "assessment": "Strong counterplay vocabulary if minefields are introduced.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-027",
+      "sourceId": "SD-SW",
+      "timestamp": "2:05:57-2:13:50",
+      "idea": "As mines gain range, mobility or autonomous pursuit they increasingly blur into disposable platforms or missiles.",
+      "relationship": "extends_candidate",
+      "disposition": "retain_reference",
+      "tags": [
+        "MINES",
+        "MISSILES",
+        "WEAPON_FAMILY_IDENTITY"
+      ],
+      "projectAreas": [
+        "mines",
+        "missiles"
+      ],
+      "assessment": "Classify future systems by behavior rather than naming convention.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-028",
+      "sourceId": "SD-SW",
+      "timestamp": "2:14:01-2:22:00",
+      "idea": "Large weapon mounts trade structural mass/output against tracking responsiveness and target-switch agility.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "MAIN_WEAPON",
+        "MOUNT_ARCHITECTURE",
+        "ENGAGEMENT_ENVELOPE"
+      ],
+      "projectAreas": [
+        "main_weapons",
+        "weapon_architecture"
+      ],
+      "assessment": "Useful distinction for heavy/spinal/turreted architectures without degrees-per-second simulation.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-029",
+      "sourceId": "SD-SW",
+      "timestamp": "1:48:01-1:56:35; 2:14:01-2:22:00",
+      "idea": "Phased-array or other nonmechanical beam steering can improve rapid retargeting and distributed aperture use without increasing total generator output.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "MOUNT_ARCHITECTURE",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "pds"
+      ],
+      "assessment": "Strong high-TL integration direction; no free extra attack packages.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-030",
+      "sourceId": "SD-SW",
+      "timestamp": "1:56:45-2:05:53",
+      "idea": "Kinetic ammunition can use penetrators, proximity/submunition packages, guided or smart projectiles, specialized armatures and exotic materials in addition to changes in the launcher itself.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "KINETIC_WEAPONS",
+        "AMMUNITION",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "kinetic_weapons",
+        "technology"
+      ],
+      "assessment": "One of the richest Kinetic progression axes.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-031",
+      "sourceId": "SD-SW",
+      "timestamp": "1:56:45-2:05:53",
+      "idea": "Rail, coil and hybrid/helical electromagnetic launchers trade timing/control complexity, current, wear, projectile interaction and accelerator architecture in different ways.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "KINETIC_WEAPONS",
+        "ARCHITECTURAL_TECH_BREAKTHROUGH",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "kinetic_weapons",
+        "technology"
+      ],
+      "assessment": "Promising maturation branch; exact implementation remains open.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-032",
+      "sourceId": "SD-SW",
+      "timestamp": "1:48:01-1:56:35",
+      "idea": "Advanced laser systems can distribute generation and steering across multiple apertures/arrays for resilience and rapid engagement changes.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "REDUNDANCY",
+        "MOUNT_ARCHITECTURE"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "pds"
+      ],
+      "assessment": "Corroborates distributed-director architecture while keeping one bounded output pool.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-033",
+      "sourceId": "SD-SW",
+      "timestamp": "1:48:01-1:56:35",
+      "idea": "Laser-coupled particle concepts offer an exotic route to reduced divergence or extreme-range directed effects.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "PARTICLE_WEAPONS",
+        "EXOTIC_WEAPON"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "particle_weapons"
+      ],
+      "assessment": "Preserve as exotic/Precursor/high-TL inspiration rather than ordinary progression.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-034",
+      "sourceId": "SD-SW",
+      "timestamp": "1:38:29-1:47:45",
+      "idea": "Physical/active decoys are a distinct EW tool from continuous jamming and can attack seeker discrimination rather than raw signal strength.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ELECTRONIC_WARFARE",
+        "DECEPTION",
+        "MISSILES"
+      ],
+      "projectAreas": [
+        "electronic_warfare",
+        "missiles"
+      ],
+      "assessment": "Potential qualitative EW progression without another stacked rating.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-035",
+      "sourceId": "SD-SW",
+      "timestamp": "1:38:29-1:47:45",
+      "idea": "Communications jamming can attack command links and datalinks rather than only sensor discrimination.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ELECTRONIC_WARFARE",
+        "COMMUNICATIONS",
+        "MISSILES",
+        "GUIDANCE"
+      ],
+      "projectAreas": [
+        "electronic_warfare",
+        "missiles"
+      ],
+      "assessment": "Especially relevant to command-guided missile chains; needs explicit observer-safe mechanics later.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-036",
+      "sourceId": "SD-SW",
+      "timestamp": "1:38:29-1:47:45",
+      "idea": "Directional jamming can concentrate effect when threat direction is known, at the cost of coverage/flexibility.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "ELECTRONIC_WARFARE",
+        "SPECIALIZED_COUNTERPLAY"
+      ],
+      "projectAreas": [
+        "electronic_warfare"
+      ],
+      "assessment": "Interesting specialist system; avoid baseline facing/allocation micromanagement.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-037",
+      "sourceId": "SD-SW",
+      "timestamp": "1:29:00-1:38:20",
+      "idea": "Point-defense systems can use high-volume kinetic fire, proximity/submunition packages, local fire-control improvements and guided intercept rounds.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "PDS",
+        "KINETIC_WEAPONS",
+        "QUALITATIVE_TECH_PROGRESSION",
+        "AMMUNITION"
+      ],
+      "projectAreas": [
+        "pds",
+        "kinetic_weapons"
+      ],
+      "assessment": "Strong family-specific PDS progression vocabulary.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-038",
+      "sourceId": "SD-SW",
+      "timestamp": "1:29:00-1:38:20",
+      "idea": "Point defense operates during a short terminal closing interval in which reaction time and opportunities to re-engage an incoming threat are limited.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "PDS",
+        "ENGAGEMENT_ENVELOPE",
+        "REACTION_CAPACITY"
+      ],
+      "projectAreas": [
+        "pds"
+      ],
+      "assessment": "Supports current abstraction; no need for turret-arc or burst-by-burst timing.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-039",
+      "sourceId": "SD-SW",
+      "timestamp": "1:29:00-1:38:20",
+      "idea": "Anti-missile missiles form a distinct guided defensive layer with finite interceptor inventory and potentially longer reach than terminal gun/laser PDS.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "PDS",
+        "MISSILES",
+        "AMMUNITION",
+        "SPECIALIZED_COUNTERPLAY"
+      ],
+      "projectAreas": [
+        "pds",
+        "missiles"
+      ],
+      "assessment": "Natural future extended-defense family; keep distinct from standard terminal PDS.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-040",
+      "sourceId": "SD-SW",
+      "timestamp": "1:29:00-1:38:20",
+      "idea": "Destroying or mission-killing an incoming missile can still leave high-velocity fragments that are physically hazardous.",
+      "relationship": "context_only",
+      "disposition": "retain_reference",
+      "tags": [
+        "PDS",
+        "AVOID_EXCESS_SIMULATION",
+        "MISSILES"
+      ],
+      "projectAreas": [
+        "pds",
+        "missiles"
+      ],
+      "assessment": "Record the physical caveat, but retain Star Cluster's attack-package abstraction and no universal residual-debris damage roll unless a special trait later earns one.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-041",
+      "sourceId": "SD-SW",
+      "timestamp": "1:02:33-1:11:12",
+      "idea": "Macron weapons fire enormous streams of microscopic projectiles that can be carried in very large physical quantities, while their electrostatic accelerator infrastructure can be substantial.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "MACRONS",
+        "KINETIC_WEAPONS",
+        "AMMUNITION",
+        "INSTALLATION_SPACE"
+      ],
+      "projectAreas": [
+        "kinetic_weapons"
+      ],
+      "assessment": "Distinctive late-Kinetic trade: abundant attack material, demanding launcher.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-042",
+      "sourceId": "SD-SW",
+      "timestamp": "1:02:33-1:11:12",
+      "idea": "Fissile or fusion payloads inside macrons can release additional nuclear energy on impact, and related microreaction concepts can also be used for power generation or propulsion.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "MACRONS",
+        "CROSS_CATEGORY_INTERACTION",
+        "KINETIC_WEAPONS",
+        "POWER",
+        "PROPULSION"
+      ],
+      "projectAreas": [
+        "kinetic_weapons",
+        "power",
+        "propulsion"
+      ],
+      "assessment": "Excellent example of enabling science shared across categories without merging ownership.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-043",
+      "sourceId": "SD-SW",
+      "timestamp": "51:12-1:02:23",
+      "idea": "Particle species can shift a beam from shallow material damage toward deeper ionization/radiation and electronics effects.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "PARTICLE_WEAPONS",
+        "RADIATION",
+        "WEAPON_FAMILY_IDENTITY"
+      ],
+      "projectAreas": [
+        "particle_weapons",
+        "energy_weapons",
+        "damage"
+      ],
+      "assessment": "Strong subtype/progression axis; does not require a universal radiation bar.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-044",
+      "sourceId": "SD-SW",
+      "timestamp": "51:12-1:02:23",
+      "idea": "Neutralizing a charged particle beam after acceleration can reduce electrostatic bloom and preserve a tighter beam over distance.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "PARTICLE_WEAPONS",
+        "ENGAGEMENT_ENVELOPE",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "particle_weapons",
+        "energy_weapons"
+      ],
+      "assessment": "Strong qualitative maturation step.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-045",
+      "sourceId": "SD-SW",
+      "timestamp": "51:12-1:02:23",
+      "idea": "Electrostatic, magnetic and plasma-screen defenses provide specialist countermeasure concepts against particle beams.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "PARTICLE_WEAPONS",
+        "SPECIALIZED_COUNTERPLAY",
+        "AUXILIARY"
+      ],
+      "projectAreas": [
+        "particle_weapons",
+        "defense"
+      ],
+      "assessment": "Prefer specialist auxiliaries/traits over redefining ordinary shields.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-046",
+      "sourceId": "SD-SW",
+      "timestamp": "59:03-1:02:23",
+      "idea": "Ultra-relativistic electron beams greatly reduce bloom, carry extreme energy, penetrate strongly, generate high-energy secondary radiation and are very difficult to deflect.",
+      "relationship": "conflicts_or_warns",
+      "disposition": "defer",
+      "tags": [
+        "PARTICLE_WEAPONS",
+        "EXOTIC_WEAPON",
+        "RARE_WEAPON_EVENT"
+      ],
+      "projectAreas": [
+        "particle_weapons",
+        "special_weapons"
+      ],
+      "assessment": "Preserve as exceptional/Precursor/very-late candidate unless substantial costs and counters are proven.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-047",
+      "sourceId": "SD-SW",
+      "timestamp": "40:41-51:02",
+      "idea": "Continuous-wave and pulsed lasers deposit energy differently; short high-energy pulses can create mechanical shock and drilling-like effects, and pulse duration changes the result.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "QUALITATIVE_TECH_PROGRESSION",
+        "PULSED_WEAPON"
+      ],
+      "projectAreas": [
+        "energy_weapons"
+      ],
+      "assessment": "Strong basis for a pulsed-laser maturation step; exact DAM/APEN/mode mechanics remain open.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-048",
+      "sourceId": "SD-SW",
+      "timestamp": "41:45-43:00",
+      "idea": "Chemical lasers can trade finite expendable reactants for high output/reduced ship electrical dependence.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "AMMUNITION",
+        "TACTICAL_POWER"
+      ],
+      "projectAreas": [
+        "energy_weapons"
+      ],
+      "assessment": "Useful faction/specialist Beam identity; Beam does not have to mean infinite electrical ammunition.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-049",
+      "sourceId": "SD-SW",
+      "timestamp": "49:04-50:35",
+      "idea": "Distributed strategic focusing arrays can create system-scale laser infrastructure useful for weapons, propulsion, sensing, communications or power transfer.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "ENERGY_WEAPONS",
+        "STRATEGIC_LAYER",
+        "INFRASTRUCTURE",
+        "CROSS_CATEGORY_INTERACTION"
+      ],
+      "projectAreas": [
+        "energy_weapons",
+        "campaign",
+        "propulsion",
+        "sensors"
+      ],
+      "assessment": "Better fit for installations/Precursor infrastructure than ordinary cruiser Main Weapons.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-050",
+      "sourceId": "SD-SW",
+      "timestamp": "31:31-40:35",
+      "idea": "Superweapon status is a role/scale/narrative descriptor, and extraordinary effects can emerge from unusual uses of established systems rather than a dedicated weapon family.",
+      "relationship": "extends_candidate",
+      "disposition": "retain_reference",
+      "tags": [
+        "RARE_WEAPON_EVENT",
+        "SPECIAL_WEAPON",
+        "WEAPON_FAMILY_IDENTITY"
+      ],
+      "projectAreas": [
+        "special_weapons",
+        "campaign"
+      ],
+      "assessment": "Do not create a Superweapon TL family; use rare scenario/Precursor/artifact effects when appropriate.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-051",
+      "sourceId": "SD-SW",
+      "timestamp": "21:39-31:21",
+      "idea": "Nuclear devices are commonly missile-delivered, and nuclear energy can also be engineered into several directed terminal effects rather than only an omnidirectional detonation.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "NUCLEAR",
+        "MISSILES",
+        "WARHEAD",
+        "WEAPON_FAMILY_IDENTITY"
+      ],
+      "projectAreas": [
+        "missiles",
+        "weapon_architecture"
+      ],
+      "assessment": "Strong support for separating missile delivery/guidance from warhead effect.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-052",
+      "sourceId": "SD-SW",
+      "timestamp": "25:40-31:21",
+      "idea": "Bomb-pumped beams, directed plasma charges and nuclear formed penetrators can focus nuclear output into qualitatively different terminal attack mechanisms.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "NUCLEAR",
+        "MISSILES",
+        "WARHEAD",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "missiles",
+        "special_weapons"
+      ],
+      "assessment": "Rich advanced-warhead vocabulary; exact Star Cluster stats remain open.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-053",
+      "sourceId": "SD-SW",
+      "timestamp": "25:40-31:21",
+      "idea": "The same directed nuclear-energy principles can be applied to propulsion or converted back into weapons such as plasma jets and explosively formed penetrators.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "NUCLEAR",
+        "CROSS_CATEGORY_INTERACTION",
+        "MISSILES",
+        "KINETIC_WEAPONS",
+        "POWER"
+      ],
+      "projectAreas": [
+        "missiles",
+        "kinetic_weapons",
+        "power",
+        "propulsion"
+      ],
+      "assessment": "Use causal prerequisite tags if adopted; do not merge the research families.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-054",
+      "sourceId": "SD-SW",
+      "timestamp": "23:57-25:39",
+      "idea": "Enhanced-radiation nuclear devices deliberately shift more of their output toward neutrons, threatening crew over distances where strong material damage may be much lower.",
+      "relationship": "extends_candidate",
+      "disposition": "defer",
+      "tags": [
+        "NUCLEAR",
+        "RADIATION",
+        "DEFERRED_CREW_EFFECTS",
+        "CAPTURE"
+      ],
+      "projectAreas": [
+        "missiles",
+        "damage",
+        "crew"
+      ],
+      "assessment": "Potential niche payload after crew/internal systems mature; specialist hardening can counter it.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-055",
+      "sourceId": "SD-SW",
+      "timestamp": "27:03-27:10",
+      "idea": "A deliberately broader, shorter-ranged directed nuclear effect can be used defensively to destroy incoming weapons across a volume of space.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "NUCLEAR",
+        "PDS",
+        "MISSILES",
+        "SPECIALIZED_COUNTERPLAY"
+      ],
+      "projectAreas": [
+        "pds",
+        "missiles"
+      ],
+      "assessment": "Interesting AMM/emergency-defense concept with obvious scarcity/collateral costs.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-056",
+      "sourceId": "SD-SW",
+      "timestamp": "12:27-21:30",
+      "idea": "Missile designs vary separately in propulsion/endurance, guidance and sensors, warhead type, physical size and launcher integration.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "MISSILES",
+        "GUIDANCE",
+        "SENSORS",
+        "WARHEAD",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "missiles",
+        "sensors"
+      ],
+      "assessment": "Strong structural support for modular missile progression.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-057",
+      "sourceId": "SD-SW",
+      "timestamp": "14:44-15:07",
+      "idea": "Unguided rockets/torpedoes remain a legitimate distinct munition form with shorter useful reach but lower guidance complexity.",
+      "relationship": "new_candidate",
+      "disposition": "retain_reference",
+      "tags": [
+        "MISSILES",
+        "UNGUIDED",
+        "WEAPON_FAMILY_IDENTITY"
+      ],
+      "projectAreas": [
+        "missiles"
+      ],
+      "assessment": "Supports retaining unguided rockets as a real capability combination.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-058",
+      "sourceId": "SD-SW",
+      "timestamp": "13:46-14:44",
+      "idea": "Seeker sophistication and countermeasures form an arms race in discrimination, decoys/blinding and onboard power/integration complexity.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "MISSILES",
+        "GUIDANCE",
+        "ELECTRONIC_WARFARE",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "missiles",
+        "electronic_warfare"
+      ],
+      "assessment": "Higher-TL guidance can improve robustness/information quality rather than raw warhead damage.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-059",
+      "sourceId": "SD-SW",
+      "timestamp": "18:13-19:32",
+      "idea": "Many-small versus few-large missile designs trade defensive saturation against per-vehicle sensor, power, protection and payload capability.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "MISSILES",
+        "SALVO_ARCHITECTURE",
+        "PDS"
+      ],
+      "projectAreas": [
+        "missiles",
+        "pds"
+      ],
+      "assessment": "Maps naturally to different physical compositions inside one Missile Flight abstraction.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-060",
+      "sourceId": "SD-SW",
+      "timestamp": "20:26-21:30",
+      "idea": "Missile engine/propellant choices trade acceleration, range/endurance and cost; beamed-power propulsion can extend range while shifting the propulsion power burden back to the launching platform.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "MISSILES",
+        "PROPULSION",
+        "TACTICAL_POWER",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "missiles",
+        "propulsion"
+      ],
+      "assessment": "Useful progression axis; beamed-power missiles need a distinct reason to exist over firing the beam directly.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-061",
+      "sourceId": "SD-SW",
+      "timestamp": "1:24-4:03",
+      "idea": "Projectile mass, velocity and construction can trade broad energy deposition against narrow penetration/internal effects.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "KINETIC_WEAPONS",
+        "APEN",
+        "DAMAGE",
+        "WEAPON_FAMILY_IDENTITY"
+      ],
+      "projectAreas": [
+        "kinetic_weapons",
+        "damage"
+      ],
+      "assessment": "Supports family-appropriate DAM/APEN trade space without automatic penetration every TL.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-062",
+      "sourceId": "SD-SW",
+      "timestamp": "4:03-8:03",
+      "idea": "Coilguns require precise staged electromagnetic timing, while railguns avoid that timing burden but face high-current, heating, arcing, erosion and materials problems.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "KINETIC_WEAPONS",
+        "COMPUTING",
+        "MATERIALS",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "kinetic_weapons",
+        "computing",
+        "technology"
+      ],
+      "assessment": "Good sparse cross-category prerequisite vocabulary.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-063",
+      "sourceId": "SD-SW",
+      "timestamp": "6:30-10:31",
+      "idea": "Kinetic launchers can require recoil compensation, structural bracing, cooling and wear management in addition to the accelerator and projectile themselves.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "KINETIC_WEAPONS",
+        "INSTALLATION_SPACE",
+        "AVOID_EXCESS_SIMULATION"
+      ],
+      "projectAreas": [
+        "kinetic_weapons",
+        "ship_architecture"
+      ],
+      "assessment": "Strong abstraction support.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-064",
+      "sourceId": "SD-SW",
+      "timestamp": "2:38:34-2:47:05",
+      "idea": "Proximity/submunition Kinetic packages can trade individual hit effect for a larger effective interception/damage volume, especially against exposed or small systems.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "KINETIC_WEAPONS",
+        "AMMUNITION",
+        "PDS",
+        "SPECIALIZED_COUNTERPLAY"
+      ],
+      "projectAreas": [
+        "kinetic_weapons",
+        "pds"
+      ],
+      "assessment": "Interesting ammunition specialization; avoid generic size accuracy modifiers.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-SW-065",
+      "sourceId": "SD-SW",
+      "timestamp": "2:38:34-2:47:05",
+      "idea": "Missile closing speed, maneuver and remaining propellant affect the terminal interception opportunity available to point defense.",
+      "relationship": "extends_candidate",
+      "disposition": "defer",
+      "tags": [
+        "MISSILES",
+        "PDS",
+        "ENGAGEMENT_ENVELOPE",
+        "PROPULSION"
+      ],
+      "projectAreas": [
+        "missiles",
+        "pds"
+      ],
+      "assessment": "Useful rationale for bounded terminal-defense windows; defer detailed closing-time simulation.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q06-001",
+      "sourceId": "SD-Q06",
+      "timestamp": "1:18-2:29",
+      "idea": "Exploration is purposeful knowledge acquisition - mapping, resources, science and contact - rather than merely arriving first.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "EXPLORATION",
+        "INFORMATION",
+        "CAMPAIGN"
+      ],
+      "projectAreas": [
+        "exploration",
+        "campaign"
+      ],
+      "assessment": "Strong fit for Star Cluster exploration goals.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q06-002",
+      "sourceId": "SD-Q06",
+      "timestamp": "2:03-2:54",
+      "idea": "Sensors and disposable/reusable probes can automate tedious surveying while leaving the player to choose what merits investigation and risk.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "EXPLORATION",
+        "SENSORS",
+        "PROBES",
+        "AVOID_EXCESS_SIMULATION"
+      ],
+      "projectAreas": [
+        "exploration",
+        "sensors"
+      ],
+      "assessment": "High-interest probe/survey direction; avoid repetitive manual scanning minigames.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q06-003",
+      "sourceId": "SD-Q06",
+      "timestamp": "2:45-3:42",
+      "idea": "Exploration ships benefit from endurance, ruggedness, efficiency, field repairability and carried spares because distant failures may be hard to fix.",
+      "relationship": "corroborates_existing",
+      "disposition": "discuss",
+      "tags": [
+        "EXPLORATION",
+        "DAMAGE_CONTROL",
+        "ENDURANCE",
+        "SHIP_ARCHITECTURE"
+      ],
+      "projectAreas": [
+        "exploration",
+        "damage_control",
+        "campaign"
+      ],
+      "assessment": "Strong support for self-sufficiency tradeoffs using existing repair/fuel systems.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q06-004",
+      "sourceId": "SD-Q06",
+      "timestamp": "3:34-6:25",
+      "idea": "Long expeditions are constrained by consumables and replenishment opportunities, and specialized harvesting equipment trades against carrying more supplies or better recycling.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "EXPLORATION",
+        "LOGISTICS",
+        "RESOURCES",
+        "INSTALLATION_SPACE"
+      ],
+      "projectAreas": [
+        "exploration",
+        "campaign"
+      ],
+      "assessment": "Model through broad resources/equipment choices rather than food/water calorie accounting.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q06-005",
+      "sourceId": "SD-Q06",
+      "timestamp": "6:25-7:19",
+      "idea": "Very advanced self-sufficiency technology can erase the feeling of distance unless failures or other constraints preserve meaningful expedition choices.",
+      "relationship": "conflicts_or_warns",
+      "disposition": "retain_reference",
+      "tags": [
+        "EXPLORATION",
+        "QUALITATIVE_TECH_PROGRESSION",
+        "CAMPAIGN"
+      ],
+      "projectAreas": [
+        "exploration",
+        "campaign"
+      ],
+      "assessment": "Higher TL should reduce expedition problems without deleting the press-on/return-home tension.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q06-006",
+      "sourceId": "SD-Q06",
+      "timestamp": "2:54-3:34; recurring",
+      "idea": "Isolation from rescue and the possibility of being unable to return are core exploration hazards.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "EXPLORATION",
+        "RISK",
+        "FTL",
+        "DAMAGE_CONTROL"
+      ],
+      "projectAreas": [
+        "exploration",
+        "campaign",
+        "propulsion"
+      ],
+      "assessment": "Strong support for strandedness and return capability as campaign stakes.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q06-007",
+      "sourceId": "SD-Q06",
+      "timestamp": "5:29-6:25",
+      "idea": "Local resource gathering can extend an expedition, but extraction hardware competes with other ship capacity and may only be valuable in some failures/routes.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "EXPLORATION",
+        "RESOURCES",
+        "INSTALLATION_SPACE"
+      ],
+      "projectAreas": [
+        "exploration",
+        "campaign"
+      ],
+      "assessment": "Good optional expedition specialization; no large inventory taxonomy required.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q06-008",
+      "sourceId": "SD-Q06",
+      "timestamp": "recurring",
+      "idea": "Exploration is more memorable when discoveries have context and consequences rather than being interchangeable procedural scan targets.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "EXPLORATION",
+        "PROCEDURAL_GENERATION",
+        "CAMPAIGN"
+      ],
+      "projectAreas": [
+        "exploration",
+        "campaign"
+      ],
+      "assessment": "Use procedural generation to create distinct situations/decisions, not repetitive collection chores.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q09-001",
+      "sourceId": "SD-Q09",
+      "timestamp": "0:45-2:03",
+      "idea": "Passive sensing and active sensing provide different information and emission tradeoffs; even encrypted communications can reveal direction or activity.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "SENSORS",
+        "PASSIVE_SENSOR",
+        "ACTIVE_SENSOR",
+        "EMISSIONS"
+      ],
+      "projectAreas": [
+        "sensors",
+        "electronic_warfare"
+      ],
+      "assessment": "Strong support for separate active/passive behavior and observable emissions.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q09-002",
+      "sourceId": "SD-Q09",
+      "timestamp": "0:45-4:30",
+      "idea": "Different sensing modalities specialize in search, range, motion or identification rather than one sensor being best at everything.",
+      "relationship": "new_candidate",
+      "disposition": "retain_reference",
+      "tags": [
+        "SENSORS",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "sensors"
+      ],
+      "assessment": "Useful rationale for abstract multimodal suites; do not expose six separate sensor-control panels.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q09-003",
+      "sourceId": "SD-Q09",
+      "timestamp": "2:05-5:20",
+      "idea": "Broad search/detection and precision fire-control tracking are distinct sensing tasks with different accuracy requirements.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "SENSORS",
+        "TACTICAL_COMPUTER",
+        "TRACK_QUALITY"
+      ],
+      "projectAreas": [
+        "sensors",
+        "computing"
+      ],
+      "assessment": "Strong support for search versus Firm weapons-quality track and Sensors versus Computing/Fire Control separation.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q09-004",
+      "sourceId": "SD-Q09",
+      "timestamp": "recurring",
+      "idea": "Redundant or multimodal sensing can preserve useful information when one channel is jammed, obscured or damaged.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "SENSORS",
+        "REDUNDANCY",
+        "ELECTRONIC_WARFARE",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "sensors",
+        "electronic_warfare"
+      ],
+      "assessment": "High-interest progression direction without simply raising sensor range.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q09-005",
+      "sourceId": "SD-Q09",
+      "timestamp": "2:05-5:20",
+      "idea": "Active fire-control illumination or other active sensing can warn the target that it is being observed or precisely tracked.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "SENSORS",
+        "EMISSIONS",
+        "INFORMATION"
+      ],
+      "projectAreas": [
+        "sensors",
+        "ui"
+      ],
+      "assessment": "Potential observer-safe warning information without exposing hidden enemy ratings.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q09-006",
+      "sourceId": "SD-Q09",
+      "timestamp": "recurring",
+      "idea": "Phased arrays and advanced processing can combine rapid steering, multiple tracks, communication/datalink and resistance to interference.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "SENSORS",
+        "ELECTRONIC_WARFARE",
+        "COMMUNICATIONS",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "sensors",
+        "electronic_warfare",
+        "communications"
+      ],
+      "assessment": "Strong integrated-sensor maturation concept; keep player controls simple.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q09-007",
+      "sourceId": "SD-Q09",
+      "timestamp": "combat section",
+      "idea": "Friendly assets can share observations or hand off targeting information, making cooperative sensing a distinct capability from one sensor being stronger.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "SENSORS",
+        "COOPERATIVE_TRACKING",
+        "COMMUNICATIONS"
+      ],
+      "projectAreas": [
+        "sensors",
+        "communications"
+      ],
+      "assessment": "High-interest networked-sensing candidate; preserve track provenance and information parity.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q09-008",
+      "sourceId": "SD-Q09",
+      "timestamp": "combat section",
+      "idea": "Exotic high-energy sensing channels can counter some low-observability techniques but require specialized emitters/detectors.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "SENSORS",
+        "STEALTH",
+        "EXOTIC_TECH"
+      ],
+      "projectAreas": [
+        "sensors",
+        "stealth"
+      ],
+      "assessment": "Good alien/high-TL candidate, not an ordinary toggle.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q09-009",
+      "sourceId": "SD-Q09",
+      "timestamp": "recurring",
+      "idea": "Advanced sensing can require substantial computation for beam steering, noise filtering, detection tracking, track processing and signature recognition.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "SENSORS",
+        "COMPUTING",
+        "CROSS_CATEGORY_INTERACTION"
+      ],
+      "projectAreas": [
+        "sensors",
+        "computing"
+      ],
+      "assessment": "Supports sparse causal cross-category requirements.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q09-010",
+      "sourceId": "SD-Q09",
+      "timestamp": "recurring",
+      "idea": "A precise positional/fire-control track need not imply complete identification of target class, equipment or intent.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "SENSORS",
+        "INFORMATION",
+        "TRACK_QUALITY"
+      ],
+      "projectAreas": [
+        "sensors",
+        "ui"
+      ],
+      "assessment": "Useful information-control guardrail: Firm position can remain distinct from intelligence/identification.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q10-001",
+      "sourceId": "SD-Q10",
+      "timestamp": "recurring",
+      "idea": "Power-source suitability depends on mission, environment, scale, required output and operating duration rather than one universally superior generator.",
+      "relationship": "new_candidate",
+      "disposition": "retain_reference",
+      "tags": [
+        "POWER",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "power"
+      ],
+      "assessment": "Supports overlapping technology generations and specialist sources.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q10-002",
+      "sourceId": "SD-Q10",
+      "timestamp": "fission/fusion/antimatter sections",
+      "idea": "Fission, fusion and antimatter systems carry different shielding, conversion, containment and integration burdens in addition to raw output.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "POWER",
+        "SHIP_ARCHITECTURE",
+        "INSTALLATION_SPACE"
+      ],
+      "projectAreas": [
+        "power",
+        "ship_architecture"
+      ],
+      "assessment": "Useful family-specific progression vocabulary; avoid separate thermal/containment meters by default.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q10-003",
+      "sourceId": "SD-Q10",
+      "timestamp": "storage section",
+      "idea": "Power generation and energy storage solve different problems: sustained supply versus temporal mismatch and peak demand.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "POWER",
+        "ENERGY_STORAGE",
+        "TACTICAL_POWER"
+      ],
+      "projectAreas": [
+        "power"
+      ],
+      "assessment": "High-interest distinction for batteries/capacitors and future power progression.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q10-004",
+      "sourceId": "SD-Q10",
+      "timestamp": "storage section",
+      "idea": "Storage technologies trade capacity, discharge rate, recharge, retention, footprint, cooling and reliability rather than scaling one capacity number.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "POWER",
+        "ENERGY_STORAGE",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "power"
+      ],
+      "assessment": "Strong qualitative storage progression axis.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q10-005",
+      "sourceId": "SD-Q10",
+      "timestamp": "fusion section",
+      "idea": "Fusion power can convert fusion output through thermodynamic cycles or through more direct electrostatic/electromagnetic conversion methods.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "POWER",
+        "FUSION",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "power"
+      ],
+      "assessment": "Good TL maturation concept without compulsory output inflation.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q10-006",
+      "sourceId": "SD-Q10",
+      "timestamp": "antimatter section",
+      "idea": "Antimatter offers very high energy release and can catalyze fission or fusion, but production, storage and powered containment are severe constraints.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "POWER",
+        "ANTIMATTER",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "power"
+      ],
+      "assessment": "Interesting overlapping-generation path; exact Star Cluster TL mapping remains open.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q10-007",
+      "sourceId": "SD-Q10",
+      "timestamp": "recurring",
+      "idea": "Several power technologies can also be applied directly to propulsion, such as solar heating, nuclear thermal propulsion and fusion engines.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "POWER",
+        "PROPULSION",
+        "CROSS_CATEGORY_INTERACTION"
+      ],
+      "projectAreas": [
+        "power",
+        "propulsion"
+      ],
+      "assessment": "Supports sparse cross-pollination rather than merging categories.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q10-008",
+      "sourceId": "SD-Q10",
+      "timestamp": "specialist-source sections",
+      "idea": "Solar, radioisotope and beamed-power systems can be useful specialist sources for probes, infrastructure or niche missions even when unsuitable as main combat reactors.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "POWER",
+        "PROBES",
+        "INFRASTRUCTURE"
+      ],
+      "projectAreas": [
+        "power",
+        "campaign"
+      ],
+      "assessment": "Good worldbuilding/scenario technology; not every source needs a player-cruiser component.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q10-009",
+      "sourceId": "SD-Q10",
+      "timestamp": "recurring",
+      "idea": "Power systems can require substantial support infrastructure such as radiators, radiation shielding, containment, cryogenic cooling or structural reinforcement.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "POWER",
+        "INSTALLATION_SPACE",
+        "AVOID_EXCESS_SIMULATION"
+      ],
+      "projectAreas": [
+        "power",
+        "ship_architecture"
+      ],
+      "assessment": "Strong support for current abstraction philosophy.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q10-010",
+      "sourceId": "SD-Q10",
+      "timestamp": "recurring",
+      "idea": "Potential power and propulsion resources such as water, methane and fissile material can be found or processed from bodies within a solar system.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "POWER",
+        "RESOURCES",
+        "EXPLORATION"
+      ],
+      "projectAreas": [
+        "power",
+        "campaign"
+      ],
+      "assessment": "Use broad compatible-resource/logistics abstractions if needed.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q12-001",
+      "sourceId": "SD-Q12",
+      "timestamp": "recurring",
+      "idea": "Stealth is reduced observability and uncertainty, not binary invisibility.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "STEALTH",
+        "INFORMATION",
+        "SENSORS"
+      ],
+      "projectAreas": [
+        "stealth",
+        "sensors"
+      ],
+      "assessment": "Strong fit for graded observer information.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q12-002",
+      "sourceId": "SD-Q12",
+      "timestamp": "recurring",
+      "idea": "Low observability is sensor-specific; suppressing one signature channel does not automatically defeat every detection method.",
+      "relationship": "new_candidate",
+      "disposition": "retain_reference",
+      "tags": [
+        "STEALTH",
+        "SENSORS",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "stealth",
+        "sensors"
+      ],
+      "assessment": "Avoid one universal stealth number if future mechanics need channel distinctions, but keep player controls simple.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q12-003",
+      "sourceId": "SD-Q12",
+      "timestamp": "recurring",
+      "idea": "Detection, identification and precise tracking are distinct mission-relevant information layers, and stealth can defeat any one of them without making the ship nonexistent.",
+      "relationship": "corroborates_existing",
+      "disposition": "discuss",
+      "tags": [
+        "STEALTH",
+        "TRACK_QUALITY",
+        "INFORMATION"
+      ],
+      "projectAreas": [
+        "stealth",
+        "sensors"
+      ],
+      "assessment": "High-interest support for existing graded track architecture.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q12-004",
+      "sourceId": "SD-Q12",
+      "timestamp": "thermal section",
+      "idea": "Thermal and propulsion emissions are difficult to hide; suppressing them tends to be temporary, costly or operationally constraining.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "STEALTH",
+        "THERMAL",
+        "PROPULSION",
+        "SPECIALIZED_COUNTERPLAY"
+      ],
+      "projectAreas": [
+        "stealth",
+        "propulsion"
+      ],
+      "assessment": "Strong candidate for bounded quiet/thermal-suppression behavior, not a heat meter.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q12-005",
+      "sourceId": "SD-Q12",
+      "timestamp": "recurring",
+      "idea": "Ship actions such as hard burns, active sensing and other emissions can change observability over time.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "STEALTH",
+        "EMISSIONS",
+        "ACTIVE_SENSOR",
+        "MOVEMENT"
+      ],
+      "projectAreas": [
+        "stealth",
+        "sensors",
+        "movement"
+      ],
+      "assessment": "High-interest action-dependent signature direction.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q12-006",
+      "sourceId": "SD-Q12",
+      "timestamp": "sensor-tradeoff section",
+      "idea": "Low-observable design can conflict with the ship's own sensing/emission needs; low-probability-of-intercept and advanced integration can mitigate that trade.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "STEALTH",
+        "SENSORS",
+        "CROSS_CATEGORY_INTERACTION"
+      ],
+      "projectAreas": [
+        "stealth",
+        "sensors"
+      ],
+      "assessment": "Useful high-TL integration idea without guaranteeing perfect stealth.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q12-007",
+      "sourceId": "SD-Q12",
+      "timestamp": "recurring",
+      "idea": "Stealth and electronic warfare can reinforce each other but remain different tools: one reduces observability while the other interferes with information/discrimination.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "STEALTH",
+        "ELECTRONIC_WARFARE",
+        "SENSORS"
+      ],
+      "projectAreas": [
+        "stealth",
+        "electronic_warfare"
+      ],
+      "assessment": "Preserve separate subsystem identities.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q12-008",
+      "sourceId": "SD-Q12",
+      "timestamp": "cloak discussion",
+      "idea": "Passive low-observability design and active cloaking are distinct concepts with different costs and failure modes.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "STEALTH",
+        "CLOAK",
+        "EXOTIC_TECH"
+      ],
+      "projectAreas": [
+        "stealth"
+      ],
+      "assessment": "If active cloak ever appears, treat it as a costly special system rather than Stealth +N.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q12-009",
+      "sourceId": "SD-Q12",
+      "timestamp": "recurring",
+      "idea": "All-angle observation in space makes perfect passive concealment difficult, especially for powered craft.",
+      "relationship": "conflicts_or_warns",
+      "disposition": "retain_reference",
+      "tags": [
+        "STEALTH",
+        "SENSORS",
+        "DESIGN_GUARDRAIL"
+      ],
+      "projectAreas": [
+        "stealth"
+      ],
+      "assessment": "Good guardrail against routine total invisibility.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q12-010",
+      "sourceId": "SD-Q12",
+      "timestamp": "recurring",
+      "idea": "Even suspected presence without exact position/identity can create tactical value, uncertainty and route pressure.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "STEALTH",
+        "INFORMATION",
+        "TACTICS"
+      ],
+      "projectAreas": [
+        "stealth",
+        "sensors"
+      ],
+      "assessment": "Supports observer-safe suspected-contact states.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q13-001",
+      "sourceId": "SD-Q13",
+      "timestamp": "recurring",
+      "idea": "Biological and mechanical spacecraft form a continuum rather than mutually exclusive categories.",
+      "relationship": "new_candidate",
+      "disposition": "retain_reference",
+      "tags": [
+        "BIOMECHANICAL",
+        "ALIEN_TECH",
+        "SHIP_ARCHITECTURE"
+      ],
+      "projectAreas": [
+        "alien_design",
+        "ship_architecture"
+      ],
+      "assessment": "Good taxonomy guardrail for alien generation.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q13-002",
+      "sourceId": "SD-Q13",
+      "timestamp": "1:18-4:30",
+      "idea": "Construction method, outward appearance and sentience/agency are independent design axes.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "BIOMECHANICAL",
+        "SENTIENCE",
+        "VISUAL_DESIGN"
+      ],
+      "projectAreas": [
+        "alien_design",
+        "narrative"
+      ],
+      "assessment": "Important: organic-looking need not mean living, and living need not look organic.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q13-003",
+      "sourceId": "SD-Q13",
+      "timestamp": "recurring",
+      "idea": "Biotechnology can be integrated throughout a vessel or localized to particular components/armor/control systems.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "BIOMECHANICAL",
+        "COMPONENT_COMPATIBILITY",
+        "ALIEN_TECH"
+      ],
+      "projectAreas": [
+        "alien_design",
+        "components"
+      ],
+      "assessment": "Strong fit for biological alien components using existing compatibility/support-tag architecture.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q13-004",
+      "sourceId": "SD-Q13",
+      "timestamp": "3:20-3:38; recurring",
+      "idea": "Growth and regeneration are common biomechanical concepts but are not automatic properties of every living ship.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "BIOMECHANICAL",
+        "DAMAGE_CONTROL",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "alien_design",
+        "damage_control"
+      ],
+      "assessment": "Potential bounded self-healing branch; must be costed and explicitly present.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q13-005",
+      "sourceId": "SD-Q13",
+      "timestamp": "1:18-3:15",
+      "idea": "Living ships can relate to crew as passengers, hosts, symbionts, integrated pilots or control organisms.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "BIOMECHANICAL",
+        "CREW",
+        "SENTIENCE"
+      ],
+      "projectAreas": [
+        "alien_design",
+        "crew",
+        "narrative"
+      ],
+      "assessment": "Rich narrative/boarding possibilities; no universal crew mechanic required.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q13-006",
+      "sourceId": "SD-Q13",
+      "timestamp": "recurring",
+      "idea": "Some biomechanical ship concepts depict the spacecraft itself as a sentient living being, in extreme cases treating the ship as equivalent to an entire civilization.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "BIOMECHANICAL",
+        "SENTIENCE",
+        "CAPTURE",
+        "SALVAGE"
+      ],
+      "projectAreas": [
+        "alien_design",
+        "campaign",
+        "salvage"
+      ],
+      "assessment": "High-interest narrative consequence for living alien ships.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q13-007",
+      "sourceId": "SD-Q13",
+      "timestamp": "1:55-2:35; recurring",
+      "idea": "Biomimetic visual design can be functional, purely stylistic or both; mechanical ships can use organic visual language without being biological.",
+      "relationship": "context_only",
+      "disposition": "retain_reference",
+      "tags": [
+        "BIOMECHANICAL",
+        "VISUAL_DESIGN"
+      ],
+      "projectAreas": [
+        "alien_design",
+        "presentation"
+      ],
+      "assessment": "Useful procedural visual grammar; not a gameplay rule.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q13-008",
+      "sourceId": "SD-Q13",
+      "timestamp": "1:55-2:35",
+      "idea": "Repeated curves, ribs, spines, fins and subtly varying forms can create a coherent organic visual doctrine without copying a literal organism.",
+      "relationship": "context_only",
+      "disposition": "retain_reference",
+      "tags": [
+        "BIOMECHANICAL",
+        "VISUAL_DESIGN",
+        "PROCEDURAL_GENERATION"
+      ],
+      "projectAreas": [
+        "alien_design",
+        "presentation"
+      ],
+      "assessment": "Useful art/procedural-generation reference.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q13-009",
+      "sourceId": "SD-Q13",
+      "timestamp": "recurring",
+      "idea": "A spacecraft can look strongly mechanical while being living or sentient, while other designs can use biological-looking forms without being literal living organisms.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "BIOMECHANICAL",
+        "INFORMATION",
+        "VISUAL_DESIGN"
+      ],
+      "projectAreas": [
+        "alien_design",
+        "sensors",
+        "ui"
+      ],
+      "assessment": "Do not let organic/metallic art automatically reveal regeneration, sentience or other hidden mechanics.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q15-001",
+      "sourceId": "SD-Q15",
+      "timestamp": "1:17-3:10",
+      "idea": "Spacecraft must reject waste heat from power, electronics, crew and environment, making thermal management a foundational support requirement.",
+      "relationship": "new_candidate",
+      "disposition": "retain_reference",
+      "tags": [
+        "THERMAL",
+        "SHIP_ARCHITECTURE",
+        "POWER"
+      ],
+      "projectAreas": [
+        "ship_architecture",
+        "power"
+      ],
+      "assessment": "Useful engineering basis for complete component footprint.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q15-002",
+      "sourceId": "SD-Q15",
+      "timestamp": "1:17-3:10",
+      "idea": "Spacecraft thermal-control systems can circulate coolant through heat exchangers and dedicated radiators to move internal waste heat to surfaces optimized for radiation.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "THERMAL",
+        "INSTALLATION_SPACE",
+        "AVOID_EXCESS_SIMULATION"
+      ],
+      "projectAreas": [
+        "ship_architecture",
+        "power"
+      ],
+      "assessment": "Strong support for hiding normal thermal support inside Space and operating characteristics.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q15-003",
+      "sourceId": "SD-Q15",
+      "timestamp": "3:49-4:27",
+      "idea": "Hotter/advanced radiators can reduce area and vulnerability but may demand more pumping power, materials capability or engineering complexity.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "THERMAL",
+        "TACTICAL_POWER",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "power",
+        "ship_architecture"
+      ],
+      "assessment": "Useful compactness-power-vulnerability tradeoff.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q15-004",
+      "sourceId": "SD-Q15",
+      "timestamp": "4:27-4:55",
+      "idea": "Thermal survivability can be improved through redundancy, protection, tougher construction or retractable radiators, each with costs.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "THERMAL",
+        "REDUNDANCY",
+        "SHIP_ARCHITECTURE"
+      ],
+      "projectAreas": [
+        "ship_architecture",
+        "damage"
+      ],
+      "assessment": "Good technology/race differentiation without universal exposed radiator hit locations.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q15-005",
+      "sourceId": "SD-Q15",
+      "timestamp": "4:42-4:55",
+      "idea": "Retracting radiators and relying on heat storage creates a temporary operating window before heat must be rejected again.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "THERMAL",
+        "STEALTH",
+        "LIMITED_DURATION",
+        "SPECIALIZED_COUNTERPLAY"
+      ],
+      "projectAreas": [
+        "stealth",
+        "power"
+      ],
+      "assessment": "High-interest thermal-suppression/protected-operation concept; prefer finite activations/duration/Strain over a heat bar.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q15-006",
+      "sourceId": "SD-Q15",
+      "timestamp": "recurring",
+      "idea": "Radiators deliberately emit thermal photons, and sufficiently high-temperature radiators can become visibly luminous as their emission spectrum shifts.",
+      "relationship": "extends_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "THERMAL",
+        "STEALTH",
+        "EMISSIONS",
+        "SENSORS"
+      ],
+      "projectAreas": [
+        "stealth",
+        "sensors",
+        "power"
+      ],
+      "assessment": "Strong physical basis for qualitative action-dependent signature states.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q15-007",
+      "sourceId": "SD-Q15",
+      "timestamp": "4:27-4:55",
+      "idea": "Large radiator structures can be vulnerable in combat, motivating redundancy, protection, harder-to-damage designs or temporary retraction backed by heat storage.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "THERMAL",
+        "DAMAGE",
+        "OVERLOAD",
+        "STRAIN"
+      ],
+      "projectAreas": [
+        "damage",
+        "power"
+      ],
+      "assessment": "Potential effect through overload limits, Strain or reduced output rather than instant reactor explosion.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q15-008",
+      "sourceId": "SD-Q15",
+      "timestamp": "5:11-8:56",
+      "idea": "Solid, moving, droplet, membrane, magnetic and plasma radiator concepts provide multiple technological/alien expressions of the same support function.",
+      "relationship": "new_candidate",
+      "disposition": "retain_reference",
+      "tags": [
+        "THERMAL",
+        "ALIEN_TECH",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "ship_architecture",
+        "alien_design"
+      ],
+      "assessment": "Use as race/technology flavor and bounded traits, not separate universal cooling rules.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q15-009",
+      "sourceId": "SD-Q15",
+      "timestamp": "8:57-9:20",
+      "idea": "Open-cycle cooling can handle exceptional thermal loads by consuming and discarding coolant rather than maintaining a closed loop.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "THERMAL",
+        "LIMITED_RESOURCE",
+        "OVERLOAD"
+      ],
+      "projectAreas": [
+        "power",
+        "special_systems"
+      ],
+      "assessment": "Possible finite-charge emergency/high-output auxiliary; do not add ordinary Coolant inventory by default.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q15-010",
+      "sourceId": "SD-Q15",
+      "timestamp": "recurring",
+      "idea": "Open-cycle cooling can be combined with closed-cycle radiators, using expendable coolant for unusually demanding thermal loads while radiators handle baseline continuous loads.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "THERMAL",
+        "COMPONENT_COMPATIBILITY",
+        "CROSS_CATEGORY_INTERACTION"
+      ],
+      "projectAreas": [
+        "technology",
+        "components"
+      ],
+      "assessment": "Strong candidate for capability tags/support components rather than a sprawling research category.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q23-001",
+      "sourceId": "SD-Q23",
+      "timestamp": "1:13-5:43",
+      "idea": "FTL systems can be classified by travel topology - discontinuous versus continuous - and by constraints on entry, path and exit.",
+      "relationship": "new_candidate",
+      "disposition": "retain_reference",
+      "tags": [
+        "FTL",
+        "STRATEGIC_LAYER",
+        "WORLD_GENERATION"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign"
+      ],
+      "assessment": "Useful design-space taxonomy, not a replacement for current Star Cluster FTL.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q23-002",
+      "sourceId": "SD-Q23",
+      "timestamp": "recurring",
+      "idea": "FTL systems differ in whether transit requires fixed infrastructure or location-specific access, or can instead be initiated by a self-contained ship.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "FTL",
+        "STRATEGIC_LAYER",
+        "DESIGN_GUARDRAIL"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign"
+      ],
+      "assessment": "Use FTL rules to preserve exploration geography and route choices.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q23-003",
+      "sourceId": "SD-Q23",
+      "timestamp": "4:03-5:43; 7:34-8:09",
+      "idea": "Fixed gates, jump points and lanes naturally create chokepoints, shortcuts, crossroads and valuable locations.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "FTL",
+        "INFRASTRUCTURE",
+        "EXPLORATION",
+        "WORLD_GENERATION"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign",
+        "exploration"
+      ],
+      "assessment": "High-interest sector-population content layered on ordinary FTL.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q23-004",
+      "sourceId": "SD-Q23",
+      "timestamp": "7:27-8:18",
+      "idea": "Navigable hyperspace can use fixed-exit, fixed-direction or freely navigable travel rules, each allowing a different degree of control after entry.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "FTL",
+        "QUALITATIVE_TECH_PROGRESSION"
+      ],
+      "projectAreas": [
+        "ftl",
+        "technology"
+      ],
+      "assessment": "Useful progression vocabulary; do not replace current ladder without a dedicated design decision.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q23-005",
+      "sourceId": "SD-Q23",
+      "timestamp": "4:43-7:24",
+      "idea": "Infrastructure-based FTL and self-contained ship FTL can coexist in one setting; common traffic may rely on gates while more capable ships create their own access.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "FTL",
+        "INFRASTRUCTURE",
+        "ALIEN_TECH"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign",
+        "alien_design"
+      ],
+      "assessment": "Strong asymmetric civilization concept with explicit constraints.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q23-006",
+      "sourceId": "SD-Q23",
+      "timestamp": "4:43-5:43",
+      "idea": "Permanent FTL gateways or conduits can be natural or artificial and can act like fixed travel corridors between separated regions.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "FTL",
+        "PRECURSOR",
+        "EXPLORATION",
+        "WORLD_GENERATION"
+      ],
+      "projectAreas": [
+        "ftl",
+        "exploration",
+        "campaign"
+      ],
+      "assessment": "Excellent Precursor/anomaly discovery type.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q23-007",
+      "sourceId": "SD-Q23",
+      "timestamp": "8:18-8:43",
+      "idea": "Navigable hyperspace can contain hazards, currents or navigation requirements.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "FTL",
+        "HAZARD",
+        "EXPLORATION"
+      ],
+      "projectAreas": [
+        "ftl",
+        "exploration"
+      ],
+      "assessment": "Represent at route/event level rather than building a second tactical map.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q23-008",
+      "sourceId": "SD-Q23",
+      "timestamp": "4:03-5:43; 7:34-8:43",
+      "idea": "Some FTL environments depend on known routes, beacons or other navigation aids because travel away from them is dangerous.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "FTL",
+        "INFORMATION",
+        "EXPLORATION"
+      ],
+      "projectAreas": [
+        "ftl",
+        "exploration",
+        "campaign"
+      ],
+      "assessment": "High-interest non-component exploration reward.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q23-009",
+      "sourceId": "SD-Q23",
+      "timestamp": "recurring",
+      "idea": "FTL access can be limited to particular locations, fixed routes, gateway devices or other entry conditions rather than being universally available everywhere.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "FTL",
+        "DESIGN_GUARDRAIL",
+        "EXPLORATION"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign"
+      ],
+      "assessment": "Preserve distance, strandedness and return-home decisions at high capability.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q23-010",
+      "sourceId": "SD-Q23",
+      "timestamp": "2:08-4:24",
+      "idea": "Object teleportation/portals are distinct capabilities from ordinary ship-scale interstellar FTL even when the fictional science overlaps.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "FTL",
+        "TELEPORTATION",
+        "EXOTIC_TECH"
+      ],
+      "projectAreas": [
+        "ftl",
+        "special_systems"
+      ],
+      "assessment": "Keep separate so local logistics/boarding/tactical positioning are not accidentally erased.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q23-011",
+      "sourceId": "SD-Q23",
+      "timestamp": "8:45-10:15",
+      "idea": "The FTL taxonomy also includes distance shrinking, local or regional light-speed modification, backward time travel and reality/coordinate alteration as extreme mechanism classes.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "FTL",
+        "PRECURSOR",
+        "EXOTIC_TECH",
+        "RARE_WEAPON_EVENT"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign"
+      ],
+      "assessment": "Excellent singular-artifact inspiration; do not normalize it into ordinary TL advancement.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q24-001",
+      "sourceId": "SD-Q24",
+      "timestamp": "1:12-2:21",
+      "idea": "FTL design should begin with explicit capabilities, limitations, costs and consequences; fictional mechanism can come later.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "FTL",
+        "DESIGN_GUARDRAIL"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign"
+      ],
+      "assessment": "Strong validation of Star Cluster's rules-first approach.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q24-002",
+      "sourceId": "SD-Q24",
+      "timestamp": "2:21-4:33",
+      "idea": "FTL rules shape travel time, information flow, trade, governance, warfare and strategic geography rather than merely setting a speed number.",
+      "relationship": "new_candidate",
+      "disposition": "retain_reference",
+      "tags": [
+        "FTL",
+        "STRATEGIC_LAYER",
+        "INFORMATION"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign"
+      ],
+      "assessment": "Useful world-generation lens; no immediate gameplay-rule change.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q24-003",
+      "sourceId": "SD-Q24",
+      "timestamp": "2:21-4:33; 6:42-8:31",
+      "idea": "A good FTL limitation creates decisions, encounters or geography rather than mere procedural inconvenience.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "FTL",
+        "EXPLORATION",
+        "DESIGN_GUARDRAIL"
+      ],
+      "projectAreas": [
+        "ftl",
+        "exploration"
+      ],
+      "assessment": "Evaluate each restriction by the gameplay opportunity it creates.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q24-004",
+      "sourceId": "SD-Q24",
+      "timestamp": "5:53-6:33",
+      "idea": "Slow/flexible onboard FTL can coexist with much faster fixed transit infrastructure, preserving exploration freedom while creating strategic routes.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "FTL",
+        "INFRASTRUCTURE",
+        "WORLD_GENERATION"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign",
+        "exploration"
+      ],
+      "assessment": "Very high-interest sector-generation pattern; ordinary Star Cluster FTL remains the reliable baseline.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q24-005",
+      "sourceId": "SD-Q24",
+      "timestamp": "2:55-3:34; 8:32-9:35",
+      "idea": "Natural or artificial jump features become valuable content when they must be discovered, mapped, addressed, powered or otherwise understood.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "FTL",
+        "EXPLORATION",
+        "INFORMATION",
+        "INFRASTRUCTURE"
+      ],
+      "projectAreas": [
+        "ftl",
+        "exploration",
+        "campaign"
+      ],
+      "assessment": "Excellent low-TL exploration opportunity through discovered routes.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q24-006",
+      "sourceId": "SD-Q24",
+      "timestamp": "recurring",
+      "idea": "A small set of explicit FTL rules can produce many downstream setting consequences, as shown by examples built around travel time, jump distance, fuel, gravity limits, addresses, power and gate access.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "FTL",
+        "WORLD_GENERATION",
+        "KISS"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign"
+      ],
+      "assessment": "Use two or three legible constraints rather than a large FTL simulation.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q24-007",
+      "sourceId": "SD-Q24",
+      "timestamp": "4:35-5:52; 8:58-9:20",
+      "idea": "Rare exceptions to established FTL rules work best when they are explicit exceptional phenomena rather than casual inconsistencies.",
+      "relationship": "new_candidate",
+      "disposition": "discuss",
+      "tags": [
+        "FTL",
+        "PRECURSOR",
+        "EXOTIC_TECH",
+        "DESIGN_GUARDRAIL"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign"
+      ],
+      "assessment": "A Precursor gate/artifact may break one ordinary rule because the exception itself is content.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q24-008",
+      "sourceId": "SD-Q24",
+      "timestamp": "3:37-3:49",
+      "idea": "FTL can be disrupted or interdicted in some settings, creating strategic/scenario possibilities.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "FTL",
+        "INTERDICTION",
+        "SPECIALIZED_COUNTERPLAY"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign"
+      ],
+      "assessment": "Preserve as advanced/alien/installation possibility; avoid routine universal FTL-jammer stat contests.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q24-009",
+      "sourceId": "SD-Q24",
+      "timestamp": "3:49-4:33",
+      "idea": "FTL cost, maintenance, fuel, specialist personnel or political control can differentiate access and civilization reach.",
+      "relationship": "new_candidate",
+      "disposition": "defer",
+      "tags": [
+        "FTL",
+        "LOGISTICS",
+        "ALIEN_TECH"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign",
+        "alien_design"
+      ],
+      "assessment": "Useful faction/worldbuilding distinction without mandatory player bureaucracy.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q24-010",
+      "sourceId": "SD-Q24",
+      "timestamp": "4:35-5:52; 6:42-9:35",
+      "idea": "FTL design can work forward from a chosen rule set or backward from the desired setting/story, and examining existing settings by reverse-engineering their rules can help.",
+      "relationship": "corroborates_existing",
+      "disposition": "retain_reference",
+      "tags": [
+        "FTL",
+        "DESIGN_GUARDRAIL",
+        "AVOID_EXCESS_SIMULATION"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign"
+      ],
+      "assessment": "Mine the method, not Traveller/Stargate/Mass Effect numerical rules.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    },
+    {
+      "id": "SD-Q24-011",
+      "sourceId": "SD-Q24",
+      "timestamp": "2:21-3:04",
+      "idea": "Whether faster-than-light communications exist is a separate rule from faster-than-light travel and strongly affects how quickly information, governance, trade and military reactions can spread.",
+      "relationship": "new_candidate",
+      "disposition": "retain_reference",
+      "tags": [
+        "FTL",
+        "INFORMATION",
+        "COMMUNICATIONS",
+        "STRATEGIC_LAYER"
+      ],
+      "projectAreas": [
+        "ftl",
+        "campaign",
+        "world_generation"
+      ],
+      "assessment": "Useful strategic/worldbuilding axis to keep conceptually separate from ship travel; no Star Cluster rule change is made here.",
+      "authorityEffect": "none_unless_explicitly_adopted_elsewhere"
+    }
+  ],
+  "checkpointUpdated": "92"
+}

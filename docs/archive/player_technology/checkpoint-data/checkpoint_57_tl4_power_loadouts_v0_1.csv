@@ -1,0 +1,11 @@
+profile_id,display_name,capacity_cost,auxiliary_reactor_output,independent_power_component_count,battery_count,capacitor_count,components
+aux-r57-reactor,TL3 Auxiliary Reactor,2,1,0,0,0,
+aux-r57-bb,Dual TL3 Combat Batteries,2,0,2,2,0,battery-a-a:CombatBattery; battery-a-b:CombatBattery
+aux-r57-cc,Dual TL3 Power Capacitors,2,0,2,0,2,capacitor-a-a:PowerCapacitor; capacitor-a-b:PowerCapacitor
+aux-r57-bc,TL3 Combat Battery + Power Capacitor,2,0,2,1,1,battery-a-a:CombatBattery; capacitor-a-b:PowerCapacitor
+aux-r57-battery-evasion,Combat Battery + Evasive Maneuver System,2,0,1,1,0,battery-a-a:CombatBattery
+aux-r57-capacitor-epds,Power Capacitor + Energy PDS,2,0,1,0,1,capacitor-a-a:PowerCapacitor
+aux-r57-battery-amm,Combat Battery + AMM,2,0,1,1,0,battery-a-a:CombatBattery
+aux-r57-capacitor-evasion,Power Capacitor + Evasive Maneuver System,2,0,1,0,1,capacitor-a-a:PowerCapacitor
+aux-r57-battery-epds,Combat Battery + Energy PDS,2,0,1,1,0,battery-a-a:CombatBattery
+aux-r57-capacitor-amm,Power Capacitor + AMM,2,0,1,0,1,capacitor-a-a:PowerCapacitor

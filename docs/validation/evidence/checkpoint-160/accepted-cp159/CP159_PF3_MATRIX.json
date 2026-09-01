@@ -1,0 +1,4762 @@
+{
+  "schemaVersion": "star-cluster-pending-finalization-research-execution-matrix-v0.1",
+  "status": "PENDING_FINALIZATION_RESEARCH_EXECUTION_AUTHORITY",
+  "purpose": "Canonical materialized research execution baseline for all substantive balance studies after CP157. This is not final production numerical authority; it prevents stale v0.9 values from being mixed with native-validated CP151/153/155 findings.",
+  "authorityBoundary": {
+    "productionNumericalAuthority": "docs/design/player_technology/technology_numerical_matrix_v0_9.json",
+    "productionAuthorityStatus": "PRESERVED_NOT_REPLACED",
+    "researchExecutionAuthority": true,
+    "researchExecutionRule": "All post-CP157 substantive balance studies MUST load this pending-finalization matrix through the CP157 research-baseline loader; raw v0.9 is permitted only for historical/control validation.",
+    "finalPromotionDeferredUntil": "AUX closure plus Reactor/TP whole-ship equilibrium"
+  },
+  "principles": [
+    "Operational STL standard Move equals installed STL Drive TL; technology fiction may progress unevenly through Space, overload, reliability, fuel, or specialist branches rather than silently changing this base movement invariant.",
+    "Operational Missile Move equals installed Missile Drive TL plus 1; range/endurance, guidance, payload, and PDS interaction remain separate progression axes.",
+    "Strategic FTL movement may progress unevenly. The current 1,2,3,4,4,6,7,9,12 ladder is an explicit strategic exception retained from the post-CP109 maturation model, not a combat movement rule.",
+    "Technology progress may be uneven: introduction, maturation, integration and peak-performance steps are valid where supported by technology fiction and testing.",
+    "The canonical x2 point-domain ruler permits odd values but does not require a +1 step every TL.",
+    "Weapon families remain asymmetric. Kinetic trends Armor-facing, Energy trends Shield-facing, and Missile remains the flexible delivery/payload family.",
+    "Missile delivery, guidance/seeker, GP warhead yield and Swarmer Flight characteristics are separate authorities.",
+    "Quiet TLs and specialist branches are valid; do not invent filler improvements.",
+    "Damage Control starts at one canonical Hull per successful Repair Kit and improves only as explicit Hull/DamCon technology.",
+    "Critical/H-X cadence remains deferred until fully implemented.",
+    "The native-accepted CP127 pure-TL stabilization establishes the working main-subsystem TL1-TL9 baseline for broader TL-sensitivity work; most AUX progression remains explicitly deferred."
+  ],
+  "sources": [
+    "Checkpoint 134 native same-TL diagnostic evidence",
+    "docs/Star_Cluster_Game_Concept_v0.7v.docx",
+    "docs/Star_Cluster_Game_Concept_v0.7s.docx",
+    "docs/design/player_technology/Main_Subsystem_Technology_Stabilization_Review_v1.md",
+    "docs/design/testing/CP127_Main_Subsystem_TL_Stabilization_Study_v0_1.md",
+    "Checkpoint 127 native main-subsystem stabilization evidence",
+    "Checkpoint 126 native full-map fidelity/era-attribution evidence",
+    "docs/Star_Cluster_Game_Concept_v0.7h.docx",
+    "docs/design/player_technology/technology_family_storyboard_v1_2.json",
+    "docs/design/player_technology/technology_component_table_v0_2.json",
+    "docs/design/player_technology/technology_architecture_matrix_v1.json",
+    "docs/design/player_technology/tl1_core_combat_numerical_baseline_v0_3.csv",
+    "docs/design/player_technology/tl2_power_reactor_candidate_profile_v0_2.json",
+    "docs/design/player_technology/tl2_shield_capacity_candidate_profile_v0_2.json",
+    "docs/design/player_technology/tl2_weapon_penetration_working_profile_v0_2.json",
+    "docs/design/player_technology/tl2_computing_sensor_ew_working_profile_v0_2.json",
+    "docs/design/player_technology/tl3_base_technology_candidates_v0_2.json",
+    "docs/design/player_technology/pds_tl1_tl2_characteristics_v0_3.json",
+    "docs/references/reference-mining/cross-source-themes.md",
+    "docs/references/reference-mining/technology-architecture/CP105_Technology_Architecture_Reference_Synthesis.md",
+    "Checkpoint 120 weapon sensitivity evidence",
+    "Checkpoint 121 x2 damage-resolution study",
+    "Checkpoint 122 accepted canonical x2 migration",
+    "Technology Family Storyboard v1.5",
+    "Technology Idea Register v1.6",
+    "CP106 195-observation reference coverage ledger"
+  ],
+  "profiles": {
+    "hull": {
+      "1": {
+        "tl": 1,
+        "technology": "Mature aerospace/composite cruiser construction",
+        "newTech": true,
+        "capacity": 35,
+        "hullPoints": 24.0,
+        "notes": "CP133 mechanics-first candidate: bounded-cruiser Space grows slowly while Hull advances +1 per TL; Storyboard wording retained pending reconciliation."
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Distributed structural monitoring and modular service architecture",
+        "newTech": true,
+        "capacity": 35,
+        "hullPoints": 24.0,
+        "notes": "CP133 mechanics-first candidate: bounded-cruiser Space grows slowly while Hull advances +1 per TL; Storyboard wording retained pending reconciliation."
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Integrated cruiser architecture",
+        "newTech": true,
+        "capacity": 36,
+        "hullPoints": 26.0,
+        "notes": "CP133 mechanics-first candidate: bounded-cruiser Space grows slowly while Hull advances +1 per TL; Storyboard wording retained pending reconciliation."
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Nanostructured load-bearing frame",
+        "newTech": true,
+        "capacity": 36,
+        "hullPoints": 26.0,
+        "notes": "CP133 mechanics-first candidate: bounded-cruiser Space grows slowly while Hull advances +1 per TL; Storyboard wording retained pending reconciliation."
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Atomically engineered structural composites",
+        "newTech": true,
+        "capacity": 37,
+        "hullPoints": 28.0,
+        "notes": "CP133 mechanics-first candidate: bounded-cruiser Space grows slowly while Hull advances +1 per TL; Storyboard wording retained pending reconciliation."
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Self-monitoring smart lattice",
+        "newTech": true,
+        "capacity": 37,
+        "hullPoints": 28.0,
+        "notes": "CP133 mechanics-first candidate: bounded-cruiser Space grows slowly while Hull advances +1 per TL; Storyboard wording retained pending reconciliation."
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Active load-distribution structure",
+        "newTech": true,
+        "capacity": 38,
+        "hullPoints": 30.0,
+        "notes": "CP133 mechanics-first candidate: bounded-cruiser Space grows slowly while Hull advances +1 per TL; Storyboard wording retained pending reconciliation."
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Field-assisted structural support",
+        "newTech": true,
+        "capacity": 38,
+        "hullPoints": 30.0,
+        "notes": "CP133 mechanics-first candidate: bounded-cruiser Space grows slowly while Hull advances +1 per TL; Storyboard wording retained pending reconciliation."
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Dynamic programmable cruiser architecture",
+        "newTech": true,
+        "capacity": 39,
+        "hullPoints": 32.0,
+        "notes": "CP133 mechanics-first candidate: bounded-cruiser Space grows slowly while Hull advances +1 per TL; Storyboard wording retained pending reconciliation."
+      }
+    },
+    "armor": {
+      "1": {
+        "tl": 1,
+        "technology": "Advanced alloy/ceramic composite armor",
+        "newTech": true,
+        "space": 0,
+        "ap": 0,
+        "ai": 12.0,
+        "baseRegeneration": 0,
+        "tacticalRegenerationPerTp": 0,
+        "tacticalRegenerationCapTp": 0,
+        "notes": "CP137 mainline Armor. No in-combat regeneration.",
+        "combatRegenerationReserveAi": 0
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Toughened ceramic-composite laminate",
+        "newTech": true,
+        "space": 0,
+        "ap": 0,
+        "ai": 14.0,
+        "baseRegeneration": 0,
+        "tacticalRegenerationPerTp": 0,
+        "tacticalRegenerationCapTp": 0,
+        "notes": "CP137 mainline Armor. No in-combat regeneration.",
+        "combatRegenerationReserveAi": 0
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Protected layered composite",
+        "newTech": true,
+        "space": 0,
+        "ap": 1,
+        "ai": 16.0,
+        "baseRegeneration": 0,
+        "tacticalRegenerationPerTp": 0,
+        "tacticalRegenerationCapTp": 0,
+        "notes": "CP137 mainline Armor. No in-combat regeneration.",
+        "combatRegenerationReserveAi": 0
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Nanostructured armor matrix",
+        "newTech": true,
+        "space": 0,
+        "ap": 1,
+        "ai": 18.0,
+        "baseRegeneration": 0,
+        "tacticalRegenerationPerTp": 0,
+        "tacticalRegenerationCapTp": 0,
+        "notes": "CP137 mainline Armor. No in-combat regeneration.",
+        "combatRegenerationReserveAi": 0
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Gradient/diamondoid composite armor",
+        "newTech": true,
+        "space": 0,
+        "ap": 2,
+        "ai": 20.0,
+        "baseRegeneration": 0,
+        "tacticalRegenerationPerTp": 0,
+        "tacticalRegenerationCapTp": 0,
+        "notes": "CP137 mainline Armor. No in-combat regeneration.",
+        "combatRegenerationReserveAi": 0
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Self-healing smart laminate",
+        "newTech": true,
+        "space": 0,
+        "ap": 1,
+        "ai": 18.0,
+        "notes": "CP137 finite in-combat regeneration candidate: 1 AI per TP, cap 1 TP/turn, total combat reserve 3 AI. Out-of-combat self-healing may restore toward pristine condition; detailed recovery is deferred.",
+        "baseRegeneration": 0,
+        "tacticalRegenerationPerTp": 2,
+        "tacticalRegenerationCapTp": 1,
+        "combatRegenerationReserveAi": 6
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Mature self-healing smart laminate",
+        "newTech": false,
+        "space": 0,
+        "ap": 1,
+        "ai": 20.0,
+        "notes": "CP137 finite in-combat regeneration candidate: 1 AI per TP, cap 1 TP/turn, total combat reserve 4 AI. Out-of-combat self-healing may restore toward pristine condition; detailed recovery is deferred.",
+        "baseRegeneration": 0,
+        "tacticalRegenerationPerTp": 2,
+        "tacticalRegenerationCapTp": 1,
+        "combatRegenerationReserveAi": 8
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Advanced self-healing smart laminate",
+        "newTech": false,
+        "space": 0,
+        "ap": 2,
+        "ai": 22.0,
+        "notes": "CP137 finite in-combat regeneration candidate: 1 AI per TP, cap 1 TP/turn, total combat reserve 5 AI. Out-of-combat self-healing may restore toward pristine condition; detailed recovery is deferred.",
+        "baseRegeneration": 0,
+        "tacticalRegenerationPerTp": 2,
+        "tacticalRegenerationCapTp": 2,
+        "combatRegenerationReserveAi": 12
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Programmable matter armor",
+        "newTech": true,
+        "space": 0,
+        "ap": 3,
+        "ai": 24.0,
+        "notes": "CP137 finite in-combat regeneration candidate: 1 AI per TP, cap 2 TP/turn, total combat reserve 6 AI. Out-of-combat self-healing may restore toward pristine condition; detailed recovery is deferred.",
+        "baseRegeneration": 0,
+        "tacticalRegenerationPerTp": 2,
+        "tacticalRegenerationCapTp": 2,
+        "combatRegenerationReserveAi": 16
+      }
+    },
+    "reactor": {
+      "1": {
+        "tl": 1,
+        "technology": "Peak Fission",
+        "newTech": true,
+        "space": 6,
+        "operationalTp": 5,
+        "degradedTp": 3,
+        "emergencyTp": 1,
+        "overloadGain": 1,
+        "strainLimit": 2,
+        "family": "fission",
+        "notes": "Mature, resilient baseline."
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Early Practical Fusion",
+        "newTech": true,
+        "space": 6,
+        "operationalTp": 6,
+        "degradedTp": 4,
+        "emergencyTp": 2,
+        "overloadGain": 1,
+        "strainLimit": 2,
+        "family": "fusion",
+        "notes": "Revised upward from the earlier 6-TP seed so Fusion is a genuine output-frontier leap; immature containment is less resilient than Peak Fission."
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Mature Compact Fusion",
+        "newTech": true,
+        "space": 6,
+        "operationalTp": 7,
+        "degradedTp": 5,
+        "emergencyTp": 2,
+        "overloadGain": 1,
+        "strainLimit": 2,
+        "family": "fusion",
+        "notes": "Maturation: same frontier output, smaller footprint and better damaged behavior."
+      },
+      "4": {
+        "tl": 4,
+        "technology": "High-Output Fusion",
+        "newTech": true,
+        "space": 6,
+        "operationalTp": 8,
+        "degradedTp": 6,
+        "emergencyTp": 3,
+        "overloadGain": 1,
+        "strainLimit": 2,
+        "family": "fusion",
+        "notes": "Pushes the mature Fusion output frontier."
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Early Antimatter Reactor",
+        "newTech": true,
+        "space": 6,
+        "operationalTp": 9,
+        "degradedTp": 6,
+        "emergencyTp": 3,
+        "overloadGain": 1,
+        "strainLimit": 2,
+        "family": "antimatter",
+        "notes": "Large new-family output leap with intentionally poor damaged-state resilience so mature Fusion remains relevant."
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Mature Antimatter",
+        "newTech": true,
+        "space": 6,
+        "operationalTp": 10,
+        "degradedTp": 7,
+        "emergencyTp": 3,
+        "overloadGain": 1,
+        "strainLimit": 2,
+        "family": "antimatter",
+        "notes": "Maturation: compactness and resilience rather than more raw output."
+      },
+      "7": {
+        "tl": 7,
+        "technology": "High-Output Antimatter",
+        "newTech": true,
+        "space": 6,
+        "operationalTp": 11,
+        "degradedTp": 8,
+        "emergencyTp": 4,
+        "overloadGain": 1,
+        "strainLimit": 2,
+        "family": "antimatter",
+        "notes": "Second Antimatter frontier push."
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Fractional / Direct Matter-Conversion Reactor",
+        "newTech": true,
+        "space": 6,
+        "operationalTp": 12,
+        "degradedTp": 8,
+        "emergencyTp": 4,
+        "overloadGain": 1,
+        "strainLimit": 2,
+        "family": "matter_conversion",
+        "notes": "New science-fantasy family expands output density but is deliberately immature/brittle."
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Total Matter Conversion",
+        "newTech": true,
+        "space": 6,
+        "operationalTp": 13,
+        "degradedTp": 9,
+        "emergencyTp": 5,
+        "overloadGain": 1,
+        "strainLimit": 2,
+        "family": "matter_conversion",
+        "notes": "Pinnacle output density and mature damaged-state behavior; still bounded enough that multiple high-demand systems create choices."
+      }
+    },
+    "stl": {
+      "1": {
+        "tl": 1,
+        "technology": "High-power electric/plasma cruiser drive",
+        "newTech": true,
+        "space": 5,
+        "move": 1,
+        "fuelPerHex": 2,
+        "overloadMoveBonus": 1,
+        "overloadTp": 1,
+        "overloadExtraFuel": 2,
+        "strainLimit": 2,
+        "notes": "Standard Move follows the game-facing invariant: installed STL Drive TL 1 gives Move 1."
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Pulsed high-energy plasma drive",
+        "newTech": true,
+        "space": 5,
+        "move": 2,
+        "fuelPerHex": 2,
+        "overloadMoveBonus": 1,
+        "overloadTp": 1,
+        "overloadExtraFuel": 2,
+        "strainLimit": 2,
+        "notes": "Standard Move follows the game-facing invariant: installed STL Drive TL 2 gives Move 2."
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Fusion-assisted torch / mature high-energy STL",
+        "newTech": true,
+        "space": 5,
+        "move": 3,
+        "fuelPerHex": 2,
+        "overloadMoveBonus": 1,
+        "overloadTp": 1,
+        "overloadExtraFuel": 2,
+        "strainLimit": 2,
+        "hardPrereq": "Power TL2",
+        "notes": "Standard Move follows the game-facing invariant: installed STL Drive TL 3 gives Move 3."
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Mature fusion torch architecture",
+        "newTech": true,
+        "space": 5,
+        "move": 4,
+        "fuelPerHex": 2,
+        "overloadMoveBonus": 1,
+        "overloadTp": 1,
+        "overloadExtraFuel": 2,
+        "strainLimit": 2,
+        "notes": "Standard Move follows the game-facing invariant: installed STL Drive TL 4 gives Move 4."
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Antimatter-catalyzed fusion drive",
+        "newTech": true,
+        "space": 5,
+        "move": 5,
+        "fuelPerHex": 2,
+        "overloadMoveBonus": 1,
+        "overloadTp": 1,
+        "overloadExtraFuel": 2,
+        "strainLimit": 2,
+        "hardPrereq": "Power TL5",
+        "notes": "Antimatter-catalyzed propulsion is a genuine enabling-science frontier in fiction, while standard tactical Move still follows the invariant one-step cadence: Drive TL5 gives Move 5. Frontier differentiation belongs in Space, overload, fuel, reliability, or specialist branches rather than a bonus base-Move jump."
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Antimatter plasma drive",
+        "newTech": true,
+        "space": 5,
+        "move": 6,
+        "fuelPerHex": 2,
+        "overloadMoveBonus": 1,
+        "overloadTp": 1,
+        "overloadExtraFuel": 2,
+        "strainLimit": 2,
+        "hardPrereq": "Power TL5",
+        "notes": "Antimatter-plasma maturation keeps the normal game-facing movement cadence: Drive TL6 gives Move 6. Integration/reliability may mature qualitatively without creating a special Move hold."
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Beam-core / ultra-high-energy propulsion",
+        "newTech": true,
+        "space": 5,
+        "move": 7,
+        "fuelPerHex": 2,
+        "overloadMoveBonus": 1,
+        "overloadTp": 1,
+        "overloadExtraFuel": 2,
+        "strainLimit": 2,
+        "notes": "Standard Move follows the game-facing invariant: installed STL Drive TL 7 gives Move 7; Space miniaturization remains the numerical maturation at this step."
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Inertial-coupled drive",
+        "newTech": true,
+        "space": 5,
+        "move": 8,
+        "fuelPerHex": 2,
+        "overloadMoveBonus": 1,
+        "overloadTp": 1,
+        "overloadExtraFuel": 2,
+        "strainLimit": 2,
+        "notes": "Inertial-coupled propulsion is a major high-technology principle change in fiction, while standard tactical Move remains governed by the invariant: Drive TL8 gives Move 8. Any additional frontier benefit belongs in other characteristics or explicit branches."
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Gravitic/metric sublight drive",
+        "newTech": true,
+        "space": 5,
+        "move": 9,
+        "fuelPerHex": 2,
+        "overloadMoveBonus": 1,
+        "overloadTp": 1,
+        "overloadExtraFuel": 2,
+        "strainLimit": 2,
+        "notes": "Standard Move follows the game-facing invariant: installed STL Drive TL 9 gives Move 9. Fuel-per-hex remains held pending Resources/endurance economy design."
+      }
+    },
+    "ftl": {
+      "1": {
+        "tl": 1,
+        "technology": "First-generation practical FTL",
+        "newTech": true,
+        "space": 5,
+        "strategicMove": 1,
+        "notes": "CP127 retains this uneven strategic-movement ladder as an explicit FTL exception; STL/Missile tactical movement invariants do not apply to FTL."
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Stabilized FTL transit",
+        "newTech": true,
+        "space": 5,
+        "strategicMove": 2,
+        "notes": "CP127 retains this uneven strategic-movement ladder as an explicit FTL exception; STL/Missile tactical movement invariants do not apply to FTL."
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Integrated FTL navigation",
+        "newTech": true,
+        "space": 5,
+        "strategicMove": 3,
+        "notes": "CP127 retains this uneven strategic-movement ladder as an explicit FTL exception; STL/Missile tactical movement invariants do not apply to FTL."
+      },
+      "4": {
+        "tl": 4,
+        "technology": "High-throughput FTL field",
+        "newTech": true,
+        "space": 5,
+        "strategicMove": 4,
+        "notes": "CP127 retains this uneven strategic-movement ladder as an explicit FTL exception; STL/Missile tactical movement invariants do not apply to FTL."
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Adaptive transition geometry",
+        "newTech": true,
+        "space": 5,
+        "strategicMove": 4,
+        "notes": "Quiet raw-speed step: value is transition flexibility/geometry, not forced +Move. CP127 retains this uneven strategic-movement ladder as an explicit FTL exception; STL/Missile tactical movement invariants do not apply to FTL."
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Deep-route FTL navigation",
+        "newTech": true,
+        "space": 5,
+        "strategicMove": 6,
+        "notes": "CP127 retains this uneven strategic-movement ladder as an explicit FTL exception; STL/Missile tactical movement invariants do not apply to FTL."
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Resilient high-energy FTL",
+        "newTech": true,
+        "space": 5,
+        "strategicMove": 7,
+        "notes": "CP127 retains this uneven strategic-movement ladder as an explicit FTL exception; STL/Missile tactical movement invariants do not apply to FTL."
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Metric-transition FTL",
+        "newTech": true,
+        "space": 5,
+        "strategicMove": 9,
+        "notes": "CP127 retains this uneven strategic-movement ladder as an explicit FTL exception; STL/Missile tactical movement invariants do not apply to FTL."
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Pinnacle topology-control FTL",
+        "newTech": true,
+        "space": 5,
+        "strategicMove": 12,
+        "notes": "Unknown-sector interruption/frontier-discovery rules remain; high Move does not erase exploration. CP127 retains this uneven strategic-movement ladder as an explicit FTL exception; STL/Missile tactical movement invariants do not apply to FTL."
+      }
+    },
+    "computer": {
+      "1": {
+        "tl": 1,
+        "technology": "Integrated electronic fire control",
+        "newTech": true,
+        "space": 3,
+        "targetingPp": 10,
+        "degradedTargetingPp": 5,
+        "evasiveCompensationPp": 0,
+        "legacyApproxPenaltyPp": -25,
+        "notes": "CP134: legacy Approximate-fire penalty retained only as historical provenance; current universal direct-fire penalty is owned by combatModifiers."
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Refined conventional fire control",
+        "newTech": true,
+        "space": 3,
+        "targetingPp": 12,
+        "degradedTargetingPp": 6,
+        "evasiveCompensationPp": 0,
+        "legacyApproxPenaltyPp": -25,
+        "notes": "CP134: legacy Approximate-fire penalty retained only as historical provenance; current universal direct-fire penalty is owned by combatModifiers."
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Mature integrated fire control / Evasive Compensation",
+        "newTech": true,
+        "space": 3,
+        "targetingPp": 12,
+        "degradedTargetingPp": 6,
+        "evasiveCompensationPp": 5,
+        "legacyApproxPenaltyPp": -25,
+        "notes": "CP134: legacy Approximate-fire penalty retained only as historical provenance; current universal direct-fire penalty is owned by combatModifiers."
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Photonic/optical combat computing",
+        "newTech": true,
+        "space": 3,
+        "targetingPp": 15,
+        "degradedTargetingPp": 8,
+        "evasiveCompensationPp": 5,
+        "legacyApproxPenaltyPp": -25,
+        "notes": "CP134: legacy Approximate-fire penalty retained only as historical provenance; current universal direct-fire penalty is owned by combatModifiers."
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Adaptive AI battle manager",
+        "newTech": true,
+        "space": 3,
+        "targetingPp": 15,
+        "degradedTargetingPp": 8,
+        "evasiveCompensationPp": 5,
+        "legacyApproxPenaltyPp": -20,
+        "notes": "CP134: legacy Approximate-fire penalty retained only as historical provenance; current universal direct-fire penalty is owned by combatModifiers."
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Distributed resilient combat cloud",
+        "newTech": true,
+        "space": 2,
+        "targetingPp": 15,
+        "degradedTargetingPp": 10,
+        "evasiveCompensationPp": 10,
+        "legacyApproxPenaltyPp": -20,
+        "notes": "CP134: legacy Approximate-fire penalty retained only as historical provenance; current universal direct-fire penalty is owned by combatModifiers."
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Quantum-assisted optimization",
+        "newTech": true,
+        "space": 2,
+        "targetingPp": 18,
+        "degradedTargetingPp": 12,
+        "evasiveCompensationPp": 10,
+        "legacyApproxPenaltyPp": -20,
+        "notes": "CP134: legacy Approximate-fire penalty retained only as historical provenance; current universal direct-fire penalty is owned by combatModifiers."
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Predictive battle-state synthesis",
+        "newTech": true,
+        "space": 2,
+        "targetingPp": 20,
+        "degradedTargetingPp": 15,
+        "evasiveCompensationPp": 10,
+        "legacyApproxPenaltyPp": -15,
+        "notes": "CP134: legacy Approximate-fire penalty retained only as historical provenance; current universal direct-fire penalty is owned by combatModifiers."
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Pinnacle self-verifying battle synthesis",
+        "newTech": true,
+        "space": 2,
+        "targetingPp": 20,
+        "degradedTargetingPp": 18,
+        "evasiveCompensationPp": 10,
+        "notes": "No precognition/hidden-state access; pinnacle gains robustness and bounded degraded-track competence. CP134: legacy Approximate-fire penalty retained only as historical provenance; current universal direct-fire penalty is owned by combatModifiers.",
+        "legacyApproxPenaltyPp": -10
+      }
+    },
+    "sensor": {
+      "1": {
+        "tl": 1,
+        "technology": "Integrated multimodal sensor suite",
+        "newTech": true,
+        "space": 3,
+        "dr": 0,
+        "passiveFirm": 1,
+        "passiveApprox": 3,
+        "activeLowFirm": 3,
+        "activeLowApprox": 4,
+        "activeLowTp": 1,
+        "activeHighFirm": null,
+        "activeHighApprox": null,
+        "activeHighTp": null,
+        "overloadFirm": 4,
+        "overloadApprox": 5,
+        "notes": "Uses the later Balanced-0 architecture rather than the stale early 3/5 passive seed."
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Improved discrimination resistance",
+        "newTech": true,
+        "space": 3,
+        "dr": 1,
+        "passiveFirm": 1,
+        "passiveApprox": 3,
+        "activeLowFirm": 3,
+        "activeLowApprox": 4,
+        "activeLowTp": 1,
+        "activeHighFirm": null,
+        "activeHighApprox": null,
+        "activeHighTp": null,
+        "overloadFirm": 4,
+        "overloadApprox": 5
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Dual normal active modes",
+        "newTech": true,
+        "space": 3,
+        "dr": 1,
+        "passiveFirm": 1,
+        "passiveApprox": 3,
+        "activeLowFirm": 3,
+        "activeLowApprox": 4,
+        "activeLowTp": 1,
+        "activeHighFirm": 4,
+        "activeHighApprox": 5,
+        "activeHighTp": 2,
+        "overloadFirm": null,
+        "overloadApprox": null,
+        "notes": "The prior overload-level 4/5 envelope becomes a safe normal High mode."
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Multimodal fusion and cooperative apertures",
+        "newTech": true,
+        "space": 3,
+        "dr": 2,
+        "passiveFirm": 2,
+        "passiveApprox": 4,
+        "activeLowFirm": 4,
+        "activeLowApprox": 5,
+        "activeLowTp": 1,
+        "activeHighFirm": 5,
+        "activeHighApprox": 6,
+        "activeHighTp": 2
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Low-probability active sensing / adaptive waveform suite",
+        "newTech": true,
+        "space": 3,
+        "dr": 2,
+        "passiveFirm": 2,
+        "passiveApprox": 4,
+        "activeLowFirm": 4,
+        "activeLowApprox": 5,
+        "activeLowTp": 1,
+        "activeHighFirm": 5,
+        "activeHighApprox": 6,
+        "activeHighTp": 2,
+        "special": "LPI/adaptive-waveform mode; emission benefit TBD, no extra range assumed."
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Quantum-limited / precision field sensors",
+        "newTech": true,
+        "space": 3,
+        "dr": 3,
+        "passiveFirm": 3,
+        "passiveApprox": 5,
+        "activeLowFirm": 5,
+        "activeLowApprox": 6,
+        "activeLowTp": 1,
+        "activeHighFirm": 6,
+        "activeHighApprox": 7,
+        "activeHighTp": 2
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Integrated penetrating multimodal sensing",
+        "newTech": true,
+        "space": 2,
+        "dr": 3,
+        "passiveFirm": 3,
+        "passiveApprox": 6,
+        "activeLowFirm": 5,
+        "activeLowApprox": 7,
+        "activeLowTp": 1,
+        "activeHighFirm": 7,
+        "activeHighApprox": 8,
+        "activeHighTp": 2
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Spacetime/FTL-wake sensing",
+        "newTech": true,
+        "space": 2,
+        "dr": 4,
+        "passiveFirm": 4,
+        "passiveApprox": 7,
+        "activeLowFirm": 6,
+        "activeLowApprox": 8,
+        "activeLowTp": 1,
+        "activeHighFirm": 8,
+        "activeHighApprox": 9,
+        "activeHighTp": 2
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Pinnacle multi-domain inference suite",
+        "newTech": true,
+        "space": 2,
+        "dr": 5,
+        "passiveFirm": 5,
+        "passiveApprox": 8,
+        "activeLowFirm": 7,
+        "activeLowApprox": 9,
+        "activeLowTp": 1,
+        "activeHighFirm": 9,
+        "activeHighApprox": 10,
+        "activeHighTp": 2,
+        "notes": "Still probabilistic and provenance-bound; no omniscience."
+      }
+    },
+    "ecm": {
+      "1": {
+        "tl": 1,
+        "technology": "Conventional noise/deception ECM",
+        "newTech": true,
+        "space": 1,
+        "rating": 1,
+        "fullStrengthTp": 1,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2
+      },
+      "2": {
+        "tl": 2,
+        "technology": "High-strength conventional ECM",
+        "newTech": true,
+        "space": 1,
+        "rating": 2,
+        "fullStrengthTp": 2,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2,
+        "notes": "Strength leap costs proportionally more TP."
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Efficient full-strength ECM",
+        "newTech": true,
+        "space": 1,
+        "rating": 2,
+        "fullStrengthTp": 1,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2,
+        "notes": "Maturation is efficiency, not rating inflation."
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Digital deception / false-track synthesis",
+        "newTech": true,
+        "space": 1,
+        "rating": 2,
+        "fullStrengthTp": 1,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2,
+        "special": "bounded deception capability"
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Adaptive cognitive EW",
+        "newTech": true,
+        "space": 1,
+        "rating": 3,
+        "fullStrengthTp": 2,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Distributed cooperative EW",
+        "newTech": true,
+        "space": 1,
+        "rating": 3,
+        "fullStrengthTp": 2,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2,
+        "special": "cooperative capped effect; no simple additive stacking"
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Emitter-targeted electronic attack",
+        "newTech": true,
+        "space": 1,
+        "rating": 3,
+        "fullStrengthTp": 1,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2,
+        "special": "emitter-targeted capability"
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Field/signature spoofing",
+        "newTech": true,
+        "space": 1,
+        "rating": 4,
+        "fullStrengthTp": 2,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Pinnacle adaptive cross-spectrum deception",
+        "newTech": true,
+        "space": 1,
+        "rating": 4,
+        "fullStrengthTp": 1,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2,
+        "notes": "Pinnacle efficiency/cross-spectrum breadth; no invisibility or truth oracle."
+      }
+    },
+    "eccm": {
+      "1": {
+        "tl": 1,
+        "technology": "Conventional filtering and emitter analysis",
+        "newTech": true,
+        "space": 1,
+        "rating": 1,
+        "fullStrengthTp": 1,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2
+      },
+      "2": {
+        "tl": 2,
+        "technology": "High-strength conventional ECCM",
+        "newTech": true,
+        "space": 1,
+        "rating": 2,
+        "fullStrengthTp": 2,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2,
+        "notes": "Strength leap costs proportionally more TP."
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Efficient full-strength ECCM",
+        "newTech": true,
+        "space": 1,
+        "rating": 2,
+        "fullStrengthTp": 1,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2,
+        "notes": "Maturation is efficiency, not rating inflation."
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Sensor-fusion anti-deception",
+        "newTech": true,
+        "space": 1,
+        "rating": 2,
+        "fullStrengthTp": 1,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2,
+        "special": "bounded anti-deception capability"
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Adaptive classifier / signature memory",
+        "newTech": true,
+        "space": 1,
+        "rating": 3,
+        "fullStrengthTp": 2,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Cooperative track validation",
+        "newTech": true,
+        "space": 1,
+        "rating": 3,
+        "fullStrengthTp": 2,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2,
+        "special": "cooperative capped effect; no simple additive stacking"
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Counter-emitter localization",
+        "newTech": true,
+        "space": 1,
+        "rating": 3,
+        "fullStrengthTp": 1,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2,
+        "special": "emitter-targeted capability"
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Exotic-channel correlation",
+        "newTech": true,
+        "space": 1,
+        "rating": 4,
+        "fullStrengthTp": 2,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Pinnacle provenance-weighted track validation",
+        "newTech": true,
+        "space": 1,
+        "rating": 4,
+        "fullStrengthTp": 1,
+        "overloadBonusRating": 1,
+        "overloadAdditionalTp": 1,
+        "strainLimit": 2,
+        "notes": "Pinnacle efficiency/cross-spectrum breadth; no invisibility or truth oracle."
+      }
+    },
+    "shield": {
+      "1": {
+        "tl": 1,
+        "technology": "Baseline defensive field",
+        "newTech": true,
+        "space": 3,
+        "capacity": 16.0,
+        "baseRecharge": 0,
+        "tacticalRechargePerTp": 2,
+        "tacticalRechargeCapTp": 1,
+        "shieldArmor": 0,
+        "notes": "CP135 recharge candidate: maximum one-window recovery from 0 SC is 3/4; full reset is intentionally impossible. SA hardens SPEN only while SC > 0."
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Higher-capacity field",
+        "newTech": true,
+        "space": 3,
+        "capacity": 18.0,
+        "baseRecharge": 0,
+        "tacticalRechargePerTp": 2,
+        "tacticalRechargeCapTp": 1,
+        "shieldArmor": 0,
+        "notes": "CP135 recharge candidate: maximum one-window recovery from 0 SC is 4/5; full reset is intentionally impossible. SA hardens SPEN only while SC > 0."
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Mature stabilized field generator",
+        "newTech": true,
+        "space": 3,
+        "capacity": 20.0,
+        "baseRecharge": 0,
+        "tacticalRechargePerTp": 2,
+        "tacticalRechargeCapTp": 1,
+        "shieldArmor": 0,
+        "notes": "CP135 recharge candidate: maximum one-window recovery from 0 SC is 4/6; full reset is intentionally impossible. SA hardens SPEN only while SC > 0."
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Segmented/adaptive field geometry",
+        "newTech": true,
+        "space": 3,
+        "capacity": 22.0,
+        "baseRecharge": 0,
+        "tacticalRechargePerTp": 2,
+        "tacticalRechargeCapTp": 1,
+        "shieldArmor": 0,
+        "notes": "CP135 recharge candidate: maximum one-window recovery from 0 SC is 5/7; full reset is intentionally impossible. SA hardens SPEN only while SC > 0."
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Frequency/phase-tuned shielding",
+        "newTech": true,
+        "space": 3,
+        "capacity": 24.0,
+        "baseRecharge": 0,
+        "tacticalRechargePerTp": 2,
+        "tacticalRechargeCapTp": 1,
+        "shieldArmor": 0,
+        "notes": "CP135 recharge candidate: maximum one-window recovery from 0 SC is 6/8; full reset is intentionally impossible. SA hardens SPEN only while SC > 0."
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Predictive localized reinforcement",
+        "newTech": true,
+        "space": 3,
+        "capacity": 26.0,
+        "baseRecharge": 0,
+        "tacticalRechargePerTp": 2,
+        "tacticalRechargeCapTp": 1,
+        "shieldArmor": 0,
+        "notes": "CP135 recharge candidate: maximum one-window recovery from 0 SC is 6/8; full reset is intentionally impossible. SA hardens SPEN only while SC > 0."
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Stand-off shear field",
+        "newTech": true,
+        "space": 2,
+        "capacity": 28.0,
+        "baseRecharge": 0,
+        "tacticalRechargePerTp": 2,
+        "tacticalRechargeCapTp": 1,
+        "shieldArmor": 0,
+        "notes": "CP135 recharge candidate: maximum one-window recovery from 0 SC is 7/9; full reset is intentionally impossible. SA hardens SPEN only while SC > 0."
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Metric barrier field",
+        "newTech": true,
+        "space": 2,
+        "capacity": 30.0,
+        "baseRecharge": 0,
+        "tacticalRechargePerTp": 2,
+        "tacticalRechargeCapTp": 2,
+        "shieldArmor": 1,
+        "notes": "CP135 recharge candidate: maximum one-window recovery from 0 SC is 8/10; full reset is intentionally impossible. SA hardens SPEN only while SC > 0."
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Pinnacle adaptive barrier",
+        "newTech": true,
+        "space": 2,
+        "capacity": 32.0,
+        "baseRecharge": 0,
+        "tacticalRechargePerTp": 2,
+        "tacticalRechargeCapTp": 2,
+        "shieldArmor": 1,
+        "notes": "CP135 recharge candidate: maximum one-window recovery from 0 SC is 10/12; full reset is intentionally impossible. SA hardens SPEN only while SC > 0."
+      }
+    },
+    "kinetic_main": {
+      "1": {
+        "tl": 1,
+        "technology": "Mature electromagnetic mass driver",
+        "newTech": true,
+        "space": 6,
+        "accuracyPp": 20,
+        "damage": 9,
+        "spen": 0,
+        "apen": 8,
+        "firingTp": 2,
+        "ammo": 100,
+        "standardRange": 2,
+        "maxRange": 4,
+        "notes": "CP133 candidate Kinetic identity: low-power, deep-ammo, shorter-range direct fire with APEN progression and no intrinsic SPEN. Extended range uses the universal -10 pp rule.",
+        "researchBaselineCandidate": "K1"
+      },
+      "2": {
+        "tl": 2,
+        "technology": "TL1 mass driver + improved penetrator materials",
+        "newTech": false,
+        "space": 6,
+        "accuracyPp": 20,
+        "damage": 10,
+        "spen": 0,
+        "apen": 9,
+        "firingTp": 2,
+        "ammo": 100,
+        "notes": "CP133 candidate Kinetic identity: low-power, deep-ammo, shorter-range direct fire with APEN progression and no intrinsic SPEN. Extended range uses the universal -10 pp rule.",
+        "standardRange": 2,
+        "maxRange": 4,
+        "researchBaselineCandidate": "K1"
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Power-efficient mature accelerator",
+        "newTech": true,
+        "space": 6,
+        "accuracyPp": 20,
+        "damage": 12,
+        "spen": 0,
+        "apen": 10,
+        "firingTp": 2,
+        "ammo": 100,
+        "standardRange": 2,
+        "maxRange": 4,
+        "notes": "CP133 candidate Kinetic identity: low-power, deep-ammo, shorter-range direct fire with APEN progression and no intrinsic SPEN. Extended range uses the universal -10 pp rule.",
+        "researchBaselineCandidate": "K1"
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Superconducting coil/induction accelerator",
+        "newTech": true,
+        "space": 6,
+        "accuracyPp": 30,
+        "damage": 13,
+        "spen": 0,
+        "apen": 10,
+        "firingTp": 2,
+        "ammo": 100,
+        "notes": "CP133 candidate Kinetic identity: low-power, deep-ammo, shorter-range direct fire with APEN progression and no intrinsic SPEN. Extended range uses the universal -10 pp rule.",
+        "standardRange": 2,
+        "maxRange": 4,
+        "researchBaselineCandidate": "K1"
+      },
+      "5": {
+        "tl": 5,
+        "technology": "TL4 superconducting accelerator (held)",
+        "newTech": false,
+        "space": 6,
+        "accuracyPp": 30,
+        "damage": 14,
+        "spen": 0,
+        "apen": 11,
+        "firingTp": 3,
+        "ammo": 100,
+        "notes": "CP133 candidate Kinetic identity: low-power, deep-ammo, shorter-range direct fire with APEN progression and no intrinsic SPEN. Extended range uses the universal -10 pp rule.",
+        "standardRange": 2,
+        "maxRange": 4,
+        "researchBaselineCandidate": "K1"
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Smart hypervelocity mass driver",
+        "newTech": true,
+        "space": 6,
+        "accuracyPp": 30,
+        "damage": 15,
+        "spen": 0,
+        "apen": 12,
+        "firingTp": 3,
+        "ammo": 100,
+        "notes": "CP133 candidate Kinetic identity: low-power, deep-ammo, shorter-range direct fire with APEN progression and no intrinsic SPEN. Extended range uses the universal -10 pp rule.",
+        "standardRange": 2,
+        "maxRange": 6,
+        "researchBaselineCandidate": "K1"
+      },
+      "7": {
+        "tl": 7,
+        "technology": "TL6 smart hypervelocity mass driver (held)",
+        "newTech": false,
+        "space": 6,
+        "accuracyPp": 32,
+        "damage": 15,
+        "spen": 0,
+        "apen": 13,
+        "firingTp": 3,
+        "ammo": 100,
+        "notes": "CP133 candidate Kinetic identity: low-power, deep-ammo, shorter-range direct fire with APEN progression and no intrinsic SPEN. Extended range uses the universal -10 pp rule.",
+        "standardRange": 3,
+        "maxRange": 6,
+        "researchBaselineCandidate": "K1"
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Field-assisted mass accelerator",
+        "newTech": true,
+        "space": 6,
+        "accuracyPp": 35,
+        "damage": 19,
+        "spen": 0,
+        "apen": 14,
+        "firingTp": 4,
+        "ammo": 100,
+        "standardRange": 3,
+        "maxRange": 6,
+        "notes": "CP133 candidate Kinetic identity: low-power, deep-ammo, shorter-range direct fire with APEN progression and no intrinsic SPEN. Extended range uses the universal -10 pp rule.",
+        "researchBaselineCandidate": "K1"
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Relativistic kinetic lance",
+        "newTech": true,
+        "space": 6,
+        "accuracyPp": 35,
+        "damage": 20,
+        "spen": 0,
+        "apen": 14,
+        "firingTp": 4,
+        "ammo": 100,
+        "standardRange": 3,
+        "maxRange": 7,
+        "notes": "CP133 candidate Kinetic identity: low-power, deep-ammo, shorter-range direct fire with APEN progression and no intrinsic SPEN. Extended range uses the universal -10 pp rule.",
+        "researchBaselineCandidate": "K1"
+      }
+    },
+    "kinetic_pds": {
+      "1": {
+        "tl": 1,
+        "technology": "Rapid-fire kinetic PDS",
+        "newTech": true,
+        "space": 2,
+        "baseChancePp": 8,
+        "reactionCapacity": 1,
+        "readinessTp": 2,
+        "ammo": 75,
+        "rc1Tp": 2,
+        "safeReactionCapacity": 1,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "K155P06"
+      },
+      "2": {
+        "tl": 2,
+        "technology": "TL1 rapid-fire kinetic PDS (held)",
+        "newTech": false,
+        "profileSourceTl": 1,
+        "space": 2,
+        "baseChancePp": 8,
+        "reactionCapacity": 1,
+        "readinessTp": 2,
+        "ammo": 75,
+        "notes": "CP108 Storyboard has no independent TL2 Kinetic-PDS beat; improvement comes only from the TL2 ship computer unless another payload/support is installed.",
+        "rc1Tp": 2,
+        "safeReactionCapacity": 1,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "K155P06"
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Mature local fire-control / effective-ammo PDS",
+        "newTech": true,
+        "space": 2,
+        "baseChancePp": 8,
+        "reactionCapacity": 1,
+        "readinessTp": 2,
+        "ammo": 75,
+        "rc1Tp": 2,
+        "safeReactionCapacity": 1,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "K155P06"
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Guided intercept projectile PDS",
+        "newTech": true,
+        "space": 2,
+        "baseChancePp": 10,
+        "reactionCapacity": 1,
+        "readinessTp": 2,
+        "ammo": 75,
+        "rc1Tp": 2,
+        "safeReactionCapacity": 1,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "K155P06"
+      },
+      "5": {
+        "tl": 5,
+        "technology": "TL4 guided intercept projectile PDS (held)",
+        "newTech": false,
+        "profileSourceTl": 4,
+        "space": 2,
+        "baseChancePp": 10,
+        "reactionCapacity": 1,
+        "readinessTp": 2,
+        "ammo": 75,
+        "rc1Tp": 2,
+        "safeReactionCapacity": 1,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "K155P06"
+      },
+      "6": {
+        "tl": 6,
+        "technology": "TL4 guided intercept PDS (held; distributed-grid branch available)",
+        "newTech": false,
+        "profileSourceTl": 4,
+        "space": 2,
+        "baseChancePp": 10,
+        "reactionCapacity": 1,
+        "readinessTp": 2,
+        "ammo": 75,
+        "rc1Tp": 2,
+        "safeReactionCapacity": 1,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "K155P06"
+      },
+      "7": {
+        "tl": 7,
+        "technology": "TL4 guided intercept PDS (held)",
+        "newTech": false,
+        "profileSourceTl": 4,
+        "space": 2,
+        "baseChancePp": 12,
+        "reactionCapacity": 2,
+        "readinessTp": 3,
+        "ammo": 75,
+        "rc1Tp": 1,
+        "rc2Tp": 3,
+        "safeReactionCapacity": 2,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "K155P06"
+      },
+      "8": {
+        "tl": 8,
+        "technology": "TL4 guided intercept PDS (held)",
+        "newTech": false,
+        "profileSourceTl": 4,
+        "space": 2,
+        "baseChancePp": 12,
+        "reactionCapacity": 2,
+        "readinessTp": 3,
+        "ammo": 75,
+        "rc1Tp": 1,
+        "rc2Tp": 3,
+        "safeReactionCapacity": 2,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "K155P06"
+      },
+      "9": {
+        "tl": 9,
+        "technology": "TL4 guided intercept PDS (held)",
+        "newTech": false,
+        "profileSourceTl": 4,
+        "space": 2,
+        "baseChancePp": 12,
+        "reactionCapacity": 2,
+        "readinessTp": 3,
+        "ammo": 75,
+        "notes": "Later effectiveness still rises through better ship fire control; no filler PDS family is invented.",
+        "rc1Tp": 1,
+        "rc2Tp": 3,
+        "safeReactionCapacity": 2,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "K155P06"
+      }
+    },
+    "energy_main": {
+      "1": {
+        "tl": 1,
+        "technology": "High-energy coherent laser",
+        "newTech": true,
+        "space": 6,
+        "accuracyPp": 30,
+        "lowTp": 2,
+        "lowDamage": 2,
+        "standardTp": 3,
+        "standardDamage": 8,
+        "spen": 10,
+        "apen": 0,
+        "maxRange": 4,
+        "standardRange": 3,
+        "overloadTp": 4,
+        "overloadDamage": 12,
+        "overloadAddsStrain": true,
+        "notes": "CP133 candidate Energy identity: no ammo, higher ACC/range and power demand. Low/standard/overload modes are universal; overload always adds Strain. Extended range uses the universal -10 pp rule.",
+        "strainLimit": 1,
+        "highDamage": 12,
+        "researchBaselineCandidate": "E7"
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Improved optics and pulse conditioning",
+        "newTech": true,
+        "space": 6,
+        "accuracyPp": 30,
+        "lowTp": 2,
+        "lowDamage": 4,
+        "standardTp": 3,
+        "standardDamage": 8,
+        "spen": 13,
+        "apen": 0,
+        "notes": "CP133 candidate Energy identity: no ammo, higher ACC/range and power demand. Low/standard/overload modes are universal; overload always adds Strain. Extended range uses the universal -10 pp rule.",
+        "maxRange": 5,
+        "standardRange": 3,
+        "overloadTp": 6,
+        "overloadDamage": 14,
+        "overloadAddsStrain": true,
+        "strainLimit": 2,
+        "highDamage": 14,
+        "researchBaselineCandidate": "E7"
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Safe high-output beam mode",
+        "newTech": true,
+        "space": 6,
+        "accuracyPp": 30,
+        "lowTp": 1,
+        "lowDamage": 4,
+        "standardTp": 2,
+        "standardDamage": 10,
+        "spen": 14,
+        "apen": 0,
+        "maxRange": 6,
+        "standardRange": 3,
+        "overloadTp": 4,
+        "overloadDamage": 14,
+        "overloadAddsStrain": true,
+        "notes": "CP133 candidate Energy identity: no ammo, higher ACC/range and power demand. Low/standard/overload modes are universal; overload always adds Strain. Extended range uses the universal -10 pp rule.",
+        "strainLimit": 2,
+        "highDamage": 14,
+        "researchBaselineCandidate": "E7"
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Short-wavelength / advanced focusing beam",
+        "newTech": true,
+        "space": 6,
+        "accuracyPp": 30,
+        "lowTp": 2,
+        "lowDamage": 6,
+        "standardTp": 4,
+        "standardDamage": 10,
+        "spen": 16,
+        "apen": 0,
+        "maxRange": 6,
+        "standardRange": 3,
+        "overloadTp": 6,
+        "overloadDamage": 16,
+        "overloadAddsStrain": true,
+        "notes": "CP133 candidate Energy identity: no ammo, higher ACC/range and power demand. Low/standard/overload modes are universal; overload always adds Strain. Extended range uses the universal -10 pp rule.",
+        "strainLimit": 2,
+        "highDamage": 16,
+        "researchBaselineCandidate": "E7"
+      },
+      "5": {
+        "tl": 5,
+        "technology": "TL4 advanced focusing beam (held)",
+        "newTech": false,
+        "space": 6,
+        "accuracyPp": 30,
+        "lowTp": 3,
+        "lowDamage": 6,
+        "standardTp": 5,
+        "standardDamage": 10,
+        "spen": 17,
+        "apen": 0,
+        "notes": "CP133 candidate Energy identity: no ammo, higher ACC/range and power demand. Low/standard/overload modes are universal; overload always adds Strain. Extended range uses the universal -10 pp rule.",
+        "maxRange": 7,
+        "standardRange": 5,
+        "overloadTp": 7,
+        "overloadDamage": 18,
+        "overloadAddsStrain": true,
+        "strainLimit": 2,
+        "highDamage": 18,
+        "researchBaselineCandidate": "E7"
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Distributed/phased beam director",
+        "newTech": true,
+        "space": 6,
+        "accuracyPp": 35,
+        "lowTp": 2,
+        "lowDamage": 6,
+        "standardTp": 4,
+        "standardDamage": 12,
+        "spen": 18,
+        "apen": 0,
+        "maxRange": 7,
+        "standardRange": 5,
+        "overloadTp": 6,
+        "overloadDamage": 22,
+        "overloadAddsStrain": true,
+        "notes": "CP133 candidate Energy identity: no ammo, higher ACC/range and power demand. Low/standard/overload modes are universal; overload always adds Strain. Extended range uses the universal -10 pp rule.",
+        "strainLimit": 2,
+        "highDamage": 22,
+        "researchBaselineCandidate": "E7"
+      },
+      "7": {
+        "tl": 7,
+        "technology": "TL6 distributed/phased beam director (held)",
+        "newTech": false,
+        "space": 6,
+        "accuracyPp": 35,
+        "lowTp": 3,
+        "lowDamage": 6,
+        "standardTp": 5,
+        "standardDamage": 14,
+        "spen": 19,
+        "apen": 0,
+        "notes": "CP133 candidate Energy identity: no ammo, higher ACC/range and power demand. Low/standard/overload modes are universal; overload always adds Strain. Extended range uses the universal -10 pp rule.",
+        "maxRange": 7,
+        "standardRange": 5,
+        "overloadTp": 8,
+        "overloadDamage": 22,
+        "overloadAddsStrain": true,
+        "strainLimit": 2,
+        "highDamage": 22,
+        "researchBaselineCandidate": "E7"
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Field-guided coherent lance",
+        "newTech": true,
+        "space": 6,
+        "accuracyPp": 35,
+        "lowTp": 4,
+        "lowDamage": 8,
+        "standardTp": 6,
+        "standardDamage": 16,
+        "spen": 20,
+        "apen": 0,
+        "notes": "CP133 candidate Energy identity: no ammo, higher ACC/range and power demand. Low/standard/overload modes are universal; overload always adds Strain. Extended range uses the universal -10 pp rule.",
+        "maxRange": 8,
+        "standardRange": 5,
+        "overloadTp": 9,
+        "overloadDamage": 24,
+        "overloadAddsStrain": true,
+        "strainLimit": 2,
+        "highDamage": 24,
+        "researchBaselineCandidate": "E7"
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Pinnacle coherent-energy lance",
+        "newTech": true,
+        "space": 6,
+        "accuracyPp": 35,
+        "lowTp": 3,
+        "lowDamage": 8,
+        "standardTp": 6,
+        "standardDamage": 18,
+        "spen": 22,
+        "apen": 0,
+        "maxRange": 9,
+        "standardRange": 5,
+        "overloadTp": 8,
+        "overloadDamage": 24,
+        "overloadAddsStrain": true,
+        "notes": "CP133 candidate Energy identity: no ammo, higher ACC/range and power demand. Low/standard/overload modes are universal; overload always adds Strain. Extended range uses the universal -10 pp rule.",
+        "strainLimit": 2,
+        "highDamage": 24,
+        "researchBaselineCandidate": "E7"
+      }
+    },
+    "energy_pds": {
+      "1": {
+        "tl": 1,
+        "technology": "Baseline beam point defense",
+        "newTech": true,
+        "space": 2,
+        "baseChancePp": 10,
+        "reactionCapacity": 1,
+        "readinessTp": 2,
+        "ammo": null,
+        "rc1Tp": 2,
+        "safeReactionCapacity": 1,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "E155P08"
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Improved beam tracking and pulse control",
+        "newTech": true,
+        "space": 2,
+        "baseChancePp": 10,
+        "reactionCapacity": 1,
+        "readinessTp": 2,
+        "ammo": null,
+        "rc1Tp": 2,
+        "safeReactionCapacity": 1,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "E155P08"
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Efficient beam-PDS readiness",
+        "newTech": true,
+        "space": 2,
+        "baseChancePp": 10,
+        "reactionCapacity": 1,
+        "readinessTp": 2,
+        "ammo": null,
+        "rc1Tp": 2,
+        "safeReactionCapacity": 1,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "E155P08"
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Rapid-steering beam director",
+        "newTech": true,
+        "space": 2,
+        "baseChancePp": 10,
+        "reactionCapacity": 2,
+        "readinessTp": 3,
+        "ammo": null,
+        "rc1Tp": 2,
+        "rc2Tp": 3,
+        "safeReactionCapacity": 1,
+        "extraReactionStrain": 1,
+        "strainLimit": 2,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "E155P08"
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Multi-threat phased beam defense",
+        "newTech": true,
+        "space": 2,
+        "baseChancePp": 10,
+        "reactionCapacity": 2,
+        "readinessTp": 3,
+        "ammo": null,
+        "notes": "May fund only 1 TP for RC1; 2 TP exposes full RC2.",
+        "rc1Tp": 2,
+        "rc2Tp": 3,
+        "safeReactionCapacity": 1,
+        "extraReactionStrain": 1,
+        "strainLimit": 2,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "E155P08"
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Adaptive-spectrum interception",
+        "newTech": true,
+        "space": 2,
+        "baseChancePp": 10,
+        "reactionCapacity": 2,
+        "readinessTp": 3,
+        "ammo": null,
+        "notes": "Scalable 1 TP/RC1 or 2 TP/RC2 readiness remains.",
+        "rc1Tp": 2,
+        "rc2Tp": 3,
+        "safeReactionCapacity": 1,
+        "extraReactionStrain": 1,
+        "strainLimit": 2,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "E155P08"
+      },
+      "7": {
+        "tl": 7,
+        "technology": "TL6 adaptive-spectrum Energy PDS (held)",
+        "newTech": false,
+        "profileSourceTl": 6,
+        "space": 2,
+        "baseChancePp": 10,
+        "reactionCapacity": 2,
+        "readinessTp": 4,
+        "ammo": null,
+        "rc1Tp": 2,
+        "rc2Tp": 4,
+        "safeReactionCapacity": 2,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "E155P08"
+      },
+      "8": {
+        "tl": 8,
+        "technology": "TL6 adaptive-spectrum Energy PDS (held)",
+        "newTech": false,
+        "profileSourceTl": 6,
+        "space": 2,
+        "baseChancePp": 10,
+        "reactionCapacity": 2,
+        "readinessTp": 4,
+        "ammo": null,
+        "rc1Tp": 2,
+        "rc2Tp": 4,
+        "safeReactionCapacity": 2,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "E155P08"
+      },
+      "9": {
+        "tl": 9,
+        "technology": "TL6 adaptive-spectrum Energy PDS (held)",
+        "newTech": false,
+        "profileSourceTl": 6,
+        "space": 2,
+        "baseChancePp": 10,
+        "reactionCapacity": 2,
+        "readinessTp": 3,
+        "ammo": null,
+        "rc1Tp": 2,
+        "rc2Tp": 3,
+        "safeReactionCapacity": 2,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "E155P08"
+      }
+    },
+    "missile_delivery": {
+      "1": {
+        "tl": 1,
+        "technology": "Command-guided missile flight",
+        "newTech": true,
+        "space": 6,
+        "range": 6,
+        "missileMove": 2,
+        "launchTp": 1,
+        "flights": 25,
+        "notes": "PF2 delivery profile: launch TP is profile-driven by TL (1/1/1/1/2/2/2/2/3), 25 Flights, and range is governed by flight endurance rather than direct-fire range penalties."
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Improved propulsion/endurance package",
+        "newTech": true,
+        "space": 6,
+        "range": 7,
+        "missileMove": 3,
+        "launchTp": 1,
+        "flights": 25,
+        "notes": "PF2 delivery profile: launch TP is profile-driven by TL (1/1/1/1/2/2/2/2/3), 25 Flights, and range is governed by flight endurance rather than direct-fire range penalties."
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Autonomous navigation-enabled missile",
+        "newTech": true,
+        "space": 6,
+        "range": 7,
+        "missileMove": 4,
+        "launchTp": 1,
+        "flights": 25,
+        "notes": "PF2 delivery profile: launch TP is profile-driven by TL (1/1/1/1/2/2/2/2/3), 25 Flights, and range is governed by flight endurance rather than direct-fire range penalties."
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Terminal maneuver / multi-stage propulsion",
+        "newTech": true,
+        "space": 6,
+        "range": 8,
+        "missileMove": 5,
+        "launchTp": 1,
+        "flights": 25,
+        "notes": "PF2 delivery profile: launch TP is profile-driven by TL (1/1/1/1/2/2/2/2/3), 25 Flights, and range is governed by flight endurance rather than direct-fire range penalties."
+      },
+      "5": {
+        "tl": 5,
+        "technology": "TL4 range/Space delivery architecture with TL5 drive-cadence movement",
+        "newTech": false,
+        "space": 6,
+        "range": 9,
+        "missileMove": 6,
+        "launchTp": 2,
+        "flights": 25,
+        "notes": "PF2 delivery profile: launch TP is profile-driven by TL (1/1/1/1/2/2/2/2/3), 25 Flights, and range is governed by flight endurance rather than direct-fire range penalties."
+      },
+      "6": {
+        "tl": 6,
+        "technology": "High-energy fusion sprint missile",
+        "newTech": true,
+        "space": 6,
+        "range": 10,
+        "missileMove": 7,
+        "launchTp": 2,
+        "flights": 25,
+        "notes": "PF2 delivery profile: launch TP is profile-driven by TL (1/1/1/1/2/2/2/2/3), 25 Flights, and range is governed by flight endurance rather than direct-fire range penalties."
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Antimatter-catalyzed missile drive",
+        "newTech": true,
+        "space": 6,
+        "range": 10,
+        "missileMove": 8,
+        "launchTp": 2,
+        "flights": 25,
+        "hardPrereq": "Power TL5",
+        "notes": "PF2 delivery profile: launch TP is profile-driven by TL (1/1/1/1/2/2/2/2/3), 25 Flights, and range is governed by flight endurance rather than direct-fire range penalties."
+      },
+      "8": {
+        "tl": 8,
+        "technology": "TL7 range/Space delivery architecture; TL8 drive cadence and exotic-field seeker generation",
+        "newTech": true,
+        "space": 6,
+        "range": 11,
+        "missileMove": 9,
+        "launchTp": 2,
+        "flights": 25,
+        "notes": "PF2 delivery profile: launch TP is profile-driven by TL (1/1/1/1/2/2/2/2/3), 25 Flights, and range is governed by flight endurance rather than direct-fire range penalties."
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Integrated field-coupled strike vehicle",
+        "newTech": true,
+        "space": 6,
+        "range": 12,
+        "missileMove": 10,
+        "launchTp": 3,
+        "flights": 25,
+        "notes": "PF2 delivery profile: launch TP is profile-driven by TL (1/1/1/1/2/2/2/2/3), 25 Flights, and range is governed by flight endurance rather than direct-fire range penalties."
+      }
+    },
+    "amm_pds": {
+      "1": {
+        "tl": 1,
+        "technology": "Baseline local AMM point defense",
+        "newTech": true,
+        "space": 2,
+        "baseChancePp": 0,
+        "reactionCapacity": 1,
+        "readinessTp": 1,
+        "ammo": 25,
+        "interceptRange": 0,
+        "rc1Tp": 1,
+        "safeReactionCapacity": 1,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "A155P07"
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Improved local AMM guidance",
+        "newTech": true,
+        "space": 2,
+        "baseChancePp": 5,
+        "reactionCapacity": 1,
+        "readinessTp": 1,
+        "ammo": 25,
+        "interceptRange": 0,
+        "notes": "Extended-range AMM is a separate branch.",
+        "rc1Tp": 1,
+        "safeReactionCapacity": 1,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "A155P07"
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Mature AMM readiness",
+        "newTech": true,
+        "space": 2,
+        "baseChancePp": 5,
+        "reactionCapacity": 2,
+        "readinessTp": 2,
+        "ammo": 25,
+        "interceptRange": 0,
+        "notes": "Scalable 1 TP/RC1 or 2 TP/RC2 readiness.",
+        "rc1Tp": 1,
+        "rc2Tp": 2,
+        "safeReactionCapacity": 2,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "A155P07"
+      },
+      "4": {
+        "tl": 4,
+        "technology": "TL3 mature AMM readiness (held)",
+        "newTech": false,
+        "profileSourceTl": 3,
+        "space": 2,
+        "baseChancePp": 5,
+        "reactionCapacity": 2,
+        "readinessTp": 2,
+        "ammo": 25,
+        "interceptRange": 0,
+        "rc1Tp": 1,
+        "rc2Tp": 2,
+        "safeReactionCapacity": 2,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "A155P07"
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Cooperative AMM screen",
+        "newTech": true,
+        "space": 2,
+        "baseChancePp": 5,
+        "reactionCapacity": 2,
+        "readinessTp": 2,
+        "ammo": 25,
+        "interceptRange": 0,
+        "special": "capped cooperative allocation/validation; no simple rating stacking",
+        "rc1Tp": 1,
+        "rc2Tp": 2,
+        "safeReactionCapacity": 2,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "A155P07"
+      },
+      "6": {
+        "tl": 6,
+        "technology": "TL5 cooperative AMM screen (held)",
+        "newTech": false,
+        "profileSourceTl": 5,
+        "space": 2,
+        "baseChancePp": 5,
+        "reactionCapacity": 2,
+        "readinessTp": 2,
+        "ammo": 25,
+        "interceptRange": 0,
+        "rc1Tp": 1,
+        "rc2Tp": 2,
+        "safeReactionCapacity": 2,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": false,
+        "researchBaselineCandidate": "A155P07"
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Hit-to-kill / extreme-sprint AMM",
+        "newTech": true,
+        "space": 2,
+        "baseChancePp": 5,
+        "reactionCapacity": 3,
+        "readinessTp": 3,
+        "ammo": 25,
+        "interceptRange": 1,
+        "rc1Tp": 1,
+        "rc2Tp": 2,
+        "rc3Tp": 3,
+        "safeReactionCapacity": 3,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": true,
+        "researchBaselineCandidate": "A155P07"
+      },
+      "8": {
+        "tl": 8,
+        "technology": "TL7 extreme-sprint AMM (held)",
+        "newTech": false,
+        "profileSourceTl": 7,
+        "space": 2,
+        "baseChancePp": 5,
+        "reactionCapacity": 3,
+        "readinessTp": 3,
+        "ammo": 25,
+        "interceptRange": 1,
+        "rc1Tp": 1,
+        "rc2Tp": 2,
+        "rc3Tp": 3,
+        "safeReactionCapacity": 3,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": true,
+        "researchBaselineCandidate": "A155P07"
+      },
+      "9": {
+        "tl": 9,
+        "technology": "TL7 extreme-sprint AMM (held)",
+        "newTech": false,
+        "profileSourceTl": 7,
+        "space": 2,
+        "baseChancePp": 5,
+        "reactionCapacity": 3,
+        "readinessTp": 3,
+        "ammo": 25,
+        "interceptRange": 1,
+        "rc1Tp": 1,
+        "rc2Tp": 2,
+        "rc3Tp": 3,
+        "safeReactionCapacity": 3,
+        "extraReactionStrain": 0,
+        "strainLimit": 0,
+        "rangeOneAttempt": true,
+        "researchBaselineCandidate": "A155P07"
+      }
+    },
+    "damage_control": {
+      "1": {
+        "tl": 1,
+        "technology": "Expert crew, distributed spares and diagnostic access",
+        "newTech": true,
+        "capacity": 1,
+        "preparedRepairKits": 3,
+        "attemptTp": 1,
+        "degradedToOperationalChancePp": 70,
+        "disabledToDegradedChancePp": 50,
+        "hullRepairChancePp": 40,
+        "hullRestoredPerSuccessfulKit": 1,
+        "destroyedFieldRepairable": false,
+        "notes": "Optional robotics/fabricators/repair swarms remain separate choices; critical cadence remains deferred. CP135: prepared Repair Kit count follows 3/3/4/4/5/5/6/6/7 across TL1-TL9."
+      },
+      "2": {
+        "tl": 2,
+        "technology": "TL1 Damage Control baseline (held)",
+        "newTech": false,
+        "capacity": 1,
+        "preparedRepairKits": 3,
+        "attemptTp": 1,
+        "degradedToOperationalChancePp": 70,
+        "disabledToDegradedChancePp": 50,
+        "hullRepairChancePp": 40,
+        "hullRestoredPerSuccessfulKit": 1,
+        "destroyedFieldRepairable": false,
+        "notes": "Optional robotics/fabricators/repair swarms remain separate choices; critical cadence remains deferred. CP135: prepared Repair Kit count follows 3/3/4/4/5/5/6/6/7 across TL1-TL9."
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Predictive diagnostics and better service distribution",
+        "newTech": true,
+        "capacity": 1,
+        "preparedRepairKits": 4,
+        "attemptTp": 1,
+        "degradedToOperationalChancePp": 75,
+        "disabledToDegradedChancePp": 55,
+        "hullRepairChancePp": 45,
+        "hullRestoredPerSuccessfulKit": 1,
+        "destroyedFieldRepairable": false,
+        "notes": "Optional robotics/fabricators/repair swarms remain separate choices; critical cadence remains deferred. CP135: prepared Repair Kit count follows 3/3/4/4/5/5/6/6/7 across TL1-TL9."
+      },
+      "4": {
+        "tl": 4,
+        "technology": "TL3 predictive Damage Control baseline (held)",
+        "newTech": false,
+        "capacity": 1,
+        "preparedRepairKits": 4,
+        "attemptTp": 1,
+        "degradedToOperationalChancePp": 75,
+        "disabledToDegradedChancePp": 55,
+        "hullRepairChancePp": 45,
+        "hullRestoredPerSuccessfulKit": 1,
+        "destroyedFieldRepairable": false,
+        "notes": "Optional robotics/fabricators/repair swarms remain separate choices; critical cadence remains deferred. CP135: prepared Repair Kit count follows 3/3/4/4/5/5/6/6/7 across TL1-TL9."
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Expanded prepared repair stores",
+        "newTech": false,
+        "capacity": 1,
+        "preparedRepairKits": 5,
+        "attemptTp": 1,
+        "degradedToOperationalChancePp": 75,
+        "disabledToDegradedChancePp": 55,
+        "hullRepairChancePp": 45,
+        "hullRestoredPerSuccessfulKit": 1,
+        "destroyedFieldRepairable": false,
+        "notes": "CP135: prepared Repair Kits rise to 5; TL3 predictive repair chances and 1-Hull success yield remain unchanged."
+      },
+      "6": {
+        "tl": 6,
+        "technology": "TL3 predictive Damage Control baseline (held)",
+        "newTech": false,
+        "capacity": 1,
+        "preparedRepairKits": 5,
+        "attemptTp": 1,
+        "degradedToOperationalChancePp": 75,
+        "disabledToDegradedChancePp": 55,
+        "hullRepairChancePp": 45,
+        "hullRestoredPerSuccessfulKit": 1,
+        "destroyedFieldRepairable": false,
+        "notes": "Optional robotics/fabricators/repair swarms remain separate choices; critical cadence remains deferred. CP135: prepared Repair Kit count follows 3/3/4/4/5/5/6/6/7 across TL1-TL9."
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Self-healing structural materials",
+        "newTech": true,
+        "capacity": 1,
+        "preparedRepairKits": 6,
+        "attemptTp": 1,
+        "degradedToOperationalChancePp": 80,
+        "disabledToDegradedChancePp": 60,
+        "hullRepairChancePp": 50,
+        "hullRestoredPerSuccessfulKit": 2,
+        "destroyedFieldRepairable": false,
+        "notes": "Optional robotics/fabricators/repair swarms remain separate choices; critical cadence remains deferred. CP135: prepared Repair Kit count follows 3/3/4/4/5/5/6/6/7 across TL1-TL9."
+      },
+      "8": {
+        "tl": 8,
+        "technology": "TL7 self-healing Damage Control baseline (held)",
+        "newTech": false,
+        "capacity": 1,
+        "preparedRepairKits": 6,
+        "attemptTp": 1,
+        "degradedToOperationalChancePp": 80,
+        "disabledToDegradedChancePp": 60,
+        "hullRepairChancePp": 50,
+        "hullRestoredPerSuccessfulKit": 2,
+        "destroyedFieldRepairable": false,
+        "notes": "Optional robotics/fabricators/repair swarms remain separate choices; critical cadence remains deferred. CP135: prepared Repair Kit count follows 3/3/4/4/5/5/6/6/7 across TL1-TL9."
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Autonomous reconstruction architecture",
+        "newTech": true,
+        "capacity": 1,
+        "preparedRepairKits": 7,
+        "attemptTp": 1,
+        "degradedToOperationalChancePp": 85,
+        "disabledToDegradedChancePp": 65,
+        "hullRepairChancePp": 55,
+        "hullRestoredPerSuccessfulKit": 3,
+        "destroyedFieldRepairable": false,
+        "notes": "Optional robotics/fabricators/repair swarms remain separate choices; critical cadence remains deferred. CP135: prepared Repair Kit count follows 3/3/4/4/5/5/6/6/7 across TL1-TL9."
+      }
+    },
+    "missile_guidance": {
+      "1": {
+        "tl": 1,
+        "technology": "Ship-command guidance / datalink",
+        "newTech": true,
+        "guidanceBaseHit": 70,
+        "commandDatalink": true,
+        "onboardNav": false,
+        "terminalSeeker": false,
+        "localApproxCanAcquire": false,
+        "notes": "Guidance/seeker performance is separate from delivery range/movement and warhead yield."
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Improved datalink/guidance processing",
+        "newTech": false,
+        "guidanceBaseHit": 70,
+        "commandDatalink": true,
+        "onboardNav": false,
+        "terminalSeeker": false,
+        "localApproxCanAcquire": false,
+        "notes": "Guidance/seeker performance is separate from delivery range/movement and warhead yield."
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Onboard navigation and local reacquisition",
+        "newTech": true,
+        "guidanceBaseHit": 75,
+        "commandDatalink": true,
+        "onboardNav": true,
+        "terminalSeeker": false,
+        "localApproxCanAcquire": false,
+        "notes": "Guidance/seeker performance is separate from delivery range/movement and warhead yield."
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Multi-mode terminal seeker",
+        "newTech": true,
+        "guidanceBaseHit": 75,
+        "commandDatalink": true,
+        "onboardNav": true,
+        "terminalSeeker": true,
+        "localApproxCanAcquire": true,
+        "notes": "Guidance/seeker performance is separate from delivery range/movement and warhead yield."
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Cooperative seeker network",
+        "newTech": true,
+        "guidanceBaseHit": 80,
+        "commandDatalink": true,
+        "onboardNav": true,
+        "terminalSeeker": true,
+        "localApproxCanAcquire": true,
+        "notes": "Guidance/seeker performance is separate from delivery range/movement and warhead yield."
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Adaptive anti-jam seeker",
+        "newTech": true,
+        "guidanceBaseHit": 85,
+        "commandDatalink": true,
+        "onboardNav": true,
+        "terminalSeeker": true,
+        "localApproxCanAcquire": true,
+        "notes": "Guidance/seeker performance is separate from delivery range/movement and warhead yield."
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Anti-emitter seeker mode",
+        "newTech": true,
+        "guidanceBaseHit": 85,
+        "commandDatalink": true,
+        "onboardNav": true,
+        "terminalSeeker": true,
+        "localApproxCanAcquire": true,
+        "notes": "Guidance/seeker performance is separate from delivery range/movement and warhead yield."
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Exotic-field seeker",
+        "newTech": true,
+        "guidanceBaseHit": 90,
+        "commandDatalink": true,
+        "onboardNav": true,
+        "terminalSeeker": true,
+        "localApproxCanAcquire": true,
+        "notes": "Guidance/seeker performance is separate from delivery range/movement and warhead yield."
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Pinnacle provenance-aware seeker suite",
+        "newTech": true,
+        "guidanceBaseHit": 95,
+        "commandDatalink": true,
+        "onboardNav": true,
+        "terminalSeeker": true,
+        "localApproxCanAcquire": true,
+        "notes": "Guidance/seeker performance is separate from delivery range/movement and warhead yield."
+      }
+    },
+    "missile_gp_warhead": {
+      "1": {
+        "tl": 1,
+        "technology": "Conventional / fission-era general-purpose warhead",
+        "newTech": true,
+        "damage": 12,
+        "spen": 0,
+        "apen": 0,
+        "usesGenericMissileFlightMagazine": true,
+        "automaticContemporaryGpPayload": true,
+        "notes": "CP133 candidate GP warhead: concentrated terminal DAM, little intrinsic penetration; payload branches remain separate.",
+        "researchBaselineCandidate": "M2"
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Conventional / fission-era general-purpose warhead",
+        "newTech": false,
+        "damage": 13,
+        "spen": 0,
+        "apen": 0,
+        "usesGenericMissileFlightMagazine": true,
+        "automaticContemporaryGpPayload": true,
+        "notes": "CP133 candidate GP warhead: concentrated terminal DAM, little intrinsic penetration; payload branches remain separate.",
+        "researchBaselineCandidate": "M2"
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Mature fission general-purpose payload integration",
+        "newTech": true,
+        "damage": 15,
+        "spen": 0,
+        "apen": 0,
+        "usesGenericMissileFlightMagazine": true,
+        "automaticContemporaryGpPayload": true,
+        "notes": "CP133 candidate GP warhead: concentrated terminal DAM, little intrinsic penetration; payload branches remain separate.",
+        "researchBaselineCandidate": "M2"
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Mature fission general-purpose payload integration",
+        "newTech": false,
+        "damage": 17,
+        "spen": 0,
+        "apen": 0,
+        "usesGenericMissileFlightMagazine": true,
+        "automaticContemporaryGpPayload": true,
+        "notes": "CP133 candidate GP warhead: concentrated terminal DAM, little intrinsic penetration; payload branches remain separate.",
+        "researchBaselineCandidate": "M2"
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Fusion microcharge general-purpose warhead",
+        "newTech": true,
+        "damage": 19,
+        "spen": 0,
+        "apen": 0,
+        "usesGenericMissileFlightMagazine": true,
+        "automaticContemporaryGpPayload": true,
+        "notes": "CP133 candidate GP warhead: concentrated terminal DAM, little intrinsic penetration; payload branches remain separate.",
+        "hardPrereq": "Power TL2",
+        "researchBaselineCandidate": "M2"
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Fusion microcharge general-purpose warhead",
+        "newTech": false,
+        "damage": 21,
+        "spen": 0,
+        "apen": 0,
+        "usesGenericMissileFlightMagazine": true,
+        "automaticContemporaryGpPayload": true,
+        "notes": "CP133 candidate GP warhead: concentrated terminal DAM, little intrinsic penetration; payload branches remain separate.",
+        "hardPrereq": "Power TL2",
+        "researchBaselineCandidate": "M2"
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Antimatter general-purpose warhead",
+        "newTech": true,
+        "damage": 23,
+        "spen": 0,
+        "apen": 0,
+        "usesGenericMissileFlightMagazine": true,
+        "automaticContemporaryGpPayload": true,
+        "notes": "CP133 candidate GP warhead: concentrated terminal DAM, little intrinsic penetration; payload branches remain separate.",
+        "hardPrereq": "Power TL5",
+        "researchBaselineCandidate": "M2"
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Antimatter general-purpose warhead",
+        "newTech": false,
+        "damage": 25,
+        "spen": 0,
+        "apen": 0,
+        "usesGenericMissileFlightMagazine": true,
+        "automaticContemporaryGpPayload": true,
+        "notes": "CP133 candidate GP warhead: concentrated terminal DAM, little intrinsic penetration; payload branches remain separate.",
+        "hardPrereq": "Power TL5",
+        "researchBaselineCandidate": "M2"
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Antimatter general-purpose warhead",
+        "newTech": false,
+        "damage": 27,
+        "spen": 0,
+        "apen": 0,
+        "usesGenericMissileFlightMagazine": true,
+        "automaticContemporaryGpPayload": true,
+        "notes": "CP133 candidate GP warhead: concentrated terminal DAM, little intrinsic penetration; payload branches remain separate.",
+        "hardPrereq": "Power TL5",
+        "researchBaselineCandidate": "M2"
+      }
+    },
+    "missile_swarmer": {
+      "1": {
+        "tl": 1,
+        "technology": "Unavailable",
+        "available": false
+      },
+      "2": {
+        "tl": 2,
+        "technology": "Early cluster/submunition Flight",
+        "available": true,
+        "packetCount": 1,
+        "packetDamage": 7,
+        "spen": 0,
+        "apen": 0,
+        "terminalGuidanceBonusPp": 0,
+        "pdsInterceptPenaltyPp": 0,
+        "oneFlightCounter": true,
+        "oneTerminalAttackRoll": false,
+        "usesGenericMissileFlightMagazine": true,
+        "firmTerminalRequired": true,
+        "extraPdsWindows": 0,
+        "extraCriticalRolls": 0,
+        "notes": "CP133 candidate Swarmer: two independently resolved packets; lower per-packet DAM than GP in exchange for terminal-guidance/PDS-saturation advantages. SPEN is applied independently to each packet.",
+        "subFlightCount": 2,
+        "independentSubFlightGuidance": true,
+        "pdsVisibleSubFlights": 2,
+        "sharedPdsReactionCapacity": true,
+        "researchBaselineCandidate": "SW2"
+      },
+      "3": {
+        "tl": 3,
+        "technology": "Coordinated submunition bus",
+        "available": true,
+        "packetCount": 1,
+        "packetDamage": 7,
+        "spen": 0,
+        "apen": 0,
+        "terminalGuidanceBonusPp": 0,
+        "pdsInterceptPenaltyPp": 0,
+        "oneFlightCounter": true,
+        "oneTerminalAttackRoll": false,
+        "usesGenericMissileFlightMagazine": true,
+        "firmTerminalRequired": true,
+        "extraPdsWindows": 0,
+        "extraCriticalRolls": 0,
+        "notes": "CP133 candidate Swarmer: two independently resolved packets; lower per-packet DAM than GP in exchange for terminal-guidance/PDS-saturation advantages. SPEN is applied independently to each packet.",
+        "subFlightCount": 2,
+        "independentSubFlightGuidance": true,
+        "pdsVisibleSubFlights": 2,
+        "sharedPdsReactionCapacity": true,
+        "researchBaselineCandidate": "SW2"
+      },
+      "4": {
+        "tl": 4,
+        "technology": "Coordinated submunition bus",
+        "available": true,
+        "packetCount": 1,
+        "packetDamage": 8,
+        "spen": 0,
+        "apen": 0,
+        "terminalGuidanceBonusPp": 0,
+        "pdsInterceptPenaltyPp": 0,
+        "oneFlightCounter": true,
+        "oneTerminalAttackRoll": false,
+        "usesGenericMissileFlightMagazine": true,
+        "firmTerminalRequired": true,
+        "extraPdsWindows": 0,
+        "extraCriticalRolls": 0,
+        "notes": "CP133 candidate Swarmer: two independently resolved packets; lower per-packet DAM than GP in exchange for terminal-guidance/PDS-saturation advantages. SPEN is applied independently to each packet.",
+        "subFlightCount": 2,
+        "independentSubFlightGuidance": true,
+        "pdsVisibleSubFlights": 2,
+        "sharedPdsReactionCapacity": true,
+        "researchBaselineCandidate": "SW2"
+      },
+      "5": {
+        "tl": 5,
+        "technology": "Cooperative Swarmer Flight",
+        "available": true,
+        "packetCount": 1,
+        "packetDamage": 9,
+        "spen": 0,
+        "apen": 0,
+        "terminalGuidanceBonusPp": 0,
+        "pdsInterceptPenaltyPp": 0,
+        "oneFlightCounter": true,
+        "oneTerminalAttackRoll": false,
+        "usesGenericMissileFlightMagazine": true,
+        "firmTerminalRequired": true,
+        "extraPdsWindows": 0,
+        "extraCriticalRolls": 0,
+        "notes": "CP133 candidate Swarmer: two independently resolved packets; lower per-packet DAM than GP in exchange for terminal-guidance/PDS-saturation advantages. SPEN is applied independently to each packet.",
+        "subFlightCount": 2,
+        "independentSubFlightGuidance": true,
+        "pdsVisibleSubFlights": 2,
+        "sharedPdsReactionCapacity": true,
+        "researchBaselineCandidate": "SW2"
+      },
+      "6": {
+        "tl": 6,
+        "technology": "Cooperative Swarmer Flight",
+        "available": true,
+        "packetCount": 1,
+        "packetDamage": 9,
+        "spen": 0,
+        "apen": 0,
+        "terminalGuidanceBonusPp": 0,
+        "pdsInterceptPenaltyPp": 0,
+        "oneFlightCounter": true,
+        "oneTerminalAttackRoll": false,
+        "usesGenericMissileFlightMagazine": true,
+        "firmTerminalRequired": true,
+        "extraPdsWindows": 0,
+        "extraCriticalRolls": 0,
+        "notes": "CP133 candidate Swarmer: two independently resolved packets; lower per-packet DAM than GP in exchange for terminal-guidance/PDS-saturation advantages. SPEN is applied independently to each packet.",
+        "subFlightCount": 2,
+        "independentSubFlightGuidance": true,
+        "pdsVisibleSubFlights": 2,
+        "sharedPdsReactionCapacity": true,
+        "researchBaselineCandidate": "SW2"
+      },
+      "7": {
+        "tl": 7,
+        "technology": "Autonomous distributed Swarmer",
+        "available": true,
+        "packetCount": 1,
+        "packetDamage": 10,
+        "spen": 0,
+        "apen": 0,
+        "terminalGuidanceBonusPp": 0,
+        "pdsInterceptPenaltyPp": 0,
+        "oneFlightCounter": true,
+        "oneTerminalAttackRoll": false,
+        "usesGenericMissileFlightMagazine": true,
+        "firmTerminalRequired": true,
+        "extraPdsWindows": 0,
+        "extraCriticalRolls": 0,
+        "notes": "CP133 candidate Swarmer: two independently resolved packets; lower per-packet DAM than GP in exchange for terminal-guidance/PDS-saturation advantages. SPEN is applied independently to each packet.",
+        "subFlightCount": 2,
+        "independentSubFlightGuidance": true,
+        "pdsVisibleSubFlights": 2,
+        "sharedPdsReactionCapacity": true,
+        "researchBaselineCandidate": "SW2"
+      },
+      "8": {
+        "tl": 8,
+        "technology": "Autonomous distributed Swarmer",
+        "available": true,
+        "packetCount": 1,
+        "packetDamage": 11,
+        "spen": 0,
+        "apen": 0,
+        "terminalGuidanceBonusPp": 0,
+        "pdsInterceptPenaltyPp": 0,
+        "oneFlightCounter": true,
+        "oneTerminalAttackRoll": false,
+        "usesGenericMissileFlightMagazine": true,
+        "firmTerminalRequired": true,
+        "extraPdsWindows": 0,
+        "extraCriticalRolls": 0,
+        "notes": "CP133 candidate Swarmer: two independently resolved packets; lower per-packet DAM than GP in exchange for terminal-guidance/PDS-saturation advantages. SPEN is applied independently to each packet.",
+        "subFlightCount": 2,
+        "independentSubFlightGuidance": true,
+        "pdsVisibleSubFlights": 2,
+        "sharedPdsReactionCapacity": true,
+        "researchBaselineCandidate": "SW2"
+      },
+      "9": {
+        "tl": 9,
+        "technology": "Autonomous distributed Swarmer",
+        "available": true,
+        "packetCount": 1,
+        "packetDamage": 12,
+        "spen": 0,
+        "apen": 0,
+        "terminalGuidanceBonusPp": 0,
+        "pdsInterceptPenaltyPp": 0,
+        "oneFlightCounter": true,
+        "oneTerminalAttackRoll": false,
+        "usesGenericMissileFlightMagazine": true,
+        "firmTerminalRequired": true,
+        "extraPdsWindows": 0,
+        "extraCriticalRolls": 0,
+        "notes": "CP133 candidate Swarmer: two independently resolved packets; lower per-packet DAM than GP in exchange for terminal-guidance/PDS-saturation advantages. SPEN is applied independently to each packet.",
+        "subFlightCount": 2,
+        "independentSubFlightGuidance": true,
+        "pdsVisibleSubFlights": 2,
+        "sharedPdsReactionCapacity": true,
+        "researchBaselineCandidate": "SW2"
+      }
+    }
+  },
+  "branches": [
+    {
+      "id": "ablative-armor",
+      "owner": "Armor",
+      "tl": 1,
+      "technology": "Ablative outer layer",
+      "expression": "optional_component",
+      "space": 1,
+      "numeric": "AP0 / AI4 expendable outer layer",
+      "hardPrereq": "-",
+      "status": "candidate_seed_from_historical_screening",
+      "notes": "1 Space is architecture-locked; AP0/AI2 is the old screening leader revived only as an initial numerical seed. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "kinetic-smart-projectile",
+      "owner": "Projectile Weapons",
+      "tl": 4,
+      "technology": "Programmable smart projectile",
+      "expression": "payload_variant",
+      "space": "uses weapon",
+      "numeric": "+10 pp weapon accuracy; grants Approximate-Track Fire permission; attack still uses Tactical Computer penalty",
+      "hardPrereq": "Computing / Fire Control TL4",
+      "status": "new_candidate",
+      "notes": "Preserves weapon-specific permission vs computer-owned penalty."
+    },
+    {
+      "id": "kinetic-dense-penetrator",
+      "owner": "Projectile Weapons",
+      "tl": 5,
+      "technology": "Dense/graded penetrator package",
+      "expression": "payload_variant",
+      "space": "uses weapon",
+      "numeric": "DAM -2; APEN +2 relative to current standard Kinetic package",
+      "hardPrereq": "-",
+      "status": "new_candidate",
+      "notes": "Explicit tradeoff instead of free universal APEN growth. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "kinetic-submunition",
+      "owner": "Projectile Weapons",
+      "tl": 6,
+      "technology": "Micro-submunition/saturation package",
+      "expression": "payload_variant",
+      "space": "uses weapon",
+      "numeric": "candidate 2 x DAM6 packets; standard SPEN/APEN per packet",
+      "hardPrereq": "-",
+      "status": "mechanic_candidate_needs_calibration",
+      "notes": "Designed as saturation/packet-shape branch, not raw single-packet damage growth. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "kinetic-helical",
+      "owner": "Projectile Weapons",
+      "tl": 5,
+      "technology": "Helical / continuous-induction cannon branch",
+      "expression": "installed_component",
+      "space": 5,
+      "numeric": "DAM8 / R4 / Acc25 / SPEN2 / APEN2 / 0 TP; candidate high-rate/efficiency identity",
+      "hardPrereq": "-",
+      "status": "new_candidate",
+      "notes": "Branch remains distinct from standard superconducting accelerator. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "kinetic-macron",
+      "owner": "Projectile Weapons",
+      "tl": 7,
+      "technology": "Macron/dust accelerator branch",
+      "expression": "installed_component",
+      "space": 5,
+      "numeric": "candidate saturation weapon; 2 x DAM6 packets / R5 / Acc20 / SPEN2 / APEN2 / 2 TP",
+      "hardPrereq": "-",
+      "status": "mechanic_candidate_needs_calibration",
+      "notes": "Preserves macron as packet/saturation branch rather than default Kinetic main. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "armor-powered-reactive",
+      "owner": "Armor",
+      "tl": 5,
+      "technology": "Powered reactive armor",
+      "expression": "optional_component",
+      "space": 1,
+      "numeric": "1 TP sustained; candidate +2 Protection against first eligible physical packet each turn",
+      "hardPrereq": "Power TL4",
+      "status": "new_candidate",
+      "notes": "Does not change passive primary Armor when unpowered/absent. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "armor-adaptive-reactive",
+      "owner": "Armor",
+      "tl": 7,
+      "technology": "Adaptive reactive armor architecture",
+      "expression": "optional_component",
+      "space": 1,
+      "numeric": "1 TP sustained; candidate +2 Protection against up to 2 eligible physical packets each turn",
+      "hardPrereq": "Computing / Fire Control TL5",
+      "status": "new_candidate",
+      "notes": "Matures response selectivity rather than passive AP. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "armor-field-assisted",
+      "owner": "Armor",
+      "tl": 8,
+      "technology": "Field-assisted armor reinforcement",
+      "expression": "optional_component",
+      "space": 2,
+      "numeric": "2 TP sustained; candidate reduce post-penetration DAM by 2 (minimum 2) for eligible packets",
+      "hardPrereq": "Shields TL7",
+      "status": "mechanic_candidate_needs_calibration",
+      "notes": "Bounded field layer; never grants immunity. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "shield-hardener",
+      "owner": "Shields",
+      "tl": 3,
+      "technology": "Shield Hardener",
+      "expression": "optional_component",
+      "space": 1,
+      "numeric": "1 TP sustained -> Shield Armor 2; nonstacking",
+      "hardPrereq": "-",
+      "status": "retained_tl3_seed",
+      "notes": "Existing executable candidate carried forward. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "shield-particle-screen",
+      "owner": "Shields",
+      "tl": 5,
+      "technology": "Particle/charged-beam screen",
+      "expression": "optional_component",
+      "space": 1,
+      "numeric": "1 TP sustained; candidate Shield Armor +2 only vs particle/charged-beam-tagged attacks",
+      "hardPrereq": "Energy Weapons TL5",
+      "status": "new_candidate",
+      "notes": "Specialist counter, not universal shield scalar. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "shield-field-stabilizer",
+      "owner": "Shields",
+      "tl": 7,
+      "technology": "Field stabilizer / anti-penetration tuner",
+      "expression": "optional_component",
+      "space": 1,
+      "numeric": "1 TP sustained; candidate reduce incoming SPEN by 2 (minimum 0) before Shield Armor check",
+      "hardPrereq": "Computing / Fire Control TL6",
+      "status": "mechanic_candidate_needs_calibration",
+      "notes": "Specialist anti-penetration support. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "energy-fel",
+      "owner": "Energy Weapons",
+      "tl": 5,
+      "technology": "Tunable-spectrum / free-electron beam branch",
+      "expression": "installed_component",
+      "space": 6,
+      "numeric": "R7 / Acc30 / Standard 3 TP DAM8; choose SPEN4/APEN2 or SPEN2/APEN4 before firing",
+      "hardPrereq": "-",
+      "status": "new_candidate",
+      "notes": "Tunable interaction is the branch identity. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "energy-ion",
+      "owner": "Energy Weapons",
+      "tl": 5,
+      "technology": "Ion/charged-particle cannon",
+      "expression": "installed_component",
+      "space": 6,
+      "numeric": "R5 / Acc25 / 3 TP / DAM8 / SPEN4 / APEN2",
+      "hardPrereq": "Power TL4",
+      "status": "new_candidate",
+      "notes": "High-power shield/subsystem-oriented branch. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "energy-neutral-particle",
+      "owner": "Energy Weapons",
+      "tl": 6,
+      "technology": "Neutralized particle beam",
+      "expression": "installed_component",
+      "space": 6,
+      "numeric": "R6 / Acc25 / 3 TP / DAM10 / SPEN2 / APEN4",
+      "hardPrereq": "-",
+      "status": "new_candidate",
+      "notes": "Mature particle delivery with better armor interaction. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "energy-plasma",
+      "owner": "Energy Weapons",
+      "tl": 6,
+      "technology": "Plasma cannon",
+      "expression": "installed_component",
+      "space": 6,
+      "numeric": "R3 / Acc20 / 3 TP / DAM12 / SPEN2 / APEN4",
+      "hardPrereq": "Power TL4",
+      "status": "new_candidate",
+      "notes": "Short-range high-deposition specialist. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "energy-extreme-frequency",
+      "owner": "Energy Weapons",
+      "tl": 7,
+      "technology": "Extreme-frequency beam branch",
+      "expression": "installed_component",
+      "space": 5,
+      "numeric": "R9 / Acc30 / 4 TP / DAM12 / SPEN4 / APEN4",
+      "hardPrereq": "-",
+      "status": "new_candidate",
+      "notes": "Branch extends range/penetration at high power rather than replacing standard beam. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "missile-extended-amm",
+      "owner": "Missile Weapons",
+      "tl": 2,
+      "technology": "Extended-range AMM layer",
+      "expression": "installed_component",
+      "space": 2,
+      "numeric": "intercept range 1; Base Chance 15; RC1; 2 TP; 20 interceptors",
+      "hardPrereq": "-",
+      "status": "new_candidate",
+      "notes": "Distinct from local AMM; lower efficiency pays for stand-off interception."
+    },
+    {
+      "id": "missile-shaped-warhead",
+      "owner": "Missile Weapons",
+      "tl": 3,
+      "technology": "Shaped/advanced penetrator warhead",
+      "expression": "payload_variant",
+      "space": "uses launcher",
+      "numeric": "DAM10 / SPEN2 / APEN6",
+      "hardPrereq": "-",
+      "status": "new_candidate",
+      "notes": "Native Missile penetration specialization. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "missile-nuclear-shaped",
+      "owner": "Missile Weapons",
+      "tl": 4,
+      "technology": "Nuclear shaped-charge / directed-energy warhead",
+      "expression": "payload_variant",
+      "space": "uses launcher",
+      "numeric": "DAM14 / SPEN4 / APEN6",
+      "hardPrereq": "-",
+      "status": "new_candidate",
+      "notes": "Large native payload step; exact strategic/crew consequences remain separate. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "missile-swarm-bus",
+      "owner": "Missile Weapons",
+      "tl": 5,
+      "technology": "Cooperative swarm/bus architecture",
+      "expression": "installed_component_mode",
+      "space": "launcher unchanged",
+      "numeric": "candidate launch up to 2 Missile Flights in one launch action; each consumes 1 flight and resolves/intercepts independently",
+      "hardPrereq": "-",
+      "status": "mechanic_candidate_needs_calibration",
+      "notes": "Creates salvo behavior without increasing warhead stats."
+    },
+    {
+      "id": "missile-fusion-warhead",
+      "owner": "Missile Weapons",
+      "tl": 5,
+      "technology": "Fusion microcharge warhead",
+      "expression": "payload_variant",
+      "space": "uses launcher",
+      "numeric": "DAM16 / SPEN4 / APEN6",
+      "hardPrereq": "Power TL2",
+      "status": "new_candidate",
+      "notes": "Automatically unlocks when Missile5 and practical Fusion are both known. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "missile-antimatter-warhead",
+      "owner": "Missile Weapons",
+      "tl": 7,
+      "technology": "Antimatter-catalyzed / antimatter warhead",
+      "expression": "payload_variant",
+      "space": "uses launcher",
+      "numeric": "DAM20 / SPEN6 / APEN8",
+      "hardPrereq": "Power TL5",
+      "status": "new_candidate",
+      "notes": "Pinnacle conventional-player payload branch; very strong but finite, track-dependent and interceptable. Point-domain magnitudes shown here use the canonical CP122 x2 scale."
+    },
+    {
+      "id": "missile-field-terminal",
+      "owner": "Missile Weapons",
+      "tl": 8,
+      "technology": "Field-assisted terminal maneuver package",
+      "expression": "installed_component_mode",
+      "space": "launcher unchanged",
+      "numeric": "candidate +2 terminal Move only in final approach; no range extension; remains PDS-interceptable",
+      "hardPrereq": "Propulsion TL8",
+      "status": "mechanic_candidate_needs_calibration",
+      "notes": "Bounded field application, not tactical micro-jump."
+    },
+    {
+      "id": "power-fission-revival-tl5",
+      "owner": "Power",
+      "tl": 5,
+      "technology": "Direct-conversion / advanced-containment fission specialist",
+      "expression": "installed_component",
+      "space": 5,
+      "numeric": "6 Operational / 5 Degraded / 2 Emergency TP",
+      "hardPrereq": "-",
+      "status": "new_candidate",
+      "notes": "Legacy niche: low frontier output, excellent resilience and straightforward integration."
+    },
+    {
+      "id": "power-fission-revival-tl7",
+      "owner": "Power",
+      "tl": 7,
+      "technology": "Pinnacle fission expedition/auxiliary reactor",
+      "expression": "installed_component",
+      "space": 4,
+      "numeric": "7 Operational / 6 Degraded / 2 Emergency TP",
+      "hardPrereq": "-",
+      "status": "new_candidate",
+      "notes": "Late expedition niche; mature old family remains relevant without competing on peak output."
+    },
+    {
+      "id": "power-supercapacitor",
+      "owner": "Power",
+      "tl": 2,
+      "technology": "Supercapacitor bank",
+      "expression": "optional_component",
+      "space": 1,
+      "numeric": "candidate 3 stored TP; discharge up to 2 TP/turn; recharge from Available TP",
+      "hardPrereq": "-",
+      "status": "new_candidate",
+      "notes": "Storage does not increase sustained generation."
+    },
+    {
+      "id": "power-smes",
+      "owner": "Power",
+      "tl": 4,
+      "technology": "Superconducting magnetic storage",
+      "expression": "optional_component",
+      "space": 1,
+      "numeric": "candidate 5 stored TP; discharge up to 3 TP/turn",
+      "hardPrereq": "-",
+      "status": "new_candidate",
+      "notes": "Higher burst/shift capacity."
+    },
+    {
+      "id": "power-ultracap",
+      "owner": "Power",
+      "tl": 6,
+      "technology": "Molecular dielectric ultracapacitor",
+      "expression": "optional_component",
+      "space": 1,
+      "numeric": "candidate 7 stored TP; discharge up to 4 TP/turn",
+      "hardPrereq": "-",
+      "status": "new_candidate",
+      "notes": "Late storage maturity without replacing reactors."
+    },
+    {
+      "id": "hull-repair-robotics",
+      "owner": "Hull",
+      "tl": 4,
+      "technology": "Remote repair robotics",
+      "expression": "optional_component",
+      "space": 1,
+      "numeric": "candidate +10 pp to one Damage Control attempt/turn; no extra repair step",
+      "hardPrereq": "Computing / Fire Control TL3",
+      "status": "mechanic_candidate_needs_calibration",
+      "notes": "Augments current Damage Control abstraction."
+    },
+    {
+      "id": "hull-repair-swarm",
+      "owner": "Hull",
+      "tl": 6,
+      "technology": "Autonomous repair swarm",
+      "expression": "optional_component",
+      "space": 1,
+      "numeric": "candidate +10 pp and may assist up to 2 allocated Damage Control attempts/turn; no free repair",
+      "hardPrereq": "Computing / Fire Control TL5",
+      "status": "mechanic_candidate_needs_calibration",
+      "notes": "Bounded multi-fault assistance."
+    }
+  ],
+  "hardPrerequisites": [
+    {
+      "id": "gate-stl-tl3-fusion",
+      "owner": "Propulsion",
+      "lineage": "stl",
+      "ownerTl": 3,
+      "technology": "Fusion-assisted torch / mature high-energy STL",
+      "requires": [
+        {
+          "discipline": "Power",
+          "tl": 2
+        }
+      ],
+      "kind": "standard_sparse_gate",
+      "rationale": "The propulsion concept explicitly relies on practical Fusion; Propulsion still gains its TL3 FTL/navigation advance even if the STL item remains latent."
+    },
+    {
+      "id": "gate-stl-tl5-antimatter",
+      "owner": "Propulsion",
+      "lineage": "stl",
+      "ownerTl": 5,
+      "technology": "Antimatter-catalyzed fusion drive",
+      "requires": [
+        {
+          "discipline": "Power",
+          "tl": 5
+        }
+      ],
+      "kind": "standard_sparse_gate",
+      "rationale": "Antimatter catalysis requires practical antimatter production/containment; the Propulsion TL5 FTL advance remains ungated."
+    },
+    {
+      "id": "gate-stl-tl6-antimatter",
+      "owner": "Propulsion",
+      "lineage": "stl",
+      "ownerTl": 6,
+      "technology": "Antimatter plasma drive",
+      "requires": [
+        {
+          "discipline": "Power",
+          "tl": 5
+        }
+      ],
+      "kind": "standard_sparse_gate",
+      "rationale": "Uses the same antimatter enabling science while maturing the propulsion application."
+    },
+    {
+      "id": "gate-kinetic-smart-projectile",
+      "owner": "Projectile Weapons",
+      "lineage": "kinetic-ammunition",
+      "ownerTl": 4,
+      "technology": "Programmable smart projectile",
+      "requires": [
+        {
+          "discipline": "Computing / Fire Control",
+          "tl": 4
+        }
+      ],
+      "kind": "branch_gate",
+      "rationale": "Onboard correction, course prediction and bounded Approximate-track fire require contemporary photonic/optical guidance computation."
+    },
+    {
+      "id": "gate-armor-reactive",
+      "owner": "Armor",
+      "lineage": "armor-enhancements",
+      "ownerTl": 5,
+      "technology": "Powered reactive armor",
+      "requires": [
+        {
+          "discipline": "Power",
+          "tl": 4
+        }
+      ],
+      "kind": "branch_gate",
+      "rationale": "The branch depends on compact high-rate pulsed power rather than passive material strength alone."
+    },
+    {
+      "id": "gate-armor-adaptive-reactive",
+      "owner": "Armor",
+      "lineage": "armor-enhancements",
+      "ownerTl": 7,
+      "technology": "Adaptive reactive armor architecture",
+      "requires": [
+        {
+          "discipline": "Computing / Fire Control",
+          "tl": 5
+        }
+      ],
+      "kind": "branch_gate",
+      "rationale": "Adaptive threat classification/control is the enabling cross-pollination; the earlier powered branch already carries its power burden."
+    },
+    {
+      "id": "gate-armor-field",
+      "owner": "Armor",
+      "lineage": "armor-enhancements",
+      "ownerTl": 8,
+      "technology": "Field-assisted armor reinforcement",
+      "requires": [
+        {
+          "discipline": "Shields",
+          "tl": 7
+        }
+      ],
+      "kind": "branch_gate",
+      "rationale": "This branch explicitly reuses mature defensive-field control rather than making passive Armor itself field-dependent."
+    },
+    {
+      "id": "gate-energy-ion",
+      "owner": "Energy Weapons",
+      "lineage": "particle-ion",
+      "ownerTl": 5,
+      "technology": "Ion/charged-particle cannon",
+      "requires": [
+        {
+          "discipline": "Power",
+          "tl": 4
+        }
+      ],
+      "kind": "branch_gate",
+      "rationale": "A sustained charged-particle weapon needs the high-output power/conditioning frontier represented by mature high-output Fusion."
+    },
+    {
+      "id": "gate-shield-particle-screen",
+      "owner": "Shields",
+      "lineage": "shield-support",
+      "ownerTl": 5,
+      "technology": "Particle/charged-beam screen",
+      "requires": [
+        {
+          "discipline": "Energy Weapons",
+          "tl": 5
+        }
+      ],
+      "kind": "branch_gate",
+      "rationale": "The specialist screen depends on mature understanding of charged-particle beam behavior."
+    },
+    {
+      "id": "gate-shield-stabilizer",
+      "owner": "Shields",
+      "lineage": "shield-support",
+      "ownerTl": 7,
+      "technology": "Field stabilizer / anti-penetration tuner",
+      "requires": [
+        {
+          "discipline": "Computing / Fire Control",
+          "tl": 6
+        }
+      ],
+      "kind": "branch_gate",
+      "rationale": "Fast distributed field control is the enabling technology; the base TL7 Shield remains independently researchable."
+    },
+    {
+      "id": "gate-missile-fusion-warhead",
+      "owner": "Missile Weapons",
+      "lineage": "warheads",
+      "ownerTl": 5,
+      "technology": "Fusion microcharge warhead",
+      "requires": [
+        {
+          "discipline": "Power",
+          "tl": 2
+        }
+      ],
+      "kind": "branch_gate",
+      "rationale": "Practical controlled Fusion knowledge enables a compact fusion microcharge; unlock is automatic when both requirements exist."
+    },
+    {
+      "id": "gate-missile-antimatter-drive",
+      "owner": "Missile Weapons",
+      "lineage": "missile-delivery",
+      "ownerTl": 7,
+      "technology": "Antimatter-catalyzed missile drive",
+      "requires": [
+        {
+          "discipline": "Power",
+          "tl": 5
+        }
+      ],
+      "kind": "standard_sparse_gate",
+      "rationale": "The drive explicitly consumes antimatter technology; Missile TL7 still provides native anti-emitter seeker and AMM advances if this delivery upgrade remains latent."
+    },
+    {
+      "id": "gate-missile-antimatter-warhead",
+      "owner": "Missile Weapons",
+      "lineage": "warheads",
+      "ownerTl": 7,
+      "technology": "Antimatter-catalyzed / antimatter warhead",
+      "requires": [
+        {
+          "discipline": "Power",
+          "tl": 5
+        }
+      ],
+      "kind": "branch_gate",
+      "rationale": "Antimatter production/containment is a genuine enabling science, not a generic breadth bonus."
+    },
+    {
+      "id": "gate-missile-field-terminal",
+      "owner": "Missile Weapons",
+      "lineage": "missile-delivery",
+      "ownerTl": 8,
+      "technology": "Field-assisted terminal maneuver package",
+      "requires": [
+        {
+          "discipline": "Propulsion",
+          "tl": 8
+        }
+      ],
+      "kind": "branch_gate",
+      "rationale": "The optional branch adapts inertial/field propulsion science to terminal maneuvering; the TL8 exotic seeker remains native Missile progression."
+    },
+    {
+      "id": "gate-hull-repair-robotics",
+      "owner": "Hull",
+      "lineage": "damage-control",
+      "ownerTl": 4,
+      "technology": "Remote repair robotics",
+      "requires": [
+        {
+          "discipline": "Computing / Fire Control",
+          "tl": 3
+        }
+      ],
+      "kind": "branch_gate",
+      "rationale": "Autonomous inspection/manipulation requires the mature automation foundation but does not gate core Hull progression."
+    },
+    {
+      "id": "gate-hull-repair-swarm",
+      "owner": "Hull",
+      "lineage": "damage-control",
+      "ownerTl": 6,
+      "technology": "Autonomous repair swarm",
+      "requires": [
+        {
+          "discipline": "Computing / Fire Control",
+          "tl": 5
+        }
+      ],
+      "kind": "branch_gate",
+      "rationale": "Distributed autonomous agents are the causal enabling technology; the Hull TL6 structural lattice remains independent."
+    }
+  ],
+  "lowerTlReconciliation": [
+    {
+      "area": "Power TL2",
+      "prior": "Early Practical Fusion = 6 Operational TP / 6 Space; other condition values held/deferred",
+      "candidate": "7 Operational / 3 Degraded / 0 Emergency TP / 6 Space",
+      "reason": "The Storyboard makes practical Fusion a new reactor principle that must move the achievable frontier; 6 vs 5 was too close to the old incremental ladder. Fragile damaged behavior preserves Peak Fission relevance."
+    },
+    {
+      "area": "Power TL3",
+      "prior": "Mature Compact Fusion = 6 Operational / 3 Degraded / 1 Emergency TP / 5 Space",
+      "candidate": "7 Operational / 4 Degraded / 1 Emergency TP / 5 Space",
+      "reason": "Maturation should consolidate the TL2 frontier rather than erase it: same peak output, better compactness and resilience."
+    },
+    {
+      "area": "Kinetic PDS TL2",
+      "prior": "Historical TL2 PDS characteristic = Base Chance 13 / Ammo 60",
+      "candidate": "No independent TL2 Kinetic-PDS upgrade; hold TL1 Base Chance 10 / Ammo 50, while TL2 Tactical Computer still improves ship targeting",
+      "reason": "CP108 Storyboard deliberately has no TL2 Kinetic-PDS beat. The prior small PDS bump was an artifact of the old every-TL refinement model. TL3 becomes the first local PDS maturation."
+    },
+    {
+      "area": "Energy Main TL2",
+      "prior": "No durable family-specific TL2 numerical profile",
+      "candidate": "Range 6 / Accuracy +30 pp; TL1 damage/power packet retained",
+      "reason": "The Storyboard explicitly assigns improved optics/pulse conditioning at TL2; range/solution quality is a more faithful expression than generic damage inflation."
+    },
+    {
+      "area": "Missile Delivery TL2",
+      "prior": "No durable whole-ladder numeric profile beyond lower-TL fixtures",
+      "candidate": "Missile Move 3 / Range 8; warhead and hit chance held",
+      "reason": "The Storyboard explicitly assigns improved propulsion/endurance; delivery improves without silently changing guidance or payload."
+    },
+    {
+      "area": "Sensor TL1 range authority",
+      "prior": "Early TL1 baseline CSV still contains passive 3/5 and active 5/7-style values",
+      "candidate": "Passive 1/3; normal Active 3/4; overload 4/5",
+      "reason": "Uses the later Balanced-0 Sensor/EW architecture that underlies accepted CP69+ work and TL3 dual-mode integration, avoiding a stale pre-revision fixture."
+    },
+    {
+      "area": "TL1-TL3 general policy",
+      "prior": "Often treated as a low-tech 1->2->3 refinement sequence",
+      "candidate": "Retain prior values only where the Storyboard supports them; allow major family introductions, quiet steps, or capability/efficiency maturation",
+      "reason": "The Storyboard is the conceptual authority above the numerical table; prior validation is evidence about mechanics, not a lock on the old ladder shape."
+    }
+  ],
+  "overview": [
+    {
+      "discipline": "Hull",
+      "tl": 1,
+      "primaryQualitative": "Cruiser Structural Integration: Mature aerospace/composite cruiser construction",
+      "branchQualitative": "Maintainability and Damage Control: Expert crew, distributed spares and diagnostic access\nHabitation and Gravity Architecture: Spin/acceleration gravity and mature long-duration habitation",
+      "numericSummary": "Cruiser Structural Integration: Hull capacity 35 Space; Hull 24",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Hull",
+      "tl": 2,
+      "primaryQualitative": "Cruiser Structural Integration: Distributed structural monitoring and modular service architecture",
+      "branchQualitative": "—",
+      "numericSummary": "Cruiser Structural Integration: Hull capacity 35 Space; Hull 25",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Hull",
+      "tl": 3,
+      "primaryQualitative": "Cruiser Structural Integration: Integrated cruiser architecture",
+      "branchQualitative": "Maintainability and Damage Control: Predictive diagnostics and better service distribution",
+      "numericSummary": "Cruiser Structural Integration: Hull capacity 36 Space; Hull 26",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Hull",
+      "tl": 4,
+      "primaryQualitative": "Cruiser Structural Integration: Nanostructured load-bearing frame",
+      "branchQualitative": "Maintainability and Damage Control: Remote repair robotics\nHabitation and Gravity Architecture: Compact/stowable gravity habitats",
+      "numericSummary": "Cruiser Structural Integration: Hull capacity 36 Space; Hull 27",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Hull",
+      "tl": 5,
+      "primaryQualitative": "Cruiser Structural Integration: Atomically engineered structural composites",
+      "branchQualitative": "Maintainability and Damage Control: Onboard fabrication-assisted repair",
+      "numericSummary": "Cruiser Structural Integration: Hull capacity 37 Space; Hull 28",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Hull",
+      "tl": 6,
+      "primaryQualitative": "Cruiser Structural Integration: Self-monitoring smart lattice",
+      "branchQualitative": "Maintainability and Damage Control: Autonomous repair swarm\nHabitation and Gravity Architecture: Generated local gravity",
+      "numericSummary": "Cruiser Structural Integration: Hull capacity 37 Space; Hull 29",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Hull",
+      "tl": 7,
+      "primaryQualitative": "Cruiser Structural Integration: Active load-distribution structure",
+      "branchQualitative": "Maintainability and Damage Control: Self-healing structural materials",
+      "numericSummary": "Cruiser Structural Integration: Hull capacity 38 Space; Hull 30",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Hull",
+      "tl": 8,
+      "primaryQualitative": "Cruiser Structural Integration: Field-assisted structural support",
+      "branchQualitative": "Maintainability and Damage Control: Programmable matter repair patches",
+      "numericSummary": "Cruiser Structural Integration: Hull capacity 38 Space; Hull 31",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Hull",
+      "tl": 9,
+      "primaryQualitative": "Cruiser Structural Integration: Dynamic programmable cruiser architecture",
+      "branchQualitative": "Maintainability and Damage Control: Autonomous reconstruction architecture",
+      "numericSummary": "Cruiser Structural Integration: Hull capacity 39 Space; Hull 32",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Armor",
+      "tl": 1,
+      "primaryQualitative": "Passive Armor Materials: Advanced alloy/ceramic composite armor",
+      "branchQualitative": "Armor Enhancement Branches: Ablative outer layer",
+      "numericSummary": "Passive Armor Materials: AP0 / AI6",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Armor",
+      "tl": 2,
+      "primaryQualitative": "Passive Armor Materials: Toughened ceramic-composite laminate",
+      "branchQualitative": "—",
+      "numericSummary": "Passive Armor Materials: AP0 / AI8",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Armor",
+      "tl": 3,
+      "primaryQualitative": "Passive Armor Materials: Protected layered composite",
+      "branchQualitative": "—",
+      "numericSummary": "Passive Armor Materials: AP1 / AI9",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Armor",
+      "tl": 4,
+      "primaryQualitative": "Passive Armor Materials: Nanostructured armor matrix",
+      "branchQualitative": "Armor Enhancement Branches: Thermal/radiation hardening package",
+      "numericSummary": "Passive Armor Materials: AP1 / AI10",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Armor",
+      "tl": 5,
+      "primaryQualitative": "Passive Armor Materials: Gradient/diamondoid composite armor",
+      "branchQualitative": "Armor Enhancement Branches: Powered reactive armor",
+      "numericSummary": "Passive Armor Materials: AP2 / AI10",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Armor",
+      "tl": 6,
+      "primaryQualitative": "Passive Armor Materials: Self-healing smart laminate",
+      "branchQualitative": "—",
+      "numericSummary": "Passive Armor Materials: AP1 / AI10; Regen cap 1 TP at 1 AI/TP",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Armor",
+      "tl": 7,
+      "primaryQualitative": "—",
+      "branchQualitative": "Armor Enhancement Branches: Adaptive reactive armor architecture",
+      "numericSummary": "Passive Armor Materials: AP1 / AI12; Regen cap 2 TP at 1 AI/TP",
+      "quietPrimary": true
+    },
+    {
+      "discipline": "Armor",
+      "tl": 8,
+      "primaryQualitative": "—",
+      "branchQualitative": "Armor Enhancement Branches: Field-assisted armor reinforcement",
+      "numericSummary": "Passive Armor Materials: AP2 / AI12; Regen cap 2 TP at 1 AI/TP",
+      "quietPrimary": true
+    },
+    {
+      "discipline": "Armor",
+      "tl": 9,
+      "primaryQualitative": "Passive Armor Materials: Programmable matter armor",
+      "branchQualitative": "—",
+      "numericSummary": "Passive Armor Materials: AP3 / AI14; Regen cap 3 TP at 1 AI/TP",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Power",
+      "tl": 1,
+      "primaryQualitative": "Main Reactor Generation: Peak Fission",
+      "branchQualitative": "Pulse Storage and Power Conditioning: High-density battery / pulse capacitor\nThermal Management and Energy Conversion: Heat pipes, coolant loops, radiators and phase-change reserves",
+      "numericSummary": "Main Reactor Generation: 6S; 5/3/1 TP O/D/E",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Power",
+      "tl": 2,
+      "primaryQualitative": "Main Reactor Generation: Early Practical Fusion",
+      "branchQualitative": "Pulse Storage and Power Conditioning: Supercapacitor bank",
+      "numericSummary": "Main Reactor Generation: 6S; 7/3/0 TP O/D/E",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Power",
+      "tl": 3,
+      "primaryQualitative": "Main Reactor Generation: Mature Compact Fusion",
+      "branchQualitative": "Thermal Management and Energy Conversion: High-temperature compact radiators",
+      "numericSummary": "Main Reactor Generation: 5S; 7/4/1 TP O/D/E",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Power",
+      "tl": 4,
+      "primaryQualitative": "Main Reactor Generation: High-Output Fusion",
+      "branchQualitative": "Pulse Storage and Power Conditioning: Superconducting magnetic storage\nThermal Management and Energy Conversion: Droplet/mist radiator architecture",
+      "numericSummary": "Main Reactor Generation: 5S; 9/5/1 TP O/D/E",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Power",
+      "tl": 5,
+      "primaryQualitative": "Main Reactor Generation: Early Antimatter Reactor",
+      "branchQualitative": "Late Fission Specialist Revival: Direct-conversion / advanced-containment fission specialist\nThermal Management and Energy Conversion: Retractable thermal suppression",
+      "numericSummary": "Main Reactor Generation: 5S; 12/4/0 TP O/D/E",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Power",
+      "tl": 6,
+      "primaryQualitative": "Main Reactor Generation: Mature Antimatter",
+      "branchQualitative": "Pulse Storage and Power Conditioning: Molecular dielectric ultracapacitor\nThermal Management and Energy Conversion: Direct energy recovery / advanced heat pumping",
+      "numericSummary": "Main Reactor Generation: 4S; 12/7/1 TP O/D/E",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Power",
+      "tl": 7,
+      "primaryQualitative": "Main Reactor Generation: High-Output Antimatter",
+      "branchQualitative": "Late Fission Specialist Revival: Pinnacle fission expedition/auxiliary reactor",
+      "numericSummary": "Main Reactor Generation: 4S; 15/8/1 TP O/D/E",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Power",
+      "tl": 8,
+      "primaryQualitative": "Main Reactor Generation: Fractional / Direct Matter-Conversion Reactor",
+      "branchQualitative": "—",
+      "numericSummary": "Main Reactor Generation: 4S; 17/6/0 TP O/D/E",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Power",
+      "tl": 9,
+      "primaryQualitative": "Main Reactor Generation: Total Matter Conversion",
+      "branchQualitative": "—",
+      "numericSummary": "Main Reactor Generation: 3S; 20/12/2 TP O/D/E",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Propulsion",
+      "tl": 1,
+      "primaryQualitative": "Sublight Propulsion: High-power electric/plasma cruiser drive\nStrategic FTL Drive: First-generation practical FTL",
+      "branchQualitative": "Specialist Sublight Drives: Solar/nuclear electric endurance drive",
+      "numericSummary": "STL Propulsion: 5S; Move 1; Fuel 2/hex\nFTL Propulsion: 5S; Strategic Move 1",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Propulsion",
+      "tl": 2,
+      "primaryQualitative": "Sublight Propulsion: Pulsed high-energy plasma drive\nStrategic FTL Drive: Stabilized FTL transit",
+      "branchQualitative": "Specialist Sublight Drives: Nuclear thermal sprint drive",
+      "numericSummary": "STL Propulsion: 5S; Move 2; Fuel 2/hex\nFTL Propulsion: 5S; Strategic Move 2",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Propulsion",
+      "tl": 3,
+      "primaryQualitative": "Sublight Propulsion: Fusion-assisted torch / mature high-energy STL\nStrategic FTL Drive: Integrated FTL navigation",
+      "branchQualitative": "—",
+      "numericSummary": "STL Propulsion: 5S; Move 3; Fuel 2/hex\nFTL Propulsion: 5S; Strategic Move 3",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Propulsion",
+      "tl": 4,
+      "primaryQualitative": "Sublight Propulsion: Mature fusion torch architecture\nStrategic FTL Drive: High-throughput FTL field",
+      "branchQualitative": "Specialist Sublight Drives: Fission pulse expedition drive\nTransit Infrastructure and Natural/Artificial Routes: Mapped natural shortcuts / stable anomalies",
+      "numericSummary": "STL Propulsion: 5S; Move 4; Fuel 2/hex\nFTL Propulsion: 5S; Strategic Move 4",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Propulsion",
+      "tl": 5,
+      "primaryQualitative": "Sublight Propulsion: Antimatter-catalyzed fusion drive\nStrategic FTL Drive: Adaptive transition geometry",
+      "branchQualitative": "—",
+      "numericSummary": "STL Propulsion: 5S; Move 6; Fuel 2/hex\nFTL Propulsion: 5S; Strategic Move 4",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Propulsion",
+      "tl": 6,
+      "primaryQualitative": "Sublight Propulsion: Antimatter plasma drive\nStrategic FTL Drive: Deep-route FTL navigation",
+      "branchQualitative": "—",
+      "numericSummary": "STL Propulsion: 5S; Move 6; Fuel 2/hex\nFTL Propulsion: 5S; Strategic Move 6",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Propulsion",
+      "tl": 7,
+      "primaryQualitative": "Sublight Propulsion: Beam-core / ultra-high-energy propulsion\nStrategic FTL Drive: Resilient high-energy FTL",
+      "branchQualitative": "—",
+      "numericSummary": "STL Propulsion: 4S; Move 7; Fuel 2/hex\nFTL Propulsion: 5S; Strategic Move 7",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Propulsion",
+      "tl": 8,
+      "primaryQualitative": "Sublight Propulsion: Inertial-coupled drive\nStrategic FTL Drive: Metric-transition FTL",
+      "branchQualitative": "—",
+      "numericSummary": "STL Propulsion: 4S; Move 9; Fuel 2/hex\nFTL Propulsion: 4S; Strategic Move 9",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Propulsion",
+      "tl": 9,
+      "primaryQualitative": "Sublight Propulsion: Gravitic/metric sublight drive\nStrategic FTL Drive: Pinnacle topology-control FTL",
+      "branchQualitative": "—",
+      "numericSummary": "STL Propulsion: 4S; Move 10; Fuel 2/hex\nFTL Propulsion: 4S; Strategic Move 12",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Sensors / EW",
+      "tl": 1,
+      "primaryQualitative": "Sensor Suite: Integrated multimodal sensor suite\nElectronic Countermeasures: Conventional noise/deception ECM\nElectronic Counter-Countermeasures: Conventional filtering and emitter analysis",
+      "branchQualitative": "Signature Management and Stealth: Passive low-observability design",
+      "numericSummary": "Sensors: 3S; DR0; P 1/3; A 3/4@1TP; H -\nECM: 1S; Rating 1 at 1 TP\nECCM: 1S; Rating 1 at 1 TP",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Sensors / EW",
+      "tl": 2,
+      "primaryQualitative": "Sensor Suite: Improved discrimination resistance\nElectronic Countermeasures: High-strength conventional ECM\nElectronic Counter-Countermeasures: High-strength conventional ECCM",
+      "branchQualitative": "—",
+      "numericSummary": "Sensors: 3S; DR1; P 1/3; A 3/4@1TP; H -\nECM: 1S; Rating 2 at 2 TP\nECCM: 1S; Rating 2 at 2 TP",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Sensors / EW",
+      "tl": 3,
+      "primaryQualitative": "Sensor Suite: Dual normal active modes\nElectronic Countermeasures: Efficient full-strength ECM\nElectronic Counter-Countermeasures: Efficient full-strength ECCM",
+      "branchQualitative": "Signature Management and Stealth: Emission-controlled operating posture",
+      "numericSummary": "Sensors: 3S; DR1; P 1/3; A 3/4@1TP; H 4/5@2TP\nECM: 1S; Rating 2 at 1 TP\nECCM: 1S; Rating 2 at 1 TP",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Sensors / EW",
+      "tl": 4,
+      "primaryQualitative": "Sensor Suite: Multimodal fusion and cooperative apertures\nElectronic Countermeasures: Digital deception / false-track synthesis\nElectronic Counter-Countermeasures: Sensor-fusion anti-deception",
+      "branchQualitative": "—",
+      "numericSummary": "Sensors: 3S; DR2; P 2/4; A 4/5@1TP; H 5/6@2TP\nECM: 1S; Rating 2 at 1 TP\nECCM: 1S; Rating 2 at 1 TP",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Sensors / EW",
+      "tl": 5,
+      "primaryQualitative": "Sensor Suite: Low-probability active sensing / adaptive waveform suite\nElectronic Countermeasures: Adaptive cognitive EW\nElectronic Counter-Countermeasures: Adaptive classifier / signature memory",
+      "branchQualitative": "Signature Management and Stealth: Thermal suppression window",
+      "numericSummary": "Sensors: 3S; DR2; P 2/4; A 4/5@1TP; H 5/6@2TP\nECM: 1S; Rating 3 at 2 TP\nECCM: 1S; Rating 3 at 2 TP",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Sensors / EW",
+      "tl": 6,
+      "primaryQualitative": "Sensor Suite: Quantum-limited / precision field sensors\nElectronic Counter-Countermeasures: Cooperative track validation",
+      "branchQualitative": "Electronic Countermeasures: Distributed cooperative EW",
+      "numericSummary": "Sensors: 3S; DR3; P 3/5; A 5/6@1TP; H 6/7@2TP\nECM: 1S; Rating 3 at 2 TP\nECCM: 1S; Rating 3 at 2 TP",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Sensors / EW",
+      "tl": 7,
+      "primaryQualitative": "Sensor Suite: Integrated penetrating multimodal sensing",
+      "branchQualitative": "Electronic Countermeasures: Emitter-targeted electronic attack\nElectronic Counter-Countermeasures: Counter-emitter localization",
+      "numericSummary": "Sensors: 2S; DR3; P 3/6; A 5/7@1TP; H 7/8@2TP\nECM: 1S; Rating 3 at 1 TP\nECCM: 1S; Rating 3 at 1 TP",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Sensors / EW",
+      "tl": 8,
+      "primaryQualitative": "Sensor Suite: Spacetime/FTL-wake sensing\nElectronic Countermeasures: Field/signature spoofing\nElectronic Counter-Countermeasures: Exotic-channel correlation",
+      "branchQualitative": "—",
+      "numericSummary": "Sensors: 2S; DR4; P 4/7; A 6/8@1TP; H 8/9@2TP\nECM: 1S; Rating 4 at 2 TP\nECCM: 1S; Rating 4 at 2 TP",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Sensors / EW",
+      "tl": 9,
+      "primaryQualitative": "Sensor Suite: Pinnacle multi-domain inference suite\nElectronic Countermeasures: Pinnacle adaptive cross-spectrum deception\nElectronic Counter-Countermeasures: Pinnacle provenance-weighted track validation",
+      "branchQualitative": "—",
+      "numericSummary": "Sensors: 2S; DR5; P 5/8; A 7/9@1TP; H 9/10@2TP\nECM: 1S; Rating 4 at 1 TP\nECCM: 1S; Rating 4 at 1 TP",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Computing / Fire Control",
+      "tl": 1,
+      "primaryQualitative": "Tactical Computer and Fire Control: Integrated electronic fire control",
+      "branchQualitative": "—",
+      "numericSummary": "Tactical Computing: 3S; target +10pp; Approx -25pp; EvComp 0pp",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Computing / Fire Control",
+      "tl": 2,
+      "primaryQualitative": "Tactical Computer and Fire Control: Refined conventional fire control",
+      "branchQualitative": "—",
+      "numericSummary": "Tactical Computing: 3S; target +12pp; Approx -25pp; EvComp 0pp",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Computing / Fire Control",
+      "tl": 3,
+      "primaryQualitative": "Tactical Computer and Fire Control: Mature integrated fire control / Evasive Compensation",
+      "branchQualitative": "Autonomy, Networking and Digital Crew: Advanced ship automation",
+      "numericSummary": "Tactical Computing: 3S; target +12pp; Approx -25pp; EvComp 5pp",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Computing / Fire Control",
+      "tl": 4,
+      "primaryQualitative": "Tactical Computer and Fire Control: Photonic/optical combat computing",
+      "branchQualitative": "—",
+      "numericSummary": "Tactical Computing: 3S; target +15pp; Approx -25pp; EvComp 5pp",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Computing / Fire Control",
+      "tl": 5,
+      "primaryQualitative": "Tactical Computer and Fire Control: Adaptive AI battle manager",
+      "branchQualitative": "Autonomy, Networking and Digital Crew: Autonomous specialist agents",
+      "numericSummary": "Tactical Computing: 3S; target +15pp; Approx -20pp; EvComp 5pp",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Computing / Fire Control",
+      "tl": 6,
+      "primaryQualitative": "Tactical Computer and Fire Control: Distributed resilient combat cloud",
+      "branchQualitative": "—",
+      "numericSummary": "Tactical Computing: 2S; target +15pp; Approx -20pp; EvComp 10pp",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Computing / Fire Control",
+      "tl": 7,
+      "primaryQualitative": "Tactical Computer and Fire Control: Quantum-assisted optimization",
+      "branchQualitative": "Autonomy, Networking and Digital Crew: Distributed autonomous mission control",
+      "numericSummary": "Tactical Computing: 2S; target +18pp; Approx -20pp; EvComp 10pp",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Computing / Fire Control",
+      "tl": 8,
+      "primaryQualitative": "Tactical Computer and Fire Control: Predictive battle-state synthesis",
+      "branchQualitative": "—",
+      "numericSummary": "Tactical Computing: 2S; target +20pp; Approx -15pp; EvComp 10pp",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Computing / Fire Control",
+      "tl": 9,
+      "primaryQualitative": "Tactical Computer and Fire Control: Pinnacle self-verifying battle synthesis",
+      "branchQualitative": "—",
+      "numericSummary": "Tactical Computing: 2S; target +20pp; Approx -10pp; EvComp 10pp",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Shields",
+      "tl": 1,
+      "primaryQualitative": "Defensive Field Generator: Baseline defensive field",
+      "branchQualitative": "Shield Support and Specialist Fields: Shield Battery / Booster concepts",
+      "numericSummary": "Defensive Field Generator: SC4; base R2; +1/TP cap 2 TP; SA0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Shields",
+      "tl": 2,
+      "primaryQualitative": "Defensive Field Generator: Higher-capacity field",
+      "branchQualitative": "—",
+      "numericSummary": "Defensive Field Generator: SC5; base R2; +1/TP cap 3 TP; SA0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Shields",
+      "tl": 3,
+      "primaryQualitative": "Defensive Field Generator: Mature stabilized field generator",
+      "branchQualitative": "Shield Support and Specialist Fields: Shield Hardener",
+      "numericSummary": "Defensive Field Generator: SC6; base R2; +2/TP cap 2 TP; SA0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Shields",
+      "tl": 4,
+      "primaryQualitative": "Defensive Field Generator: Segmented/adaptive field geometry",
+      "branchQualitative": "—",
+      "numericSummary": "Defensive Field Generator: SC7; base R3; +2/TP cap 2 TP; SA0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Shields",
+      "tl": 5,
+      "primaryQualitative": "Defensive Field Generator: Frequency/phase-tuned shielding",
+      "branchQualitative": "Shield Support and Specialist Fields: Particle/charged-beam screen",
+      "numericSummary": "Defensive Field Generator: SC8; base R2; +2/TP cap 3 TP; SA0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Shields",
+      "tl": 6,
+      "primaryQualitative": "Defensive Field Generator: Predictive localized reinforcement",
+      "branchQualitative": "—",
+      "numericSummary": "Defensive Field Generator: SC8; base R4; +2/TP cap 2 TP; SA0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Shields",
+      "tl": 7,
+      "primaryQualitative": "Defensive Field Generator: Stand-off shear field",
+      "branchQualitative": "Shield Support and Specialist Fields: Field stabilizer / anti-penetration tuner",
+      "numericSummary": "Defensive Field Generator: SC9; base R3; +2/TP cap 3 TP; SA0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Shields",
+      "tl": 8,
+      "primaryQualitative": "Defensive Field Generator: Metric barrier field",
+      "branchQualitative": "—",
+      "numericSummary": "Defensive Field Generator: SC10; base R4; +3/TP cap 2 TP; SA1",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Shields",
+      "tl": 9,
+      "primaryQualitative": "Defensive Field Generator: Pinnacle adaptive barrier",
+      "branchQualitative": "—",
+      "numericSummary": "Defensive Field Generator: SC12; base R6; +3/TP cap 2 TP; SA1",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Projectile Weapons",
+      "tl": 1,
+      "primaryQualitative": "Kinetic Main Weapon: Mature electromagnetic mass driver\nKinetic Point Defense: Rapid-fire kinetic PDS",
+      "branchQualitative": "Kinetic Ammunition and Projectile Packages: Conventional penetrator / fragmentation packages",
+      "numericSummary": "Kinetic main: ACC+20; D6; SP0; AP0; R2/3; 1 TP; Ammo100",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Projectile Weapons",
+      "tl": 2,
+      "primaryQualitative": "—",
+      "branchQualitative": "Kinetic Ammunition and Projectile Packages: Improved penetrator/projectile materials",
+      "numericSummary": "Kinetic main: ACC+20; D7; SP0; AP1; R2/3; 1 TP; Ammo100",
+      "quietPrimary": true
+    },
+    {
+      "discipline": "Projectile Weapons",
+      "tl": 3,
+      "primaryQualitative": "Kinetic Main Weapon: Power-efficient mature accelerator\nKinetic Point Defense: Mature local fire-control / effective-ammo PDS",
+      "branchQualitative": "—",
+      "numericSummary": "Kinetic main: ACC+20; D7; SP0; AP1; R2/4; 1 TP; Ammo100",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Projectile Weapons",
+      "tl": 4,
+      "primaryQualitative": "Kinetic Main Weapon: Superconducting coil/induction accelerator\nKinetic Point Defense: Guided intercept projectile PDS",
+      "branchQualitative": "Kinetic Ammunition and Projectile Packages: Programmable smart projectile",
+      "numericSummary": "Kinetic main: ACC+25; D7; SP0; AP2; R2/4; 1 TP; Ammo100",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Projectile Weapons",
+      "tl": 5,
+      "primaryQualitative": "—",
+      "branchQualitative": "Kinetic Main Weapon: Helical / continuous-induction cannon branch\nKinetic Ammunition and Projectile Packages: Dense/graded penetrator package",
+      "numericSummary": "Kinetic main: ACC+25; D8; SP0; AP2; R3/5; 1 TP; Ammo100",
+      "quietPrimary": true
+    },
+    {
+      "discipline": "Projectile Weapons",
+      "tl": 6,
+      "primaryQualitative": "Kinetic Main Weapon: Smart hypervelocity mass driver",
+      "branchQualitative": "Kinetic Ammunition and Projectile Packages: Micro-submunition/saturation package\nKinetic Point Defense: Distributed kinetic intercept grid",
+      "numericSummary": "Kinetic main: ACC+30; D8; SP0; AP2; R3/6; 1 TP; Ammo100",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Projectile Weapons",
+      "tl": 7,
+      "primaryQualitative": "—",
+      "branchQualitative": "Kinetic Main Weapon: Macron/dust accelerator branch",
+      "numericSummary": "Kinetic main: ACC+30; D9; SP0; AP2; R3/6; 1 TP; Ammo100",
+      "quietPrimary": true
+    },
+    {
+      "discipline": "Projectile Weapons",
+      "tl": 8,
+      "primaryQualitative": "Kinetic Main Weapon: Field-assisted mass accelerator",
+      "branchQualitative": "—",
+      "numericSummary": "Kinetic main: ACC+30; D10; SP0; AP3; R4/7; 2 TP; Ammo100",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Projectile Weapons",
+      "tl": 9,
+      "primaryQualitative": "Kinetic Main Weapon: Relativistic kinetic lance",
+      "branchQualitative": "—",
+      "numericSummary": "Kinetic main: ACC+35; D11; SP0; AP3; R4/8; 2 TP; Ammo100",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Energy Weapons",
+      "tl": 1,
+      "primaryQualitative": "Coherent Beam Main Weapon: High-energy coherent laser\nEnergy / Beam Point Defense: Baseline beam point defense",
+      "branchQualitative": "—",
+      "numericSummary": "Energy main: ACC+25; R2/4; Low 1TP/D3; Std 2TP/D5; Over 3TP/D8+Strain; SP0; AP0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Energy Weapons",
+      "tl": 2,
+      "primaryQualitative": "Coherent Beam Main Weapon: Improved optics and pulse conditioning\nEnergy / Beam Point Defense: Improved beam tracking and pulse control",
+      "branchQualitative": "—",
+      "numericSummary": "Energy main: ACC+30; R3/4; Low 1TP/D3; Std 2TP/D5; Over 3TP/D8+Strain; SP0; AP0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Energy Weapons",
+      "tl": 3,
+      "primaryQualitative": "Coherent Beam Main Weapon: Safe high-output beam mode\nEnergy / Beam Point Defense: Efficient beam-PDS readiness",
+      "branchQualitative": "—",
+      "numericSummary": "Energy main: ACC+30; R4/5; Low 1TP/D3; Std 2TP/D5; Over 3TP/D8+Strain; SP0; AP0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Energy Weapons",
+      "tl": 4,
+      "primaryQualitative": "Coherent Beam Main Weapon: Short-wavelength / advanced focusing beam\nEnergy / Beam Point Defense: Rapid-steering beam director",
+      "branchQualitative": "—",
+      "numericSummary": "Energy main: ACC+30; R4/6; Low 1TP/D3; Std 2TP/D6; Over 3TP/D9+Strain; SP0; AP0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Energy Weapons",
+      "tl": 5,
+      "primaryQualitative": "Energy / Beam Point Defense: Multi-threat phased beam defense",
+      "branchQualitative": "Coherent Beam Main Weapon: Tunable-spectrum / free-electron beam branch\nCharged-Particle / Ion Beam Branch: Ion/charged-particle cannon",
+      "numericSummary": "Energy main: ACC+30; R4/6; Low 1TP/D3; Std 2TP/D6; Over 3TP/D9+Strain; SP1; AP0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Energy Weapons",
+      "tl": 6,
+      "primaryQualitative": "Coherent Beam Main Weapon: Distributed/phased beam director\nEnergy / Beam Point Defense: Adaptive-spectrum interception",
+      "branchQualitative": "Charged-Particle / Ion Beam Branch: Neutralized particle beam\nSpecial Energy / Radiation Weapon Concepts: Plasma cannon",
+      "numericSummary": "Energy main: ACC+35; R5/7; Low 1TP/D3; Std 2TP/D6; Over 3TP/D9+Strain; SP1; AP0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Energy Weapons",
+      "tl": 7,
+      "primaryQualitative": "—",
+      "branchQualitative": "Coherent Beam Main Weapon: Extreme-frequency beam branch\nCharged-Particle / Ion Beam Branch: Adaptive particle species beam",
+      "numericSummary": "Energy main: ACC+35; R5/7; Low 1TP/D4; Std 2TP/D7; Over 3TP/D11+Strain; SP1; AP0",
+      "quietPrimary": true
+    },
+    {
+      "discipline": "Energy Weapons",
+      "tl": 8,
+      "primaryQualitative": "Coherent Beam Main Weapon: Field-guided coherent lance",
+      "branchQualitative": "—",
+      "numericSummary": "Energy main: ACC+35; R5/8; Low 2TP/D4; Std 4TP/D8; Over 6TP/D12+Strain; SP2; AP0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Energy Weapons",
+      "tl": 9,
+      "primaryQualitative": "Coherent Beam Main Weapon: Pinnacle coherent-energy lance",
+      "branchQualitative": "—",
+      "numericSummary": "Energy main: ACC+40; R5/9; Low 2TP/D5; Std 4TP/D9; Over 6TP/D14+Strain; SP2; AP0",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Missile Weapons",
+      "tl": 1,
+      "primaryQualitative": "Missile Launcher, Flight and Propulsion: Command-guided missile flight\nMissile Guidance, Seeker and Counter-Countermeasures: Ship-command guidance / datalink\nLocal AMM PDS and Extended Interceptor Defense: Baseline local AMM point defense",
+      "branchQualitative": "Missile Warhead Families: Kinetic/explosive conventional warhead",
+      "numericSummary": "Missile: Range6; Move2; GP D8/SP0/AP0; 0 TP; 25 Flights; unavailable",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Missile Weapons",
+      "tl": 2,
+      "primaryQualitative": "Missile Launcher, Flight and Propulsion: Improved propulsion/endurance package\nLocal AMM PDS and Extended Interceptor Defense: Improved local AMM guidance",
+      "branchQualitative": "Local AMM PDS and Extended Interceptor Defense: Extended-range AMM layer",
+      "numericSummary": "Missile: Range7; Move3; GP D8/SP0/AP0; 0 TP; 25 Flights; Swarmer 2xD3",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Missile Weapons",
+      "tl": 3,
+      "primaryQualitative": "Missile Launcher, Flight and Propulsion: Autonomous navigation-enabled missile\nMissile Guidance, Seeker and Counter-Countermeasures: Onboard navigation and local reacquisition\nLocal AMM PDS and Extended Interceptor Defense: Mature AMM readiness",
+      "branchQualitative": "Missile Warhead Families: Shaped/advanced penetrator warhead",
+      "numericSummary": "Missile: Range7; Move4; GP D8/SP0/AP0; 0 TP; 25 Flights; Swarmer 2xD3",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Missile Weapons",
+      "tl": 4,
+      "primaryQualitative": "Missile Launcher, Flight and Propulsion: Terminal maneuver / multi-stage propulsion\nMissile Guidance, Seeker and Counter-Countermeasures: Multi-mode terminal seeker",
+      "branchQualitative": "Missile Warhead Families: Nuclear shaped-charge / directed-energy warhead",
+      "numericSummary": "Missile: Range8; Move5; GP D9/SP0/AP0; 0 TP; 25 Flights; Swarmer 2xD4",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Missile Weapons",
+      "tl": 5,
+      "primaryQualitative": "Missile Guidance, Seeker and Counter-Countermeasures: Cooperative seeker network\nLocal AMM PDS and Extended Interceptor Defense: Cooperative AMM screen",
+      "branchQualitative": "Missile Launcher, Flight and Propulsion: Cooperative swarm/bus architecture\nMissile Warhead Families: Fusion microcharge warhead",
+      "numericSummary": "Missile: Range9; Move6; GP D10/SP0/AP0; 0 TP; 25 Flights; Swarmer 2xD4",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Missile Weapons",
+      "tl": 6,
+      "primaryQualitative": "Missile Launcher, Flight and Propulsion: High-energy fusion sprint missile\nMissile Guidance, Seeker and Counter-Countermeasures: Adaptive anti-jam seeker",
+      "branchQualitative": "—",
+      "numericSummary": "Missile: Range10; Move7; GP D10/SP0/AP0; 0 TP; 25 Flights; Swarmer 2xD4",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Missile Weapons",
+      "tl": 7,
+      "primaryQualitative": "Missile Launcher, Flight and Propulsion: Antimatter-catalyzed missile drive\nMissile Guidance, Seeker and Counter-Countermeasures: Anti-emitter seeker mode\nLocal AMM PDS and Extended Interceptor Defense: Hit-to-kill / extreme-sprint AMM",
+      "branchQualitative": "Missile Warhead Families: Antimatter-catalyzed / antimatter warhead",
+      "numericSummary": "Missile: Range10; Move8; GP D11/SP0/AP0; 0 TP; 25 Flights; Swarmer 2xD5",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Missile Weapons",
+      "tl": 8,
+      "primaryQualitative": "Missile Guidance, Seeker and Counter-Countermeasures: Exotic-field seeker",
+      "branchQualitative": "Missile Launcher, Flight and Propulsion: Field-assisted terminal maneuver package",
+      "numericSummary": "Missile: Range11; Move9; GP D12/SP1/AP0; 0 TP; 25 Flights; Swarmer 2xD5",
+      "quietPrimary": false
+    },
+    {
+      "discipline": "Missile Weapons",
+      "tl": 9,
+      "primaryQualitative": "Missile Launcher, Flight and Propulsion: Integrated field-coupled strike vehicle",
+      "branchQualitative": "—",
+      "numericSummary": "Missile: Range12; Move10; GP D14/SP1/AP0; 0 TP; 25 Flights; Swarmer 2xD6",
+      "quietPrimary": false
+    }
+  ],
+  "wholeShipSanity": [
+    {
+      "tl": 1,
+      "hullCapacity": 35,
+      "mandatoryCore": 28,
+      "mandatorySpare": 7,
+      "dualMainDualReactorCore": 40,
+      "dualMainDualReactorLegalBeforeOptionalSystems": false
+    },
+    {
+      "tl": 2,
+      "hullCapacity": 35,
+      "mandatoryCore": 28,
+      "mandatorySpare": 7,
+      "dualMainDualReactorCore": 40,
+      "dualMainDualReactorLegalBeforeOptionalSystems": false
+    },
+    {
+      "tl": 3,
+      "hullCapacity": 36,
+      "mandatoryCore": 27,
+      "mandatorySpare": 9,
+      "dualMainDualReactorCore": 38,
+      "dualMainDualReactorLegalBeforeOptionalSystems": false
+    },
+    {
+      "tl": 4,
+      "hullCapacity": 37,
+      "mandatoryCore": 27,
+      "mandatorySpare": 10,
+      "dualMainDualReactorCore": 38,
+      "dualMainDualReactorLegalBeforeOptionalSystems": false
+    },
+    {
+      "tl": 5,
+      "hullCapacity": 38,
+      "mandatoryCore": 27,
+      "mandatorySpare": 11,
+      "dualMainDualReactorCore": 38,
+      "dualMainDualReactorLegalBeforeOptionalSystems": true
+    },
+    {
+      "tl": 6,
+      "hullCapacity": 39,
+      "mandatoryCore": 24,
+      "mandatorySpare": 15,
+      "dualMainDualReactorCore": 33,
+      "dualMainDualReactorLegalBeforeOptionalSystems": true
+    },
+    {
+      "tl": 7,
+      "hullCapacity": 41,
+      "mandatoryCore": 22,
+      "mandatorySpare": 19,
+      "dualMainDualReactorCore": 31,
+      "dualMainDualReactorLegalBeforeOptionalSystems": true
+    },
+    {
+      "tl": 8,
+      "hullCapacity": 43,
+      "mandatoryCore": 21,
+      "mandatorySpare": 22,
+      "dualMainDualReactorCore": 30,
+      "dualMainDualReactorLegalBeforeOptionalSystems": true
+    },
+    {
+      "tl": 9,
+      "hullCapacity": 45,
+      "mandatoryCore": 20,
+      "mandatorySpare": 25,
+      "dualMainDualReactorCore": 28,
+      "dualMainDualReactorLegalBeforeOptionalSystems": true
+    }
+  ],
+  "validation": {
+    "checkpoint": 133,
+    "kind": "reference/data synchronization only",
+    "monteCarloTrials": 0,
+    "balanceClaim": false,
+    "storyboardReconciled": false,
+    "productionRuntimeChanged": false,
+    "nextStep": "Implement the CP133 candidate in the canonical simulation kernel and run TLx-vs-TLx layered-defense weapon-family sweeps."
+  },
+  "damagePointScale": {
+    "canonicalScale": 2,
+    "historicalPointEqualsCanonicalPoints": 2,
+    "oddCanonicalValuesPermitted": true,
+    "oddValueUse": "selective_reference_hypothesis",
+    "productionRepairHullPerKitTl1": 1,
+    "criticalCadenceMigrated": false,
+    "migrationAcceptedCheckpoint": 122
+  },
+  "checkpoint": 158,
+  "profileOrder": [
+    "hull",
+    "damage_control",
+    "armor",
+    "reactor",
+    "stl",
+    "ftl",
+    "computer",
+    "sensor",
+    "ecm",
+    "eccm",
+    "shield",
+    "kinetic_main",
+    "kinetic_pds",
+    "energy_main",
+    "energy_pds",
+    "missile_delivery",
+    "missile_guidance",
+    "missile_gp_warhead",
+    "missile_swarmer",
+    "amm_pds"
+  ],
+  "combatModifiers": {
+    "directFireApproximateTrackPenaltyPp": -25,
+    "directFireExtendedRangePenaltyPp": -10,
+    "modifiersStack": true,
+    "firmTrackPenaltyPp": 0,
+    "extendedRangeDefinition": "standardRange < range <= maxRange",
+    "outOfRange": "range > maxRange is illegal",
+    "missilesUseDirectFireRangePenalty": false,
+    "notes": "Both direct-fire modifiers are universal provisional tuning knobs, not Tactical Computer properties."
+  },
+  "energyOutputRule": {
+    "universalForEnergyMain": true,
+    "lowTpFormula": "ceil(standardTp / 2)",
+    "lowDamageFormula": "ceil(standardDamage / 2)",
+    "standardMode": "listed standardTp / standardDamage",
+    "overloadTpFormula": "ceil(standardTp * 1.5)",
+    "overloadDamageFormula": "ceil(standardDamage * 1.5)",
+    "overloadAddsStrain": true,
+    "safeHighModeRemoved": true
+  },
+  "shieldRechargeInvariant": {
+    "intentional": false,
+    "supersedesCp133FullResetInvariant": true,
+    "rule": "baseRecharge + tacticalRechargePerTp * tacticalRechargeCapTp < capacity at every TL in the CP135 candidate",
+    "meaning": "A completely collapsed contemporary Shield cannot normally return to full SC in one legal recharge window even with maximum tactical spend; sustained pressure can exploit the remaining deficit.",
+    "maximumRecoveryFromZeroByTl": {
+      "1": {
+        "restored": 3,
+        "capacity": 4
+      },
+      "2": {
+        "restored": 4,
+        "capacity": 5
+      },
+      "3": {
+        "restored": 4,
+        "capacity": 6
+      },
+      "4": {
+        "restored": 5,
+        "capacity": 7
+      },
+      "5": {
+        "restored": 6,
+        "capacity": 8
+      },
+      "6": {
+        "restored": 6,
+        "capacity": 8
+      },
+      "7": {
+        "restored": 7,
+        "capacity": 9
+      },
+      "8": {
+        "restored": 8,
+        "capacity": 10
+      },
+      "9": {
+        "restored": 10,
+        "capacity": 12
+      }
+    }
+  },
+  "armorRegenerationRule": {
+    "startsTl": 6,
+    "baseRegeneration": 0,
+    "tacticalRegenerationPerTp": 1,
+    "meaning": "Self-healing Armor uses Tactical Power in the Damage Control phase, but in-combat restoration is limited by both the per-turn TP cap and a finite AI-denominated combat regeneration reserve. Out-of-combat self-healing is separate and not simulated here."
+  },
+  "baselineResourceConstants": {
+    "kineticAmmo": 100,
+    "missileFlights": 25,
+    "missileLaunchTp": "profileDriven"
+  },
+  "candidateBranchSeeds": [
+    {
+      "id": "A_b1",
+      "owner": "Armor",
+      "name": "Crystalline composite armor",
+      "placementTl": 6,
+      "status": "candidate_seed",
+      "tl6": {
+        "ap": 2,
+        "ai": 22,
+        "baseRegeneration": 0,
+        "tacticalRegenerationPerTp": 0,
+        "tacticalRegenerationCapTp": 0,
+        "combatRegenerationReserveAi": 0
+      },
+      "laterProgression": "TBD",
+      "notes": "CP137 TL6-only passive high-hardening alternative: AP2/AI11 with no tactical regeneration and no combat regeneration reserve. Later TL advancement remains unassigned."
+    },
+    {
+      "id": "E_b1",
+      "owner": "Energy Weapons",
+      "name": "Higher-SPEN Energy branch",
+      "placementTl": "TBD",
+      "status": "concept_seed",
+      "numeric": "TBD",
+      "notes": "Specialist shield-penetration branch; baseline Energy retains modest SPEN maturation."
+    },
+    {
+      "id": "M_b2",
+      "owner": "Missile Weapons",
+      "name": "Radiation warhead",
+      "placementTl": "TBD",
+      "status": "concept_seed",
+      "numeric": "CREW effect TBD",
+      "notes": "Specialist warhead intended to increase CREW damage, probably at a conventional-damage tradeoff. CREW model not yet implemented."
+    }
+  ],
+  "sameTlCalibrationContract": {
+    "planned": true,
+    "technologyLevels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "weaponFamilies": [
+      "kinetic_main",
+      "energy_main",
+      "missile_gp_warhead",
+      "missile_swarmer"
+    ],
+    "swarmerAvailableFromTl": 2,
+    "mandatoryDefenses": [
+      "shield",
+      "armor"
+    ],
+    "standardReferenceShips": "Every calibration ship carries its contemporary mainline Shield and Armor plus required core ship systems.",
+    "branchProfilesExcludedInitially": false,
+    "purpose": "Repeat the CP136 same-TL diagnostic with finite in-combat Armor regeneration reserves only; all numerical values and controls are held.",
+    "implementedCheckpoint": 137,
+    "tl6ArmorProfiles": [
+      "mainline",
+      "A_b1"
+    ],
+    "pdsControl": "Missile/Swarmer-bearing lanes run paired no-PDS and contemporary AMM-PDS contexts; direct-fire-only lanes run no-PDS only.",
+    "primaryEwOptionalSystems": "ECM/ECCM omitted from primary baseline ships to isolate weapon/defense progression."
+  },
+  "branchBaselinePolicy": "Existing branch entries remain preserved design history/candidates. Except missile_swarmer, A_b1 seed, E_b1 concept, and M_b2 concept, branch numerical candidates are not part of the CP133 baseline and must be reconciled before later branch calibration.",
+  "damageControlCandidateRule": {
+    "capacity": 1,
+    "attemptTp": 1,
+    "preparedRepairKitsByTl": {
+      "1": 3,
+      "2": 3,
+      "3": 4,
+      "4": 4,
+      "5": 5,
+      "6": 5,
+      "7": 6,
+      "8": 6,
+      "9": 7
+    },
+    "studyDoctrine": "HullOnlyWhenDamaged",
+    "attemptConsumesKitOnFailure": true,
+    "successQueuesToNextTurnRefresh": true,
+    "componentRepairInCp135Study": false,
+    "armorRegenerationSeparate": true,
+    "notes": "CP135 same-TL research uses Damage Control only for Hull repair so the Repair Kit progression is observable. Armor regeneration remains its separate material capability in the Damage Control phase."
+  },
+  "armorRegenerationCandidateRule": {
+    "baseRegeneration": 0,
+    "tacticalRegenerationPerTp": 1,
+    "tacticalRegenerationCapTpByTl": {
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 2
+    },
+    "combatRegenerationReserveAiByTl": {
+      "6": 3,
+      "7": 4,
+      "8": 5,
+      "9": 6
+    },
+    "mainlineAiByTl": {
+      "1": 6,
+      "2": 8,
+      "3": 9,
+      "4": 10,
+      "5": 10,
+      "6": 9,
+      "7": 10,
+      "8": 11,
+      "9": 12
+    },
+    "crystallineA_b1Tl6": {
+      "ap": 2,
+      "ai": 11,
+      "tacticalRegenerationPerTp": 0,
+      "tacticalRegenerationCapTp": 0,
+      "combatRegenerationReserveAi": 0
+    },
+    "outOfCombatRecovery": "Self-healing Armor may recover toward pristine AI outside tactical combat; exact time, resource, facility, and reserve-replenishment rules are deferred.",
+    "reserveConsumption": "One point of combat regeneration reserve is consumed per AI actually restored.",
+    "intent": "Preserve slow, steady self-healing while preventing unlimited tactical equilibrium. Sustained contemporary offense should eventually create persistent Armor damage after the finite reserve is exhausted."
+  },
+  "pendingFinalizationResearchBaseline": {
+    "baselineId": "CP159-PF3",
+    "acceptedContinuityCheckpoint": 157,
+    "pointScale": 2,
+    "damageModel": "def-res-v1",
+    "shieldDefByTl": {
+      "1": 20,
+      "2": 22,
+      "3": 24,
+      "4": 26,
+      "5": 28,
+      "6": 30,
+      "7": 32,
+      "8": 34,
+      "9": 36
+    },
+    "armorResByTl": {
+      "1": 20,
+      "2": 22,
+      "3": 24,
+      "4": 26,
+      "5": 28,
+      "6": 30,
+      "7": 32,
+      "8": 34,
+      "9": 36
+    },
+    "shieldHardenerBonusDefPp": 10,
+    "selected": {
+      "kineticMain": "K1",
+      "energyMain": "E7",
+      "gpMissileMain": "M2",
+      "swarmerMain": "SW2",
+      "kineticPds": "K155P06",
+      "energyPds": "E155P08",
+      "ammPds": "A155P07"
+    },
+    "requiredAlternatives": {
+      "gpMissileMain": [
+        "M3"
+      ],
+      "kineticPds": [
+        "K155P03"
+      ],
+      "energyPds": [
+        "E155P07"
+      ],
+      "ammPds": [
+        "A155P09"
+      ]
+    },
+    "openDependencies": [
+      "AUX_LIFETIME_VIABILITY",
+      "FINAL_REACTOR_TP_SCARCITY"
+    ],
+    "resourceScaffolding": "CP144 resource ensemble plus CP157-PF1 resource values; PROVISIONAL_RESOURCE_SCAFFOLD; not final Reactor/TP authority",
+    "supersedes": "CP157-PF1",
+    "classificationModel": {
+      "PENDING_FINALIZATION_SELECTED": "selected main/PDS numerical findings carried as default research execution center",
+      "PENDING_FINALIZATION_VALIDATED_ENVIRONMENT": "validated defense/environment values frozen for AUX pass",
+      "FROZEN_RESEARCH_MECHANIC": "validated mechanics not retuned by AUX/final TP absent explicit dependency invalidation",
+      "PROVISIONAL_RESOURCE_SCAFFOLD": "resource/Space/TP scaffolding deferred to final Reactor/TP scarcity pass"
+    },
+    "baseBaselineId": "CP158-PF2",
+    "checkpoint": 159,
+    "purpose": "Pending-finalization research execution authority with CP158-bracketed AUX execution-center profiles promoted; Field Stabilizer magnitude, Repair Drone kit endurance, and late Crystalline headroom remain the only AUX closure questions."
+  },
+  "cp158AuxStudyBoundary": {
+    "coreDefenseValuesFrozen": true,
+    "mainsFrozenToExecutionCenter": true,
+    "pdsFrozenToExecutionCenter": true,
+    "resourceSupplyFinalizationDeferred": true,
+    "automaticPromotionFromAuxStudy": false
+  },
+  "pendingFinalizationAuxProfiles": {
+    "shieldBattery": {
+      "status": "PENDING_FINALIZATION_SELECTED_CP158",
+      "sourceCheckpoint": 158,
+      "sourceLadder": "SHIELD_BATTERY-L8",
+      "firstTl": 1,
+      "space": 1,
+      "mechanic": "finite emergency Shield restoration; automatic research-AI discharge below 50 percent Shield only; finite charges",
+      "byTl": {
+        "1": {
+          "restore": 2,
+          "charges": 1,
+          "tp": 0
+        },
+        "2": {
+          "restore": 2,
+          "charges": 1,
+          "tp": 0
+        },
+        "3": {
+          "restore": 2,
+          "charges": 1,
+          "tp": 0
+        },
+        "4": {
+          "restore": 4,
+          "charges": 2,
+          "tp": 0
+        },
+        "5": {
+          "restore": 4,
+          "charges": 2,
+          "tp": 0
+        },
+        "6": {
+          "restore": 6,
+          "charges": 3,
+          "tp": 0
+        },
+        "7": {
+          "restore": 6,
+          "charges": 3,
+          "tp": 0
+        },
+        "8": {
+          "restore": 8,
+          "charges": 3,
+          "tp": 0
+        },
+        "9": {
+          "restore": 8,
+          "charges": 3,
+          "tp": 0
+        }
+      }
+    },
+    "shieldBooster": {
+      "status": "PENDING_FINALIZATION_SELECTED_CP158",
+      "sourceCheckpoint": 158,
+      "sourceLadder": "SHIELD_BOOSTER-L8",
+      "firstTl": 2,
+      "space": 1,
+      "mechanic": "passive increase to maximum Shield Capacity",
+      "byTl": {
+        "2": {
+          "capacityBonus": 2,
+          "tp": 0
+        },
+        "3": {
+          "capacityBonus": 2,
+          "tp": 0
+        },
+        "4": {
+          "capacityBonus": 4,
+          "tp": 0
+        },
+        "5": {
+          "capacityBonus": 4,
+          "tp": 0
+        },
+        "6": {
+          "capacityBonus": 6,
+          "tp": 0
+        },
+        "7": {
+          "capacityBonus": 6,
+          "tp": 0
+        },
+        "8": {
+          "capacityBonus": 8,
+          "tp": 0
+        },
+        "9": {
+          "capacityBonus": 8,
+          "tp": 0
+        }
+      }
+    },
+    "shieldHardener": {
+      "status": "PENDING_FINALIZATION_SELECTED_CP158",
+      "sourceCheckpoint": 158,
+      "sourceLadder": "SHIELD_HARDENER-L8",
+      "firstTl": 3,
+      "space": 1,
+      "mechanic": "powered Shield DEF bonus; broad protection, strongest against Energy but not SPEN-specific",
+      "byTl": {
+        "3": {
+          "defBonusPp": 5,
+          "tp": 1
+        },
+        "4": {
+          "defBonusPp": 5,
+          "tp": 1
+        },
+        "5": {
+          "defBonusPp": 10,
+          "tp": 1
+        },
+        "6": {
+          "defBonusPp": 10,
+          "tp": 1
+        },
+        "7": {
+          "defBonusPp": 15,
+          "tp": 1
+        },
+        "8": {
+          "defBonusPp": 15,
+          "tp": 1
+        },
+        "9": {
+          "defBonusPp": 20,
+          "tp": 1
+        }
+      }
+    },
+    "ablativeArmor": {
+      "status": "PENDING_FINALIZATION_SELECTED_CP158",
+      "sourceCheckpoint": 158,
+      "sourceLadder": "ABLATIVE_ARMOR-L8",
+      "firstTl": 1,
+      "space": 1,
+      "mechanic": "one expendable outer layer that absorbs raw post-Shield damage before primary Armor; no tactical repair",
+      "byTl": {
+        "1": {
+          "ablativeIntegrity": 2,
+          "tp": 0
+        },
+        "2": {
+          "ablativeIntegrity": 2,
+          "tp": 0
+        },
+        "3": {
+          "ablativeIntegrity": 2,
+          "tp": 0
+        },
+        "4": {
+          "ablativeIntegrity": 4,
+          "tp": 0
+        },
+        "5": {
+          "ablativeIntegrity": 4,
+          "tp": 0
+        },
+        "6": {
+          "ablativeIntegrity": 8,
+          "tp": 0
+        },
+        "7": {
+          "ablativeIntegrity": 8,
+          "tp": 0
+        },
+        "8": {
+          "ablativeIntegrity": 10,
+          "tp": 0
+        },
+        "9": {
+          "ablativeIntegrity": 10,
+          "tp": 0
+        }
+      }
+    },
+    "energizedArmor": {
+      "status": "PENDING_FINALIZATION_SELECTED_CP158",
+      "sourceCheckpoint": 158,
+      "sourceLadder": "ENERGIZED_ARMOR-L8",
+      "firstTl": 5,
+      "space": 1,
+      "mechanic": "powered Armor RES bonus; passive Armor remains functional when unpowered",
+      "byTl": {
+        "5": {
+          "resBonusPp": 5,
+          "tp": 1
+        },
+        "6": {
+          "resBonusPp": 5,
+          "tp": 1
+        },
+        "7": {
+          "resBonusPp": 10,
+          "tp": 1
+        },
+        "8": {
+          "resBonusPp": 15,
+          "tp": 1
+        },
+        "9": {
+          "resBonusPp": 20,
+          "tp": 1
+        }
+      }
+    },
+    "crystallineArmor": {
+      "status": "PENDING_FINALIZATION_BOUNDARY_SUPPORTED_CP158",
+      "sourceCheckpoint": 158,
+      "sourceLadder": "CRYSTALLINE_ARMOR-L8",
+      "firstTl": 6,
+      "space": 0,
+      "mechanic": "non-regenerative Crystalline Armor branch: additional Armor capacity plus RES; sacrifices tactical Armor regeneration",
+      "closureRequired": "TL8-TL9 headroom only; do not re-run broad CP158 surface",
+      "byTl": {
+        "6": {
+          "capacityBonus": 2,
+          "resBonusPp": 0,
+          "tp": 0
+        },
+        "7": {
+          "capacityBonus": 4,
+          "resBonusPp": 5,
+          "tp": 0
+        },
+        "8": {
+          "capacityBonus": 6,
+          "resBonusPp": 10,
+          "tp": 0
+        },
+        "9": {
+          "capacityBonus": 8,
+          "resBonusPp": 15,
+          "tp": 0
+        }
+      }
+    },
+    "fieldStabilizer": {
+      "status": "PENDING_FINALIZATION_MECHANIC_MAGNITUDE_OPEN",
+      "sourceCheckpoint": 159,
+      "firstTl": 7,
+      "space": 1,
+      "mechanic": "anti-SPEN Shield tuner: while active, subtract its rating from incoming SPEN before effective Shield DEF is calculated; cannot reduce SPEN below zero",
+      "identity": "specialist counter to high-SPEN attacks; unlike Shield Hardener it provides no benefit against SPEN 0 attacks",
+      "closureRequired": "sweep SPEN reduction well beyond CP158 1-4 and compare same-cost value to promoted Shield Hardener",
+      "byTl": {}
+    },
+    "repairDroneBay": {
+      "status": "PENDING_FINALIZATION_MECHANIC_KIT_ENDURANCE_OPEN",
+      "sourceCheckpoint": 159,
+      "firstTl": 2,
+      "space": 1,
+      "mechanic": "adds one parallel Damage Control action per Damage Control phase; drone action must target a different repair target than the crew action; it is not a same-target reroll",
+      "attemptRules": "uses normal target-specific Damage Control success chance, normal per-attempt Tactical Power cost, and one Repair Kit per attempt; destroyed components remain non-field-repairable unless the underlying Damage Control rules change",
+      "repairKitRule": "extra prepared Repair Kits are swept from 0 through +100 percent of the ship default kit load (total load from 100 to 200 percent); execution-center kit bonus is not selected until CP159 evidence closes endurance",
+      "byTl": {}
+    },
+    "kineticMagazine": {
+      "status": "PENDING_FINALIZATION_ENDURANCE_ONLY",
+      "sourceCheckpoint": 158,
+      "firstTl": 1,
+      "space": 1,
+      "mechanic": "+25 Kinetic ammunition; duel outcome effectively nonbinding in CP158; value is endurance/logistics",
+      "byTl": {
+        "1": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "2": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "3": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "4": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "5": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "6": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "7": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "8": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "9": {
+          "ammoBonus": 25,
+          "tp": 0
+        }
+      }
+    },
+    "missileMagazine": {
+      "status": "PENDING_FINALIZATION_ENDURANCE_ONLY",
+      "sourceCheckpoint": 158,
+      "firstTl": 1,
+      "space": 1,
+      "mechanic": "+25 Missile Flights; duel outcome effectively nonbinding in CP158; value is endurance/logistics",
+      "byTl": {
+        "1": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "2": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "3": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "4": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "5": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "6": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "7": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "8": {
+          "ammoBonus": 25,
+          "tp": 0
+        },
+        "9": {
+          "ammoBonus": 25,
+          "tp": 0
+        }
+      }
+    }
+  },
+  "cp159AuxClosureBoundary": {
+    "closedAndPromoted": [
+      "Shield Battery",
+      "Shield Booster",
+      "Shield Hardener",
+      "Ablative Armor",
+      "Energized Armor",
+      "Kinetic Magazine",
+      "Missile Magazine"
+    ],
+    "boundaryPromoted": [
+      "Crystalline Armor"
+    ],
+    "mechanicPromotedMagnitudeOpen": [
+      "Field Stabilizer"
+    ],
+    "mechanicPromotedKitEnduranceOpen": [
+      "Repair Drone Bay"
+    ],
+    "repairDroneCp158Placeholder": "SUPERSEDED: CP158 chance-bonus/finite-extra-kit placeholder is retained as historical evidence only and must not be interpreted as the CP159 mechanic.",
+    "remainingQuestions": [
+      "Field Stabilizer high-SPEN magnitude/cost region",
+      "Repair Drone extra-kit endurance with +1 distinct-target DamCon action",
+      "Crystalline Armor TL8-TL9 headroom"
+    ],
+    "reactorTp": "DEFERRED_UNCHANGED: final Reactor/TP scarcity remains after AUX closure."
+  }
+}

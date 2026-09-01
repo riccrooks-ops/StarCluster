@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://starcluster.local/schemas/tl1_internal_damage_calibration_schema_v0_1.json",
+  "title": "Star Cluster TL1 Internal Damage Calibration Study",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "baselineSha256",
+    "masterSeed",
+    "trialsPerVariant",
+    "variants"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-tl1-internal-damage-calibration-v1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baselineSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{64}$"
+    },
+    "masterSeed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "trialsPerVariant": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 80,
+      "maxItems": 80,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "density",
+          "protectedCompartmentation",
+          "damageControl",
+          "loadout",
+          "damageTempo"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "density": {
+            "enum": [
+              "Percent15",
+              "Percent20",
+              "Percent25",
+              "Percent33",
+              "Percent50"
+            ]
+          },
+          "protectedCompartmentation": {
+            "type": "boolean"
+          },
+          "damageControl": {
+            "type": "boolean"
+          },
+          "loadout": {
+            "enum": ["kinetic", "missile"]
+          },
+          "damageTempo": {
+            "enum": ["steady", "burst"]
+          }
+        }
+      }
+    }
+  }
+}

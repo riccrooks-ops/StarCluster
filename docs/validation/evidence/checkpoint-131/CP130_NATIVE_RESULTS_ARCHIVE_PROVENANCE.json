@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "star-cluster-native-results-provenance-v0.1",
+  "checkpoint": 130,
+  "archive": "CP130_NATIVE_RESULTS_ORIGINAL.zip",
+  "sizeBytes": 740188,
+  "sha256": "76046a208d25434747ee434094d39e3549ee033b95bde15d3c023fcdad957a17",
+  "repositoryManifestSha256": "221fdda44c7db8c4071e915aff2791a7987160afec82bb572bc1e9261349c461",
+  "familyPlotInputsSha256": "f5fa84e8d63938217501ef09a67b8a23f984cbcbe9640d7468e4dbb95636ba35",
+  "missileContextTelemetrySha256": "a73eb41cb57c78ea49f91dc6839858be81860923a47cc256019a72d497534b45",
+  "retentionPolicy": "compact full native-results archive retained because it is below the active evidence-ZIP size threshold"
+}

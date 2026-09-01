@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "star-cluster-canonical-numerical-authority-v0.6",
+  "checkpoint": 135,
+  "acceptedMechanicsAndResearchBaseline": 134,
+  "previousCandidateNumericalBaseline": 133,
+  "status": "recharge_damage_control_candidate_rebaseline_pending_native_validation",
+  "damagePointScale": 2,
+  "primaryReferenceMatrix": "technology_numerical_matrix_v0_7.json",
+  "primaryTechnologyTable": "technology_component_table_v0_8b.json",
+  "primaryWorkbook": "StarCluster_Revised_TL1_TL9_Technology_Component_Table_v0_8b.xlsx",
+  "storyboard": "technology_family_storyboard_v1_5.json",
+  "storyboardReconciled": false,
+  "productionRuntimeChanged": false,
+  "technologyValuesChanged": true,
+  "changedFamilies": [
+    "shield",
+    "damage_control"
+  ],
+  "frozenForComparison": [
+    "hull",
+    "armor",
+    "kinetic_main",
+    "energy_main",
+    "missile_delivery",
+    "missile_guidance",
+    "missile_gp_warhead",
+    "missile_swarmer",
+    "reactor",
+    "stl",
+    "computer",
+    "sensor",
+    "pds"
+  ],
+  "sameTlComparison": "Exact CP134 context/variant population, same master seed and physical identities; adds Hull-only DamCon execution/telemetry.",
+  "authorityBoundary": "CP135 is a narrow candidate delta and before/after study. It does not promote balance or alter the Storyboard. CP134 remains accepted evidence for the prior full-reset Shield baseline."
+}

@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "star-cluster-cp131-late-missile-warhead-maturation-v0.1",
+  "checkpoint": 131,
+  "title": "Late Missile Warhead Maturation DAM x SPEN Sweep",
+  "status": "candidate",
+  "acceptedBaselineCheckpoint": 130,
+  "acceptedNumericalCheckpoint": 128,
+  "acceptedImplementationBaseline": 122,
+  "sourceMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_5.json",
+  "acceptedCp130FamilyResults": "docs/validation/evidence/checkpoint-131/accepted-cp130/family_plot_inputs.csv",
+  "acceptedCp130Tl1To7Plus2Baseline": "docs/validation/evidence/checkpoint-131/accepted-cp130/tl1_7_plus2_baseline.csv",
+  "acceptedCp130LateAnchorBaseline": "docs/validation/evidence/checkpoint-131/accepted-cp130/late_anchor_baseline.csv",
+  "shipTechnologyPolicy": "pure_same_tl_components_per_ship",
+  "mixedTlShipsExecuted": false,
+  "technologyValuesChanged": false,
+  "productionSourceChanged": false,
+  "scenarioDefinitionsChanged": false,
+  "researchSimulationChanged": true,
+  "automaticPromotion": false,
+  "balanceValidated": false,
+  "pairingSeed": 12520260816,
+  "masterSeed": 12720260817,
+  "recommendedJobs": 24,
+  "trialsPerVariant": 100,
+  "provisionalTl1To7Policy": {
+    "source": "accepted_cp130_damage_plus_2",
+    "researchOnly": true,
+    "rerunInCp131": false
+  },
+  "latePrimarySweep": {
+    "8": {
+      "anchor": {"damage": 17, "spen": 3, "apen": 4, "cp130Candidate": "d17_sp3"},
+      "damageValues": [15, 16, 17, 18, 19],
+      "spenValues": [3, 4, 5, 6],
+      "apen": 4
+    },
+    "9": {
+      "anchor": {"damage": 18, "spen": 4, "apen": 5, "cp130Candidate": "d18_sp4_ap5"},
+      "damageValues": [16, 17, 18, 19, 20],
+      "spenValues": [4, 5, 6, 7],
+      "apen": 5
+    }
+  },
+  "tl9Apen6ThresholdProbes": [
+    {"damage": 16, "spen": 4, "apen": 6, "class": "apen6_low_yield_anchor"},
+    {"damage": 17, "spen": 5, "apen": 6, "class": "apen6_rising_frontier"},
+    {"damage": 18, "spen": 4, "apen": 6, "class": "apen6_cp130_anchor_isolation"},
+    {"damage": 18, "spen": 6, "apen": 6, "class": "apen6_penetration_heavy"},
+    {"damage": 19, "spen": 6, "apen": 6, "class": "apen6_high_output_balanced"},
+    {"damage": 20, "spen": 7, "apen": 6, "class": "apen6_upper_bound"}
+  ],
+  "researchQuestions": [
+    "At TL8 and TL9, how much high-output antimatter DAM and Shield Penetration are required to keep a single Main GP Missile credible against contemporary Kinetic and Energy ships?",
+    "Does increasing SPEN restore late Missile viability more efficiently than continuing to add raw DAM?",
+    "At TL9, does crossing the Armor Protection 6 threshold with APEN6 materially change viability after Shield/PDS pressure is accounted for?",
+    "Do PDS and Shields remain meaningful counters across any viable late-warhead candidate?",
+    "Can the accepted CP130 TL8/TL9 anchor results be reproduced exactly while the accepted TL1-TL7 +2 DAM results remain frozen reference evidence?"
+  ],
+  "interpretationPolicy": {
+    "fiftyPercentIsNotABalanceTarget": true,
+    "preferLowestReasonableMaturationPackage": true,
+    "missilePayloadShouldRemainHighDamage": true,
+    "pdsMustRemainMeaningful": true,
+    "shieldsMustRemainMeaningful": true,
+    "auxMagazineMustNotBeRequiredForBaselineViability": true,
+    "specialistWarheadsShouldRemainAdvantageousInTheirNiche": true,
+    "matterConversionWarheadRemainsDeferred": true,
+    "noAutomaticPromotion": true
+  },
+  "expected": {
+    "rawBuildCombinations": 14112,
+    "legalBuilds": 9427,
+    "tl8Candidates": 20,
+    "tl9Candidates": 26,
+    "generatedVariants": 476936,
+    "pipelineSmokeTrials": 476936,
+    "substantiveTrials": 47693600
+  }
+}

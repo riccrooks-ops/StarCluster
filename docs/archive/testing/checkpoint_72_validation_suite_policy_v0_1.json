@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": "72",
+  "normal": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 39,
+    "substantiveTrials": 390000,
+    "smokeTrials": 39,
+    "totalTrialExecutions": 390039,
+    "actualConsumerPreflightRequired": true,
+    "fullPipelineSmokeRequired": true
+  },
+  "deepCalibration": {
+    "stageCount": 30,
+    "monteCarloVariantCount": 1583,
+    "substantiveTrials": 15830000,
+    "smokeTrials": 39,
+    "totalTrialExecutions": 15830039,
+    "defaultRequired": false
+  },
+  "blockingBalanceTargets": false,
+  "productionControls": {
+    "reactorOutput": 5,
+    "sensorProfile": "balanced-0",
+    "sensorDiscriminationResistance": 0,
+    "sameHexBurnThroughResistance": 1,
+    "ecmNormalRating": 1,
+    "ecmNormalPowerCost": 1,
+    "eccmNormalRating": 1,
+    "eccmNormalPowerCost": 1,
+    "movementPhaseFireImplementedByCheckpoint72": false,
+    "degradedFireImplementedByCheckpoint72": false
+  },
+  "studyControls": {
+    "variantCount": 39,
+    "operationalVariantCount": 30,
+    "pointBlankVariantCount": 9,
+    "clearCount": 9,
+    "unilateralAutomaticEccmCount": 9,
+    "unilateralReactiveEccmCount": 9,
+    "bilateralAutomaticEccmCount": 6,
+    "bilateralReactiveEccmCount": 6,
+    "ecmBeforeEccm": true,
+    "ewInitiativeReroll": false,
+    "reservedPowerMeansUncommittedPower": true
+  },
+  "nativeAcceptanceDependencyContract": {
+    "powerShellAndPinnedDotNetOnly": true,
+    "pythonRuntimeDependencyRejected": true
+  },
+  "mustAlwaysRunStageIds": [
+    "deterministic",
+    "tl1-phase-a",
+    "tl1-phase-b",
+    "tl1-installation-space-envelope",
+    "tl1-sensor-ew-foundation",
+    "tl1-reactive-ew-subphase-preflight",
+    "tl1-reactive-ew-subphase-smoke",
+    "tl1-reactive-ew-subphase",
+    "auxiliary-resource-endurance",
+    "checkpoint-53-resource-semantics-lock",
+    "runner-self-tests"
+  ],
+  "notes": "CP72 changes timing/response semantics, not Sensor/EW numerical values. SFB-inspired movement-phase engagement windows remain Concept-only."
+}

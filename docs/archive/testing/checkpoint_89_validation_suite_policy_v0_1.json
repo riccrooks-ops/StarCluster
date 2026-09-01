@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "star-cluster-checkpoint-validation-suite-policy-v1",
+  "checkpointId": "89",
+  "suiteTier": "must_run",
+  "mustRun": {
+    "configuredRunnerStages": 8,
+    "monteCarloVariantCount": 0,
+    "scenarioRunnerSelfTestsExpected": 54,
+    "repositoryDocumentationContractRequired": true,
+    "acceptedCp88ProvenanceRequired": true,
+    "productionCodeFreezeRequired": true,
+    "componentCatalogRequired": true,
+    "conceptEwMultiplicityRuleRequired": true,
+    "activeArchiveBoundaryRequired": true,
+    "nativeDependencyPrecheckRequired": true
+  },
+  "documentationHygiene": {
+    "oneActiveConcept": true,
+    "parallelDocsCheckpointsTreeAllowed": false,
+    "supersededTechnologyStudiesAllowedInActiveTechnologyDirectory": false,
+    "supersededTestingPoliciesAllowedInActiveTestingDirectory": false,
+    "supersededAiArchitectureVersionsAllowedInActiveAiDirectory": false,
+    "historicalMaterialMayBeArchived": true,
+    "unnecessaryRedundantMaterialMayBeDeleted": true
+  },
+  "ewMultiplicity": {
+    "redundantEcmInstallationsAllowed": true,
+    "redundantEccmInstallationsAllowed": true,
+    "sameTypeRatingsAdditive": false,
+    "resolution": "highest_applicable_functional_rating"
+  },
+  "promotion": {
+    "automaticCandidatePromotion": false,
+    "balanceRetuningInCheckpoint": false
+  },
+  "deepCalibration": {
+    "defaultRun": false,
+    "additionalStochasticWork": false,
+    "reason": "CP89 does not change simulation/combat implementation or numerical balance candidates."
+  }
+}

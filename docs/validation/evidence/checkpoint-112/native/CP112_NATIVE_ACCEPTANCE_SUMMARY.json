@@ -1,0 +1,21 @@
+{
+  "checkpoint": 112,
+  "nativeAccepted": true,
+  "acceptedDate": "2026-08-15",
+  "pythonVersion": "3.13.14",
+  "selfTests": {
+    "run": 36,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "parityPassed": true,
+  "parityCases": 25,
+  "substantiveVariants": 1200,
+  "trialsPerVariant": 2000,
+  "totalEngagements": 2400000,
+  "elapsedSeconds": 95.62314109998988,
+  "failedGates": [],
+  "trialErrors": 0,
+  "status": "accepted_native_evidence"
+}

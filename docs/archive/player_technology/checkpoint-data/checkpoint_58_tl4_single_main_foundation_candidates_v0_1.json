@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-58-tl4-single-main-foundation-candidates-v0_1",
+  "checkpoint": 58,
+  "status": "screening_only_no_automatic_promotion",
+  "generationalTarget": "75-80% conditional as a starting screening region; specialization resistance remains required",
+  "weaponCapacityPolicy": "one main weapon for standard player cruiser at TL1-TL9",
+  "tl3FrozenProfile": "tl3-production",
+  "tl4Control": "tl4-single-control",
+  "axisProfiles": [
+    "tl4-single-control",
+    "tl4-fire-control-foundation",
+    "tl4-output-power-foundation",
+    "tl4-reactor-foundation",
+    "tl4-structure-foundation",
+    "tl4-armor-protection-foundation",
+    "tl4-shield-foundation",
+    "tl4-mobility-foundation"
+  ],
+  "packageProfiles": [
+    "tl4-package-firecontrol-reactor",
+    "tl4-package-firepower-reactor",
+    "tl4-package-structure-reactor",
+    "tl4-package-firepower-structure-reactor",
+    "tl4-package-firepower-ap-reactor",
+    "tl4-package-firepower-mobility-reactor"
+  ],
+  "notes": [
+    "Higher-output weapon candidates add +1 damage and +1 Tactical Power activation cost to Kinetic, Energy, and Missile families.",
+    "Reactor +1 is screened separately and in composed packages.",
+    "No base TL4 profile is promoted by this checkpoint."
+  ]
+}

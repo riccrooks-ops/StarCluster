@@ -1,0 +1,229 @@
+{
+  "checkpoint": 165,
+  "passed": true,
+  "checksPassed": 44,
+  "checksTotal": 44,
+  "failed": [],
+  "checks": [
+    {
+      "name": "exists:docs/CURRENT_AUTHORITIES.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:docs/Star_Cluster_Game_Concept.docx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:docs/design/combat/Combat_System_Reference.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:docs/design/player_technology/Current_Technology_Tree.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:docs/design/player_technology/StarCluster_Current_TL1_TL9_Technology_Tree.xlsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:docs/design/player_technology/current_working_technology_baseline.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:docs/design/player_technology/component_installation_space_catalog.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:docs/design/player_technology/auxiliary_component_catalog.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:docs/design/testing/Current_Testing_Architecture.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:docs/references/player_technology/Technology_Family_Storyboard.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:docs/references/player_technology/Technology_Idea_Register.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "player-tech-active-set",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "testing-active-set",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "old-concept-not-active",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "old-concept-archived",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "prod-hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "pf4-hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "baseline-cp165",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "space-ladder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reactor-space",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reactor-tp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "apu-space",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "apu-tp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "apu-no-cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "defres",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "def-ladder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "res-ladder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "caps",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "direct-fire",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "concept:DEF/RES v1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "concept:5/6/7/8/9/10/11/12/13 Operational TP",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "concept:Auxiliary Power Unit (APU)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "concept:Repair Drone Bay",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "concept:Approximate direct fire",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "concept:Swarmer",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "player-relocation-count",
+      "passed": true,
+      "detail": "116"
+    },
+    {
+      "name": "testing-relocation-count",
+      "passed": true,
+      "detail": "92"
+    },
+    {
+      "name": "dotnet-parity-fixtures-archived",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "scenario-runner-legacy-defaults-archived",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "production-runtime-frozen",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "cp164-provenance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "excluded:shieldArmor",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "excluded:legacyApproxPenaltyPp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "excluded:researchBaselineCandidate",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

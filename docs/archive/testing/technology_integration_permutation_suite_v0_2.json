@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "star-cluster-technology-integration-permutation-suite-v1",
+  "id": "technology-integration-permutation-suite-v0_2",
+  "checkpoint": 82,
+  "status": "standing_scenario_coverage_definition",
+  "purpose": "Reusable technology-integration axes, validated package definitions, pairing rules, and coverage policy for sequential TL design without rebuilding a bespoke stochastic harness for each checkpoint.",
+  "supersedesForCurrentPlanning": "technology-integration-permutation-suite-v0_1",
+  "retainedHistoricalStudy": {
+    "id": "tl2-itc08-tactical-computer-ew-integration-permutations",
+    "checkpoint": "81a",
+    "variantCount": 96
+  },
+  "validatedTechnologyPackages": {
+    "tl1-information-control": {
+      "tacticalComputerTargetingPp": 10,
+      "sensorDiscriminationResistance": 0,
+      "ecmNormalCeiling": 1,
+      "eccmNormalCeiling": 1,
+      "ewTpPerRating": 1
+    },
+    "tl2-information-control-working": {
+      "profile": "docs/design/player_technology/tl2_computing_sensor_ew_working_profile_v0_1.json",
+      "tacticalComputerTargetingPp": 12,
+      "sensorDiscriminationResistance": 1,
+      "ecmNormalCeiling": 2,
+      "eccmNormalCeiling": 2,
+      "ewTpPerRating": 1
+    }
+  },
+  "reusableAxes": {
+    "sideAWeaponFamily": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "opponentFamily": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "geometry": [
+      "fixed-range",
+      "dynamic-side-a-first",
+      "dynamic-side-b-first"
+    ],
+    "informationControlPackage": [
+      "tl1-information-control",
+      "tl2-information-control-working",
+      "mixed-tech-explicit"
+    ],
+    "powerEnvironment": [
+      "accepted-reference",
+      "diagnostic-sensitivity"
+    ],
+    "degradedFirePermission": [
+      "firm-only",
+      "explicit-weapon-capability-diagnostic"
+    ],
+    "doctrine": [
+      "accepted-policy",
+      "explicit-diagnostic-policy"
+    ]
+  },
+  "pairingPolicy": {
+    "sharedRandomStreamKey": "comparisonGroup",
+    "useCommonRandomStreamsWherePractical": true,
+    "note": "Candidate/control variants should share random streams whenever the changed dimension permits a clean paired comparison."
+  },
+  "activationPolicy": [
+    "Activate only the smallest dependency-relevant submatrix needed to answer the checkpoint question.",
+    "Include mixed-TL and high-power-demand contexts whenever a new component can change power, reach, EW, targeting, or defense opportunity cost.",
+    "Use actual-consumer preflight plus one-trial full-pipeline smoke before substantive Monte Carlo for any new or materially changed integrated study.",
+    "Audit dispatch, pre-run validation, all shared/global release-gate classifications, study-family whitelists, study-specific gates, report routing, schema/baseline bindings, and checkpoint stage definitions before handoff.",
+    "Keep outcome/balance targets review-only unless the checkpoint explicitly promotes a deterministic invariant; never make one-trial smoke depend on statistical outcomes."
+  ],
+  "currentCoverage": {
+    "acceptedStudies": [
+      "tl2-itc06-sensor-ew-discrimination-isolation",
+      "tl2-itc07-ew-power-pressure-tall-viability",
+      "tl2-itc08-tactical-computer-ew-integration-permutations"
+    ],
+    "nextExpansion": "Add only the subsystem axis changed by the next TL2 integration pass; preserve the validated information-control working package as a reusable package rather than reconstructing its individual values ad hoc."
+  }
+}

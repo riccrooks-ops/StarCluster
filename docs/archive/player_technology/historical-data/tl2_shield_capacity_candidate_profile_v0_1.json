@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "star-cluster-tl2-shield-capacity-candidate-profile-v1",
+  "id": "tl2-shield-capacity-candidate-profile-v0_1",
+  "checkpoint": 85,
+  "status": "validated_working_candidate_with_upper_sensitivity_not_production_data",
+  "purpose": "Record the CP84-validated TL2 Shield Capacity 3 working candidate while retaining Shield 4 only as an upper sensitivity; recharge, hardening, Installation Space, damage-condition behavior, and other defensive properties remain separate.",
+  "researchOwnership": "Shields / Defense",
+  "tl1Reference": {
+    "technologyRole": "Baseline shield generator",
+    "installationSpace": 3,
+    "shieldCapacity": 2,
+    "baseRechargePerTurn": 1,
+    "tacticalRechargePerPower": 1,
+    "tacticalRechargePowerCap": 2,
+    "shieldArmor": 0,
+    "status": "current_working_reference"
+  },
+  "tl2SensitivityCandidates": [
+    {
+      "shieldCapacity": 3,
+      "role": "validated_working_candidate",
+      "interpretation": "CP84 native evidence supports Capacity 3 at the unchanged 3-Space footprint as the current TL2 working candidate. It crosses the standard Kinetic shield-facing packet breakpoint but does not broadly dominate every weapon family."
+    },
+    {
+      "shieldCapacity": 4,
+      "role": "upper_sensitivity_not_promoted",
+      "interpretation": "Intentional upper bound to expose integer damage/recharge breakpoints; not a default promotion target."
+    }
+  ],
+  "powerCross": {
+    "tl1PeakFissionOperationalTp": 5,
+    "tl2EarlyPracticalFusionOperationalTp": 6,
+    "reactorInstallationSpaceHeld": 6,
+    "cp83Status": "validated_working_candidate"
+  },
+  "isolationControls": {
+    "shieldInstallationSpaceHeld": 3,
+    "shieldBaseRechargeHeld": 1,
+    "shieldTacticalRechargePerPowerHeld": 1,
+    "shieldTacticalRechargePowerCapHeld": 2,
+    "shieldArmorHeld": 0,
+    "shieldHardenerAdded": false,
+    "shieldOverloadAdded": false,
+    "shieldConditionMappingChanged": false,
+    "shieldPowerMaintenanceAdded": false,
+    "evasiveCompensationPp": 0,
+    "sensorRangeChanged": false,
+    "sensorEwOverloadChanged": false,
+    "productionValuesPromoted": false
+  },
+  "informationControlEnvironments": [
+    {
+      "id": "firm-reference",
+      "description": "Unjammed Firm control with +12 TL2 Tactical Computer assistance."
+    },
+    {
+      "id": "tall-dr1-eccm1",
+      "description": "Contemporary TL2 DR1 Sensor + reactive ECCM1 against ECM2; explicitly exercises recharge competition with support power."
+    }
+  ],
+  "studyDesign": {
+    "studyId": "tl2-itc10-shield-capacity-power-integration-permutations",
+    "sideAWeaponFamilies": [
+      "Kinetic",
+      "Energy"
+    ],
+    "opponentFamilies": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "geometry": [
+      "fixed-range-3",
+      "dynamic-side-a-first",
+      "dynamic-side-b-first"
+    ],
+    "shieldCapacities": [
+      2,
+      3,
+      4
+    ],
+    "reactorOutputs": [
+      5,
+      6
+    ],
+    "variantCount": 216,
+    "trialsPerVariantDefault": 10000,
+    "pairedCommonRandomStreams": true,
+    "outcomesReviewOnly": true
+  },
+  "promotionBoundary": [
+    "Shield Capacity 3 is a validated working candidate, not yet production component data.",
+    "Shield Capacity 4 remains an upper sensitivity and is not promoted at TL2.",
+    "Future shield progression must treat capacity, recharge, hardening, Space, efficiency, and condition behavior as separate properties unless separately validated."
+  ],
+  "nativeEvidence": {
+    "checkpoint": "84",
+    "studyId": "tl2-itc10-shield-capacity-power-integration-permutations",
+    "summarySha256": "8dcba60f0b0239eefbf75cb1a7a03f0aa18fa4862a9d38134e435c770165e26c",
+    "variants": 216,
+    "substantiveTrials": 2160000,
+    "failedGates": 0,
+    "trialErrors": 0,
+    "finding": "Shield 3 is a validated TL2 working candidate; Shield 4 remains an upper sensitivity because it crosses the standard Missile shield-facing packet breakpoint and produced much stronger defensive effects."
+  }
+}

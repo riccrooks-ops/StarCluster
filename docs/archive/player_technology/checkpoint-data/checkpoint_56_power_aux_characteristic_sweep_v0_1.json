@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-56-power-aux-characteristic-sweep-v0_1",
+  "checkpoint": 56,
+  "status": "screening_only",
+  "principles": [
+    "Each installed power AUX is independent.",
+    "Equal capacity is the primary comparison axis.",
+    "One-slot mixed builds are valued separately for flexibility.",
+    "No TL4 continuation is implied by a TL3 candidate."
+  ],
+  "batteryCandidates": [
+    {
+      "id": "aux-r56-b3g1",
+      "displayName": "TL3 Combat Battery 3x+1 TP",
+      "component": {
+        "id": "b3g1-battery",
+        "kind": "CombatBattery",
+        "combatBatteryGain": 1,
+        "combatBatteryCharges": 3,
+        "capacitorCapacity": 0,
+        "capacitorChargeRate": 0,
+        "capacitorDischargeRate": 0
+      }
+    },
+    {
+      "id": "aux-r56-b4g1",
+      "displayName": "TL3 Combat Battery 4x+1 TP",
+      "component": {
+        "id": "b4g1-battery",
+        "kind": "CombatBattery",
+        "combatBatteryGain": 1,
+        "combatBatteryCharges": 4,
+        "capacitorCapacity": 0,
+        "capacitorChargeRate": 0,
+        "capacitorDischargeRate": 0
+      }
+    },
+    {
+      "id": "aux-r56-b3g2",
+      "displayName": "TL3 Combat Battery 3x+2 TP",
+      "component": {
+        "id": "b3g2-battery",
+        "kind": "CombatBattery",
+        "combatBatteryGain": 2,
+        "combatBatteryCharges": 3,
+        "capacitorCapacity": 0,
+        "capacitorChargeRate": 0,
+        "capacitorDischargeRate": 0
+      }
+    },
+    {
+      "id": "aux-r56-b4g2",
+      "displayName": "TL3 Combat Battery 4x+2 TP",
+      "component": {
+        "id": "b4g2-battery",
+        "kind": "CombatBattery",
+        "combatBatteryGain": 2,
+        "combatBatteryCharges": 4,
+        "capacitorCapacity": 0,
+        "capacitorChargeRate": 0,
+        "capacitorDischargeRate": 0
+      }
+    }
+  ],
+  "capacitorCandidates": [
+    {
+      "id": "aux-r56-c2d1",
+      "displayName": "TL3 Power Capacitor 2 stored / +1 TP discharge",
+      "component": {
+        "id": "c2d1-capacitor",
+        "kind": "PowerCapacitor",
+        "combatBatteryGain": 0,
+        "combatBatteryCharges": 0,
+        "capacitorCapacity": 2,
+        "capacitorChargeRate": 1,
+        "capacitorDischargeRate": 1
+      }
+    },
+    {
+      "id": "aux-r56-c3d1",
+      "displayName": "TL3 Power Capacitor 3 stored / +1 TP discharge",
+      "component": {
+        "id": "c3d1-capacitor",
+        "kind": "PowerCapacitor",
+        "combatBatteryGain": 0,
+        "combatBatteryCharges": 0,
+        "capacitorCapacity": 3,
+        "capacitorChargeRate": 1,
+        "capacitorDischargeRate": 1
+      }
+    },
+    {
+      "id": "aux-r56-c2d2",
+      "displayName": "TL3 Power Capacitor 2 stored / +2 TP discharge",
+      "component": {
+        "id": "c2d2-capacitor",
+        "kind": "PowerCapacitor",
+        "combatBatteryGain": 0,
+        "combatBatteryCharges": 0,
+        "capacitorCapacity": 2,
+        "capacitorChargeRate": 1,
+        "capacitorDischargeRate": 2
+      }
+    },
+    {
+      "id": "aux-r56-c3d2",
+      "displayName": "TL3 Power Capacitor 3 stored / +2 TP discharge",
+      "component": {
+        "id": "c3d2-capacitor",
+        "kind": "PowerCapacitor",
+        "combatBatteryGain": 0,
+        "combatBatteryCharges": 0,
+        "capacitorCapacity": 3,
+        "capacitorChargeRate": 1,
+        "capacitorDischargeRate": 2
+      }
+    }
+  ],
+  "auxiliaryReactor": {
+    "capacityCost": 2,
+    "sustainedTacticalPower": 1
+  },
+  "capacitorChargeRateHeldConstant": 1
+}

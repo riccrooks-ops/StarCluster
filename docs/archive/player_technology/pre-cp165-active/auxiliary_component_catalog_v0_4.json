@@ -1,0 +1,1009 @@
+{
+  "schemaVersion": "star-cluster-installed-support-component-catalog-v0.4",
+  "id": "player-standard-support-component-catalog-v0_4",
+  "title": "Player Installed Support / Auxiliary Component Reference-Swept Catalog",
+  "status": "cp138_reference_swept_no_new_numerical_promotion",
+  "checkpoint": 138,
+  "foundation": {
+    "universalInstallationSpace": true,
+    "auxiliaryIsRoleNotPool": true,
+    "standardAuxiliaryResearchTree": false,
+    "supportComponentKissRule": "An optional support/AUX component belongs only when it materially changes what the player can do, what risk they face, or how efficiently they perform an existing gameplay activity.",
+    "existingCombatMechanicsRevisedByThisCheckpoint": false,
+    "newNumericalValuesAssignedByCp107": false,
+    "obsoleteSeparateAuxiliaryCapacityCatalogArchived": true,
+    "legacyPathCopyRetainedForFrozenConsumers": true,
+    "newNumericalValuesAssignedByCp108": false,
+    "pythonAllowedForDevelopmentTesting": true,
+    "productionGameRuntimeLanguage": "C# / Godot",
+    "newNumericalValuesAssignedByCp138": false,
+    "cp138WholeCatalogCoverage": true,
+    "cp138CombatExecutionBoundary": "Only already-executable ECM/ECCM, PDS families, and Shield Hardener enter the primary full-ship combat sweep; campaign/TBD AUX are covered architecturally and power-supply/storage AUX are held for the later Reactor phase."
+  },
+  "components": [
+    {
+      "id": "ablative-armor",
+      "name": "Ablative Armor Layer",
+      "owner": "Armor",
+      "window": "TL1",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": 1,
+      "status": "architecture_locked_starting_legal",
+      "gameplayLoop": "Ship design / layered defense",
+      "mechanicalIdentity": "Optional expendable outer armor layer; normally replaced rather than repaired in combat.",
+      "notes": "Explicit CP108 decision: costs 1 universal Installation Space; not preinstalled.",
+      "referenceBasis": [
+        "RM-THEME-006",
+        "RM-THEME-007",
+        "SD-DC-008"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "combat-generalist",
+        "damage-resilience"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "specialist_architecture_defer_until_explicit_threat_or_mechanic",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "communications-relay",
+      "name": "Communications Relay / Mission Communications Suite",
+      "owner": "Computing / Fire Control",
+      "window": "TL1-7",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Exploration / diplomacy / datalinks / strategic awareness",
+      "mechanicalIdentity": "Improves contact, beacon, relay, or strategic communication options while preserving observability/provenance.",
+      "notes": "Starting-legal candidate placement follows the IDEA window; exact effect remains TBD.",
+      "referenceBasis": [
+        "RM-THEME-013",
+        "SD-SW-035",
+        "SD-Q09-006",
+        "SD-Q09-007",
+        "SD-Q24-011"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "information-control",
+        "expedition-survey",
+        "assault-relief"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "scientific-laboratory",
+      "name": "Scientific Laboratory",
+      "owner": "Computing / Fire Control",
+      "window": "TL1-6",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Exploration / Research Data / alien technology",
+      "mechanicalIdentity": "Improves analysis of anomalies, samples, ruins, artifacts, and Research Data.",
+      "notes": "Must change outcomes or efficiency rather than exist as flavor.",
+      "referenceBasis": [
+        "RM-THEME-014",
+        "SD-Q06-001",
+        "SD-Q06-006"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "expedition-survey"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "energy-pds",
+      "name": "Energy / Beam Point-Defense Array",
+      "owner": "Energy Weapons",
+      "window": "TL1+",
+      "placementTl": 1,
+      "kind": "defensive_component",
+      "space": "current profile / no new CP108 value",
+      "status": "existing_family",
+      "gameplayLoop": "Terminal defense / power allocation",
+      "mechanicalIdentity": "Power-intensive ammunition-free beam interception.",
+      "notes": "CP106 established TL1 baseline; obsolete CP43 TL2 floor is superseded.",
+      "referenceBasis": [
+        "RM-THEME-006",
+        "SD-SW-010",
+        "SD-SW-011",
+        "SD-SW-038",
+        "SD-SW-039"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "combat-generalist",
+        "missile-defense-escort"
+      ],
+      "cp138CombatExecution": true,
+      "sweepDisposition": "execute_in_cp138_primary_combat_sweep",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "mission-package",
+      "name": "Boarding / Planetary Mission Package",
+      "owner": "Hull",
+      "window": "TL1-5",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Boarding / rescue / survey / landing",
+      "mechanicalIdentity": "Swappable support package improving one mission class.",
+      "notes": "Avoid individual gear-loadout bookkeeping.",
+      "referenceBasis": [
+        "RM-THEME-007",
+        "RM-THEME-014",
+        "SD-Q06-001",
+        "SD-Q06-008"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "expedition-survey",
+        "assault-relief"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "cargo-expansion",
+      "name": "Cargo Expansion",
+      "owner": "Hull",
+      "window": "TL1-6",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Trade / salvage / Resources / missions",
+      "mechanicalIdentity": "Adds finite cargo capacity while competing directly with combat/support installations.",
+      "notes": "No detailed loading puzzle.",
+      "referenceBasis": [
+        "RM-THEME-011",
+        "RM-THEME-014",
+        "SD-Q06-004",
+        "SD-Q10-010"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "industrial-logistics",
+        "expedition-survey",
+        "assault-relief"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "medical-bay",
+      "name": "Medical Bay",
+      "owner": "Hull",
+      "window": "TL1-4",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Crew survival / exploration / combat recovery",
+      "mechanicalIdentity": "Mitigates explicit crew casualty and recovery outcomes.",
+      "notes": "No individual-health or treatment micromanagement.",
+      "referenceBasis": [
+        "RM-THEME-007",
+        "SD-DC-006",
+        "SD-Q06-003"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "damage-resilience",
+        "expedition-survey",
+        "assault-relief"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "mining-module",
+      "name": "Mining and Extraction Module",
+      "owner": "Hull",
+      "window": "TL1-6",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Resources / exploration",
+      "mechanicalIdentity": "Enables or improves extraction at eligible sites, trading time/exposure for yield.",
+      "notes": "Site/yield rules TBD.",
+      "referenceBasis": [
+        "RM-THEME-014",
+        "SD-Q06-001",
+        "SD-Q06-004"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "industrial-logistics",
+        "expedition-survey"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "local-amm-pds",
+      "name": "Local AMM Point-Defense Battery",
+      "owner": "Missile Weapons",
+      "window": "TL1+",
+      "placementTl": 1,
+      "kind": "defensive_component",
+      "space": "current profile / no new CP108 value",
+      "status": "existing_family",
+      "gameplayLoop": "Terminal defense / ammunition",
+      "mechanicalIdentity": "Finite-ammunition guided terminal interception.",
+      "notes": "Distinct from later extended-range AMM.",
+      "referenceBasis": [
+        "RM-THEME-006",
+        "SD-SW-010",
+        "SD-SW-011",
+        "SD-SW-038",
+        "SD-SW-040"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "combat-generalist",
+        "missile-defense-escort",
+        "munition-endurance"
+      ],
+      "cp138CombatExecution": true,
+      "sweepDisposition": "execute_in_cp138_primary_combat_sweep",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "missile-magazine",
+      "name": "Missile Magazine Expansion",
+      "owner": "Missile Weapons",
+      "window": "TL1-6",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Missile endurance / logistics",
+      "mechanicalIdentity": "Extends missile reserve; Ready Packages remain distinct.",
+      "notes": "Exact store TBD.",
+      "referenceBasis": [
+        "RM-THEME-011",
+        "SD-SW-020",
+        "SD-SW-030"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "munition-endurance"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "auxiliary-power-unit",
+      "name": "Auxiliary Power Unit",
+      "owner": "Power",
+      "window": "TL1+",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "existing_concept",
+      "gameplayLoop": "Damage survival / emergency power",
+      "mechanicalIdentity": "Preserves core-power continuity only; not normal Tactical Power generation.",
+      "notes": "Exact footprint remains later component design.",
+      "referenceBasis": [
+        "RM-THEME-012",
+        "SD-Q10-003",
+        "SD-Q10-009"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "damage-resilience",
+        "power-flexibility"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "defer_power_supply_storage_until_post_aux_reactor_phase",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "auxiliary-reactor",
+      "name": "Auxiliary Reactor",
+      "owner": "Power",
+      "window": "TL1+",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "existing_concept",
+      "gameplayLoop": "Power resilience / ship design",
+      "mechanicalIdentity": "Small renewable Tactical Power source with bounded output/damage behavior.",
+      "notes": "Active Concept supports TL1; obsolete CP43 TL2 floor is superseded.",
+      "referenceBasis": [
+        "RM-THEME-012",
+        "SD-Q10-003",
+        "SD-Q10-009"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "power-flexibility"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "defer_power_supply_storage_until_post_aux_reactor_phase",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "combat-battery",
+      "name": "Combat Battery",
+      "owner": "Power",
+      "window": "TL1+",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "existing_concept",
+      "gameplayLoop": "Tactical power allocation",
+      "mechanicalIdentity": "Finite flexible Tactical Power injection for a later legal window.",
+      "notes": "Storage remains distinct from sustained generation.",
+      "referenceBasis": [
+        "RM-THEME-012",
+        "SD-Q10-004",
+        "SD-Q10-009"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "power-flexibility"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "defer_power_supply_storage_until_post_aux_reactor_phase",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "kinetic-magazine",
+      "name": "Kinetic Magazine Expansion",
+      "owner": "Projectile Weapons",
+      "window": "TL1-6",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Ammunition endurance",
+      "mechanicalIdentity": "Extends Kinetic ammunition endurance using broad magazine families.",
+      "notes": "No individual feed-path bookkeeping.",
+      "referenceBasis": [
+        "RM-THEME-011",
+        "SD-SW-020",
+        "SD-SW-030"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "munition-endurance"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "kinetic-pds",
+      "name": "Kinetic Point-Defense Battery",
+      "owner": "Projectile Weapons",
+      "window": "TL1+",
+      "placementTl": 1,
+      "kind": "defensive_component",
+      "space": 2,
+      "status": "existing_current_footprint",
+      "gameplayLoop": "Terminal defense",
+      "mechanicalIdentity": "Finite-reaction kinetic interception with ammunition.",
+      "notes": "Sibling PDS lineage; current 2-Space footprint retained from existing catalog.",
+      "referenceBasis": [
+        "RM-THEME-006",
+        "SD-SW-010",
+        "SD-SW-011",
+        "SD-SW-038",
+        "SD-SW-039"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "combat-generalist",
+        "missile-defense-escort",
+        "munition-endurance"
+      ],
+      "cp138CombatExecution": true,
+      "sweepDisposition": "execute_in_cp138_primary_combat_sweep",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "expedition-endurance",
+      "name": "Expedition Endurance Module",
+      "owner": "Propulsion",
+      "window": "TL1-5",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Exploration / logistics",
+      "mechanicalIdentity": "Adds bounded Fuel/endurance support without tank-by-tank propellant bookkeeping.",
+      "notes": "Current Fuel baseline remains 100; exact bonus TBD.",
+      "referenceBasis": [
+        "RM-THEME-014",
+        "SD-Q06-003",
+        "SD-Q06-004",
+        "SD-Q06-005"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "expedition-survey"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "fuel-processor",
+      "name": "Fuel Processor",
+      "owner": "Propulsion",
+      "window": "TL1-4",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Mining / Resources / expedition endurance",
+      "mechanicalIdentity": "Converts eligible mined or traded Resources into the single Fuel resource at bounded time/efficiency cost.",
+      "notes": "Yields and campaign economy bridge remain future work.",
+      "referenceBasis": [
+        "RM-THEME-014",
+        "SD-Q06-004",
+        "SD-Q10-010"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "industrial-logistics",
+        "expedition-survey"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "shield-battery",
+      "name": "Shield Battery",
+      "owner": "Shields",
+      "window": "TL1+",
+      "placementTl": 1,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "existing_concept",
+      "gameplayLoop": "Shield endurance / emergency defense",
+      "mechanicalIdentity": "Finite shield-specific support that does not become general Tactical Power.",
+      "notes": "Exact capacity/charge TBD.",
+      "referenceBasis": [
+        "RM-THEME-006",
+        "RM-THEME-007",
+        "internal:post-CP135-shield-model"
+      ],
+      "referenceCoverage": "mixed_internal_external",
+      "referencePhilosophies": [
+        "shield-specialist"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "shield_redesign_rederive_or_specialist_defer",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "fabricator",
+      "name": "General Fabrication Module",
+      "owner": "Hull",
+      "window": "TL2-7",
+      "placementTl": 2,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Resources / repair / ammunition / mission support",
+      "mechanicalIdentity": "Converts carried Resources into bounded repair or mission supplies over time.",
+      "notes": "No free tactical replenishment.",
+      "referenceBasis": [
+        "RM-THEME-014",
+        "SD-DC-002",
+        "SD-DC-007",
+        "SD-Q06-003"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "damage-resilience",
+        "industrial-logistics",
+        "expedition-survey"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "power-stabilizer",
+      "name": "Power Stabilizer / Conditioner",
+      "owner": "Power",
+      "window": "TL2+",
+      "placementTl": 2,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "existing_concept",
+      "gameplayLoop": "High-demand equipment integration",
+      "mechanicalIdentity": "Improves bounded power-quality/integration cases rather than adding free output.",
+      "notes": "Only implement if explicit compatibility/strain decisions justify it.",
+      "referenceBasis": [
+        "RM-THEME-012",
+        "SD-Q10-003",
+        "SD-Q10-009"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "power-flexibility"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "defer_power_supply_storage_until_post_aux_reactor_phase",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "supercapacitor",
+      "name": "Supercapacitor Pulse Bank",
+      "owner": "Power",
+      "window": "TL2-4",
+      "placementTl": 2,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Burst power / tactical allocation",
+      "mechanicalIdentity": "Burst-power storage for a bounded operation/window; does not raise sustained reactor output.",
+      "notes": "Charge/discharge timing must prevent free loops.",
+      "referenceBasis": [
+        "RM-THEME-012",
+        "SD-Q10-004",
+        "SD-Q10-009"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "power-flexibility"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "defer_power_supply_storage_until_post_aux_reactor_phase",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "probe-survey-drone",
+      "name": "Probe / Survey Drone Package",
+      "owner": "Sensors / EW",
+      "window": "TL2-5",
+      "placementTl": 2,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Exploration / surveying / hazard reconnaissance",
+      "mechanicalIdentity": "Deployable disposable/reusable probes automate routine remote surveying and reconnaissance while preserving consequential player decisions about where to investigate and what risks to take.",
+      "notes": "No probe-fleet command layer; exact stores, recovery, persistence, and survey benefit remain future campaign design.",
+      "referenceBasis": [
+        "RM-THEME-013",
+        "RM-THEME-014",
+        "SD-Q06-002",
+        "SD-SW-026"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "information-control",
+        "expedition-survey"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "shield-booster",
+      "name": "Shield Booster",
+      "owner": "Shields",
+      "window": "TL2+",
+      "placementTl": 2,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "existing_concept",
+      "gameplayLoop": "Shield allocation / burst defense",
+      "mechanicalIdentity": "Optional powered shield support distinct from the primary generator.",
+      "notes": "Exact effect remains later component design.",
+      "referenceBasis": [
+        "RM-THEME-006",
+        "RM-THEME-007",
+        "internal:post-CP135-shield-model"
+      ],
+      "referenceCoverage": "mixed_internal_external",
+      "referencePhilosophies": [
+        "shield-specialist"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "shield_redesign_rederive_or_specialist_defer",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "shield-hardener",
+      "name": "Shield Hardener",
+      "owner": "Shields",
+      "window": "TL3+",
+      "placementTl": 3,
+      "kind": "specialist_auxiliary",
+      "space": 1,
+      "status": "implemented_executable_candidate_not_promoted",
+      "gameplayLoop": "Defense / Tactical Power",
+      "mechanicalIdentity": "Existing TL3 optional powered hardening candidate.",
+      "notes": "Current 1-Space footprint retained; CP108 does not change its numerical profile.",
+      "referenceBasis": [
+        "RM-THEME-006",
+        "SD-SW-045",
+        "internal:current-executable-shield-hardener"
+      ],
+      "referenceCoverage": "mixed_internal_external",
+      "referencePhilosophies": [
+        "combat-generalist",
+        "shield-specialist"
+      ],
+      "cp138CombatExecution": true,
+      "sweepDisposition": "execute_in_cp138_primary_combat_sweep",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "radiation-hardening",
+      "name": "Particle / Radiation Hardening Package",
+      "owner": "Armor",
+      "window": "TL4-7",
+      "placementTl": 4,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Special-threat defense",
+      "mechanicalIdentity": "Specialized protection against explicit particle/radiation effects if those effects exist.",
+      "notes": "Not a universal radiation subsystem.",
+      "referenceBasis": [
+        "RM-THEME-006",
+        "SD-SW-022",
+        "SD-Q10-002"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "damage-resilience",
+        "missile-defense-escort"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "specialist_architecture_defer_until_explicit_threat_or_mechanic",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "repair-drone-bay",
+      "name": "Damage-Control Drone Bay",
+      "owner": "Hull",
+      "window": "TL4-6",
+      "placementTl": 4,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Damage Control / crew risk",
+      "mechanicalIdentity": "Robotic inspection/repair support using existing repair capacity, supplies, and condition rules.",
+      "notes": "Does not create a second repair engine.",
+      "referenceBasis": [
+        "RM-THEME-007",
+        "SD-DC-001",
+        "SD-DC-002",
+        "SD-DC-007"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "damage-resilience"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "specialist_architecture_defer_until_explicit_threat_or_mechanic",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "smagnetic-store",
+      "name": "Superconducting Magnetic Energy Store",
+      "owner": "Power",
+      "window": "TL4-6",
+      "placementTl": 4,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Power storage / burst demand",
+      "mechanicalIdentity": "Advanced low-loss storage/conditioning branch.",
+      "notes": "Distinct from reactor output.",
+      "referenceBasis": [
+        "RM-THEME-012",
+        "SD-Q10-004",
+        "SD-Q10-009"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "power-flexibility"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "defer_power_supply_storage_until_post_aux_reactor_phase",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "tractor-tow",
+      "name": "Tractor / Tow Projector",
+      "owner": "Propulsion",
+      "window": "TL4-7",
+      "placementTl": 4,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Salvage / rescue / mission movement",
+      "mechanicalIdentity": "Bounded manipulation/towing utility for ships, wreckage, cargo, or mission objects.",
+      "notes": "Must not become unrestricted combat movement denial.",
+      "referenceBasis": [
+        "RM-THEME-014",
+        "SD-Q06-008"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "industrial-logistics",
+        "assault-relief"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "powered-reactive-armor",
+      "name": "Powered Reactive Armor System",
+      "owner": "Armor",
+      "window": "TL5+",
+      "placementTl": 5,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Defense / Tactical Power",
+      "mechanicalIdentity": "Powered specialist protection layered onto passive armor; loses active bonus when unpowered.",
+      "notes": "Passive armor remains intact.",
+      "referenceBasis": [
+        "RM-THEME-006",
+        "RM-THEME-007",
+        "SD-DC-008"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "damage-resilience",
+        "combat-generalist"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "specialist_architecture_defer_until_explicit_threat_or_mechanic",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "molecular-repair-fabricator",
+      "name": "Molecular Repair Fabricator",
+      "owner": "Hull",
+      "window": "TL5-7",
+      "placementTl": 5,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Repair / Resources / expedition endurance",
+      "mechanicalIdentity": "Advanced fabrication improves field repair using Resources without free resurrection.",
+      "notes": "Later maturation of the Fabricator/repair lineage.",
+      "referenceBasis": [
+        "RM-THEME-014",
+        "SD-DC-007",
+        "SD-DC-009",
+        "SD-Q06-003"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "damage-resilience",
+        "industrial-logistics",
+        "expedition-survey"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "thermal-suppression",
+      "name": "Thermal Suppression Module",
+      "owner": "Power",
+      "window": "TL5-7",
+      "placementTl": 5,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Signature management / temporary high-output operations",
+      "mechanicalIdentity": "Finite low-signature/high-output window using thermal storage/retraction abstractions.",
+      "notes": "No universal heat meter.",
+      "referenceBasis": [
+        "RM-THEME-012",
+        "RM-THEME-013",
+        "SD-Q12-004",
+        "SD-Q12-005",
+        "SD-Q12-007"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "information-control",
+        "power-flexibility"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "defer_power_supply_storage_until_post_aux_reactor_phase",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "particle-deflection-screen",
+      "name": "Particle / Charged-Beam Deflection Screen",
+      "owner": "Shields",
+      "window": "TL5+",
+      "placementTl": 5,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Special-threat defense / Tactical Power",
+      "mechanicalIdentity": "Optional powered shield-support field tuned against charged-particle/ion/plasma-like threats rather than universal Shield Armor growth.",
+      "notes": "Consolidates the overlapping Armor EM-screen idea into the Shield Support lineage; exact effect/counter profile remains TBD.",
+      "referenceBasis": [
+        "RM-THEME-006",
+        "SD-SW-045",
+        "internal:post-CP135-shield-model"
+      ],
+      "referenceCoverage": "mixed_internal_external",
+      "referencePhilosophies": [
+        "shield-specialist",
+        "missile-defense-escort"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "shield_redesign_rederive_or_specialist_defer",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "field-stabilizer",
+      "name": "Field Stabilizer / Anti-Penetration Tuner",
+      "owner": "Shields",
+      "window": "TL7+",
+      "placementTl": 7,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "Shield specialization / penetration counterplay",
+      "mechanicalIdentity": "Late specialist shield support that alters a bounded penetration/field-stability interaction rather than adding a universal defensive layer.",
+      "notes": "Must retain specific counterplay and meaningful Space/Power opportunity cost.",
+      "referenceBasis": [
+        "RM-THEME-006",
+        "internal:post-CP135-shield-model"
+      ],
+      "referenceCoverage": "mixed_internal_external",
+      "referencePhilosophies": [
+        "shield-specialist"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "shield_redesign_rederive_or_specialist_defer",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "programmable-repair-patch",
+      "name": "Programmable Matter Repair Patch System",
+      "owner": "Hull",
+      "window": "TL8+",
+      "placementTl": 8,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_table_candidate",
+      "gameplayLoop": "High-TL repair / logistics",
+      "mechanicalIdentity": "Configurable matter patches accelerate bounded structural/component repair.",
+      "notes": "Does not resurrect destroyed systems for free.",
+      "referenceBasis": [
+        "RM-THEME-015",
+        "SD-DC-009",
+        "SD-DC-010"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "damage-resilience"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    },
+    {
+      "id": "hangar-mission-bay",
+      "name": "Hangar / Mission Bay",
+      "owner": "Hull",
+      "window": "TL2-6",
+      "placementTl": null,
+      "kind": "specialist_auxiliary",
+      "space": "TBD",
+      "status": "provisional_window_only",
+      "gameplayLoop": "Shuttles / boarding / exploration / logistics",
+      "mechanicalIdentity": "May add small-craft capacity, support heavier craft, or improve turnaround/safety.",
+      "notes": "Starting ship has one shuttle. Exact unlock TL and extra-shuttle effect are deliberately not committed in CP108.",
+      "referenceBasis": [
+        "RM-THEME-014",
+        "SD-Q06-002",
+        "SD-Q06-008"
+      ],
+      "referenceCoverage": "external_reference_supported",
+      "referencePhilosophies": [
+        "expedition-survey",
+        "assault-relief",
+        "industrial-logistics"
+      ],
+      "cp138CombatExecution": false,
+      "sweepDisposition": "architecture_coverage_no_fake_combat_effect",
+      "cp138Notes": "No numerical promotion in CP138; existing value retained only where already executable."
+    }
+  ],
+  "notes": [
+    "This catalog supersedes the CP43-era separate Auxiliary Capacity candidate catalog as design authority; the exact v0_1 file remains at its legacy path for frozen runtime/calibration consumers.",
+    "Exact footprints/effects remain TBD unless explicitly established elsewhere or resolved by CP108 (Ablative Armor = 1 Space).",
+    "PDS and other installed defensive components may appear here for construction/support visibility even when their technology lineage is a standard combat family.",
+    "CP108 adds the previously preserved Probe / Survey Drone Package and materializes the two Storyboard Shield-support candidates omitted by v0.2; the overlapping Armor EM-particle-screen component is consolidated rather than duplicated.",
+    "CP138 maps all 35 catalog components to reference philosophies and evidence. Coverage does not imply numerical promotion or combat execution.",
+    "ECM/ECCM are integrated standard AUX-slot systems for CP138 full-ship testing but remain owned by their Sensors/EW lineages rather than duplicated as catalog components."
+  ],
+  "supersededOrConsolidatedComponents": [
+    {
+      "id": "em-particle-screen",
+      "disposition": "concept_preserved_but_active_component_consolidated_into_particle-deflection-screen",
+      "reason": "Avoid duplicate charged-particle specialist screens in Armor and Shields; radiation/material hardening remains the distinct Armor response."
+    }
+  ],
+  "integratedStandardAuxSystems": [
+    {
+      "id": "ecm",
+      "name": "Electronic Countermeasures",
+      "owner": "Sensors / EW",
+      "space": 1,
+      "status": "accepted_existing_numerics_revalidated_in_cp138",
+      "referenceBasis": [
+        "RM-THEME-013",
+        "SD-SW-012",
+        "SD-SW-013",
+        "SD-SW-034",
+        "SD-SW-035",
+        "SD-SW-036",
+        "SD-Q09-001"
+      ],
+      "referencePhilosophies": [
+        "information-control",
+        "combat-generalist"
+      ]
+    },
+    {
+      "id": "eccm",
+      "name": "Electronic Counter-Countermeasures",
+      "owner": "Sensors / EW",
+      "space": 1,
+      "status": "accepted_existing_numerics_revalidated_in_cp138",
+      "referenceBasis": [
+        "RM-THEME-013",
+        "RM-THEME-006",
+        "SD-SW-034",
+        "SD-SW-035",
+        "SD-SW-036",
+        "SD-Q09-006",
+        "SD-Q09-007"
+      ],
+      "referencePhilosophies": [
+        "information-control",
+        "combat-generalist",
+        "missile-defense-escort"
+      ]
+    }
+  ],
+  "cp138ShieldAuxVetting": {
+    "shield-battery": "Legacy restore-3 pre-x2 seed would map to 6 current points and can recreate the full-reset shield pathology; reject legacy numeric carry-forward and rederive later.",
+    "shield-booster": "Legacy +2 SC pre-x2 seed would map to +4 current SC and is too large to carry blindly; rederive later.",
+    "shield-hardener": "Retain current executable 1 Space / 1 TP sustained / SA2 nonstacking candidate for integration testing; it changes hardening, not recharge.",
+    "particle-deflection-screen": "Defer numerical combat execution until a tagged particle/charged-beam threat exists; do not fake a universal effect.",
+    "field-stabilizer": "Defer numerical combat execution; current candidate overlaps Shield Hardener and needs a specific high-SPEN specialist lane."
+  }
+}

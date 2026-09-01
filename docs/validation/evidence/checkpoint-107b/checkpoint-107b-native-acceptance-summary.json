@@ -1,0 +1,37 @@
+{
+  "checkpoint": "107b",
+  "date": "2026-08-15",
+  "source": "user-provided native Windows PowerShell transcript",
+  "status": "Success",
+  "repositoryOnly": {
+    "status": "Success",
+    "repositoryOwnedFiles": 2093
+  },
+  "normal": {
+    "status": "Success",
+    "repositoryOwnedFiles": 2093
+  },
+  "precheck": {
+    "powerShellPaths": 3,
+    "checkpointDefinitions": 1,
+    "functionDefinitionsAliasChecked": 14,
+    "pythonRuntimeDependencyFound": false
+  },
+  "contract": {
+    "disciplines": 10,
+    "sourceLineages": 32,
+    "storyboardBeats": 214,
+    "ideas": 136,
+    "foundationDomains": 20,
+    "hardGates": 0,
+    "trials": 0,
+    "newNumericalTl4Tl9Values": 0
+  },
+  "execution": {
+    "dotnetBuildRun": false,
+    "pythonResearchEngineRun": false,
+    "monteCarloRun": false,
+    "calibrationHarnessRun": false
+  },
+  "note": "This summary records the transcript supplied by the user after both CP107b acceptance commands succeeded. It was added by CP108 for provenance and does not retroactively alter CP107b."
+}

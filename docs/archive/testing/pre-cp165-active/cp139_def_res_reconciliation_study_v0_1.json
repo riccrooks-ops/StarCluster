@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "star-cluster-cp139-def-res-reconciliation-study-v0.1",
+  "checkpoint": 139,
+  "baseCheckpoint": 138,
+  "matrix": "docs/design/player_technology/technology_numerical_matrix_v0_9.json",
+  "productionDamageModel": "penetration-hardening-v1",
+  "researchDamageModel": "def-res-v1",
+  "smokeTls": [
+    1,
+    5,
+    9
+  ],
+  "smokeModels": [
+    "cp138-legacy-control",
+    "cp139-reconciled-candidate"
+  ],
+  "substantiveCombatTrials": 0,
+  "automaticPromotion": false
+}

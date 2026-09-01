@@ -1,0 +1,93 @@
+json_path,pf3_value,pf4_value,change_class
+cp159AuxClosureBoundary.status,"""<MISSING>""","""HISTORICAL_PRE_CP160_CLOSURE_BOUNDARY""",AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.enduranceOnlySelections[0],"""<MISSING>""","""Kinetic Magazine +25""",AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.enduranceOnlySelections[1],"""<MISSING>""","""Missile Magazine +25""",AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.isolatedAuxMagnitudeArchitectureClosed,"""<MISSING>""",true,AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.poweredAuxTpCostsProvisional,"""<MISSING>""",true,AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.productionAuthorityChanged,"""<MISSING>""",false,AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.remainingMajorResearch[0],"""<MISSING>""","""Reactor/TP Scarcity and Whole-Ship Equilibrium""",AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.repairDroneIntegratedComponentDamageExecutionDeferred,"""<MISSING>""",true,AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.retainedCp158Selections[0],"""<MISSING>""","""Shield Battery""",AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.retainedCp158Selections[1],"""<MISSING>""","""Shield Booster""",AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.retainedCp158Selections[2],"""<MISSING>""","""Shield Hardener""",AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.retainedCp158Selections[3],"""<MISSING>""","""Ablative Armor""",AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.retainedCp158Selections[4],"""<MISSING>""","""Energized Armor""",AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.selectedCp159Trajectories.crystallineArmor,"""<MISSING>""","""CRY_RISE_A: TL8 +8 Capacity/+15 RES; TL9 +10 Capacity/+20 RES""",AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.selectedCp159Trajectories.fieldStabilizer,"""<MISSING>""","""FST_HIGH: TL7/TL8/TL9 SPEN reduction 16/18/20, 1 TP""",AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.selectedCp159Trajectories.repairDroneBay,"""<MISSING>""","""one additional distinct-target Damage Control action plus additional prepared kits equal to the ship default reserve""",AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.sourceCheckpoint,"""<MISSING>""",159,AUX_CLOSURE_PROMOTION
+cp160AuxClosurePromotion.status,"""<MISSING>""","""ISOLATED_AUX_RESEARCH_CLOSED_PENDING_FINALIZATION""",AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.crystallineArmor.byTl.8.capacityBonus,6,8,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.crystallineArmor.byTl.8.resBonusPp,10,15,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.crystallineArmor.byTl.9.capacityBonus,8,10,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.crystallineArmor.byTl.9.resBonusPp,15,20,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.crystallineArmor.closureRequired,"""TL8-TL9 headroom only; do not re-run broad CP158 surface""","""<MISSING>""",AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.crystallineArmor.selectionRationale,"""<MISSING>""","""CP159 late-TL headroom closure: RISE_A corrects TL9 decay without consuming the much larger defensive headroom demonstrated by RISE_B/C and flat-max candidates.""",AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.crystallineArmor.sourceCheckpoint,158,159,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.crystallineArmor.sourceLadder,"""CRYSTALLINE_ARMOR-L8""","""CRY_RISE_A""",AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.crystallineArmor.status,"""PENDING_FINALIZATION_BOUNDARY_SUPPORTED_CP158""","""PENDING_FINALIZATION_SELECTED_CP159""",AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.fieldStabilizer.byTl.7.spenReduction,"""<MISSING>""",16,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.fieldStabilizer.byTl.7.tp,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.fieldStabilizer.byTl.8.spenReduction,"""<MISSING>""",18,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.fieldStabilizer.byTl.8.tp,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.fieldStabilizer.byTl.9.spenReduction,"""<MISSING>""",20,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.fieldStabilizer.byTl.9.tp,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.fieldStabilizer.closureRequired,"""sweep SPEN reduction well beyond CP158 1-4 and compare same-cost value to promoted Shield Hardener""","""<MISSING>""",AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.fieldStabilizer.selectionRationale,"""<MISSING>""","""CP159 specialist sweep bracketed the response through complete SPEN nullification. FST_HIGH preserves strong niche value with diminishing-return headroom above it; 1 TP remains the provisional powered execution center pending final Reactor/TP equilibrium.""",AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.fieldStabilizer.sourceLadder,"""<MISSING>""","""FST_HIGH""",AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.fieldStabilizer.status,"""PENDING_FINALIZATION_MECHANIC_MAGNITUDE_OPEN""","""PENDING_FINALIZATION_SELECTED_CP159""",AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.attemptRules,"""uses normal target-specific Damage Control success chance, normal per-attempt Tactical Power cost, and one Repair Kit per attempt; destroyed components remain non-field-repairable unless the underlying Damage Control rules change""","""Drone action uses the normal target-specific Damage Control success chance, the normal Damage Control per-attempt Tactical Power cost, and one Repair Kit per attempt; destroyed components remain non-field-repairable unless the underlying Damage Control rules change""",AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.2.additionalActionsPerPhase,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.2.additionalPreparedRepairKits,"""<MISSING>""",3,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.2.differentTargetRequired,"""<MISSING>""",true,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.2.droneAttemptTp,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.2.sameTargetRerollAllowed,"""<MISSING>""",false,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.3.additionalActionsPerPhase,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.3.additionalPreparedRepairKits,"""<MISSING>""",4,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.3.differentTargetRequired,"""<MISSING>""",true,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.3.droneAttemptTp,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.3.sameTargetRerollAllowed,"""<MISSING>""",false,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.4.additionalActionsPerPhase,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.4.additionalPreparedRepairKits,"""<MISSING>""",4,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.4.differentTargetRequired,"""<MISSING>""",true,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.4.droneAttemptTp,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.4.sameTargetRerollAllowed,"""<MISSING>""",false,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.5.additionalActionsPerPhase,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.5.additionalPreparedRepairKits,"""<MISSING>""",5,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.5.differentTargetRequired,"""<MISSING>""",true,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.5.droneAttemptTp,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.5.sameTargetRerollAllowed,"""<MISSING>""",false,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.6.additionalActionsPerPhase,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.6.additionalPreparedRepairKits,"""<MISSING>""",5,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.6.differentTargetRequired,"""<MISSING>""",true,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.6.droneAttemptTp,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.6.sameTargetRerollAllowed,"""<MISSING>""",false,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.7.additionalActionsPerPhase,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.7.additionalPreparedRepairKits,"""<MISSING>""",6,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.7.differentTargetRequired,"""<MISSING>""",true,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.7.droneAttemptTp,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.7.sameTargetRerollAllowed,"""<MISSING>""",false,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.8.additionalActionsPerPhase,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.8.additionalPreparedRepairKits,"""<MISSING>""",6,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.8.differentTargetRequired,"""<MISSING>""",true,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.8.droneAttemptTp,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.8.sameTargetRerollAllowed,"""<MISSING>""",false,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.9.additionalActionsPerPhase,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.9.additionalPreparedRepairKits,"""<MISSING>""",7,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.9.differentTargetRequired,"""<MISSING>""",true,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.9.droneAttemptTp,"""<MISSING>""",1,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.byTl.9.sameTargetRerollAllowed,"""<MISSING>""",false,AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.mechanic,"""adds one parallel Damage Control action per Damage Control phase; drone action must target a different repair target than the crew action; it is not a same-target reroll""","""adds one additional Damage Control action per Damage Control phase; crew and Drone actions must target different eligible repair targets in that phase; never a same-target reroll""",AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.repairKitRule,"""extra prepared Repair Kits are swept from 0 through +100 percent of the ship default kit load (total load from 100 to 200 percent); execution-center kit bonus is not selected until CP159 evidence closes endurance""","""Repair Drone Bay carries one additional prepared Repair Kit load equal to the ship default prepared kit reserve at that TL; total prepared kits with one Bay are therefore 200 percent of the normal ship reserve.""",AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.selectionRationale,"""<MISSING>""","""CP159 microstudy showed that the extra action is a parallelism upgrade rather than free healing: TP or kit scarcity naturally limits use. The +100 percent kit endpoint supplies the Drone with one complete additional repair load and is the cleanest KISS execution center.""",AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.sourceLadder,"""<MISSING>""","""DISTINCT_TARGET_PLUS_DEFAULT_KIT_LOAD""",AUX_CLOSURE_PROMOTION
+pendingFinalizationAuxProfiles.repairDroneBay.status,"""PENDING_FINALIZATION_MECHANIC_KIT_ENDURANCE_OPEN""","""PENDING_FINALIZATION_SELECTED_CP159""",AUX_CLOSURE_PROMOTION
+pendingFinalizationResearchBaseline.acceptedContinuityCheckpoint,157,159,RESEARCH_AUTHORITY_METADATA
+pendingFinalizationResearchBaseline.baseBaselineId,"""CP158-PF2""","""CP159-PF3""",RESEARCH_AUTHORITY_METADATA
+pendingFinalizationResearchBaseline.baselineId,"""CP159-PF3""","""CP160-PF4""",RESEARCH_AUTHORITY_METADATA
+pendingFinalizationResearchBaseline.checkpoint,159,160,RESEARCH_AUTHORITY_METADATA
+pendingFinalizationResearchBaseline.classificationModel.PENDING_FINALIZATION_AUX_SELECTED,"""<MISSING>""","""CP158/CP159 AUX numerical/mechanical findings selected as the PF4 research execution center; final production promotion remains deferred.""",RESEARCH_AUTHORITY_METADATA
+pendingFinalizationResearchBaseline.openDependencies[0],"""AUX_LIFETIME_VIABILITY""","""FINAL_REACTOR_TP_SCARCITY""",RESEARCH_AUTHORITY_METADATA
+pendingFinalizationResearchBaseline.openDependencies[1],"""FINAL_REACTOR_TP_SCARCITY""","""<MISSING>""",RESEARCH_AUTHORITY_METADATA
+pendingFinalizationResearchBaseline.purpose,"""Pending-finalization research execution authority with CP158-bracketed AUX execution-center profiles promoted; Field Stabilizer magnitude, Repair Drone kit endurance, and late Crystalline headroom remain the only AUX closure questions.""","""Pending-finalization research execution authority after CP159 AUX specialist closure. All isolated AUX magnitude/architecture questions are closed for research execution; powered-system operating costs and whole-ship resource equilibrium remain provisional until the final Reactor/TP pass.""",RESEARCH_AUTHORITY_METADATA
+pendingFinalizationResearchBaseline.supersedes,"""CP157-PF1""","""CP159-PF3""",RESEARCH_AUTHORITY_METADATA

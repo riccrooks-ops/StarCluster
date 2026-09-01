@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "star-cluster-cp157-research-execution-baseline-manifest-v0.1",
+  "checkpoint": 157,
+  "baselineId": "CP157-PF1",
+  "status": "PENDING_FINALIZATION_RESEARCH_AUTHORITY",
+  "materializedMatrix": "docs/design/player_technology/technology_research_execution_baseline_pending_finalization_v0_1.json",
+  "materializedMatrixSha256": "78424255ec94af225d563f5c4570a3094841244ff4acc31a962d6f81ee20365f",
+  "productionMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_9.json",
+  "productionMatrixSha256": "3088b0a9eb45f6bf505c24513e8bb2ac878819db4ab464ccfea330243c82f194",
+  "acceptedCp156NativeArchiveSha256": "5c76df2ed64d718ed4aa7e8ec79d87a7838555e401a163c333e07a8a3e799fba",
+  "selected": {
+    "kineticMain": "K1",
+    "energyMain": "E7",
+    "gpMissileMain": "M2",
+    "swarmerMain": "SW2",
+    "kineticPds": "K155P06",
+    "energyPds": "E155P08",
+    "ammPds": "A155P07"
+  },
+  "requiredAlternatives": {
+    "gpMissileMain": [
+      "M3"
+    ],
+    "kineticPds": [
+      "K155P03"
+    ],
+    "energyPds": [
+      "E155P07"
+    ],
+    "ammPds": [
+      "A155P09"
+    ]
+  },
+  "damageModel": "def-res-v1",
+  "shieldDefByTl": {
+    "1": 20,
+    "2": 22,
+    "3": 24,
+    "4": 26,
+    "5": 28,
+    "6": 30,
+    "7": 32,
+    "8": 34,
+    "9": 36
+  },
+  "armorResByTl": {
+    "1": 20,
+    "2": 22,
+    "3": 24,
+    "4": 26,
+    "5": 28,
+    "6": 30,
+    "7": 32,
+    "8": 34,
+    "9": 36
+  },
+  "substantiveCombatTrials": 0,
+  "authorityPromotionType": "RESEARCH_EXECUTION_ONLY",
+  "productionAuthorityReplaced": false,
+  "nextPass": "Defense/AUX Lifetime Viability",
+  "finalMajorPass": "Reactor/TP Scarcity and Whole-Ship Equilibrium"
+}

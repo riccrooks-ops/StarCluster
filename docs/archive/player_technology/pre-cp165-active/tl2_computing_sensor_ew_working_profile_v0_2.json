@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "star-cluster-tl2-information-control-working-profile-v2",
+  "id": "tl2-computing-sensor-ew-working-profile-v0_2",
+  "status": "locally_validated_working_candidates",
+  "purpose": "Current TL2 information-control working candidate state. Evidence provenance remains external.",
+  "researchOwnership": {
+    "tacticalComputer": "Computing / Fire Control",
+    "sensor": "Sensors / EW",
+    "ecm": "Sensors / EW",
+    "eccm": "Sensors / EW"
+  },
+  "tacticalComputer": {
+    "ordinaryTargetingAssistanceOperationalPp": 12,
+    "approximateTrackPenaltyPp": -25,
+    "evasiveCompensationPp": 0,
+    "status": "locally_validated_working_candidate"
+  },
+  "sensor": {
+    "discriminationResistance": 1,
+    "physicalRangeIncreasePromoted": false,
+    "status": "locally_validated_working_candidate"
+  },
+  "ecm": {
+    "normalRatingCeiling": 2,
+    "tpPerRating": 1,
+    "newOverloadBehaviorPromoted": false,
+    "efficiencyImprovementPromoted": false,
+    "status": "locally_validated_working_candidate"
+  },
+  "eccm": {
+    "normalRatingCeiling": 2,
+    "tpPerRating": 1,
+    "newOverloadBehaviorPromoted": false,
+    "efficiencyImprovementPromoted": false,
+    "status": "locally_validated_working_candidate"
+  },
+  "guardrails": [
+    "Sensor reach and discrimination remain separate.",
+    "Degraded direct fire remains a fallback and must not erase ECCM value.",
+    "Ordinary missile terminal-track requirements remain separate.",
+    "Higher-TL information control remains subject to Tactical Power opportunity cost and mixed-TL integration."
+  ]
+}

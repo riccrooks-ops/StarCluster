@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "star-cluster-cp101-retained-executable-foundation-evidence-v1",
+  "checkpoint": 101,
+  "status": "native_accepted",
+  "acceptedDefinitionSha256": "31c6fe641a562005af325034c925d76f7339f97827d21cad5989052a4872cba3",
+  "acceptedManifestSha256": "674912367de56d5dd3775f2535bc768b636dbd625c0583362c3df024ee5d1fab",
+  "nativeResultsZipSha256": "6320c62576097aed1f7f3060011f174d880cda5ead28576cf19d5fa14408f5d7",
+  "build": {
+    "cleanExecuted": true,
+    "succeeded": true,
+    "warnings": 0,
+    "errors": 0,
+    "elapsedSeconds": 6.258409599999999
+  },
+  "tests": {
+    "succeeded": true,
+    "total": 876,
+    "passed": 876,
+    "failed": 0,
+    "skipped": 0,
+    "elapsedSeconds": 2.0091416,
+    "trxPath": "out/checkpoint-101/test-results/checkpoint-tests.trx"
+  },
+  "aggregates": {
+    "configuredRunnerStages": 10,
+    "runnerStagesPassed": 10,
+    "runnerStagesFailed": 0,
+    "deterministicCases": 7,
+    "mechanicsCases": 90,
+    "variants": 0,
+    "trials": 0,
+    "selfTests": 63,
+    "failedGates": 0
+  },
+  "acceptedTl3BaseTable": {
+    "profile": "docs/design/player_technology/tl3_base_technology_candidates_v0_2.json",
+    "buildSanity": "docs/design/player_technology/tl3_base_build_sanity_v0_1.json",
+    "cruiserInstallationSpace": 36,
+    "singleMainSingleReactorUsedSpace": 27,
+    "dualMainSingleReactorUsedSpace": 33,
+    "singleMainDualReactorUsedSpace": 32,
+    "dualMainDualReactorUsedSpace": 38,
+    "dualMainDualReactorLegal": false,
+    "singleReactorOperationalTp": 6
+  },
+  "acceptedCp99Regression": {
+    "foundation": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/cross-tl-build-permutation-foundation-v0_8.json",
+    "legalBuilds": 11776,
+    "progressionEdges": 37184,
+    "exactEdgeStrata": 181,
+    "logicalPairings": 362,
+    "generatedVariants": 724,
+    "generatedStudySha256": "f41cd6473bbe5987c417038c881b35731456c82557194e0b656eab5a41469ec4"
+  },
+  "note": "CP101 native acceptance establishes the TL3 base table and whole-ship guardrails. CP102 may implement those accepted values but may not reinterpret implementation success as calibration or promotion."
+}

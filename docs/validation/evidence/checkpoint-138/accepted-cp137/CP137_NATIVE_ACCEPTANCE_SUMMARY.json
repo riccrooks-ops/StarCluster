@@ -1,0 +1,63 @@
+﻿{
+    "schemaVersion":  "star-cluster-cp137-native-acceptance-summary-v0.1",
+    "checkpoint":  137,
+    "repositoryOnly":  false,
+    "acceptedMechanicsResearchBaseline":  136,
+    "previousCandidateNumericalBaseline":  136,
+    "python":  "Python 3.13.14",
+    "dotnetSdk":  "8.0.423",
+    "buildPassed":  true,
+    "pythonTestsPassed":  226,
+    "xunitTotal":  913,
+    "xunitPassed":  913,
+    "xunitFailed":  0,
+    "xunitSkipped":  0,
+    "scenarioRunnerSelfTestsPassed":  70,
+    "deterministicScenarioCorpusPassed":  true,
+    "tl1PhaseACorpusPassed":  true,
+    "researchParityPassed":  25,
+    "cp137KernelTestsPassed":  8,
+    "canonicalKernelVersion":  "0.4",
+    "canonicalDamageModel":  "penetration-hardening-v1",
+    "logicalContexts":  196,
+    "generatedVariants":  392,
+    "tl6Variants":  136,
+    "symmetryComparisons":  50,
+    "symmetryMismatches":  0,
+    "smokeTrials":  392,
+    "smokeTrialErrors":  0,
+    "smokeMechanicsFlags":  0,
+    "mandatoryDefenses":  [
+                              "shield",
+                              "armor"
+                          ],
+    "tl6ArmorProfiles":  [
+                             "mainline",
+                             "A_b1"
+                         ],
+    "pdsContextsForMissileLanes":  [
+                                       "off",
+                                       "AMM"
+                                   ],
+    "damageControlStudyDoctrine":  "HullOnlyWhenDamaged",
+    "commonRandomNumberBaseline":  136,
+    "masterSeed":  134001,
+    "balanceTargets":  null,
+    "mixedTlShipsExecuted":  false,
+    "automaticPromotion":  false,
+    "substantiveTrials":  1960000,
+    "failedGates":  [
+
+                    ],
+    "substantiveVariants":  392,
+    "substantiveLogicalContexts":  196,
+    "substantiveTrialsPerVariant":  5000,
+    "substantiveTrialErrors":  0,
+    "substantiveMechanicsFlags":  0,
+    "diagnosticReviewFlags":  122,
+    "pdsComparisons":  80,
+    "tl6ArmorContexts":  68,
+    "substantiveElapsedSeconds":  1352.4610788999998,
+    "damageControlTelemetryPresent":  true,
+    "armorRegenerationReserveTelemetryPresent":  true
+}

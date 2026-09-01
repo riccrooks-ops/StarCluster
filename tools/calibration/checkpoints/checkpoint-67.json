@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "67",
+  "title": "Checkpoint 67 TL1 Bilateral Overload/EW Counterplay and 100-Fuel Baseline",
+  "sdkVersion": "8.0.423",
+  "configuration": "Debug",
+  "calibrationSolution": "StarCluster.Calibration.sln",
+  "testProject": "tests/StarCluster.Tests/StarCluster.Tests.csproj",
+  "runnerProject": "src/StarCluster.ScenarioRunner/StarCluster.ScenarioRunner.csproj",
+  "manifestFile": "CHECKPOINT_67_SHA256SUMS.txt",
+  "outputRoot": "out/checkpoint-67",
+  "defaultTrials": 10000,
+  "defaultJobs": 24,
+  "documentation": [
+    "docs/Star_Cluster_Game_Concept_v0.6f.docx",
+    "docs/design/player_technology/TL1_35_Space_Construction_Envelope_v0_1.md",
+    "docs/design/player_technology/tl1_integrated_tactical_combat_schema_v0_13.json",
+    "docs/archive/player_technology/pre-cp165-active/tl1_35_space_player_cruiser_baseline_v0_9.json",
+    "docs/design/player_technology/TL1_Bilateral_Overload_EW_Counterplay_Study_v0_1.md",
+    "docs/design/testing/checkpoint_67_validation_suite_policy_v0_1.json",
+    "docs/design/testing/Checkpoint_67_Validation_Tiers.md",
+    "docs/validation/Checkpoint_67_Bilateral_Overload_EW_Counterplay_And_100_Fuel.md"
+  ],
+  "stages": [
+    {
+      "id": "deterministic",
+      "name": "Accepted deterministic moving-missile scenarios",
+      "command": "run-all",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios",
+        "--output-dir",
+        "{OutputRoot}/deterministic"
+      ],
+      "metrics": {
+        "deterministicCases": 7
+      }
+    },
+    {
+      "id": "tl1-phase-a",
+      "name": "TL1 Phase A mechanics corpus",
+      "command": "tl1-phase-a",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1PhaseA",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-a"
+      ],
+      "metrics": {
+        "caseCount": 54
+      }
+    },
+    {
+      "id": "tl1-phase-b",
+      "name": "TL1 Phase B direct-fire corpus",
+      "command": "tl1-phase-b",
+      "arguments": [
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-b"
+      ],
+      "metrics": {
+        "caseCount": 36
+      }
+    },
+    {
+      "id": "tl1-installation-space-envelope",
+      "name": "TL1 35-Space deterministic construction envelope and nominal power diagnostics",
+      "command": "tl1-installation-space-envelope",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-space01-35-space-construction-envelope.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-installation-space-envelope"
+      ],
+      "metrics": {
+        "macroLoadoutCount": 27,
+        "weaponPowerVariantCount": 96,
+        "exactFillMacroLoadoutCount": 4,
+        "usesTrials": false
+      }
+    },
+    {
+      "id": "tl1-bilateral-overload-ew-counterplay",
+      "name": "TL1 bilateral overload request telemetry and post-Movement EW counterplay study",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc10-bilateral-overload-ew-counterplay.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-bilateral-overload-ew-counterplay"
+      ],
+      "metrics": {
+        "buildCount": 2,
+        "variantCount": 60,
+        "bilateralStlVariantCount": 48,
+        "postMovementEwResponseVariantCount": 12,
+        "movementOrderCount": 2,
+        "usesTrials": true,
+        "balanceTargetsBlocking": false,
+        "productionReactorOutput": 5,
+        "powerDoctrine": "FullVolleyFirst",
+        "tacticalMapRadius": 5,
+        "startingFuel": 100,
+        "movementFuelPerHex": 2,
+        "evasiveManeuverFuelCost": 1,
+        "fullTacticalAiImplemented": false,
+        "overloadDamageIntegrated": false
+      }
+    },
+    {
+      "id": "auxiliary-resource-endurance",
+      "name": "Deterministic finite-resource and recharge endurance stress study",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end01-resource-endurance-stress.json",
+        "--output-dir",
+        "{OutputRoot}/auxiliary-resource-endurance"
+      ],
+      "metrics": {
+        "combatBatteryCandidateCount": 2,
+        "capacitorPatternCount": 3,
+        "ammRoundCandidateCount": 4,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "checkpoint-53-resource-semantics-lock",
+      "name": "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end02-resource-semantics-lock.json",
+        "--output-dir",
+        "{OutputRoot}/checkpoint-53-resource-semantics-lock"
+      ],
+      "metrics": {
+        "combatBatteryPrimaryCharges": 3,
+        "combatBatteryPowerPerCharge": 1,
+        "combatBatteryDischargeLimitPerTurn": 1,
+        "combatBatteryEncounterDischargeCap": null,
+        "ammRounds": 25,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "runner-self-tests",
+      "name": "ScenarioRunner self-tests",
+      "command": "self-test",
+      "arguments": [
+        "--scenario-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/terminal-two-window-hit.json"
+      ],
+      "metrics": {
+        "selfTestCount": 46
+      }
+    }
+  ],
+  "checkpointMetrics": {
+    "stageCount": 8,
+    "monteCarloVariantCount": 60,
+    "trialsAtDefault": 600000,
+    "suiteTier": "must_always_run"
+  },
+  "nativeDependencyPrecheck": {
+    "required": true,
+    "script": "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+    "blockedInterpreters": [
+      "python",
+      "python3",
+      "py"
+    ],
+    "powerShellPaths": [
+      "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+      "tools/checkpoints/checkpoint-67/apply_checkpoint_67.ps1",
+      "tools/checkpoints/checkpoint-67/test_checkpoint_67_contract.ps1",
+      "tools/calibration/run_calibration_checkpoint.ps1"
+    ],
+    "checkpointDefinitionPaths": [
+      "tools/calibration/checkpoints/checkpoint-67.json",
+      "tools/calibration/checkpoints/checkpoint-67-deep-calibration.json"
+    ]
+  },
+  "primaryStudy": {
+    "id": "tl1-bilateral-overload-ew-counterplay",
+    "variantCount": 60
+  }
+}

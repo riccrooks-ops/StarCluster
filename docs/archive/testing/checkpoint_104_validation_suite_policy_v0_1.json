@@ -1,0 +1,37 @@
+{
+  "checkpoint": "104",
+  "status": "candidate_targeted_diagnostic_closure",
+  "acceptedBaseline": "Checkpoint 103 Corrected Replacement 6",
+  "gameMechanicsAuthority": "native C#/Godot and accepted deterministic/unit regressions",
+  "researchSimulation": {
+    "engine": "starcluster-python-research-v1",
+    "pythonMajorMinor": "3.13",
+    "stdlibOnly": true,
+    "authority": "screening_not_gameplay_authority",
+    "newStudy": "cross-tl-build-permutation-foundation-v1_3.json",
+    "variants": 256,
+    "trialsPerVariant": 500,
+    "substantiveTrials": 128000,
+    "automaticTechnologyChange": false
+  },
+  "requiredDiagnosticComparisons": {
+    "legacyResponse": 16,
+    "movementOrder": 10,
+    "energySynergy": 22,
+    "powerHotspot": 14,
+    "controls": 2
+  },
+  "cp103ReweightingSource": {
+    "path": "docs/validation/evidence/checkpoint-103/cp103-primary-substantive-variants.csv",
+    "expectedVariants": 1152,
+    "expectedStatisticalVariants": 960,
+    "expectedStatisticalBundles": 240,
+    "expectedPopulationCells": 96
+  },
+  "higherTlExpansionGate": {
+    "afterCheckpoint104": true,
+    "defaultNextPhase": "extend basic subsystem Technology-Level chart beyond TL3",
+    "additionalTl3CalibrationOnlyForArchitecturalDefect": true
+  },
+  "deepCalibrationRequired": false
+}

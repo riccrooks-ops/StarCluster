@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "star-cluster-cp126-system-map-fidelity-era-attribution-results-v0.1",
+  "checkpoint": 126,
+  "mode": "symmetry_gate",
+  "comparisons": 2250,
+  "combatExecutions": 4500,
+  "mismatches": 0,
+  "failedGates": []
+}

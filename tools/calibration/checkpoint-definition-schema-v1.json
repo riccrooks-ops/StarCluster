@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "starcluster://schemas/calibration-checkpoint-definition-v1",
+  "title": "Star Cluster Calibration Checkpoint Definition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "checkpointId",
+    "title",
+    "sdkVersion",
+    "configuration",
+    "calibrationSolution",
+    "testProject",
+    "runnerProject",
+    "manifestFile",
+    "outputRoot",
+    "defaultTrials",
+    "defaultJobs",
+    "stages"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "checkpointId": {
+      "type": [
+        "string",
+        "integer"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sdkVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "configuration": {
+      "type": "string",
+      "minLength": 1
+    },
+    "calibrationSolution": {
+      "type": "string",
+      "minLength": 1
+    },
+    "testProject": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runnerProject": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifestFile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "outputRoot": {
+      "type": "string",
+      "minLength": 1
+    },
+    "defaultTrials": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "defaultJobs": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "documentation": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "stages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "command",
+          "arguments"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "command": {
+            "type": "string",
+            "minLength": 1
+          },
+          "arguments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "metrics": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "deterministicCases": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "caseCount": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "variantCount": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "usesTrials": {
+                "type": "boolean"
+              },
+              "selfTestCount": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "primaryStudy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "variantCount"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "variantCount": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

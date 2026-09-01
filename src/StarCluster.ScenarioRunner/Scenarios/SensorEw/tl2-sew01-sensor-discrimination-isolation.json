@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "star-cluster-tl1-sensor-ew-foundation-v1",
+  "id": "tl2-sew01-sensor-discrimination-isolation",
+  "checkpoint": 79,
+  "status": "tl2-candidate-isolation-not-production",
+  "policy": "Hold Balanced-0 sensing reach, active-sensor power, overload envelope, and same-hex burn-through constant. Isolate the TL2 Sensor Discrimination Resistance 1 candidate against TL1 DR 0 while normal ECM/ECCM rating ceilings may reach 2 at 1 Tactical Power per rating. These profiles are diagnostic candidates, not production sensor data.",
+  "maxTacticalSeparationHexes": 10,
+  "candidates": [
+    {
+      "id": "tl1-balanced-0-control",
+      "isHistoricalControl": true,
+      "passiveFirmRange": 1,
+      "passiveApproximateRange": 3,
+      "activeFirmRange": 3,
+      "activeApproximateRange": 4,
+      "activePowerCost": 1,
+      "activeOverloadAdditionalPowerCost": 1,
+      "activeOverloadFirmBonus": 1,
+      "activeOverloadApproximateBonus": 1,
+      "rationale": "Current TL1 Balanced-0 working envelope carried forward unchanged as the DR 0 control.",
+      "discriminationResistance": 0,
+      "pointBlankBurnThroughResistance": 1
+    },
+    {
+      "id": "tl2-discrimination-1-candidate",
+      "isHistoricalControl": false,
+      "passiveFirmRange": 1,
+      "passiveApproximateRange": 3,
+      "activeFirmRange": 3,
+      "activeApproximateRange": 4,
+      "activePowerCost": 1,
+      "activeOverloadAdditionalPowerCost": 1,
+      "activeOverloadFirmBonus": 1,
+      "activeOverloadApproximateBonus": 1,
+      "rationale": "Initial Matrix-v1 TL2 Sensor candidate: hold reach and power constant while adding intrinsic Sensor Discrimination Resistance 1.",
+      "discriminationResistance": 1,
+      "pointBlankBurnThroughResistance": 1
+    }
+  ]
+}

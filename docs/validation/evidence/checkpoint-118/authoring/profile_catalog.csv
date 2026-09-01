@@ -1,0 +1,19 @@
+family,profile_id,role,study_tls,damage,damage_delta,spen,spen_delta,apen,apen_delta,accuracy_delta,guidance_delta,packets,pds_intercept_penalty_pp,classification
+Missile,gp-current,Current CP109 GP Missile payload reference; D5/SP1/AP2 at every TL.,"1,2,3,4,5,6,7,8,9",,0,,0,,0,0,0,1,0,reference
+Missile,missile-fission-gp-d6,Late lower-SF/fission-era yield maturation control with no penetration creep.,"3,4",6,0,1,0,2,0,0,0,1,0,yield_control
+Missile,missile-fusion-gp-d6,Conservative Fusion GP yield candidate; penetration held at the baseline GP identity.,"5,6",6,0,1,0,2,0,0,0,1,0,yield_control
+Missile,missile-fusion-gp-d7,Higher Fusion GP yield candidate; penetration held at the baseline GP identity.,"5,6",7,0,1,0,2,0,0,0,1,0,yield_control
+Missile,missile-antimatter-gp-d7,Conservative Antimatter GP yield candidate; penetration held at the baseline GP identity.,"7,8,9",7,0,1,0,2,0,0,0,1,0,yield_control
+Missile,missile-antimatter-gp-d8,Higher Antimatter GP yield candidate; penetration held at the baseline GP identity.,"7,8,9",8,0,1,0,2,0,0,0,1,0,yield_control
+Missile,swarmer-early-a,Early low-complexity cluster/Swarmer: two small packets and +10 terminal guidance; no intrinsic PDS resistance.,"1,2,3",2,0,0,0,0,0,0,10,2,0,swarmer_introduction
+Missile,swarmer-early-b,Early cluster/Swarmer with the same coverage but a modest -10 pp PDS interception penalty candidate.,"1,2,3",2,0,0,0,0,0,0,10,2,10,swarmer_introduction
+Missile,swarmer-mid-a,Mid-ladder Swarmer emphasizing coverage and bounded PDS saturation while retaining low packet strength.,"4,5",2,0,0,0,0,0,0,15,2,10,swarmer_maturation
+Missile,swarmer-mid-b,Mid-ladder Swarmer with stronger submunition payload while preserving one terminal attack package.,"4,5",3,0,0,0,0,0,0,10,2,10,swarmer_maturation
+Missile,swarmer-mature-a,"Mature Swarmer emphasizing many small packets, high coverage, and stronger but bounded PDS saturation.","6,7,8,9",2,0,0,0,0,0,0,15,3,15,swarmer_maturation
+Missile,swarmer-mature-b,"Mature Swarmer with two higher-yield submunition packets, high coverage, and bounded PDS saturation; tests whether the branch can remain relevant without adding penetration mechanics.","6,7,8,9",4,0,0,0,0,0,0,15,2,15,swarmer_maturation
+Kinetic,gp-current,Current CP109 contemporary Kinetic projectile reference.,"1,2,3,4,5,6,7,8,9",,0,,0,,0,0,0,1,0,reference
+Kinetic,kinetic-smart-plus5,Automatic smart-projectile progression control: +5 accuracy only.,"4,5,6,7,8,9",,0,,0,,0,5,0,1,0,automatic_accuracy_control
+Kinetic,kinetic-smart-plus10,Automatic smart-projectile progression control: +10 accuracy only.,"4,5,6,7,8,9",,0,,0,,0,10,0,1,0,automatic_accuracy_control
+Kinetic,kinetic-smart-plus15,Higher-maturity smart-projectile progression control: +15 accuracy only.,"6,7,8,9",,0,,0,,0,15,0,1,0,automatic_accuracy_control
+Kinetic,kinetic-damage-plus1,Single-axis comparison: +1 projectile damage without accuracy or penetration change.,"4,5,6,7,8,9",,1,,0,,0,0,0,1,0,single_axis_control
+Kinetic,kinetic-apen-plus1,"Single-axis comparison: +1 APEN without accuracy, damage, or SPEN change.","4,5,6,7,8,9",,0,,0,,1,0,0,1,0,single_axis_control

@@ -1,0 +1,227 @@
+{
+  "schemaVersion": "star-cluster-cp160-aux-closure-selection-evidence-v0.1",
+  "checkpoint": 160,
+  "sourceCheckpoint": 159,
+  "sourceNativeArchive": "StarCluster_CP159_native_results_20260830_143917.zip",
+  "sourceNativeArchiveSha256": "e7c17f3aeb6d6833620e8f8ca72694fdc4be589ef9791fb73e7cc0cfbe771a65",
+  "sourceNativeAcceptanceSha256": "0c063d028d8cc769a14403084475d0875895d03bf7e936f9f02cbfc1f2e0a1d4",
+  "fieldStabilizer": {
+    "selectedPackage": "FST_HIGH",
+    "byTl": {
+      "7": {
+        "spenReduction": 16,
+        "tp": 1
+      },
+      "8": {
+        "spenReduction": 18,
+        "tp": 1
+      },
+      "9": {
+        "spenReduction": 20,
+        "tp": 1
+      }
+    },
+    "meanUplift": 0.08440190904348747,
+    "tlMeanUplift": {
+      "7": 0.07020355753544245,
+      "8": 0.08487158590443072,
+      "9": 0.09813058369058925
+    },
+    "centerMeanUplift": 0.06019526470811815,
+    "maxMeanUplift": 0.09513666226082305,
+    "promotedHardenerComparatorMeanUplift": 0.01785892172473083,
+    "selectionReason": "Strong specialist value in the intended high-SPEN niche with clear diminishing-return headroom above the selected trajectory; retains powered 1-TP identity pending final Reactor/TP equilibrium.",
+    "hardenerInteractionMeanUplift": {
+      "FST16_PLUS_HARDENER_TL7": 0.07335244504955216,
+      "FST16_PLUS_HARDENER_TL8": 0.08991122389559637,
+      "FST16_PLUS_HARDENER_TL9": 0.09844448306032874,
+      "FST20_PLUS_HARDENER_TL7": 0.10661261593682299,
+      "FST20_PLUS_HARDENER_TL8": 0.10305298097926928,
+      "FST20_PLUS_HARDENER_TL9": 0.10706583427051881,
+      "FST24_PLUS_HARDENER_TL7": 0.11014803448914731,
+      "FST24_PLUS_HARDENER_TL8": 0.11259202444297395,
+      "FST24_PLUS_HARDENER_TL9": 0.11427921250822082
+    }
+  },
+  "crystallineArmor": {
+    "selectedPackage": "CRY_RISE_A",
+    "byTl": {
+      "8": {
+        "capacityBonus": 8,
+        "resBonusPp": 15
+      },
+      "9": {
+        "capacityBonus": 10,
+        "resBonusPp": 20
+      }
+    },
+    "meanUplift": 0.09093030812741487,
+    "tlMeanUplift": {
+      "8": 0.05921307826963698,
+      "9": 0.12264753798519276
+    },
+    "currentBoundaryMeanUplift": 0.04723953052274633,
+    "riseBMeanUplift": 0.19320867822543897,
+    "riseCMeanUplift": 0.2712644292341033,
+    "selectionReason": "Corrects the TL9 potency drop while deliberately not consuming the very large defensive headroom demonstrated by stronger CP159 candidates."
+  },
+  "repairDroneBay": {
+    "selectedMechanic": "one additional Damage Control action per phase against a different eligible target; normal DC success chance, normal per-attempt TP and one kit; no same-target reroll",
+    "selectedKitRule": "additional prepared kit load equals the ship default prepared kit reserve at the same TL",
+    "byTl": {
+      "2": {
+        "defaultKits": 3,
+        "selectedAdditionalKits": 3,
+        "tp2NoExtra": {
+          "meanDroneAttempts": 0.8333333333333334,
+          "kitExhaustionRate": 0.8712222222222222,
+          "meanUnresolvedTargets": 2.2826666666666666,
+          "clearRate": 0.12877777777777777
+        },
+        "tp2DoubleLoad": {
+          "meanDroneAttempts": 2.047111111111111,
+          "kitExhaustionRate": 0.8051666666666667,
+          "meanUnresolvedTargets": 1.5740555555555555,
+          "clearRate": 0.19483333333333333
+        }
+      },
+      "3": {
+        "defaultKits": 4,
+        "selectedAdditionalKits": 4,
+        "tp2NoExtra": {
+          "meanDroneAttempts": 1.5107222222222223,
+          "kitExhaustionRate": 0.8335555555555556,
+          "meanUnresolvedTargets": 1.9245,
+          "clearRate": 0.16644444444444445
+        },
+        "tp2DoubleLoad": {
+          "meanDroneAttempts": 2.390277777777778,
+          "kitExhaustionRate": 0.7108333333333333,
+          "meanUnresolvedTargets": 1.079,
+          "clearRate": 0.2891666666666666
+        }
+      },
+      "4": {
+        "defaultKits": 4,
+        "selectedAdditionalKits": 4,
+        "tp2NoExtra": {
+          "meanDroneAttempts": 1.5102222222222221,
+          "kitExhaustionRate": 0.8347777777777777,
+          "meanUnresolvedTargets": 1.921111111111111,
+          "clearRate": 0.16522222222222221
+        },
+        "tp2DoubleLoad": {
+          "meanDroneAttempts": 2.3849444444444443,
+          "kitExhaustionRate": 0.7127777777777777,
+          "meanUnresolvedTargets": 1.0816666666666668,
+          "clearRate": 0.2872222222222222
+        }
+      },
+      "5": {
+        "defaultKits": 5,
+        "selectedAdditionalKits": 5,
+        "tp2NoExtra": {
+          "meanDroneAttempts": 1.5110000000000001,
+          "kitExhaustionRate": 0.8148888888888889,
+          "meanUnresolvedTargets": 1.6506666666666667,
+          "clearRate": 0.18511111111111112
+        },
+        "tp2DoubleLoad": {
+          "meanDroneAttempts": 2.5901111111111113,
+          "kitExhaustionRate": 0.5612777777777778,
+          "meanUnresolvedTargets": 0.8899444444444444,
+          "clearRate": 0.3596111111111111
+        }
+      },
+      "6": {
+        "defaultKits": 5,
+        "selectedAdditionalKits": 5,
+        "tp2NoExtra": {
+          "meanDroneAttempts": 1.5110555555555556,
+          "kitExhaustionRate": 0.8161666666666667,
+          "meanUnresolvedTargets": 1.6630555555555555,
+          "clearRate": 0.18383333333333335
+        },
+        "tp2DoubleLoad": {
+          "meanDroneAttempts": 2.5795,
+          "kitExhaustionRate": 0.5637222222222222,
+          "meanUnresolvedTargets": 0.8815,
+          "clearRate": 0.3581666666666667
+        }
+      },
+      "7": {
+        "defaultKits": 6,
+        "selectedAdditionalKits": 6,
+        "tp2NoExtra": {
+          "meanDroneAttempts": 1.9445555555555556,
+          "kitExhaustionRate": 0.5574444444444444,
+          "meanUnresolvedTargets": 1.1022777777777777,
+          "clearRate": 0.44255555555555554
+        },
+        "tp2DoubleLoad": {
+          "meanDroneAttempts": 2.5095555555555555,
+          "kitExhaustionRate": 0.17250000000000001,
+          "meanUnresolvedTargets": 0.29094444444444445,
+          "clearRate": 0.7719444444444444
+        }
+      },
+      "8": {
+        "defaultKits": 6,
+        "selectedAdditionalKits": 6,
+        "tp2NoExtra": {
+          "meanDroneAttempts": 1.9419444444444445,
+          "kitExhaustionRate": 0.5571111111111111,
+          "meanUnresolvedTargets": 1.1002222222222222,
+          "clearRate": 0.4428888888888889
+        },
+        "tp2DoubleLoad": {
+          "meanDroneAttempts": 2.513611111111111,
+          "kitExhaustionRate": 0.1748888888888889,
+          "meanUnresolvedTargets": 0.2977222222222222,
+          "clearRate": 0.7648333333333334
+        }
+      },
+      "9": {
+        "defaultKits": 7,
+        "selectedAdditionalKits": 7,
+        "tp2NoExtra": {
+          "meanDroneAttempts": 1.9619444444444445,
+          "kitExhaustionRate": 0.43933333333333335,
+          "meanUnresolvedTargets": 0.7204444444444444,
+          "clearRate": 0.5606666666666666
+        },
+        "tp2DoubleLoad": {
+          "meanDroneAttempts": 2.3995555555555557,
+          "kitExhaustionRate": 0.030833333333333334,
+          "meanUnresolvedTargets": 0.09127777777777778,
+          "clearRate": 0.9155
+        }
+      }
+    },
+    "selectionReason": "CP159 shows the Drone converts TP and kit reserve into parallel repair throughput rather than granting free recovery. A second complete default kit load is the simplest scalable KISS endpoint and preserves resource scarcity."
+  },
+  "closure": {
+    "isolatedAuxMagnitudeArchitectureClosed": true,
+    "automaticProductionPromotion": false,
+    "poweredAuxTpCostsRemainProvisional": true,
+    "nextMajorPass": "Reactor/TP Scarcity and Whole-Ship Equilibrium"
+  },
+  "sourceFiles": {
+    "CP159_CRYSTALLINE_CANDIDATE_RESPONSE.csv": "ff61803fe3b1ec6753e027c398285db8349d3e9ea7429bee59f93d1c9606598f",
+    "CP159_CRYSTALLINE_CANDIDATE_SUMMARY.csv": "0657c4596c1ad053fb762e88bf11a39ef62de7cd7177dbbd0f4e9cf78e3678f5",
+    "CP159_CRYSTALLINE_DEEP_RESPONSE.csv": "bc2d612bb3afec1a741a9cf1249669fe07ab9d6294263d9bec9b1f5c630ba4b2",
+    "CP159_CRYSTALLINE_DEEP_SUMMARY.csv": "f2cd94807f07994d9afa866c92f6bb4e25629b8584521633efbd6557ccc8cbb8",
+    "CP159_FIELD_HARDENER_INTERACTION_CONTEXT_RESULTS.csv": "8cc0b69fe2ba9e4c59d0bef0d266c403aaf68fc8f17ba233b82f9d5ca5cc775c",
+    "CP159_FIELD_STABILIZER_CANDIDATE_RESPONSE.csv": "39994641922152457a0121a02f23e009d6512b201adc64c2d4876e6f34f162ca",
+    "CP159_FIELD_STABILIZER_CANDIDATE_SUMMARY.csv": "65931c7f3bf314b3f90d3617efa3242889acae1cd9bda212dfdc9517916e861e",
+    "CP159_FIELD_STABILIZER_DEEP_RESPONSE.csv": "83d14368a0ef521d4ffa622f83ae527ee9fe36380ce1c7f2f458151f5feb6d3c",
+    "CP159_FIELD_STABILIZER_DEEP_SUMMARY.csv": "11c75e21991f39363c637cfbc1303d5a4562ea882448adfdc0dae71be18453af",
+    "CP159_NATIVE_ACCEPTANCE_SUMMARY.json": "0c063d028d8cc769a14403084475d0875895d03bf7e936f9f02cbfc1f2e0a1d4",
+    "CP159_NATIVE_RESULTS_ARCHIVE_SHA256.txt": "4548adc2714d7b78c555e0fd244b757027551872b4ef146b2ef36d4ecb306e00",
+    "CP159_PF3_MANIFEST.json": "bb2e60982a7737d38d46255a938423b1f408521160edf8d4607e5ef6905b5829",
+    "CP159_PF3_MATRIX.json": "9158c44c6c66d84997696f3415612f1f3bba70960b738b0344ecb8e09062d8e2",
+    "CP159_REPAIR_DRONE_KIT_SUMMARY.csv": "df029ce57af65e98046d991d04cda8a2d2265fde5dbf1a432a739cd3044c4d43",
+    "CP159_REPAIR_DRONE_MICRO_RESPONSE.csv": "91b6e153b220cc2bab3f4d64b9732d64933c512e03ea0f4f9bdc65604d3ffdae",
+    "CP159_REPOSITORY_ONLY_ACCEPTANCE.json": "5c4b8c1010d4edbc693965e6d5b6dad8599576dc24ab734417dc54f74937cc43"
+  }
+}

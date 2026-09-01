@@ -1,0 +1,55 @@
+tl,target_fixture,classification,underlying_build,used_space,capacity,initial_shield,shield_base_recharge,armor_protection,armor_integrity,hull,pds_family,hardener,role
+1,armor-exposed-legal,legal_build,tl1-energy-defense-specialist-armor-exposed-legal,35,35,0,0,0,4,12,-,False,Legal exact-fill no-Shield control exposing Armor/Hull directly.
+1,armor-heavy-fixture,controlled_fixture,tl1-energy-defense-specialist-armor-heavy-fixture,35,35,0,0,1,8,12,-,False,Controlled Armor-heavy fixture used only to expose Kinetic damage/APEN progression; not a legal-build balance gate.
+1,balanced-layered-legal,legal_build,tl1-energy-balanced,35,35,2,1,0,4,12,-,False,General legal layered-defense reference.
+1,light-fixture,controlled_fixture,tl1-energy-defense-specialist-light-fixture,35,35,0,0,0,2,12,-,False,Controlled lightly protected fixture for accuracy/coverage behavior; not a legal-build balance gate.
+1,pds-heavy-legal,legal_build,tl1-missile-missile-defense,35,35,2,1,0,4,12,AMM,False,AMM/PDS-heavy legal target for ordinary Missile versus Swarmer differentiation.
+1,shield-heavy-legal,legal_build,tl1-energy-defense-specialist,35,35,2,1,0,4,12,Energy,False,Shield + Hardener + Energy PDS package; exposes the natural difficulty of small packets against layered Shields.
+2,armor-exposed-legal,legal_build,tl2-energy-defense-specialist-armor-exposed-legal,35,35,0,0,0,5,12,-,False,Legal exact-fill no-Shield control exposing Armor/Hull directly.
+2,armor-heavy-fixture,controlled_fixture,tl2-energy-defense-specialist-armor-heavy-fixture,35,35,0,0,1,9,12,-,False,Controlled Armor-heavy fixture used only to expose Kinetic damage/APEN progression; not a legal-build balance gate.
+2,balanced-layered-legal,legal_build,tl2-energy-balanced,35,35,3,1,0,5,12,-,False,General legal layered-defense reference.
+2,light-fixture,controlled_fixture,tl2-energy-defense-specialist-light-fixture,35,35,0,0,0,2,12,-,False,Controlled lightly protected fixture for accuracy/coverage behavior; not a legal-build balance gate.
+2,pds-heavy-legal,legal_build,tl2-missile-missile-defense,35,35,3,1,0,5,12,AMM,False,AMM/PDS-heavy legal target for ordinary Missile versus Swarmer differentiation.
+2,shield-heavy-legal,legal_build,tl2-energy-defense-specialist,35,35,3,1,0,5,12,Energy,False,Shield + Hardener + Energy PDS package; exposes the natural difficulty of small packets against layered Shields.
+3,armor-exposed-legal,legal_build,tl3-energy-defense-specialist-armor-exposed-legal,36,36,0,0,1,5,12,-,False,Legal exact-fill no-Shield control exposing Armor/Hull directly.
+3,armor-heavy-fixture,controlled_fixture,tl3-energy-defense-specialist-armor-heavy-fixture,36,36,0,0,2,9,12,-,False,Controlled Armor-heavy fixture used only to expose Kinetic damage/APEN progression; not a legal-build balance gate.
+3,balanced-layered-legal,legal_build,tl3-energy-balanced,36,36,3,1,1,5,12,-,False,General legal layered-defense reference.
+3,light-fixture,controlled_fixture,tl3-energy-defense-specialist-light-fixture,36,36,0,0,0,2,12,-,False,Controlled lightly protected fixture for accuracy/coverage behavior; not a legal-build balance gate.
+3,pds-heavy-legal,legal_build,tl3-missile-missile-defense,36,36,3,1,1,5,12,AMM,True,AMM/PDS-heavy legal target for ordinary Missile versus Swarmer differentiation.
+3,shield-heavy-legal,legal_build,tl3-energy-defense-specialist,36,36,3,1,1,5,12,Energy,True,Shield + Hardener + Energy PDS package; exposes the natural difficulty of small packets against layered Shields.
+4,armor-exposed-legal,legal_build,tl4-energy-defense-specialist-armor-exposed-legal,37,37,0,0,1,6,12,-,False,Legal exact-fill no-Shield control exposing Armor/Hull directly.
+4,armor-heavy-fixture,controlled_fixture,tl4-energy-defense-specialist-armor-heavy-fixture,37,37,0,0,2,10,12,-,False,Controlled Armor-heavy fixture used only to expose Kinetic damage/APEN progression; not a legal-build balance gate.
+4,balanced-layered-legal,legal_build,tl4-energy-balanced,37,37,4,1,1,6,12,-,False,General legal layered-defense reference.
+4,light-fixture,controlled_fixture,tl4-energy-defense-specialist-light-fixture,37,37,0,0,0,2,12,-,False,Controlled lightly protected fixture for accuracy/coverage behavior; not a legal-build balance gate.
+4,pds-heavy-legal,legal_build,tl4-missile-missile-defense,37,37,4,1,1,6,12,AMM,True,AMM/PDS-heavy legal target for ordinary Missile versus Swarmer differentiation.
+4,shield-heavy-legal,legal_build,tl4-energy-defense-specialist,37,37,4,1,1,6,12,Energy,True,Shield + Hardener + Energy PDS package; exposes the natural difficulty of small packets against layered Shields.
+5,armor-exposed-legal,legal_build,tl5-energy-defense-specialist-armor-exposed-legal,38,38,0,0,2,6,12,-,False,Legal exact-fill no-Shield control exposing Armor/Hull directly.
+5,armor-heavy-fixture,controlled_fixture,tl5-energy-defense-specialist-armor-heavy-fixture,38,38,0,0,3,10,12,-,False,Controlled Armor-heavy fixture used only to expose Kinetic damage/APEN progression; not a legal-build balance gate.
+5,balanced-layered-legal,legal_build,tl5-energy-balanced,38,38,5,1,2,6,12,-,False,General legal layered-defense reference.
+5,light-fixture,controlled_fixture,tl5-energy-defense-specialist-light-fixture,38,38,0,0,0,2,12,-,False,Controlled lightly protected fixture for accuracy/coverage behavior; not a legal-build balance gate.
+5,pds-heavy-legal,legal_build,tl5-missile-missile-defense,38,38,5,1,2,6,12,AMM,True,AMM/PDS-heavy legal target for ordinary Missile versus Swarmer differentiation.
+5,shield-heavy-legal,legal_build,tl5-energy-defense-specialist,38,38,5,1,2,6,12,Energy,True,Shield + Hardener + Energy PDS package; exposes the natural difficulty of small packets against layered Shields.
+6,armor-exposed-legal,legal_build,tl6-energy-defense-specialist-armor-exposed-legal,39,39,0,0,2,7,12,-,False,Legal exact-fill no-Shield control exposing Armor/Hull directly.
+6,armor-heavy-fixture,controlled_fixture,tl6-energy-defense-specialist-armor-heavy-fixture,39,39,0,0,3,11,12,-,False,Controlled Armor-heavy fixture used only to expose Kinetic damage/APEN progression; not a legal-build balance gate.
+6,balanced-layered-legal,legal_build,tl6-energy-balanced,39,39,5,2,2,7,12,-,False,General legal layered-defense reference.
+6,light-fixture,controlled_fixture,tl6-energy-defense-specialist-light-fixture,39,39,0,0,0,2,12,-,False,Controlled lightly protected fixture for accuracy/coverage behavior; not a legal-build balance gate.
+6,pds-heavy-legal,legal_build,tl6-missile-missile-defense,39,39,5,2,2,7,12,AMM,True,AMM/PDS-heavy legal target for ordinary Missile versus Swarmer differentiation.
+6,shield-heavy-legal,legal_build,tl6-energy-defense-specialist,39,39,5,2,2,7,12,Energy,True,Shield + Hardener + Energy PDS package; exposes the natural difficulty of small packets against layered Shields.
+7,armor-exposed-legal,legal_build,tl7-energy-defense-specialist-armor-exposed-legal,41,41,0,0,2,7,12,-,False,Legal exact-fill no-Shield control exposing Armor/Hull directly.
+7,armor-heavy-fixture,controlled_fixture,tl7-energy-defense-specialist-armor-heavy-fixture,41,41,0,0,3,11,12,-,False,Controlled Armor-heavy fixture used only to expose Kinetic damage/APEN progression; not a legal-build balance gate.
+7,balanced-layered-legal,legal_build,tl7-energy-balanced,41,41,7,2,2,7,12,-,False,General legal layered-defense reference.
+7,light-fixture,controlled_fixture,tl7-energy-defense-specialist-light-fixture,41,41,0,0,0,2,12,-,False,Controlled lightly protected fixture for accuracy/coverage behavior; not a legal-build balance gate.
+7,pds-heavy-legal,legal_build,tl7-missile-missile-defense,41,41,7,2,2,7,12,AMM,True,AMM/PDS-heavy legal target for ordinary Missile versus Swarmer differentiation.
+7,shield-heavy-legal,legal_build,tl7-energy-defense-specialist,41,41,7,2,2,7,12,Energy,True,Shield + Hardener + Energy PDS package; exposes the natural difficulty of small packets against layered Shields.
+8,armor-exposed-legal,legal_build,tl8-energy-defense-specialist-armor-exposed-legal,43,43,0,0,2,7,12,-,False,Legal exact-fill no-Shield control exposing Armor/Hull directly.
+8,armor-heavy-fixture,controlled_fixture,tl8-energy-defense-specialist-armor-heavy-fixture,43,43,0,0,3,11,12,-,False,Controlled Armor-heavy fixture used only to expose Kinetic damage/APEN progression; not a legal-build balance gate.
+8,balanced-layered-legal,legal_build,tl8-energy-balanced,43,43,9,2,2,7,12,-,False,General legal layered-defense reference.
+8,light-fixture,controlled_fixture,tl8-energy-defense-specialist-light-fixture,43,43,0,0,0,2,12,-,False,Controlled lightly protected fixture for accuracy/coverage behavior; not a legal-build balance gate.
+8,pds-heavy-legal,legal_build,tl8-missile-missile-defense,43,43,9,2,2,7,12,AMM,True,AMM/PDS-heavy legal target for ordinary Missile versus Swarmer differentiation.
+8,shield-heavy-legal,legal_build,tl8-energy-defense-specialist,43,43,9,2,2,7,12,Energy,True,Shield + Hardener + Energy PDS package; exposes the natural difficulty of small packets against layered Shields.
+9,armor-exposed-legal,legal_build,tl9-energy-defense-specialist-armor-exposed-legal,45,45,0,0,3,8,12,-,False,Legal exact-fill no-Shield control exposing Armor/Hull directly.
+9,armor-heavy-fixture,controlled_fixture,tl9-energy-defense-specialist-armor-heavy-fixture,45,45,0,0,4,12,12,-,False,Controlled Armor-heavy fixture used only to expose Kinetic damage/APEN progression; not a legal-build balance gate.
+9,balanced-layered-legal,legal_build,tl9-energy-balanced,45,45,12,3,3,8,12,-,False,General legal layered-defense reference.
+9,light-fixture,controlled_fixture,tl9-energy-defense-specialist-light-fixture,45,45,0,0,0,2,12,-,False,Controlled lightly protected fixture for accuracy/coverage behavior; not a legal-build balance gate.
+9,pds-heavy-legal,legal_build,tl9-missile-missile-defense,45,45,12,3,3,8,12,AMM,True,AMM/PDS-heavy legal target for ordinary Missile versus Swarmer differentiation.
+9,shield-heavy-legal,legal_build,tl9-energy-defense-specialist,45,45,12,3,3,8,12,Energy,True,Shield + Hardener + Energy PDS package; exposes the natural difficulty of small packets against layered Shields.

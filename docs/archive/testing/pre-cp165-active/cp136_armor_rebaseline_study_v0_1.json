@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "star-cluster-cp136-armor-rebaseline-v0.1",
+  "checkpoint": 136,
+  "title": "Same-TL Armor Regeneration and Crystalline Rebaseline Diagnostic",
+  "sourceMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_8.json",
+  "canonicalKernelVersion": "0.3",
+  "damageModel": "penetration-hardening-v1",
+  "masterSeed": 134001,
+  "technologyLevels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "weaponFamiliesByTl": {
+    "1": [
+      "Kinetic",
+      "Energy",
+      "GP"
+    ],
+    "2-9": [
+      "Kinetic",
+      "Energy",
+      "GP",
+      "Swarmer"
+    ]
+  },
+  "mandatoryDefenses": [
+    "Shield",
+    "Armor"
+  ],
+  "tl6ArmorProfiles": [
+    "mainline",
+    "A_b1"
+  ],
+  "pdsContexts": {
+    "directOnly": [
+      "off"
+    ],
+    "missileBearing": [
+      "off",
+      "AMM"
+    ]
+  },
+  "baselineBuild": {
+    "mainCount": 1,
+    "reactorCount": 1,
+    "shield": true,
+    "ecm": false,
+    "eccm": false,
+    "shieldHardener": false,
+    "missionAuxFillsUnusedSpace": true
+  },
+  "directFireModifiers": {
+    "approximateTrackPenaltyPp": -25,
+    "extendedRangePenaltyPp": -10,
+    "stack": true
+  },
+  "energyDoctrine": "SafeOverloadFirst until Energy Strain Limit 2, then Standard; Low only when power-constrained.",
+  "trialsPerVariant": 5000,
+  "smokeTrialsPerVariant": 1,
+  "maxTurns": 60,
+  "balanceTargets": null,
+  "automaticPromotion": false,
+  "mixedTlShipsExecuted": false,
+  "diagnosticPurpose": "Repeat CP135 with common random numbers after changing only mainline Armor TL6-TL9 and TL6 A_b1 Crystalline Armor. Measure whether steady Armor regeneration permits persistent offensive progress while preserving the regenerative-vs-passive branch distinction, with all Shield/DamCon/weapon/PDS/reference-build rules held.",
+  "expected": {
+    "logicalContexts": 196,
+    "generatedVariants": 392,
+    "pipelineSmokeTrials": 392,
+    "substantiveTrials": 1960000,
+    "tl6Variants": 136,
+    "movementOrders": 2
+  },
+  "damageControlDoctrine": "HullOnlyWhenDamaged; one attempt/turn; 1 TP + 1 kit per attempt; success queues to next Turn Refresh; component repair off; Armor regeneration uses remaining TP.",
+  "comparisonBaseline": "Accepted CP135 substantive 1,960,000-engagement diagnostic; same context/variant identities and master seed retained."
+}

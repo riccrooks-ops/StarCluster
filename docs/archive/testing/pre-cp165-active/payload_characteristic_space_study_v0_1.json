@@ -1,0 +1,355 @@
+{
+  "schemaVersion": "star-cluster-payload-characteristic-space-v0.1",
+  "checkpoint": 114,
+  "acceptedBaseline": 113,
+  "purpose": "Explore simulation-only Kinetic ammunition and Missile warhead characteristic space before any balance promotion.",
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "automaticPromotion": false,
+  "masterSeed": 114031337,
+  "trialsPerVariant": 2000,
+  "authoringTrialsPerVariant": 100,
+  "missileStudyTls": [
+    4,
+    5,
+    7,
+    9
+  ],
+  "kineticStudyTls": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "targetProfiles": [
+    "energy-full-defense",
+    "energy-no-pds",
+    "energy-no-hardener",
+    "energy-no-shield",
+    "missile-full-defense",
+    "missile-no-pds",
+    "missile-no-hardener",
+    "missile-no-shield"
+  ],
+  "payloadProfiles": [
+    {
+      "id": "gp-current",
+      "family": "Missile",
+      "minTl": 1,
+      "role": "Current CP109 GP control; unchanged D5/SP1/AP2 placeholder."
+    },
+    {
+      "id": "missile-shaped-a",
+      "family": "Missile",
+      "minTl": 3,
+      "role": "Armor specialist mild tradeoff.",
+      "damageDelta": -1,
+      "spenDelta": -1,
+      "apenDelta": 2
+    },
+    {
+      "id": "missile-shaped-b",
+      "family": "Missile",
+      "minTl": 3,
+      "role": "Armor specialist retaining Shield penetration but losing raw damage.",
+      "damageDelta": -1,
+      "apenDelta": 2
+    },
+    {
+      "id": "missile-shield-a2",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Shield-only bonus pressure +2 with weak structural packet.",
+      "damage": 3,
+      "spen": 1,
+      "apen": 0,
+      "shieldBonusDamage": 2
+    },
+    {
+      "id": "missile-shield-a3",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Shield-only bonus pressure +3 with weak structural packet.",
+      "damage": 3,
+      "spen": 1,
+      "apen": 0,
+      "shieldBonusDamage": 3
+    },
+    {
+      "id": "missile-shield-a4",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Shield-only bonus pressure +4 with weak structural packet.",
+      "damage": 3,
+      "spen": 1,
+      "apen": 0,
+      "shieldBonusDamage": 4
+    },
+    {
+      "id": "missile-shield-b",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Ignore/reduce one point of Shield Armor; reduced post-shield structural effect.",
+      "damage": 4,
+      "spen": 1,
+      "apen": 0,
+      "shieldArmorReduction": 1
+    },
+    {
+      "id": "missile-shield-c1",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Reduce next legal Shield recharge by one point.",
+      "damage": 4,
+      "spen": 1,
+      "apen": 0,
+      "rechargeSuppression": 1
+    },
+    {
+      "id": "missile-shield-c2",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Reduce next legal Shield recharge by two points.",
+      "damage": 4,
+      "spen": 1,
+      "apen": 0,
+      "rechargeSuppression": 2
+    },
+    {
+      "id": "missile-adaptive-a3",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Observer-safe GP-to-shield-bonus doctrine after repeated Firm-track no-penetration observations.",
+      "mode": "adaptive",
+      "adaptiveSpecialist": "missile-shield-a3",
+      "assessmentFailuresBeforeSwitch": 2
+    },
+    {
+      "id": "missile-adaptive-b",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Observer-safe GP-to-Shield-Armor-reduction doctrine.",
+      "mode": "adaptive",
+      "adaptiveSpecialist": "missile-shield-b",
+      "assessmentFailuresBeforeSwitch": 2
+    },
+    {
+      "id": "missile-adaptive-c2",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Observer-safe GP-to-recharge-suppression doctrine.",
+      "mode": "adaptive",
+      "adaptiveSpecialist": "missile-shield-c2",
+      "assessmentFailuresBeforeSwitch": 2
+    },
+    {
+      "id": "missile-fusion-gp-a",
+      "family": "Missile",
+      "minTl": 5,
+      "role": "Fusion GP candidate: modest raw-damage increase.",
+      "damage": 6,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "missile-fusion-gp-b",
+      "family": "Missile",
+      "minTl": 5,
+      "role": "Fusion GP candidate: modest raw damage plus Shield penetration.",
+      "damage": 6,
+      "spen": 2,
+      "apen": 2
+    },
+    {
+      "id": "missile-fusion-gp-c",
+      "family": "Missile",
+      "minTl": 5,
+      "role": "Fusion GP candidate: stronger raw packet without penetration increase.",
+      "damage": 7,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "missile-antimatter-gp-a",
+      "family": "Missile",
+      "minTl": 7,
+      "role": "Antimatter GP lower candidate.",
+      "damage": 7,
+      "spen": 2,
+      "apen": 3
+    },
+    {
+      "id": "missile-antimatter-gp-b",
+      "family": "Missile",
+      "minTl": 7,
+      "role": "Antimatter GP middle candidate.",
+      "damage": 8,
+      "spen": 2,
+      "apen": 3
+    },
+    {
+      "id": "missile-antimatter-gp-c",
+      "family": "Missile",
+      "minTl": 7,
+      "role": "Antimatter GP penetration-heavy candidate.",
+      "damage": 8,
+      "spen": 3,
+      "apen": 3
+    },
+    {
+      "id": "kinetic-smart-auto-plus5",
+      "family": "Kinetic",
+      "minTl": 4,
+      "role": "Automatic smart-projectile terminal-correction candidate (+5 accuracy).",
+      "accuracyDelta": 5
+    },
+    {
+      "id": "kinetic-dense-a",
+      "family": "Kinetic",
+      "minTl": 5,
+      "role": "Dense penetrator mild tradeoff.",
+      "damageDelta": -1,
+      "apenDelta": 1
+    },
+    {
+      "id": "kinetic-dense-b",
+      "family": "Kinetic",
+      "minTl": 5,
+      "role": "Dense penetrator stronger AP at Shield cost.",
+      "damageDelta": -1,
+      "spenDelta": -1,
+      "apenDelta": 2
+    },
+    {
+      "id": "kinetic-dense-c",
+      "family": "Kinetic",
+      "minTl": 5,
+      "role": "Dense penetrator extreme AP tradeoff.",
+      "damageDelta": -2,
+      "apenDelta": 2
+    },
+    {
+      "id": "kinetic-saturation-a",
+      "family": "Kinetic",
+      "minTl": 6,
+      "role": "Two 3-damage packets; low penetration per packet.",
+      "damage": 3,
+      "spen": 1,
+      "apen": 0,
+      "packets": 2
+    },
+    {
+      "id": "kinetic-saturation-b",
+      "family": "Kinetic",
+      "minTl": 6,
+      "role": "Three 2-damage packets; extreme saturation/poor penetration.",
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 3
+    },
+    {
+      "id": "kinetic-saturation-c",
+      "family": "Kinetic",
+      "minTl": 6,
+      "role": "Two 3-damage packets with no penetration bonuses.",
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2
+    },
+    {
+      "id": "missile-shield-c3",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Reduce next legal Shield recharge by three points.",
+      "damage": 4,
+      "spen": 1,
+      "apen": 0,
+      "rechargeSuppression": 3
+    },
+    {
+      "id": "missile-shield-c4",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Reduce next legal Shield recharge by four points.",
+      "damage": 4,
+      "spen": 1,
+      "apen": 0,
+      "rechargeSuppression": 4
+    },
+    {
+      "id": "missile-mixed-a3-gp",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Dual-launcher mixed salvo: shield-bonus specialist resolves before GP.",
+      "mode": "mixed",
+      "mixedSpecialist": "missile-shield-a3",
+      "mixedOrder": "specialist-first"
+    },
+    {
+      "id": "missile-mixed-gp-a3",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Dual-launcher sequencing control: GP resolves before shield-bonus specialist.",
+      "mode": "mixed",
+      "mixedSpecialist": "missile-shield-a3",
+      "mixedOrder": "gp-first"
+    },
+    {
+      "id": "missile-mixed-a4-gp",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Dual-launcher mixed salvo with stronger shield-bonus specialist before GP.",
+      "mode": "mixed",
+      "mixedSpecialist": "missile-shield-a4",
+      "mixedOrder": "specialist-first"
+    },
+    {
+      "id": "missile-mixed-b-gp",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Dual-launcher mixed salvo: Shield-Armor reduction specialist resolves before GP.",
+      "mode": "mixed",
+      "mixedSpecialist": "missile-shield-b",
+      "mixedOrder": "specialist-first"
+    },
+    {
+      "id": "missile-mixed-gp-b",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Dual-launcher sequencing control: GP resolves before Shield-Armor reduction specialist.",
+      "mode": "mixed",
+      "mixedSpecialist": "missile-shield-b",
+      "mixedOrder": "gp-first"
+    },
+    {
+      "id": "missile-mixed-c4-gp",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Dual-launcher mixed salvo: recharge-suppression specialist resolves before GP.",
+      "mode": "mixed",
+      "mixedSpecialist": "missile-shield-c4",
+      "mixedOrder": "specialist-first"
+    },
+    {
+      "id": "missile-mixed-gp-c4",
+      "family": "Missile",
+      "minTl": 4,
+      "role": "Dual-launcher sequencing control: GP resolves before recharge-suppression specialist.",
+      "mode": "mixed",
+      "mixedSpecialist": "missile-shield-c4",
+      "mixedOrder": "gp-first"
+    }
+  ],
+  "inferenceRules": [
+    "Static payload profiles test mechanics; adaptive profiles may switch only from observer-safe Firm-track combat assessment, never hidden defender values.",
+    "A shield-specialist must materially improve cumulative progress against Shield-heavy targets but lose to GP/penetrator on no-Shield or Armor/Hull-focused lanes to justify selectable status.",
+    "A Kinetic selectable mode must win a genuine niche and lose another; if it strictly dominates the contemporary GP package, prefer automatic upgrade instead.",
+    "Movement-order mirrors are retained, but known TL7/TL9 Kinetic-vs-Missile cliff lanes are not used as payload-balance promotion gates.",
+    "PDS-present and PDS-removed target profiles are both included so interception does not mask payload effect.",
+    "No payload profile in CP114 changes CP109/CP110 candidate tables or production C#/Godot runtime."
+  ]
+}

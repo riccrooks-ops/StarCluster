@@ -1,0 +1,19 @@
+﻿profile_id,tl,role,weapon_bays_used,weapon_bays_available,aux_capacity_used,aux_capacity_available,auxiliary_modules,capacity_signal,status
+tl1-defense,1,Defense specialist,1,1,1,1,aux_kinetic_pds,One AUX slot forces a clear defensive specialization.,legal_capacity_fixture
+tl1-explorer,1,Explorer,1,1,1,1,aux_active_sensor_array,One AUX slot forces a sensor-versus-combat tradeoff.,legal_capacity_fixture
+tl2-power,2,Power planner,1,1,1,1,aux_power_capacitor,TL2 gains more component choice but not more normal-hull AUX capacity.,legal_capacity_fixture
+tl2-ew,2,EW specialist,1,1,1,1,aux_ecm_suite,A single-slot TL2 hull cannot stack ECM with another AUX without a later Hull milestone.,legal_capacity_fixture
+tl3-defense,3,Layered defense,1,1,2,2,aux_amm_pds; aux_shield_battery,"TL3 keeps one main weapon but gains a second AUX point, enabling the first layered support pair.",legal_capacity_fixture
+tl3-power,3,Power support,1,1,2,2,aux_auxiliary_reactor,A capacity-2 Auxiliary Reactor occupies the whole TL3 AUX allowance while the main-weapon count remains one.,legal_capacity_fixture
+tl4-repair,4,Repair defense,2,2,2,2,aux_shield_hardener; aux_repair_drone_bay,TL4 is the mid-tech foundation: the second main weapon arrives while AUX remains at two.,legal_capacity_fixture
+tl4-control,4,Movement control,2,2,2,2,aux_tractor_projector,A capacity-2 Tractor Projector remains a full AUX commitment at the TL4 dual-main foundation.,legal_capacity_fixture
+tl5-power-ew,5,Power and EW,2,2,2,2,aux_auxiliary_reactor,TL5 refines the dual-main generation without another AUX-capacity increase.,legal_capacity_fixture
+tl5-expedition,5,Expedition support,2,2,2,2,aux_hangar_bay,TL5 refines the dual-main generation without another AUX-capacity increase.,legal_capacity_fixture
+tl6-combat,6,Mixed combat support,2,2,3,3,aux_shield_booster; aux_energy_pds; aux_combat_battery,TL6 culminates mid-tech with the third AUX point while retaining two main weapons.,legal_capacity_fixture
+tl6-logistics,6,Logistics cruiser,2,2,3,3,aux_fabrication_module; aux_cargo_expansion,TL6 maturity permits a 2+1 AUX combination while retaining two main weapons.,legal_capacity_fixture
+tl7-resilience,7,Resilience support,3,3,3,3,aux_auxiliary_reactor; aux_repair_drone_bay,TL7 begins high tech with the provisional third main weapon; AUX remains at three.,legal_capacity_fixture
+tl7-ew,7,Information warfare,3,3,3,3,aux_active_sensor_array; aux_ecm_suite; aux_eccm_suite,The high-tech foundation adds the third main weapon without free AUX inflation.,legal_capacity_fixture
+tl8-heavy-support,8,Heavy support,3,3,3,3,aux_tractor_projector; aux_combat_battery,TL8 refines the high-tech generation inside three AUX capacity.,legal_capacity_fixture
+tl8-expedition,8,Deep expedition,3,3,3,3,aux_hangar_bay; aux_laboratory_module,A 2+1 expedition package fits at TL8 without another structural expansion.,legal_capacity_fixture
+tl9-balanced,9,Balanced pinnacle,3,3,4,4,aux_shield_hardener; aux_power_stabilizer; aux_repair_drone_bay; aux_combat_battery,TL9 culminates high tech with four AUX capacity while the three-main architecture remains stable.,legal_capacity_fixture
+tl9-heavy-support,9,Heavy pinnacle support,3,3,4,4,aux_tractor_projector; aux_auxiliary_reactor,Two capacity-2 systems consume the full TL9 AUX allowance; main weapons remain capped at three.,legal_capacity_fixture

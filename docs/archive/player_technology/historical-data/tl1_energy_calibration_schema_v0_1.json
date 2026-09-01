@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-tl1-energy-calibration-v1",
+  "title": "Star Cluster TL1 Energy Calibration Study",
+  "type": "object",
+  "required": ["schemaVersion", "id", "baselineSha256", "masterSeed", "trialsPerVariant", "variants"],
+  "properties": {
+    "schemaVersion": { "const": "star-cluster-tl1-energy-calibration-v1" },
+    "id": { "type": "string", "minLength": 1 },
+    "baselineSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "masterSeed": { "type": "integer", "minimum": 0 },
+    "trialsPerVariant": { "type": "integer", "minimum": 1 },
+    "variants": {
+      "type": "array",
+      "minItems": 20,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "shieldCapacity", "baseShieldRecharge", "armorIntegrity", "hull", "rangeHexes", "rangePenaltyPerHex", "turnCap", "sideA", "sideB"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "label": { "type": "string", "minLength": 1 },
+          "pairId": { "type": ["string", "null"] },
+          "shieldCapacity": { "type": "integer", "minimum": 0 },
+          "shieldArmor": { "type": "integer", "minimum": 0 },
+          "baseShieldRecharge": { "type": "integer", "minimum": 0 },
+          "armorProtection": { "type": "integer", "minimum": 0 },
+          "armorIntegrity": { "type": "integer", "minimum": 0 },
+          "hull": { "type": "integer", "minimum": 1 },
+          "rangeHexes": { "type": "integer", "minimum": 0 },
+          "rangePenaltyPerHex": { "type": "integer", "minimum": 0 },
+          "turnCap": { "type": "integer", "minimum": 1 },
+          "sideA": { "$ref": "#/$defs/side" },
+          "sideB": { "$ref": "#/$defs/side" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "side": {
+      "type": "object",
+      "required": ["family", "doctrine", "accuracy", "computerBonus", "evasive", "reactorOutput", "tacticalShieldRecharge", "ammunition"],
+      "properties": {
+        "family": { "enum": ["energy", "kinetic"] },
+        "doctrine": { "enum": ["low", "standard", "safe-burst"] },
+        "accuracy": { "type": "integer", "minimum": 0 },
+        "computerBonus": { "type": "integer", "minimum": 0 },
+        "evasive": { "type": "boolean" },
+        "reactorOutput": { "type": "integer", "minimum": 0 },
+        "tacticalShieldRecharge": { "type": "integer", "minimum": 0 },
+        "ammunition": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

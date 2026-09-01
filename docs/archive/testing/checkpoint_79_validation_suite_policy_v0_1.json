@@ -1,0 +1,47 @@
+{
+  "checkpoint": 79,
+  "suiteTier": "must_always_run",
+  "acceptedBaseline": "78a",
+  "blockingBalanceTargets": false,
+  "normal": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 54,
+    "substantiveTrials": 540000,
+    "smokeVariants": 54,
+    "smokeTrials": 54,
+    "totalTrialExecutions": 540054
+  },
+  "deepCalibration": {
+    "stageCount": 33,
+    "monteCarloVariantCount": 1652,
+    "substantiveTrials": 16520000,
+    "smokeVariants": 108,
+    "smokeTrials": 108,
+    "totalTrialExecutions": 16520108
+  },
+  "isolationControls": {
+    "tl2ComputerTargetingCandidateApplied": false,
+    "tl1TacticalComputerDegradedFirePenaltyPercentagePoints": 25,
+    "sensorRangeChanged": false,
+    "sensorOverloadChanged": false,
+    "ewOverloadChanged": false,
+    "tl1SensorDiscriminationResistance": 0,
+    "tl2CandidateSensorDiscriminationResistance": 1,
+    "tl1NormalEwRating": 1,
+    "tl2CandidateNormalEwRating": 2,
+    "ewPowerPerRating": 1,
+    "perSideSensorProfiles": true,
+    "normalEwRatingOverride": true,
+    "productionTl2ValuesPromoted": false
+  },
+  "degradedFireControls": {
+    "studyOnlyPenaltyPercentagePoints": 25,
+    "productionWeaponDegradedFireEnabled": false,
+    "eccmEconomicValueGuardrailRequired": true
+  },
+  "missileControls": {
+    "ordinaryTerminalAttackRequiresFirm": true,
+    "directFireDegradedTraitAppliesToMissiles": false,
+    "approximateTargetMissileCapabilityImplemented": false
+  }
+}

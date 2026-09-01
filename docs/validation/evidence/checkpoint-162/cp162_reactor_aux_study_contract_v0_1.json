@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "star-cluster-cp162-reactor-aux-study-contract-v0.1",
+  "checkpoint": 162,
+  "acceptedBaseCheckpoint": 161,
+  "acceptedBaseNativeArchiveSha256": "10f1e967374f005087c93f16a72807069428869d82cdc2cac98d849ec14b363c",
+  "researchExecutionBaselineId": "CP160-PF4",
+  "researchExecutionMatrixSha256": "7fd4dfbbe375586de2605361006db84b68f89767c76ba4b76da6cf5f48253155",
+  "mainReactor": {
+    "space": 6,
+    "operationalOffsetsFromPf4": [-1, 0, 1],
+    "spaceSweepAllowed": false
+  },
+  "auxiliaryReactor": {
+    "availability": "TL1+",
+    "spaceCandidates": [1, 2, 3, 4],
+    "operationalTpCandidates": [1, 2, 3, 4],
+    "installationCountCapImposed": false,
+    "staticScreenEveryLegalStackCount": true,
+    "stochasticAndCombatTiers": [1, 2, 3, "MAX"]
+  },
+  "studyScale": {
+    "stochasticVariants": 8280,
+    "stochasticTurnSamples": 16560000,
+    "combatContexts": 2760,
+    "combatCells": 8280,
+    "combatTrialsPerCell": 500,
+    "substantiveCombatTrials": 4140000
+  },
+  "interpretation": {
+    "playerBaseCruiserAndBroadLegalEnvelopeBothRetained": true,
+    "auxiliaryReactorMustNotEconomicallyReplaceFullMainReactor": true,
+    "countCapMayBeRecommendedOnlyIfEconomicsFailToBoundStacking": true,
+    "automaticPromotion": false,
+    "tuningAllowed": false,
+    "productionAuthorityChanged": false,
+    "conceptChanged": false
+  }
+}

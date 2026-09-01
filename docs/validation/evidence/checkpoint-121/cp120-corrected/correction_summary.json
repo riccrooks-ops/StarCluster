@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "star-cluster-cp120-native-telemetry-correction-v0.1",
+  "checkpoint": 121,
+  "sourceCheckpoint": 120,
+  "sourceArchive": "CP120_NATIVE_RESULTS_ORIGINAL.zip",
+  "sourceArchiveSha256": "ac76aeaa9792b1790d494fcf11817be86e3c5a922ea74138627ea481c25a3bd2",
+  "sourceVariantsMember": "checkpoint-120/native-weapon-sensitivity-study/variants.csv",
+  "sourceVariantsSha256": "2ec8ad0e34ef4460facb96205ec4bfb100761c23238ab546b1df48533fb1b1be",
+  "sourceAnalysisSha256": "579e8b3ac0510266f2b8028b314ca45c23202ea04fbe94769d0324b9bd6d4cb8",
+  "sourceVariants": 4284,
+  "sourceTrials": 8568000,
+  "sourceFailedGates": [],
+  "combatRerun": false,
+  "correction": "Missile launches remain attacker-side telemetry; terminal guidance attempts and missile hits are target-side telemetry. CP120 derived summaries previously read attacking-side missile hits.",
+  "correctedGuidanceComparisonRows": 14,
+  "maxAbsCorrectedGuidanceHitDelta": 0.10032481398658322,
+  "outputFiles": [
+    "gp_yield_sensitivity.csv",
+    "integration_summary.csv",
+    "kinetic_sensitivity.csv",
+    "movement_order_summary.csv",
+    "pds_isolation_summary.csv",
+    "progression_path_summary.csv",
+    "progression_path_tier_summary.csv",
+    "sensitivity_delta_summary.csv",
+    "swarmer_sensitivity.csv"
+  ]
+}

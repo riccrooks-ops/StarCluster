@@ -1,0 +1,359 @@
+{
+  "schemaVersion": "star-cluster-system-map-research-parity-v0.1",
+  "checkpoint": 126,
+  "mapRadius": 5,
+  "expectedCellCount": 91,
+  "searchCases": [
+    {
+      "id": "left-edge",
+      "origin": [
+        -5,
+        0
+      ],
+      "available": 4,
+      "destination": [
+        -4,
+        0
+      ],
+      "movement": 1
+    },
+    {
+      "id": "upper-edge",
+      "origin": [
+        0,
+        -5
+      ],
+      "available": 4,
+      "destination": [
+        0,
+        -4
+      ],
+      "movement": 1
+    },
+    {
+      "id": "right-edge",
+      "origin": [
+        5,
+        0
+      ],
+      "available": 4,
+      "destination": [
+        4,
+        0
+      ],
+      "movement": 1
+    }
+  ],
+  "movementCases": [
+    {
+      "id": "close-off-axis",
+      "origin": [
+        -2,
+        1
+      ],
+      "target": [
+        3,
+        -1
+      ],
+      "available": 3,
+      "order": "Close",
+      "desired": 2,
+      "destination": [
+        1,
+        0
+      ],
+      "path": [
+        [
+          -2,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "finalRange": 2,
+      "closest": 2,
+      "farthest": 5,
+      "movement": 3,
+      "boundary": false
+    },
+    {
+      "id": "open-centerline",
+      "origin": [
+        -1,
+        0
+      ],
+      "target": [
+        1,
+        0
+      ],
+      "available": 4,
+      "order": "Open",
+      "desired": 5,
+      "destination": [
+        -4,
+        0
+      ],
+      "path": [
+        [
+          -1,
+          0
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          -3,
+          0
+        ],
+        [
+          -4,
+          0
+        ]
+      ],
+      "finalRange": 5,
+      "closest": 2,
+      "farthest": 5,
+      "movement": 3,
+      "boundary": false
+    },
+    {
+      "id": "maintain-off-axis",
+      "origin": [
+        -2,
+        1
+      ],
+      "target": [
+        2,
+        -1
+      ],
+      "available": 3,
+      "order": "MaintainPreferredRange",
+      "desired": 3,
+      "destination": [
+        -1,
+        0
+      ],
+      "path": [
+        [
+          -2,
+          1
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "finalRange": 3,
+      "closest": 3,
+      "farthest": 4,
+      "movement": 1,
+      "boundary": false
+    },
+    {
+      "id": "close-off-axis-mirror",
+      "origin": [
+        2,
+        -1
+      ],
+      "target": [
+        -3,
+        1
+      ],
+      "available": 3,
+      "order": "Close",
+      "desired": 2,
+      "destination": [
+        -1,
+        0
+      ],
+      "path": [
+        [
+          2,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "finalRange": 2,
+      "closest": 2,
+      "farthest": 5,
+      "movement": 3,
+      "boundary": false
+    }
+  ],
+  "missileCases": [
+    {
+      "id": "pursuit-phase-1",
+      "origin": [
+        -5,
+        0
+      ],
+      "target": [
+        2,
+        -1
+      ],
+      "speed": 3,
+      "maximumTravel": 9,
+      "alreadyTraveled": 0,
+      "destination": [
+        -2,
+        0
+      ],
+      "movement": 3,
+      "totalTraveled": 3,
+      "terminal": false,
+      "rangeExhausted": false,
+      "path": [
+        [
+          -5,
+          0
+        ],
+        [
+          -4,
+          0
+        ],
+        [
+          -3,
+          0
+        ],
+        [
+          -2,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "rerouted-target",
+      "origin": [
+        -2,
+        0
+      ],
+      "target": [
+        3,
+        -2
+      ],
+      "speed": 3,
+      "maximumTravel": 9,
+      "alreadyTraveled": 3,
+      "destination": [
+        1,
+        -1
+      ],
+      "movement": 3,
+      "totalTraveled": 6,
+      "terminal": false,
+      "rangeExhausted": false,
+      "path": [
+        [
+          -2,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "id": "range-exhaustion",
+      "origin": [
+        -4,
+        0
+      ],
+      "target": [
+        4,
+        0
+      ],
+      "speed": 3,
+      "maximumTravel": 4,
+      "alreadyTraveled": 2,
+      "destination": [
+        -2,
+        0
+      ],
+      "movement": 2,
+      "totalTraveled": 4,
+      "terminal": false,
+      "rangeExhausted": true,
+      "path": [
+        [
+          -4,
+          0
+        ],
+        [
+          -3,
+          0
+        ],
+        [
+          -2,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "terminal-arrival",
+      "origin": [
+        -1,
+        0
+      ],
+      "target": [
+        1,
+        0
+      ],
+      "speed": 3,
+      "maximumTravel": 5,
+      "alreadyTraveled": 0,
+      "destination": [
+        1,
+        0
+      ],
+      "movement": 2,
+      "totalTraveled": 2,
+      "terminal": true,
+      "rangeExhausted": false,
+      "path": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  ]
+}

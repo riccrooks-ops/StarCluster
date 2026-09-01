@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": "96",
+  "status": "accepted_evidence",
+  "scope": "dynamic mover-order statistical population review",
+  "population": {
+    "unorderedDistinctLegalPairs": 255187936,
+    "referenceContextMutualReadyPercent": 84.37154870048403,
+    "observedReferenceReadyWindowPercent": 56.57622046312827,
+    "runtimeBilateralActivePercent": 60.64837704553557,
+    "legacyCp95ReferenceExpectedRuntimeActivePercent": 58.72712778501672
+  },
+  "referenceRuntimeMismatches": {
+    "referenceReadyRuntimeInactiveBundleCount": 41,
+    "referenceReadyRuntimeInactivePopulationPercent": 25.64442091546731,
+    "allHaveAtLeastOneReferenceReadyRangeZero": true,
+    "referenceNotReadyRuntimeBilateralActiveDynamicBundleCount": 4,
+    "referenceNotReadyRuntimeBilateralActiveDynamicPopulationPercent": 1.92124926051885,
+    "referenceNotReadyRuntimeBilateralActiveAllGeometryUnionBundleCount": 7,
+    "referenceNotReadyRuntimeBilateralActiveAllGeometryUnionPopulationPercent": 2.09011891934998,
+    "referenceReadyRuntimeActiveWithoutObservedReferenceWindowBundleCount": 8,
+    "referenceReadyRuntimeActiveWithoutObservedReferenceWindowPopulationPercent": 2.1509065824073
+  },
+  "moverOrder": {
+    "highOrExtremeBundleCount": 17,
+    "highOrExtremePopulationPercent": 12.5105758820676,
+    "extremeBundleCount": 14,
+    "extremePopulationPercent": 10.8476832986032,
+    "highBundleCount": 3,
+    "highPopulationPercent": 1.6628925834644,
+    "allHighOrExtremeAreReadyRangeThreeVsOne": true,
+    "allHighOrExtremeRemainRuntimeBilaterallyActive": true
+  },
+  "pathVsPostMovement": {
+    "uniqueStatisticalBundleCount": 84,
+    "populationPercent": 42.1288287922732,
+    "status": "review_evidence_not_activity_authority"
+  },
+  "developmentBoundary": "Use these cohorts and outlier feeds as supporting diagnostics. Do not create another instrumentation-only checkpoint unless later substantive work exposes a genuine measurement blocker."
+}

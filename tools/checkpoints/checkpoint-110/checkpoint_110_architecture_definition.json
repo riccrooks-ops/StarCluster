@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "110",
+  "acceptedBaseline": "109",
+  "checkpointType": "substantive_power_reactor_first_pass_calibration",
+  "productionRuntime": "C# / Godot",
+  "pythonAllowedForTestingSimulationAndCheckpointValidation": true,
+  "pythonRequiredByProductionRuntime": false,
+  "productionSourceChanged": false,
+  "sourceMatrix": "docs/archive/player_technology/pre-cp165-active/technology_numerical_matrix_v0_1.json",
+  "study": "docs/archive/testing/pre-cp165-active/power_reactor_calibration_study_v0_1.json",
+  "scope": "Primary Main Reactor Generation TL1-TL9 plus legacy/current Reactor integration diagnostics",
+  "energyStorageCalibrated": false,
+  "auxiliaryGenerationCalibrated": false,
+  "automaticPromotion": false,
+  "productionPromotion": false,
+  "candidateDecision": "retain_all_cp109_primary_reactor_values_unchanged_as_first_pass_calibrated_working_candidates",
+  "declaredLocalEvidence": {
+    "exhaustiveLegalStandardBuilds": 18006,
+    "representativeLoadouts": 72,
+    "stochasticVariants": 288,
+    "adaptiveTurnDemandSamples": 7025000,
+    "equivalentSafeOverloadEncounterTurns": 14400000,
+    "reactorCandidates": 11,
+    "currentStackRows": 9,
+    "legacyStackRows": 88,
+    "branchHotspotRows": 9
+  },
+  "interpretationGuardrails": {
+    "targetWinRate": false,
+    "requireOneReactorToMeetFullSimultaneousDemand": false,
+    "humanReviewRequiredForPromotion": true,
+    "highTlMultiReactorAvailabilityIsIntegrationWatch": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "94",
+  "reviewDate": "2026-08-12",
+  "instrumentationIssue": "CP94 observed-engagement diagnosis used mean_minimum_range, which on finite-map movement can include movement-path closest approach rather than final post-Movement combat geometry.",
+  "representativeAcceptedResult": {
+    "variant_id": "c94-1061-dynamic-a-first",
+    "bundle_id": "adaptive-weapon-reactor-duplication-equal_low-near_fill-underfilled-02",
+    "orientation": "reverse",
+    "geometry": "dynamic-a-first",
+    "side_a_family": "Missile",
+    "side_b_family": "Kinetic",
+    "side_a_readiness": "closing_ready",
+    "side_b_readiness": "reference_ready",
+    "side_a_ready_range": "1",
+    "side_b_ready_range": "3",
+    "observed_engagement_diagnosis": "ready_geometry_reached_but_one_side_inactive",
+    "mean_minimum_range": "1.000000",
+    "side_a_direct_opportunities": "0.000000",
+    "side_a_direct_shots": "0.000000",
+    "side_a_missile_opportunities": "3.661333",
+    "side_a_missile_launches": "0.001333",
+    "side_b_direct_opportunities": "7.322667",
+    "side_b_direct_shots": "7.322667",
+    "side_b_missile_opportunities": "0.000000",
+    "side_b_missile_launches": "0.000000"
+  },
+  "interpretation": "The path reached Range 1 at some point, but Side A produced essentially no missile launches. CP95 must not infer that a post-Movement Range-1 firing window existed from path closest approach. It will record final post-Movement readiness per trial and keep path closest approach as separate telemetry.",
+  "authorityBoundary": "Diagnostic evidence only; this finding does not change gameplay rules or component values."
+}

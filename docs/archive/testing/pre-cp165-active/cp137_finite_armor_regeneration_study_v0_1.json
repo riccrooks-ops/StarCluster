@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "star-cluster-cp137-finite-armor-regeneration-v0.1",
+  "checkpoint": 137,
+  "title": "Same-TL Finite Armor Regeneration Reserve Diagnostic",
+  "sourceMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_9.json",
+  "canonicalKernelVersion": "0.4",
+  "damageModel": "penetration-hardening-v1",
+  "masterSeed": 134001,
+  "technologyLevels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "weaponFamiliesByTl": {
+    "1": [
+      "Kinetic",
+      "Energy",
+      "GP"
+    ],
+    "2-9": [
+      "Kinetic",
+      "Energy",
+      "GP",
+      "Swarmer"
+    ]
+  },
+  "mandatoryDefenses": [
+    "Shield",
+    "Armor"
+  ],
+  "tl6ArmorProfiles": [
+    "mainline",
+    "A_b1"
+  ],
+  "pdsContexts": {
+    "directOnly": [
+      "off"
+    ],
+    "missileBearing": [
+      "off",
+      "AMM"
+    ]
+  },
+  "baselineBuild": {
+    "mainCount": 1,
+    "reactorCount": 1,
+    "shield": true,
+    "ecm": false,
+    "eccm": false,
+    "shieldHardener": false,
+    "missionAuxFillsUnusedSpace": true
+  },
+  "directFireModifiers": {
+    "approximateTrackPenaltyPp": -25,
+    "extendedRangePenaltyPp": -10,
+    "stack": true
+  },
+  "energyDoctrine": "SafeOverloadFirst until Energy Strain Limit 2, then Standard; Low only when power-constrained.",
+  "trialsPerVariant": 5000,
+  "smokeTrialsPerVariant": 1,
+  "maxTurns": 60,
+  "balanceTargets": null,
+  "automaticPromotion": false,
+  "mixedTlShipsExecuted": false,
+  "diagnosticPurpose": "Repeat CP136 with common random numbers after changing only regenerative Armor tactical endurance: finite in-combat reserves of 3/4/5/6 AI at TL6-TL9. All numerical values, Shield/DamCon/weapon/PDS/reference-build rules, and study geometry are held. Measure reserve exhaustion, persistent Armor progress, Hull/DamCon activity, TL6 mainline-vs-Crystalline behavior, and family viability.",
+  "expected": {
+    "logicalContexts": 196,
+    "generatedVariants": 392,
+    "pipelineSmokeTrials": 392,
+    "substantiveTrials": 1960000,
+    "tl6Variants": 136,
+    "movementOrders": 2
+  },
+  "damageControlDoctrine": "HullOnlyWhenDamaged; one attempt/turn; 1 TP + 1 kit per attempt; success queues to next Turn Refresh; component repair off; Armor regeneration uses remaining TP.",
+  "comparisonBaseline": "Native-accepted CP136 substantive 1,960,000-engagement diagnostic; same context/variant identities and master seed retained.",
+  "armorRegenerationDoctrine": {
+    "inCombatReserveAiByTl": {
+      "6": 3,
+      "7": 4,
+      "8": 5,
+      "9": 6
+    },
+    "aiPerTp": 1,
+    "tpCapByTl": {
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 2
+    },
+    "reserveConsumption": "1 reserve per AI restored",
+    "outOfCombatRecoverySimulated": false
+  }
+}

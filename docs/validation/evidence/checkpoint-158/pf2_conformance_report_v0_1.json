@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "star-cluster-cp158-pf2-conformance-v0.1",
+  "checkpoint": 158,
+  "baselineId": "CP158-PF2",
+  "matrixSha256": "9d7d7b562926a924d996b4166db40c04e9023d22f30982f306c12d796ad729f9",
+  "selected": {
+    "kineticMain": "K1",
+    "energyMain": "E7",
+    "gpMissileMain": "M2",
+    "swarmerMain": "SW2",
+    "kineticPds": "K155P06",
+    "energyPds": "E155P08",
+    "ammPds": "A155P07"
+  },
+  "requiredAlternatives": {
+    "gpMissileMain": [
+      "M3"
+    ],
+    "kineticPds": [
+      "K155P03"
+    ],
+    "energyPds": [
+      "E155P07"
+    ],
+    "ammPds": [
+      "A155P09"
+    ]
+  },
+  "kineticDamage": [
+    9,
+    10,
+    12,
+    13,
+    14,
+    15,
+    15,
+    19,
+    20
+  ],
+  "energyStandardDamage": [
+    8,
+    8,
+    10,
+    10,
+    10,
+    12,
+    14,
+    16,
+    18
+  ],
+  "energyOverloadDamage": [
+    12,
+    14,
+    14,
+    16,
+    18,
+    22,
+    22,
+    24,
+    24
+  ],
+  "gpMissileDamage": [
+    12,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27
+  ],
+  "swarmerPacketDamage": [
+    null,
+    7,
+    7,
+    8,
+    9,
+    9,
+    10,
+    11,
+    12
+  ],
+  "swarmerSubFlightCount": [
+    0,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "hull": [
+    24.0,
+    24.0,
+    26.0,
+    26.0,
+    28.0,
+    28.0,
+    30.0,
+    30.0,
+    32.0
+  ],
+  "shieldCapacity": [
+    16.0,
+    18.0,
+    20.0,
+    22.0,
+    24.0,
+    26.0,
+    28.0,
+    30.0,
+    32.0
+  ],
+  "armorCapacity": [
+    12.0,
+    14.0,
+    16.0,
+    18.0,
+    20.0,
+    18.0,
+    20.0,
+    22.0,
+    24.0
+  ],
+  "kineticPdsRc": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2
+  ],
+  "energyPdsRc": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "ammRc": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3
+  ],
+  "ammRangeOne": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+    true,
+    true
+  ],
+  "classificationCounts": {
+    "PENDING_FINALIZATION_SELECTED": 348,
+    "PENDING_FINALIZATION_VALIDATED_ENVIRONMENT": 54,
+    "FROZEN_RESEARCH_MECHANIC": 73,
+    "PROVISIONAL_RESOURCE_SCAFFOLD": 63
+  },
+  "productionAuthorityChanged": false,
+  "substantiveResearchMustUseThisBaseline": true
+}

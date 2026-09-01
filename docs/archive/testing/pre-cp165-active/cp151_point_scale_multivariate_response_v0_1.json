@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "star-cluster-cp151-point-scale-multivariate-response-study-v0.1",
+  "checkpoint": 151,
+  "baseCheckpoint": 150,
+  "status": "candidate_pending_native_acceptance",
+  "scope": "x2-offensive-defensive-point-scale-equivalence-and-multivariate-response",
+  "matrix": "docs/design/player_technology/technology_numerical_matrix_v0_9.json",
+  "resourceEnsemble": "docs/design/testing/cp144_stage_a_resource_ensemble.csv",
+  "resourceEnsembleTl": "docs/design/testing/cp144_stage_a_resource_ensemble_tl.csv",
+  "stageAExperimentManifest": "docs/design/testing/cp144_stage_a_experiment_manifest.csv",
+  "acceptedCp150NativeResultsArchiveSha256": "79dd7051103ad4796c1664d21fe03c740a4c3369404a57fe0dc7754bf3ca5c07",
+  "pointScale": 2,
+  "damageModel": "def-res-v1",
+  "combatDoctrine": "cp147_tactical_utility",
+  "scaledFields": [
+    "weapon DAM",
+    "Hull capacity",
+    "Shield capacity",
+    "Armor capacity"
+  ],
+  "recoverySweep": {
+    "shieldRechargePerTp": [
+      1,
+      2,
+      3
+    ],
+    "armorRepairPerTpAtTl6Plus": [
+      1,
+      2,
+      3
+    ],
+    "armorRepairReservePolicy": "x2 accepted reserve, held fixed while per-TP repair rate is swept",
+    "hullDamageControl": "unchanged and excluded from strict x2 equivalence arm"
+  },
+  "unchangedFields": [
+    "ACC",
+    "DEF",
+    "RES",
+    "TP",
+    "range",
+    "Space"
+  ],
+  "penetrationSweep": {
+    "K_APEN": [
+      -1,
+      0,
+      1
+    ],
+    "E_SPEN": [
+      -1,
+      0,
+      1
+    ],
+    "missile_APEN_SPEN": [
+      0
+    ]
+  },
+  "kineticResearchDamageOldScale": {
+    "1": 5,
+    "2": 5,
+    "3": 6,
+    "4": 7,
+    "5": 7,
+    "6": 8,
+    "7": 8,
+    "8": 10,
+    "9": 10
+  },
+  "kineticAccuracyPolicy": "unchanged executable CP150 profile in CP151; monotonic technological progression remains a later selection constraint, not a rescaling variable",
+  "swarmerPolicy": "strict equivalence uses exact x2 fractional packet DAM; substantive response surface rounds the x2 center to the nearest integer and sweeps center-1/center/center+1",
+  "auxPolicy": "sweep only established executable point-domain mechanics; record but do not invent magnitudes for unresolved Shield/Armor AUX proxies",
+  "design": "OA(243) three-level strength-2 core plus use of embedded/unique pure axial points; no redundant duplicate configurations",
+  "masterSeed": 151001,
+  "equivalenceSeed": 151000,
+  "equivalencePairedScenarioIdentities": 6850,
+  "expectedTlCandidates": 2373,
+  "expectedCandidateContextCells": 1807050,
+  "substantiveTrialsPerCandidateContext": 25,
+  "substantiveCombatTrials": 45176250,
+  "smokeContextsPerTl": 50,
+  "smokeCombatTrials": 118650,
+  "tuningAllowed": false,
+  "automaticPromotion": false,
+  "stageBAutomatic": false,
+  "batchCandidates": 16,
+  "recommendedJobs": 24
+}

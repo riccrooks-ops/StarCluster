@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "adaptive-engage-policy-v0_2",
+  "status": "experimental_cross_progression_foundation",
+  "authority": "AI decision architecture; not a gameplay-value or technology-promotion authority",
+  "informationParity": {
+    "ownCapabilitiesAllowed": true,
+    "ownPowerAndStrainAllowed": true,
+    "observedTrackQualityAllowed": true,
+    "observedEnemyAttacksAllowed": true,
+    "observedEnemyEmissionsAllowed": true,
+    "observedEnemyMovementAllowed": true,
+    "hiddenOpponentTechnologyLevelsAllowed": false,
+    "hiddenOpponentEcmEccmRatingsAllowed": false,
+    "internalJammingMarginAllowed": false,
+    "undisclosedOpponentComponentsAllowed": false,
+    "futureRandomOutcomesAllowed": false,
+    "retroactiveDecisionChangesAllowed": false
+  },
+  "encounter": {
+    "initialMapRadius": 5,
+    "oppositeEdgeStartingRange": 10,
+    "preContactSearch": "one_hex_toward_map_center",
+    "preContactTargetCoordinateAvailableToPolicy": false,
+    "contactDoesNotImplyFirmTrack": true
+  },
+  "movement": {
+    "preserveDemonstratedAsymmetricStandoff": true,
+    "opponentNominalWeaponFamilyRangeUsed": false,
+    "ownInstalledWeaponReachMayBoundInitialApproach": true,
+    "failedFirmAtRangeDrivesLaterClosure": true,
+    "rangeZeroClosureAllowed": true
+  },
+  "combatBlackboard": {
+    "targetSpecific": true,
+    "contactTurn": true,
+    "lastTrackQualityAndRange": true,
+    "closestFailedFirmRange": true,
+    "maximumOwnObservedAttackRange": true,
+    "maximumObservedOpponentAttackRange": true,
+    "observableEcmAndActiveSensorEmissions": true,
+    "overloadFailuresByRangeAndObservableState": true,
+    "safeStrainExhaustionRemembered": true,
+    "safeStrainExhaustionIsOwnCapabilityState": true
+  },
+  "escalation": {
+    "ordinaryMovementBeforeOverload": true,
+    "ordinaryEccmBeforeOverload": true,
+    "sameHexBurnThroughBeforeLastDitchSensorOverloadWhenReachable": true,
+    "preferredOverloadOrder": [
+      "eccm_overload",
+      "active_sensor_overload"
+    ],
+    "activeSensorOverloadIsLastDitch": true,
+    "activeSensorOverloadActsAsEccm": false,
+    "failedOverloadSameOrFartherRetryWithoutStateChange": false,
+    "failedOverloadCloserRetryAllowed": true,
+    "failedOverloadSameRangeRetryAfterMaterialObservableStateChangeAllowed": true,
+    "safeStrainExhaustionSuppressesRetry": true,
+    "closerRangeDoesNotRestoreSafeStrain": true,
+    "observableEnemyStateChangeDoesNotRestoreSafeStrain": true,
+    "powerDeniedRetryMayReenterAfterOwnPowerStateChange": true,
+    "futureExplicitStrainRecoveryMayRestoreEligibility": true
+  },
+  "promotionBoundary": {
+    "automaticBalancePromotion": false,
+    "diagnosticFixtureTechnologyPromotion": false
+  }
+}

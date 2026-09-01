@@ -1,0 +1,3118 @@
+{
+  "schemaVersion": "star-cluster-cross-tl-build-permutation-v8",
+  "checkpoint": "104",
+  "id": "cross-tl-build-permutation-foundation-v1_3",
+  "status": "cp104_targeted_diagnostic_candidate",
+  "purpose": "CP104 targeted TL3 diagnostic closure: equal-Space frontier responses to dual legacy mains, Kinetic/Missile movement-order decomposition, TL3 Energy synergy decomposition, and power-pressure hot-spot fixes. Diagnostic-only; no population inference and no automatic technology change. CP104 is the final planned TL3-focused diagnostic checkpoint before higher-TL chart expansion unless an architectural defect is found.",
+  "coverageMode": "diagnostic_overlay",
+  "totalInstallationSpace": 36,
+  "fixedShellSpace": 0,
+  "fixedShell": {
+    "description": "CP102 v7 enumerates STL/FTL/PDS and Hull capacity explicitly; no combat-system Installation Space remains hidden in the fixed shell.",
+    "stlDriveSpace": 0,
+    "ftlDriveSpace": 0,
+    "kineticPdsSpace": 0,
+    "kineticPdsCount": 0
+  },
+  "constructionGuardrails": {
+    "minimumMainWeaponCount": 1,
+    "minimumReactorCount": 1,
+    "additionalMainWeaponsOptional": true,
+    "additionalReactorsOptional": true,
+    "duplicationMustBeExplicit": true,
+    "redundantEwInstallationsAllowed": true,
+    "ecmSameTypeRatingsAdditive": false,
+    "eccmSameTypeRatingsAdditive": false,
+    "ewDuplicateResolution": "highest_applicable_functional_rating",
+    "powerSufficiencyIsConstructionLegalityFilter": false,
+    "minimumSensorCount": 1,
+    "sensorlessDiagnosticsAllowedOutsideLegalPopulation": true
+  },
+  "baselineProfileId": "tl1-production",
+  "technologyProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl3-standard-runtime-profiles-v0_4.json",
+  "auxiliaryProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl2-auxiliary-runtime-profiles-v0_3.json",
+  "auxiliaryProfileId": "aux-r53-none-tl1",
+  "sensorEwProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/SensorEw/tl2-sew01-sensor-discrimination-isolation.json",
+  "aiDoctrineCatalog": "docs/archive/ai/pre-cp165-active/ai_doctrine_registry_v0_2.json",
+  "aiDoctrineId": "tl1-ew-preserve-combat-package-v1",
+  "masterSeed": 1040100,
+  "trialsPerVariant": 500,
+  "variantIdPrefix": "c104d",
+  "generatedStudyId": "tl3-cp104-targeted-diagnostic-closure",
+  "expectedRawCombinationCount": 124002900,
+  "expectedLegalBuildCount": 52,
+  "expectedExactFillBuildCount": 12,
+  "expectedNearFillBuildCount": 14,
+  "expectedUnderfilledBuildCount": 26,
+  "expectedOrientedPairingEnvelope": 0,
+  "expectedUnorderedWithSelfPairingEnvelope": 0,
+  "expectedOrientedDistinctPairingEnvelope": 0,
+  "expectedUnorderedDistinctPairingEnvelope": 0,
+  "axes": [
+    {
+      "id": "hull",
+      "code": "h",
+      "options": [
+        {
+          "id": "h1",
+          "technologyLevel": 1,
+          "status": "accepted_tl1_reference",
+          "space": 0,
+          "installationSpaceCapacity": 35,
+          "note": "TL1/TL2 cruiser construction capacity reference: 35 Installation Space."
+        },
+        {
+          "id": "h2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "installationSpaceCapacity": 35,
+          "note": "TL2 35-Space cruiser envelope."
+        },
+        {
+          "id": "h3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "installationSpaceCapacity": 36,
+          "note": "TL3 mature cruiser integration: 36 Installation Space; no bundled Hull durability increase."
+        }
+      ]
+    },
+    {
+      "id": "weapon",
+      "code": "w",
+      "options": [
+        {
+          "id": "k1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 6,
+          "family": "Kinetic",
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "mainWeaponCount": 1,
+          "note": "TL1 Kinetic reference."
+        },
+        {
+          "id": "k1x2",
+          "technologyLevel": 1,
+          "status": "explicit_duplicate_reference",
+          "space": 12,
+          "family": "Kinetic",
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "mainWeaponCount": 2,
+          "note": "Two homogeneous TL1 Kinetic Main Weapons; explicit player/AI design choice."
+        },
+        {
+          "id": "e1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 6,
+          "family": "Energy",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "mainWeaponCount": 1,
+          "note": "Current Energy penetration profile; no TL2 penetration promotion."
+        },
+        {
+          "id": "e1x2",
+          "technologyLevel": 1,
+          "status": "explicit_duplicate_reference",
+          "space": 12,
+          "family": "Energy",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "mainWeaponCount": 2,
+          "note": "Two homogeneous Energy Main Weapons; current first multiplicity envelope."
+        },
+        {
+          "id": "m1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 6,
+          "family": "Missile",
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "mainWeaponCount": 1,
+          "note": "Current Missile penetration profile; no TL2 penetration promotion."
+        },
+        {
+          "id": "m1x2",
+          "technologyLevel": 1,
+          "status": "explicit_duplicate_reference",
+          "space": 12,
+          "family": "Missile",
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "mainWeaponCount": 2,
+          "note": "Two homogeneous Missile Main Weapons; current first multiplicity envelope."
+        },
+        {
+          "id": "k2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 6,
+          "mainWeaponCount": 1,
+          "family": "Kinetic",
+          "note": "TL2 Kinetic integration reference: APEN1, ordinary 1 TP.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 4,
+          "accuracyBonus": 20,
+          "powerCost": 1,
+          "maximumRange": 4,
+          "ammunition": 100
+        },
+        {
+          "id": "k2x2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 12,
+          "mainWeaponCount": 2,
+          "family": "Kinetic",
+          "note": "TL2 Kinetic integration reference: APEN1, ordinary 1 TP.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 4,
+          "accuracyBonus": 20,
+          "powerCost": 1,
+          "maximumRange": 4,
+          "ammunition": 100
+        },
+        {
+          "id": "e2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 6,
+          "mainWeaponCount": 1,
+          "family": "Energy",
+          "note": "TL2 Energy standard mode: 2 TP -> DAM3, Acc+25, SPEN1/APEN1.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 3,
+          "accuracyBonus": 25,
+          "powerCost": 2,
+          "maximumRange": 5,
+          "ammunition": null
+        },
+        {
+          "id": "e2x2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 12,
+          "mainWeaponCount": 2,
+          "family": "Energy",
+          "note": "TL2 Energy standard mode: 2 TP -> DAM3, Acc+25, SPEN1/APEN1.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 3,
+          "accuracyBonus": 25,
+          "powerCost": 2,
+          "maximumRange": 5,
+          "ammunition": null
+        },
+        {
+          "id": "m2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 6,
+          "mainWeaponCount": 1,
+          "family": "Missile",
+          "note": "TL2 Missile integration reference: Move3 and no standard onboard navigation sensor.",
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "damage": 5,
+          "accuracyBonus": 0,
+          "powerCost": 0,
+          "maximumRange": 6,
+          "ammunition": 25,
+          "missileMove": 3,
+          "standardOnboardNavigationSensor": false
+        },
+        {
+          "id": "m2x2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 12,
+          "mainWeaponCount": 2,
+          "family": "Missile",
+          "note": "TL2 Missile integration reference: Move3 and no standard onboard navigation sensor.",
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "damage": 5,
+          "accuracyBonus": 0,
+          "powerCost": 0,
+          "maximumRange": 6,
+          "ammunition": 25,
+          "missileMove": 3,
+          "standardOnboardNavigationSensor": false
+        },
+        {
+          "id": "k3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 6,
+          "mainWeaponCount": 1,
+          "family": "Kinetic",
+          "note": "TL3 Kinetic maturation: packet held; ordinary firing improves to 0 discretionary TP.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 4,
+          "accuracyBonus": 20,
+          "powerCost": 0,
+          "maximumRange": 4,
+          "ammunition": 100
+        },
+        {
+          "id": "k3x2",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 12,
+          "mainWeaponCount": 2,
+          "family": "Kinetic",
+          "note": "TL3 Kinetic maturation: packet held; ordinary firing improves to 0 discretionary TP.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 4,
+          "accuracyBonus": 20,
+          "powerCost": 0,
+          "maximumRange": 4,
+          "ammunition": 100
+        },
+        {
+          "id": "e3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 6,
+          "mainWeaponCount": 1,
+          "family": "Energy",
+          "note": "TL3 Energy retains the 2 TP standard mode and adds safe Low 1 TP -> DAM2 and High 3 TP -> DAM4; transition smoke selects High.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 3,
+          "accuracyBonus": 25,
+          "powerCost": 2,
+          "maximumRange": 5,
+          "ammunition": null,
+          "preferredSmokeModeId": "high",
+          "preferredSmokeModeDamage": 4,
+          "preferredSmokeModePowerCost": 3,
+          "preferredSmokeModeAccuracyBonus": 25
+        },
+        {
+          "id": "e3x2",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 12,
+          "mainWeaponCount": 2,
+          "family": "Energy",
+          "note": "TL3 Energy retains the 2 TP standard mode and adds safe Low 1 TP -> DAM2 and High 3 TP -> DAM4; transition smoke selects High.",
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "damage": 3,
+          "accuracyBonus": 25,
+          "powerCost": 2,
+          "maximumRange": 5,
+          "ammunition": null,
+          "preferredSmokeModeId": "high",
+          "preferredSmokeModeDamage": 4,
+          "preferredSmokeModePowerCost": 3,
+          "preferredSmokeModeAccuracyBonus": 25
+        },
+        {
+          "id": "m3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 6,
+          "mainWeaponCount": 1,
+          "family": "Missile",
+          "note": "TL3 Missile maturation: Move4 and standard onboard navigation sensor; seeker remains optional and detailed navigation-sensor track statistics remain deferred.",
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "damage": 5,
+          "accuracyBonus": 0,
+          "powerCost": 0,
+          "maximumRange": 6,
+          "ammunition": 25,
+          "missileMove": 4,
+          "standardOnboardNavigationSensor": true
+        },
+        {
+          "id": "m3x2",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 12,
+          "mainWeaponCount": 2,
+          "family": "Missile",
+          "note": "TL3 Missile maturation: Move4 and standard onboard navigation sensor; seeker remains optional and detailed navigation-sensor track statistics remain deferred.",
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "damage": 5,
+          "accuracyBonus": 0,
+          "powerCost": 0,
+          "maximumRange": 6,
+          "ammunition": 25,
+          "missileMove": 4,
+          "standardOnboardNavigationSensor": true
+        }
+      ]
+    },
+    {
+      "id": "reactor",
+      "code": "r",
+      "options": [
+        {
+          "id": "r1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 6,
+          "reactorOutput": 5,
+          "reactorCount": 1,
+          "note": "One Peak Fission Main Reactor."
+        },
+        {
+          "id": "r1x2",
+          "technologyLevel": 1,
+          "status": "explicit_duplicate_reference",
+          "space": 12,
+          "reactorOutput": 5,
+          "reactorCount": 2,
+          "note": "Two homogeneous TL1 Main Reactors; output is per reactor."
+        },
+        {
+          "id": "r2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 6,
+          "reactorCount": 1,
+          "reactorOutput": 6,
+          "note": "TL2 Early Practical Fusion, 6 TP per reactor / 6 Space."
+        },
+        {
+          "id": "r2x2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 12,
+          "reactorCount": 2,
+          "reactorOutput": 6,
+          "note": "TL2 Early Practical Fusion, 6 TP per reactor / 6 Space."
+        },
+        {
+          "id": "r3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 5,
+          "reactorCount": 1,
+          "reactorOutput": 6,
+          "note": "TL3 Mature Compact Fusion, 6 TP per reactor / 5 Space; damaged-state mapping held."
+        },
+        {
+          "id": "r3x2",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 10,
+          "reactorCount": 2,
+          "reactorOutput": 6,
+          "note": "TL3 Mature Compact Fusion, 6 TP per reactor / 5 Space; damaged-state mapping held."
+        }
+      ]
+    },
+    {
+      "id": "computer",
+      "code": "c",
+      "options": [
+        {
+          "id": "c1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 3,
+          "targetingBonus": 10
+        },
+        {
+          "id": "c2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 3,
+          "targetingBonus": 12,
+          "evasiveCompensation": 0,
+          "note": "TL2 +12 targeting; EvComp0."
+        },
+        {
+          "id": "c3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 3,
+          "targetingBonus": 12,
+          "evasiveCompensation": 5,
+          "note": "TL3 EvComp applies only against the firing ship own Evasive penalty and cannot create a bonus."
+        }
+      ]
+    },
+    {
+      "id": "sensor",
+      "code": "s",
+      "options": [
+        {
+          "id": "s1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 3,
+          "installed": true,
+          "sensorEwProfileId": "tl1-balanced-0-control"
+        },
+        {
+          "id": "s2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 3,
+          "installed": true,
+          "sensorEwProfileId": "tl2-discrimination-1-candidate",
+          "passiveFirmRange": 1,
+          "passiveApproximateRange": 3,
+          "activeLowFirmRange": 3,
+          "activeLowApproximateRange": 4,
+          "activeLowPowerCost": 1,
+          "note": "TL2 DR1 integration reference with current 3/4 @1 TP normal Active envelope; no TL3 High normal mode."
+        },
+        {
+          "id": "s3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 3,
+          "installed": true,
+          "sensorEwProfileId": "tl2-discrimination-1-candidate",
+          "passiveFirmRange": 1,
+          "passiveApproximateRange": 3,
+          "activeLowFirmRange": 3,
+          "activeLowApproximateRange": 4,
+          "activeLowPowerCost": 1,
+          "activeHighFirmRange": 4,
+          "activeHighApproximateRange": 5,
+          "activeHighPowerCost": 2,
+          "note": "TL3 dual normal Active modes: Low 3/4 @1 TP; High 4/5 @2 TP; High is not overload and causes no Strain."
+        }
+      ]
+    },
+    {
+      "id": "shield",
+      "code": "sh",
+      "options": [
+        {
+          "id": "sh0",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "installed": false,
+          "shieldCapacity": 0,
+          "note": "No shield installed."
+        },
+        {
+          "id": "sh1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 3,
+          "installed": true,
+          "shieldCapacity": 2
+        },
+        {
+          "id": "sh2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 3,
+          "installed": true,
+          "shieldCapacity": 3,
+          "note": "TL2/TL3 primary shield capacity3 / 3 Space held; TL3 hardening is a separate optional component."
+        }
+      ]
+    },
+    {
+      "id": "shieldHardener",
+      "code": "hd",
+      "options": [
+        {
+          "id": "hard0-l1",
+          "technologyLevel": 1,
+          "status": "absent_reference",
+          "space": 0,
+          "installed": false,
+          "shieldArmorBonus": 0,
+          "sustainedPowerCost": 0,
+          "note": "No Shield Hardener installed."
+        },
+        {
+          "id": "hard3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 1,
+          "installed": true,
+          "shieldArmorBonus": 1,
+          "sustainedPowerCost": 1,
+          "note": "TL3 optional Shield Hardener: SA1 for sustained 1 TP; nonstacking."
+        },
+        {
+          "id": "hard0",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "installed": false,
+          "shieldArmorBonus": 0,
+          "sustainedPowerCost": 0,
+          "note": "No Shield Hardener installed."
+        }
+      ]
+    },
+    {
+      "id": "armor",
+      "code": "a",
+      "options": [
+        {
+          "id": "a1",
+          "technologyLevel": 1,
+          "status": "current_working_reference",
+          "space": 0,
+          "armorProtection": 0,
+          "armorIntegrity": 4
+        },
+        {
+          "id": "a2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "armorProtection": 0,
+          "armorIntegrity": 5,
+          "note": "TL2 AP0/AI5."
+        },
+        {
+          "id": "a3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "armorProtection": 1,
+          "armorIntegrity": 5,
+          "note": "TL3 AP1/AI5; Integrity held."
+        }
+      ]
+    },
+    {
+      "id": "ecm",
+      "code": "em",
+      "options": [
+        {
+          "id": "ecm0",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "installed": false,
+          "ewRatings": [],
+          "ewNormalPowerCost": 1,
+          "note": "No suite installed."
+        },
+        {
+          "id": "ecm2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 1,
+          "installed": true,
+          "ewRatings": [
+            2
+          ],
+          "ewNormalPowerCost": 1,
+          "ewFullStrengthNormalPowerCost": null,
+          "note": "TL2 ECM Rating2 at 1 TP/rating; full Rating2 costs 2 TP; duplicate same-type ratings remain non-additive."
+        },
+        {
+          "id": "ecm2x2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 2,
+          "installed": true,
+          "ewRatings": [
+            2,
+            2
+          ],
+          "ewNormalPowerCost": 1,
+          "ewFullStrengthNormalPowerCost": null,
+          "note": "TL2 ECM Rating2 at 1 TP/rating; full Rating2 costs 2 TP; duplicate same-type ratings remain non-additive."
+        },
+        {
+          "id": "ecm3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 1,
+          "installed": true,
+          "ewRatings": [
+            2
+          ],
+          "ewNormalPowerCost": 1,
+          "ewFullStrengthNormalPowerCost": 1,
+          "note": "TL3 ECM Rating2; full-strength normal operation costs 1 TP total; duplicate same-type ratings remain non-additive."
+        },
+        {
+          "id": "ecm3x2",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 2,
+          "installed": true,
+          "ewRatings": [
+            2,
+            2
+          ],
+          "ewNormalPowerCost": 1,
+          "ewFullStrengthNormalPowerCost": 1,
+          "note": "CP103 TL3 duplicate Rating-2 installation: redundancy only; highest applicable functional rating remains 2; full-strength normal cost remains 1 TP."
+        }
+      ]
+    },
+    {
+      "id": "eccm",
+      "code": "ec",
+      "options": [
+        {
+          "id": "eccm0",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "installed": false,
+          "ewRatings": [],
+          "ewNormalPowerCost": 1,
+          "note": "No suite installed."
+        },
+        {
+          "id": "eccm2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 1,
+          "installed": true,
+          "ewRatings": [
+            2
+          ],
+          "ewNormalPowerCost": 1,
+          "ewFullStrengthNormalPowerCost": null,
+          "note": "TL2 ECCM Rating2 at 1 TP/rating; full Rating2 costs 2 TP; duplicate same-type ratings remain non-additive."
+        },
+        {
+          "id": "eccm2x2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 2,
+          "installed": true,
+          "ewRatings": [
+            2,
+            2
+          ],
+          "ewNormalPowerCost": 1,
+          "ewFullStrengthNormalPowerCost": null,
+          "note": "TL2 ECCM Rating2 at 1 TP/rating; full Rating2 costs 2 TP; duplicate same-type ratings remain non-additive."
+        },
+        {
+          "id": "eccm3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 1,
+          "installed": true,
+          "ewRatings": [
+            2
+          ],
+          "ewNormalPowerCost": 1,
+          "ewFullStrengthNormalPowerCost": 1,
+          "note": "TL3 ECCM Rating2; full-strength normal operation costs 1 TP total; duplicate same-type ratings remain non-additive."
+        },
+        {
+          "id": "eccm3x2",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 2,
+          "installed": true,
+          "ewRatings": [
+            2,
+            2
+          ],
+          "ewNormalPowerCost": 1,
+          "ewFullStrengthNormalPowerCost": 1,
+          "note": "CP103 TL3 duplicate Rating-2 installation: redundancy only; highest applicable functional rating remains 2; full-strength normal cost remains 1 TP."
+        }
+      ]
+    },
+    {
+      "id": "stl",
+      "code": "st",
+      "options": [
+        {
+          "id": "stl1",
+          "technologyLevel": 1,
+          "status": "accepted_tl1_reference",
+          "space": 5,
+          "normalMove": 1,
+          "note": "TL1 Nuclear Pulse Drive: Move1, 5 Space; overload behavior remains runtime-profile controlled."
+        },
+        {
+          "id": "stl2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 5,
+          "normalMove": 2,
+          "note": "TL2 STL Move2 / 5 Space."
+        },
+        {
+          "id": "stl3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 5,
+          "normalMove": 3,
+          "note": "TL3 STL Move3 / 5 Space; bounded +1 Move overload remains +1 TP/+2 fuel/+1 Strain with Strain Limit2."
+        }
+      ]
+    },
+    {
+      "id": "ftl",
+      "code": "ft",
+      "options": [
+        {
+          "id": "ftl1",
+          "technologyLevel": 1,
+          "status": "accepted_tl1_reference",
+          "space": 5,
+          "strategicMove": 1,
+          "note": "TL1 Prototype Fold Drive: strategic Move1, 5 Space."
+        },
+        {
+          "id": "ftl2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 5,
+          "strategicMove": 2,
+          "note": "TL2 strategic Move2 / 5 Space."
+        },
+        {
+          "id": "ftl3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 5,
+          "strategicMove": 3,
+          "note": "TL3 strategic Move3 / 5 Space; frontier-entry stop/interruption rules held."
+        }
+      ]
+    },
+    {
+      "id": "pds",
+      "code": "p",
+      "options": [
+        {
+          "id": "p0",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 0,
+          "installed": false,
+          "pdsCount": 0,
+          "note": "No PDS installed."
+        },
+        {
+          "id": "kpds2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 2,
+          "installed": true,
+          "pdsCount": 1,
+          "pdsFamily": "Kinetic",
+          "pdsBaseChance": 13,
+          "pdsPowerCost": 1,
+          "pdsReactionCapacity": 1,
+          "pdsFallbackPowerCost": null,
+          "pdsFallbackReactionCapacity": null,
+          "pdsAmmunition": 60,
+          "note": "Kinetic PDS base13 / RC1 / 1 TP / Ammo60 held at TL3."
+        },
+        {
+          "id": "kpds3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 2,
+          "installed": true,
+          "pdsCount": 1,
+          "pdsFamily": "Kinetic",
+          "pdsBaseChance": 13,
+          "pdsPowerCost": 1,
+          "pdsReactionCapacity": 1,
+          "pdsFallbackPowerCost": null,
+          "pdsFallbackReactionCapacity": null,
+          "pdsAmmunition": 60,
+          "note": "Kinetic PDS base13 / RC1 / 1 TP / Ammo60 held at TL3."
+        },
+        {
+          "id": "epds2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 2,
+          "installed": true,
+          "pdsCount": 1,
+          "pdsFamily": "Energy",
+          "pdsBaseChance": 16,
+          "pdsPowerCost": 2,
+          "pdsReactionCapacity": 1,
+          "pdsFallbackPowerCost": null,
+          "pdsFallbackReactionCapacity": null,
+          "pdsAmmunition": null,
+          "note": "TL2 Energy PDS base16 / RC1 / 2 TP."
+        },
+        {
+          "id": "epds3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 2,
+          "installed": true,
+          "pdsCount": 1,
+          "pdsFamily": "Energy",
+          "pdsBaseChance": 16,
+          "pdsPowerCost": 1,
+          "pdsReactionCapacity": 1,
+          "pdsFallbackPowerCost": null,
+          "pdsFallbackReactionCapacity": null,
+          "pdsAmmunition": null,
+          "note": "TL3 Energy PDS base16 / RC1 / 1 TP; ammunition-free."
+        },
+        {
+          "id": "ammpds2",
+          "technologyLevel": 2,
+          "status": "cp102_executable_candidate",
+          "space": 2,
+          "installed": true,
+          "pdsCount": 1,
+          "pdsFamily": "AMM",
+          "pdsBaseChance": 20,
+          "pdsPowerCost": 1,
+          "pdsReactionCapacity": 1,
+          "pdsFallbackPowerCost": null,
+          "pdsFallbackReactionCapacity": null,
+          "pdsAmmunition": 25,
+          "note": "TL2 AMM PDS base20 / RC1 / 1 TP / Ammo25."
+        },
+        {
+          "id": "ammpds3",
+          "technologyLevel": 3,
+          "status": "cp102_executable_candidate",
+          "space": 2,
+          "installed": true,
+          "pdsCount": 1,
+          "pdsFamily": "AMM",
+          "pdsBaseChance": 20,
+          "pdsPowerCost": 2,
+          "pdsReactionCapacity": 2,
+          "pdsFallbackPowerCost": 1,
+          "pdsFallbackReactionCapacity": 1,
+          "pdsAmmunition": 25,
+          "note": "TL3 AMM PDS transition smoke selects High readiness 2 TP -> RC2; the alternate 1 TP -> RC1 mode remains legal and the two-attempt-per-flight cap is unchanged."
+        }
+      ]
+    }
+  ],
+  "progressionLattice": {
+    "enabled": false
+  },
+  "exactEdgePairingSelection": {
+    "enabled": false
+  },
+  "stratifiedPairingSelection": {
+    "enabled": false
+  },
+  "namedRecipes": [
+    {
+      "id": "legacy-k1x2",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k1x2",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "legacy-k2x2",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k2x2",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "frontier-k3-base30",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "frontier-k3x2-exact36",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k3x2",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "frontier-k3-r3x2-hard-exact36",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k3",
+        "reactor": "r3x2",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "frontier-k3-balanced35",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a3",
+        "ecm": "ecm3",
+        "eccm": "eccm3",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "epds3"
+      }
+    },
+    {
+      "id": "legacy-e1x2",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e1x2",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "legacy-e2x2",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e2x2",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "frontier-e3-base30",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "frontier-e3x2-exact36",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e3x2",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "frontier-e3-r3x2-hard-exact36",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e3",
+        "reactor": "r3x2",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "frontier-e3-balanced35",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a3",
+        "ecm": "ecm3",
+        "eccm": "eccm3",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "epds3"
+      }
+    },
+    {
+      "id": "move-k-tl2",
+      "selections": {
+        "hull": "h2",
+        "weapon": "k2",
+        "reactor": "r2",
+        "computer": "c2",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "move-k-tl2-stl3",
+      "selections": {
+        "hull": "h2",
+        "weapon": "k2",
+        "reactor": "r2",
+        "computer": "c2",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "move-k-tl3-stl2",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "move-k-tl3",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "move-m-tl2",
+      "selections": {
+        "hull": "h2",
+        "weapon": "m2",
+        "reactor": "r2",
+        "computer": "c2",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "move-m-tl2-stl3",
+      "selections": {
+        "hull": "h2",
+        "weapon": "m2",
+        "reactor": "r2",
+        "computer": "c2",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "move-m-tl3-stl2",
+      "selections": {
+        "hull": "h3",
+        "weapon": "m3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "move-m-tl3",
+      "selections": {
+        "hull": "h3",
+        "weapon": "m3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-base-tl2",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e2",
+        "reactor": "r2",
+        "computer": "c2",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-e3-only",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e3",
+        "reactor": "r2",
+        "computer": "c2",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-r3-only",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e2",
+        "reactor": "r3",
+        "computer": "c2",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-c3-only",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e2",
+        "reactor": "r2",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-s3-only",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e2",
+        "reactor": "r2",
+        "computer": "c2",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-a3-only",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e2",
+        "reactor": "r2",
+        "computer": "c2",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-stl3-only",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e2",
+        "reactor": "r2",
+        "computer": "c2",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-h3-only",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e2",
+        "reactor": "r2",
+        "computer": "c2",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-e3-r3",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e3",
+        "reactor": "r3",
+        "computer": "c2",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-e3-s3",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e3",
+        "reactor": "r2",
+        "computer": "c2",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-e3-c3",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e3",
+        "reactor": "r2",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-r3-s3",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e2",
+        "reactor": "r3",
+        "computer": "c2",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-e3-r3-s3",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e3",
+        "reactor": "r3",
+        "computer": "c2",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-e3-r3-c3",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-e3-c3-s3",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e3",
+        "reactor": "r2",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-offense-core",
+      "selections": {
+        "hull": "h2",
+        "weapon": "e3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-tl3-no-stl",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "energy-tl3-full",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "power-k-opponent",
+      "selections": {
+        "hull": "h2",
+        "weapon": "m2",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm3x2",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "epds3"
+      }
+    },
+    {
+      "id": "power-k-hotspot",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k2",
+        "reactor": "r2",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a2",
+        "ecm": "ecm2x2",
+        "eccm": "eccm2",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "power-k-r3",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k2",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a2",
+        "ecm": "ecm2x2",
+        "eccm": "eccm2",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "power-k-ecm3",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k2",
+        "reactor": "r2",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a2",
+        "ecm": "ecm3",
+        "eccm": "eccm2",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "power-k-eccm3",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k2",
+        "reactor": "r2",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a2",
+        "ecm": "ecm2x2",
+        "eccm": "eccm3",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "power-k-ew3",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k2",
+        "reactor": "r2",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a2",
+        "ecm": "ecm3",
+        "eccm": "eccm3",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "power-k-hard-off",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k2",
+        "reactor": "r2",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a2",
+        "ecm": "ecm2x2",
+        "eccm": "eccm2",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "power-k-k3",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k3",
+        "reactor": "r2",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a2",
+        "ecm": "ecm2x2",
+        "eccm": "eccm2",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "power-e-opponent",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e2",
+        "reactor": "r2",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh0",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm3x2",
+        "eccm": "eccm3",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "kpds2"
+      }
+    },
+    {
+      "id": "power-e-hotspot",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e2",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a3",
+        "ecm": "ecm3",
+        "eccm": "eccm2x2",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "ammpds3"
+      }
+    },
+    {
+      "id": "power-e-eccm3",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e2",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a3",
+        "ecm": "ecm3",
+        "eccm": "eccm3x2",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "ammpds3"
+      }
+    },
+    {
+      "id": "power-e-hard-off",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e2",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm3",
+        "eccm": "eccm2x2",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "ammpds3"
+      }
+    },
+    {
+      "id": "power-e-ecm-off",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e2",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm2x2",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "ammpds3"
+      }
+    },
+    {
+      "id": "power-e-e3",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a3",
+        "ecm": "ecm3",
+        "eccm": "eccm2x2",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "ammpds3"
+      }
+    },
+    {
+      "id": "power-e-s3",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e2",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard3",
+        "armor": "a3",
+        "ecm": "ecm3",
+        "eccm": "eccm2x2",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "ammpds3"
+      }
+    },
+    {
+      "id": "power-e-dualr3-trim",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e2",
+        "reactor": "r3x2",
+        "computer": "c3",
+        "sensor": "s2",
+        "shield": "sh0",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm3",
+        "eccm": "eccm2x2",
+        "stl": "stl2",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "control-k3",
+      "selections": {
+        "hull": "h3",
+        "weapon": "k3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    },
+    {
+      "id": "control-e3",
+      "selections": {
+        "hull": "h3",
+        "weapon": "e3",
+        "reactor": "r3",
+        "computer": "c3",
+        "sensor": "s3",
+        "shield": "sh2",
+        "shieldHardener": "hard0-l1",
+        "armor": "a3",
+        "ecm": "ecm0",
+        "eccm": "eccm0",
+        "stl": "stl3",
+        "ftl": "ftl2",
+        "pds": "p0"
+      }
+    }
+  ],
+  "expectedNamedRecipeCount": 56,
+  "pairingGroups": [
+    {
+      "id": "legacy-response__legacy-k1x2-vs-frontier-k3-base30__forward",
+      "sideARecipes": [
+        "legacy-k1x2"
+      ],
+      "sideBRecipes": [
+        "frontier-k3-base30"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k1x2-vs-frontier-k3-base30__reverse",
+      "sideARecipes": [
+        "frontier-k3-base30"
+      ],
+      "sideBRecipes": [
+        "legacy-k1x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k1x2-vs-frontier-k3x2-exact36__forward",
+      "sideARecipes": [
+        "legacy-k1x2"
+      ],
+      "sideBRecipes": [
+        "frontier-k3x2-exact36"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k1x2-vs-frontier-k3x2-exact36__reverse",
+      "sideARecipes": [
+        "frontier-k3x2-exact36"
+      ],
+      "sideBRecipes": [
+        "legacy-k1x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k1x2-vs-frontier-k3-r3x2-hard-exact36__forward",
+      "sideARecipes": [
+        "legacy-k1x2"
+      ],
+      "sideBRecipes": [
+        "frontier-k3-r3x2-hard-exact36"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k1x2-vs-frontier-k3-r3x2-hard-exact36__reverse",
+      "sideARecipes": [
+        "frontier-k3-r3x2-hard-exact36"
+      ],
+      "sideBRecipes": [
+        "legacy-k1x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k1x2-vs-frontier-k3-balanced35__forward",
+      "sideARecipes": [
+        "legacy-k1x2"
+      ],
+      "sideBRecipes": [
+        "frontier-k3-balanced35"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k1x2-vs-frontier-k3-balanced35__reverse",
+      "sideARecipes": [
+        "frontier-k3-balanced35"
+      ],
+      "sideBRecipes": [
+        "legacy-k1x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k2x2-vs-frontier-k3-base30__forward",
+      "sideARecipes": [
+        "legacy-k2x2"
+      ],
+      "sideBRecipes": [
+        "frontier-k3-base30"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k2x2-vs-frontier-k3-base30__reverse",
+      "sideARecipes": [
+        "frontier-k3-base30"
+      ],
+      "sideBRecipes": [
+        "legacy-k2x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k2x2-vs-frontier-k3x2-exact36__forward",
+      "sideARecipes": [
+        "legacy-k2x2"
+      ],
+      "sideBRecipes": [
+        "frontier-k3x2-exact36"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k2x2-vs-frontier-k3x2-exact36__reverse",
+      "sideARecipes": [
+        "frontier-k3x2-exact36"
+      ],
+      "sideBRecipes": [
+        "legacy-k2x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k2x2-vs-frontier-k3-r3x2-hard-exact36__forward",
+      "sideARecipes": [
+        "legacy-k2x2"
+      ],
+      "sideBRecipes": [
+        "frontier-k3-r3x2-hard-exact36"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k2x2-vs-frontier-k3-r3x2-hard-exact36__reverse",
+      "sideARecipes": [
+        "frontier-k3-r3x2-hard-exact36"
+      ],
+      "sideBRecipes": [
+        "legacy-k2x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k2x2-vs-frontier-k3-balanced35__forward",
+      "sideARecipes": [
+        "legacy-k2x2"
+      ],
+      "sideBRecipes": [
+        "frontier-k3-balanced35"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-k2x2-vs-frontier-k3-balanced35__reverse",
+      "sideARecipes": [
+        "frontier-k3-balanced35"
+      ],
+      "sideBRecipes": [
+        "legacy-k2x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e1x2-vs-frontier-e3-base30__forward",
+      "sideARecipes": [
+        "legacy-e1x2"
+      ],
+      "sideBRecipes": [
+        "frontier-e3-base30"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e1x2-vs-frontier-e3-base30__reverse",
+      "sideARecipes": [
+        "frontier-e3-base30"
+      ],
+      "sideBRecipes": [
+        "legacy-e1x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e1x2-vs-frontier-e3x2-exact36__forward",
+      "sideARecipes": [
+        "legacy-e1x2"
+      ],
+      "sideBRecipes": [
+        "frontier-e3x2-exact36"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e1x2-vs-frontier-e3x2-exact36__reverse",
+      "sideARecipes": [
+        "frontier-e3x2-exact36"
+      ],
+      "sideBRecipes": [
+        "legacy-e1x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e1x2-vs-frontier-e3-r3x2-hard-exact36__forward",
+      "sideARecipes": [
+        "legacy-e1x2"
+      ],
+      "sideBRecipes": [
+        "frontier-e3-r3x2-hard-exact36"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e1x2-vs-frontier-e3-r3x2-hard-exact36__reverse",
+      "sideARecipes": [
+        "frontier-e3-r3x2-hard-exact36"
+      ],
+      "sideBRecipes": [
+        "legacy-e1x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e1x2-vs-frontier-e3-balanced35__forward",
+      "sideARecipes": [
+        "legacy-e1x2"
+      ],
+      "sideBRecipes": [
+        "frontier-e3-balanced35"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e1x2-vs-frontier-e3-balanced35__reverse",
+      "sideARecipes": [
+        "frontier-e3-balanced35"
+      ],
+      "sideBRecipes": [
+        "legacy-e1x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e2x2-vs-frontier-e3-base30__forward",
+      "sideARecipes": [
+        "legacy-e2x2"
+      ],
+      "sideBRecipes": [
+        "frontier-e3-base30"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e2x2-vs-frontier-e3-base30__reverse",
+      "sideARecipes": [
+        "frontier-e3-base30"
+      ],
+      "sideBRecipes": [
+        "legacy-e2x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e2x2-vs-frontier-e3x2-exact36__forward",
+      "sideARecipes": [
+        "legacy-e2x2"
+      ],
+      "sideBRecipes": [
+        "frontier-e3x2-exact36"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e2x2-vs-frontier-e3x2-exact36__reverse",
+      "sideARecipes": [
+        "frontier-e3x2-exact36"
+      ],
+      "sideBRecipes": [
+        "legacy-e2x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e2x2-vs-frontier-e3-r3x2-hard-exact36__forward",
+      "sideARecipes": [
+        "legacy-e2x2"
+      ],
+      "sideBRecipes": [
+        "frontier-e3-r3x2-hard-exact36"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e2x2-vs-frontier-e3-r3x2-hard-exact36__reverse",
+      "sideARecipes": [
+        "frontier-e3-r3x2-hard-exact36"
+      ],
+      "sideBRecipes": [
+        "legacy-e2x2"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e2x2-vs-frontier-e3-balanced35__forward",
+      "sideARecipes": [
+        "legacy-e2x2"
+      ],
+      "sideBRecipes": [
+        "frontier-e3-balanced35"
+      ]
+    },
+    {
+      "id": "legacy-response__legacy-e2x2-vs-frontier-e3-balanced35__reverse",
+      "sideARecipes": [
+        "frontier-e3-balanced35"
+      ],
+      "sideBRecipes": [
+        "legacy-e2x2"
+      ]
+    },
+    {
+      "id": "movement__k-tl2-v-tl2stl3__forward",
+      "sideARecipes": [
+        "move-k-tl2"
+      ],
+      "sideBRecipes": [
+        "move-k-tl2-stl3"
+      ]
+    },
+    {
+      "id": "movement__k-tl2-v-tl2stl3__reverse",
+      "sideARecipes": [
+        "move-k-tl2-stl3"
+      ],
+      "sideBRecipes": [
+        "move-k-tl2"
+      ]
+    },
+    {
+      "id": "movement__k-tl3stl2-v-tl3__forward",
+      "sideARecipes": [
+        "move-k-tl3-stl2"
+      ],
+      "sideBRecipes": [
+        "move-k-tl3"
+      ]
+    },
+    {
+      "id": "movement__k-tl3stl2-v-tl3__reverse",
+      "sideARecipes": [
+        "move-k-tl3"
+      ],
+      "sideBRecipes": [
+        "move-k-tl3-stl2"
+      ]
+    },
+    {
+      "id": "movement__k-tl2-v-tl3stl2__forward",
+      "sideARecipes": [
+        "move-k-tl2"
+      ],
+      "sideBRecipes": [
+        "move-k-tl3-stl2"
+      ]
+    },
+    {
+      "id": "movement__k-tl2-v-tl3stl2__reverse",
+      "sideARecipes": [
+        "move-k-tl3-stl2"
+      ],
+      "sideBRecipes": [
+        "move-k-tl2"
+      ]
+    },
+    {
+      "id": "movement__k-tl2stl3-v-tl3__forward",
+      "sideARecipes": [
+        "move-k-tl2-stl3"
+      ],
+      "sideBRecipes": [
+        "move-k-tl3"
+      ]
+    },
+    {
+      "id": "movement__k-tl2stl3-v-tl3__reverse",
+      "sideARecipes": [
+        "move-k-tl3"
+      ],
+      "sideBRecipes": [
+        "move-k-tl2-stl3"
+      ]
+    },
+    {
+      "id": "movement__k-tl2-v-tl3__forward",
+      "sideARecipes": [
+        "move-k-tl2"
+      ],
+      "sideBRecipes": [
+        "move-k-tl3"
+      ]
+    },
+    {
+      "id": "movement__k-tl2-v-tl3__reverse",
+      "sideARecipes": [
+        "move-k-tl3"
+      ],
+      "sideBRecipes": [
+        "move-k-tl2"
+      ]
+    },
+    {
+      "id": "movement__m-tl2-v-tl2stl3__forward",
+      "sideARecipes": [
+        "move-m-tl2"
+      ],
+      "sideBRecipes": [
+        "move-m-tl2-stl3"
+      ]
+    },
+    {
+      "id": "movement__m-tl2-v-tl2stl3__reverse",
+      "sideARecipes": [
+        "move-m-tl2-stl3"
+      ],
+      "sideBRecipes": [
+        "move-m-tl2"
+      ]
+    },
+    {
+      "id": "movement__m-tl3stl2-v-tl3__forward",
+      "sideARecipes": [
+        "move-m-tl3-stl2"
+      ],
+      "sideBRecipes": [
+        "move-m-tl3"
+      ]
+    },
+    {
+      "id": "movement__m-tl3stl2-v-tl3__reverse",
+      "sideARecipes": [
+        "move-m-tl3"
+      ],
+      "sideBRecipes": [
+        "move-m-tl3-stl2"
+      ]
+    },
+    {
+      "id": "movement__m-tl2-v-tl3stl2__forward",
+      "sideARecipes": [
+        "move-m-tl2"
+      ],
+      "sideBRecipes": [
+        "move-m-tl3-stl2"
+      ]
+    },
+    {
+      "id": "movement__m-tl2-v-tl3stl2__reverse",
+      "sideARecipes": [
+        "move-m-tl3-stl2"
+      ],
+      "sideBRecipes": [
+        "move-m-tl2"
+      ]
+    },
+    {
+      "id": "movement__m-tl2stl3-v-tl3__forward",
+      "sideARecipes": [
+        "move-m-tl2-stl3"
+      ],
+      "sideBRecipes": [
+        "move-m-tl3"
+      ]
+    },
+    {
+      "id": "movement__m-tl2stl3-v-tl3__reverse",
+      "sideARecipes": [
+        "move-m-tl3"
+      ],
+      "sideBRecipes": [
+        "move-m-tl2-stl3"
+      ]
+    },
+    {
+      "id": "movement__m-tl2-v-tl3__forward",
+      "sideARecipes": [
+        "move-m-tl2"
+      ],
+      "sideBRecipes": [
+        "move-m-tl3"
+      ]
+    },
+    {
+      "id": "movement__m-tl2-v-tl3__reverse",
+      "sideARecipes": [
+        "move-m-tl3"
+      ],
+      "sideBRecipes": [
+        "move-m-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-e3-only__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-e3-only"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-e3-only__reverse",
+      "sideARecipes": [
+        "energy-e3-only"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-r3-only__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-r3-only"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-r3-only__reverse",
+      "sideARecipes": [
+        "energy-r3-only"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-c3-only__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-c3-only"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-c3-only__reverse",
+      "sideARecipes": [
+        "energy-c3-only"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-s3-only__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-s3-only"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-s3-only__reverse",
+      "sideARecipes": [
+        "energy-s3-only"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-a3-only__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-a3-only"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-a3-only__reverse",
+      "sideARecipes": [
+        "energy-a3-only"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-stl3-only__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-stl3-only"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-stl3-only__reverse",
+      "sideARecipes": [
+        "energy-stl3-only"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-h3-only__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-h3-only"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-h3-only__reverse",
+      "sideARecipes": [
+        "energy-h3-only"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-e3-r3__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-e3-r3"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-e3-r3__reverse",
+      "sideARecipes": [
+        "energy-e3-r3"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-e3-s3__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-e3-s3"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-e3-s3__reverse",
+      "sideARecipes": [
+        "energy-e3-s3"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-e3-c3__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-e3-c3"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-e3-c3__reverse",
+      "sideARecipes": [
+        "energy-e3-c3"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-r3-s3__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-r3-s3"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-r3-s3__reverse",
+      "sideARecipes": [
+        "energy-r3-s3"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-e3-r3-s3__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-e3-r3-s3"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-e3-r3-s3__reverse",
+      "sideARecipes": [
+        "energy-e3-r3-s3"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-e3-r3-c3__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-e3-r3-c3"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-e3-r3-c3__reverse",
+      "sideARecipes": [
+        "energy-e3-r3-c3"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-e3-c3-s3__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-e3-c3-s3"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-e3-c3-s3__reverse",
+      "sideARecipes": [
+        "energy-e3-c3-s3"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-offense-core__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-offense-core"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-offense-core__reverse",
+      "sideARecipes": [
+        "energy-offense-core"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-tl3-no-stl__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-tl3-no-stl"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-tl3-no-stl__reverse",
+      "sideARecipes": [
+        "energy-tl3-no-stl"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-tl3-full__forward",
+      "sideARecipes": [
+        "energy-base-tl2"
+      ],
+      "sideBRecipes": [
+        "energy-tl3-full"
+      ]
+    },
+    {
+      "id": "energy-synergy__tl2-v-energy-tl3-full__reverse",
+      "sideARecipes": [
+        "energy-tl3-full"
+      ],
+      "sideBRecipes": [
+        "energy-base-tl2"
+      ]
+    },
+    {
+      "id": "energy-synergy__e3-v-e3r3__forward",
+      "sideARecipes": [
+        "energy-e3-only"
+      ],
+      "sideBRecipes": [
+        "energy-e3-r3"
+      ]
+    },
+    {
+      "id": "energy-synergy__e3-v-e3r3__reverse",
+      "sideARecipes": [
+        "energy-e3-r3"
+      ],
+      "sideBRecipes": [
+        "energy-e3-only"
+      ]
+    },
+    {
+      "id": "energy-synergy__e3-v-e3s3__forward",
+      "sideARecipes": [
+        "energy-e3-only"
+      ],
+      "sideBRecipes": [
+        "energy-e3-s3"
+      ]
+    },
+    {
+      "id": "energy-synergy__e3-v-e3s3__reverse",
+      "sideARecipes": [
+        "energy-e3-s3"
+      ],
+      "sideBRecipes": [
+        "energy-e3-only"
+      ]
+    },
+    {
+      "id": "energy-synergy__e3-v-e3c3__forward",
+      "sideARecipes": [
+        "energy-e3-only"
+      ],
+      "sideBRecipes": [
+        "energy-e3-c3"
+      ]
+    },
+    {
+      "id": "energy-synergy__e3-v-e3c3__reverse",
+      "sideARecipes": [
+        "energy-e3-c3"
+      ],
+      "sideBRecipes": [
+        "energy-e3-only"
+      ]
+    },
+    {
+      "id": "energy-synergy__core-v-fullnostl__forward",
+      "sideARecipes": [
+        "energy-offense-core"
+      ],
+      "sideBRecipes": [
+        "energy-tl3-no-stl"
+      ]
+    },
+    {
+      "id": "energy-synergy__core-v-fullnostl__reverse",
+      "sideARecipes": [
+        "energy-tl3-no-stl"
+      ],
+      "sideBRecipes": [
+        "energy-offense-core"
+      ]
+    },
+    {
+      "id": "energy-synergy__fullnostl-v-full__forward",
+      "sideARecipes": [
+        "energy-tl3-no-stl"
+      ],
+      "sideBRecipes": [
+        "energy-tl3-full"
+      ]
+    },
+    {
+      "id": "energy-synergy__fullnostl-v-full__reverse",
+      "sideARecipes": [
+        "energy-tl3-full"
+      ],
+      "sideBRecipes": [
+        "energy-tl3-no-stl"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-k-hotspot-vs-opponent__forward",
+      "sideARecipes": [
+        "power-k-opponent"
+      ],
+      "sideBRecipes": [
+        "power-k-hotspot"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-k-hotspot-vs-opponent__reverse",
+      "sideARecipes": [
+        "power-k-hotspot"
+      ],
+      "sideBRecipes": [
+        "power-k-opponent"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-k-r3-vs-opponent__forward",
+      "sideARecipes": [
+        "power-k-opponent"
+      ],
+      "sideBRecipes": [
+        "power-k-r3"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-k-r3-vs-opponent__reverse",
+      "sideARecipes": [
+        "power-k-r3"
+      ],
+      "sideBRecipes": [
+        "power-k-opponent"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-k-ecm3-vs-opponent__forward",
+      "sideARecipes": [
+        "power-k-opponent"
+      ],
+      "sideBRecipes": [
+        "power-k-ecm3"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-k-ecm3-vs-opponent__reverse",
+      "sideARecipes": [
+        "power-k-ecm3"
+      ],
+      "sideBRecipes": [
+        "power-k-opponent"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-k-eccm3-vs-opponent__forward",
+      "sideARecipes": [
+        "power-k-opponent"
+      ],
+      "sideBRecipes": [
+        "power-k-eccm3"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-k-eccm3-vs-opponent__reverse",
+      "sideARecipes": [
+        "power-k-eccm3"
+      ],
+      "sideBRecipes": [
+        "power-k-opponent"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-k-ew3-vs-opponent__forward",
+      "sideARecipes": [
+        "power-k-opponent"
+      ],
+      "sideBRecipes": [
+        "power-k-ew3"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-k-ew3-vs-opponent__reverse",
+      "sideARecipes": [
+        "power-k-ew3"
+      ],
+      "sideBRecipes": [
+        "power-k-opponent"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-k-hard-off-vs-opponent__forward",
+      "sideARecipes": [
+        "power-k-opponent"
+      ],
+      "sideBRecipes": [
+        "power-k-hard-off"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-k-hard-off-vs-opponent__reverse",
+      "sideARecipes": [
+        "power-k-hard-off"
+      ],
+      "sideBRecipes": [
+        "power-k-opponent"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-k-k3-vs-opponent__forward",
+      "sideARecipes": [
+        "power-k-opponent"
+      ],
+      "sideBRecipes": [
+        "power-k-k3"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-k-k3-vs-opponent__reverse",
+      "sideARecipes": [
+        "power-k-k3"
+      ],
+      "sideBRecipes": [
+        "power-k-opponent"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-e-hotspot-vs-opponent__forward",
+      "sideARecipes": [
+        "power-e-opponent"
+      ],
+      "sideBRecipes": [
+        "power-e-hotspot"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-e-hotspot-vs-opponent__reverse",
+      "sideARecipes": [
+        "power-e-hotspot"
+      ],
+      "sideBRecipes": [
+        "power-e-opponent"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-e-eccm3-vs-opponent__forward",
+      "sideARecipes": [
+        "power-e-opponent"
+      ],
+      "sideBRecipes": [
+        "power-e-eccm3"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-e-eccm3-vs-opponent__reverse",
+      "sideARecipes": [
+        "power-e-eccm3"
+      ],
+      "sideBRecipes": [
+        "power-e-opponent"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-e-hard-off-vs-opponent__forward",
+      "sideARecipes": [
+        "power-e-opponent"
+      ],
+      "sideBRecipes": [
+        "power-e-hard-off"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-e-hard-off-vs-opponent__reverse",
+      "sideARecipes": [
+        "power-e-hard-off"
+      ],
+      "sideBRecipes": [
+        "power-e-opponent"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-e-ecm-off-vs-opponent__forward",
+      "sideARecipes": [
+        "power-e-opponent"
+      ],
+      "sideBRecipes": [
+        "power-e-ecm-off"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-e-ecm-off-vs-opponent__reverse",
+      "sideARecipes": [
+        "power-e-ecm-off"
+      ],
+      "sideBRecipes": [
+        "power-e-opponent"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-e-e3-vs-opponent__forward",
+      "sideARecipes": [
+        "power-e-opponent"
+      ],
+      "sideBRecipes": [
+        "power-e-e3"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-e-e3-vs-opponent__reverse",
+      "sideARecipes": [
+        "power-e-e3"
+      ],
+      "sideBRecipes": [
+        "power-e-opponent"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-e-s3-vs-opponent__forward",
+      "sideARecipes": [
+        "power-e-opponent"
+      ],
+      "sideBRecipes": [
+        "power-e-s3"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-e-s3-vs-opponent__reverse",
+      "sideARecipes": [
+        "power-e-s3"
+      ],
+      "sideBRecipes": [
+        "power-e-opponent"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-e-dualr3-trim-vs-opponent__forward",
+      "sideARecipes": [
+        "power-e-opponent"
+      ],
+      "sideBRecipes": [
+        "power-e-dualr3-trim"
+      ]
+    },
+    {
+      "id": "power-hotspot__power-e-dualr3-trim-vs-opponent__reverse",
+      "sideARecipes": [
+        "power-e-dualr3-trim"
+      ],
+      "sideBRecipes": [
+        "power-e-opponent"
+      ]
+    },
+    {
+      "id": "control__k3-self__forward",
+      "sideARecipes": [
+        "control-k3"
+      ],
+      "sideBRecipes": [
+        "control-k3"
+      ]
+    },
+    {
+      "id": "control__k3-self__reverse",
+      "sideARecipes": [
+        "control-k3"
+      ],
+      "sideBRecipes": [
+        "control-k3"
+      ]
+    },
+    {
+      "id": "control__e3-self__forward",
+      "sideARecipes": [
+        "control-e3"
+      ],
+      "sideBRecipes": [
+        "control-e3"
+      ]
+    },
+    {
+      "id": "control__e3-self__reverse",
+      "sideARecipes": [
+        "control-e3"
+      ],
+      "sideBRecipes": [
+        "control-e3"
+      ]
+    }
+  ],
+  "expectedNamedLogicalPairingCount": 128,
+  "expectedStratifiedLogicalPairingCount": 0,
+  "expectedLogicalPairingCount": 128,
+  "geometries": [
+    {
+      "id": "adaptive-a-first",
+      "movementMode": "EngageAdaptive",
+      "movementOrder": "SideAFirst",
+      "initialRangeHexes": 10
+    },
+    {
+      "id": "adaptive-b-first",
+      "movementMode": "EngageAdaptive",
+      "movementOrder": "SideBFirst",
+      "initialRangeHexes": 10
+    }
+  ],
+  "expectedGeometryCount": 2,
+  "expectedGeneratedVariantCount": 256,
+  "researchSimulationEngine": "starcluster-python-research-v1",
+  "researchSimulationAuthority": "screening_not_gameplay_authority",
+  "pythonRuntimeMajorMinor": "3.13",
+  "diagnosticCategories": [
+    "legacy-response",
+    "movement",
+    "energy-synergy",
+    "power-hotspot",
+    "control"
+  ],
+  "higherTlExpansionGate": {
+    "afterCheckpoint104": true,
+    "defaultNextPhase": "extend-basic-subsystem-tl-chart-beyond-tl3",
+    "additionalTl3CalibrationOnlyForArchitecturalDefect": true
+  }
+}

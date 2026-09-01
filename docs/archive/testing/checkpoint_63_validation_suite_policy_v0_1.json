@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-63-validation-suite-policy-v0_1",
+  "checkpoint": 63,
+  "status": "active_suite_plus_operational_sensor_acquisition_ew",
+  "principles": [
+    "Must-always-run covers repository/build/unit/deterministic authoritative contracts plus the current checkpoint's 72-variant operational sensor/acquisition/EW study.",
+    "Deep Calibration remains opt-in unless a checkpoint changes mechanics that require historical stochastic requalification.",
+    "The accepted Checkpoint 62 108-variant power-doctrine/reactor study and Checkpoint 61 54-variant composed-build study move to Deep Calibration as historical stochastic regression evidence.",
+    "Production TL1 reactor output remains 5 Tactical Power and FullVolleyFirst is used for the current offensive-isolation study so power starvation does not confound sensor value.",
+    "All cruisers retain core passive/navigation sensing; the optional 3-Space Active Sensor suite extends the operational Firm/Approximate envelope and can consume Tactical Power.",
+    "Side B retains an established Firm solution in the current matrix so only Side A acquisition consequences change.",
+    "The one-point EW lane is an abstract net range-pressure stress input, not a valuation or pricing decision for a particular ECM/ECCM installation.",
+    "Simulation diagnoses consequences; it does not manufacture fixed build or weapon-family win percentages.",
+    "Latent/contextual advantages remain valid design value even when the current opponent does not exercise them; Energy APEN is the explicit standing example.",
+    "Generated historical checkpoint text logs/manifests/readmes remain excluded from full-repository packaging unless active tooling explicitly consumes them."
+  ],
+  "mustAlwaysRunStageIds": [
+    "deterministic",
+    "tl1-phase-a",
+    "tl1-phase-b",
+    "tl1-installation-space-envelope",
+    "tl1-operational-sensor-acquisition-ew",
+    "auxiliary-resource-endurance",
+    "checkpoint-53-resource-semantics-lock",
+    "runner-self-tests"
+  ],
+  "deepCalibrationStageIds": [
+    "tl1-power-doctrine-reactor-sensitivity",
+    "tl1-composed-ship-odd-build-combat",
+    "tl1-kinetic-calibration",
+    "tl1-energy-calibration",
+    "tl1-weapon-matrix",
+    "tl1-pds-calibration",
+    "tl1-defensive-calibration",
+    "tl1-power-correction",
+    "tl1-range-control-calibration",
+    "tl1-damage-control-calibration",
+    "tl1-combat-pacing",
+    "tl1-integrated-tactical-combat",
+    "tl1-movement-kinetic-pacing-diagnostics",
+    "tl1-minimal-tactics-baseline"
+  ],
+  "archivedHistoricalStageCount": 39,
+  "activeRunnerStageCount": 8,
+  "deepRunnerStageCount": 22,
+  "notes": {
+    "activeMonteCarloVariants": 72,
+    "activeTrialsAtDefault": 720000,
+    "deepMonteCarloVariants": 1260,
+    "deepTrialsAtDefault": 12600000,
+    "studyBuildCount": 6,
+    "weaponFamilyCount": 3,
+    "acquisitionRegimeCount": 4,
+    "productionReactorOutput": 5,
+    "powerDoctrine": "FullVolleyFirst",
+    "balanceTargetsBlocking": false,
+    "deepCalibrationRequiredForCheckpoint63Acceptance": false,
+    "reasonDeepCalibrationNotRequired": "The operational track fields default to EstablishedFirm and therefore preserve historical study behavior; the current normal suite directly exercises the new sensor/acquisition path."
+  }
+}

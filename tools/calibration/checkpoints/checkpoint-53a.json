@@ -1,0 +1,736 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "53a",
+  "title": "Checkpoint 53a Repository Validation Hotfix - TL1/TL2 Auxiliary Refinement and Tactical Power Stress",
+  "sdkVersion": "8.0.423",
+  "configuration": "Debug",
+  "calibrationSolution": "StarCluster.Calibration.sln",
+  "testProject": "tests/StarCluster.Tests/StarCluster.Tests.csproj",
+  "runnerProject": "src/StarCluster.ScenarioRunner/StarCluster.ScenarioRunner.csproj",
+  "manifestFile": "CHECKPOINT_53A_SHA256SUMS.txt",
+  "outputRoot": "out/checkpoint-53a",
+  "defaultTrials": 10000,
+  "defaultJobs": 24,
+  "documentation": [
+    "docs/Star_Cluster_Game_Concept_v0.4z.docx",
+    "docs/design/player_technology/StarCluster_Player_TL_Framework_Draft_v0_34.xlsx",
+    "docs/design/player_technology/Player_TL1_TL9_Technology_Architecture_v0_5.md",
+    "docs/design/player_technology/player_technology_architecture_v0_5.json",
+    "docs/design/player_technology/player_technology_architecture_schema_v0_5.json",
+    "docs/design/player_technology/cruiser_installation_capacity_review_v0_1.json",
+    "docs/design/player_technology/representative_cruiser_capacity_profiles_v0_1.csv",
+    "docs/design/player_technology/player_technology_subfamily_matrix_v0_3.csv",
+    "docs/design/player_technology/auxiliary_component_availability_matrix_v0_4.csv",
+    "docs/design/player_technology/scenario_architecture_bridge_v0_5.json",
+    "docs/archive/player_technology/pre-cp165-active/pds_tl1_tl2_characteristics_v0_3.json",
+    "docs/design/player_technology/auxiliary_resource_lifecycle_v0_2.json",
+    "docs/design/player_technology/checkpoint_53_early_auxiliary_matrix_inventory_v0_3.json",
+    "docs/design/player_technology/TL2_Accepted_Standard_Combat_Profile_v0_1.md",
+    "docs/design/player_technology/Auxiliary_Performance_Screening_Framework_v0_1.md",
+    "docs/validation/Checkpoint_53_TL1_TL2_Auxiliary_Refinement_And_Tactical_Power_Stress.md",
+    "docs/validation/Checkpoint_53a_Repository_Validation_Hotfix.md"
+  ],
+  "stages": [
+    {
+      "id": "deterministic",
+      "name": "Accepted deterministic moving-missile scenarios",
+      "command": "run-all",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios",
+        "--output-dir",
+        "{OutputRoot}/deterministic"
+      ],
+      "metrics": {
+        "deterministicCases": 7
+      }
+    },
+    {
+      "id": "tl1-phase-a",
+      "name": "TL1 Phase A mechanics corpus",
+      "command": "tl1-phase-a",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1PhaseA",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-a"
+      ],
+      "metrics": {
+        "caseCount": 54
+      }
+    },
+    {
+      "id": "tl1-phase-b",
+      "name": "TL1 Phase B direct-fire corpus",
+      "command": "tl1-phase-b",
+      "arguments": [
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-b"
+      ],
+      "metrics": {
+        "caseCount": 36
+      }
+    },
+    {
+      "id": "tl1-kinetic-calibration",
+      "name": "TL1 kinetic-interaction calibration",
+      "command": "tl1-kinetic-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-kc01-kinetic-interaction-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-kinetic-calibration"
+      ],
+      "metrics": {
+        "variantCount": 29,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-energy-calibration",
+      "name": "TL1 energy-interaction calibration",
+      "command": "tl1-energy-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-ec01-energy-interaction-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-energy-calibration"
+      ],
+      "metrics": {
+        "variantCount": 31,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-weapon-matrix",
+      "name": "Complete TL1 no-counter weapon matrix",
+      "command": "tl1-weapon-matrix",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-wm01-complete-weapon-matrix.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-weapon-matrix"
+      ],
+      "metrics": {
+        "variantCount": 48,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-pds-calibration",
+      "name": "Corrected TL1 PDS and interception calibration",
+      "command": "tl1-pds-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-pds01-interception-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-pds-calibration"
+      ],
+      "metrics": {
+        "variantCount": 59,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-defensive-calibration",
+      "name": "TL1 layered defensive-system calibration",
+      "command": "tl1-defensive-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-ds01-layered-defensive-systems-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-defensive-calibration"
+      ],
+      "metrics": {
+        "variantCount": 171,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-power-correction",
+      "name": "TL1 main-power and interception-order correction study",
+      "command": "tl1-power-envelope-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-pe02-main-power-interception-correction-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-power-correction"
+      ],
+      "metrics": {
+        "variantCount": 294,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-range-control-calibration",
+      "name": "TL1 scripted relative-range and missile-budget calibration",
+      "command": "tl1-range-control-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-rc01-scripted-relative-range-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-range-control-calibration"
+      ],
+      "metrics": {
+        "variantCount": 75,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-damage-control-calibration",
+      "name": "TL1 Damage Control eligibility and doctrine calibration",
+      "command": "tl1-damage-control-calibration",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-dc01-damage-control-doctrine-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-damage-control-calibration"
+      ],
+      "metrics": {
+        "variantCount": 64,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-combat-pacing",
+      "name": "TL1 critical-density, combat-pacing, and Immobile timing probe",
+      "command": "tl1-combat-pacing",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-cp01-critical-density-and-immobile-timing.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-combat-pacing"
+      ],
+      "metrics": {
+        "variantCount": 8,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-integrated-tactical-combat",
+      "name": "TL1 integrated cross-family combat and tactical-order policy study",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc01-cross-family-dynamic-range.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-integrated-tactical-combat"
+      ],
+      "metrics": {
+        "variantCount": 90,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-movement-kinetic-pacing-diagnostics",
+      "name": "TL1 movement-law, kinetic-damage, defense, and disengagement diagnostics",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc02-movement-kinetic-pacing-diagnostics.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-movement-kinetic-pacing-diagnostics"
+      ],
+      "metrics": {
+        "variantCount": 44,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl1-minimal-tactics-baseline",
+      "name": "TL1 minimal-tactics Range 2-5 baseline sanity grid",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc03-minimal-tactics-baseline-grid.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-minimal-tactics-baseline"
+      ],
+      "metrics": {
+        "variantCount": 113,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "auxiliary-component-foundation",
+      "name": "Auxiliary installation classes and candidate availability gates",
+      "command": "auxiliary-component-foundation",
+      "arguments": [
+        "--catalog-file",
+        "docs/archive/player_technology/pre-cp165-active/auxiliary_component_catalog_v0_1.json",
+        "--schema-file",
+        "docs/archive/player_technology/pre-cp165-active/auxiliary_component_catalog_schema_v0_1.json",
+        "--output-dir",
+        "{OutputRoot}/auxiliary-component-foundation"
+      ],
+      "metrics": {
+        "installationClassCount": 3,
+        "auxiliaryFamilyCount": 27,
+        "candidateFloorCount": 27
+      }
+    },
+    {
+      "id": "combat-scaling-tl2",
+      "name": "Combat scaling framework and TL2 candidate derivation",
+      "command": "combat-scaling-tl2",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL2Scaling/tl2-identity-preserving-refinement-v0_2.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/combat-scaling-tl2"
+      ],
+      "metrics": {
+        "candidateCount": 3,
+        "rangeCount": 4,
+        "mirrorEvidenceRows": 12,
+        "crossFamilyEvidenceRows": 36
+      }
+    },
+    {
+      "id": "tl2-candidate-minimal-tactics",
+      "name": "TL2 candidate identity and within-band Monte Carlo grid",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL2Scaling/tl2-itc01-identity-preserving-candidate-grid.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl2-candidate-minimal-tactics"
+      ],
+      "metrics": {
+        "variantCount": 324,
+        "usesTrials": true
+      }
+    },
+    {
+      "id": "tl2-package-attribution-and-refinement",
+      "name": "TL2 package attribution and identity-preserving refinement grid",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL2Scaling/tl2-itc02-package-attribution-and-refinement.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl2-package-attribution-and-refinement"
+      ],
+      "metrics": {
+        "variantCount": 1764,
+        "usesTrials": true,
+        "profileCount": 19,
+        "attributionGroupCount": 7,
+        "refinementProbeCount": 3
+      }
+    },
+    {
+      "id": "tl2-defensive-micro-refinement-and-choice-viability",
+      "name": "TL2 defensive micro-refinement and choice-viability grid",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL2Scaling/tl2-itc03-defensive-micro-refinement-and-choice-viability.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl2-defensive-micro-refinement-and-choice-viability"
+      ],
+      "metrics": {
+        "variantCount": 1188,
+        "usesTrials": true,
+        "profileCount": 9,
+        "sameTlProfileCount": 6,
+        "fixedVariantCount": 648,
+        "preferredRangeVariantCount": 162,
+        "pursuitCombatVariantCount": 81,
+        "escapeControlVariantCount": 81,
+        "sameTlVariantCount": 216
+      }
+    },
+    {
+      "id": "tl2-dynamic-weapon-choice-confirmation",
+      "name": "TL2 dynamic same-TL weapon-choice confirmation",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL2Scaling/tl2-itc04-dynamic-weapon-choice-confirmation.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl2-dynamic-weapon-choice-confirmation"
+      ],
+      "metrics": {
+        "variantCount": 108,
+        "usesTrials": true,
+        "profileCount": 2,
+        "fixedControlVariantCount": 36,
+        "dynamicPreferredRangeVariantCount": 72,
+        "startingRangeCount": 6,
+        "familyPairCount": 3
+      }
+    },
+    {
+      "id": "tl2-opponent-aware-range-control-and-promotion-decision",
+      "name": "TL2 opponent-aware range-control and promotion-decision grid",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL2Scaling/tl2-itc05-opponent-aware-range-control-and-promotion-decision.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl2-opponent-aware-range-control-and-promotion-decision"
+      ],
+      "metrics": {
+        "variantCount": 148,
+        "usesTrials": true,
+        "profileCount": 2,
+        "familyPreferredControlVariantCount": 72,
+        "opponentAwareVariantCount": 72,
+        "fixedRange5ControlVariantCount": 4,
+        "startingRangeCount": 6,
+        "familyPairCount": 3
+      }
+    },
+    {
+      "id": "auxiliary-single-slot-performance-screening",
+      "name": "TL1/TL2 legal single-AUX performance screening and counterfactual diagnostics",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/AuxiliaryTechnology/aux-itc01-single-slot-performance-screening.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/auxiliary-single-slot-performance-screening"
+      ],
+      "metrics": {
+        "variantCount": 1455,
+        "usesTrials": true,
+        "legalVariantCount": 1323,
+        "counterfactualDiagnosticVariantCount": 132,
+        "tl1LegalAuxiliaryProfileCount": 7,
+        "tl2LegalAuxiliaryProfileCount": 14,
+        "weaponContextCount": 3,
+        "technologyBandCount": 3
+      }
+    },
+    {
+      "id": "architecture-derived-tl1-tl2-auxiliary-pds",
+      "name": "Architecture-derived TL1/TL2 one-slot AUX and PDS matrix",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-itc02-architecture-derived-tl1-tl2-pds.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/architecture-derived-tl1-tl2-auxiliary-pds"
+      ],
+      "metrics": {
+        "variantCount": 975,
+        "usesTrials": true,
+        "legalVariantCount": 867,
+        "counterfactualDiagnosticVariantCount": 108,
+        "tl1LegalAuxiliaryProfileCount": 8,
+        "tl2LegalAuxiliaryProfileCount": 9,
+        "pdsSubfamilyCount": 3,
+        "weaponContextCount": 3,
+        "technologyBandCount": 3,
+        "tl1v1LegalVariantCount": 192,
+        "tl2v2LegalVariantCount": 243,
+        "crossTlLegalVariantCount": 432
+      }
+    },
+    {
+      "id": "stateful-tl1-tl2-auxiliary-pds",
+      "name": "Checkpoint 52 stateful TL1-TL2 AUX and PDS tuning matrix",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-itc03-stateful-power-and-pds-tuning.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/stateful-tl1-tl2-auxiliary-pds"
+      ],
+      "metrics": {
+        "variantCount": 975,
+        "usesTrials": true,
+        "legalVariantCount": 867,
+        "counterfactualDiagnosticVariantCount": 108,
+        "tl1LegalAuxiliaryProfileCount": 8,
+        "tl2LegalAuxiliaryProfileCount": 9,
+        "pdsSubfamilyCount": 3,
+        "weaponContextCount": 3,
+        "technologyBandCount": 3,
+        "tl1v1LegalVariantCount": 192,
+        "tl2v2LegalVariantCount": 243,
+        "crossTlLegalVariantCount": 432
+      }
+    },
+    {
+      "id": "auxiliary-resource-endurance",
+      "name": "Deterministic finite-resource and recharge endurance stress study",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end01-resource-endurance-stress.json",
+        "--output-dir",
+        "{OutputRoot}/auxiliary-resource-endurance"
+      ],
+      "metrics": {
+        "combatBatteryCandidateCount": 2,
+        "capacitorPatternCount": 3,
+        "ammRoundCandidateCount": 4,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "checkpoint-53-tl1-tl2-auxiliary-refinement",
+      "name": "Checkpoint 53 architecture-legal TL1/TL2 Auxiliary refinement matrix",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-itc04-tl1-tl2-auxiliary-refinement.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/checkpoint-53-tl1-tl2-auxiliary-refinement"
+      ],
+      "metrics": {
+        "variantCount": 870,
+        "usesTrials": true,
+        "legalVariantCount": 768,
+        "counterfactualDiagnosticVariantCount": 102,
+        "tl1LegalAuxiliaryProfileCount": 7,
+        "tl2LegalAuxiliaryProfileCount": 9,
+        "weaponContextCount": 3,
+        "technologyBandCount": 3,
+        "tl1v1LegalVariantCount": 147,
+        "tl2v2LegalVariantCount": 243,
+        "crossTlLegalVariantCount": 378
+      }
+    },
+    {
+      "id": "checkpoint-53-tl2-ablative-candidate-review",
+      "name": "Checkpoint 53 TL2 Ablative Armor candidate review",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-abl01-tl2-ablative-candidate-study.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/checkpoint-53-tl2-ablative-candidate-review"
+      ],
+      "metrics": {
+        "variantCount": 96,
+        "usesTrials": true,
+        "candidateProfileCount": 4,
+        "controlProfileCount": 2,
+        "weaponContextCount": 3
+      }
+    },
+    {
+      "id": "checkpoint-53-tactical-power-stress",
+      "name": "Checkpoint 53 Combat Battery and Power Capacitor tactical-power stress study",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-pwr01-tactical-power-stress.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/checkpoint-53-tactical-power-stress"
+      ],
+      "metrics": {
+        "variantCount": 78,
+        "usesTrials": true,
+        "normalControlVariantCount": 39,
+        "sustainedStressVariantCount": 39,
+        "tl1BackgroundTacticalPowerCommitment": 3,
+        "tl2BackgroundTacticalPowerCommitment": 4
+      }
+    },
+    {
+      "id": "checkpoint-53-resource-semantics-lock",
+      "name": "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end02-resource-semantics-lock.json",
+        "--output-dir",
+        "{OutputRoot}/checkpoint-53-resource-semantics-lock"
+      ],
+      "metrics": {
+        "combatBatteryPrimaryCharges": 3,
+        "combatBatteryPowerPerCharge": 1,
+        "combatBatteryDischargeLimitPerTurn": 1,
+        "combatBatteryEncounterDischargeCap": null,
+        "ammRounds": 25,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "runner-self-tests",
+      "name": "ScenarioRunner self-tests",
+      "command": "self-test",
+      "arguments": [
+        "--scenario-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/terminal-two-window-hit.json"
+      ],
+      "metrics": {
+        "selfTestCount": 46
+      }
+    }
+  ],
+  "primaryStudy": {
+    "id": "aux-itc04-tl1-tl2-auxiliary-refinement",
+    "variantCount": 870
+  },
+  "checkpointMetrics": {
+    "stageCount": 31,
+    "monteCarloVariantCount": 9007,
+    "trialsAtDefault": 90070000,
+    "acceptedTl2ProfileCount": 1,
+    "tableBackedStandardProfileCount": 2,
+    "checkpoint53LegalAuxiliaryVariantCount": 768,
+    "checkpoint53CounterfactualAuxiliaryVariantCount": 102,
+    "checkpoint53Tl1AuxiliaryProfileCount": 7,
+    "checkpoint53Tl2AuxiliaryProfileCount": 9,
+    "pdsSubfamilyTl1EntryCount": 3,
+    "retainedCheckpoint48AuxiliaryVariantCount": 1455,
+    "reviewedRepresentativeCruiserProfiles": 18,
+    "weaponBayStressCases": 3,
+    "retainedCheckpoint52StatefulAuxiliaryVariantCount": 975,
+    "tl2AblativeCandidateVariantCount": 96,
+    "tacticalPowerStressVariantCount": 78,
+    "deterministicResourceSemanticsStageCount": 1,
+    "frozenCheckpoint52ScenarioJsonCount": 60
+  },
+  "retainedRegressionStudy": {
+    "id": "aux-itc01-single-slot-performance-screening",
+    "variantCount": 1455
+  }
+}

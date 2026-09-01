@@ -1,0 +1,6 @@
+probe_id,subsystem,tl,normal_value,overloaded_value,normal_tp,overloaded_tp,extra_fuel,strain_added,observable_effect,passed
+stl-overload-i,STL,1,1,2,0,1,2,1,Move 1->2; +2 overload fuel,True
+active-sensor-overload-i,Sensor,1,3,4,1,3,0,1,Firm/Approx 3/4->4/5; range only,True
+ecm-overload-i,ECM,1,1,2,1,2,0,1,ECM rating increases by one for the remainder of the turn,True
+eccm-overload-i,ECCM,1,1,2,1,2,0,1,Against ECM2/DR0: residual jamming 1->0; Firm restoration becomes possible,True
+reactor-overload-i,Reactor,1,5,6,5,6,0,1,Available Tactical Power +1 for the turn,True

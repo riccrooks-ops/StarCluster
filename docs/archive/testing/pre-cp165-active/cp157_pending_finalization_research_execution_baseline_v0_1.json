@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "star-cluster-cp157-pending-finalization-research-execution-baseline-study-v0.1",
+  "checkpoint": 157,
+  "baseCheckpoint": 156,
+  "status": "candidate_pending_native_windows_acceptance",
+  "scope": "Zero-combat promotion of native-validated findings into a canonical pending-finalization research execution authority. Production numerical authority remains preserved separately.",
+  "acceptedCp156NativeResultsArchiveSha256": "5c76df2ed64d718ed4aa7e8ec79d87a7838555e401a163c333e07a8a3e799fba",
+  "productionMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_9.json",
+  "researchExecutionMatrix": "docs/design/player_technology/technology_research_execution_baseline_pending_finalization_v0_1.json",
+  "baselineId": "CP157-PF1",
+  "selected": {
+    "kineticMain": "K1",
+    "energyMain": "E7",
+    "gpMissileMain": "M2",
+    "swarmerMain": "SW2",
+    "kineticPds": "K155P06",
+    "energyPds": "E155P08",
+    "ammPds": "A155P07"
+  },
+  "requiredAlternatives": {
+    "gpMissileMain": ["M3"],
+    "kineticPds": ["K155P03"],
+    "energyPds": ["E155P07"],
+    "ammPds": ["A155P09"]
+  },
+  "promotionSemantics": {
+    "researchExecutionAuthority": true,
+    "productionAuthorityReplacement": false,
+    "pendingFinalization": true,
+    "defaultForFutureSubstantiveStudies": true,
+    "rawProductionMatrixForFutureSubstantiveStudies": false
+  },
+  "openDependencies": ["Defense/AUX lifetime viability", "Final Reactor/TP scarcity and whole-ship equilibrium"],
+  "substantiveCombatTrials": 0,
+  "tuningAllowed": false,
+  "automaticFinalProductionPromotion": false
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": 67,
+  "normal": {
+    "stageCount": 8,
+    "monteCarloVariantCount": 60,
+    "trialsAtDefault": 600000,
+    "required": true
+  },
+  "deepCalibration": {
+    "stageCount": 26,
+    "monteCarloVariantCount": 1544,
+    "trialsAtDefault": 15440000,
+    "requiredByDefault": false
+  },
+  "blockingBalanceTargets": false,
+  "productionControls": {
+    "reactorOutput": 5,
+    "powerDoctrine": "FullVolleyFirst",
+    "startingFuel": 100,
+    "movementFuelPerHex": 2,
+    "evasiveManeuverFuelCost": 1,
+    "tacticalMapRadius": 5
+  },
+  "nativeAcceptanceDependencyContract": {
+    "allowedBaselineDependencies": [
+      "PowerShell",
+      "pinned .NET SDK"
+    ],
+    "blockedInterpreters": [
+      "python",
+      "python3",
+      "py"
+    ],
+    "precheckRequired": true
+  },
+  "mustAlwaysRunStageIds": [
+    "deterministic",
+    "tl1-phase-a",
+    "tl1-phase-b",
+    "tl1-installation-space-envelope",
+    "tl1-bilateral-overload-ew-counterplay",
+    "auxiliary-resource-endurance",
+    "checkpoint-53-resource-semantics-lock",
+    "runner-self-tests"
+  ],
+  "deepCalibrationStageIds": [
+    "tl1-bilateral-tactical-geometry",
+    "tl1-scripted-overload-tactics",
+    "tl1-track-aware-movement-acquisition",
+    "tl1-operational-sensor-acquisition-ew",
+    "tl1-power-doctrine-reactor-sensitivity",
+    "tl1-composed-ship-odd-build-combat",
+    "tl1-kinetic-calibration",
+    "tl1-energy-calibration",
+    "tl1-weapon-matrix",
+    "tl1-pds-calibration",
+    "tl1-defensive-calibration",
+    "tl1-power-correction",
+    "tl1-range-control-calibration",
+    "tl1-damage-control-calibration",
+    "tl1-combat-pacing",
+    "tl1-integrated-tactical-combat",
+    "tl1-movement-kinetic-pacing-diagnostics",
+    "tl1-minimal-tactics-baseline"
+  ],
+  "notes": [
+    "Historical CP65b/CP66d startingFuel=200 fixtures remain frozen historical evidence.",
+    "Checkpoint 67 and later use the authoritative 100-fuel baseline unless a study explicitly tests another value.",
+    "No full tactical-response AI is introduced in Checkpoint 67."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "checkpoint": 80,
+  "suiteTier": "must_always_run",
+  "acceptedBaseline": "79a",
+  "blockingBalanceTargets": false,
+  "normal": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 72,
+    "substantiveTrials": 720000,
+    "smokeVariants": 72,
+    "smokeTrials": 72,
+    "totalTrialExecutions": 720072
+  },
+  "deepCalibration": {
+    "stageCount": 33,
+    "monteCarloVariantCount": 1670,
+    "substantiveTrials": 16700000,
+    "smokeVariants": 126,
+    "smokeTrials": 126,
+    "totalTrialExecutions": 16700126
+  },
+  "candidateControls": {
+    "tl2ComputerTargetingCandidateApplied": false,
+    "tl1TacticalComputerDegradedFirePenaltyPercentagePoints": 25,
+    "sensorRangeChanged": false,
+    "sensorOverloadChanged": false,
+    "ewOverloadChanged": false,
+    "tl1SensorDiscriminationResistance": 0,
+    "tl2CandidateSensorDiscriminationResistance": 1,
+    "tl1NormalEwRating": 1,
+    "tl2CandidateNormalEwRating": 2,
+    "ewPowerPerRating": 1,
+    "productionTl2ValuesPromoted": false
+  },
+  "powerAndTallViabilityControls": {
+    "advancedTechnologyMayRequireMoreTacticalPower": true,
+    "tallPlayMustRemainViable": true,
+    "productionReactorOutput": 5,
+    "diagnosticSensitivityReactorOutput": 6,
+    "diagnosticSensitivityOnly": true,
+    "reactor6VariantCount": 24,
+    "missilePressureVariantCount": 36,
+    "directFirePressureVariantCount": 36,
+    "widePath": "TL1 Sensor DR0 + ECCM2",
+    "tallPath": "TL2 Sensor DR1 + ECCM1",
+    "degradedFireFallbackPenaltyPercentagePoints": 25,
+    "noAutomaticPowerEfficiencyAssumption": true,
+    "noAutomaticCandidatePromotion": true
+  },
+  "degradedFireControls": {
+    "studyOnlyPenaltyPercentagePoints": 25,
+    "productionWeaponDegradedFireEnabled": false,
+    "eccmEconomicValueGuardrailRequired": true
+  },
+  "missileControls": {
+    "ordinaryTerminalAttackRequiresFirm": true,
+    "directFireDegradedTraitAppliesToMissiles": false,
+    "approximateTargetMissileCapabilityImplemented": false
+  }
+}

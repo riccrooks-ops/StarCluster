@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "star-cluster-same-tl-build-ecology-v0.1",
+  "checkpoint": "111",
+  "status": "instrumentation_first_pass_no_numerical_promotion",
+  "sourceMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_1.json",
+  "reactorCalibrationAuthority": "Checkpoint 110 first-pass calibrated candidates",
+  "primaryPopulation": "same_tl_frontier_exact_fill",
+  "technologyLevels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "primaryBuildRule": "Every installed primary combat technology is at the population TL. Every legal build is filled to the selected Hull capacity. Unmodeled residual capacity is recorded as zero-tactical-effect mission AUX space rather than left empty.",
+  "missionAuxFiller": {
+    "enabled": true,
+    "unitSpace": 1,
+    "tacticalEffect": false,
+    "interpretation": "Harness accounting only. Represents useful mission/logistics/support installations not yet numerically executable; it is not a new game component and carries no combat benefit in CP111."
+  },
+  "archetypesPerFamily": [
+    "balanced",
+    "dual-main",
+    "dual-reactor",
+    "family-specialist"
+  ],
+  "geometry": {
+    "map": "radius-5 tactical hex map",
+    "firstPassLane": "opposite-edge axial lane",
+    "startCoordinates": {
+      "sideA": [
+        -5,
+        0
+      ],
+      "sideB": [
+        5,
+        0
+      ]
+    },
+    "movementOrder": [
+      "SideAFirst",
+      "SideBFirst"
+    ],
+    "preContactSearch": "one hex toward map center per turn",
+    "note": "CP111 intentionally uses one canonical axial geometry to validate instrumentation before expanding to off-axis/system-map geometry populations.",
+    "postContactMovement": "If the previous combat track is not Firm and no demonstrated standoff is being preserved, close on later movement decisions instead of holding at nominal physical/preferred range.",
+    "sameHexBurnthroughBaseline": "Carry forward the accepted +1 same-hex Burn-through Resistance geometry contribution at every TL in this first pass. No higher-TL burn-through scaling is assumed or promoted by CP111."
+  },
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "internalDamageNote": "The repository retains the C# internal-damage/critical model, but CP111 Python ecology combat does not consume it. Shields, Armor, Hull, ammunition, power, sensing/EW, PDS, fuel, movement, and terminal Hull destruction are simulated.",
+  "overloadScope": {
+    "reactorSafeOverload": "enabled in the primary ecology when +1 TP materially improves the immediate combat package and safe Strain remains",
+    "sensorOverload": "zero-weight deterministic Overload-I probe validates TL1 range/power/Strain effect; not activated by the primary ecology doctrine",
+    "ecmEccmOverload": "zero-weight deterministic Overload-I probes validate rating/power/Strain and ECCM restoration effect; primary ecology uses normal rated EW only",
+    "stlOverload": "zero-weight deterministic Overload-I probe validates Move/power/fuel/Strain effect; primary ecology uses normal movement only",
+    "interpretation": "Risky overload probes prove instrumentation and current component-defined effects but have zero inference weight in same-TL balance summaries."
+  },
+  "mixedTlPopulation": {
+    "registered": true,
+    "executed": false,
+    "populationWeight": 0,
+    "reason": "Keep the first instrumentation/ecology inference population same-TL. Mixed-TL and legacy-component populations will be separate overlays so they cannot contaminate same-TL inference."
+  },
+  "masterSeed": 11120260815,
+  "trialsPerVariant": 1000,
+  "blockingGates": [
+    "no trial errors",
+    "all primary builds exactly fill Hull Space after explicit mission-AUX accounting",
+    "all TL1-TL9 populations contain all three Main Weapon families",
+    "both movement-order mirrors exist for every unordered build pair",
+    "required current-mechanic telemetry paths are exercised"
+  ],
+  "nonBlockingReviewSignals": [
+    "same-TL family matchup sensitivity",
+    "build-archetype robustness/dominance",
+    "movement-order swing",
+    "Tactical Power shortfall",
+    "ECM downgrade and ECCM restoration frequency",
+    "Reactor overload activation",
+    "PDS utilization/interception",
+    "layer-by-layer damage flow",
+    "mission-AUX Space growth",
+    "unresolved/stalemate rate"
+  ],
+  "automaticPromotion": false,
+  "instrumentationPolicy": {
+    "mustReport": [
+      "weapon-family shots/hits/damage",
+      "missile launch/terminal/guidance/hit flow",
+      "PDS attempts/intercepts",
+      "track quality",
+      "ECM downgrades",
+      "ECCM restorations",
+      "same-hex burn-through preservation",
+      "Tactical Power allocation/shortfalls",
+      "Reactor overload",
+      "Shield recharge/Hardener power",
+      "movement/range/fuel/map boundary",
+      "Shield/Armor/Hull damage flow"
+    ],
+    "overloadPathsNotActiveInPrimaryDoctrine": [
+      "Sensor",
+      "ECM",
+      "ECCM",
+      "STL"
+    ],
+    "overloadProbeWeight": 0,
+    "internalCriticalTelemetryExpected": false
+  }
+}

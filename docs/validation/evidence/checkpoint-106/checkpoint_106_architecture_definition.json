@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "star-cluster-architecture-checkpoint-v1",
+  "checkpointId": "106",
+  "title": "Checkpoint 106 - Technology Foundation Completeness Audit",
+  "scope": "technology_foundation_completeness_audit_only",
+  "acceptedBaseline": "105",
+  "numericalTlTableChanged": false,
+  "simulationOrCalibrationRun": false,
+  "declaredTrials": 0,
+  "dotnetBuildRequired": false,
+  "pythonRequired": false,
+  "normalPlayerTlRange": [1, 9],
+  "precursorTl10Shorthand": true,
+  "expectedDisciplines": 10,
+  "expectedLineages": 32,
+  "minimumStoryboardBeats": 214,
+  "expectedIdeaCount": 136,
+  "expectedFoundationDomains": 20,
+  "expectedReferenceObservations": 195,
+  "nativeDependencyPrecheck": {
+    "required": true,
+    "script": "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+    "powerShellPaths": [
+      "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+      "tools/checkpoints/checkpoint-106/apply_checkpoint_106.ps1",
+      "tools/checkpoints/checkpoint-106/test_checkpoint_106_contract.ps1"
+    ],
+    "checkpointDefinitionPaths": [
+      "tools/checkpoints/checkpoint-106/checkpoint_106_architecture_definition.json"
+    ],
+    "allowedInterpreters": []
+  },
+  "stages": []
+}

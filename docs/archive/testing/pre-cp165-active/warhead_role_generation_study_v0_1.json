@@ -1,0 +1,931 @@
+{
+  "schemaVersion": "star-cluster-warhead-role-generation-v0.1",
+  "checkpoint": 116,
+  "acceptedBaseline": "115a",
+  "purpose": "Separate Missile GP energetic maturation from SPEN/APEN specialization, test generational specialists that retain contemporary yield while paying explicit role tradeoffs, and verify Kinetic specialist packets scale from the contemporary projectile rather than remaining frozen absolute packets.",
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "automaticPromotion": false,
+  "masterSeed": 116051337,
+  "trialsPerVariant": 2000,
+  "authoringTrialsPerVariant": 25,
+  "missileStudyTls": [
+    4,
+    5,
+    7,
+    9
+  ],
+  "kineticStudyTls": [
+    6,
+    8,
+    9
+  ],
+  "energyReferenceTls": [
+    4,
+    5,
+    7,
+    9
+  ],
+  "targetFixtures": [
+    {
+      "id": "shield-heavy-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "legal_build",
+      "role": "Shield + Hardener + Energy PDS defense package; exposes anti-Shield and full-layer performance."
+    },
+    {
+      "id": "shield-isolated-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "legal_build",
+      "removePds": true,
+      "role": "Shield + Hardener without PDS so interception cannot mask payload-vs-Shield behavior."
+    },
+    {
+      "id": "shield-overmatch-fixture",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "controlled_fixture",
+      "removePds": true,
+      "shieldCapacityDelta": 6,
+      "shieldRechargeBonus": 1,
+      "role": "Controlled high-sustain Shield fixture (+6 capacity, +1 extra base recharge) used only to test whether anti-Shield specialists have a niche beyond normal legal defenses."
+    },
+    {
+      "id": "balanced-layered-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "balanced",
+      "classification": "legal_build",
+      "role": "Balanced legal layered defense without specialist PDS/Hardener concentration."
+    },
+    {
+      "id": "armor-exposed-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "legal_build",
+      "removeShield": true,
+      "removePds": true,
+      "removeHardener": true,
+      "role": "Legal exact-fill no-Shield control exposing contemporary Armor/Hull directly."
+    },
+    {
+      "id": "pds-heavy-legal",
+      "baseFamily": "Missile",
+      "baseArchetype": "missile-defense",
+      "classification": "legal_build",
+      "role": "AMM/PDS-heavy legal target retaining layered Shield/Armor defenses."
+    },
+    {
+      "id": "armor-heavy-fixture",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "controlled_fixture",
+      "removeShield": true,
+      "removePds": true,
+      "removeHardener": true,
+      "armorProtectionDelta": 1,
+      "armorIntegrityDelta": 4,
+      "role": "Controlled non-promotion fixture that exaggerates Armor to expose penetrator niches."
+    },
+    {
+      "id": "light-fixture",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "controlled_fixture",
+      "removeShield": true,
+      "removePds": true,
+      "removeHardener": true,
+      "armorProtectionOverride": 0,
+      "armorIntegrityOverride": 2,
+      "role": "Controlled lightly protected fixture for saturation/coverage behavior; not a legal-build balance gate."
+    }
+  ],
+  "gpBaselinePenetration": {
+    "spen": 1,
+    "apen": 2,
+    "note": "CP116 holds normal GP penetration at the existing baseline while sweeping energetic yield. This is a study constraint, not a final production rule."
+  },
+  "generationOrder": [
+    "fission",
+    "fusion",
+    "antimatter"
+  ],
+  "generationGpAnchor": {
+    "fission": "missile-fission-gp-yield-b",
+    "fusion": "missile-fusion-gp-yield-b",
+    "antimatter": "missile-antimatter-gp-yield-b"
+  },
+  "pureGpByTl": {
+    "4": [
+      "missile-fission-gp-yield-a",
+      "missile-fission-gp-yield-b"
+    ],
+    "5": [
+      "missile-fusion-gp-yield-a",
+      "missile-fusion-gp-yield-b"
+    ],
+    "7": [
+      "missile-antimatter-gp-yield-a",
+      "missile-antimatter-gp-yield-b"
+    ],
+    "9": [
+      "missile-antimatter-gp-yield-a",
+      "missile-antimatter-gp-yield-b"
+    ]
+  },
+  "penetrationBundledGpByTl": {
+    "4": "missile-fission-gp-penetration-control",
+    "5": "missile-fusion-gp-penetration-control",
+    "7": "missile-antimatter-gp-penetration-control",
+    "9": "missile-antimatter-gp-penetration-control"
+  },
+  "contemporaryGpByTl": {
+    "4": [
+      "missile-fission-gp-yield-b"
+    ],
+    "5": [
+      "missile-fusion-gp-yield-b"
+    ],
+    "7": [
+      "missile-antimatter-gp-yield-b"
+    ],
+    "9": [
+      "missile-antimatter-gp-yield-b"
+    ]
+  },
+  "specialistPairingIdsByTl": {
+    "4": [
+      "missile-fission-specialist-armor",
+      "missile-fission-specialist-shield-bypass",
+      "missile-fission-specialist-shield-pressure",
+      "missile-fission-specialist-shield-recharge"
+    ],
+    "5": [
+      "missile-fusion-specialist-armor",
+      "missile-fusion-specialist-shield-bypass",
+      "missile-fusion-specialist-shield-pressure",
+      "missile-fusion-specialist-shield-recharge"
+    ],
+    "7": [
+      "missile-antimatter-specialist-armor",
+      "missile-antimatter-specialist-shield-bypass",
+      "missile-antimatter-specialist-shield-pressure",
+      "missile-antimatter-specialist-shield-recharge"
+    ],
+    "9": [
+      "missile-antimatter-specialist-armor",
+      "missile-antimatter-specialist-shield-bypass",
+      "missile-antimatter-specialist-shield-pressure",
+      "missile-antimatter-specialist-shield-recharge"
+    ]
+  },
+  "adaptivePairingIdsByTl": {
+    "4": [
+      "missile-fission-specialist-shield-pressure",
+      "missile-fission-specialist-shield-recharge"
+    ],
+    "5": [
+      "missile-fusion-specialist-shield-pressure",
+      "missile-fusion-specialist-shield-recharge"
+    ],
+    "7": [
+      "missile-antimatter-specialist-shield-pressure",
+      "missile-antimatter-specialist-shield-recharge"
+    ],
+    "9": [
+      "missile-antimatter-specialist-shield-pressure",
+      "missile-antimatter-specialist-shield-recharge"
+    ]
+  },
+  "specialistPairingIds": [],
+  "adaptivePairingIds": [],
+  "missileProfiles": [
+    {
+      "id": "gp-current",
+      "family": "Missile",
+      "profileClass": "legacy_gp_control",
+      "generation": "legacy",
+      "role": "Current CP109 D5/SP1/AP2 GP control retained only as the legacy baseline.",
+      "studyTls": [
+        4,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-fission-gp-yield-a",
+      "family": "Missile",
+      "profileClass": "gp_pure_yield",
+      "generation": "fission",
+      "damage": 6,
+      "spen": 1,
+      "apen": 2,
+      "role": "Pure-yield fission GP lower envelope: energetic maturation without added SPEN/APEN.",
+      "studyTls": [
+        4
+      ]
+    },
+    {
+      "id": "missile-fission-gp-yield-b",
+      "family": "Missile",
+      "profileClass": "gp_pure_yield",
+      "generation": "fission",
+      "damage": 7,
+      "spen": 1,
+      "apen": 2,
+      "role": "Pure-yield fission GP upper envelope: larger packet, baseline penetration unchanged.",
+      "studyTls": [
+        4
+      ]
+    },
+    {
+      "id": "missile-fission-gp-penetration-control",
+      "family": "Missile",
+      "profileClass": "gp_penetration_bundled_control",
+      "generation": "fission",
+      "damage": 6,
+      "spen": 2,
+      "apen": 3,
+      "role": "Matched-DAM control bundling both extra SPEN and APEN into fission GP; measures compounded specialization leakage.",
+      "studyTls": [
+        4
+      ]
+    },
+    {
+      "id": "missile-fission-specialist-armor",
+      "family": "Missile",
+      "profileClass": "specialist_armor",
+      "generation": "fission",
+      "damage": 6,
+      "spen": 0,
+      "apen": 4,
+      "role": "Generational armor specialist: trades Shield performance and one yield point versus the fission GP anchor for higher APEN.",
+      "studyTls": [
+        4
+      ]
+    },
+    {
+      "id": "missile-fission-specialist-shield-bypass",
+      "family": "Missile",
+      "profileClass": "specialist_shield_bypass",
+      "generation": "fission",
+      "damage": 6,
+      "spen": 3,
+      "apen": 0,
+      "role": "Generational Shield-bypass specialist: trades Armor performance and one yield point for high SPEN.",
+      "studyTls": [
+        4
+      ]
+    },
+    {
+      "id": "missile-fission-specialist-shield-pressure",
+      "family": "Missile",
+      "profileClass": "specialist_shield_pressure",
+      "generation": "fission",
+      "damage": 5,
+      "spen": 1,
+      "apen": 0,
+      "role": "Generational Shield-pressure specialist: lower structural packet plus Shield-capacity-specific damage.",
+      "studyTls": [
+        4
+      ],
+      "shieldBonusDamage": 4
+    },
+    {
+      "id": "missile-fission-specialist-shield-recharge",
+      "family": "Missile",
+      "profileClass": "specialist_shield_recharge",
+      "generation": "fission",
+      "damage": 6,
+      "spen": 1,
+      "apen": 1,
+      "role": "Generational Shield-sustain specialist: modest structural tradeoff plus bounded recharge suppression.",
+      "studyTls": [
+        4
+      ],
+      "rechargeSuppression": 3
+    },
+    {
+      "id": "missile-fusion-gp-yield-a",
+      "family": "Missile",
+      "profileClass": "gp_pure_yield",
+      "generation": "fusion",
+      "damage": 7,
+      "spen": 1,
+      "apen": 2,
+      "role": "Pure-yield fusion GP lower envelope: energetic maturation without added SPEN/APEN.",
+      "studyTls": [
+        5
+      ]
+    },
+    {
+      "id": "missile-fusion-gp-yield-b",
+      "family": "Missile",
+      "profileClass": "gp_pure_yield",
+      "generation": "fusion",
+      "damage": 8,
+      "spen": 1,
+      "apen": 2,
+      "role": "Pure-yield fusion GP upper envelope: larger packet, baseline penetration unchanged.",
+      "studyTls": [
+        5
+      ]
+    },
+    {
+      "id": "missile-fusion-gp-penetration-control",
+      "family": "Missile",
+      "profileClass": "gp_penetration_bundled_control",
+      "generation": "fusion",
+      "damage": 7,
+      "spen": 2,
+      "apen": 3,
+      "role": "Matched-DAM control bundling both extra SPEN and APEN into fusion GP; measures compounded specialization leakage.",
+      "studyTls": [
+        5
+      ]
+    },
+    {
+      "id": "missile-fusion-specialist-armor",
+      "family": "Missile",
+      "profileClass": "specialist_armor",
+      "generation": "fusion",
+      "damage": 7,
+      "spen": 0,
+      "apen": 4,
+      "role": "Generational armor specialist: contemporary fusion yield minus one, lower Shield performance, higher APEN.",
+      "studyTls": [
+        5
+      ]
+    },
+    {
+      "id": "missile-fusion-specialist-shield-bypass",
+      "family": "Missile",
+      "profileClass": "specialist_shield_bypass",
+      "generation": "fusion",
+      "damage": 7,
+      "spen": 3,
+      "apen": 0,
+      "role": "Generational Shield-bypass specialist: contemporary fusion yield minus one, high SPEN, weak Armor penetration.",
+      "studyTls": [
+        5
+      ]
+    },
+    {
+      "id": "missile-fusion-specialist-shield-pressure",
+      "family": "Missile",
+      "profileClass": "specialist_shield_pressure",
+      "generation": "fusion",
+      "damage": 6,
+      "spen": 1,
+      "apen": 0,
+      "role": "Generational Shield-pressure specialist with contemporary fusion-era structural packet and extra Shield-capacity pressure.",
+      "studyTls": [
+        5
+      ],
+      "shieldBonusDamage": 5
+    },
+    {
+      "id": "missile-fusion-specialist-shield-recharge",
+      "family": "Missile",
+      "profileClass": "specialist_shield_recharge",
+      "generation": "fusion",
+      "damage": 7,
+      "spen": 1,
+      "apen": 1,
+      "role": "Generational Shield-sustain specialist with bounded recharge suppression and reduced Armor penetration.",
+      "studyTls": [
+        5
+      ],
+      "rechargeSuppression": 4
+    },
+    {
+      "id": "missile-antimatter-gp-yield-a",
+      "family": "Missile",
+      "profileClass": "gp_pure_yield",
+      "generation": "antimatter",
+      "damage": 9,
+      "spen": 1,
+      "apen": 2,
+      "role": "Pure-yield antimatter GP lower envelope: energetic maturation without added SPEN/APEN.",
+      "studyTls": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-antimatter-gp-yield-b",
+      "family": "Missile",
+      "profileClass": "gp_pure_yield",
+      "generation": "antimatter",
+      "damage": 10,
+      "spen": 1,
+      "apen": 2,
+      "role": "Pure-yield antimatter GP upper envelope: high raw yield, baseline penetration unchanged.",
+      "studyTls": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-antimatter-gp-penetration-control",
+      "family": "Missile",
+      "profileClass": "gp_penetration_bundled_control",
+      "generation": "antimatter",
+      "damage": 9,
+      "spen": 3,
+      "apen": 3,
+      "role": "Matched-DAM control bundling strong SPEN and APEN into antimatter GP; measures compounded specialization leakage.",
+      "studyTls": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-antimatter-specialist-armor",
+      "family": "Missile",
+      "profileClass": "specialist_armor",
+      "generation": "antimatter",
+      "damage": 9,
+      "spen": 0,
+      "apen": 4,
+      "role": "Generational armor specialist: contemporary antimatter yield minus one, poor Shield performance, higher APEN.",
+      "studyTls": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-antimatter-specialist-shield-bypass",
+      "family": "Missile",
+      "profileClass": "specialist_shield_bypass",
+      "generation": "antimatter",
+      "damage": 9,
+      "spen": 4,
+      "apen": 0,
+      "role": "Generational Shield-bypass specialist: contemporary antimatter yield minus one, strong SPEN, weak Armor penetration.",
+      "studyTls": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-antimatter-specialist-shield-pressure",
+      "family": "Missile",
+      "profileClass": "specialist_shield_pressure",
+      "generation": "antimatter",
+      "damage": 8,
+      "spen": 1,
+      "apen": 0,
+      "role": "Generational Shield-pressure specialist with a still-modern structural packet plus extra Shield-capacity pressure.",
+      "studyTls": [
+        7,
+        9
+      ],
+      "shieldBonusDamage": 6
+    },
+    {
+      "id": "missile-antimatter-specialist-shield-recharge",
+      "family": "Missile",
+      "profileClass": "specialist_shield_recharge",
+      "generation": "antimatter",
+      "damage": 9,
+      "spen": 1,
+      "apen": 1,
+      "role": "Generational Shield-sustain specialist with bounded recharge suppression and reduced Armor penetration.",
+      "studyTls": [
+        7,
+        9
+      ],
+      "rechargeSuppression": 5
+    },
+    {
+      "id": "missile-static-specialist-armor",
+      "family": "Missile",
+      "profileClass": "legacy_static_specialist",
+      "generation": "static_cp115",
+      "damage": 5,
+      "spen": 1,
+      "apen": 3,
+      "role": "CP115-style static shaped-warhead control retained to measure artificial specialist obsolescence.",
+      "studyTls": [
+        4,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-static-specialist-shield-pressure",
+      "family": "Missile",
+      "profileClass": "legacy_static_specialist",
+      "generation": "static_cp115",
+      "damage": 3,
+      "spen": 1,
+      "apen": 0,
+      "role": "CP115-style static Shield-pressure control.",
+      "studyTls": [
+        4,
+        5,
+        7,
+        9
+      ],
+      "shieldBonusDamage": 4
+    },
+    {
+      "id": "missile-static-specialist-shield-recharge",
+      "family": "Missile",
+      "profileClass": "legacy_static_specialist",
+      "generation": "static_cp115",
+      "damage": 4,
+      "spen": 1,
+      "apen": 0,
+      "role": "CP115-style static recharge-suppression control.",
+      "studyTls": [
+        4,
+        5,
+        7,
+        9
+      ],
+      "rechargeSuppression": 4
+    },
+    {
+      "id": "missile-static-specialist-shield-armor",
+      "family": "Missile",
+      "profileClass": "legacy_static_specialist",
+      "generation": "static_cp115",
+      "damage": 4,
+      "spen": 1,
+      "apen": 0,
+      "role": "CP115-style static Shield-Armor-reduction control.",
+      "studyTls": [
+        4,
+        5,
+        7,
+        9
+      ],
+      "shieldArmorReduction": 1
+    },
+    {
+      "id": "missile-fission-gp-spen-control",
+      "family": "Missile",
+      "profileClass": "gp_single_axis_control",
+      "generation": "fission",
+      "damage": 6,
+      "spen": 2,
+      "apen": 2,
+      "role": "Matched-DAM fission GP control adding SPEN only.",
+      "studyTls": [
+        4
+      ]
+    },
+    {
+      "id": "missile-fission-gp-apen-control",
+      "family": "Missile",
+      "profileClass": "gp_single_axis_control",
+      "generation": "fission",
+      "damage": 6,
+      "spen": 1,
+      "apen": 3,
+      "role": "Matched-DAM fission GP control adding APEN only.",
+      "studyTls": [
+        4
+      ]
+    },
+    {
+      "id": "missile-fusion-gp-spen-control",
+      "family": "Missile",
+      "profileClass": "gp_single_axis_control",
+      "generation": "fusion",
+      "damage": 7,
+      "spen": 2,
+      "apen": 2,
+      "role": "Matched-DAM fusion GP control adding SPEN only.",
+      "studyTls": [
+        5
+      ]
+    },
+    {
+      "id": "missile-fusion-gp-apen-control",
+      "family": "Missile",
+      "profileClass": "gp_single_axis_control",
+      "generation": "fusion",
+      "damage": 7,
+      "spen": 1,
+      "apen": 3,
+      "role": "Matched-DAM fusion GP control adding APEN only.",
+      "studyTls": [
+        5
+      ]
+    },
+    {
+      "id": "missile-antimatter-gp-spen-control",
+      "family": "Missile",
+      "profileClass": "gp_single_axis_control",
+      "generation": "antimatter",
+      "damage": 9,
+      "spen": 3,
+      "apen": 2,
+      "role": "Matched-DAM antimatter GP control adding SPEN only.",
+      "studyTls": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": "missile-antimatter-gp-apen-control",
+      "family": "Missile",
+      "profileClass": "gp_single_axis_control",
+      "generation": "antimatter",
+      "damage": 9,
+      "spen": 1,
+      "apen": 3,
+      "role": "Matched-DAM antimatter GP control adding APEN only.",
+      "studyTls": [
+        7,
+        9
+      ]
+    }
+  ],
+  "kineticProfiles": [
+    {
+      "id": "gp-current",
+      "family": "Kinetic",
+      "profileClass": "gp_control",
+      "role": "Current contemporary Kinetic projectile control.",
+      "studyTls": [
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-smart-plus10",
+      "family": "Kinetic",
+      "profileClass": "automatic_accuracy",
+      "role": "Automatic maneuvering/smart-projectile +10 ACC control.",
+      "studyTls": [
+        6,
+        8,
+        9
+      ],
+      "accuracyDelta": 10
+    },
+    {
+      "id": "kinetic-dense-b",
+      "family": "Kinetic",
+      "profileClass": "specialist_armor",
+      "role": "Dense penetrator tradeoff: -1 damage, -1 SPEN, +2 APEN.",
+      "studyTls": [
+        6,
+        8,
+        9
+      ],
+      "damageDelta": -1,
+      "spenDelta": -1,
+      "apenDelta": 2
+    },
+    {
+      "id": "kinetic-saturation-tl6-a",
+      "family": "Kinetic",
+      "profileClass": "specialist_coverage",
+      "role": "TL6 contemporary coverage package: two D3 packets and +10 ACC.",
+      "studyTls": [
+        6
+      ],
+      "damage": 3,
+      "spen": 1,
+      "apen": 0,
+      "packets": 2,
+      "accuracyDelta": 10
+    },
+    {
+      "id": "kinetic-saturation-tl6-b",
+      "family": "Kinetic",
+      "profileClass": "specialist_coverage",
+      "role": "TL6 extreme coverage package: three D2 packets and +15 ACC.",
+      "studyTls": [
+        6
+      ],
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 3,
+      "accuracyDelta": 15
+    },
+    {
+      "id": "kinetic-saturation-tl8-a",
+      "family": "Kinetic",
+      "profileClass": "specialist_coverage",
+      "role": "TL8 coverage package derived from the contemporary D6 projectile budget: two D3 packets and +15 ACC.",
+      "studyTls": [
+        8
+      ],
+      "damage": 3,
+      "spen": 1,
+      "apen": 0,
+      "packets": 2,
+      "accuracyDelta": 15
+    },
+    {
+      "id": "kinetic-saturation-tl8-b",
+      "family": "Kinetic",
+      "profileClass": "specialist_coverage",
+      "role": "TL8 high-coverage package: three D2 packets and +20 ACC.",
+      "studyTls": [
+        8
+      ],
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 3,
+      "accuracyDelta": 20
+    },
+    {
+      "id": "kinetic-saturation-tl9-a",
+      "family": "Kinetic",
+      "profileClass": "specialist_coverage",
+      "role": "TL9 matured coverage package: two D4 packets and +15 ACC.",
+      "studyTls": [
+        9
+      ],
+      "damage": 4,
+      "spen": 1,
+      "apen": 0,
+      "packets": 2,
+      "accuracyDelta": 15
+    },
+    {
+      "id": "kinetic-saturation-tl9-b",
+      "family": "Kinetic",
+      "profileClass": "specialist_coverage",
+      "role": "TL9 extreme coverage package: three D3 packets and +20 ACC.",
+      "studyTls": [
+        9
+      ],
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "packets": 3,
+      "accuracyDelta": 20
+    },
+    {
+      "id": "kinetic-tandem-tl6",
+      "family": "Kinetic",
+      "profileClass": "specialist_tandem",
+      "role": "TL6 ordered Shield-facing precursor then Armor-facing penetrator; one attack roll.",
+      "studyTls": [
+        6
+      ],
+      "accuracyDelta": 5,
+      "orderedPackets": [
+        {
+          "damage": 2,
+          "spen": 2,
+          "apen": 0
+        },
+        {
+          "damage": 4,
+          "spen": 0,
+          "apen": 3
+        }
+      ]
+    },
+    {
+      "id": "kinetic-tandem-tl6-reverse",
+      "family": "Kinetic",
+      "profileClass": "sequencing_control",
+      "role": "TL6 sequencing control with identical packet budget reversed.",
+      "studyTls": [
+        6
+      ],
+      "accuracyDelta": 5,
+      "orderedPackets": [
+        {
+          "damage": 4,
+          "spen": 0,
+          "apen": 3
+        },
+        {
+          "damage": 2,
+          "spen": 2,
+          "apen": 0
+        }
+      ]
+    },
+    {
+      "id": "kinetic-tandem-tl8",
+      "family": "Kinetic",
+      "profileClass": "specialist_tandem",
+      "role": "TL8 matured tandem package: Shield-facing D3/SP3 precursor then D4/AP4 penetrator.",
+      "studyTls": [
+        8
+      ],
+      "accuracyDelta": 5,
+      "orderedPackets": [
+        {
+          "damage": 3,
+          "spen": 3,
+          "apen": 0
+        },
+        {
+          "damage": 4,
+          "spen": 0,
+          "apen": 4
+        }
+      ]
+    },
+    {
+      "id": "kinetic-tandem-tl8-reverse",
+      "family": "Kinetic",
+      "profileClass": "sequencing_control",
+      "role": "TL8 sequencing control with identical packet budget reversed.",
+      "studyTls": [
+        8
+      ],
+      "accuracyDelta": 5,
+      "orderedPackets": [
+        {
+          "damage": 4,
+          "spen": 0,
+          "apen": 4
+        },
+        {
+          "damage": 3,
+          "spen": 3,
+          "apen": 0
+        }
+      ]
+    },
+    {
+      "id": "kinetic-tandem-tl9",
+      "family": "Kinetic",
+      "profileClass": "specialist_tandem",
+      "role": "TL9 matured tandem package: Shield-facing D3/SP4 precursor then D5/AP5 penetrator.",
+      "studyTls": [
+        9
+      ],
+      "accuracyDelta": 5,
+      "orderedPackets": [
+        {
+          "damage": 3,
+          "spen": 4,
+          "apen": 0
+        },
+        {
+          "damage": 5,
+          "spen": 0,
+          "apen": 5
+        }
+      ]
+    },
+    {
+      "id": "kinetic-tandem-tl9-reverse",
+      "family": "Kinetic",
+      "profileClass": "sequencing_control",
+      "role": "TL9 sequencing control with identical packet budget reversed.",
+      "studyTls": [
+        9
+      ],
+      "accuracyDelta": 5,
+      "orderedPackets": [
+        {
+          "damage": 5,
+          "spen": 0,
+          "apen": 5
+        },
+        {
+          "damage": 3,
+          "spen": 4,
+          "apen": 0
+        }
+      ]
+    }
+  ],
+  "inferenceRules": [
+    "General-purpose Missile warhead maturation is primarily an energetic-yield question in CP116. Pure GP candidates keep SPEN/APEN fixed at the existing baseline so penetration specialization is not bundled invisibly into the GP line.",
+    "Penetration-bundled GP profiles are controls, not preferred designs. Their purpose is to measure how much apparent GP strength comes from silently adding specialist SPEN/APEN.",
+    "Matched-DAM SPEN-only and APEN-only GP controls isolate which penetration axis creates the apparent benefit before the combined penetration control is interpreted.",
+    "Specialist warheads are generation-relative: they retain a contemporary energetic packet but trade yield and/or the opposite penetration axis for a narrow anti-Armor or anti-Shield effect.",
+    "A specialist is healthy when it improves its intended niche while losing enough elsewhere that contemporary GP remains the balanced default under uncertainty.",
+    "Weapon families are not expected to converge on equal performance. Kinetic, Energy, and Missile identity remains asymmetric by design.",
+    "Kinetic saturation represents coverage through higher ACC on one battery attack package; smaller packets remain vulnerable to flat protection. TL8/TL9 candidates scale packet size from contemporary projectile energy instead of freezing TL6 packet values forever.",
+    "Kinetic tandem packages retain one hit roll and resolve ordered internal packets. Reversed controls measure whether layer sequencing creates the niche.",
+    "Controlled fixtures expose characteristic space only and are never production-promotion gates.",
+    "Normal payload variants use generic magazine accounting; rare Exotic ammunition remains individually tracked outside this study.",
+    "No CP116 result automatically changes CP109/CP110 values, the Concept, Storyboard TL placement, or C#/Godot production behavior."
+  ],
+  "spenOnlyGpByTl": {
+    "4": "missile-fission-gp-spen-control",
+    "5": "missile-fusion-gp-spen-control",
+    "7": "missile-antimatter-gp-spen-control",
+    "9": "missile-antimatter-gp-spen-control"
+  },
+  "apenOnlyGpByTl": {
+    "4": "missile-fission-gp-apen-control",
+    "5": "missile-fusion-gp-apen-control",
+    "7": "missile-antimatter-gp-apen-control",
+    "9": "missile-antimatter-gp-apen-control"
+  }
+}

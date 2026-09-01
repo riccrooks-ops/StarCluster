@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "star-cluster-cp145-authoring-validation-summary-v0.1",
+  "checkpoint": 145,
+  "baseCheckpoint": 144,
+  "status": "candidate_pending_native_validation",
+  "generatedUtc": "2026-08-27T02:01:36Z",
+  "authority": "authoring-prehandoff-only-native-windows-acceptance-required",
+  "acceptedCp144": {
+    "acceptedDate": "2026-08-26",
+    "scenarios": 6850,
+    "substantiveCombatTrials": 3425000,
+    "submittedRepositoryZipSha256": "dfb5284184603e66faba19afcba4ed514774f777b25815c9492b9c2305bd79cc",
+    "submittedNativeResultsZipSha256": "71bd2b81980701292d6cd463b2a225752274a1045ea4e813c83e5728e9f961fd",
+    "nativeAcceptanceSummarySha256": "ce3eef4f9a9b31d12c99bedb84715f27549d6e4ec79f2ec02163beedea21dd93",
+    "scenarioResponseSurfaceSha256": "ffa17024e0aed42be2def3f6b9e64a492da5c52d7d512cc31552aa19d6a132fd",
+    "paretoSurfaceSha256": "a60975cb58afdf735d27aac4692182eb7080dfcf10f15c419194177fc2df6e15",
+    "pairwiseSymmetricResponseSha256": "deb412591a006278c823b1cd24429e2412046390d123d41e7d3e812fa59078ad"
+  },
+  "frozenAuthority": {
+    "technologyNumericalMatrixSha256": "3088b0a9eb45f6bf505c24513e8bb2ac878819db4ab464ccfea330243c82f194",
+    "conceptSha256": "f76ca6ce488ccb5ad1352f7d38b8c3d4657c12ed64d0c93cc45d2db605cc632f",
+    "productionCSharpChangesAllowed": false,
+    "numericalTuningAllowed": false,
+    "automaticPromotion": false,
+    "stageBAutomatic": false
+  },
+  "authoringRegression": {
+    "python": {
+      "passed": 310,
+      "failed": 0,
+      "total": 310,
+      "modules": 36,
+      "isolatedChunksPassed": [
+        120,
+        84,
+        106
+      ]
+    },
+    "focusedCp145": {
+      "passed": 12,
+      "failed": 0,
+      "total": 12
+    },
+    "nativeExpectedNotAuthoringAccepted": {
+      "xunit": 916,
+      "scenarioRunnerSelfTests": 70,
+      "researchParity": 25
+    }
+  },
+  "cp144FullSmokeRegressionUnderCp145Telemetry": {
+    "scenarios": 6850,
+    "errors": 0,
+    "resolved": 6785,
+    "resolvedGe25": 9,
+    "turnCapSentinels": 65,
+    "safeStalemates": 0,
+    "nonstandoffOpenOrders": 0,
+    "sourceMatrixUnmodified": true,
+    "matchesExpectedCp144Signature": true
+  },
+  "cp145AuthoringDiagnostic": {
+    "passed": true,
+    "failedGates": 0,
+    "scenarios": 252,
+    "trialsPerScenario": 25,
+    "combatTrials": 6300,
+    "pdsOpportunityScenarios": 204,
+    "tpStarvationScenarios": 48,
+    "sourceMatrixUnmodified": true,
+    "originalParetoWinFastCorrelation": 0.9987839612452755,
+    "originalParetoSingleSurvivorContexts": 1441,
+    "strategicParetoRows": 35,
+    "kineticAttributionRows": 350,
+    "kineticVsEnergyAttributionRows": 350,
+    "energyResourceRows": 45,
+    "pdsBaselineRows": 255
+  },
+  "preliminaryAttribution": {
+    "pds": {
+      "kinetic": {
+        "configuredRcPerThreatPhase": 1.5066244057052298,
+        "plannedRcPerThreatPhase": 1.5066244057052298,
+        "rcFundingRatio": 1.0,
+        "attemptsPerThreatFlight": 0.9756341209173037,
+        "interceptsPerAttempt": 0.28339936784935227,
+        "unservedOpportunitiesPerThreatFlight": 0.8219249478804725,
+        "rcSaturatedPhaseRate": 0.6472266244057052
+      },
+      "energy": {
+        "configuredRcPerThreatPhase": 1.0,
+        "plannedRcPerThreatPhase": 1.0,
+        "rcFundingRatio": 1.0,
+        "attemptsPerThreatFlight": 0.6911212446351931,
+        "interceptsPerAttempt": 0.32117213273821077,
+        "unservedOpportunitiesPerThreatFlight": 1.0869098712446352,
+        "rcSaturatedPhaseRate": 0.8245035254544278,
+        "zeroRcThreatPhases": 0,
+        "interpretation": "opportunity-capacity attribution; not a shot-quality or TP-funding failure"
+      },
+      "amm": {
+        "configuredRcPerThreatPhase": 1.8352467391957685,
+        "plannedRcPerThreatPhase": 1.8352467391957685,
+        "rcFundingRatio": 1.0,
+        "attemptsPerThreatFlight": 1.1698362278783878,
+        "interceptsPerAttempt": 0.2800620636152056,
+        "unservedOpportunitiesPerThreatFlight": 0.6183738294624809,
+        "rcSaturatedPhaseRate": 0.5035763659313578
+      }
+    },
+    "tpStarvation": {
+      "tl2EwContest": {
+        "trials": 200,
+        "meanTurns": 60.0,
+        "turnCapSentinels": 200,
+        "sideAWeaponDenialTurnRate": 0.9191666666666667,
+        "sideBWeaponDenialTurnRate": 0.92025
+      },
+      "tl2PowerCrisis": {
+        "trials": 200,
+        "meanTurns": 60.0,
+        "turnCapSentinels": 200,
+        "sideAWeaponDenialTurnRate": 0.99175,
+        "sideBWeaponDenialTurnRate": 0.9926666666666667
+      },
+      "interpretation": "selected TL2 hotspots are deterministic offensive TP-starvation regions; do not treat them as weapon-damage tuning evidence"
+    },
+    "kinetic": {
+      "interpretation": "matched K-vs-E contexts generally show better K TP fulfillment and often higher raw damage per hit / comparable hull conversion, but lower shot opportunity and/or hit rate at weak TLs; investigate delivery/cadence/accuracy before DAM/APEN"
+    },
+    "energy": {
+      "r4VsR1WinRateDeltaByTl": {
+        "1": -0.13260000000000005,
+        "2": -0.10397499999999993,
+        "3": -0.10659999999999997,
+        "4": -0.05675000000000008,
+        "5": -0.0046499999999999875,
+        "6": -0.03497499999999998,
+        "7": -0.02977500000000005,
+        "8": -0.03552500000000003,
+        "9": -0.028050000000000075
+      },
+      "interpretation": "resource sensitivity is real and directionally coherent, with strongest early-TL pressure; inspect policy/resource interaction before weapon-value tuning"
+    }
+  },
+  "nativeAcceptanceRequired": {
+    "sequence": [
+      ".\\tools\\checkpoints\\checkpoint-145\\apply_checkpoint_145.ps1 -RepositoryOnly",
+      ".\\tools\\checkpoints\\checkpoint-145\\apply_checkpoint_145.ps1"
+    ],
+    "sameUnchangedExtractionRequired": true
+  },
+  "nextStage": "native Windows validation, then review causal attribution before deciding whether a bounded candidate sweep is justified before Stage B"
+}

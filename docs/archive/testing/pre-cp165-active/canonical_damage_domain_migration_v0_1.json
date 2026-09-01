@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "star-cluster-canonical-damage-domain-migration-v0.1",
+  "checkpoint": 122,
+  "status": "candidate_pending_native_acceptance",
+  "canonicalScale": 2,
+  "legacyScale": 1,
+  "balanceChangeIntended": false,
+  "oddHalfStepValuesPromoted": false,
+  "productionRepairHullPerKit": 1,
+  "parityOnlyRepairHullPerKit": 2,
+  "criticalCadenceMigrated": false,
+  "pointDomains": [
+    "damage",
+    "shieldPenetration",
+    "armorPenetration",
+    "shieldCapacity",
+    "shieldRecharge",
+    "shieldArmor",
+    "armorProtection",
+    "armorIntegrity",
+    "hull",
+    "temporaryShieldOvercapacity",
+    "flatShieldArmorBonus",
+    "flatArmorProtectionBonus",
+    "shieldBatteryRestore",
+    "ablativeArmorPoints"
+  ],
+  "nonPointDomains": [
+    "accuracyPercent",
+    "guidancePercent",
+    "evasionPercent",
+    "pdsPercent",
+    "pdsReactionCapacity",
+    "range",
+    "movement",
+    "tacticalPower",
+    "installationSpace",
+    "ammunitionCount",
+    "fuel",
+    "sensorEwRating",
+    "repairKitCount",
+    "technologyLevel"
+  ],
+  "rounding": {
+    "degradedEnergyDamage": "halve, round upward to the next complete active damage-point unit, then cap at normal damage so degradation can never increase damage",
+    "canonicalUnitMultiple": 2,
+    "nonDamageHalfRoundingChanged": false
+  },
+  "historicalCompatibility": {
+    "historicalMatrixImmutable": true,
+    "historicalScenarioRunnersUseLegacyDamageScale": true,
+    "canonicalSuccessorRequiredForNewWork": true
+  }
+}

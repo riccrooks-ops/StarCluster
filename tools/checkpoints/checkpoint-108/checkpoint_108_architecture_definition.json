@@ -1,0 +1,26 @@
+{
+  "checkpointId": "108",
+  "acceptedBaseline": "107b",
+  "title": "Qualitative TL1-TL9 Technology Table Review",
+  "kind": "architecture_only",
+  "contractImplementation": "python_stdlib",
+  "powerShellLauncher": true,
+  "productionRuntime": "C# / Godot",
+  "pythonAllowedForTestingSimulationAndCheckpointValidation": true,
+  "pythonRequiredByProductionRuntime": false,
+  "numericalTlTableChanged": false,
+  "newTl4Tl9BalanceValuesAssigned": false,
+  "simulationOrCalibrationRun": false,
+  "declaredTrials": 0,
+  "stages": [],
+  "expected": {
+    "visibleDisciplines": 10,
+    "sourceLineages": 32,
+    "storyboardBeats": 214,
+    "ideas": 136,
+    "foundationDomains": 20,
+    "gridRows": 90,
+    "optionalSupportCandidates": 35,
+    "hardExternalPrerequisites": 0
+  }
+}

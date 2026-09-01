@@ -1,0 +1,1708 @@
+{
+  "schemaVersion": "star-cluster-technology-idea-register-v1.1",
+  "checkpoint": "106",
+  "statusDefinitions": {
+    "base": "Mature starting-world technology or a later derivative/revival of that baseline family. Base does not mean obsolete or primitive.",
+    "existing": "Already expected or established by the current Star Cluster Concept/accepted architecture. Story placement may still be refined before numerical table work.",
+    "candidate": "A strong proposed addition with a coherent scientific/engineering premise and gameplay role. Candidate is not yet an adopted component or numerical TL-table entry.",
+    "deferred": "Worth preserving, but the owning family, era, prerequisites, gameplay role, or implementation cost is not settled enough for promotion.",
+    "exotic": "Precursor-grade, rule-bending, deliberately extreme weird science, or technology otherwise outside the normal player-developed TL1-TL9 ladder."
+  },
+  "structuralRoleDefinitions": {
+    "core_family": "Primary lineage normally represented by a standard/base component family.",
+    "maturation": "Improves integration, efficiency, reliability, packaging, resilience, or a bounded operating property without changing the core principle.",
+    "branch": "A specialist or alternate lineage that coexists with the main family rather than automatically replacing it.",
+    "cross_pollinated_derivative": "An owning-tree technology unlocked or transformed by a genuinely enabling external research discipline.",
+    "legacy_revival": "A mature older family becomes strategically interesting again because later science enables a new niche or performance envelope.",
+    "operating_capability": "A mode or capability applied to an existing family rather than a new hardware family.",
+    "specialist_auxiliary": "A support installation that creates a meaningful design choice without becoming a new visible research tree.",
+    "one_off": "A useful technology that may have no natural multi-TL progression and does not need a successor merely to fill a cell.",
+    "infrastructure": "A strategic/site technology rather than an ordinary player-cruiser component.",
+    "campaign_technology": "A technology whose principal value is exploration, logistics, salvage, diplomacy, or campaign consequence rather than direct combat.",
+    "weird_science": "A speculative but potentially normal-player scientific concept that can exist as a one-off or rare branch without becoming Precursor magic.",
+    "precursor_artifact": "Non-player-developed Precursor technology or artifact behavior; TL10 is shorthand only."
+  },
+  "ideas": [
+    {
+      "id": "IDEA-001",
+      "title": "Advanced Fission Specialist Reactor",
+      "status": "base",
+      "role": "legacy_revival",
+      "owner": "Power",
+      "provisionalWindow": "TL5-7",
+      "summary": "Later materials/direct-conversion engineering revives fission as a rugged, low-maintenance or damage-tolerant specialist rather than raw-output champion.",
+      "references": [
+        "Concept Optimum Fission example",
+        "TI Advanced Fission Systems",
+        "NASA Space Nuclear Propulsion"
+      ]
+    },
+    {
+      "id": "IDEA-002",
+      "title": "Supercapacitor Pulse Bank",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Power",
+      "provisionalWindow": "TL2-4",
+      "summary": "High-discharge storage supports burst weapons, shields or emergency power without increasing sustained reactor output.",
+      "references": [
+        "TI Supercapacitors",
+        "SD-Q10-003"
+      ]
+    },
+    {
+      "id": "IDEA-003",
+      "title": "Superconducting Magnetic Energy Store",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Power",
+      "provisionalWindow": "TL4-6",
+      "summary": "Low-loss magnetic storage/conditioning enabled by advanced superconductors.",
+      "references": [
+        "TI High-Temperature Superconductors"
+      ]
+    },
+    {
+      "id": "IDEA-004",
+      "title": "Thermal Suppression Module",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Power",
+      "provisionalWindow": "TL5-7",
+      "summary": "Retractable radiators/heat storage create a finite quiet/high-output window; no global heat meter.",
+      "references": [
+        "SD-Q15-005"
+      ]
+    },
+    {
+      "id": "IDEA-005",
+      "title": "Nuclear-Electric Expedition Drive",
+      "status": "base",
+      "role": "branch",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL1-3",
+      "summary": "Efficient low-thrust specialist propulsion for probes/logistics; not the tactical cruiser default.",
+      "references": [
+        "NASA NEP",
+        "NASA SEP"
+      ]
+    },
+    {
+      "id": "IDEA-006",
+      "title": "Nuclear-Thermal Sprint Drive",
+      "status": "base",
+      "role": "branch",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL1-3",
+      "summary": "Higher-thrust fission propulsion niche with different propellant/integration tradeoffs.",
+      "references": [
+        "NASA Space Nuclear Propulsion"
+      ]
+    },
+    {
+      "id": "IDEA-007",
+      "title": "Fission-Pulse Drive",
+      "status": "candidate",
+      "role": "legacy_revival",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL4-5",
+      "summary": "A rugged pulsed propulsion branch enabled by advanced structures/materials.",
+      "references": [
+        "TI Fission Pulse Drives"
+      ]
+    },
+    {
+      "id": "IDEA-008",
+      "title": "Antimatter-Catalyzed Fusion Drive",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL5-6",
+      "summary": "Small antimatter quantities catalyze mature fusion propulsion before full antimatter drives dominate.",
+      "references": [
+        "SD-Q10-006"
+      ]
+    },
+    {
+      "id": "IDEA-009",
+      "title": "Generated Gravity Module",
+      "status": "candidate",
+      "role": "one_off",
+      "owner": "Hull",
+      "provisionalWindow": "TL6-7",
+      "summary": "A higher-SF architectural breakthrough replacing some spin/acceleration-gravity burden; initially little direct tactical effect.",
+      "references": [
+        "SD-SG-002"
+      ]
+    },
+    {
+      "id": "IDEA-010",
+      "title": "Inertial Compensation Field",
+      "status": "deferred",
+      "role": "weird_science",
+      "owner": "Hull",
+      "provisionalWindow": "TL8-9",
+      "summary": "Reduces crew/structure acceleration burden; gameplay relation to STL/evasion remains undefined.",
+      "references": [
+        "GURPS Space gravity"
+      ]
+    },
+    {
+      "id": "IDEA-011",
+      "title": "Molecular Repair Fabricator",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Hull",
+      "provisionalWindow": "TL5-7",
+      "summary": "Onboard manufacturing improves field repair using resources; no free component resurrection.",
+      "references": [
+        "TI Molecular Assemblers",
+        "SD-DC-009"
+      ]
+    },
+    {
+      "id": "IDEA-012",
+      "title": "Bounded Self-Healing Hull Material",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Hull",
+      "provisionalWindow": "TL6-8",
+      "summary": "Self-healing materials restore limited Integrity/repairability rather than full regeneration.",
+      "references": [
+        "SD-DC-009"
+      ]
+    },
+    {
+      "id": "IDEA-013",
+      "title": "Biomechanical Repair Organ",
+      "status": "deferred",
+      "role": "branch",
+      "owner": "Hull",
+      "provisionalWindow": "Alien/rare",
+      "summary": "Localized biological component with bounded healing/support needs; does not imply whole living ship.",
+      "references": [
+        "SD-Q13-003",
+        "SD-Q13-004"
+      ]
+    },
+    {
+      "id": "IDEA-014",
+      "title": "Sentient Ship Core",
+      "status": "deferred",
+      "role": "one_off",
+      "owner": "Computing / Fire Control",
+      "provisionalWindow": "TL8-9 or alien",
+      "summary": "Potential digital/biological sentience with narrative/diplomatic consequences; not just +computer bonus.",
+      "references": [
+        "SD-Q13-006"
+      ]
+    },
+    {
+      "id": "IDEA-015",
+      "title": "Photonic Combat Computer",
+      "status": "candidate",
+      "role": "core_family",
+      "owner": "Computing / Fire Control",
+      "provisionalWindow": "TL4-5",
+      "summary": "Optical computing provides a qualitative architecture shift in throughput/efficiency.",
+      "references": [
+        "TI Photonic Computing"
+      ]
+    },
+    {
+      "id": "IDEA-016",
+      "title": "Quantum Tactical Optimizer",
+      "status": "candidate",
+      "role": "core_family",
+      "owner": "Computing / Fire Control",
+      "provisionalWindow": "TL7-8",
+      "summary": "Quantum-assisted optimization accelerates selected battle-state calculations without omniscience.",
+      "references": [
+        "TI Quantum Computing"
+      ]
+    },
+    {
+      "id": "IDEA-017",
+      "title": "Autonomous Damage-Control Drones",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Hull",
+      "provisionalWindow": "TL4-6",
+      "summary": "Robotics improve dangerous repair/isolation tasks using existing condition/Repair Kit rules.",
+      "references": [
+        "SD-DC-007"
+      ]
+    },
+    {
+      "id": "IDEA-018",
+      "title": "Cooperative Sensor Network",
+      "status": "candidate",
+      "role": "operating_capability",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL4-6",
+      "summary": "Allied assets share observations/track provenance instead of simply adding sensor range.",
+      "references": [
+        "SD-Q09-007"
+      ]
+    },
+    {
+      "id": "IDEA-019",
+      "title": "Low-Probability Active Sensor Mode",
+      "status": "candidate",
+      "role": "operating_capability",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL5-7",
+      "summary": "Advanced waveform/control trades power/discrimination against emission conspicuousness.",
+      "references": [
+        "SD-Q12-005"
+      ]
+    },
+    {
+      "id": "IDEA-020",
+      "title": "Quantum/Field Sensor Suite",
+      "status": "candidate",
+      "role": "branch",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL6-8",
+      "summary": "Specialist weak-signal or field sensing helps against advanced signatures without guaranteeing detection.",
+      "references": [
+        "SD-Q09-008"
+      ]
+    },
+    {
+      "id": "IDEA-021",
+      "title": "Spacetime/FTL-Wake Detector",
+      "status": "candidate",
+      "role": "weird_science",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL8-9",
+      "summary": "Detects metric disturbances/transit wakes as a new information channel.",
+      "references": [
+        "SD-Q23-006"
+      ]
+    },
+    {
+      "id": "IDEA-022",
+      "title": "False-Track / Decoy Synthesis ECM",
+      "status": "candidate",
+      "role": "operating_capability",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL4-6",
+      "summary": "Qualitative deception attacks provenance/identification rather than only increasing ECM rating.",
+      "references": [
+        "SD-SW-013"
+      ]
+    },
+    {
+      "id": "IDEA-023",
+      "title": "Anti-Emitter Targeting Suite",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL5-7",
+      "summary": "Turns hostile active emissions into localization/weapon opportunities.",
+      "references": [
+        "SD-SW-012"
+      ]
+    },
+    {
+      "id": "IDEA-024",
+      "title": "Thermal Signature Suppression",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL5-7",
+      "summary": "Finite quiet-state window from thermal architecture; not total stealth.",
+      "references": [
+        "SD-Q12-004",
+        "SD-Q15-005"
+      ]
+    },
+    {
+      "id": "IDEA-025",
+      "title": "Active Signature Cancellation",
+      "status": "deferred",
+      "role": "branch",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL6-8",
+      "summary": "Channel-specific powered signature reshaping; role/counters need design.",
+      "references": [
+        "SD-Q12-006"
+      ]
+    },
+    {
+      "id": "IDEA-026",
+      "title": "Powered Concealment Field",
+      "status": "deferred",
+      "role": "weird_science",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL8-9",
+      "summary": "Rare cloak-like powered system with incompatibilities, costs and no default perfect invisibility.",
+      "references": [
+        "SD-Q12-008"
+      ]
+    },
+    {
+      "id": "IDEA-027",
+      "title": "Phase Cloak",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Precursor device that explicitly breaks ordinary observability/interaction rules under narrow constraints.",
+      "references": [
+        "RM-THEME-017"
+      ]
+    },
+    {
+      "id": "IDEA-028",
+      "title": "Nanostructured Armor Matrix",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Armor",
+      "provisionalWindow": "TL4-5",
+      "summary": "Advanced carbon/superalloy materials improve specific protection and thermal resilience.",
+      "references": [
+        "TI Carbon Nanotubes",
+        "TI Superalloys"
+      ]
+    },
+    {
+      "id": "IDEA-029",
+      "title": "Self-Healing Smart Armor",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Armor",
+      "provisionalWindow": "TL6-7",
+      "summary": "Restores limited armor Integrity/repairability between severe events.",
+      "references": [
+        "TI Molecular Assemblers",
+        "SD-DC-009"
+      ]
+    },
+    {
+      "id": "IDEA-030",
+      "title": "Particle/Radiation Hardening Package",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Armor",
+      "provisionalWindow": "TL4-7",
+      "summary": "Specialized countermeasure for ionizing/particle effects rather than universal defense.",
+      "references": [
+        "SD-SW-022",
+        "SD-SW-045"
+      ]
+    },
+    {
+      "id": "IDEA-031",
+      "title": "Field-Assisted Armor",
+      "status": "candidate",
+      "role": "weird_science",
+      "owner": "Armor",
+      "provisionalWindow": "TL8-9",
+      "summary": "Material/field layer redistributes stress/energy but remains penetrable and power-limited.",
+      "references": [
+        "RM-THEME-005"
+      ]
+    },
+    {
+      "id": "IDEA-032",
+      "title": "Segmented Shield Control",
+      "status": "candidate",
+      "role": "operating_capability",
+      "owner": "Shields",
+      "provisionalWindow": "TL4-5",
+      "summary": "Concentrates or isolates field coverage at real power/geometry tradeoffs.",
+      "references": [
+        "RM-THEME-001"
+      ]
+    },
+    {
+      "id": "IDEA-033",
+      "title": "Adaptive Shield Hardener",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Shields",
+      "provisionalWindow": "TL5-7",
+      "summary": "Tunes field protection against a narrow threat class rather than universal SA growth.",
+      "references": [
+        "SD-SW-045"
+      ]
+    },
+    {
+      "id": "IDEA-034",
+      "title": "Metric Barrier Shield",
+      "status": "candidate",
+      "role": "weird_science",
+      "owner": "Shields",
+      "provisionalWindow": "TL8-9",
+      "summary": "Spacetime/field manipulation deflects attacks while preserving finite capacity/counterplay.",
+      "references": [
+        "GURPS Space force fields"
+      ]
+    },
+    {
+      "id": "IDEA-035",
+      "title": "Stasis Barrier",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Shields",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Precursor field that can temporarily suspend or exclude interaction; event-grade technology.",
+      "references": [
+        "RM-THEME-017"
+      ]
+    },
+    {
+      "id": "IDEA-036",
+      "title": "Tunable-Spectrum Laser",
+      "status": "candidate",
+      "role": "branch",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL5-6",
+      "summary": "Adaptive wavelength weapon trades flexibility against optimized specialization.",
+      "references": [
+        "SD-EW-007",
+        "SD-EW-008"
+      ]
+    },
+    {
+      "id": "IDEA-037",
+      "title": "Distributed Phased Beam Director",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL6-7",
+      "summary": "Multiple apertures share a bounded output pool for rapid retargeting/resilience.",
+      "references": [
+        "SD-SW-029",
+        "SD-SW-032"
+      ]
+    },
+    {
+      "id": "IDEA-038",
+      "title": "Ion Cannon / Charged-Particle Cannon",
+      "status": "candidate",
+      "role": "branch",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL5-6",
+      "summary": "Particle accelerator weapon with distinct material/electronics/radiation interaction and specialist counters.",
+      "references": [
+        "SD-SW-007",
+        "SD-SW-043",
+        "TI Particle Beams"
+      ]
+    },
+    {
+      "id": "IDEA-039",
+      "title": "Neutral Particle Beam",
+      "status": "candidate",
+      "role": "maturation",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL6-7",
+      "summary": "Beam conditioning/neutralization improves range/focus over charged-beam precursors.",
+      "references": [
+        "SD-SW-044"
+      ]
+    },
+    {
+      "id": "IDEA-040",
+      "title": "Plasma Cannon",
+      "status": "candidate",
+      "role": "branch",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL6-7",
+      "summary": "Higher-SF contained plasma projectile/beam concept with short-range/high-interaction niche.",
+      "references": [
+        "TI Plasma Weapons"
+      ]
+    },
+    {
+      "id": "IDEA-041",
+      "title": "Nuclear-Pumped One-Shot Laser",
+      "status": "deferred",
+      "role": "one_off",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL6-8",
+      "summary": "Rare sacrificial/coupled weapon requiring preparation and severe consequences.",
+      "references": [
+        "SD-NL-001",
+        "RM-THEME-008"
+      ]
+    },
+    {
+      "id": "IDEA-042",
+      "title": "Microwave Electronic-Attack Emitter",
+      "status": "deferred",
+      "role": "one_off",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL4-6",
+      "summary": "Beam-family crossover that disrupts electronics/sensors more than structure.",
+      "references": [
+        "SD-EW-005"
+      ]
+    },
+    {
+      "id": "IDEA-043",
+      "title": "Radiation Disruption Weapon",
+      "status": "deferred",
+      "role": "one_off",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL6-8",
+      "summary": "Specialist crew/electronics effect; wait until internal consequence model warrants it.",
+      "references": [
+        "SD-SW-022",
+        "SD-SW-024"
+      ]
+    },
+    {
+      "id": "IDEA-044",
+      "title": "Matter-Bond Disruptor",
+      "status": "deferred",
+      "role": "weird_science",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL8-9",
+      "summary": "Science-fantasy weapon destabilizing material structure; mechanics/counters unresolved.",
+      "references": [
+        "RM-THEME-018"
+      ]
+    },
+    {
+      "id": "IDEA-045",
+      "title": "Singularity / Black-Hole Gun",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Artificial-singularity weapon/power concept preserved as Precursor/weird-science event, not normal player progression.",
+      "references": [
+        "Crane & Westmoreland"
+      ]
+    },
+    {
+      "id": "IDEA-046",
+      "title": "Superconducting Coil Cannon",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Projectile Weapons",
+      "provisionalWindow": "TL4-5",
+      "summary": "Advanced magnets/materials enable a new accelerator envelope.",
+      "references": [
+        "TI Coilguns",
+        "TI High-Temperature Superconductors"
+      ]
+    },
+    {
+      "id": "IDEA-047",
+      "title": "Helical / Continuous Induction Cannon",
+      "status": "candidate",
+      "role": "branch",
+      "owner": "Projectile Weapons",
+      "provisionalWindow": "TL5-6",
+      "summary": "Alternate accelerator trades velocity, rate, wear and architecture.",
+      "references": [
+        "SD-SW-031"
+      ]
+    },
+    {
+      "id": "IDEA-048",
+      "title": "Smart Guided Kinetic Round",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Projectile Weapons",
+      "provisionalWindow": "TL4-6",
+      "summary": "Terminal correction/fuzing improves projectile flexibility without becoming a missile flight.",
+      "references": [
+        "SD-SW-030",
+        "SD-SW-064"
+      ]
+    },
+    {
+      "id": "IDEA-049",
+      "title": "Macron Accelerator",
+      "status": "candidate",
+      "role": "branch",
+      "owner": "Projectile Weapons",
+      "provisionalWindow": "TL7-8",
+      "summary": "Very small hypervelocity projectiles create a distinct saturation/deposition niche and demanding launcher.",
+      "references": [
+        "SD-SW-041",
+        "SD-SW-042"
+      ]
+    },
+    {
+      "id": "IDEA-050",
+      "title": "Relativistic Kinetic Lance",
+      "status": "candidate",
+      "role": "weird_science",
+      "owner": "Projectile Weapons",
+      "provisionalWindow": "TL9",
+      "summary": "Extreme projectile velocity with strict accuracy/collateral/launcher limits.",
+      "references": [
+        "SD-SW-008"
+      ]
+    },
+    {
+      "id": "IDEA-051",
+      "title": "Exotic Dense-Matter Projectile",
+      "status": "deferred",
+      "role": "weird_science",
+      "owner": "Projectile Weapons",
+      "provisionalWindow": "TL8-9",
+      "summary": "Engineered high-density projectile; material provenance and gameplay counterplay unresolved.",
+      "references": [
+        "GURPS Space exotic matter"
+      ]
+    },
+    {
+      "id": "IDEA-052",
+      "title": "Advanced Beam Point-Defense Maturation",
+      "status": "candidate",
+      "role": "maturation",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL4-6",
+      "summary": "Advanced rapid steering, multi-threat coordination, or adaptive-spectrum behavior for the separate Energy/Beam PDS lineage. Beam PDS itself is already a TL1 baseline and does not originate here.",
+      "references": [
+        "SD-SW-010",
+        "Concept 10.8",
+        "PDS TL1/TL2 contract"
+      ]
+    },
+    {
+      "id": "IDEA-053",
+      "title": "Guided Interceptor PDS",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Projectile Weapons",
+      "provisionalWindow": "TL4-6",
+      "summary": "Smart local intercept rounds improve PDS efficiency while preserving finite RC/Ammo.",
+      "references": [
+        "SD-SW-037"
+      ]
+    },
+    {
+      "id": "IDEA-054",
+      "title": "Long-Range AMM Layer",
+      "status": "candidate",
+      "role": "branch",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL2-5",
+      "summary": "Guided anti-missile layer extends defense outside terminal PDS.",
+      "references": [
+        "SD-SW-039"
+      ]
+    },
+    {
+      "id": "IDEA-055",
+      "title": "Anti-Emitter Missile",
+      "status": "candidate",
+      "role": "operating_capability",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL5-7",
+      "summary": "Specialist seeker homes on active radar/ECM/communications emissions.",
+      "references": [
+        "SD-SW-012"
+      ]
+    },
+    {
+      "id": "IDEA-056",
+      "title": "Cooperative Missile Swarm",
+      "status": "candidate",
+      "role": "branch",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL5-7",
+      "summary": "Flight-level coordination/decoys/submunitions improve saturation and target assignment without literal counter explosion.",
+      "references": [
+        "SD-SW-005",
+        "SD-SW-059"
+      ]
+    },
+    {
+      "id": "IDEA-057",
+      "title": "Multi-Mode Terminal Seeker",
+      "status": "candidate",
+      "role": "maturation",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL4-6",
+      "summary": "Seeker robustness and countermeasure rejection improve independently of warhead.",
+      "references": [
+        "SD-SW-058"
+      ]
+    },
+    {
+      "id": "IDEA-058",
+      "title": "Shaped Nuclear Warhead",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL4-6",
+      "summary": "Nuclear payload geometry creates directed high-energy attack with conspicuous costs.",
+      "references": [
+        "SD-SW-052"
+      ]
+    },
+    {
+      "id": "IDEA-059",
+      "title": "Antimatter-Catalyzed Warhead",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL6-7",
+      "summary": "Tiny antimatter quantities catalyze high-energy payloads before pure antimatter munitions.",
+      "references": [
+        "SD-Q10-006"
+      ]
+    },
+    {
+      "id": "IDEA-060",
+      "title": "Antimatter Warhead",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL7-8",
+      "summary": "Extreme energy payload whose scarcity/containment is part of its identity.",
+      "references": [
+        "CERN Antimatter"
+      ]
+    },
+    {
+      "id": "IDEA-061",
+      "title": "Matter-Conversion Warhead",
+      "status": "deferred",
+      "role": "weird_science",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL9",
+      "summary": "Pinnacle payload using direct conversion; potentially destabilizing without strong scarcity/counters.",
+      "references": [
+        "Concept TL9 Power"
+      ]
+    },
+    {
+      "id": "IDEA-062",
+      "title": "Probe/Survey Drone Package",
+      "status": "candidate",
+      "role": "campaign_technology",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL2-5",
+      "summary": "Disposable/reusable probes automate routine surveying while preserving player risk decisions.",
+      "references": [
+        "SD-Q06-002"
+      ]
+    },
+    {
+      "id": "IDEA-063",
+      "title": "Autonomous Long-Endurance Probe",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Computing / Fire Control",
+      "provisionalWindow": "TL5-8",
+      "summary": "AI/efficient propulsion supports long autonomous exploration without eliminating strandedness or discovery uncertainty.",
+      "references": [
+        "SD-Q06-005"
+      ]
+    },
+    {
+      "id": "IDEA-064",
+      "title": "Minefield Deployment System",
+      "status": "deferred",
+      "role": "campaign_technology",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL3-6",
+      "summary": "Chokepoint/system hazard rather than tactical mine spam; requires sweeping/observer-safe hazard states.",
+      "references": [
+        "SD-SW-014",
+        "SD-SW-025"
+      ]
+    },
+    {
+      "id": "IDEA-065",
+      "title": "Mine-Sweeping Sensor/Drone Suite",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL3-6",
+      "summary": "Specialized counterplay if minefields are adopted.",
+      "references": [
+        "SD-SW-026"
+      ]
+    },
+    {
+      "id": "IDEA-066",
+      "title": "Tractor/Tow Field",
+      "status": "candidate",
+      "role": "one_off",
+      "owner": "Shields",
+      "provisionalWindow": "TL4-7",
+      "summary": "Localized force-manipulation system for towing, salvage or boarding support; avoid turning it into universal movement control.",
+      "references": [
+        "GURPS Space force/gravity inspiration"
+      ]
+    },
+    {
+      "id": "IDEA-067",
+      "title": "Reactionless Maneuvering Drive",
+      "status": "deferred",
+      "role": "weird_science",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL8-9",
+      "summary": "Field propulsion with no conventional reaction mass; requires strong costs/limits to preserve logistics.",
+      "references": [
+        "GURPS Space reactionless drives"
+      ]
+    },
+    {
+      "id": "IDEA-068",
+      "title": "Micro-Jump Tactical Drive",
+      "status": "deferred",
+      "role": "weird_science",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL8-9",
+      "summary": "Short tactical transitions could bypass geometry/interception and are therefore deferred pending a dedicated combat-architecture study.",
+      "references": [
+        "SD-Q23-010"
+      ]
+    },
+    {
+      "id": "IDEA-069",
+      "title": "Player-Built Fixed Transit Gate",
+      "status": "deferred",
+      "role": "infrastructure",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL9",
+      "summary": "Rare late infrastructure that changes sector topology rather than onboard movement.",
+      "references": [
+        "SD-Q23-003"
+      ]
+    },
+    {
+      "id": "IDEA-070",
+      "title": "Precursor Transit Gate",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Ancient fixed route that may violate one ordinary FTL rule.",
+      "references": [
+        "SD-Q24-007"
+      ]
+    },
+    {
+      "id": "IDEA-071",
+      "title": "Traversable Wormhole Generator",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Rule-bending spacetime topology device requiring exotic physics; not normal player research.",
+      "references": [
+        "Morris-Thorne literature"
+      ]
+    },
+    {
+      "id": "IDEA-072",
+      "title": "Warp/Metric Bubble Artifact",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Precursor device using extreme spacetime distortion beyond normal player FTL.",
+      "references": [
+        "Alcubierre paper"
+      ]
+    },
+    {
+      "id": "IDEA-073",
+      "title": "Vacuum-Energy Tap",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Power",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Unbounded-looking power source deliberately kept outside normal player progression unless future lore imposes severe constraints.",
+      "references": [
+        "GURPS Space exotic matter/miracles"
+      ]
+    },
+    {
+      "id": "IDEA-074",
+      "title": "Artificial Black-Hole Reactor",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Power",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Artificial singularity as Hawking-radiation power source; extreme event technology.",
+      "references": [
+        "Crane & Westmoreland"
+      ]
+    },
+    {
+      "id": "IDEA-075",
+      "title": "Negative-Mass / Exotic-Matter Field Core",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Power",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Exotic-matter source for spacetime devices; provenance/containment itself is campaign content.",
+      "references": [
+        "GURPS Space exotic matter"
+      ]
+    },
+    {
+      "id": "IDEA-076",
+      "title": "Dimensional Pocket Storage",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Hull",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Interior volume or storage not matching external geometry; intentionally breaks Installation-Space assumptions.",
+      "references": [
+        "RM-THEME-017"
+      ]
+    },
+    {
+      "id": "IDEA-077",
+      "title": "Temporal Repair Device",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Hull",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Restores a bounded prior state or reverses damage; a clear rule-breaking artifact, not ordinary Damage Control.",
+      "references": [
+        "RM-THEME-017"
+      ]
+    },
+    {
+      "id": "IDEA-078",
+      "title": "Causal/Precognitive Sensor",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Obtains information unavailable through normal causal observation; conflicts with player-information architecture and is reserved for explicit Precursor exceptions.",
+      "references": [
+        "RM-THEME-017"
+      ]
+    },
+    {
+      "id": "IDEA-079",
+      "title": "Phase-Shift Armor",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Armor",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Temporarily removes matter from normal interaction; event-grade defensive exception.",
+      "references": [
+        "RM-THEME-017"
+      ]
+    },
+    {
+      "id": "IDEA-080",
+      "title": "Living Precursor Starship",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Hull",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Sentient/biomechanical vessel whose support and repair rules differ from normal player hulls.",
+      "references": [
+        "SD-Q13-006"
+      ]
+    },
+    {
+      "id": "IDEA-081",
+      "title": "Exotic-Matter Sample / Key Material",
+      "status": "exotic",
+      "role": "campaign_technology",
+      "owner": "Hull",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Recovered matter that acts as prerequisite/currency for Precursor adaptation rather than a researchable universal resource.",
+      "references": [
+        "GURPS Space exotic matter",
+        "Concept Precursor adaptation"
+      ]
+    },
+    {
+      "id": "IDEA-082",
+      "title": "FTL Communications",
+      "status": "deferred",
+      "role": "one_off",
+      "owner": "Computing / Fire Control",
+      "provisionalWindow": "TL7-9",
+      "summary": "Potential strategic communication breakthrough; consequences for isolation, diplomacy and exploration are large enough to require separate campaign design.",
+      "references": [
+        "SD-Q24-011"
+      ]
+    },
+    {
+      "id": "IDEA-083",
+      "title": "Radiation-Hardened Electronics",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Computing / Fire Control",
+      "provisionalWindow": "TL3-6",
+      "summary": "Materials/architecture improve resilience against radiation/particle effects; use component traits rather than universal resistance meter.",
+      "references": [
+        "SD-SW-022"
+      ]
+    },
+    {
+      "id": "IDEA-084",
+      "title": "Reconfigurable Service Bus",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Hull",
+      "provisionalWindow": "TL5-7",
+      "summary": "Smart power/data/coolant routing improves refit/repair integration and legacy-component adaptation.",
+      "references": [
+        "SD-DC-008"
+      ]
+    },
+    {
+      "id": "IDEA-085",
+      "title": "Advanced Decoy Flight",
+      "status": "candidate",
+      "role": "branch",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL4-6",
+      "summary": "Missile-like decoys/emitters attack seeker discrimination and consume defensive attention without free damage.",
+      "references": [
+        "RM-THEME-013"
+      ]
+    },
+    {
+      "id": "IDEA-086",
+      "title": "Laser-Pumped Particle Beam",
+      "status": "deferred",
+      "role": "weird_science",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL8-9",
+      "summary": "Laser/particle hybrid is retained as a late weird-science concept rather than normal automatic progression.",
+      "references": [
+        "SD-SW-033"
+      ]
+    },
+    {
+      "id": "IDEA-087",
+      "title": "Directed-Energy Sail / Beamed-Propulsion Missile",
+      "status": "deferred",
+      "role": "cross_pollinated_derivative",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL5-7",
+      "summary": "External beam drives a vehicle; only useful if it creates a distinct tactical/logistics niche over firing the beam directly.",
+      "references": [
+        "SD-SW-060"
+      ]
+    },
+    {
+      "id": "IDEA-088",
+      "title": "Emergency Heat Sink Cartridge",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Power",
+      "provisionalWindow": "TL3-6",
+      "summary": "Finite-use thermal reserve for overload/stealth windows; no ongoing coolant inventory.",
+      "references": [
+        "SD-Q15-009"
+      ]
+    },
+    {
+      "id": "IDEA-089",
+      "title": "Adaptive Spectrum Shielding",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Shields",
+      "provisionalWindow": "TL5-7",
+      "summary": "Field tuning responds to observed attack characteristics with power/coverage tradeoffs.",
+      "references": [
+        "SD-SW-045"
+      ]
+    },
+    {
+      "id": "IDEA-090",
+      "title": "Programmable Matter Hull Patch",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Hull",
+      "provisionalWindow": "TL8-9",
+      "summary": "Stored programmable matter forms temporary structural or interface repairs with finite resource use.",
+      "references": [
+        "TI Molecular Assemblers"
+      ]
+    },
+    {
+      "id": "IDEA-091",
+      "title": "Exotic Matter Conversion Feedstock",
+      "status": "deferred",
+      "role": "campaign_technology",
+      "owner": "Power",
+      "provisionalWindow": "TL8-9",
+      "summary": "Rare feedstock could gate the strongest conversion systems if unlimited ordinary matter proves too permissive; not adopted.",
+      "references": [
+        "GURPS Space exotic resources"
+      ]
+    },
+    {
+      "id": "IDEA-092",
+      "title": "Relativistic Dust Defensive Cloud",
+      "status": "deferred",
+      "role": "one_off",
+      "owner": "Projectile Weapons",
+      "provisionalWindow": "TL7-9",
+      "summary": "Cloud/particle defense or denial concept; collateral and bookkeeping risks are high.",
+      "references": [
+        "SD-SW-041"
+      ]
+    },
+    {
+      "id": "IDEA-093",
+      "title": "Anti-Particle Magnetic Screen",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Shields",
+      "provisionalWindow": "TL5-7",
+      "summary": "Specialized defense against charged particle beams, weak versus unrelated threats.",
+      "references": [
+        "SD-SW-045"
+      ]
+    },
+    {
+      "id": "IDEA-094",
+      "title": "High-Energy Neutrino/Exotic Sensor",
+      "status": "deferred",
+      "role": "branch",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL7-9",
+      "summary": "Penetrating sensing channel potentially useful against obscured targets; practical effectiveness/cost uncertain.",
+      "references": [
+        "SD-Q09-008"
+      ]
+    },
+    {
+      "id": "IDEA-095",
+      "title": "Adaptive Ammo Fabricator",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Projectile Weapons",
+      "provisionalWindow": "TL6-8",
+      "summary": "Onboard manufacturing can produce selected projectile packages from resources, trading flexibility against fabrication time/Space.",
+      "references": [
+        "TI Molecular Assemblers"
+      ]
+    },
+    {
+      "id": "IDEA-096",
+      "title": "Missile Warhead Fabricator",
+      "status": "candidate",
+      "role": "cross_pollinated_derivative",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL6-8",
+      "summary": "Manufacturing flexibility may let a ship replenish selected conventional warheads/ammo from resources outside combat.",
+      "references": [
+        "TI Molecular Assemblers"
+      ]
+    },
+    {
+      "id": "IDEA-097",
+      "title": "Dynamic Field Mine",
+      "status": "deferred",
+      "role": "weird_science",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL8-9",
+      "summary": "Persistent field hazard with unusual trigger/geometry behavior; keep campaign-scale and sweepable if adopted.",
+      "references": [
+        "SD-SW-027"
+      ]
+    },
+    {
+      "id": "IDEA-098",
+      "title": "Precursor Rule-Key Component Pair",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Hull",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Matched artifact/coupler/stabilizer pair whose combination unlocks an otherwise incompatible rule-bending device.",
+      "references": [
+        "Concept 9.3"
+      ]
+    },
+    {
+      "id": "IDEA-099",
+      "title": "Matter-Replication Fabricator",
+      "status": "exotic",
+      "role": "precursor_artifact",
+      "owner": "Hull",
+      "provisionalWindow": "TL10 shorthand",
+      "summary": "Unconstrained replication would erase logistics and is therefore Precursor-only unless future rules impose strict feedstock/energy limits.",
+      "references": [
+        "RM-THEME-017"
+      ]
+    },
+    {
+      "id": "IDEA-100",
+      "title": "Localized Gravity Weapon",
+      "status": "deferred",
+      "role": "weird_science",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL8-9",
+      "summary": "Field weapon that perturbs trajectories/structure instead of ordinary beam damage; role and counters unresolved.",
+      "references": [
+        "GURPS Space gravity"
+      ]
+    },
+    {
+      "id": "IDEA-101",
+      "title": "Peak Fission Main Reactor",
+      "status": "base",
+      "role": "core_family",
+      "owner": "Power",
+      "provisionalWindow": "TL1",
+      "summary": "Highly mature fission is the normal baseline power technology: dependable, well-understood, and strategically useful even after successor families appear.",
+      "references": [
+        "Concept 8.4"
+      ]
+    },
+    {
+      "id": "IDEA-102",
+      "title": "Early Practical Fusion Main Reactor",
+      "status": "existing",
+      "role": "core_family",
+      "owner": "Power",
+      "provisionalWindow": "TL2",
+      "summary": "The first practical Fusion family should be a genuinely different reactor principle whose design promise is more than simply Reactor 1 with a larger number.",
+      "references": [
+        "Concept 8.4",
+        "CP104 accepted baseline"
+      ]
+    },
+    {
+      "id": "IDEA-103",
+      "title": "Mature Compact Fusion Main Reactor",
+      "status": "existing",
+      "role": "maturation",
+      "owner": "Power",
+      "provisionalWindow": "TL3",
+      "summary": "Mature Fusion improves packaging/integration; the accepted TL3 6-TP / 5-Space base is retained as the numerical seed.",
+      "references": [
+        "Concept 8.4",
+        "CP104 accepted baseline"
+      ]
+    },
+    {
+      "id": "IDEA-104",
+      "title": "High-Output Fusion Main Reactor",
+      "status": "existing",
+      "role": "maturation",
+      "owner": "Power",
+      "provisionalWindow": "TL4",
+      "summary": "A strong mature Fusion form that pushes the output frontier after TL3 integration/miniaturization.",
+      "references": [
+        "Concept 8.4"
+      ]
+    },
+    {
+      "id": "IDEA-105",
+      "title": "Early Antimatter Main Reactor",
+      "status": "existing",
+      "role": "core_family",
+      "owner": "Power",
+      "provisionalWindow": "TL5",
+      "summary": "Antimatter becomes a new higher-SF power family while peak Fusion remains a legitimate mature alternative.",
+      "references": [
+        "Concept 8.4",
+        "CERN Antimatter"
+      ]
+    },
+    {
+      "id": "IDEA-106",
+      "title": "Mature Antimatter Main Reactor",
+      "status": "existing",
+      "role": "maturation",
+      "owner": "Power",
+      "provisionalWindow": "TL6",
+      "summary": "Antimatter containment, conversion and integration mature into more practical ship-scale power architecture.",
+      "references": [
+        "Concept 8.4",
+        "CERN Antimatter"
+      ]
+    },
+    {
+      "id": "IDEA-107",
+      "title": "High-Output Antimatter Main Reactor",
+      "status": "existing",
+      "role": "maturation",
+      "owner": "Power",
+      "provisionalWindow": "TL7",
+      "summary": "Mature Antimatter pushes the high-output frontier while retaining containment/logistics identity.",
+      "references": [
+        "Concept 8.4"
+      ]
+    },
+    {
+      "id": "IDEA-108",
+      "title": "Fractional / Direct Matter-Conversion Reactor",
+      "status": "existing",
+      "role": "weird_science",
+      "owner": "Power",
+      "provisionalWindow": "TL8",
+      "summary": "The normal player ladder reaches early controlled matter conversion while peak Antimatter remains available as the mature predecessor.",
+      "references": [
+        "Concept 8.4"
+      ]
+    },
+    {
+      "id": "IDEA-109",
+      "title": "Total Matter-Conversion Reactor",
+      "status": "existing",
+      "role": "core_family",
+      "owner": "Power",
+      "provisionalWindow": "TL9",
+      "summary": "Pinnacle normal-player power technology: extremely efficient conversion bounded by ship architecture and still distinct from Precursor rule-breaking.",
+      "references": [
+        "Concept 8.4"
+      ]
+    },
+    {
+      "id": "IDEA-110",
+      "title": "Baseline Sublight Tactical Drive",
+      "status": "base",
+      "role": "core_family",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL1",
+      "summary": "A mature slightly-futuristic tactical maneuvering family; later progression should tell a propulsion story rather than only increasing Move.",
+      "references": [
+        "Concept propulsion architecture",
+        "CP104 accepted baseline"
+      ]
+    },
+    {
+      "id": "IDEA-111",
+      "title": "Practical Faster-Than-Light Drive",
+      "status": "existing",
+      "role": "core_family",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL1",
+      "summary": "A deliberate setting-defining miracle present at the baseline. It remains a distinct installed family from STL even though both share visible Propulsion research.",
+      "references": [
+        "Concept 8.3"
+      ]
+    },
+    {
+      "id": "IDEA-112",
+      "title": "Baseline Defensive Shield Generator",
+      "status": "existing",
+      "role": "core_family",
+      "owner": "Shields",
+      "provisionalWindow": "TL1",
+      "summary": "A deliberate setting-defining field technology available from the start; later progression can split capacity, recharge, geometry and hardening.",
+      "references": [
+        "Concept Shields"
+      ]
+    },
+    {
+      "id": "IDEA-113",
+      "title": "Baseline Kinetic Main Weapon",
+      "status": "base",
+      "role": "core_family",
+      "owner": "Projectile Weapons",
+      "provisionalWindow": "TL1",
+      "summary": "Mature projectile/accelerator weapon family whose later identity should emphasize velocity, penetration, ammunition, launcher architecture and smart rounds rather than universal damage scaling.",
+      "references": [
+        "Concept weapon family identity"
+      ]
+    },
+    {
+      "id": "IDEA-114",
+      "title": "Baseline Coherent-Energy Main Weapon",
+      "status": "base",
+      "role": "core_family",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL1",
+      "summary": "Mature shipboard beam weapon family whose progression can involve emitter physics, wavelength, focusing, efficiency and operating modes.",
+      "references": [
+        "Concept weapon family identity"
+      ]
+    },
+    {
+      "id": "IDEA-115",
+      "title": "Baseline Missile Weapon System",
+      "status": "base",
+      "role": "core_family",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL1",
+      "summary": "Launcher, command guidance and payload form the baseline missile family; delivery, seeker/guidance and warhead may mature independently.",
+      "references": [
+        "Concept missile architecture"
+      ]
+    },
+    {
+      "id": "IDEA-116",
+      "title": "Baseline Kinetic Point Defense",
+      "status": "base",
+      "role": "core_family",
+      "owner": "Projectile Weapons",
+      "provisionalWindow": "TL1",
+      "summary": "Local finite-capacity interception is a distinct defensive application of projectile technology rather than a generic ship defense statistic.",
+      "references": [
+        "Concept PDS architecture"
+      ]
+    },
+    {
+      "id": "IDEA-117",
+      "title": "Baseline Multimodal Sensor Suite",
+      "status": "base",
+      "role": "core_family",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL1",
+      "summary": "Mature passive/active sensing establishes the information-state game; later levels add modes, discrimination, cooperation and specialized channels.",
+      "references": [
+        "Concept Sensors / EW"
+      ]
+    },
+    {
+      "id": "IDEA-118",
+      "title": "Baseline ECM / ECCM Architecture",
+      "status": "base",
+      "role": "core_family",
+      "owner": "Sensors / EW",
+      "provisionalWindow": "TL1",
+      "summary": "Electronic attack and countermeasures begin as bounded rating-based systems; later families should add deception, anti-emitter behavior and efficiency rather than only rating inflation.",
+      "references": [
+        "Concept Sensors / EW"
+      ]
+    },
+    {
+      "id": "IDEA-119",
+      "title": "Baseline Tactical Computer / Fire Control",
+      "status": "base",
+      "role": "core_family",
+      "owner": "Computing / Fire Control",
+      "provisionalWindow": "TL1",
+      "summary": "Mature digital fire control coordinates targeting and ship combat without granting omniscience; later computing should change integration, efficiency and specialized assistance.",
+      "references": [
+        "Concept Computing / Fire Control"
+      ]
+    },
+    {
+      "id": "IDEA-120",
+      "title": "Baseline Cruiser Hull and Primary Armor",
+      "status": "base",
+      "role": "core_family",
+      "owner": "Hull",
+      "provisionalWindow": "TL1",
+      "summary": "The starting cruiser is already a sophisticated slightly-futuristic spacecraft using mature structural materials, compartmentation, diagnostics and layered passive protection.",
+      "references": [
+        "Concept Hull",
+        "Concept Armor"
+      ]
+    },
+    {
+      "id": "IDEA-121",
+      "title": "Baseline Energy / Beam Point Defense",
+      "status": "base",
+      "role": "core_family",
+      "owner": "Energy Weapons",
+      "provisionalWindow": "TL1",
+      "summary": "Starting-available separate beam-PDS lineage: local interception, RC1, 2-TP readiness, and no conventional ammunition.",
+      "references": [
+        "PDS TL1/TL2 contract",
+        "Concept 10.8"
+      ]
+    },
+    {
+      "id": "IDEA-122",
+      "title": "Baseline Local AMM Point Defense",
+      "status": "base",
+      "role": "core_family",
+      "owner": "Missile Weapons",
+      "provisionalWindow": "TL1",
+      "summary": "Starting-available local terminal interceptor lineage with RC1, 1-TP readiness, and finite ammunition; distinct from a later long-range AMM layer.",
+      "references": [
+        "PDS TL1/TL2 contract",
+        "Concept 10.8"
+      ]
+    },
+    {
+      "id": "IDEA-123",
+      "title": "TL1 Ablative Outer Armor Layer",
+      "status": "existing",
+      "role": "specialist_auxiliary",
+      "owner": "Armor",
+      "provisionalWindow": "TL1",
+      "summary": "Optional starting-legal outer armor installed as an Auxiliary/support component using universal Installation Space; not a separate AUX capacity and normally replaced rather than repaired in combat.",
+      "references": [
+        "Concept 9.4",
+        "Concept 10.9",
+        "C-068"
+      ]
+    },
+    {
+      "id": "IDEA-124",
+      "title": "Medical Bay",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Hull",
+      "provisionalWindow": "TL1-4",
+      "summary": "Space-consuming medical support that mitigates explicit casualty/recovery events without creating individual-health micromanagement.",
+      "references": [
+        "Concept 9.4",
+        "Concept 11.1"
+      ]
+    },
+    {
+      "id": "IDEA-125",
+      "title": "Fuel Processor",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL1-4",
+      "summary": "Field processor that enables or improves Fuel recovery at eligible sites, trading Space and time against expedition endurance.",
+      "references": [
+        "Concept 9.4",
+        "Concept 12.2",
+        "SD-Q06-003"
+      ]
+    },
+    {
+      "id": "IDEA-126",
+      "title": "Expedition Fuel / Endurance Module",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL1-5",
+      "summary": "Optional reserve capacity or endurance support using the single broad Fuel abstraction rather than a tank-by-tank propellant system.",
+      "references": [
+        "Concept 12.1",
+        "SD-Q06-003",
+        "SD-Q24-006"
+      ]
+    },
+    {
+      "id": "IDEA-127",
+      "title": "Advanced Shuttle / Mission Bay",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Hull",
+      "provisionalWindow": "TL2-6",
+      "summary": "Hangar and mission-support branch that may add a second shuttle, heavier craft, faster turnaround, or safer operations after the starting-shuttle decision is confirmed.",
+      "references": [
+        "Concept 9.4",
+        "Concept 11.3"
+      ]
+    },
+    {
+      "id": "IDEA-128",
+      "title": "Scientific Laboratory Module",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Computing / Fire Control",
+      "provisionalWindow": "TL1-6",
+      "summary": "Installed analysis facility that improves Research Data interpretation, anomalies, ruins, artifacts, or alien technology without creating a separate Lab research discipline.",
+      "references": [
+        "Concept 9.4",
+        "Concept 12.3"
+      ]
+    },
+    {
+      "id": "IDEA-129",
+      "title": "Mining and Extraction Module",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Hull",
+      "provisionalWindow": "TL1-6",
+      "summary": "Optional field equipment that changes eligible extraction sites, yield, time, or risk while competing for Installation Space.",
+      "references": [
+        "Concept 9.4",
+        "Concept 12.2"
+      ]
+    },
+    {
+      "id": "IDEA-130",
+      "title": "General Fabrication Module",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Hull",
+      "provisionalWindow": "TL2-7",
+      "summary": "Field fabrication support that converts carried resources into bounded repair, ammunition, or mission support under explicit time and efficiency limits.",
+      "references": [
+        "Concept 9.4",
+        "Concept 10.16",
+        "SD-DC-001"
+      ]
+    },
+    {
+      "id": "IDEA-131",
+      "title": "Expanded Cargo Bay",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Hull",
+      "provisionalWindow": "TL1-6",
+      "summary": "Additional cargo capacity that consumes Installation Space and therefore competes directly with weapons, defenses, and other mission systems.",
+      "references": [
+        "Concept 9.4",
+        "Concept 12.1"
+      ]
+    },
+    {
+      "id": "IDEA-132",
+      "title": "Magazine Expansion",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Projectile Weapons",
+      "provisionalWindow": "TL1-6",
+      "summary": "Space-consuming shared or family-specific ammunition storage that extends endurance without changing the Ready Package rule.",
+      "references": [
+        "Concept 10.17",
+        "C-028"
+      ]
+    },
+    {
+      "id": "IDEA-133",
+      "title": "Communications Relay / Mission Communications Suite",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Computing / Fire Control",
+      "provisionalWindow": "TL1-7",
+      "summary": "Improves contact, datalink, beacon, or strategic communication options while preserving signal observability and information provenance.",
+      "references": [
+        "Concept 9.4",
+        "SD-Q09-001",
+        "SD-Q24-011"
+      ]
+    },
+    {
+      "id": "IDEA-134",
+      "title": "Boarding and Planetary Mission Package",
+      "status": "candidate",
+      "role": "specialist_auxiliary",
+      "owner": "Hull",
+      "provisionalWindow": "TL1-5",
+      "summary": "Swappable support package for boarding, rescue, landing, survey, or hazardous extraction, resolved as one mission package rather than individual loadouts.",
+      "references": [
+        "Concept 11.3"
+      ]
+    },
+    {
+      "id": "IDEA-135",
+      "title": "Hardened Control and Cybersecurity Architecture",
+      "status": "deferred",
+      "role": "operating_capability",
+      "owner": "Computing / Fire Control",
+      "provisionalWindow": "TL2-8",
+      "summary": "Potential bounded defense against software/control compromise. Hostile intrusion requires explicit access, limits, counterplay, and may not grant arbitrary remote ship control.",
+      "references": [
+        "SD-DC-003",
+        "SD-SW-035"
+      ]
+    },
+    {
+      "id": "IDEA-136",
+      "title": "Matter Transport / Portal System",
+      "status": "deferred",
+      "role": "weird_science",
+      "owner": "Propulsion",
+      "provisionalWindow": "TL8-10 shorthand",
+      "summary": "Preserved separately from ordinary FTL because transport of people, cargo, attacks, or boarding parties can bypass major gameplay systems; likely Exotic or tightly bounded if ever adopted.",
+      "references": [
+        "SD-Q23-010"
+      ]
+    }
+  ]
+}

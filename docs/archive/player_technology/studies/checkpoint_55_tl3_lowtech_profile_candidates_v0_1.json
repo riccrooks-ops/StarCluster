@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "star-cluster-checkpoint55-tl3-runtime-candidates-v1",
+  "checkpoint": 55,
+  "status": "candidate_screening_only",
+  "generation": "low_tech_maturity",
+  "capacityMilestone": {
+    "weaponBays": 1,
+    "auxiliaryCapacity": 2
+  },
+  "candidates": [
+    {
+      "id": "tl3-lowtech-control",
+      "label": "TL3 Low-Tech Capacity Control",
+      "purpose": "isolate the second AUX point with accepted TL2 numerical values"
+    },
+    {
+      "id": "tl3-offense-refinement",
+      "label": "TL3 Offense-Only Refinement",
+      "purpose": "small accuracy/guidance improvement without damage, penetration, range, movement, or weapon-count changes"
+    },
+    {
+      "id": "tl3-defense-refinement",
+      "label": "TL3 Defense-Only Refinement",
+      "purpose": "modest Hull/Armor Integrity/Shield Capacity improvement with TL2-equivalent offense"
+    },
+    {
+      "id": "tl3-mature-lowtech-candidate",
+      "label": "TL3 Mature Low-Tech Candidate",
+      "purpose": "combine conservative offense and defense refinements plus +1 reactor output and small PDS refinement"
+    }
+  ],
+  "promotionPolicy": "No TL3 profile is promoted by Checkpoint 55. Review TL2-to-TL3 progression and attribution before selecting a mature low-tech profile."
+}

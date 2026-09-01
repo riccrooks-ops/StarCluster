@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "34",
+  "title": "Headless C# Calibration Lane and Stable Validation Harness",
+  "sdkVersion": "8.0.423",
+  "configuration": "Debug",
+  "calibrationSolution": "StarCluster.Calibration.sln",
+  "testProject": "tests/StarCluster.Tests/StarCluster.Tests.csproj",
+  "runnerProject": "src/StarCluster.ScenarioRunner/StarCluster.ScenarioRunner.csproj",
+  "manifestFile": "CHECKPOINT_34_SHA256SUMS.txt",
+  "outputRoot": "out/checkpoint-34",
+  "defaultTrials": 10000,
+  "defaultJobs": 24,
+  "documentation": [
+    "docs/Star_Cluster_Game_Concept_v0.4f.docx",
+    "docs/design/player_technology/StarCluster_Player_TL_Framework_Draft_v0_14.xlsx",
+    "docs/validation/Checkpoint_34_Headless_CSharp_Calibration_Lane_And_Stable_Validation_Harness.md"
+  ],
+  "stages": [
+    {
+      "id": "deterministic",
+      "name": "Accepted deterministic moving-missile scenarios",
+      "command": "run-all",
+      "arguments": [
+        "--scenario-dir", "src/StarCluster.ScenarioRunner/Scenarios",
+        "--output-dir", "{OutputRoot}/deterministic"
+      ]
+    },
+    {
+      "id": "tl1-phase-a",
+      "name": "TL1 Phase A mechanics corpus",
+      "command": "tl1-phase-a",
+      "arguments": [
+        "--scenario-dir", "src/StarCluster.ScenarioRunner/Scenarios/TL1PhaseA",
+        "--baseline-file", "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir", "{OutputRoot}/tl1-phase-a"
+      ]
+    },
+    {
+      "id": "tl1-phase-b",
+      "name": "TL1 Phase B direct-fire corpus",
+      "command": "tl1-phase-b",
+      "arguments": [
+        "--output-dir", "{OutputRoot}/tl1-phase-b"
+      ]
+    },
+    {
+      "id": "tl1-kinetic-calibration",
+      "name": "TL1 kinetic-interaction calibration",
+      "command": "tl1-kinetic-calibration",
+      "arguments": [
+        "--study-file", "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-kc01-kinetic-interaction-study.json",
+        "--baseline-file", "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials", "{Trials}", "--jobs", "{Jobs}",
+        "--output-dir", "{OutputRoot}/tl1-kinetic-calibration"
+      ]
+    },
+    {
+      "id": "tl1-energy-calibration",
+      "name": "TL1 energy-interaction calibration",
+      "command": "tl1-energy-calibration",
+      "arguments": [
+        "--study-file", "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-ec01-energy-interaction-study.json",
+        "--baseline-file", "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials", "{Trials}", "--jobs", "{Jobs}",
+        "--output-dir", "{OutputRoot}/tl1-energy-calibration"
+      ]
+    },
+    {
+      "id": "tl1-weapon-matrix",
+      "name": "Complete TL1 no-counter weapon matrix",
+      "command": "tl1-weapon-matrix",
+      "arguments": [
+        "--study-file", "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-wm01-complete-weapon-matrix.json",
+        "--baseline-file", "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials", "{Trials}", "--jobs", "{Jobs}",
+        "--output-dir", "{OutputRoot}/tl1-weapon-matrix"
+      ]
+    },
+    {
+      "id": "tl1-pds-calibration",
+      "name": "Corrected TL1 PDS and interception calibration",
+      "command": "tl1-pds-calibration",
+      "arguments": [
+        "--study-file", "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-pds01-interception-study.json",
+        "--baseline-file", "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials", "{Trials}", "--jobs", "{Jobs}",
+        "--output-dir", "{OutputRoot}/tl1-pds-calibration"
+      ]
+    },
+    {
+      "id": "tl1-defensive-calibration",
+      "name": "TL1 layered defensive-system calibration",
+      "command": "tl1-defensive-calibration",
+      "arguments": [
+        "--study-file", "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-ds01-layered-defensive-systems-study.json",
+        "--baseline-file", "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials", "{Trials}", "--jobs", "{Jobs}",
+        "--output-dir", "{OutputRoot}/tl1-defensive-calibration"
+      ]
+    },
+    {
+      "id": "tl1-power-correction",
+      "name": "TL1 main-power and interception-order correction study",
+      "command": "tl1-power-envelope-calibration",
+      "arguments": [
+        "--study-file", "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-pe02-main-power-interception-correction-study.json",
+        "--baseline-file", "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--trials", "{Trials}", "--jobs", "{Jobs}",
+        "--output-dir", "{OutputRoot}/tl1-power-correction"
+      ]
+    },
+    {
+      "id": "runner-self-tests",
+      "name": "ScenarioRunner self-tests",
+      "command": "self-test",
+      "arguments": [
+        "--scenario-file", "src/StarCluster.ScenarioRunner/Scenarios/terminal-two-window-hit.json"
+      ]
+    }
+  ]
+}

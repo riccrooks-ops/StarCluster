@@ -1,0 +1,44 @@
+{
+  "checkpoint": "108",
+  "status": "candidate_pending_native_acceptance",
+  "acceptedBaseline": "107b",
+  "scope": "qualitative whole-ladder technology/component architecture review",
+  "counts": {
+    "visibleDisciplines": 10,
+    "sourceLineages": 32,
+    "storyboardBeats": 214,
+    "ideas": 136,
+    "foundationDomains": 20,
+    "gridRows": 90,
+    "optionalSupportCandidates": 35,
+    "frozenNumericalExecutableFiles": 133,
+    "hardExternalPrerequisites": 0,
+    "trials": 0,
+    "newTl4Tl9NumericalValues": 0
+  },
+  "qualitativeCorrections": [
+    "Powered reactive and field-assisted defenses are Armor enhancement branches rather than passive primary Armor.",
+    "TL2 penetrator/projectile-material maturation belongs to Kinetic Ammunition rather than the Kinetic Main accelerator lineage.",
+    "Helical/continuous-induction, macron/dust, tunable/free-electron and extreme-frequency weapon concepts remain branch/specialist technology rather than silent default replacements.",
+    "Normal-player TL9 Sensors, ECM, ECCM and Computing retain bounded observer-safe information rather than causal/precognitive truth.",
+    "Normal-player TL9 Missile delivery remains track-dependent, on-map and interceptable; tactical micro-jump delivery remains deferred.",
+    "Shield-support candidates omitted by the first table are materialized and the duplicate Armor electromagnetic-particle-screen concept is consolidated.",
+    "Probe / Survey Drone Package is added as a gameplay-linked optional support candidate."
+  ],
+  "runtimeBoundary": {
+    "productionGameRuntime": "C# / Godot",
+    "pythonPermittedFor": ["simulation", "research", "analysis", "testing", "checkpoint validation"],
+    "pythonRequiredByProductionRuntime": false
+  },
+  "authoringQa": {
+    "pythonContractExecutedLocally": true,
+    "allRepositoryJsonParsed": true,
+    "conceptRenderedPages": 114,
+    "technologyWorkbookRenderedPages": 14,
+    "workbookFormulaCells": 0,
+    "workbookFormulaErrors": 0,
+    "sourceAndTestsChangedFromCp107b": false,
+    "simulationToolingChangedFromCp107b": false
+  },
+  "note": "Authoring QA is not native Windows acceptance. Run both CP108 PowerShell launcher paths before promotion."
+}

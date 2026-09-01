@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-90-validation-suite-policy-v0_1",
+  "checkpoint": "90",
+  "status": "current",
+  "purpose": "Define must-run versus dependency-driven validation for the generalized legal-build/cross-TL stratified screening checkpoint.",
+  "mustAlwaysRun": {
+    "repositoryContract": true,
+    "nativeBuildWarningsAsErrors": true,
+    "fullUnitTests": true,
+    "deterministicMechanics": true,
+    "generalizedLegalBuildPreflight": true,
+    "generatedActualConsumerPreflight": true,
+    "oneTrialPerVariantSmoke": true,
+    "substantiveGeneralizedScreen": true,
+    "scenarioRunnerSelfTests": true
+  },
+  "normalStudy": {
+    "studyId": "tl2-itc15-cross-tl-generalized-legal-build-screening",
+    "variantCount": 432,
+    "trialsPerVariant": 10000,
+    "substantiveTrials": 4320000,
+    "smokeTrials": 432,
+    "balanceTargetsBlocking": false,
+    "automaticCandidatePromotion": false
+  },
+  "deepCalibration": {
+    "requiredByDefault": false,
+    "additionalStudyId": "tl2-itc12-weapon-penetration-layered-defense-permutations",
+    "additionalVariantCount": 288,
+    "runWhen": [
+      "a declared dependency of the accepted penetration study changes",
+      "normal CP90 results expose a penetration/layered-defense interaction requiring targeted revalidation"
+    ]
+  }
+}

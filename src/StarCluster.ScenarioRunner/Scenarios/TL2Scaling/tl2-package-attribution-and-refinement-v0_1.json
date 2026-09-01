@@ -1,0 +1,1677 @@
+{
+  "schemaVersion": "star-cluster-tl2-package-attribution-catalog-v1",
+  "id": "tl2-package-attribution-and-refinement-v0_1",
+  "checkpoint": 44,
+  "status": "diagnostic_candidate_only",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "sourceCandidateCatalog": "src/StarCluster.ScenarioRunner/Scenarios/TL2Scaling/tl2-identity-preserving-refinement-v0_2.json",
+  "sourceCheckpointResults": "out/checkpoint-43/tl2-candidate-minimal-tactics",
+  "targetHigherTlWinPercent": 60.0,
+  "reviewBandMinimumPercent": 57.0,
+  "reviewBandMaximumPercent": 64.0,
+  "promotionPolicy": "No profile is promoted automatically. Attribute first, then select a later candidate from convergent fixed-range, movement-aware, pacing, and identity evidence.",
+  "retainedExternalControls": [
+    "tl2-aggressive-balanced-control",
+    "tl2-specialization-forward"
+  ],
+  "attributionGroups": [
+    {
+      "id": "structure",
+      "label": "Structure",
+      "changedFields": [
+        "defense.hull",
+        "defense.armorIntegrity"
+      ],
+      "additiveProfileId": "tl2-attr-add-structure",
+      "leaveOneOutProfileId": "tl2-attr-remove-structure"
+    },
+    {
+      "id": "shields",
+      "label": "Shields",
+      "changedFields": [
+        "defense.shieldCapacity"
+      ],
+      "additiveProfileId": "tl2-attr-add-shields",
+      "leaveOneOutProfileId": "tl2-attr-remove-shields"
+    },
+    {
+      "id": "fire-control",
+      "label": "Fire Control",
+      "changedFields": [
+        "powerAndControl.targetingBonus",
+        "powerAndControl.effectivePdsChance"
+      ],
+      "additiveProfileId": "tl2-attr-add-fire-control",
+      "leaveOneOutProfileId": "tl2-attr-remove-fire-control"
+    },
+    {
+      "id": "propulsion",
+      "label": "Propulsion",
+      "changedFields": [
+        "movement.shipMove",
+        "movement.missileMove"
+      ],
+      "additiveProfileId": "tl2-attr-add-propulsion",
+      "leaveOneOutProfileId": "tl2-attr-remove-propulsion"
+    },
+    {
+      "id": "direct-fire",
+      "label": "Direct-Fire Weapons",
+      "changedFields": [
+        "weapons.kinetic.shieldPenetration",
+        "weapons.kinetic.accuracyBonus",
+        "weapons.energy.accuracyBonus"
+      ],
+      "additiveProfileId": "tl2-attr-add-direct-fire",
+      "leaveOneOutProfileId": "tl2-attr-remove-direct-fire"
+    },
+    {
+      "id": "missile-guidance",
+      "label": "Missile Guidance",
+      "changedFields": [
+        "weapons.missile.guidanceChance",
+        "weapons.missile.maximumRange"
+      ],
+      "additiveProfileId": "tl2-attr-add-missile-guidance",
+      "leaveOneOutProfileId": "tl2-attr-remove-missile-guidance"
+    },
+    {
+      "id": "power-logistics",
+      "label": "Power and Logistics",
+      "changedFields": [
+        "powerAndControl.reactorOutput",
+        "powerAndControl.standardCombatPowerCommitment"
+      ],
+      "additiveProfileId": "tl2-attr-add-power-logistics",
+      "leaveOneOutProfileId": "tl2-attr-remove-power-logistics"
+    }
+  ],
+  "movementAwareProfileIds": [
+    "tl2-attr-null-control",
+    "tl2-attr-add-propulsion",
+    "tl2-attr-remove-propulsion",
+    "tl2-identity-preserving-refinement",
+    "tl2-refine-moderated-control",
+    "tl2-refine-control-shield-tempered",
+    "tl2-refine-control-structure-tempered"
+  ],
+  "sameTlProfileIds": [
+    "tl2-identity-preserving-refinement",
+    "tl2-refine-moderated-control",
+    "tl2-refine-control-shield-tempered",
+    "tl2-refine-control-structure-tempered"
+  ],
+  "mirrorCalibrationEvidence": "docs/validation/evidence/checkpoint-40-minimal-tactics/tl1-mirror-calibration.csv",
+  "crossFamilyCalibrationEvidence": "docs/validation/evidence/checkpoint-40-minimal-tactics/tl1-cross-family-calibration.csv",
+  "aggressiveControlThresholdPercent": 65.0,
+  "ranges": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "tierModel": {
+    "lowTech": [
+      1,
+      2,
+      3
+    ],
+    "mediumTech": [
+      4,
+      5,
+      6
+    ],
+    "highTech": [
+      7,
+      8,
+      9
+    ],
+    "progressionRhythm": "foundation-refinement-culmination / breakthrough-refinement-culmination / transformation-refinement-apex",
+    "withinBandNominalHigherTlWinPercent": 60.0,
+    "bandBreakNominalHigherTlWinPercent": 75.0,
+    "bandBreakStressHigherTlWinPercent": 80.0
+  },
+  "identityGuardrails": {
+    "minimumMeaningfulDifferencesPerPair": 2,
+    "maximumSharedCoreAttributesPerPair": 2,
+    "coreAttributes": [
+      "damage",
+      "accuracy-or-guidance",
+      "maximum-range"
+    ],
+    "supportAttributes": [
+      "shield-penetration",
+      "armor-penetration",
+      "power-cost",
+      "ammunition-model"
+    ],
+    "recommendedCandidateMustPass": true,
+    "reviewOnlyForControls": true
+  },
+  "tl1AnalyticalAssumptions": {
+    "effectivePdsChanceFormula": "kinetic_pds_chance + targeting_accuracy_bonus",
+    "missileLaunchCadenceTurns": 1,
+    "directFireCadenceTurns": 1,
+    "shieldRechargeTiming": "turn-start",
+    "simultaneousRaceModel": "opponent expected kill time divided by combined expected kill times"
+  },
+  "candidates": [
+    {
+      "id": "tl2-attr-null-control",
+      "label": "TL2 Null-Vector Control",
+      "status": "diagnostic-control-not-promoted",
+      "analysisRole": "null_control",
+      "designThesis": "An exact TL1 combat vector carried under a TL2 diagnostic profile ID verifies that labels and catalog routing do not create a hidden combat advantage.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 5,
+        "targetingBonus": 10,
+        "effectivePdsChance": 45,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 2
+      },
+      "movement": {
+        "shipMove": 1,
+        "missileMove": 2
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "accuracyBonus": 20,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "accuracyBonus": 0,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ]
+    },
+    {
+      "id": "tl2-attr-add-structure",
+      "label": "Add Structure",
+      "status": "attribution-probe-not-promoted",
+      "analysisRole": "additive_probe",
+      "designThesis": "Isolates the marginal effect of adding only the identity package structure changes to the TL1 combat vector.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 5,
+        "targetingBonus": 10,
+        "effectivePdsChance": 45,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 2
+      },
+      "movement": {
+        "shipMove": 1,
+        "missileMove": 2
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "accuracyBonus": 20,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "accuracyBonus": 0,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ],
+      "attributionGroup": "structure"
+    },
+    {
+      "id": "tl2-attr-remove-structure",
+      "label": "Remove Structure",
+      "status": "attribution-probe-not-promoted",
+      "analysisRole": "leave_one_out_probe",
+      "designThesis": "Isolates the marginal effect of removing only the structure changes from the complete identity-preserving package.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 15,
+        "effectivePdsChance": 48,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ],
+      "attributionGroup": "structure"
+    },
+    {
+      "id": "tl2-attr-add-shields",
+      "label": "Add Shields",
+      "status": "attribution-probe-not-promoted",
+      "analysisRole": "additive_probe",
+      "designThesis": "Isolates the marginal effect of adding only the identity package shields changes to the TL1 combat vector.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 5,
+        "targetingBonus": 10,
+        "effectivePdsChance": 45,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 2
+      },
+      "movement": {
+        "shipMove": 1,
+        "missileMove": 2
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "accuracyBonus": 20,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "accuracyBonus": 0,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ],
+      "attributionGroup": "shields"
+    },
+    {
+      "id": "tl2-attr-remove-shields",
+      "label": "Remove Shields",
+      "status": "attribution-probe-not-promoted",
+      "analysisRole": "leave_one_out_probe",
+      "designThesis": "Isolates the marginal effect of removing only the shields changes from the complete identity-preserving package.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 15,
+        "effectivePdsChance": 48,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ],
+      "attributionGroup": "shields"
+    },
+    {
+      "id": "tl2-attr-add-fire-control",
+      "label": "Add Fire Control",
+      "status": "attribution-probe-not-promoted",
+      "analysisRole": "additive_probe",
+      "designThesis": "Isolates the marginal effect of adding only the identity package fire control changes to the TL1 combat vector.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 5,
+        "targetingBonus": 15,
+        "effectivePdsChance": 48,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 2
+      },
+      "movement": {
+        "shipMove": 1,
+        "missileMove": 2
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "accuracyBonus": 20,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "accuracyBonus": 0,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ],
+      "attributionGroup": "fire-control"
+    },
+    {
+      "id": "tl2-attr-remove-fire-control",
+      "label": "Remove Fire Control",
+      "status": "attribution-probe-not-promoted",
+      "analysisRole": "leave_one_out_probe",
+      "designThesis": "Isolates the marginal effect of removing only the fire control changes from the complete identity-preserving package.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 10,
+        "effectivePdsChance": 45,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ],
+      "attributionGroup": "fire-control"
+    },
+    {
+      "id": "tl2-attr-add-propulsion",
+      "label": "Add Propulsion",
+      "status": "attribution-probe-not-promoted",
+      "analysisRole": "additive_probe",
+      "designThesis": "Isolates the marginal effect of adding only the identity package propulsion changes to the TL1 combat vector.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 5,
+        "targetingBonus": 10,
+        "effectivePdsChance": 45,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 2
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "accuracyBonus": 20,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "accuracyBonus": 0,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ],
+      "attributionGroup": "propulsion"
+    },
+    {
+      "id": "tl2-attr-remove-propulsion",
+      "label": "Remove Propulsion",
+      "status": "attribution-probe-not-promoted",
+      "analysisRole": "leave_one_out_probe",
+      "designThesis": "Isolates the marginal effect of removing only the propulsion changes from the complete identity-preserving package.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 15,
+        "effectivePdsChance": 48,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 1,
+        "missileMove": 2
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ],
+      "attributionGroup": "propulsion"
+    },
+    {
+      "id": "tl2-attr-add-direct-fire",
+      "label": "Add Direct-Fire Weapons",
+      "status": "attribution-probe-not-promoted",
+      "analysisRole": "additive_probe",
+      "designThesis": "Isolates the marginal effect of adding only the identity package direct-fire weapons changes to the TL1 combat vector.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 5,
+        "targetingBonus": 10,
+        "effectivePdsChance": 45,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 2
+      },
+      "movement": {
+        "shipMove": 1,
+        "missileMove": 2
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "accuracyBonus": 0,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ],
+      "attributionGroup": "direct-fire"
+    },
+    {
+      "id": "tl2-attr-remove-direct-fire",
+      "label": "Remove Direct-Fire Weapons",
+      "status": "attribution-probe-not-promoted",
+      "analysisRole": "leave_one_out_probe",
+      "designThesis": "Isolates the marginal effect of removing only the direct-fire weapons changes from the complete identity-preserving package.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 15,
+        "effectivePdsChance": 48,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "accuracyBonus": 20,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 25,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ],
+      "attributionGroup": "direct-fire"
+    },
+    {
+      "id": "tl2-attr-add-missile-guidance",
+      "label": "Add Missile Guidance",
+      "status": "attribution-probe-not-promoted",
+      "analysisRole": "additive_probe",
+      "designThesis": "Isolates the marginal effect of adding only the identity package missile guidance changes to the TL1 combat vector.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 5,
+        "targetingBonus": 10,
+        "effectivePdsChance": 45,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 2
+      },
+      "movement": {
+        "shipMove": 1,
+        "missileMove": 2
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "accuracyBonus": 20,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "accuracyBonus": 0,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ],
+      "attributionGroup": "missile-guidance"
+    },
+    {
+      "id": "tl2-attr-remove-missile-guidance",
+      "label": "Remove Missile Guidance",
+      "status": "attribution-probe-not-promoted",
+      "analysisRole": "leave_one_out_probe",
+      "designThesis": "Isolates the marginal effect of removing only the missile guidance changes from the complete identity-preserving package.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 15,
+        "effectivePdsChance": 48,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ],
+      "attributionGroup": "missile-guidance"
+    },
+    {
+      "id": "tl2-attr-add-power-logistics",
+      "label": "Add Power and Logistics",
+      "status": "attribution-probe-not-promoted",
+      "analysisRole": "additive_probe",
+      "designThesis": "Isolates the marginal effect of adding only the identity package power and logistics changes to the TL1 combat vector.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 10,
+        "effectivePdsChance": 45,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 1,
+        "missileMove": 2
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "accuracyBonus": 20,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "accuracyBonus": 0,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ],
+      "attributionGroup": "power-logistics"
+    },
+    {
+      "id": "tl2-attr-remove-power-logistics",
+      "label": "Remove Power and Logistics",
+      "status": "attribution-probe-not-promoted",
+      "analysisRole": "leave_one_out_probe",
+      "designThesis": "Isolates the marginal effect of removing only the power and logistics changes from the complete identity-preserving package.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 5,
+        "targetingBonus": 15,
+        "effectivePdsChance": 48,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 2
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ],
+      "attributionGroup": "power-logistics"
+    },
+    {
+      "id": "tl2-identity-preserving-refinement",
+      "label": "Identity-Preserving Refinement",
+      "status": "source-candidate-not-promoted",
+      "designThesis": "TL2 preserves the distinct TL1 weapon roles while refining structure, field capacity, fire control, guidance, and logistics toward an approximately 60/40 complete-package advantage over TL1. Retained here as the paired source control for attribution; it is not promoted by Checkpoint 44.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 15,
+        "effectivePdsChance": 48,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Coil Cannon remains short-ranged relative to the Pulselaser family so the TL3 Rail Cannon can own the low-tech range/velocity culmination.",
+        "Pulsed Laser Cannon improves beam steering and accuracy without matching kinetic raw packet damage.",
+        "Fusion Missile Flight improves guidance, speed, endurance, and magazine depth without increasing the TL1 warhead packet."
+      ],
+      "analysisRole": "identity_source_control"
+    },
+    {
+      "id": "tl2-refine-moderated-control",
+      "label": "Moderated Control Refinement",
+      "status": "refinement-probe-not-promoted",
+      "analysisRole": "refinement_probe",
+      "designThesis": "Retains the complete identity package but replaces the five-point global targeting step with a smaller two-point control refinement and a one-point effective PDS improvement.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ]
+    },
+    {
+      "id": "tl2-refine-control-shield-tempered",
+      "label": "Control and Shield-Tempered Refinement",
+      "status": "refinement-probe-not-promoted",
+      "analysisRole": "refinement_probe",
+      "designThesis": "Combines moderated fire control with TL1 shield capacity while retaining structural, propulsion, weapon-specific, guidance, and reactor refinements.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ]
+    },
+    {
+      "id": "tl2-refine-control-structure-tempered",
+      "label": "Control and Structure-Tempered Refinement",
+      "status": "refinement-probe-not-promoted",
+      "analysisRole": "refinement_probe",
+      "designThesis": "Combines moderated fire control with TL1 hull and armor integrity while retaining shield, propulsion, weapon-specific, guidance, and reactor refinements.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names do not imply promotion."
+      ]
+    }
+  ]
+}

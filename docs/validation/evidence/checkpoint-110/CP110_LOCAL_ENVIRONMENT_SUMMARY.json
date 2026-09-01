@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "environment": {
+    "python": "3.13.5",
+    "implementation": "CPython",
+    "executable": "/opt/pyvenv/bin/python3",
+    "stdlib_only": true,
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+  },
+  "gates": {
+    "failed": [],
+    "passed": true
+  },
+  "failedGates": 0
+}

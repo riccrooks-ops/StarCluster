@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "star-cluster-native-acceptance-provenance-v1",
+  "checkpointId": "87a",
+  "status": "accepted_native_baseline",
+  "acceptanceSummary": {
+    "status": "Success",
+    "checkpointDefinition": "tools/calibration/checkpoints/checkpoint-87a.json",
+    "checkpointDefinitionSha256": "2683d1c09228301dc0830518851ed086ad62fc64d3d528421a6c95fb55de7c88",
+    "checkpointManifest": "CHECKPOINT_87a_SHA256SUMS.txt",
+    "checkpointManifestSha256": "d58c2bc843f4bf6094a65fe9a886ceba0d295104be01ce6ae572e0b756ef3302",
+    "sdkExpected": "8.0.423",
+    "sdkActual": "8.0.423",
+    "buildWarnings": 0,
+    "buildErrors": 0,
+    "testsPassed": 863,
+    "testsTotal": 863,
+    "runnerStagesPassed": 13,
+    "runnerStagesConfigured": 13,
+    "scenarioRunnerSelfTests": 52,
+    "primaryStudyId": "tl2-itc13-cross-tl-build-permutation-screening",
+    "primaryVariants": 192,
+    "primaryTrials": 1920000,
+    "smokeVariants": 192,
+    "failedGates": 0,
+    "primarySummarySha256": "8842ce0e704cc0bbc815c717fbebedf395812629cc83f46455029ac0a483472a"
+  },
+  "validatedInfrastructure": {
+    "legalBuildCount": 512,
+    "orientedPairingEnvelope": 262144,
+    "namedRecipeCount": 13,
+    "logicalPairingCount": 64,
+    "generatedVariantCount": 192,
+    "actualConsumerPipeline": true,
+    "trackAwareMovement": true,
+    "dynamicCombatActivityGate": true
+  },
+  "screeningWarnings": {
+    "fullTl2VsTl1ConditionalWinApproxPercent": 98.0,
+    "informationControlCliffObserved": true,
+    "informationControlAttribution": "TL2 Computer/Sensor/ECM/ECCM combination produced the strongest one-step asymmetry in the representative screen; this is a diagnostic integration signal, not an automatic retune.",
+    "energyMirrorPowerDeadlockObserved": true,
+    "energyMirrorDescription": "The full TL2 Energy mirror produced zero attacks under automatic Active Sensor + ECM2 + reactive ECCM2 because the 6-TP reactor could not fund the resulting package plus the Energy weapon.",
+    "candidatePromotionFromScreen": false
+  },
+  "nextInfrastructureNeeds": {
+    "absoluteCombatViabilityGate": true,
+    "ratedCostPowerAwareEwDoctrine": true,
+    "broaderInformationControlAttribution": true,
+    "mandatoryCombatCoreEnumerationGuard": true
+  }
+}

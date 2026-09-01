@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "star-cluster-cp158-defense-aux-lifetime-study-v0.1",
+  "checkpoint": 158,
+  "baseCheckpoint": 157,
+  "title": "Defense/AUX Lifetime Viability and PF2 Classification",
+  "masterSeed": 15820260830,
+  "researchExecutionBaseline": "CP158-PF2",
+  "stageAExperimentManifest": "docs/design/testing/cp144_stage_a_experiment_manifest.csv",
+  "resourceEnsemble": "docs/design/testing/cp144_stage_a_resource_ensemble.csv",
+  "resourceEnsembleTl": "docs/design/testing/cp144_stage_a_resource_ensemble_tl.csv",
+  "combatDoctrine": "cp147_tactical_utility",
+  "damageModel": "def-res-v1",
+  "baselineTrialsPerCell": 50,
+  "screenTrialsPerCell": 25,
+  "deepTrialsPerCell": 100,
+  "pairwiseTrialsPerCell": 25,
+  "broadSweepFamilies": [
+    "SHIELD_HARDENER",
+    "SHIELD_BATTERY",
+    "SHIELD_BOOSTER",
+    "ABLATIVE_ARMOR",
+    "CRYSTALLINE_ARMOR",
+    "ENERGIZED_ARMOR",
+    "FIELD_STABILIZER",
+    "REPAIR_DRONE"
+  ],
+  "fixedAuditFamilies": [
+    "KINETIC_MAGAZINE",
+    "MISSILE_MAGAZINE"
+  ],
+  "fixedEnvironment": [
+    "CP157-PF1/CP158-PF2 mains K1/E7/M2/SW2",
+    "CP155 PDS K155P06/E155P08/A155P07",
+    "Hull/Shield/Armor/DEF/RES core values",
+    "five CP144 resource environments as provisional resource stressors"
+  ],
+  "deferred": [
+    "general Power AUX and Reactor supply/storage numerical tuning",
+    "noncombat/campaign AUX combat effects",
+    "particle/radiation specialist systems without explicit threat tags",
+    "simultaneous multi-flight PDS value"
+  ],
+  "guardrails": [
+    "balance is not equality",
+    "no global 50 percent target",
+    "closed main/PDS surfaces are reused, not broadly reopened",
+    "technology-valid whole-TL progression",
+    "all viable response surfaces preserved",
+    "automatic promotion forbidden",
+    "final Reactor/TP tuning remains last"
+  ],
+  "automaticPromotion": false,
+  "tuningAllowed": false,
+  "substantiveCombatTrials": 44723375,
+  "candidateTlPoints": 703,
+  "screenLegalCells": 497555,
+  "plannedDeepCells": 277160,
+  "pairwiseLegalCells": 169040,
+  "reusedPriorSurfaces": [
+    "CP151 Shield tactical-recharge 1/2/3 sensitivity; PF2 center retains 2 points/TP",
+    "CP151 late Armor tactical-repair 1/2/3 sensitivity; PF2 center retains 2 points/TP",
+    "CP153 K/E/GP/Swarmer whole-ladder surfaces",
+    "CP155 K/E/AMM PDS architecture-constrained surfaces",
+    "CP156/CP157 preserved viable ladder and methodological guardrails"
+  ],
+  "deepLadders": 64,
+  "pairwiseAnchors": [
+    "CENTER",
+    "HIGH"
+  ],
+  "deepLadderRows": 384,
+  "pairwisePackages": 238
+}

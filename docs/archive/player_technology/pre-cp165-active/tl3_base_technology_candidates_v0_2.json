@@ -1,0 +1,325 @@
+{
+  "schemaVersion": "star-cluster-tl3-base-technology-candidates-v2",
+  "id": "tl3-base-technology-candidates-v0_2",
+  "checkpoint": 101,
+  "status": "complete_base_conceptual_candidate_table",
+  "purpose": "Complete the standard/base TL3 candidate table across all visible research disciplines and the standard PDS subfamilies while preserving subsystem identity, current construction rules, and the distinction between candidate registration and runtime/calibration/promotion.",
+  "scope": "Base/standard TL3 technology only. Later pinnacle legacy-family items, additional Auxiliaries, specialist weapon variants, missile subcomponents, alternate armor packages, batteries/capacitors, magazines, hangars, and other optional support remain separate future additions.",
+  "candidateLifecycle": {
+    "registeredCandidateIsImplemented": false,
+    "registeredCandidateIsCalibrated": false,
+    "registeredCandidateIsPromoted": false,
+    "combatConsumerEnabled": false,
+    "automaticPromotion": false
+  },
+  "baseTableBoundary": {
+    "description": "The base table names the representative standard TL3 capability for each existing technology stream. It does not exhaust the catalog. Later research may unlock pinnacle lower-TL families, specialist variants, or Aux components without changing this base row.",
+    "example": "A later Optimum Fission Reactor may remain a fission-family item while benefiting from later Power research; it is not the base TL3 reactor and is not defined by this checkpoint."
+  },
+  "researchOwnership": {
+    "hull": "Hull",
+    "armor": "Armor",
+    "powerReactor": "Power",
+    "stlDrive": "Propulsion",
+    "ftlDrive": "Propulsion",
+    "sensor": "Sensors / EW",
+    "ecm": "Sensors / EW",
+    "eccm": "Sensors / EW",
+    "tacticalComputer": "Computing / Fire Control",
+    "shield": "Shields",
+    "kineticMainWeapon": "Projectile Weapons",
+    "energyMainWeapon": "Energy Weapons",
+    "missileMainWeapon": "Missile Weapons",
+    "kineticPds": "Projectile Weapons",
+    "energyPds": "Energy Weapons",
+    "ammPds": "Missile Weapons"
+  },
+  "tl3Candidates": {
+    "hull": {
+      "id": "tl3-cruiser-integration-platform",
+      "technologyRole": "Mature cruiser structural integration",
+      "installationSpaceCapacity": 36,
+      "hullPointsHeld": 12,
+      "crewHeld": 100,
+      "marinesHeld": 10,
+      "minimumOperatingCrewHeld": 10,
+      "cargoApproximateHeld": 100,
+      "shuttleCapacityHeld": 1,
+      "status": "conceptual_candidate",
+      "notes": "Capacity rises by the minimum integer step 35->36. Hull durability, personnel, cargo and shuttle capacity do not also increase. Structural refit requires drydock/rare equivalent."
+    },
+    "armor": {
+      "id": "tl3-composite-protection",
+      "technologyRole": "Mature composite protection",
+      "installationSpace": 0,
+      "armorProtection": 1,
+      "armorIntegrity": 5,
+      "status": "conceptual_candidate",
+      "notes": "TL3 adds real Protection while holding TL2 Integrity."
+    },
+    "powerReactor": {
+      "id": "tl3-mature-compact-fusion",
+      "technologyRole": "Mature Compact Fusion",
+      "installationSpace": 5,
+      "operationalTacticalPower": 6,
+      "degradedTacticalPowerHeld": 3,
+      "disabledEmergencyTacticalPowerHeld": 1,
+      "destroyedTacticalPowerHeld": 0,
+      "status": "conceptual_candidate",
+      "notes": "Miniaturization only; raw output held at 6 TP."
+    },
+    "stlDrive": {
+      "id": "tl3-stl-drive",
+      "technologyRole": "Mature tactical propulsion",
+      "installationSpace": 5,
+      "normalMove": 3,
+      "fuelPerTraversedHexHeld": 2,
+      "overloadI": {
+        "moveBonus": 1,
+        "tacticalPower": 1,
+        "extraFuel": 2,
+        "strain": 1,
+        "strainLimitHeld": 2
+      },
+      "status": "conceptual_candidate",
+      "notes": "Normal Move follows installed STL TL. The bounded overload remains +1 Move rather than scaling multiplicatively with base Move; no footprint reduction is bundled."
+    },
+    "ftlDrive": {
+      "id": "tl3-ftl-drive",
+      "technologyRole": "Mature strategic propulsion",
+      "installationSpace": 5,
+      "strategicMove": 3,
+      "unknownSectorConsumesRemainingMove": true,
+      "frontierTravelInterruptionRulesHeld": true,
+      "status": "conceptual_candidate",
+      "notes": "Strategic Move follows installed FTL TL. No footprint reduction, faster preparation, or exploration-bypass benefit is bundled."
+    },
+    "tacticalComputer": {
+      "id": "tl3-tactical-computer-evasive-integration",
+      "technologyRole": "Mature integrated fire control",
+      "ordinaryTargetingAssistanceOperationalPp": 12,
+      "approximateTrackPenaltyPp": -25,
+      "evasiveCompensationPp": 5,
+      "installationSpace": 3,
+      "status": "conceptual_candidate",
+      "notes": "Compensation offsets only the ship own-fire Evasive penalty to a minimum residual penalty of zero; excess never becomes a bonus."
+    },
+    "sensor": {
+      "id": "tl3-sensor-dual-active-mode",
+      "technologyRole": "Mature phased-aperture / active-mode integration",
+      "discriminationResistance": 1,
+      "installationSpace": 3,
+      "passiveFirm": 1,
+      "passiveApproximate": 3,
+      "normalActiveModes": [
+        {
+          "id": "low",
+          "firm": 3,
+          "approximate": 4,
+          "tacticalPower": 1,
+          "strain": 0
+        },
+        {
+          "id": "high",
+          "firm": 4,
+          "approximate": 5,
+          "tacticalPower": 2,
+          "strain": 0
+        }
+      ],
+      "overloadBeyondHighActive": "deferred_not_promoted",
+      "status": "conceptual_candidate"
+    },
+    "ecm": {
+      "id": "tl3-ecm2-efficient",
+      "technologyRole": "Mature rating-2 electronic countermeasures",
+      "normalRatingCeiling": 2,
+      "fullStrengthNormalTp": 1,
+      "installationSpace": 1,
+      "sameTypeRatingsAdditive": false,
+      "sameTypeResolution": "highest_applicable_functional_rating",
+      "overload": "deferred_not_promoted",
+      "status": "conceptual_candidate"
+    },
+    "eccm": {
+      "id": "tl3-eccm2-efficient",
+      "technologyRole": "Mature rating-2 counter-jamming",
+      "normalRatingCeiling": 2,
+      "fullStrengthNormalTp": 1,
+      "installationSpace": 1,
+      "sameTypeRatingsAdditive": false,
+      "sameTypeResolution": "highest_applicable_functional_rating",
+      "overload": "deferred_not_promoted",
+      "status": "conceptual_candidate"
+    },
+    "shield": {
+      "id": "tl3-shield-hardener-integration",
+      "technologyRole": "Mature shield integration with optional powered hardening",
+      "primaryShield": {
+        "installationSpace": 3,
+        "shieldCapacity": 3,
+        "baseRecharge": 1,
+        "tacticalRechargePerPower": 1,
+        "tacticalRechargePowerCap": 2,
+        "shieldArmor": 0
+      },
+      "shieldHardener": {
+        "installationSpace": 1,
+        "normalShieldArmor": 1,
+        "sustainedTacticalPower": 1,
+        "stacking": "nonstacking_normal_operation",
+        "overload": "deferred_not_promoted"
+      },
+      "status": "conceptual_candidate"
+    },
+    "kineticMainWeapon": {
+      "id": "tl3-kinetic-main-base",
+      "technologyRole": "Mature low-Tactical-Power kinetic battery",
+      "installationSpace": 6,
+      "accuracyPp": 20,
+      "damage": 4,
+      "shieldPenetration": 1,
+      "armorPenetration": 1,
+      "maximumRange": 4,
+      "ordinaryFiringTacticalPower": 0,
+      "ammunitionPackagesHeld": 100,
+      "status": "conceptual_candidate",
+      "notes": "Hold packet, range, accuracy and penetration; maturation removes the ordinary discretionary Tactical-Power firing burden. Finite ammunition remains the family cost. No Approximate-fire permission is bundled."
+    },
+    "energyMainWeapon": {
+      "id": "tl3-energy-main-base",
+      "technologyRole": "Mature safe-output energy battery",
+      "installationSpace": 6,
+      "maximumRange": 5,
+      "modes": [
+        {
+          "id": "low",
+          "tacticalPower": 1,
+          "damage": 2,
+          "accuracyPp": 10,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "strain": 0
+        },
+        {
+          "id": "standard",
+          "tacticalPower": 2,
+          "damage": 3,
+          "accuracyPp": 25,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "strain": 0
+        },
+        {
+          "id": "high",
+          "tacticalPower": 3,
+          "damage": 4,
+          "accuracyPp": 25,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "strain": 0
+        }
+      ],
+      "overloadBeyondHighOutput": "deferred_not_promoted",
+      "status": "conceptual_candidate",
+      "notes": "The former TL1 overload-level DAM4 output becomes a rated safe High mode. No automatic DAM5/4-TP overload is created."
+    },
+    "missileMainWeapon": {
+      "id": "tl3-missile-main-base",
+      "technologyRole": "Mature autonomous missile architecture",
+      "launcherInstallationSpace": 6,
+      "launchTacticalPower": 0,
+      "warheadDamage": 5,
+      "shieldPenetration": 1,
+      "armorPenetration": 2,
+      "maximumRangeHeld": 6,
+      "missileFlightsHeld": 25,
+      "missileDriveTechnologyLevel": 3,
+      "missileMove": 4,
+      "guidanceBaseHitChanceHeld": 55,
+      "standardOnboardNavigationSensor": true,
+      "terminalSeekerStandard": false,
+      "launcherDatalinkRetained": true,
+      "ordinaryTerminalFirmRequired": true,
+      "approximateTerminalAttack": false,
+      "navigationSensorDetailedProfile": "deferred_subcomponent_profile",
+      "status": "conceptual_candidate",
+      "notes": "Maturation is propulsion/autonomy rather than a larger warhead. Onboard navigation sensing becomes standard for local tracking/reacquisition; seeker remains an optional later subcomponent/variant."
+    },
+    "kineticPds": {
+      "id": "tl3-kinetic-pds-base",
+      "technologyRole": "Mature conventional CIWS hold",
+      "installationSpace": 2,
+      "pdsBaseChanceHeld": 13,
+      "targetingAssistanceReferencePpHeld": 12,
+      "reactionCapacity": 1,
+      "tacticalPowerReadiness": 1,
+      "ammunitionHeld": 60,
+      "status": "conceptual_hold",
+      "notes": "Deliberate base TL3 hold; no placeholder improvement. Existing local/self-contained PDS rules remain."
+    },
+    "energyPds": {
+      "id": "tl3-energy-pds-efficient",
+      "technologyRole": "Mature ammunition-free point defense",
+      "installationSpace": 2,
+      "pdsBaseChanceHeld": 16,
+      "targetingAssistanceReferencePpHeld": 12,
+      "reactionCapacity": 1,
+      "tacticalPowerReadiness": 1,
+      "ammunition": null,
+      "status": "conceptual_candidate",
+      "notes": "Principal maturation is readiness efficiency from 2 TP to 1 TP; accuracy and RC are held."
+    },
+    "ammPds": {
+      "id": "tl3-amm-pds-scalable-readiness",
+      "technologyRole": "Mature anti-saturation interceptor battery",
+      "installationSpace": 2,
+      "pdsBaseChanceHeld": 20,
+      "targetingAssistanceReferencePpHeld": 12,
+      "ammunitionHeld": 25,
+      "readinessModes": [
+        {
+          "tacticalPower": 1,
+          "reactionCapacity": 1
+        },
+        {
+          "tacticalPower": 2,
+          "reactionCapacity": 2
+        }
+      ],
+      "perFlightAttemptCapHeld": 2,
+      "automaticRandomThreatAllocationHeld": true,
+      "status": "conceptual_candidate",
+      "notes": "Accuracy and magazine are held; the player may spend another readiness TP for a second total reaction, preserving the normal two-attempt-per-flight cap and automatic seeded allocation."
+    }
+  },
+  "buildSanity": {
+    "profile": "docs/design/player_technology/tl3_base_build_sanity_v0_1.json",
+    "constructionPowerSeparation": true,
+    "dualMainSingleReactor": "legal_outlier_with_family_and_mode_dependent_power_pressure",
+    "singleMainDualReactor": "legal_outlier_with_large_space_opportunity_cost",
+    "dualMainDualReactor": "illegal_at_tl3_base_by_space",
+    "noSpecialAntiStackingRuleAdded": true
+  },
+  "deferredOutsideBaseTable": [
+    "Pinnacle lower-TL families such as a future Optimum Fission Reactor",
+    "Additional Auxiliary/support components beyond the already registered Shield Hardener",
+    "Special Kinetic ammunition or Approximate-fire weapon variants",
+    "Energy overload beyond the rated TL3 High mode",
+    "Missile seeker and detailed onboard-navigation-sensor subprofiles",
+    "Swarmer/Approximate-target missiles and special warheads",
+    "Magazine expansions, batteries/capacitors, Shield Boosters, hangars, fabrication/mining, backup systems and other specialist Auxiliaries",
+    "Production initiative changes",
+    "Automatic combat-balance promotion"
+  ],
+  "guardrails": [
+    "Preserve subsystem identity; do not improve every statistic or family symmetrically.",
+    "Candidate registration is not implementation, calibration, or promotion.",
+    "Construction legality is separate from simultaneous Tactical Power sufficiency.",
+    "Second Main Weapons and Reactors remain legal explicit full-Space design choices when the hull can fit them; do not add arbitrary anti-stacking rules.",
+    "The TL3 base hull and reactor deliberately do not make a two-Main/two-Reactor cruiser fit.",
+    "A one-reactor dual-Main ship may fire both weapons when family/mode power costs permit, but broad support operation must remain constrained by the same Tactical Power pool.",
+    "Main weapons and primary drives retain their current large footprints at TL3; compact fusion and +1 Hull Space are the only base-table Space-density gains in this pass.",
+    "Broader Auxiliary/pinnacle technology can be added later without rewriting the base TL3 row."
+  ]
+}

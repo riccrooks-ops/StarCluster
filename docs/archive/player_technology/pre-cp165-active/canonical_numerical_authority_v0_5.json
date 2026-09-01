@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "star-cluster-canonical-numerical-authority-v0.5",
+  "checkpoint": 133,
+  "acceptedMechanicsBaseline": 132,
+  "previousAcceptedNumericalReference": 128,
+  "status": "revised_combat_subsystem_candidate_baseline_pending_calibration",
+  "damagePointScale": 2,
+  "primaryReferenceMatrix": "technology_numerical_matrix_v0_6.json",
+  "primaryTechnologyTable": "technology_component_table_v0_8.json",
+  "primaryWorkbook": "StarCluster_Revised_TL1_TL9_Technology_Component_Table_v0_8.xlsx",
+  "storyboard": "technology_family_storyboard_v1_5.json",
+  "storyboardReconciled": false,
+  "productionRuntimeChanged": false,
+  "scenarioDefinitionsChanged": false,
+  "balanceCalibrationRun": false,
+  "technologyValuesChanged": true,
+  "changedFamilies": [
+    "hull",
+    "armor",
+    "shield",
+    "kinetic_main",
+    "energy_main",
+    "missile_delivery",
+    "missile_gp_warhead",
+    "missile_swarmer"
+  ],
+  "unchangedPendingReview": [
+    "reactor",
+    "stl",
+    "ftl",
+    "computer",
+    "sensor",
+    "ecm",
+    "eccm",
+    "pds",
+    "damage_control",
+    "most auxiliary/branch values"
+  ],
+  "provisionalCombatModifiers": {
+    "approximateTrackPenaltyPp": -25,
+    "extendedRangePenaltyPp": -10
+  },
+  "sameTlCalibrationRequires": [
+    "contemporary Shield",
+    "contemporary Armor",
+    "required core ship systems"
+  ],
+  "authorityBoundary": "CP133 is the current candidate numerical baseline for post-CP132 research, not a balance claim or production promotion. CP128 remains historical accepted numerical evidence. Same-TL calibration must precede broader promotion or mixed-TL conclusions."
+}

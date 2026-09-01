@@ -1,0 +1,302 @@
+{
+  "schemaVersion": "star-cluster-architecture-runtime-profile-catalog-v1",
+  "id": "tl1-tl3-standard-runtime-profiles-v0_1",
+  "checkpoint": 54,
+  "status": "checkpoint54_tl3_candidate_screening",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "policy": {
+    "tl1MustEqualFrozenBaseline": true,
+    "tl2MustEqualAcceptedCheckpoint48Standard": true,
+    "tl1Tl2FrozenAtCheckpoint53a": true,
+    "tl3CandidateScreeningOnly": true,
+    "automaticPromotion": false,
+    "tl4ThroughTl9Generation": false
+  },
+  "profiles": [
+    {
+      "id": "tl1-production",
+      "label": "TL1 Production Control",
+      "technologyLevel": 1,
+      "source": "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 5,
+        "targetingBonus": 10,
+        "effectivePdsChance": 45,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 2
+      },
+      "movement": {
+        "shipMove": 1,
+        "missileMove": 2
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "accuracyBonus": 20,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "accuracyBonus": 0,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      }
+    },
+    {
+      "id": "tl2-production",
+      "label": "Accepted TL2 Standard Combat Profile",
+      "technologyLevel": 2,
+      "source": "src/StarCluster.ScenarioRunner/Scenarios/AuxiliaryTechnology/tl2-accepted-standard-combat-profile-v0_1.json",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 23,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 28,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl3-capacity-control",
+      "label": "TL3 Capacity-Only Structural Control",
+      "technologyLevel": 3,
+      "source": "Checkpoint 54 structural control: accepted TL2 numerical vector with TL3 installation capacity.",
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 23,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 28,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      }
+    },
+    {
+      "id": "tl3-balanced-candidate",
+      "label": "TL3 Balanced First-Refit Candidate",
+      "technologyLevel": 3,
+      "source": "docs/design/player_technology/checkpoint_54_tl3_runtime_profile_candidates_v0_1.json",
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 6,
+        "armorProtection": 1,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 8,
+        "targetingBonus": 14,
+        "effectivePdsChance": 48,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 4
+      },
+      "movement": {
+        "shipMove": 3,
+        "missileMove": 4
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 1,
+          "accuracyBonus": 26,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 31,
+          "guidanceChance": 0,
+          "maximumRange": 6,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "accuracyBonus": 0,
+          "guidanceChance": 65,
+          "maximumRange": 8,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      }
+    },
+    {
+      "id": "tl3-output-forward-control",
+      "label": "TL3 Output-Forward Sensitivity Control",
+      "technologyLevel": 3,
+      "source": "docs/design/player_technology/checkpoint_54_tl3_runtime_profile_candidates_v0_1.json",
+      "defense": {
+        "hull": 14,
+        "armorIntegrity": 6,
+        "armorProtection": 1,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 9,
+        "targetingBonus": 15,
+        "effectivePdsChance": 49,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 5
+      },
+      "movement": {
+        "shipMove": 3,
+        "missileMove": 4
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 5,
+          "shieldPenetration": 0,
+          "armorPenetration": 1,
+          "accuracyBonus": 27,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 32,
+          "guidanceChance": 0,
+          "maximumRange": 6,
+          "powerCost": 3,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 6,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "accuracyBonus": 0,
+          "guidanceChance": 68,
+          "maximumRange": 8,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      }
+    }
+  ]
+}

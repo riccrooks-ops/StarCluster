@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "star-cluster-cp126-accepted-cp125-provenance-v0.1",
+  "acceptedCheckpoint": 125,
+  "sourceArchive": "CP125_NATIVE_RESULTS_ORIGINAL.zip",
+  "sourceArchiveSha256": "e26f4a79075cd3bb395213d9a4da7d9e3708fecd3dbd3b5a29911c24ea63ecf0",
+  "pythonTestsPassed": 152,
+  "researchParityPassed": 25,
+  "pipelineSmokeTrials": 280136,
+  "substantiveTrials": 56027200,
+  "trialErrors": 0,
+  "failedGates": [],
+  "sameTlComponentsPerShip": true,
+  "mixedTlShipsExecuted": false,
+  "balanceValidated": false
+}

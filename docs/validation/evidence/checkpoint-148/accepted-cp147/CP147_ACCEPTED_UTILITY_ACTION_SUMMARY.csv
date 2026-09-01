@@ -1,0 +1,9 @@
+diagnostic_family,weapon,scenario_sides,cp147_package_decisions,cp147_direct_package_selections,cp147_held_package_selections,cp147_pds_package_selections,cp147_passive_utility_fallbacks,cp147_recovery_reserve_turns,cp147_recovery_reserved_tp,cp147_inbound_threat_turns,cp147_observed_threat_turns,cp147_terminal_hull_risk_turns,cp147_sole_main_defensive_diversions,cp147_sole_main_diversions_without_hull_risk,cp146_held_main_attempts,cp146_held_main_intercepts,cp146_held_main_unused,offense_utility_milli,defense_utility_milli
+PDS_OPPORTUNITY,E,102,25840,22906,234,18736,717,5497,7545,19540,19540,0,0,0,234,218,0,108332690,54761130
+PDS_OPPORTUNITY,K,102,28148,23936,162,21590,190,6591,8313,21848,21848,0,0,0,162,141,0,118995950,61310548
+PDS_OPPORTUNITY,M_GP,108,29531,25331,0,0,0,7591,8770,0,0,0,0,0,0,0,0,215248550,0
+PDS_OPPORTUNITY,M_SWARMER,96,24457,21157,0,0,0,6479,7651,0,0,0,0,0,0,0,0,169374555,0
+TP_STARVATION,E,22,6327,5527,0,0,159,674,674,0,0,0,0,0,0,0,0,18722560,0
+TP_STARVATION,K,38,10944,8969,0,0,35,1782,1782,677,677,0,0,0,0,0,0,31013200,0
+TP_STARVATION,M_GP,13,3244,3094,0,2421,0,521,521,2457,2457,196,0,0,0,0,0,16193700,3124531
+TP_STARVATION,M_SWARMER,23,5573,5423,0,4440,0,988,988,4483,4483,0,0,0,0,0,0,26575560,5160370

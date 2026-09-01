@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "star-cluster-cp136-authoring-validation-summary-v0.1",
+  "checkpoint": 136,
+  "status": "Authoring candidate; native Windows acceptance required",
+  "date": "2026-08-19",
+  "acceptedBaseline": 135,
+  "canonicalKernelVersion": "0.3",
+  "canonicalDamageModel": "penetration-hardening-v1",
+  "delta": {
+    "mainlineArmorTL6TL9": {
+      "ai": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "tacticalRegenerationPerTp": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tacticalRegenerationCapTp": [
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    "crystallineA_b1TL6": {
+      "ap": 2,
+      "ai": 11,
+      "baseRegeneration": 0,
+      "tacticalRegenerationPerTp": 0,
+      "tacticalRegenerationCapTp": 0
+    },
+    "otherCP135MechanicsAndNumerics": "frozen"
+  },
+  "authoringGates": {
+    "preflightPassed": true,
+    "pythonTestsPassed": 218,
+    "cp136SpecificTestsPassed": 7,
+    "researchParityPassed": 25,
+    "logicalContexts": 196,
+    "variants": 392,
+    "tl6Variants": 136,
+    "symmetryComparisons": 50,
+    "symmetryExecutions": 100,
+    "symmetryMismatches": 0,
+    "smokeVariants": 392,
+    "smokeTrials": 392,
+    "smokeTrialErrors": 0,
+    "smokeMechanicsFlags": 0,
+    "boundedDiagnosticTrialsPerVariant": 10,
+    "boundedDiagnosticTrials": 3920,
+    "boundedDiagnosticTrialErrors": 0,
+    "boundedDiagnosticMechanicsFlags": 0
+  },
+  "artifactQA": {
+    "workbook": "StarCluster_Revised_TL1_TL9_Technology_Component_Table_v0_8c.xlsx",
+    "workbookFormulaCount": 0,
+    "workbookFormulaErrors": 0,
+    "workbookSheetsRenderedForQA": 8,
+    "concept": "Star_Cluster_Game_Concept_v0.7w.docx",
+    "conceptRenderedPages": 123,
+    "conceptVisualReviewPassed": true,
+    "conceptRunningHeaderVersion": "v0.7w"
+  },
+  "study": {
+    "masterSeed": 134001,
+    "commonRandomNumberBaseline": 135,
+    "substantiveTrialsPerVariant": 5000,
+    "plannedSubstantiveTrials": 1960000,
+    "balanceTargets": null,
+    "automaticPromotion": false
+  },
+  "nativeNotRun": {
+    "dotnetBuild": true,
+    "xunit913": true,
+    "scenarioRunner70": true,
+    "substantive1960000": true
+  },
+  "correctedReplacement": 1,
+  "correction": {
+    "scope": "packaging/wrapper only; no gameplay, technology numeric, study geometry, Concept semantic, or simulation-kernel change",
+    "fixedBindings": [
+      "preflight_checkpoint_136.py",
+      "test_checkpoint_136_contract.py"
+    ],
+    "preflightNowValidatesWrapperDependencies": true,
+    "postCorrectionAuthoringGates": {
+      "preflightPassed": true,
+      "pythonTestsPassed": 218,
+      "cp136SpecificTestsPassed": 7,
+      "researchParityPassed": 25,
+      "symmetryComparisons": 50,
+      "symmetryMismatches": 0,
+      "smokeVariants": 392,
+      "smokeTrialErrors": 0,
+      "smokeMechanicsFlags": 0
+    }
+  }
+}

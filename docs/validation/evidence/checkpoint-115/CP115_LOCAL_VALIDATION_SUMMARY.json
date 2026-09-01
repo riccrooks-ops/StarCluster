@@ -1,0 +1,22 @@
+{
+  "checkpoint": 115,
+  "validationType": "local-authoring-and-prehandoff",
+  "pythonVersion": "3.13.14",
+  "pythonSelfTests": 64,
+  "pythonSelfTestFailures": 0,
+  "parityCases": 25,
+  "parityFailures": 0,
+  "smokeVariants": 4064,
+  "smokeTrialsPerVariant": 1,
+  "smokeEngagements": 4064,
+  "smokeFailedGates": [],
+  "authoringVariants": 4064,
+  "authoringTrialsPerVariant": 20,
+  "authoringEngagements": 81280,
+  "authoringFailedGates": [],
+  "nativeTrialsPerVariantPlanned": 2000,
+  "nativeEngagementsPlanned": 8128000,
+  "automaticPromotion": false,
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false
+}

@@ -1,0 +1,8 @@
+{
+  "implementation": "CPython",
+  "majorMinor": "3.13",
+  "stdlibOnly": true,
+  "purpose": "simulation/research/testing/checkpoint validation only",
+  "productionRuntime": "C# / Godot",
+  "pythonRequiredByProductionRuntime": false
+}

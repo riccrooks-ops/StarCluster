@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "star-cluster-cp164-final-power-closure-contract-v0.1",
+  "checkpoint": 164,
+  "acceptedBaseCheckpoint": 163,
+  "acceptedBaseNativeArchiveSha256": "bf5d01dc0e8ea7770227ab359771a35148bfb431746e1560648ef9fa155ff1af",
+  "pendingFinalizationBaselineId": "CP160-PF4",
+  "researchExecutionMatrixSha256": "7fd4dfbbe375586de2605361006db84b68f89767c76ba4b76da6cf5f48253155",
+  "mainReactor": {
+    "space": 6,
+    "operationalOffsetsFromPf4": [-1,0,1],
+    "purpose": "Final per-TL marginal discrimination only; no Space resweep."
+  },
+  "apu": {
+    "name": "Auxiliary Power Unit",
+    "space": 2,
+    "operationalTpByTl": [1,1,1,1,2,2,2,2,2],
+    "installationCountCapImposed": false,
+    "stackTiers": [0,1,2,3,"MAX"],
+    "plus3Retained": false
+  },
+  "scale": {
+    "stochasticVariants": 810,
+    "stochasticTurnSamples": 4050000,
+    "combatContexts": 810,
+    "combatCells": 810,
+    "combatTrialsPerCell": 2000,
+    "substantiveCombatTrials": 1620000
+  },
+  "boundaries": {
+    "productionAuthorityChanged": false,
+    "conceptChanged": false,
+    "tuningAllowed": false,
+    "automaticPromotion": false,
+    "finalIsolatedPowerSweep": true,
+    "wholeSystemIntegrationNext": true
+  }
+}

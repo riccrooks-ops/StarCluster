@@ -1,0 +1,11 @@
+topic,selected_or_state,status,source,notes
+KINETIC_MAIN,K1,PENDING_FINALIZATION_PRIMARY,CP153,K1-K6 remain viable/equivalent late-range alternatives.
+ENERGY_MAIN,E7,PENDING_FINALIZATION_PRIMARY,CP153,Broad E response closed; Strain 1 at TL1 then 2.
+GP_MISSILE_MAIN,M2,PENDING_FINALIZATION_PRIMARY,CP153,M3 retained as mandatory alternate; M2 selected for smoother technology progression.
+SWARMER_MAIN,SW2,PENDING_FINALIZATION_PRIMARY,CP153,SW1/SW3 retained as stress alternatives.
+KINETIC_PDS,K155P06,PENDING_FINALIZATION_PRIMARY,CP155,K155P03 retained as lower-output/earlier-RC2 economic alternate.
+ENERGY_PDS,E155P08,PENDING_FINALIZATION_PRIMARY,CP155,E155P07 retained as SL1 alternate; RC1->overcharged RC2->safe RC2.
+AMM_PDS,A155P07,PENDING_FINALIZATION_PRIMARY,CP155,RC2 TL3; RC3/range-1 TL7; finite ammo 25.
+SHIELD_ARMOR_CORE,CP142+CP151 scaled environment,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151,Held fixed for AUX pass; not reopened absent dependency invalidation.
+REACTOR_TP,CP144 R1_CENTRAL_NO_MAJOR,PROVISIONAL_SCAFFOLD,CP144,Must be retuned only after AUX closure.
+AUX,current executable/proxy environment,OPEN_NEXT,CP138+CP151,Next substantive pass owns lifecycle viability; unresolved effects remain unresolved.

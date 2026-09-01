@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "69d",
+  "title": "Checkpoint 69d Sensor/EW Candidate Active-Power Gate Hotfix",
+  "sdkVersion": "8.0.423",
+  "configuration": "Debug",
+  "calibrationSolution": "StarCluster.Calibration.sln",
+  "testProject": "tests/StarCluster.Tests/StarCluster.Tests.csproj",
+  "runnerProject": "src/StarCluster.ScenarioRunner/StarCluster.ScenarioRunner.csproj",
+  "manifestFile": "CHECKPOINT_69D_SHA256SUMS.txt",
+  "outputRoot": "out/checkpoint-69d",
+  "defaultTrials": 10000,
+  "defaultJobs": 24,
+  "documentation": [
+    "docs/Star_Cluster_Game_Concept_v0.6h.docx",
+    "docs/design/player_technology/TL1_Sensor_EW_Foundation_And_Range_Sweep_v0_1.md",
+    "docs/design/player_technology/TL1_Sensor_EW_Candidate_Operational_Combat_Study_v0_1.md",
+    "src/StarCluster.ScenarioRunner/Scenarios/SensorEw/tl1-sew02-sensor-ew-foundation-range-sweep.json",
+    "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc11-sensor-ew-candidate-operational-combat.json",
+    "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+    "docs/design/player_technology/tl1_integrated_tactical_combat_schema_v0_14.json",
+    "docs/design/testing/checkpoint_69_validation_suite_policy_v0_1.json",
+    "docs/design/testing/Checkpoint_69_Validation_Tiers.md",
+    "docs/validation/Checkpoint_69d_Sensor_EW_Candidate_Active_Power_Gate_Hotfix.md",
+    "docs/Prototype_TODO.md"
+  ],
+  "stages": [
+    {
+      "id": "deterministic",
+      "name": "Accepted deterministic moving-missile scenarios",
+      "command": "run-all",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios",
+        "--output-dir",
+        "{OutputRoot}/deterministic"
+      ],
+      "metrics": {
+        "deterministicCases": 7
+      }
+    },
+    {
+      "id": "tl1-phase-a",
+      "name": "TL1 Phase A mechanics corpus",
+      "command": "tl1-phase-a",
+      "arguments": [
+        "--scenario-dir",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1PhaseA",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-a"
+      ],
+      "metrics": {
+        "caseCount": 54
+      }
+    },
+    {
+      "id": "tl1-phase-b",
+      "name": "TL1 Phase B direct-fire corpus",
+      "command": "tl1-phase-b",
+      "arguments": [
+        "--output-dir",
+        "{OutputRoot}/tl1-phase-b"
+      ],
+      "metrics": {
+        "caseCount": 36
+      }
+    },
+    {
+      "id": "tl1-installation-space-envelope",
+      "name": "TL1 35-Space deterministic construction envelope and nominal power diagnostics",
+      "command": "tl1-installation-space-envelope",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-space01-35-space-construction-envelope.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_1.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-installation-space-envelope"
+      ],
+      "metrics": {
+        "macroLoadoutCount": 27,
+        "weaponPowerVariantCount": 96,
+        "exactFillMacroLoadoutCount": 4,
+        "usesTrials": false
+      }
+    },
+    {
+      "id": "tl1-sensor-ew-foundation",
+      "name": "TL1 deterministic sensor reach, emissions, same-hex ECM/ECCM discrimination, and candidate range sweep",
+      "command": "tl1-sensor-ew-foundation",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/SensorEw/tl1-sew02-sensor-ew-foundation-range-sweep.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-sensor-ew-foundation"
+      ],
+      "metrics": {
+        "profileCount": 7,
+        "forwardCandidateCount": 6,
+        "contextCount": 12,
+        "rangeCount": 11,
+        "deterministicRowCount": 924,
+        "usesTrials": false,
+        "balanceTargetsBlocking": false,
+        "productionSensorRangesChanged": false,
+        "tl1NormalActiveModeCount": 1,
+        "sameHexLosUnoccludable": true,
+        "sameHexEwStillResolves": true
+      }
+    },
+    {
+      "id": "tl1-sensor-ew-candidate-operational-preflight",
+      "name": "TL1 Sensor/EW candidate integrated-loader and coverage preflight",
+      "command": "tl1-integrated-tactical-combat-preflight",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc11-sensor-ew-candidate-operational-combat.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--output-dir",
+        "{OutputRoot}/tl1-sensor-ew-candidate-operational-preflight"
+      ],
+      "metrics": {
+        "variantCount": 72,
+        "candidateCount": 3,
+        "usesTrials": false,
+        "actualConsumerDeserializer": true,
+        "catalogBindingRequired": true
+      }
+    },
+    {
+      "id": "tl1-sensor-ew-candidate-operational-smoke",
+      "name": "TL1 Sensor/EW candidate 72-variant one-trial execution smoke",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc11-sensor-ew-candidate-operational-combat.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--trials",
+        "1",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-sensor-ew-candidate-operational-smoke"
+      ],
+      "metrics": {
+        "variantCount": 72,
+        "trialsPerVariant": 1,
+        "totalSmokeTrials": 72,
+        "usesTrials": true,
+        "smokeOnly": true,
+        "fullPipelineExecution": true,
+        "balanceTargetsBlocking": false
+      }
+    },
+    {
+      "id": "tl1-sensor-ew-candidate-operational-combat",
+      "name": "TL1 Balanced-0/1/2 operational Sensor/EW candidate combat study",
+      "command": "tl1-integrated-tactical-combat",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/TL1Calibration/tl1-itc11-sensor-ew-candidate-operational-combat.json",
+        "--baseline-file",
+        "docs/archive/player_technology/pre-cp165-active/tl1_core_combat_numerical_baseline_v0_3.csv",
+        "--trials",
+        "{Trials}",
+        "--jobs",
+        "{Jobs}",
+        "--output-dir",
+        "{OutputRoot}/tl1-sensor-ew-candidate-operational-combat"
+      ],
+      "metrics": {
+        "buildCount": 1,
+        "candidateCount": 3,
+        "weaponPairCount": 3,
+        "movementOrderCount": 2,
+        "sensorEwPackageCount": 4,
+        "variantCount": 72,
+        "usesTrials": true,
+        "balanceTargetsBlocking": false,
+        "productionSensorRangesChanged": false,
+        "productionReactorOutput": 5,
+        "powerDoctrine": "FullVolleyFirst",
+        "tacticalMapRadius": 5,
+        "startingFuel": 100,
+        "movementFuelPerHex": 2,
+        "evasiveManeuverFuelCost": 1,
+        "fullTacticalAiImplemented": false,
+        "causalSensorEwResolver": true
+      }
+    },
+    {
+      "id": "auxiliary-resource-endurance",
+      "name": "Deterministic finite-resource and recharge endurance stress study",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end01-resource-endurance-stress.json",
+        "--output-dir",
+        "{OutputRoot}/auxiliary-resource-endurance"
+      ],
+      "metrics": {
+        "combatBatteryCandidateCount": 2,
+        "capacitorPatternCount": 3,
+        "ammRoundCandidateCount": 4,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "checkpoint-53-resource-semantics-lock",
+      "name": "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+      "command": "auxiliary-resource-endurance",
+      "arguments": [
+        "--study-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/aux-end02-resource-semantics-lock.json",
+        "--output-dir",
+        "{OutputRoot}/checkpoint-53-resource-semantics-lock"
+      ],
+      "metrics": {
+        "combatBatteryPrimaryCharges": 3,
+        "combatBatteryPowerPerCharge": 1,
+        "combatBatteryDischargeLimitPerTurn": 1,
+        "combatBatteryEncounterDischargeCap": null,
+        "ammRounds": 25,
+        "weaponMagazineFamilyCount": 2
+      }
+    },
+    {
+      "id": "runner-self-tests",
+      "name": "ScenarioRunner self-tests",
+      "command": "self-test",
+      "arguments": [
+        "--scenario-file",
+        "src/StarCluster.ScenarioRunner/Scenarios/terminal-two-window-hit.json"
+      ],
+      "metrics": {
+        "selfTestCount": 46
+      }
+    }
+  ],
+  "checkpointMetrics": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 72,
+    "trialsAtDefault": 720000,
+    "suiteTier": "must_always_run",
+    "smokeVariantExecutions": 72,
+    "smokeTrialsAtDefault": 72,
+    "totalTrialExecutionsAtDefault": 720072
+  },
+  "nativeDependencyPrecheck": {
+    "required": true,
+    "script": "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+    "blockedInterpreters": [
+      "python",
+      "python3",
+      "py"
+    ],
+    "powerShellPaths": [
+      "tools/checkpoints/Test-NativeAcceptanceDependencies.ps1",
+      "tools/checkpoints/checkpoint-69d/apply_checkpoint_69d.ps1",
+      "tools/checkpoints/checkpoint-69d/test_checkpoint_69d_contract.ps1",
+      "tools/calibration/run_calibration_checkpoint.ps1"
+    ],
+    "checkpointDefinitionPaths": [
+      "tools/calibration/checkpoints/checkpoint-69d.json",
+      "tools/calibration/checkpoints/checkpoint-69d-deep-calibration.json"
+    ]
+  },
+  "primaryStudy": {
+    "id": "tl1-sensor-ew-candidate-operational-combat",
+    "variantCount": 72
+  }
+}

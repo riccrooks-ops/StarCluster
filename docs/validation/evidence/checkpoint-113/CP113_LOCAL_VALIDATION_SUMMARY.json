@@ -1,0 +1,28 @@
+{
+  "checkpoint": 113,
+  "status": "candidate_pending_native_acceptance",
+  "localDeterministicContract": "passed",
+  "calibrationRun": false,
+  "monteCarloTrials": 0,
+  "architecture": {
+    "disciplines": 10,
+    "lineages": 32,
+    "storyboardBeats": 214,
+    "ideas": 137,
+    "foundationDomains": 20,
+    "optionalSupportCandidates": 35,
+    "hardExternalPrerequisiteBeats": 3,
+    "kineticAmmoProgressionRows": 6,
+    "missileWarheadProgressionRows": 7,
+    "suspendedCp109PayloadCandidates": 5
+  },
+  "documentationHygiene": {
+    "docsRootFiles": 3,
+    "playerTechnologyTopFiles": 43,
+    "testingTopFiles": 9,
+    "validationTopFiles": 2,
+    "historicalValidationArchiveFilesRetainedInPlace": 143
+  },
+  "repositoryOwnedFiles": 2281,
+  "jsonFilesParsed": 659
+}

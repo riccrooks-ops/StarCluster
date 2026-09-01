@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "98",
+  "status": "accepted_native_windows",
+  "nativeResultsZipSha256": "1ee459063d8bd24a0228c8410c6912aeaabe3daa21b888b1dd7b68c348de4014",
+  "checkpointDefinitionSha256": "c57f4912ccf2fa79b3085f64ec1887c599946c02712fcb48173ba9580f8ab2c5",
+  "checkpointManifestSha256": "f6a1b8c04bc5b237d3e80d02ee2874bb5290c5369ff367459b43c2e21b2bc126",
+  "substantiveStudy": {
+    "id": "tl2-itc18-cross-tl-adaptive-engage-progression-screening",
+    "variantCount": 960,
+    "trialsPerVariant": 250,
+    "totalTrials": 240000,
+    "summarySha256": "37be9c45ba62f020a2ccdcdc9d0988288a76ff90b6deace3763b3ffec899eea5"
+  },
+  "regressionHashes": {
+    "cp98GeneratedStudySmokeSummarySha256": "0100ab441cba432c9782ca2ef3c17c5608013b10036fa997cf8fcc7585570492",
+    "cp97AdaptiveEngageSmokeSummarySha256": "13f9654e7e7bbe8810b983788293201baa9604348c5466425ae09942bf006655"
+  },
+  "acceptedMetrics": {
+    "sdk": "8.0.423",
+    "buildWarnings": 0,
+    "buildErrors": 0,
+    "xunitPassed": 876,
+    "runnerStagesPassed": 19,
+    "scenarioRunnerSelfTests": 62,
+    "failedGates": 0,
+    "totalStochasticExecutions": 242436
+  },
+  "architectureFindings": [
+    "Safe-Strain exhaustion suppression produced zero Strain-denied overload requests across the 960-variant substantive screen.",
+    "The deterministic construction envelope produced 82,944 raw combinations, 22,592 legal builds, and 65,648 single-axis progression edges.",
+    "The broad Adaptive Engage screen validated mixed-progression consumption but did not isolate marginal subsystem value because none of its 480 broad logical pairings was itself an exact lattice edge.",
+    "Sensorless legal builds contributed concentrated information-control stalemates; CP99 promotes an installed Sensor into the ordinary combat-ship construction core before exact-edge attribution."
+  ]
+}

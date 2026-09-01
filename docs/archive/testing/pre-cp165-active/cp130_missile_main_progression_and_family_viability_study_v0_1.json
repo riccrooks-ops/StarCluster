@@ -1,0 +1,148 @@
+{
+  "schemaVersion": "star-cluster-cp130-missile-main-progression-v0.1",
+  "checkpoint": 130,
+  "title": "Missile Main Weapon Progression and Family Viability Study",
+  "status": "candidate",
+  "acceptedBaselineCheckpoint": 129,
+  "acceptedNumericalCheckpoint": 128,
+  "acceptedImplementationBaseline": 122,
+  "sourceMatrix": "docs/design/player_technology/technology_numerical_matrix_v0_5.json",
+  "acceptedCp129ChartBaseline": "docs/validation/evidence/checkpoint-130/accepted-cp129/same_tl_family_chart_baseline.csv",
+  "shipTechnologyPolicy": "pure_same_tl_components_per_ship",
+  "mixedTlShipsExecuted": false,
+  "technologyValuesChanged": false,
+  "productionSourceChanged": false,
+  "scenarioDefinitionsChanged": false,
+  "researchSimulationChanged": true,
+  "automaticPromotion": false,
+  "balanceValidated": false,
+  "pairingSeed": 12520260816,
+  "masterSeed": 12720260817,
+  "recommendedJobs": 24,
+  "trialsPerVariant": 100,
+  "tl1To7DamageDeltas": [
+    0,
+    1,
+    2
+  ],
+  "lateWarheadCandidates": {
+    "8": [
+      {
+        "id": "control",
+        "damageDelta": 0,
+        "spenDelta": 0,
+        "apenDelta": 0,
+        "class": "control"
+      },
+      {
+        "id": "d16",
+        "damageDelta": 1,
+        "spenDelta": 0,
+        "apenDelta": 0,
+        "class": "yield_control"
+      },
+      {
+        "id": "d17",
+        "damageDelta": 2,
+        "spenDelta": 0,
+        "apenDelta": 0,
+        "class": "yield_control"
+      },
+      {
+        "id": "d16_sp3",
+        "damageDelta": 1,
+        "spenDelta": 1,
+        "apenDelta": 0,
+        "class": "mature_antimatter"
+      },
+      {
+        "id": "d17_sp3",
+        "damageDelta": 2,
+        "spenDelta": 1,
+        "apenDelta": 0,
+        "class": "mature_antimatter"
+      },
+      {
+        "id": "d17_sp3_ap5",
+        "damageDelta": 2,
+        "spenDelta": 1,
+        "apenDelta": 1,
+        "class": "mature_antimatter_upper"
+      }
+    ],
+    "9": [
+      {
+        "id": "control",
+        "damageDelta": 0,
+        "spenDelta": 0,
+        "apenDelta": 0,
+        "class": "control"
+      },
+      {
+        "id": "d16",
+        "damageDelta": 1,
+        "spenDelta": 0,
+        "apenDelta": 0,
+        "class": "yield_control"
+      },
+      {
+        "id": "d17",
+        "damageDelta": 2,
+        "spenDelta": 0,
+        "apenDelta": 0,
+        "class": "yield_control"
+      },
+      {
+        "id": "d17_sp3",
+        "damageDelta": 2,
+        "spenDelta": 1,
+        "apenDelta": 0,
+        "class": "mature_antimatter"
+      },
+      {
+        "id": "d18_sp3",
+        "damageDelta": 3,
+        "spenDelta": 1,
+        "apenDelta": 0,
+        "class": "high_output_antimatter"
+      },
+      {
+        "id": "d18_sp3_ap5",
+        "damageDelta": 3,
+        "spenDelta": 1,
+        "apenDelta": 1,
+        "class": "high_output_antimatter_balanced"
+      },
+      {
+        "id": "d18_sp4_ap5",
+        "damageDelta": 3,
+        "spenDelta": 2,
+        "apenDelta": 1,
+        "class": "high_output_antimatter_upper"
+      }
+    ]
+  },
+  "researchQuestions": [
+    "Does +1 or +2 GP damage at TL1-TL7 compensate for Missile's Firm-track, flight-time, PDS, and finite-ammunition disadvantages without making the family dominant?",
+    "At TL8-TL9, how much additional raw yield versus Shield/Armor penetration is required for a contemporary GP warhead to remain viable?",
+    "Can a single Main GP Missile remain a credible peer weapon without requiring an AUX Magazine or specialist payload?",
+    "Do PDS and Shields remain meaningful counters after any viable GP improvement?",
+    "Can the accepted CP129 K/E/M fight-length and K/E-vs-M victory charts be reproduced exactly by the current-warhead control and then replotted from candidate results?"
+  ],
+  "interpretationPolicy": {
+    "fiftyPercentIsNotABalanceTarget": true,
+    "missileMayRemainLongerFightFamily": true,
+    "pdsMustRemainMeaningful": true,
+    "auxMagazineMustNotBeRequiredForBaselineViability": true,
+    "specialistWarheadsShouldRemainAdvantageousInTheirNiche": true,
+    "matterConversionWarheadRemainsDeferred": true,
+    "noAutomaticPromotion": true
+  },
+  "expected": {
+    "rawBuildCombinations": 14112,
+    "legalBuilds": 9427,
+    "generatedVariants": 240996,
+    "pipelineSmokeTrials": 240996,
+    "substantiveTrials": 24099600
+  }
+}

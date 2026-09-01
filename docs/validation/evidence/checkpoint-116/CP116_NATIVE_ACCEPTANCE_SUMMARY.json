@@ -1,0 +1,16 @@
+{
+  "checkpoint": 116,
+  "status": "native_accepted",
+  "acceptedByCheckpoint": 117,
+  "variants": 2976,
+  "trialsPerVariant": 2000,
+  "totalTrials": 5952000,
+  "elapsedSeconds": 248.37704180000583,
+  "failedGates": [],
+  "automaticPromotion": false,
+  "adaptivePairRows": 128,
+  "adaptivePairRowsWithSwitches": 20,
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "note": "Native Windows CP116 results supplied by the user and incorporated as accepted evidence for CP117 architecture consolidation."
+}

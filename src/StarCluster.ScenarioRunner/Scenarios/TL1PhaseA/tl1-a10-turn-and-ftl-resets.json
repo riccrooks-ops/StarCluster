@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "star-cluster-tl1-phase-a-v1",
+  "id": "tl1-a10-turn-and-ftl-resets",
+  "matrixScenarioId": "TL1-A10",
+  "name": "Turn Refresh and FTL transition resets",
+  "baselineVersion": "tl1-core-combat-v0.1",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "cases": [
+    {
+      "id": "a10-c01",
+      "name": "Turn Refresh clears turn-local state and retains incomplete charge progress",
+      "operation": "resetState",
+      "input": {
+        "reactorCondition": "operational",
+        "reactorStrain": 1,
+        "crew": 90,
+        "marines": 8,
+        "ammunition": 7,
+        "fuel": 20,
+        "batteryCharges": 2,
+        "capacitorCharge": 2,
+        "currentShieldCapacity": 8,
+        "temporaryShieldOvercapacity": 2,
+        "poweredPower": 1,
+        "spentPower": 1,
+        "earmarkedPower": 1,
+        "evasiveManeuvering": true,
+        "heldFire": true,
+        "tractorLock": true,
+        "overloadUsed": true,
+        "reset": "turnRefresh",
+        "chargeProgress": 1,
+        "weaponReady": false,
+        "retentionTurns": 0
+      },
+      "expected": {
+        "persistent": {
+          "crew": 90,
+          "marines": 8,
+          "ammunition": 7,
+          "fuel": 20,
+          "batteryCharges": 2,
+          "capacitorCharge": 2,
+          "reactorStrain": 2,
+          "currentShieldCapacity": 6
+        },
+        "temporary": {
+          "power": {
+            "envelope": 5,
+            "available": 5,
+            "powered": 0,
+            "spent": 0,
+            "earmarked": 0
+          },
+          "evasiveManeuvering": false,
+          "heldFire": false,
+          "tractorLock": false,
+          "overloadUsed": false,
+          "temporaryShieldOvercapacity": 0
+        },
+        "chargedWeapon": {
+          "chargeProgress": 1,
+          "isReady": false,
+          "retentionTurns": 0
+        }
+      }
+    },
+    {
+      "id": "a10-c02",
+      "name": "FTL clears encounter states, refills the Capacitor Bank, and does not relieve Strain",
+      "operation": "resetState",
+      "input": {
+        "reactorCondition": "operational",
+        "reactorStrain": 1,
+        "crew": 90,
+        "marines": 8,
+        "ammunition": 7,
+        "fuel": 20,
+        "batteryCharges": 2,
+        "capacitorCharge": 2,
+        "currentShieldCapacity": 8,
+        "temporaryShieldOvercapacity": 2,
+        "poweredPower": 1,
+        "spentPower": 1,
+        "earmarkedPower": 1,
+        "evasiveManeuvering": true,
+        "heldFire": true,
+        "tractorLock": true,
+        "overloadUsed": true,
+        "reset": "ftlTransition",
+        "chargeProgress": 2,
+        "weaponReady": true,
+        "retentionTurns": 1
+      },
+      "expected": {
+        "persistent": {
+          "crew": 90,
+          "marines": 8,
+          "ammunition": 7,
+          "fuel": 20,
+          "batteryCharges": 2,
+          "capacitorCharge": 3,
+          "reactorStrain": 2,
+          "currentShieldCapacity": 6
+        },
+        "temporary": {
+          "power": {
+            "envelope": 0,
+            "available": 0,
+            "powered": 0,
+            "spent": 0,
+            "earmarked": 0
+          },
+          "evasiveManeuvering": false,
+          "heldFire": false,
+          "tractorLock": false,
+          "overloadUsed": false,
+          "temporaryShieldOvercapacity": 0
+        },
+        "chargedWeapon": {
+          "chargeProgress": 0,
+          "isReady": false,
+          "retentionTurns": 0
+        }
+      }
+    }
+  ]
+}

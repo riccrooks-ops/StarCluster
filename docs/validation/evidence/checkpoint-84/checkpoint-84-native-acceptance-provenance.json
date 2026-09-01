@@ -1,0 +1,210 @@
+{
+  "checkpoint": "84",
+  "status": "accepted_native_windows",
+  "sourceBundle": "checkpoint-84.zip",
+  "acceptedAsBaselineForCheckpoint": "85",
+  "acceptanceSummary": {
+    "schemaVersion": 1,
+    "checkpointId": "84",
+    "checkpointTitle": "Checkpoint 84 TL2 Shield Capacity and Power Integration Permutation Suite",
+    "checkpointDefinition": "tools/calibration/checkpoints/checkpoint-84.json",
+    "checkpointDefinitionSha256": "3025c65a1ed2ed65ea64ff6dbce42a8da44e45b46867a14d3a670220643dfec4",
+    "checkpointManifest": "CHECKPOINT_84_SHA256SUMS.txt",
+    "checkpointManifestSha256": "108579f8b097186bd4d00ea80482d7d9111109a1115795cc9f3605ab316145a0",
+    "status": "Success",
+    "repositoryOnly": false,
+    "startedUtc": "2026-08-11T00:16:28.8523674Z",
+    "completedUtc": "2026-08-11T00:18:03.8141414Z",
+    "elapsedSeconds": 95.0590962,
+    "sdk": {
+      "expected": "8.0.423",
+      "actual": "8.0.423"
+    },
+    "configuration": "Debug",
+    "requested": {
+      "trialsPerVariant": 10000,
+      "jobs": 24
+    },
+    "build": {
+      "cleanExecuted": true,
+      "succeeded": true,
+      "warnings": 0,
+      "errors": 0,
+      "elapsedSeconds": 5.5840936999999995
+    },
+    "tests": {
+      "succeeded": true,
+      "total": 863,
+      "passed": 863,
+      "failed": 0,
+      "skipped": 0,
+      "elapsedSeconds": 2.0490805,
+      "trxPath": "out/checkpoint-84/test-results/checkpoint-tests.trx"
+    },
+    "primaryStudy": {
+      "id": "tl2-itc10-shield-capacity-power-integration-permutations",
+      "variantCount": 216,
+      "trialsPerVariant": 10000,
+      "totalTrials": 2160000
+    },
+    "aggregates": {
+      "configuredRunnerStages": 11,
+      "runnerStagesPassed": 11,
+      "runnerStagesFailed": 0,
+      "deterministicCases": 7,
+      "mechanicsCases": 90,
+      "variants": 216,
+      "trials": 2160216,
+      "selfTests": 49,
+      "failedGates": 0
+    },
+    "stages": [
+      {
+        "id": "deterministic",
+        "name": "Accepted deterministic moving-missile scenarios",
+        "command": "run-all",
+        "status": "Passed",
+        "startedUtc": "2026-08-11T00:16:37.9785396Z",
+        "completedUtc": "2026-08-11T00:16:38.5982680Z",
+        "elapsedSeconds": 0.6119962999999999,
+        "outputPath": "out/checkpoint-84/deterministic",
+        "failedGates": 0
+      },
+      {
+        "id": "tl1-phase-a",
+        "name": "TL1 Phase A mechanics corpus",
+        "command": "tl1-phase-a",
+        "status": "Passed",
+        "startedUtc": "2026-08-11T00:16:38.6105413Z",
+        "completedUtc": "2026-08-11T00:16:39.0176524Z",
+        "elapsedSeconds": 0.40368319999999996,
+        "outputPath": "out/checkpoint-84/tl1-phase-a",
+        "failedGates": 0
+      },
+      {
+        "id": "tl1-phase-b",
+        "name": "TL1 Phase B direct-fire corpus",
+        "command": "tl1-phase-b",
+        "status": "Passed",
+        "startedUtc": "2026-08-11T00:16:39.0216709Z",
+        "completedUtc": "2026-08-11T00:16:39.3964908Z",
+        "elapsedSeconds": 0.3694708,
+        "outputPath": "out/checkpoint-84/tl1-phase-b",
+        "failedGates": 0
+      },
+      {
+        "id": "tl1-installation-space-envelope",
+        "name": "TL1 35-Space deterministic construction envelope and nominal power diagnostics",
+        "command": "tl1-installation-space-envelope",
+        "status": "Passed",
+        "startedUtc": "2026-08-11T00:16:39.4005086Z",
+        "completedUtc": "2026-08-11T00:16:39.7732531Z",
+        "elapsedSeconds": 0.36143,
+        "outputPath": "out/checkpoint-84/tl1-installation-space-envelope",
+        "failedGates": 0
+      },
+      {
+        "id": "tl1-sensor-ew-foundation",
+        "name": "TL1 deterministic sensor reach, emissions, discrimination resistance, burn-through, and EW sweep",
+        "command": "tl1-sensor-ew-foundation",
+        "status": "Passed",
+        "startedUtc": "2026-08-11T00:16:39.7857917Z",
+        "completedUtc": "2026-08-11T00:16:40.1486433Z",
+        "elapsedSeconds": 0.3574863,
+        "outputPath": "out/checkpoint-84/tl1-sensor-ew-foundation",
+        "failedGates": 0
+      },
+      {
+        "id": "tl2-shield-capacity-power-integration-preflight",
+        "name": "TL2 Shield Capacity and Power integration actual-consumer preflight",
+        "command": "tl1-integrated-tactical-combat-preflight",
+        "status": "Passed",
+        "startedUtc": "2026-08-11T00:16:40.1530659Z",
+        "completedUtc": "2026-08-11T00:16:40.5547727Z",
+        "elapsedSeconds": 0.3963151,
+        "outputPath": "out/checkpoint-84/tl2-shield-capacity-power-integration-preflight",
+        "failedGates": 0
+      },
+      {
+        "id": "tl2-shield-capacity-power-integration-smoke",
+        "name": "TL2 Shield Capacity and Power 216-variant one-trial full-pipeline smoke",
+        "command": "tl1-integrated-tactical-combat",
+        "status": "Passed",
+        "startedUtc": "2026-08-11T00:16:40.5627858Z",
+        "completedUtc": "2026-08-11T00:16:41.0933319Z",
+        "elapsedSeconds": 0.5295728,
+        "outputPath": "out/checkpoint-84/tl2-shield-capacity-power-integration-smoke",
+        "failedGates": 0
+      },
+      {
+        "id": "tl2-shield-capacity-power-integration-permutations",
+        "name": "TL2 Shield Capacity 2/3/4 x Reactor 5/6 paired integration study",
+        "command": "tl1-integrated-tactical-combat",
+        "status": "Passed",
+        "startedUtc": "2026-08-11T00:16:41.1747813Z",
+        "completedUtc": "2026-08-11T00:18:02.2054881Z",
+        "elapsedSeconds": 81.0247904,
+        "outputPath": "out/checkpoint-84/tl2-shield-capacity-power-integration-permutations",
+        "failedGates": 0
+      },
+      {
+        "id": "auxiliary-resource-endurance",
+        "name": "Deterministic finite-resource and recharge endurance stress study",
+        "command": "auxiliary-resource-endurance",
+        "status": "Passed",
+        "startedUtc": "2026-08-11T00:18:02.2876144Z",
+        "completedUtc": "2026-08-11T00:18:02.6653796Z",
+        "elapsedSeconds": 0.37392159999999997,
+        "outputPath": "out/checkpoint-84/auxiliary-resource-endurance",
+        "failedGates": 0
+      },
+      {
+        "id": "checkpoint-53-resource-semantics-lock",
+        "name": "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+        "command": "auxiliary-resource-endurance",
+        "status": "Passed",
+        "startedUtc": "2026-08-11T00:18:02.6736072Z",
+        "completedUtc": "2026-08-11T00:18:03.0367507Z",
+        "elapsedSeconds": 0.36120169999999996,
+        "outputPath": "out/checkpoint-84/checkpoint-53-resource-semantics-lock",
+        "failedGates": 0
+      },
+      {
+        "id": "runner-self-tests",
+        "name": "ScenarioRunner self-tests",
+        "command": "self-test",
+        "status": "Passed",
+        "startedUtc": "2026-08-11T00:18:03.0448509Z",
+        "completedUtc": "2026-08-11T00:18:03.8060646Z",
+        "elapsedSeconds": 0.7579741999999999,
+        "outputPath": null,
+        "failedGates": 0
+      }
+    ],
+    "outputPaths": {
+      "root": "out/checkpoint-84",
+      "acceptanceJson": "out/checkpoint-84/acceptance-summary.json",
+      "acceptanceText": "out/checkpoint-84/acceptance-summary.txt"
+    },
+    "firstFailure": null
+  },
+  "substantiveStudy": {
+    "id": "tl2-itc10-shield-capacity-power-integration-permutations",
+    "variantCount": 216,
+    "substantiveTrials": 2160000,
+    "resultSummarySha256": "8dcba60f0b0239eefbf75cb1a7a03f0aa18fa4862a9d38134e435c770165e26c",
+    "failedGates": 0,
+    "trialErrors": 0
+  },
+  "designDisposition": {
+    "shieldCapacity3Space3": "validated_working_candidate",
+    "shieldCapacity4": "upper_sensitivity_not_promoted",
+    "reactor6Tp6Space": "validated_working_candidate_carried_forward",
+    "deepCalibrationRequired": false
+  },
+  "notes": [
+    "Native Windows acceptance matched the generated Checkpoint 84 manifest and checkpoint definition.",
+    "Shield Capacity 3 is accepted as a TL2 working candidate; Shield Capacity 4 remains an upper sensitivity.",
+    "No production component data is promoted automatically by this evidence record."
+  ]
+}

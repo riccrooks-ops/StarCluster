@@ -1,0 +1,1196 @@
+{
+  "schemaVersion": "star-cluster-weapon-progression-sensitivity-v0.1",
+  "checkpoint": 120,
+  "acceptedBaseline": 119,
+  "status": "diagnostic_sensitivity_mapping_and_candidate_narrowing_no_automatic_promotion",
+  "purpose": "Map numerical sensitivity around the simplified CP117-CP119 weapon architecture without reopening mechanical complexity. Layer 1 isolates GP Missile yield, Swarmer packet/coverage/PDS axes, and Kinetic automatic ACC/DAM/APEN controls. Layer 2 synthesizes a few candidate progression paths in the same legal target ecology. TL1-TL6 drive inference, TL7 is advanced validation, and TL8-TL9 are endpoint stress checks.",
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "automaticPromotion": false,
+  "masterSeed": 120041,
+  "trialsPerVariant": 2000,
+  "authoringTrialsPerVariant": 5,
+  "primaryCalibrationTls": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "advancedValidationTls": [
+    7
+  ],
+  "endpointStressTls": [
+    8,
+    9
+  ],
+  "missileStudyTls": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "kineticStudyTls": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "energyReferenceTls": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "specialistPairingIds": [],
+  "adaptivePairingIds": [],
+  "contemporaryGpByTl": {
+    "1": [
+      "gp-current"
+    ],
+    "2": [
+      "gp-current"
+    ],
+    "3": [
+      "gp-current"
+    ],
+    "4": [
+      "gp-current"
+    ],
+    "5": [
+      "gp-current"
+    ],
+    "6": [
+      "gp-current"
+    ],
+    "7": [
+      "gp-current"
+    ],
+    "8": [
+      "gp-current"
+    ],
+    "9": [
+      "gp-current"
+    ]
+  },
+  "targetFixtures": [
+    {
+      "id": "energy-balanced-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "balanced",
+      "classification": "legal_build",
+      "role": "General Energy-family layered target."
+    },
+    {
+      "id": "energy-defense-legal",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "legal_build",
+      "role": "Shield/Hardener/Energy-PDS defensive specialist."
+    },
+    {
+      "id": "kinetic-balanced-legal",
+      "baseFamily": "Kinetic",
+      "baseArchetype": "balanced",
+      "classification": "legal_build",
+      "role": "General Kinetic-family layered target."
+    },
+    {
+      "id": "kinetic-ew-legal",
+      "baseFamily": "Kinetic",
+      "baseArchetype": "ew-specialist",
+      "classification": "legal_build",
+      "role": "Kinetic ECM/ECCM/PDS specialist target."
+    },
+    {
+      "id": "missile-balanced-legal",
+      "baseFamily": "Missile",
+      "baseArchetype": "balanced",
+      "classification": "legal_build",
+      "role": "General Missile-family layered target."
+    },
+    {
+      "id": "missile-defense-legal",
+      "baseFamily": "Missile",
+      "baseArchetype": "missile-defense",
+      "classification": "legal_build",
+      "role": "Shield/AMM Missile-defense specialist target."
+    },
+    {
+      "id": "missile-defense-no-pds-control",
+      "baseFamily": "Missile",
+      "baseArchetype": "missile-defense",
+      "classification": "controlled_fixture",
+      "removePds": true,
+      "role": "Same Missile-defense package with PDS removed; isolates PDS and Swarmer saturation value."
+    },
+    {
+      "id": "armor-heavy-control",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "controlled_fixture",
+      "removeShield": true,
+      "removePds": true,
+      "removeHardener": true,
+      "armorProtectionDelta": 1,
+      "armorIntegrityDelta": 4,
+      "role": "Controlled Armor-heavy target exposing physical packet and APEN sensitivity; not a promotion gate."
+    },
+    {
+      "id": "light-control",
+      "baseFamily": "Energy",
+      "baseArchetype": "defense-specialist",
+      "classification": "controlled_fixture",
+      "removeShield": true,
+      "removePds": true,
+      "removeHardener": true,
+      "armorProtectionOverride": 0,
+      "armorIntegrityOverride": 2,
+      "role": "Controlled lightly protected target exposing coverage/accuracy value; not a promotion gate."
+    }
+  ],
+  "missileProfiles": [
+    {
+      "id": "gp-current",
+      "family": "Missile",
+      "classification": "reference",
+      "role": "Current CP109 D5/SP1/AP2 GP Missile reference.",
+      "studyTls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "missile-gp-d4",
+      "family": "Missile",
+      "classification": "gp_yield_lower_control",
+      "generation": "early",
+      "role": "Lower-yield D4 control with fixed GP SPEN/APEN.",
+      "studyTls": [
+        1,
+        2
+      ],
+      "damage": 4,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "missile-gp-d6",
+      "family": "Missile",
+      "classification": "gp_yield_sensitivity",
+      "generation": "fission",
+      "role": "D6 GP yield sensitivity with fixed GP SPEN/APEN.",
+      "studyTls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "damage": 6,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "missile-gp-d7",
+      "family": "Missile",
+      "classification": "gp_yield_sensitivity",
+      "generation": "fusion",
+      "role": "D7 GP yield sensitivity with fixed GP SPEN/APEN.",
+      "studyTls": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "damage": 7,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "missile-gp-d8",
+      "family": "Missile",
+      "classification": "gp_yield_sensitivity",
+      "generation": "antimatter",
+      "role": "D8 GP yield sensitivity with fixed GP SPEN/APEN.",
+      "studyTls": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "damage": 8,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "missile-gp-d9",
+      "family": "Missile",
+      "classification": "gp_yield_upper_control",
+      "generation": "late",
+      "role": "D9 upper yield control with fixed GP SPEN/APEN; advanced/endpoint sensitivity only.",
+      "studyTls": [
+        7,
+        8,
+        9
+      ],
+      "damage": 9,
+      "spen": 1,
+      "apen": 2
+    },
+    {
+      "id": "sw-e-d2-a0-p0",
+      "family": "Missile",
+      "classification": "swarmer_main_effect",
+      "generation": "swarmer",
+      "role": "Early packet-only anchor.",
+      "studyTls": [
+        2,
+        3
+      ],
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 0,
+      "pdsInterceptPenaltyPp": 0
+    },
+    {
+      "id": "sw-e-d2-a5-p0",
+      "family": "Missile",
+      "classification": "swarmer_main_effect",
+      "generation": "swarmer",
+      "role": "Early +5 coverage control.",
+      "studyTls": [
+        2,
+        3
+      ],
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 5,
+      "pdsInterceptPenaltyPp": 0
+    },
+    {
+      "id": "sw-e-d2-a10-p0",
+      "family": "Missile",
+      "classification": "swarmer_main_effect",
+      "generation": "swarmer",
+      "role": "Early +10 coverage control.",
+      "studyTls": [
+        2,
+        3
+      ],
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 0
+    },
+    {
+      "id": "sw-e-d2-a10-p5",
+      "family": "Missile",
+      "classification": "swarmer_main_effect",
+      "generation": "swarmer",
+      "role": "Early +10 coverage with modest PDS saturation.",
+      "studyTls": [
+        2,
+        3
+      ],
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 5
+    },
+    {
+      "id": "sw-e-d2-a10-p10",
+      "family": "Missile",
+      "classification": "swarmer_candidate_region",
+      "generation": "swarmer",
+      "role": "Early +10 coverage with stronger PDS saturation.",
+      "studyTls": [
+        2,
+        3
+      ],
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "sw-e-d2-a15-p10",
+      "family": "Missile",
+      "classification": "swarmer_upper_control",
+      "generation": "swarmer",
+      "role": "Early high-coverage control.",
+      "studyTls": [
+        2,
+        3
+      ],
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 15,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "sw-e-d3-a10-p10",
+      "family": "Missile",
+      "classification": "swarmer_packet_upper_control",
+      "generation": "swarmer",
+      "role": "TL3 larger-packet maturation control.",
+      "studyTls": [
+        3
+      ],
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "sw-m-d2-a10-p10",
+      "family": "Missile",
+      "classification": "swarmer_packet_lower_control",
+      "generation": "swarmer",
+      "role": "Mid lower-packet control.",
+      "studyTls": [
+        4,
+        5
+      ],
+      "damage": 2,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "sw-m-d3-a0-p0",
+      "family": "Missile",
+      "classification": "swarmer_main_effect",
+      "generation": "swarmer",
+      "role": "Mid packet-only anchor.",
+      "studyTls": [
+        4,
+        5
+      ],
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 0,
+      "pdsInterceptPenaltyPp": 0
+    },
+    {
+      "id": "sw-m-d3-a5-p0",
+      "family": "Missile",
+      "classification": "swarmer_main_effect",
+      "generation": "swarmer",
+      "role": "Mid +5 coverage control.",
+      "studyTls": [
+        4,
+        5
+      ],
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 5,
+      "pdsInterceptPenaltyPp": 0
+    },
+    {
+      "id": "sw-m-d3-a10-p0",
+      "family": "Missile",
+      "classification": "swarmer_main_effect",
+      "generation": "swarmer",
+      "role": "Mid +10 coverage control.",
+      "studyTls": [
+        4,
+        5
+      ],
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 0
+    },
+    {
+      "id": "sw-m-d3-a10-p5",
+      "family": "Missile",
+      "classification": "swarmer_main_effect",
+      "generation": "swarmer",
+      "role": "Mid +10 coverage with modest PDS saturation.",
+      "studyTls": [
+        4,
+        5
+      ],
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 5
+    },
+    {
+      "id": "sw-m-d3-a10-p10",
+      "family": "Missile",
+      "classification": "swarmer_candidate_region",
+      "generation": "swarmer",
+      "role": "Mid +10 coverage with stronger PDS saturation.",
+      "studyTls": [
+        4,
+        5
+      ],
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "sw-m-d3-a15-p10",
+      "family": "Missile",
+      "classification": "swarmer_upper_control",
+      "generation": "swarmer",
+      "role": "Mid high-coverage control.",
+      "studyTls": [
+        4,
+        5
+      ],
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 15,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "sw-m-d4-a10-p10",
+      "family": "Missile",
+      "classification": "swarmer_packet_upper_control",
+      "generation": "swarmer",
+      "role": "Mid larger-packet control; intentionally over contemporary payload in some lanes.",
+      "studyTls": [
+        4,
+        5
+      ],
+      "damage": 4,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "sw-u-d3-a15-p15",
+      "family": "Missile",
+      "classification": "swarmer_packet_lower_control",
+      "generation": "swarmer",
+      "role": "Mature conservative-packet control with strong coverage/PDS saturation.",
+      "studyTls": [
+        6,
+        7
+      ],
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 15,
+      "pdsInterceptPenaltyPp": 15
+    },
+    {
+      "id": "sw-u-d4-a0-p0",
+      "family": "Missile",
+      "classification": "swarmer_main_effect",
+      "generation": "swarmer",
+      "role": "Mature packet-only anchor.",
+      "studyTls": [
+        6,
+        7
+      ],
+      "damage": 4,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 0,
+      "pdsInterceptPenaltyPp": 0
+    },
+    {
+      "id": "sw-u-d4-a5-p0",
+      "family": "Missile",
+      "classification": "swarmer_main_effect",
+      "generation": "swarmer",
+      "role": "Mature +5 coverage control.",
+      "studyTls": [
+        6,
+        7
+      ],
+      "damage": 4,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 5,
+      "pdsInterceptPenaltyPp": 0
+    },
+    {
+      "id": "sw-u-d4-a10-p0",
+      "family": "Missile",
+      "classification": "swarmer_main_effect",
+      "generation": "swarmer",
+      "role": "Mature +10 coverage control.",
+      "studyTls": [
+        6,
+        7
+      ],
+      "damage": 4,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 0
+    },
+    {
+      "id": "sw-u-d4-a10-p5",
+      "family": "Missile",
+      "classification": "swarmer_main_effect",
+      "generation": "swarmer",
+      "role": "Mature +10 coverage with light PDS saturation.",
+      "studyTls": [
+        6,
+        7
+      ],
+      "damage": 4,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 5
+    },
+    {
+      "id": "sw-u-d4-a10-p10",
+      "family": "Missile",
+      "classification": "swarmer_candidate_region",
+      "generation": "swarmer",
+      "role": "Mature +10 coverage with moderate PDS saturation.",
+      "studyTls": [
+        6,
+        7
+      ],
+      "damage": 4,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 10
+    },
+    {
+      "id": "sw-u-d4-a10-p15",
+      "family": "Missile",
+      "classification": "swarmer_main_effect",
+      "generation": "swarmer",
+      "role": "Mature +10 coverage with strong PDS saturation.",
+      "studyTls": [
+        6,
+        7
+      ],
+      "damage": 4,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 10,
+      "pdsInterceptPenaltyPp": 15
+    },
+    {
+      "id": "sw-u-d4-a15-p15",
+      "family": "Missile",
+      "classification": "swarmer_upper_control",
+      "generation": "swarmer",
+      "role": "Mature high-coverage/high-saturation control.",
+      "studyTls": [
+        6,
+        7
+      ],
+      "damage": 4,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 15,
+      "pdsInterceptPenaltyPp": 15
+    },
+    {
+      "id": "sw-u-d5-a15-p15",
+      "family": "Missile",
+      "classification": "swarmer_packet_upper_control",
+      "generation": "swarmer",
+      "role": "TL6 intentionally over-budget packet control to identify raw-payload contamination.",
+      "studyTls": [
+        6
+      ],
+      "damage": 5,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 15,
+      "pdsInterceptPenaltyPp": 15
+    },
+    {
+      "id": "sw-x-d3-a15-p15",
+      "family": "Missile",
+      "classification": "swarmer_endpoint_control",
+      "generation": "swarmer",
+      "role": "Endpoint conservative packet control.",
+      "studyTls": [
+        8,
+        9
+      ],
+      "damage": 3,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 15,
+      "pdsInterceptPenaltyPp": 15
+    },
+    {
+      "id": "sw-x-d4-a15-p15",
+      "family": "Missile",
+      "classification": "swarmer_endpoint_control",
+      "generation": "swarmer",
+      "role": "Endpoint mature packet control; no further branch escalation.",
+      "studyTls": [
+        8,
+        9
+      ],
+      "damage": 4,
+      "spen": 0,
+      "apen": 0,
+      "packets": 2,
+      "guidanceDelta": 15,
+      "pdsInterceptPenaltyPp": 15
+    }
+  ],
+  "kineticProfiles": [
+    {
+      "id": "gp-current",
+      "family": "Kinetic",
+      "classification": "reference",
+      "role": "Current same-TL Kinetic projectile reference.",
+      "studyTls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "kinetic-acc-plus5",
+      "family": "Kinetic",
+      "classification": "smart_accuracy_sensitivity",
+      "role": "Automatic +5 ACC control; no DAM/SPEN/APEN change.",
+      "studyTls": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "accuracyDelta": 5
+    },
+    {
+      "id": "kinetic-acc-plus10",
+      "family": "Kinetic",
+      "classification": "smart_accuracy_sensitivity",
+      "role": "Automatic +10 ACC upper sensitivity control.",
+      "studyTls": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "accuracyDelta": 10
+    },
+    {
+      "id": "kinetic-acc-plus15",
+      "family": "Kinetic",
+      "classification": "smart_accuracy_upper_control",
+      "role": "Automatic +15 ACC upper-bound control in primary TLs.",
+      "studyTls": [
+        4,
+        5,
+        6
+      ],
+      "accuracyDelta": 15
+    },
+    {
+      "id": "kinetic-damage-plus1",
+      "family": "Kinetic",
+      "classification": "single_axis_damage_control",
+      "role": "Single-axis +1 DAM control to distinguish accelerator/packet growth from smart guidance.",
+      "studyTls": [
+        4,
+        5,
+        6
+      ],
+      "damageDelta": 1
+    },
+    {
+      "id": "kinetic-apen-plus1",
+      "family": "Kinetic",
+      "classification": "single_axis_apen_control",
+      "role": "Single-axis +1 APEN control to expose physical-penetration sensitivity.",
+      "studyTls": [
+        4,
+        5,
+        6
+      ],
+      "apenDelta": 1
+    }
+  ],
+  "sensitivityComparisons": [
+    {
+      "id": "early-acc-5",
+      "family": "Missile",
+      "axis": "swarmer_accuracy",
+      "baseline": "sw-e-d2-a0-p0",
+      "comparison": "sw-e-d2-a5-p0",
+      "tls": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "early-acc-10",
+      "family": "Missile",
+      "axis": "swarmer_accuracy",
+      "baseline": "sw-e-d2-a0-p0",
+      "comparison": "sw-e-d2-a10-p0",
+      "tls": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "early-pds-5",
+      "family": "Missile",
+      "axis": "swarmer_pds_saturation",
+      "baseline": "sw-e-d2-a10-p0",
+      "comparison": "sw-e-d2-a10-p5",
+      "tls": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "early-pds-10",
+      "family": "Missile",
+      "axis": "swarmer_pds_saturation",
+      "baseline": "sw-e-d2-a10-p0",
+      "comparison": "sw-e-d2-a10-p10",
+      "tls": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "early-extra-acc",
+      "family": "Missile",
+      "axis": "swarmer_accuracy",
+      "baseline": "sw-e-d2-a10-p10",
+      "comparison": "sw-e-d2-a15-p10",
+      "tls": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "tl3-packet-step",
+      "family": "Missile",
+      "axis": "swarmer_packet_damage",
+      "baseline": "sw-e-d2-a10-p10",
+      "comparison": "sw-e-d3-a10-p10",
+      "tls": [
+        3
+      ]
+    },
+    {
+      "id": "mid-packet-lower",
+      "family": "Missile",
+      "axis": "swarmer_packet_damage",
+      "baseline": "sw-m-d3-a10-p10",
+      "comparison": "sw-m-d2-a10-p10",
+      "tls": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "mid-acc-10",
+      "family": "Missile",
+      "axis": "swarmer_accuracy",
+      "baseline": "sw-m-d3-a0-p0",
+      "comparison": "sw-m-d3-a10-p0",
+      "tls": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "mid-pds-10",
+      "family": "Missile",
+      "axis": "swarmer_pds_saturation",
+      "baseline": "sw-m-d3-a10-p0",
+      "comparison": "sw-m-d3-a10-p10",
+      "tls": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "mid-extra-acc",
+      "family": "Missile",
+      "axis": "swarmer_accuracy",
+      "baseline": "sw-m-d3-a10-p10",
+      "comparison": "sw-m-d3-a15-p10",
+      "tls": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "mid-packet-upper",
+      "family": "Missile",
+      "axis": "swarmer_packet_damage",
+      "baseline": "sw-m-d3-a10-p10",
+      "comparison": "sw-m-d4-a10-p10",
+      "tls": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "mature-packet-lower",
+      "family": "Missile",
+      "axis": "swarmer_packet_damage",
+      "baseline": "sw-u-d4-a15-p15",
+      "comparison": "sw-u-d3-a15-p15",
+      "tls": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "mature-acc-10",
+      "family": "Missile",
+      "axis": "swarmer_accuracy",
+      "baseline": "sw-u-d4-a0-p0",
+      "comparison": "sw-u-d4-a10-p0",
+      "tls": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "mature-pds-10",
+      "family": "Missile",
+      "axis": "swarmer_pds_saturation",
+      "baseline": "sw-u-d4-a10-p0",
+      "comparison": "sw-u-d4-a10-p10",
+      "tls": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "mature-pds-15",
+      "family": "Missile",
+      "axis": "swarmer_pds_saturation",
+      "baseline": "sw-u-d4-a10-p0",
+      "comparison": "sw-u-d4-a10-p15",
+      "tls": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "mature-extra-acc",
+      "family": "Missile",
+      "axis": "swarmer_accuracy",
+      "baseline": "sw-u-d4-a10-p15",
+      "comparison": "sw-u-d4-a15-p15",
+      "tls": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "tl6-packet-upper",
+      "family": "Missile",
+      "axis": "swarmer_packet_damage",
+      "baseline": "sw-u-d4-a15-p15",
+      "comparison": "sw-u-d5-a15-p15",
+      "tls": [
+        6
+      ]
+    },
+    {
+      "id": "kinetic-acc-5",
+      "family": "Kinetic",
+      "axis": "kinetic_accuracy",
+      "baseline": "gp-current",
+      "comparison": "kinetic-acc-plus5",
+      "tls": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "kinetic-acc-10",
+      "family": "Kinetic",
+      "axis": "kinetic_accuracy",
+      "baseline": "gp-current",
+      "comparison": "kinetic-acc-plus10",
+      "tls": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "kinetic-acc-15",
+      "family": "Kinetic",
+      "axis": "kinetic_accuracy",
+      "baseline": "gp-current",
+      "comparison": "kinetic-acc-plus15",
+      "tls": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "kinetic-dam-1",
+      "family": "Kinetic",
+      "axis": "kinetic_damage",
+      "baseline": "gp-current",
+      "comparison": "kinetic-damage-plus1",
+      "tls": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "kinetic-apen-1",
+      "family": "Kinetic",
+      "axis": "kinetic_apen",
+      "baseline": "gp-current",
+      "comparison": "kinetic-apen-plus1",
+      "tls": [
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "candidateProgressionPaths": [
+    {
+      "id": "gp-cp119-frontier",
+      "family": "Missile",
+      "role": "CP119 working frontier-timing ladder.",
+      "profilesByTl": {
+        "1": "gp-current",
+        "2": "gp-current",
+        "3": "missile-gp-d6",
+        "4": "missile-gp-d6",
+        "5": "missile-gp-d7",
+        "6": "missile-gp-d7",
+        "7": "missile-gp-d8",
+        "8": "missile-gp-d8",
+        "9": "missile-gp-d8"
+      }
+    },
+    {
+      "id": "gp-maturity-delayed",
+      "family": "Missile",
+      "role": "Delay each yield step roughly one TL to test whether frontier jumps are too aggressive.",
+      "profilesByTl": {
+        "1": "gp-current",
+        "2": "gp-current",
+        "3": "gp-current",
+        "4": "missile-gp-d6",
+        "5": "missile-gp-d6",
+        "6": "missile-gp-d7",
+        "7": "missile-gp-d7",
+        "8": "missile-gp-d8",
+        "9": "missile-gp-d8"
+      }
+    },
+    {
+      "id": "gp-hybrid-early-fission-late-fusion",
+      "family": "Missile",
+      "role": "Keep TL3 D6 but delay D7/D8 to maturity TLs.",
+      "profilesByTl": {
+        "1": "gp-current",
+        "2": "gp-current",
+        "3": "missile-gp-d6",
+        "4": "missile-gp-d6",
+        "5": "missile-gp-d6",
+        "6": "missile-gp-d7",
+        "7": "missile-gp-d7",
+        "8": "missile-gp-d8",
+        "9": "missile-gp-d8"
+      }
+    },
+    {
+      "id": "kinetic-current",
+      "family": "Kinetic",
+      "role": "Current Kinetic reference.",
+      "profilesByTl": {
+        "1": "gp-current",
+        "2": "gp-current",
+        "3": "gp-current",
+        "4": "gp-current",
+        "5": "gp-current",
+        "6": "gp-current",
+        "7": "gp-current",
+        "8": "gp-current",
+        "9": "gp-current"
+      }
+    },
+    {
+      "id": "kinetic-smart-plus5",
+      "family": "Kinetic",
+      "role": "Restrained +5 ACC from TL4 onward.",
+      "profilesByTl": {
+        "1": "gp-current",
+        "2": "gp-current",
+        "3": "gp-current",
+        "4": "kinetic-acc-plus5",
+        "5": "kinetic-acc-plus5",
+        "6": "kinetic-acc-plus5",
+        "7": "kinetic-acc-plus5",
+        "8": "kinetic-acc-plus5",
+        "9": "kinetic-acc-plus5"
+      }
+    },
+    {
+      "id": "kinetic-smart-plus10",
+      "family": "Kinetic",
+      "role": "Upper smart-accuracy sensitivity path through TL7; endpoint falls back to +5.",
+      "profilesByTl": {
+        "1": "gp-current",
+        "2": "gp-current",
+        "3": "gp-current",
+        "4": "kinetic-acc-plus10",
+        "5": "kinetic-acc-plus10",
+        "6": "kinetic-acc-plus10",
+        "7": "kinetic-acc-plus10",
+        "8": "kinetic-acc-plus5",
+        "9": "kinetic-acc-plus5"
+      }
+    },
+    {
+      "id": "swarmer-balanced",
+      "family": "Missile",
+      "role": "Restrained Swarmer lifecycle: early/mid moderate coverage and PDS resistance, mature two-D4 with moderate saturation, no new endpoint mechanic.",
+      "profilesByTl": {
+        "1": "gp-current",
+        "2": "sw-e-d2-a10-p5",
+        "3": "sw-e-d2-a10-p5",
+        "4": "sw-m-d3-a10-p5",
+        "5": "sw-m-d3-a10-p5",
+        "6": "sw-u-d4-a10-p10",
+        "7": "sw-u-d4-a10-p10",
+        "8": "sw-x-d4-a15-p15",
+        "9": "sw-x-d4-a15-p15"
+      }
+    },
+    {
+      "id": "swarmer-payload-conservative",
+      "family": "Missile",
+      "role": "Conservative mature packet path testing whether Swarmer remains useful without the CP119 2xD4 payload jump.",
+      "profilesByTl": {
+        "1": "gp-current",
+        "2": "sw-e-d2-a10-p10",
+        "3": "sw-e-d2-a10-p10",
+        "4": "sw-m-d3-a10-p10",
+        "5": "sw-m-d3-a10-p10",
+        "6": "sw-u-d3-a15-p15",
+        "7": "sw-u-d3-a15-p15",
+        "8": "sw-x-d3-a15-p15",
+        "9": "sw-x-d3-a15-p15"
+      }
+    },
+    {
+      "id": "energy-native",
+      "family": "Energy",
+      "role": "Native Energy reference path.",
+      "profilesByTl": {
+        "1": "energy-native",
+        "2": "energy-native",
+        "3": "energy-native",
+        "4": "energy-native",
+        "5": "energy-native",
+        "6": "energy-native",
+        "7": "energy-native",
+        "8": "energy-native",
+        "9": "energy-native"
+      }
+    }
+  ],
+  "interpretationRules": [
+    "Do not optimize to one pooled all-target score; report target-specific family niches.",
+    "GP Missile sensitivity changes DAM only; SPEN/APEN remain fixed diagnostic baselines.",
+    "Swarmer remains one Flight, one terminal roll, exactly two internal packets, and one existing PDS reaction sequence.",
+    "Kinetic smart-projectile sensitivity is automatic and single-axis; no selectable normal ammunition modes.",
+    "TL1-TL6 drive inference; TL7 is advanced; TL8-TL9 are endpoint/stress and cannot alone justify whole-ladder complexity.",
+    "Outcome magnitudes are review evidence only and never automatic promotion gates."
+  ]
+}

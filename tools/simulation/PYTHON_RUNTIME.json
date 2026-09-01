@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "implementation": "CPython",
+  "majorMinor": "3.13",
+  "stdlibOnly": true,
+  "purpose": "Star Cluster research/permutation/Monte Carlo simulation; not a game runtime dependency",
+  "deterministicRng": "repository-owned-xorshift64",
+  "notes": "Patch version is logged at runtime. CP103+ research acceptance requires CPython 3.13.x; CP104 reuses the accepted stdlib-only research engine for a bounded diagnostic closure."
+}

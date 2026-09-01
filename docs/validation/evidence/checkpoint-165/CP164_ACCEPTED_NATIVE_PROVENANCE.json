@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "star-cluster-cp165-accepted-cp164-provenance-v0.1",
+  "checkpoint": 164,
+  "nativeAccepted": true,
+  "pythonTestsPassed": 760,
+  "xunitPassed": 934,
+  "scenarioRunnerSelfTestsPassed": 70,
+  "researchParityPassed": 25,
+  "cp164FocusedTestsPassed": 32,
+  "stochasticTurnSamples": 4050000,
+  "substantiveCombatTrials": 1620000,
+  "combatErrorTrials": 0,
+  "turnCapSentinels": 0,
+  "externalNativeResultsArchiveSha256": "ce633281099a4ef4e939e906b3905aa00bc1c58ad76a49ee4294c1ee691669a1",
+  "note": "Recorded by CP165 from the accepted user-supplied CP164 native result reviewed immediately before this documentation reconciliation. The raw results archive remains external to avoid nested evidence archives."
+}

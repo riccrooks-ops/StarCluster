@@ -1,0 +1,167 @@
+{
+  "schemaVersion": "star-cluster-aux-reference-philosophies-v0.1",
+  "checkpoint": 138,
+  "status": "candidate_reference_architecture_no_numeric_promotion",
+  "principles": [
+    "Fully equipped means deliberate role package plus mission/support fill, not every AUX system installed.",
+    "All 35 catalog components must map to at least one philosophy.",
+    "Campaign-only or TBD components are not assigned fake zero-value combat mechanics.",
+    "Power-supply/storage AUX are withheld from the primary combat sweep so CP138 measures demand before Reactor calibration.",
+    "ECM/ECCM retain accepted numerics unless full-ship integration evidence contradicts prior balance.",
+    "Shield AUX are re-vetted against the post-CP135 partial-recharge shield model."
+  ],
+  "philosophies": [
+    {
+      "id": "combat-generalist",
+      "name": "Combat Generalist",
+      "purpose": "Balanced tactical package covering information control, terminal defense, and bounded shield hardening without installing every specialist.",
+      "catalogComponents": [
+        "ablative-armor",
+        "energy-pds",
+        "kinetic-pds",
+        "local-amm-pds",
+        "powered-reactive-armor",
+        "shield-hardener"
+      ],
+      "integratedStandardSystems": [
+        "ecm",
+        "eccm"
+      ]
+    },
+    {
+      "id": "information-control",
+      "name": "Information Control",
+      "purpose": "Sensors, communications, EW, datalink resilience, probes, and signature-management support.",
+      "catalogComponents": [
+        "communications-relay",
+        "probe-survey-drone",
+        "thermal-suppression"
+      ],
+      "integratedStandardSystems": [
+        "ecm",
+        "eccm"
+      ]
+    },
+    {
+      "id": "missile-defense-escort",
+      "name": "Missile-Defense Escort",
+      "purpose": "Terminal interception, track resilience, and threat-specific protection for missile-heavy engagements.",
+      "catalogComponents": [
+        "energy-pds",
+        "kinetic-pds",
+        "local-amm-pds",
+        "particle-deflection-screen",
+        "radiation-hardening"
+      ],
+      "integratedStandardSystems": [
+        "eccm"
+      ]
+    },
+    {
+      "id": "shield-specialist",
+      "name": "Shield Specialist",
+      "purpose": "Optional shield support and penetration counterplay, re-vetted against the post-CP135 partial-recharge shield model.",
+      "catalogComponents": [
+        "field-stabilizer",
+        "particle-deflection-screen",
+        "shield-battery",
+        "shield-booster",
+        "shield-hardener"
+      ],
+      "integratedStandardSystems": []
+    },
+    {
+      "id": "damage-resilience",
+      "name": "Damage Resilience",
+      "purpose": "Passive protection, emergency continuity, crew survival, and bounded repair support.",
+      "catalogComponents": [
+        "ablative-armor",
+        "auxiliary-power-unit",
+        "fabricator",
+        "medical-bay",
+        "molecular-repair-fabricator",
+        "powered-reactive-armor",
+        "programmable-repair-patch",
+        "radiation-hardening",
+        "repair-drone-bay"
+      ],
+      "integratedStandardSystems": []
+    },
+    {
+      "id": "power-flexibility",
+      "name": "Power Flexibility",
+      "purpose": "Emergency power, sustained generation alternatives, storage, conditioning, and signature/output tradeoffs.",
+      "catalogComponents": [
+        "auxiliary-power-unit",
+        "auxiliary-reactor",
+        "combat-battery",
+        "power-stabilizer",
+        "smagnetic-store",
+        "supercapacitor",
+        "thermal-suppression"
+      ],
+      "integratedStandardSystems": []
+    },
+    {
+      "id": "expedition-survey",
+      "name": "Expedition / Survey",
+      "purpose": "Scientific discovery, remote surveying, endurance, mission support, and self-sufficiency.",
+      "catalogComponents": [
+        "cargo-expansion",
+        "communications-relay",
+        "expedition-endurance",
+        "fabricator",
+        "fuel-processor",
+        "hangar-mission-bay",
+        "medical-bay",
+        "mining-module",
+        "mission-package",
+        "molecular-repair-fabricator",
+        "probe-survey-drone",
+        "scientific-laboratory"
+      ],
+      "integratedStandardSystems": []
+    },
+    {
+      "id": "industrial-logistics",
+      "name": "Industrial / Logistics",
+      "purpose": "Cargo, extraction, processing, fabrication, salvage, and field sustainment.",
+      "catalogComponents": [
+        "cargo-expansion",
+        "fabricator",
+        "fuel-processor",
+        "hangar-mission-bay",
+        "mining-module",
+        "molecular-repair-fabricator",
+        "tractor-tow"
+      ],
+      "integratedStandardSystems": []
+    },
+    {
+      "id": "assault-relief",
+      "name": "Assault / Relief",
+      "purpose": "Boarding, rescue, medical, shuttle, towing, and planetary mission support.",
+      "catalogComponents": [
+        "cargo-expansion",
+        "communications-relay",
+        "hangar-mission-bay",
+        "medical-bay",
+        "mission-package",
+        "tractor-tow"
+      ],
+      "integratedStandardSystems": []
+    },
+    {
+      "id": "munition-endurance",
+      "name": "Munition Endurance",
+      "purpose": "Ammunition reserves and weapon-family endurance without individual feed-path bookkeeping.",
+      "catalogComponents": [
+        "kinetic-magazine",
+        "kinetic-pds",
+        "local-amm-pds",
+        "missile-magazine"
+      ],
+      "integratedStandardSystems": []
+    }
+  ]
+}

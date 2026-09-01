@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-tl2-dynamic-weapon-choice-catalog-v1",
+  "title": "Star Cluster TL2 dynamic weapon-choice confirmation catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "checkpoint",
+    "status",
+    "baselineSha256",
+    "sourceCandidateCatalog",
+    "sourceCheckpointResults",
+    "leadingProfileId",
+    "controlProfileId",
+    "designPrinciple",
+    "balanceInterpretation",
+    "promotionPolicy",
+    "startingRanges",
+    "fixedMutualControlRanges",
+    "movementPolicy",
+    "orientationPolicy",
+    "profileIds",
+    "reportingPolicy",
+    "dominanceSignals",
+    "candidates"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-tl2-dynamic-weapon-choice-catalog-v1"
+    },
+    "id": {
+      "const": "tl2-dynamic-weapon-choice-confirmation-v0_1"
+    },
+    "checkpoint": {
+      "const": 46
+    },
+    "status": {
+      "const": "diagnostic-candidate-only"
+    },
+    "baselineSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "sourceCandidateCatalog": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceCheckpointResults": {
+      "type": "string",
+      "minLength": 1
+    },
+    "leadingProfileId": {
+      "const": "tl2-r45-armor-step-conservative-direct-fire"
+    },
+    "controlProfileId": {
+      "const": "tl2-r45-hull-step-conservative-direct-fire"
+    },
+    "designPrinciple": {
+      "type": "string",
+      "minLength": 20
+    },
+    "balanceInterpretation": {
+      "type": "string",
+      "minLength": 20
+    },
+    "promotionPolicy": {
+      "type": "string",
+      "minLength": 20
+    },
+    "startingRanges": {
+      "const": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "fixedMutualControlRanges": {
+      "const": [
+        2,
+        3,
+        4
+      ]
+    },
+    "movementPolicy": {
+      "type": "string",
+      "minLength": 20
+    },
+    "orientationPolicy": {
+      "type": "string",
+      "minLength": 20
+    },
+    "profileIds": {
+      "const": [
+        "tl2-r45-armor-step-conservative-direct-fire",
+        "tl2-r45-hull-step-conservative-direct-fire"
+      ]
+    },
+    "reportingPolicy": {
+      "type": "object"
+    },
+    "dominanceSignals": {
+      "type": "object"
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "status",
+          "analysisRole",
+          "designThesis",
+          "componentNames",
+          "defense",
+          "powerAndControl",
+          "movement",
+          "weapons"
+        ],
+        "additionalProperties": true
+      }
+    }
+  }
+}

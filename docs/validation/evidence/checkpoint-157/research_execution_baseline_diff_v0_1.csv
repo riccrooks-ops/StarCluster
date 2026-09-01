@@ -1,0 +1,539 @@
+profile,tl,field,production_value,research_value,status,source
+hull,2,hullPoints,25,24.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+hull,4,hullPoints,27,26.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+hull,6,hullPoints,29,28.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+hull,8,hullPoints,31,30.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,1,ai,6,12.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,2,ai,8,14.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,3,ai,9,16.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,4,ai,10,18.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,5,ai,10,20.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,6,ai,9,18.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,6,tacticalRegenerationPerTp,1,2,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,6,combatRegenerationReserveAi,3,6,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,7,ai,10,20.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,7,tacticalRegenerationPerTp,1,2,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,7,combatRegenerationReserveAi,4,8,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,8,ai,11,22.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,8,tacticalRegenerationPerTp,1,2,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,8,tacticalRegenerationCapTp,1,2,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,8,combatRegenerationReserveAi,5,12,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,9,ai,12,24.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,9,tacticalRegenerationPerTp,1,2,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+armor,9,combatRegenerationReserveAi,6,16,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+reactor,2,operationalTp,7,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,2,degradedTp,3,4,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,2,emergencyTp,0,2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,3,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,3,degradedTp,4,5,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,3,emergencyTp,1,2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,4,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,4,operationalTp,9,8,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,4,degradedTp,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,4,emergencyTp,1,3,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,5,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,5,operationalTp,12,9,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,5,degradedTp,4,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,5,emergencyTp,0,3,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,6,space,4,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,6,operationalTp,12,10,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,6,emergencyTp,1,3,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,7,space,4,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,7,operationalTp,15,11,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,7,emergencyTp,1,4,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,8,space,4,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,8,operationalTp,17,12,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,8,degradedTp,6,8,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,8,emergencyTp,0,4,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,9,space,3,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,9,operationalTp,20,13,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,9,degradedTp,12,9,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+reactor,9,emergencyTp,2,5,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+stl,7,space,4,5,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+stl,8,space,4,5,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+stl,9,space,4,5,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+ftl,8,space,4,5,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+ftl,9,space,4,5,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+shield,1,capacity,4,16.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,1,baseRecharge,1,0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,1,tacticalRechargePerTp,1,2,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,1,tacticalRechargeCapTp,2,1,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,2,capacity,5,18.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,2,baseRecharge,2,0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,2,tacticalRechargePerTp,1,2,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,2,tacticalRechargeCapTp,2,1,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,3,capacity,6,20.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,3,baseRecharge,2,0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,3,tacticalRechargePerTp,1,2,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,3,tacticalRechargeCapTp,2,1,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,4,capacity,7,22.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,4,baseRecharge,2,0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,4,tacticalRechargePerTp,1,2,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,4,tacticalRechargeCapTp,3,1,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,5,capacity,8,24.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,5,baseRecharge,3,0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,5,tacticalRechargePerTp,1,2,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,5,tacticalRechargeCapTp,3,1,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,6,capacity,8,26.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,6,baseRecharge,3,0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,6,tacticalRechargePerTp,1,2,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,6,tacticalRechargeCapTp,3,1,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,7,capacity,9,28.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,7,baseRecharge,3,0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,7,tacticalRechargePerTp,1,2,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,7,tacticalRechargeCapTp,4,1,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,8,capacity,10,30.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,8,baseRecharge,4,0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,9,capacity,12,32.0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+shield,9,baseRecharge,6,0,PENDING_FINALIZATION_VALIDATED_ENVIRONMENT,CP142+CP151
+kinetic_main,1,damage,6,9,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,1,apen,0,8,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,1,firingTp,1,2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+kinetic_main,1,maxRange,3,4,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,2,damage,7,10,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,2,apen,1,9,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,2,firingTp,1,2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+kinetic_main,2,maxRange,3,4,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,3,damage,7,12,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,3,apen,1,10,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,3,firingTp,1,2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+kinetic_main,4,accuracyPp,25,30,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,4,damage,7,13,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,4,apen,2,10,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,4,firingTp,1,2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+kinetic_main,5,accuracyPp,25,30,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,5,damage,8,14,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,5,apen,2,11,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,5,firingTp,1,3,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+kinetic_main,5,standardRange,3,2,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,5,maxRange,5,4,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,6,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+kinetic_main,6,damage,8,15,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,6,apen,2,12,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,6,firingTp,1,3,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+kinetic_main,6,standardRange,3,2,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,7,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+kinetic_main,7,accuracyPp,30,32,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,7,damage,9,15,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,7,apen,2,13,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,7,firingTp,1,3,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+kinetic_main,8,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+kinetic_main,8,accuracyPp,30,35,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,8,damage,10,19,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,8,apen,3,14,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,8,firingTp,2,4,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+kinetic_main,8,standardRange,4,3,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,8,maxRange,7,6,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,9,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+kinetic_main,9,damage,11,20,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,9,apen,3,14,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,9,firingTp,2,4,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+kinetic_main,9,standardRange,4,3,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_main,9,maxRange,8,7,PENDING_FINALIZATION_SELECTED,CP153
+kinetic_pds,1,baseChancePp,10,8,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,1,readinessTp,1,2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,1,ammo,50,75,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,1,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,1,safeReactionCapacity,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,1,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,1,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,1,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,2,baseChancePp,10,8,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,2,readinessTp,1,2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,2,ammo,50,75,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,2,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,2,safeReactionCapacity,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,2,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,2,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,2,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,3,baseChancePp,13,8,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,3,readinessTp,1,2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,3,ammo,60,75,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,3,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,3,safeReactionCapacity,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,3,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,3,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,3,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,4,baseChancePp,18,10,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,4,readinessTp,1,2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,4,ammo,50,75,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,4,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,4,safeReactionCapacity,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,4,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,4,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,4,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,5,baseChancePp,18,10,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,5,readinessTp,1,2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,5,ammo,50,75,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,5,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,5,safeReactionCapacity,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,5,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,5,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,5,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,6,baseChancePp,18,10,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,6,readinessTp,1,2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,6,ammo,50,75,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,6,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,6,safeReactionCapacity,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,6,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,6,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,6,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,7,baseChancePp,18,12,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,7,reactionCapacity,1,2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,7,readinessTp,1,3,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,7,ammo,50,75,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,7,rc1Tp,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,7,rc2Tp,"""<missing>""",3,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,7,safeReactionCapacity,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,7,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,7,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,7,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,8,baseChancePp,18,12,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,8,reactionCapacity,1,2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,8,readinessTp,1,3,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,8,ammo,50,75,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,8,rc1Tp,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,8,rc2Tp,"""<missing>""",3,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,8,safeReactionCapacity,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,8,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,8,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,8,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,9,baseChancePp,18,12,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,9,reactionCapacity,1,2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,9,readinessTp,1,3,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,9,ammo,50,75,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,9,rc1Tp,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,9,rc2Tp,"""<missing>""",3,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,9,safeReactionCapacity,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,9,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,9,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+kinetic_pds,9,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+energy_main,1,accuracyPp,25,30,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,1,lowTp,1,2,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,1,lowDamage,3,2,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,1,standardTp,2,3,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,1,standardDamage,5,8,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,1,spen,0,10,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,1,standardRange,2,3,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,1,overloadTp,3,4,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,1,overloadDamage,8,12,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,1,strainLimit,2,1,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,1,highDamage,"""<missing>""",12,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,2,lowTp,1,2,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,2,lowDamage,3,4,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,2,standardTp,2,3,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,2,standardDamage,5,8,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,2,spen,0,13,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,2,maxRange,4,5,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,2,overloadTp,3,6,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,2,overloadDamage,8,14,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,2,highDamage,"""<missing>""",14,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,3,lowDamage,3,4,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,3,standardDamage,5,10,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,3,spen,0,14,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,3,maxRange,5,6,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,3,standardRange,4,3,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,3,overloadTp,3,4,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,3,overloadDamage,8,14,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,3,highDamage,"""<missing>""",14,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,4,lowTp,1,2,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,4,lowDamage,3,6,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,4,standardTp,2,4,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,4,standardDamage,6,10,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,4,spen,0,16,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,4,standardRange,4,3,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,4,overloadTp,3,6,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,4,overloadDamage,9,16,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,4,highDamage,"""<missing>""",16,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,5,lowTp,1,3,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,5,lowDamage,3,6,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,5,standardTp,2,5,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,5,standardDamage,6,10,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,5,spen,1,17,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,5,maxRange,6,7,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,5,standardRange,4,5,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,5,overloadTp,3,7,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,5,overloadDamage,9,18,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,5,highDamage,"""<missing>""",18,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,6,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+energy_main,6,lowTp,1,2,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,6,lowDamage,3,6,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,6,standardTp,2,4,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,6,standardDamage,6,12,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,6,spen,1,18,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,6,overloadTp,3,6,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,6,overloadDamage,9,22,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,6,highDamage,"""<missing>""",22,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,7,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+energy_main,7,lowTp,1,3,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,7,lowDamage,4,6,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,7,standardTp,2,5,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,7,standardDamage,7,14,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,7,spen,1,19,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,7,overloadTp,3,8,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,7,overloadDamage,11,22,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,7,highDamage,"""<missing>""",22,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,8,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+energy_main,8,lowTp,2,4,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,8,lowDamage,4,8,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,8,standardTp,4,6,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,8,standardDamage,8,16,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,8,spen,2,20,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,8,overloadTp,6,9,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,8,overloadDamage,12,24,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,8,highDamage,"""<missing>""",24,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,9,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+energy_main,9,accuracyPp,40,35,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,9,lowTp,2,3,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,9,lowDamage,5,8,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,9,standardTp,4,6,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,9,standardDamage,9,18,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,9,spen,2,22,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,9,overloadTp,6,8,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,9,overloadDamage,14,24,PENDING_FINALIZATION_SELECTED,CP153
+energy_main,9,highDamage,"""<missing>""",24,PENDING_FINALIZATION_SELECTED,CP153
+energy_pds,1,baseChancePp,12,10,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,1,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,1,safeReactionCapacity,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,1,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,1,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,1,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,2,baseChancePp,16,10,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,2,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,2,safeReactionCapacity,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,2,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,2,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,2,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,3,baseChancePp,16,10,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,3,readinessTp,1,2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,3,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,3,safeReactionCapacity,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,3,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,3,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,3,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,4,baseChancePp,20,10,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,4,reactionCapacity,1,2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,4,readinessTp,1,3,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,4,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,4,rc2Tp,"""<missing>""",3,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,4,safeReactionCapacity,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,4,extraReactionStrain,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,4,strainLimit,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,4,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,5,baseChancePp,20,10,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,5,readinessTp,2,3,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,5,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,5,rc2Tp,"""<missing>""",3,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,5,safeReactionCapacity,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,5,extraReactionStrain,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,5,strainLimit,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,5,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,6,baseChancePp,24,10,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,6,readinessTp,2,3,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,6,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,6,rc2Tp,"""<missing>""",3,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,6,safeReactionCapacity,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,6,extraReactionStrain,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,6,strainLimit,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,6,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,7,baseChancePp,24,10,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,7,readinessTp,2,4,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,7,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,7,rc2Tp,"""<missing>""",4,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,7,safeReactionCapacity,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,7,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,7,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,7,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,8,baseChancePp,24,10,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,8,readinessTp,2,4,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,8,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,8,rc2Tp,"""<missing>""",4,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,8,safeReactionCapacity,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,8,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,8,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,8,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,9,baseChancePp,24,10,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,9,readinessTp,2,3,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,9,rc1Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,9,rc2Tp,"""<missing>""",3,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,9,safeReactionCapacity,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,9,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,9,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+energy_pds,9,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+missile_delivery,1,launchTp,0,1,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_delivery,2,launchTp,0,1,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_delivery,3,launchTp,0,1,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_delivery,4,launchTp,0,1,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_delivery,5,launchTp,0,2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_delivery,6,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_delivery,6,launchTp,0,2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_delivery,7,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_delivery,7,launchTp,0,2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_delivery,8,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_delivery,8,launchTp,0,2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_delivery,9,space,5,6,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_delivery,9,launchTp,0,3,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+amm_pds,1,baseChancePp,15,0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,1,rc1Tp,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,1,safeReactionCapacity,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,1,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,1,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,1,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,2,baseChancePp,20,5,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,2,rc1Tp,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,2,safeReactionCapacity,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,2,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,2,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,2,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,3,baseChancePp,20,5,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,3,rc1Tp,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,3,rc2Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,3,safeReactionCapacity,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,3,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,3,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,3,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,4,baseChancePp,20,5,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,4,rc1Tp,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,4,rc2Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,4,safeReactionCapacity,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,4,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,4,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,4,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,5,baseChancePp,24,5,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,5,rc1Tp,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,5,rc2Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,5,safeReactionCapacity,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,5,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,5,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,5,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,6,baseChancePp,24,5,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,6,rc1Tp,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,6,rc2Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,6,safeReactionCapacity,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,6,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,6,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,6,rangeOneAttempt,"""<missing>""",false,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,7,baseChancePp,28,5,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,7,reactionCapacity,2,3,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,7,readinessTp,2,3,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,7,rc1Tp,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,7,rc2Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,7,rc3Tp,"""<missing>""",3,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,7,safeReactionCapacity,"""<missing>""",3,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,7,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,7,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,7,rangeOneAttempt,"""<missing>""",true,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,8,baseChancePp,28,5,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,8,reactionCapacity,2,3,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,8,readinessTp,2,3,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,8,rc1Tp,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,8,rc2Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,8,rc3Tp,"""<missing>""",3,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,8,safeReactionCapacity,"""<missing>""",3,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,8,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,8,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,8,rangeOneAttempt,"""<missing>""",true,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,9,baseChancePp,28,5,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,9,reactionCapacity,2,3,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,9,readinessTp,2,3,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,9,rc1Tp,"""<missing>""",1,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,9,rc2Tp,"""<missing>""",2,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,9,rc3Tp,"""<missing>""",3,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,9,safeReactionCapacity,"""<missing>""",3,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,9,extraReactionStrain,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,9,strainLimit,"""<missing>""",0,PENDING_FINALIZATION_SELECTED,CP155
+amm_pds,9,rangeOneAttempt,"""<missing>""",true,PENDING_FINALIZATION_SELECTED,CP155
+missile_guidance,1,guidanceBaseHit,55,70,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_guidance,2,guidanceBaseHit,55,70,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_guidance,3,guidanceBaseHit,55,75,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_guidance,4,guidanceBaseHit,60,75,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_guidance,5,guidanceBaseHit,60,80,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_guidance,6,guidanceBaseHit,65,85,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_guidance,7,guidanceBaseHit,65,85,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_guidance,8,guidanceBaseHit,70,90,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_guidance,9,guidanceBaseHit,75,95,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_gp_warhead,1,damage,8,12,PENDING_FINALIZATION_SELECTED,CP153
+missile_gp_warhead,2,damage,8,13,PENDING_FINALIZATION_SELECTED,CP153
+missile_gp_warhead,3,damage,8,15,PENDING_FINALIZATION_SELECTED,CP153
+missile_gp_warhead,4,damage,9,17,PENDING_FINALIZATION_SELECTED,CP153
+missile_gp_warhead,5,damage,10,19,PENDING_FINALIZATION_SELECTED,CP153
+missile_gp_warhead,6,damage,10,21,PENDING_FINALIZATION_SELECTED,CP153
+missile_gp_warhead,7,damage,11,23,PENDING_FINALIZATION_SELECTED,CP153
+missile_gp_warhead,8,damage,12,25,PENDING_FINALIZATION_SELECTED,CP153
+missile_gp_warhead,8,spen,1,0,PENDING_FINALIZATION_SELECTED,CP153
+missile_gp_warhead,9,damage,14,27,PENDING_FINALIZATION_SELECTED,CP153
+missile_gp_warhead,9,spen,1,0,PENDING_FINALIZATION_SELECTED,CP153
+missile_swarmer,2,packetCount,2,1,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,2,packetDamage,3,7,PENDING_FINALIZATION_SELECTED,CP153
+missile_swarmer,2,terminalGuidanceBonusPp,10,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,2,pdsInterceptPenaltyPp,10,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,2,oneTerminalAttackRoll,true,false,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,2,subFlightCount,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,2,independentSubFlightGuidance,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,2,pdsVisibleSubFlights,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,2,sharedPdsReactionCapacity,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,3,packetCount,2,1,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,3,packetDamage,3,7,PENDING_FINALIZATION_SELECTED,CP153
+missile_swarmer,3,terminalGuidanceBonusPp,10,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,3,pdsInterceptPenaltyPp,10,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,3,oneTerminalAttackRoll,true,false,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,3,subFlightCount,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,3,independentSubFlightGuidance,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,3,pdsVisibleSubFlights,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,3,sharedPdsReactionCapacity,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,4,packetCount,2,1,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,4,packetDamage,4,8,PENDING_FINALIZATION_SELECTED,CP153
+missile_swarmer,4,terminalGuidanceBonusPp,10,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,4,pdsInterceptPenaltyPp,10,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,4,oneTerminalAttackRoll,true,false,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,4,subFlightCount,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,4,independentSubFlightGuidance,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,4,pdsVisibleSubFlights,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,4,sharedPdsReactionCapacity,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,5,packetCount,2,1,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,5,packetDamage,4,9,PENDING_FINALIZATION_SELECTED,CP153
+missile_swarmer,5,terminalGuidanceBonusPp,10,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,5,pdsInterceptPenaltyPp,10,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,5,oneTerminalAttackRoll,true,false,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,5,subFlightCount,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,5,independentSubFlightGuidance,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,5,pdsVisibleSubFlights,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,5,sharedPdsReactionCapacity,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,6,packetCount,2,1,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,6,packetDamage,4,9,PENDING_FINALIZATION_SELECTED,CP153
+missile_swarmer,6,terminalGuidanceBonusPp,10,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,6,pdsInterceptPenaltyPp,10,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,6,oneTerminalAttackRoll,true,false,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,6,subFlightCount,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,6,independentSubFlightGuidance,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,6,pdsVisibleSubFlights,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,6,sharedPdsReactionCapacity,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,7,packetCount,2,1,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,7,packetDamage,5,10,PENDING_FINALIZATION_SELECTED,CP153
+missile_swarmer,7,terminalGuidanceBonusPp,15,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,7,pdsInterceptPenaltyPp,15,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,7,oneTerminalAttackRoll,true,false,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,7,subFlightCount,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,7,independentSubFlightGuidance,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,7,pdsVisibleSubFlights,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,7,sharedPdsReactionCapacity,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,8,packetCount,2,1,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,8,packetDamage,5,11,PENDING_FINALIZATION_SELECTED,CP153
+missile_swarmer,8,spen,1,0,PENDING_FINALIZATION_SELECTED,CP153
+missile_swarmer,8,terminalGuidanceBonusPp,15,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,8,pdsInterceptPenaltyPp,15,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,8,oneTerminalAttackRoll,true,false,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,8,subFlightCount,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,8,independentSubFlightGuidance,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,8,pdsVisibleSubFlights,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,8,sharedPdsReactionCapacity,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,9,packetCount,2,1,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,9,packetDamage,6,12,PENDING_FINALIZATION_SELECTED,CP153
+missile_swarmer,9,spen,1,0,PENDING_FINALIZATION_SELECTED,CP153
+missile_swarmer,9,terminalGuidanceBonusPp,15,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,9,pdsInterceptPenaltyPp,15,0,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,9,oneTerminalAttackRoll,true,false,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,9,subFlightCount,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,9,independentSubFlightGuidance,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,9,pdsVisibleSubFlights,"""<missing>""",2,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance
+missile_swarmer,9,sharedPdsReactionCapacity,"""<missing>""",true,PROVISIONAL_RESEARCH_SCAFFOLD,CP144/CP142 inheritance

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "star-cluster-cp125-accepted-cp124-native-summary-v0.1",
+  "acceptedCheckpoint": 124,
+  "sourceArchive": "CP124_NATIVE_RESULTS_ACCEPTED.zip",
+  "sourceArchiveSha256": "dea7c9fdf9c60a6d8f487acd267ea85acd043c98ac6fb78c3be23c35f819f139",
+  "sourceSummary": "CP124_NATIVE_ACCEPTANCE_SUMMARY_ORIGINAL.json",
+  "sourceSummarySha256": "e35d3359c6ffe182926e11d938879e41e8121c5a82c1e070e153702f79b5c140",
+  "pythonTestsPassed": 139,
+  "researchParityPassed": 25,
+  "profileRows": 180,
+  "rawBuildCombinations": 14112,
+  "legalBuilds": 9427,
+  "pipelineSmokeTrials": 70,
+  "instrumentationProbes": 9,
+  "telemetryContractMetrics": 47,
+  "substantiveMonteCarloTrials": 0,
+  "balanceValidated": false,
+  "failedGates": []
+}

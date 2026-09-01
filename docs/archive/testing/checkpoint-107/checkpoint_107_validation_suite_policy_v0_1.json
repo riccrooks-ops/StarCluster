@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "star-cluster-checkpoint-validation-policy-v1",
+  "checkpoint": 107,
+  "scope": "provisional_tl1_tl9_technology_component_table_architecture_only",
+  "declaredTrials": 0,
+  "numericalTlChartChanged": false,
+  "newTl4Tl9BalanceValuesAssigned": false,
+  "simulationOrCalibrationRun": false,
+  "dotnetBuildRequired": false,
+  "pythonRequired": false
+}

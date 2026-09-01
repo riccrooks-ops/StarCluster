@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "star-cluster-tl1-combat-pacing-v1",
+  "id": "tl1-cp01-critical-density-and-immobile-timing",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "masterSeed": 370200,
+  "trialsPerVariant": 10000,
+  "variants": [
+    {
+      "id": "cp-25-ordinary-no-dc",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "damageControl": "None"
+    },
+    {
+      "id": "cp-25-ordinary-dc-reserve",
+      "density": "Percent25",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne"
+    },
+    {
+      "id": "cp-25-protected-no-dc",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "damageControl": "None"
+    },
+    {
+      "id": "cp-25-protected-dc-reserve",
+      "density": "Percent25",
+      "protectedCompartmentation": true,
+      "damageControl": "ComponentFirstReserveOne"
+    },
+    {
+      "id": "cp-33-ordinary-no-dc",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "damageControl": "None"
+    },
+    {
+      "id": "cp-33-ordinary-dc-reserve",
+      "density": "Percent33",
+      "protectedCompartmentation": false,
+      "damageControl": "ComponentFirstReserveOne"
+    },
+    {
+      "id": "cp-33-protected-no-dc",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "damageControl": "None"
+    },
+    {
+      "id": "cp-33-protected-dc-reserve",
+      "density": "Percent33",
+      "protectedCompartmentation": true,
+      "damageControl": "ComponentFirstReserveOne"
+    }
+  ]
+}

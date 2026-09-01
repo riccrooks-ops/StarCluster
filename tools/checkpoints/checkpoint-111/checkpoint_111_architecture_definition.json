@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "111",
+  "acceptedBaseline": "110",
+  "checkpointType": "same_tl_build_ecology_instrumentation_foundation",
+  "productionRuntime": "C# / Godot",
+  "pythonAllowedForTestingSimulationAndCheckpointValidation": true,
+  "pythonRequiredByProductionRuntime": false,
+  "productionSourceChanged": false,
+  "conceptChanged": false,
+  "numericalMatrixChanged": false,
+  "reactorCandidateChanged": false,
+  "sourceMatrix": "docs/archive/player_technology/pre-cp165-active/technology_numerical_matrix_v0_1.json",
+  "reactorAuthority": "docs/archive/player_technology/pre-cp165-active/power_reactor_calibration_profile_v0_1.json",
+  "study": "docs/archive/testing/pre-cp165-active/same_tl_build_ecology_instrumentation_study_v0_1.json",
+  "damageModel": "layered_defense_hull_only",
+  "internalDamageCriticalsSimulated": false,
+  "primaryPopulation": {
+    "technologyLevels": 9,
+    "builds": 108,
+    "buildsPerTl": 12,
+    "unorderedPairings": 594,
+    "movementOrderMirrors": 2,
+    "variants": 1188,
+    "exactFill": true,
+    "missionAuxFillerHasTacticalEffect": false
+  },
+  "localBoundedEvidence": {
+    "trialsPerVariant": 100,
+    "totalEngagements": 118800,
+    "purpose": "authoring-environment instrumentation and consumer validation"
+  },
+  "nativeSubstantiveWorkload": {
+    "trialsPerVariant": 1000,
+    "totalEngagements": 1188000,
+    "purpose": "native same-TL ecology evidence"
+  },
+  "mixedTlPopulation": {
+    "registered": true,
+    "executed": false,
+    "populationWeight": 0
+  },
+  "overloadInstrumentationProbes": 5,
+  "automaticPromotion": false,
+  "productionPromotion": false,
+  "interpretationGuardrails": {
+    "targetWinRate": false,
+    "balanceReviewSignalsAreBlocking": false,
+    "movementOrderMustBeMirrored": true,
+    "consumerInstrumentationMustPassBeforeBalanceInterpretation": true,
+    "humanReviewRequiredForAnyNumericalChange": true
+  },
+  "repositoryOwnedFiles": 2190
+}

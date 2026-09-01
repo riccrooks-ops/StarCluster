@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "star-cluster-checkpoint55-tl3-aux-loadout-inventory-v1",
+  "checkpoint": 55,
+  "status": "candidate_screening_only",
+  "weaponBayCapacity": 1,
+  "auxiliaryCapacity": 2,
+  "stackingPolicy": "Two distinct capacity-1 effects may be paired; same-source stacking remains prohibited unless explicitly allowed. Auxiliary Reactor consumes both capacity points by itself. A single capacity-1 component is legal with one AUX point unused and appears in the isolation lane.",
+  "isolatedComponents": [
+    {
+      "id": "aux-r55-kpds",
+      "displayName": "Kinetic Point-Defense Battery",
+      "capacityCost": 1
+    },
+    {
+      "id": "aux-r55-epds",
+      "displayName": "Energy Point-Defense Array",
+      "capacityCost": 1
+    },
+    {
+      "id": "aux-r55-amm",
+      "displayName": "Anti-Missile Missile Battery",
+      "capacityCost": 1
+    },
+    {
+      "id": "aux-r55-combat-battery",
+      "displayName": "Combat Battery",
+      "capacityCost": 1
+    },
+    {
+      "id": "aux-r55-power-capacitor",
+      "displayName": "Power Capacitor",
+      "capacityCost": 1
+    },
+    {
+      "id": "aux-r55-ablative",
+      "displayName": "Ablative Armor Layer",
+      "capacityCost": 1
+    },
+    {
+      "id": "aux-r55-evasion",
+      "displayName": "Evasive Maneuver System",
+      "capacityCost": 1
+    },
+    {
+      "id": "aux-r55-shield-battery",
+      "displayName": "Shield Battery",
+      "capacityCost": 1
+    },
+    {
+      "id": "aux-r55-shield-booster",
+      "displayName": "Shield Booster",
+      "capacityCost": 1
+    },
+    {
+      "id": "aux-r55-shield-stabilizer",
+      "displayName": "Shield Power Stabilizer",
+      "capacityCost": 1
+    },
+    {
+      "id": "aux-r55-kinetic-mag",
+      "displayName": "Kinetic Magazine Expansion",
+      "capacityCost": 1
+    },
+    {
+      "id": "aux-r55-missile-mag",
+      "displayName": "Missile Magazine Expansion",
+      "capacityCost": 1
+    },
+    {
+      "id": "aux-r55-auxiliary-reactor",
+      "displayName": "Auxiliary Reactor",
+      "capacityCost": 2
+    }
+  ],
+  "normalLoadouts": [
+    {
+      "id": "aux-r55-kpds-shield-battery",
+      "displayName": "Kinetic PDS + Shield Battery",
+      "familyId": "aux_combo_kpds_shield_battery",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r55-epds-shield-battery",
+      "displayName": "Energy PDS + Shield Battery",
+      "familyId": "aux_combo_epds_shield_battery",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r55-amm-shield-battery",
+      "displayName": "AMM + Shield Battery",
+      "familyId": "aux_combo_amm_shield_battery",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r55-ablative-kpds",
+      "displayName": "Ablative Armor + Kinetic PDS",
+      "familyId": "aux_combo_ablative_kpds",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r55-ablative-evasion",
+      "displayName": "Ablative Armor + Evasive Maneuver System",
+      "familyId": "aux_combo_ablative_evasion",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r55-battery-evasion",
+      "displayName": "Combat Battery + Evasive Maneuver System",
+      "familyId": "aux_combo_battery_evasion",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r55-capacitor-epds",
+      "displayName": "Power Capacitor + Energy PDS",
+      "familyId": "aux_combo_capacitor_epds",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r55-booster-kpds",
+      "displayName": "Shield Booster + Kinetic PDS",
+      "familyId": "aux_combo_booster_kpds",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r55-stabilizer-epds",
+      "displayName": "Shield Power Stabilizer + Energy PDS",
+      "familyId": "aux_combo_stabilizer_epds",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r55-kinetic-mag-battery",
+      "displayName": "Kinetic Magazine Expansion + Combat Battery",
+      "familyId": "aux_combo_kinetic_mag_battery",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r55-missile-mag-amm",
+      "displayName": "Missile Magazine Expansion + AMM",
+      "familyId": "aux_combo_missile_mag_amm",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r55-auxiliary-reactor",
+      "displayName": "Auxiliary Reactor",
+      "familyId": "aux_auxiliary_reactor",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r55-battery-amm",
+      "displayName": "Combat Battery + AMM",
+      "familyId": "aux_combo_battery_amm",
+      "capacityCost": 2
+    }
+  ],
+  "executionBoundary": "Composite runtime profiles preserve combined combat effects for screening. They are not a final representation of separate component damage exposure."
+}

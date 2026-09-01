@@ -1,0 +1,229 @@
+﻿{
+    "schemaVersion":  1,
+    "checkpointId":  "102",
+    "checkpointTitle":  "Checkpoint 102 - TL3 Executable Consumer Generalization and Integration",
+    "checkpointDefinition":  "tools/calibration/checkpoints/checkpoint-102.json",
+    "checkpointDefinitionSha256":  "b996ca4517d114a701faf4665c9440032f597354b0c91070e3b058e8eaa64f1f",
+    "checkpointManifest":  "CHECKPOINT_102_SHA256SUMS.txt",
+    "checkpointManifestSha256":  "02582d2def97fd3060dc66128ab11d6744b1d8f48ff58cfbe44865524604ed89",
+    "status":  "Success",
+    "repositoryOnly":  false,
+    "startedUtc":  "2026-08-14T09:11:34.4311090Z",
+    "completedUtc":  "2026-08-14T09:11:53.6158758Z",
+    "elapsedSeconds":  19.284555299999997,
+    "sdk":  {
+                "expected":  "8.0.423",
+                "actual":  "8.0.423"
+            },
+    "configuration":  "Debug",
+    "requested":  {
+                      "trialsPerVariant":  1,
+                      "jobs":  24
+                  },
+    "build":  {
+                  "cleanExecuted":  true,
+                  "succeeded":  true,
+                  "warnings":  0,
+                  "errors":  0,
+                  "elapsedSeconds":  4.6947411
+              },
+    "tests":  {
+                  "succeeded":  true,
+                  "total":  876,
+                  "passed":  876,
+                  "failed":  0,
+                  "skipped":  0,
+                  "elapsedSeconds":  1.9824502,
+                  "trxPath":  "out/checkpoint-102/test-results/checkpoint-tests.trx"
+              },
+    "primaryStudy":  {
+                         "id":  null,
+                         "variantCount":  0,
+                         "trialsPerVariant":  1,
+                         "totalTrials":  0
+                     },
+    "aggregates":  {
+                       "configuredRunnerStages":  15,
+                       "runnerStagesPassed":  15,
+                       "runnerStagesFailed":  0,
+                       "deterministicCases":  7,
+                       "mechanicsCases":  90,
+                       "variants":  0,
+                       "trials":  32,
+                       "selfTests":  70,
+                       "failedGates":  0
+                   },
+    "stages":  [
+                   {
+                       "id":  "deterministic",
+                       "name":  "Accepted deterministic moving-missile scenarios",
+                       "command":  "run-all",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:42.8755589Z",
+                       "completedUtc":  "2026-08-14T09:11:43.4612866Z",
+                       "elapsedSeconds":  0.57926919999999993,
+                       "outputPath":  "out/checkpoint-102/deterministic",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "tl1-phase-a",
+                       "name":  "TL1 Phase A mechanics corpus",
+                       "command":  "tl1-phase-a",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:43.4742632Z",
+                       "completedUtc":  "2026-08-14T09:11:43.8903022Z",
+                       "elapsedSeconds":  0.4113958,
+                       "outputPath":  "out/checkpoint-102/tl1-phase-a",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "tl1-phase-b",
+                       "name":  "TL1 Phase B direct-fire corpus",
+                       "command":  "tl1-phase-b",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:43.8943161Z",
+                       "completedUtc":  "2026-08-14T09:11:44.2587721Z",
+                       "elapsedSeconds":  0.360564,
+                       "outputPath":  "out/checkpoint-102/tl1-phase-b",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "tl1-installation-space-envelope",
+                       "name":  "TL1 35-Space deterministic construction envelope and nominal power diagnostics",
+                       "command":  "tl1-installation-space-envelope",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:44.2628485Z",
+                       "completedUtc":  "2026-08-14T09:11:44.6204685Z",
+                       "elapsedSeconds":  0.3533156,
+                       "outputPath":  "out/checkpoint-102/tl1-installation-space-envelope",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "tl1-sensor-ew-foundation",
+                       "name":  "TL1 deterministic sensor reach, emissions, discrimination resistance, burn-through, and EW sweep",
+                       "command":  "tl1-sensor-ew-foundation",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:44.6289094Z",
+                       "completedUtc":  "2026-08-14T09:11:44.9784601Z",
+                       "elapsedSeconds":  0.34647849999999997,
+                       "outputPath":  "out/checkpoint-102/tl1-sensor-ew-foundation",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp99-exact-edge-preflight",
+                       "name":  "CP99 mandatory-Sensor exact-edge foundation deterministic preflight",
+                       "command":  "cross-tl-build-permutation-preflight",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:44.9848892Z",
+                       "completedUtc":  "2026-08-14T09:11:45.5958890Z",
+                       "elapsedSeconds":  0.60737,
+                       "outputPath":  "out/checkpoint-102/cross-tl-cp99-exact-edge-preflight",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp99-exact-edge-generation",
+                       "name":  "CP99 11,776-build / 37,184-edge / 724-variant exact-edge generation",
+                       "command":  "cross-tl-build-permutation",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:45.6002150Z",
+                       "completedUtc":  "2026-08-14T09:11:46.3542835Z",
+                       "elapsedSeconds":  0.74949409999999994,
+                       "outputPath":  "out/checkpoint-102/cross-tl-cp99-exact-edge",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp102-construction-envelope-preflight",
+                       "name":  "CP102 v7 TL2/TL3 construction-envelope actual-consumer preflight",
+                       "command":  "cross-tl-build-permutation-preflight",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:46.3584899Z",
+                       "completedUtc":  "2026-08-14T09:11:47.0470436Z",
+                       "elapsedSeconds":  0.68299,
+                       "outputPath":  "out/checkpoint-102/cross-tl-cp102-construction-envelope-preflight",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp102-transition-preflight",
+                       "name":  "CP102 v7 typed TL2/TL3 transition-smoke deterministic preflight",
+                       "command":  "cross-tl-build-permutation-preflight",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:47.0511799Z",
+                       "completedUtc":  "2026-08-14T09:11:48.7626335Z",
+                       "elapsedSeconds":  1.7082905,
+                       "outputPath":  "out/checkpoint-102/cross-tl-cp102-transition-preflight",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp102-transition-generation",
+                       "name":  "CP102 16-transition / 32-variant typed TL3 integration generation",
+                       "command":  "cross-tl-build-permutation",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:48.7666419Z",
+                       "completedUtc":  "2026-08-14T09:11:51.1557049Z",
+                       "elapsedSeconds":  2.3834196999999997,
+                       "outputPath":  "out/checkpoint-102/cross-tl-cp102-transition",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp102-generated-study-preflight",
+                       "name":  "CP102 32-variant TL3 executable integration actual-consumer preflight",
+                       "command":  "tl1-integrated-tactical-combat-preflight",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:51.1598581Z",
+                       "completedUtc":  "2026-08-14T09:11:51.5773933Z",
+                       "elapsedSeconds":  0.41291659999999997,
+                       "outputPath":  "out/checkpoint-102/cross-tl-cp102-generated-study-preflight",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp102-generated-study-smoke",
+                       "name":  "CP102 32-variant one-trial TL3 executable full-pipeline smoke",
+                       "command":  "tl1-integrated-tactical-combat",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:51.5814018Z",
+                       "completedUtc":  "2026-08-14T09:11:52.1102642Z",
+                       "elapsedSeconds":  0.5225981,
+                       "outputPath":  "out/checkpoint-102/cross-tl-cp102-generated-study-smoke",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "auxiliary-resource-endurance",
+                       "name":  "Deterministic finite-resource and recharge endurance stress study",
+                       "command":  "auxiliary-resource-endurance",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:52.1282973Z",
+                       "completedUtc":  "2026-08-14T09:11:52.4781065Z",
+                       "elapsedSeconds":  0.34564429999999996,
+                       "outputPath":  "out/checkpoint-102/auxiliary-resource-endurance",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "checkpoint-53-resource-semantics-lock",
+                       "name":  "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+                       "command":  "auxiliary-resource-endurance",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:52.4821801Z",
+                       "completedUtc":  "2026-08-14T09:11:52.8434034Z",
+                       "elapsedSeconds":  0.3565623,
+                       "outputPath":  "out/checkpoint-102/checkpoint-53-resource-semantics-lock",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "runner-self-tests",
+                       "name":  "ScenarioRunner self-tests",
+                       "command":  "self-test",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-14T09:11:52.8474611Z",
+                       "completedUtc":  "2026-08-14T09:11:53.6077445Z",
+                       "elapsedSeconds":  0.7582957,
+                       "outputPath":  null,
+                       "failedGates":  0
+                   }
+               ],
+    "outputPaths":  {
+                        "root":  "out/checkpoint-102",
+                        "acceptanceJson":  "out/checkpoint-102/acceptance-summary.json",
+                        "acceptanceText":  "out/checkpoint-102/acceptance-summary.txt"
+                    },
+    "firstFailure":  null
+}

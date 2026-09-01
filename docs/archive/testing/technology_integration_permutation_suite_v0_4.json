@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "star-cluster-technology-integration-permutation-suite-v1",
+  "id": "technology-integration-permutation-suite-v0_4",
+  "checkpoint": 84,
+  "status": "standing_scenario_coverage_definition",
+  "purpose": "Reusable technology-integration axes with accepted information-control working values, the CP83-validated Power/Reactor working candidate, and a Shield-capacity sensitivity axis for sequential TL design.",
+  "supersedesForCurrentPlanning": "technology-integration-permutation-suite-v0_3",
+  "retainedHistoricalStudy": {
+    "id": "tl2-itc09-power-reactor-progression-permutations",
+    "checkpoint": "83",
+    "variantCount": 96,
+    "status": "accepted_native_evidence"
+  },
+  "validatedTechnologyPackages": {
+    "tl1-information-control": {
+      "tacticalComputerTargetingPp": 10,
+      "sensorDiscriminationResistance": 0,
+      "ecmNormalCeiling": 1,
+      "eccmNormalCeiling": 1,
+      "ewTpPerRating": 1
+    },
+    "tl2-information-control-working": {
+      "profile": "docs/design/player_technology/tl2_computing_sensor_ew_working_profile_v0_1.json",
+      "tacticalComputerTargetingPp": 12,
+      "sensorDiscriminationResistance": 1,
+      "ecmNormalCeiling": 2,
+      "eccmNormalCeiling": 2,
+      "ewTpPerRating": 1
+    }
+  },
+  "reusableAxes": {
+    "sideAWeaponFamily": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "opponentFamily": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "geometry": [
+      "fixed-range",
+      "dynamic-side-a-first",
+      "dynamic-side-b-first"
+    ],
+    "informationControlPackage": [
+      "tl1-information-control",
+      "tl2-information-control-working",
+      "mixed-tech-explicit"
+    ],
+    "powerEnvironment": [
+      "accepted-reference",
+      "diagnostic-sensitivity"
+    ],
+    "degradedFirePermission": [
+      "firm-only",
+      "explicit-weapon-capability-diagnostic"
+    ],
+    "doctrine": [
+      "accepted-policy",
+      "explicit-diagnostic-policy"
+    ],
+    "powerReactorPackage": [
+      "tl1-peak-fission-5tp",
+      "tl2-early-fusion-6tp-working",
+      "mixed-tech-explicit"
+    ],
+    "shieldCapacityPackage": [
+      "tl1-shield-2",
+      "tl2-shield-3-candidate",
+      "shield-4-upper-sensitivity",
+      "mixed-tech-explicit"
+    ]
+  },
+  "pairingPolicy": {
+    "sharedRandomStreamKey": "comparisonGroup",
+    "useCommonRandomStreamsWherePractical": true,
+    "note": "Candidate/control variants should share random streams whenever the changed dimension permits a clean paired comparison."
+  },
+  "activationPolicy": [
+    "Activate only the smallest dependency-relevant submatrix needed to answer the checkpoint question.",
+    "Include mixed-TL and high-power-demand contexts whenever a new component can change power, reach, EW, targeting, or defense opportunity cost.",
+    "Use actual-consumer preflight plus one-trial full-pipeline smoke before substantive Monte Carlo for any new or materially changed integrated study.",
+    "Audit dispatch, pre-run validation, all shared/global release-gate classifications, study-family whitelists, study-specific gates, report routing, schema/baseline bindings, and checkpoint stage definitions before handoff.",
+    "Keep outcome/balance targets review-only unless the checkpoint explicitly promotes a deterministic invariant; never make one-trial smoke depend on statistical outcomes.",
+    "When Power/Reactor is the changed dependency, pair reactor candidates at identical combat, information-control, and doctrine settings; treat power output, efficiency, condition mapping, overload, and Space as separate axes unless the checkpoint explicitly changes more than one.",
+    "When Shield progression is the changed dependency, vary capacity, recharge, hardening, condition behavior, power maintenance, and Installation Space as separate axes unless the checkpoint explicitly combines them."
+  ],
+  "currentCoverage": {
+    "acceptedStudies": [
+      "tl2-itc06-sensor-ew-discrimination-isolation",
+      "tl2-itc07-ew-power-pressure-tall-viability",
+      "tl2-itc08-tactical-computer-ew-integration-permutations",
+      "tl2-itc09-power-reactor-progression-permutations"
+    ],
+    "currentStudy": {
+      "id": "tl2-itc10-shield-capacity-power-integration-permutations",
+      "checkpoint": 84,
+      "variantCount": 216,
+      "status": "candidate_study_pending_native_acceptance"
+    },
+    "currentExpansion": "Shield Capacity is now a first-class sensitivity axis. CP84 crosses Shield 2/3/4 with Reactor 5/6 across two information-control environments, six Kinetic/Energy-vs-Kinetic/Energy/Missile family pairings, and three geometry/order contexts.",
+    "nextExpansion": "After CP84 review, promote/revise only the Shield Capacity value supported by evidence. Armor AP/AI progression is a strong next passive-defense axis and should remain separately factored."
+  },
+  "powerReactorPackages": {
+    "tl1-peak-fission-5tp": {
+      "status": "current_working_reference",
+      "technologyRole": "Peak fission",
+      "installationSpace": 6,
+      "operationalTacticalPower": 5
+    },
+    "tl2-early-fusion-6tp-working": {
+      "status": "validated_working_candidate",
+      "profile": "docs/design/player_technology/tl2_power_reactor_candidate_profile_v0_1.json",
+      "technologyRole": "Early practical fusion",
+      "installationSpace": 6,
+      "operationalTacticalPower": 6,
+      "productionPromotion": false
+    }
+  },
+  "shieldCapacityPackages": {
+    "tl1-shield-2": {
+      "status": "current_working_reference",
+      "installationSpace": 3,
+      "shieldCapacity": 2,
+      "baseRecharge": 1,
+      "tacticalRechargePerPower": 1,
+      "tacticalRechargePowerCap": 2,
+      "shieldArmor": 0
+    },
+    "tl2-shield-3-candidate": {
+      "status": "current_architecture_sensitivity_candidate",
+      "profile": "docs/design/player_technology/tl2_shield_capacity_candidate_profile_v0_1.json",
+      "installationSpace": 3,
+      "shieldCapacity": 3,
+      "productionPromotion": false
+    },
+    "shield-4-upper-sensitivity": {
+      "status": "diagnostic_upper_sensitivity",
+      "profile": "docs/design/player_technology/tl2_shield_capacity_candidate_profile_v0_1.json",
+      "installationSpace": 3,
+      "shieldCapacity": 4,
+      "productionPromotion": false
+    }
+  }
+}

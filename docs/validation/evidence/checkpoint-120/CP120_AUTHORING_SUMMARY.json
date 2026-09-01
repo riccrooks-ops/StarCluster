@@ -1,0 +1,331 @@
+{
+  "checkpoint": 120,
+  "status": "bounded_authoring_diagnostic_only",
+  "trialsPerVariant": 5,
+  "variants": 4284,
+  "totalTrials": 21420,
+  "elapsedSeconds": 17.037034738999978,
+  "failedGates": [],
+  "automaticPromotion": false,
+  "keyGpYieldRows": [
+    {
+      "tl": 1,
+      "profile": "missile-gp-d4",
+      "damage": 4,
+      "meanConditionalWinRate": 0.5243055555555556,
+      "deltaVsPreviousDamage": null
+    },
+    {
+      "tl": 1,
+      "profile": "gp-current",
+      "damage": 5,
+      "meanConditionalWinRate": 0.7111111111111111,
+      "deltaVsPreviousDamage": 0.18680555555555556
+    },
+    {
+      "tl": 1,
+      "profile": "missile-gp-d6",
+      "damage": 6,
+      "meanConditionalWinRate": 0.8895833333333334,
+      "deltaVsPreviousDamage": 0.17847222222222225
+    },
+    {
+      "tl": 2,
+      "profile": "missile-gp-d4",
+      "damage": 4,
+      "meanConditionalWinRate": 0.4166666666666667,
+      "deltaVsPreviousDamage": null
+    },
+    {
+      "tl": 2,
+      "profile": "gp-current",
+      "damage": 5,
+      "meanConditionalWinRate": 0.7104166666666667,
+      "deltaVsPreviousDamage": 0.29375
+    },
+    {
+      "tl": 2,
+      "profile": "missile-gp-d6",
+      "damage": 6,
+      "meanConditionalWinRate": 0.8395833333333335,
+      "deltaVsPreviousDamage": 0.12916666666666676
+    },
+    {
+      "tl": 3,
+      "profile": "gp-current",
+      "damage": 5,
+      "meanConditionalWinRate": 0.5375,
+      "deltaVsPreviousDamage": null
+    },
+    {
+      "tl": 3,
+      "profile": "missile-gp-d6",
+      "damage": 6,
+      "meanConditionalWinRate": 0.7666666666666666,
+      "deltaVsPreviousDamage": 0.22916666666666663
+    },
+    {
+      "tl": 3,
+      "profile": "missile-gp-d7",
+      "damage": 7,
+      "meanConditionalWinRate": 0.8604166666666666,
+      "deltaVsPreviousDamage": 0.09375
+    },
+    {
+      "tl": 4,
+      "profile": "gp-current",
+      "damage": 5,
+      "meanConditionalWinRate": 0.41805555555555557,
+      "deltaVsPreviousDamage": null
+    },
+    {
+      "tl": 4,
+      "profile": "missile-gp-d6",
+      "damage": 6,
+      "meanConditionalWinRate": 0.56875,
+      "deltaVsPreviousDamage": 0.1506944444444444
+    },
+    {
+      "tl": 4,
+      "profile": "missile-gp-d7",
+      "damage": 7,
+      "meanConditionalWinRate": 0.6854166666666667,
+      "deltaVsPreviousDamage": 0.1166666666666667
+    },
+    {
+      "tl": 5,
+      "profile": "gp-current",
+      "damage": 5,
+      "meanConditionalWinRate": 0.47222222222222227,
+      "deltaVsPreviousDamage": null
+    },
+    {
+      "tl": 5,
+      "profile": "missile-gp-d6",
+      "damage": 6,
+      "meanConditionalWinRate": 0.5729166666666666,
+      "deltaVsPreviousDamage": 0.10069444444444436
+    },
+    {
+      "tl": 5,
+      "profile": "missile-gp-d7",
+      "damage": 7,
+      "meanConditionalWinRate": 0.7458333333333332,
+      "deltaVsPreviousDamage": 0.1729166666666666
+    },
+    {
+      "tl": 5,
+      "profile": "missile-gp-d8",
+      "damage": 8,
+      "meanConditionalWinRate": 0.7833333333333333,
+      "deltaVsPreviousDamage": 0.03750000000000009
+    },
+    {
+      "tl": 6,
+      "profile": "gp-current",
+      "damage": 5,
+      "meanConditionalWinRate": 0.44097222222222227,
+      "deltaVsPreviousDamage": null
+    },
+    {
+      "tl": 6,
+      "profile": "missile-gp-d6",
+      "damage": 6,
+      "meanConditionalWinRate": 0.5833333333333334,
+      "deltaVsPreviousDamage": 0.1423611111111111
+    },
+    {
+      "tl": 6,
+      "profile": "missile-gp-d7",
+      "damage": 7,
+      "meanConditionalWinRate": 0.7208333333333333,
+      "deltaVsPreviousDamage": 0.13749999999999996
+    },
+    {
+      "tl": 6,
+      "profile": "missile-gp-d8",
+      "damage": 8,
+      "meanConditionalWinRate": 0.8312499999999999,
+      "deltaVsPreviousDamage": 0.11041666666666661
+    },
+    {
+      "tl": 7,
+      "profile": "gp-current",
+      "damage": 5,
+      "meanConditionalWinRate": 0.21041666666666667,
+      "deltaVsPreviousDamage": null
+    },
+    {
+      "tl": 7,
+      "profile": "missile-gp-d7",
+      "damage": 7,
+      "meanConditionalWinRate": 0.7166666666666667,
+      "deltaVsPreviousDamage": 0.50625
+    },
+    {
+      "tl": 7,
+      "profile": "missile-gp-d8",
+      "damage": 8,
+      "meanConditionalWinRate": 0.7479166666666667,
+      "deltaVsPreviousDamage": 0.03125
+    },
+    {
+      "tl": 7,
+      "profile": "missile-gp-d9",
+      "damage": 9,
+      "meanConditionalWinRate": 0.8604166666666666,
+      "deltaVsPreviousDamage": 0.11249999999999993
+    }
+  ],
+  "kineticPlus5Sensitivity": [
+    {
+      "tl": 4,
+      "deltaWinRate": 0.13472222222222213,
+      "deltaDirectHitRate": 0.06619968745380778
+    },
+    {
+      "tl": 5,
+      "deltaWinRate": 0.1472222222222222,
+      "deltaDirectHitRate": 0.046136035102798734
+    },
+    {
+      "tl": 6,
+      "deltaWinRate": 0.10347222222222219,
+      "deltaDirectHitRate": 0.0566224336084179
+    },
+    {
+      "tl": 7,
+      "deltaWinRate": 0.057638888888888906,
+      "deltaDirectHitRate": 0.03698635424226493
+    }
+  ],
+  "selectedSwarmerSensitivity": [
+    {
+      "comparisonId": "early-pds-10",
+      "tl": 2,
+      "axis": "swarmer_pds_saturation",
+      "deltaWinRate": 0.05277777777777781,
+      "deltaPdsInterceptPerAttempt": -0.05672664318686503
+    },
+    {
+      "comparisonId": "early-pds-10",
+      "tl": 3,
+      "axis": "swarmer_pds_saturation",
+      "deltaWinRate": -0.009027777777777746,
+      "deltaPdsInterceptPerAttempt": -0.07552793733573561
+    },
+    {
+      "comparisonId": "tl3-packet-step",
+      "tl": 3,
+      "axis": "swarmer_packet_damage",
+      "deltaWinRate": 0.49999999999999994,
+      "deltaPdsInterceptPerAttempt": 0.02338437787482711
+    },
+    {
+      "comparisonId": "mid-packet-upper",
+      "tl": 4,
+      "axis": "swarmer_packet_damage",
+      "deltaWinRate": 0.18402777777777768,
+      "deltaPdsInterceptPerAttempt": 0.007463645367222924
+    },
+    {
+      "comparisonId": "mid-packet-upper",
+      "tl": 5,
+      "axis": "swarmer_packet_damage",
+      "deltaWinRate": 0.27986111111111106,
+      "deltaPdsInterceptPerAttempt": -1.772020897528037e-05
+    },
+    {
+      "comparisonId": "mature-pds-15",
+      "tl": 6,
+      "axis": "swarmer_pds_saturation",
+      "deltaWinRate": 0.054166666666666696,
+      "deltaPdsInterceptPerAttempt": -0.07380411377888176
+    },
+    {
+      "comparisonId": "mature-pds-15",
+      "tl": 7,
+      "axis": "swarmer_pds_saturation",
+      "deltaWinRate": 0.014583333333333393,
+      "deltaPdsInterceptPerAttempt": -0.05892329109778105
+    },
+    {
+      "comparisonId": "mature-packet-lower",
+      "tl": 6,
+      "axis": "swarmer_packet_damage",
+      "deltaWinRate": -0.257638888888889,
+      "deltaPdsInterceptPerAttempt": 0.0008320077112539404
+    },
+    {
+      "comparisonId": "mature-packet-lower",
+      "tl": 7,
+      "axis": "swarmer_packet_damage",
+      "deltaWinRate": -0.4666666666666667,
+      "deltaPdsInterceptPerAttempt": -0.012686085155699175
+    },
+    {
+      "comparisonId": "tl6-packet-upper",
+      "tl": 6,
+      "axis": "swarmer_packet_damage",
+      "deltaWinRate": 0.1944444444444443,
+      "deltaPdsInterceptPerAttempt": 0.023314803471531934
+    }
+  ],
+  "primaryProgressionPathSummary": [
+    {
+      "pathId": "energy-native",
+      "family": "Energy",
+      "meanConditionalWinRate": 0.5528935185185185,
+      "meanUnresolvedRate": 0.0
+    },
+    {
+      "pathId": "gp-cp119-frontier",
+      "family": "Missile",
+      "meanConditionalWinRate": 0.7039351851851853,
+      "meanUnresolvedRate": 0.002777777777777778
+    },
+    {
+      "pathId": "gp-hybrid-early-fission-late-fusion",
+      "family": "Missile",
+      "meanConditionalWinRate": 0.6751157407407407,
+      "meanUnresolvedRate": 0.001388888888888889
+    },
+    {
+      "pathId": "gp-maturity-delayed",
+      "family": "Missile",
+      "meanConditionalWinRate": 0.6369212962962963,
+      "meanUnresolvedRate": 0.001388888888888889
+    },
+    {
+      "pathId": "kinetic-current",
+      "family": "Kinetic",
+      "meanConditionalWinRate": 0.5209490740740741,
+      "meanUnresolvedRate": 0.0
+    },
+    {
+      "pathId": "kinetic-smart-plus10",
+      "family": "Kinetic",
+      "meanConditionalWinRate": 0.6459490740740741,
+      "meanUnresolvedRate": 0.0
+    },
+    {
+      "pathId": "kinetic-smart-plus5",
+      "family": "Kinetic",
+      "meanConditionalWinRate": 0.5851851851851851,
+      "meanUnresolvedRate": 0.0
+    },
+    {
+      "pathId": "swarmer-balanced",
+      "family": "Missile",
+      "meanConditionalWinRate": 0.5168981481481482,
+      "meanUnresolvedRate": 0.005555555555555556
+    },
+    {
+      "pathId": "swarmer-payload-conservative",
+      "family": "Missile",
+      "meanConditionalWinRate": 0.4986111111111111,
+      "meanUnresolvedRate": 0.006944444444444444
+    }
+  ],
+  "interpretation": "Five-trial authoring evidence is plumbing and rough directional evidence only. Native 2,000-trial results are required before candidate narrowing."
+}

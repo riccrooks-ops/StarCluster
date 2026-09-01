@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star-cluster-tl2-opponent-aware-range-control-catalog-schema-v0-1",
+  "title": "Star Cluster TL2 Opponent-Aware Range Control Catalog v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "checkpoint",
+    "status",
+    "baselineSha256",
+    "sourceCandidateCatalog",
+    "sourceCheckpointResults",
+    "leadingProfileId",
+    "controlProfileId",
+    "designPrinciple",
+    "balanceInterpretation",
+    "promotionPolicy",
+    "startingRanges",
+    "movementPolicy",
+    "orientationPolicy",
+    "profileIds",
+    "reportingPolicy",
+    "dominanceSignals",
+    "candidates",
+    "fixedRange5Control",
+    "policies",
+    "requestedRangeContract"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "star-cluster-tl2-opponent-aware-range-control-catalog-v1"
+    },
+    "id": {
+      "const": "tl2-opponent-aware-range-control-and-promotion-decision-v0_1"
+    },
+    "checkpoint": {
+      "const": 47
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baselineSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "sourceCandidateCatalog": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceCheckpointResults": {
+      "type": "string",
+      "minLength": 1
+    },
+    "leadingProfileId": {
+      "const": "tl2-r45-armor-step-conservative-direct-fire"
+    },
+    "controlProfileId": {
+      "const": "tl2-r45-hull-step-conservative-direct-fire"
+    },
+    "designPrinciple": {
+      "type": "string",
+      "minLength": 20
+    },
+    "balanceInterpretation": {
+      "type": "string",
+      "minLength": 20
+    },
+    "promotionPolicy": {
+      "type": "string",
+      "minLength": 20
+    },
+    "startingRanges": {
+      "const": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "movementPolicy": {
+      "type": "string",
+      "minLength": 20
+    },
+    "orientationPolicy": {
+      "type": "string",
+      "minLength": 20
+    },
+    "profileIds": {
+      "const": [
+        "tl2-r45-armor-step-conservative-direct-fire",
+        "tl2-r45-hull-step-conservative-direct-fire"
+      ]
+    },
+    "reportingPolicy": {
+      "type": "object"
+    },
+    "dominanceSignals": {
+      "type": "object"
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "status",
+          "analysisRole",
+          "designThesis",
+          "componentNames",
+          "defense",
+          "powerAndControl",
+          "movement",
+          "weapons"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "fixedRange5Control": {
+      "type": "object",
+      "required": [
+        "familyPair",
+        "range"
+      ],
+      "properties": {
+        "familyPair": {
+          "const": [
+            "Kinetic",
+            "Energy"
+          ]
+        },
+        "range": {
+          "const": 5
+        }
+      },
+      "additionalProperties": false
+    },
+    "policies": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "movementMode",
+          "role"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "movementMode": {
+            "enum": [
+              "PreferredRange",
+              "OpponentAwareRange"
+            ]
+          },
+          "role": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "requestedRangeContract": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "ownFamily",
+          "opponentFamily",
+          "requestedRange",
+          "basis"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "ownFamily": {
+            "enum": [
+              "Kinetic",
+              "Energy",
+              "Missile"
+            ]
+          },
+          "opponentFamily": {
+            "enum": [
+              "Kinetic",
+              "Energy",
+              "Missile"
+            ]
+          },
+          "requestedRange": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 7
+          },
+          "basis": {
+            "enum": [
+              "StandoffAdvantage",
+              "ShorterRangePressure",
+              "PeerEnvelope",
+              "UnknownTargetFallback"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

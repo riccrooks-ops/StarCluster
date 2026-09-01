@@ -1,0 +1,62 @@
+{
+  "checkpoint": 120,
+  "title": "Weapon Progression Sensitivity Mapping",
+  "acceptedBaseline": 119,
+  "status": "candidate_pending_native_acceptance",
+  "automaticPromotion": false,
+  "productionSourceChanged": false,
+  "simulationResearchChanged": true,
+  "numericalMatrixChanged": false,
+  "conceptChanged": false,
+  "playerAuthorityChanged": false,
+  "substantiveMonteCarloTrials": 8568000,
+  "expected": {
+    "repositoryOwnedFiles": 2557,
+    "jsonFilesMinimum": 720,
+    "pythonSelfTests": 109,
+    "parityCases": 25,
+    "frozenCSharpAndTests": 561,
+    "frozenResearchUnchanged": 26,
+    "frozenPlayerAuthorityFiles": 11,
+    "frozenCp119CheckpointAuthorityFiles": 12,
+    "studyVariants": 4284,
+    "missileVariants": 2952,
+    "kineticVariants": 1008,
+    "energyVariants": 324,
+    "exactFillBuilds": 135,
+    "missileProfiles": 32,
+    "kineticProfiles": 6,
+    "energyProfiles": 1,
+    "targetFixtures": 9,
+    "controlledFixtures": 3,
+    "sensitivityComparisons": 22,
+    "candidateProgressionPaths": 9,
+    "primaryVariants": 3060,
+    "advancedVariants": 576,
+    "endpointVariants": 648,
+    "authoringTrialsPerVariant": 5,
+    "authoringEngagements": 21420,
+    "nativeTrialsPerVariant": 2000,
+    "nativeEngagements": 8568000,
+    "cp114RegressionVariants": 3184,
+    "cp115aRegressionVariants": 4064,
+    "cp116RegressionVariants": 2976,
+    "cp118RegressionVariants": 1824,
+    "cp119RegressionVariants": 1152,
+    "primaryCalibrationTls": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "advancedValidationTls": [
+      7
+    ],
+    "endpointStressTls": [
+      8,
+      9
+    ]
+  }
+}

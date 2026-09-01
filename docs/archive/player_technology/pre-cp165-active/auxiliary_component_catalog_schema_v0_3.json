@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Star Cluster Support Component Catalog v0.4 Reference Sweep",
+  "type": "object",
+  "required": ["schemaVersion", "checkpoint", "foundation", "components", "integratedStandardAuxSystems", "cp138ShieldAuxVetting"],
+  "properties": {
+    "schemaVersion": {"const": "star-cluster-installed-support-component-catalog-v0.4"},
+    "checkpoint": {"const": 138},
+    "foundation": {"type": "object"},
+    "components": {
+      "type": "array",
+      "minItems": 35,
+      "maxItems": 35,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "owner", "window", "kind", "space", "status", "gameplayLoop", "mechanicalIdentity", "notes", "referenceBasis", "referenceCoverage", "referencePhilosophies", "sweepDisposition", "cp138CombatExecution"],
+        "properties": {
+          "referenceBasis": {"type": "array", "minItems": 1},
+          "referencePhilosophies": {"type": "array", "minItems": 1},
+          "cp138CombatExecution": {"type": "boolean"}
+        }
+      }
+    },
+    "integratedStandardAuxSystems": {"type": "array", "minItems": 2, "maxItems": 2},
+    "cp138ShieldAuxVetting": {"type": "object"}
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "star-cluster-checkpoint-validation-suite-policy-v1",
+  "checkpointId": "88",
+  "suiteTier": "must_run",
+  "mustRun": {
+    "legalBuildCount": 512,
+    "namedRecipeCount": 29,
+    "logicalPairingCount": 96,
+    "generatedVariantCount": 288,
+    "smokeTrialsPerVariant": 1,
+    "substantiveTrialsPerVariant": 10000,
+    "scenarioRunnerSelfTestsExpected": 54,
+    "absoluteCombatViabilityGateRequired": true,
+    "dynamicCombatActivityGateRequired": true,
+    "actualConsumerPreflightRequired": true
+  },
+  "constructionLegality": {
+    "minimumMainWeaponCount": 1,
+    "minimumReactorCount": 1,
+    "optionalSecondMainWeapon": true,
+    "optionalSecondReactor": true,
+    "simultaneousTacticalPowerSufficiencyRequired": false
+  },
+  "doctrine": {
+    "aiDoctrineId": "tl1-ew-preserve-combat-package-v1",
+    "ratedEwCostRequired": true,
+    "hiddenEnemyRatingsAllowed": false
+  },
+  "promotion": {
+    "automaticCandidatePromotion": false,
+    "winRateTargetsBlocking": false
+  },
+  "deepCalibration": {
+    "defaultRun": false,
+    "reason": "CP88 normal screening is sufficient to validate infrastructure and diagnose information-control/power cliffs; older stochastic regressions remain dependency-driven."
+  }
+}

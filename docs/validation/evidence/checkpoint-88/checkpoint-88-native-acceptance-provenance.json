@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "88",
+  "status": "accepted_native_baseline",
+  "acceptanceSummary": {
+    "status": "Success",
+    "checkpointDefinition": "tools/calibration/checkpoints/checkpoint-88.json",
+    "checkpointDefinitionSha256": "f4085cca9af0dafa6866d01cdcfa7244fd50c89753c266a4685e537a374cb2b1",
+    "checkpointManifestSha256": "c1f389f86633903cf38c608ed791827c2e91eb7f8e50923a7ff5589b8f2f75fa",
+    "sdkExpected": "8.0.423",
+    "sdkActual": "8.0.423",
+    "buildWarnings": 0,
+    "buildErrors": 0,
+    "testsTotal": 863,
+    "testsPassed": 863,
+    "runnerStagesPassed": 13,
+    "runnerStagesFailed": 0,
+    "scenarioRunnerSelfTests": 54,
+    "smokeVariantExecutions": 288,
+    "primaryStudyId": "tl2-itc14-cross-tl-power-aware-information-control-screening",
+    "primaryVariantCount": 288,
+    "primaryTrialsPerVariant": 10000,
+    "primaryTotalTrials": 2880000,
+    "failedGates": 0,
+    "primarySummarySha256": "df4714078ed6a9884e40a34652864b44788ea606b69606ff82fbc8d1c6e1b5c9"
+  },
+  "validatedInfrastructure": {
+    "ratedCostPreserveCombatPackageDoctrine": true,
+    "absoluteFixedReferenceCombatViabilityGate": true,
+    "dynamicCombatActivityPreservationGate": true,
+    "mandatoryMinimumMainWeaponCount": 1,
+    "mandatoryMinimumReactorCount": 1,
+    "legalBuildCountInCurrentExactFillEnvelope": 512,
+    "generatedVariantCount": 288
+  },
+  "screeningWarnings": {
+    "informationControlFirmDenialCliffObserved": true,
+    "approximateFullTl2VsTl1AverageConditionalWinPercent": 80.8,
+    "candidatePromotionFromScreen": false,
+    "interpretation": "The remaining ECM2/Firm-only legacy interaction is a cross-generation integration diagnostic, not an automatic reason to retune ECM in isolation."
+  }
+}

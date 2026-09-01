@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "star-cluster-checkpoint54-tl3-aux-loadout-inventory-v1",
+  "checkpoint": 54,
+  "status": "candidate_screening_only",
+  "auxiliaryCapacity": 2,
+  "stackingPolicy": "Two distinct capacity-1 effects may be paired; same-source stacking remains prohibited unless explicitly allowed. Auxiliary Reactor consumes both capacity points by itself.",
+  "executionBoundary": "Composite runtime profiles preserve combined combat effects for screening. They are not a final representation of separate component damage exposure.",
+  "normalLoadouts": [
+    {
+      "id": "aux-r54-kpds-shield-battery",
+      "displayName": "Kinetic PDS + Shield Battery",
+      "familyId": "aux_combo_kpds_shield_battery",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r54-epds-shield-battery",
+      "displayName": "Energy PDS + Shield Battery",
+      "familyId": "aux_combo_epds_shield_battery",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r54-amm-shield-battery",
+      "displayName": "AMM + Shield Battery",
+      "familyId": "aux_combo_amm_shield_battery",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r54-ablative-kpds",
+      "displayName": "Ablative Armor + Kinetic PDS",
+      "familyId": "aux_combo_ablative_kpds",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r54-ablative-evasion",
+      "displayName": "Ablative Armor + Evasive Maneuver System",
+      "familyId": "aux_combo_ablative_evasion",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r54-battery-evasion",
+      "displayName": "Combat Battery + Evasive Maneuver System",
+      "familyId": "aux_combo_battery_evasion",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r54-capacitor-epds",
+      "displayName": "Power Capacitor + Energy PDS",
+      "familyId": "aux_combo_capacitor_epds",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r54-booster-kpds",
+      "displayName": "Shield Booster + Kinetic PDS",
+      "familyId": "aux_combo_booster_kpds",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r54-stabilizer-epds",
+      "displayName": "Shield Power Stabilizer + Energy PDS",
+      "familyId": "aux_combo_stabilizer_epds",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r54-kinetic-mag-battery",
+      "displayName": "Kinetic Magazine Expansion + Combat Battery",
+      "familyId": "aux_combo_kinetic_mag_battery",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r54-missile-mag-amm",
+      "displayName": "Missile Magazine Expansion + AMM",
+      "familyId": "aux_combo_missile_mag_amm",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r54-auxiliary-reactor",
+      "displayName": "Auxiliary Reactor",
+      "familyId": "aux_auxiliary_reactor",
+      "capacityCost": 2
+    },
+    {
+      "id": "aux-r54-battery-amm",
+      "displayName": "Combat Battery + AMM",
+      "familyId": "aux_combo_battery_amm",
+      "capacityCost": 2
+    }
+  ],
+  "diagnostics": [
+    "aux-r54-none-tl2",
+    "aux-r54-none-tl3"
+  ]
+}

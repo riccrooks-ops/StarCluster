@@ -1,0 +1,273 @@
+﻿{
+    "schemaVersion":  1,
+    "checkpointId":  "98",
+    "checkpointTitle":  "Checkpoint 98 - Cross-Progression Adaptive Engage Integration Foundation",
+    "checkpointDefinition":  "tools/calibration/checkpoints/checkpoint-98.json",
+    "checkpointDefinitionSha256":  "c57f4912ccf2fa79b3085f64ec1887c599946c02712fcb48173ba9580f8ab2c5",
+    "checkpointManifest":  "CHECKPOINT_98_SHA256SUMS.txt",
+    "checkpointManifestSha256":  "f6a1b8c04bc5b237d3e80d02ee2874bb5290c5369ff367459b43c2e21b2bc126",
+    "status":  "Success",
+    "repositoryOnly":  false,
+    "startedUtc":  "2026-08-13T13:42:51.8148219Z",
+    "completedUtc":  "2026-08-13T13:43:25.0373971Z",
+    "elapsedSeconds":  33.3128039,
+    "sdk":  {
+                "expected":  "8.0.423",
+                "actual":  "8.0.423"
+            },
+    "configuration":  "Debug",
+    "requested":  {
+                      "trialsPerVariant":  250,
+                      "jobs":  24
+                  },
+    "build":  {
+                  "cleanExecuted":  true,
+                  "succeeded":  true,
+                  "warnings":  0,
+                  "errors":  0,
+                  "elapsedSeconds":  6.1037782
+              },
+    "tests":  {
+                  "succeeded":  true,
+                  "total":  876,
+                  "passed":  876,
+                  "failed":  0,
+                  "skipped":  0,
+                  "elapsedSeconds":  2.0365767999999997,
+                  "trxPath":  "out/checkpoint-98/test-results/checkpoint-tests.trx"
+              },
+    "primaryStudy":  {
+                         "id":  "tl2-itc18-cross-tl-adaptive-engage-progression-screening",
+                         "variantCount":  960,
+                         "trialsPerVariant":  250,
+                         "totalTrials":  240000
+                     },
+    "aggregates":  {
+                       "configuredRunnerStages":  19,
+                       "runnerStagesPassed":  19,
+                       "runnerStagesFailed":  0,
+                       "deterministicCases":  7,
+                       "mechanicsCases":  90,
+                       "variants":  996,
+                       "trials":  242436,
+                       "selfTests":  62,
+                       "failedGates":  0
+                   },
+    "stages":  [
+                   {
+                       "id":  "deterministic",
+                       "name":  "Accepted deterministic moving-missile scenarios",
+                       "command":  "run-all",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:01.6787830Z",
+                       "completedUtc":  "2026-08-13T13:43:02.2574693Z",
+                       "elapsedSeconds":  0.57164949999999992,
+                       "outputPath":  "out/checkpoint-98/deterministic",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "tl1-phase-a",
+                       "name":  "TL1 Phase A mechanics corpus",
+                       "command":  "tl1-phase-a",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:02.2655567Z",
+                       "completedUtc":  "2026-08-13T13:43:02.6765088Z",
+                       "elapsedSeconds":  0.408852,
+                       "outputPath":  "out/checkpoint-98/tl1-phase-a",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "tl1-phase-b",
+                       "name":  "TL1 Phase B direct-fire corpus",
+                       "command":  "tl1-phase-b",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:02.6886197Z",
+                       "completedUtc":  "2026-08-13T13:43:03.0525212Z",
+                       "elapsedSeconds":  0.36046809999999996,
+                       "outputPath":  "out/checkpoint-98/tl1-phase-b",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "tl1-installation-space-envelope",
+                       "name":  "TL1 35-Space deterministic construction envelope and nominal power diagnostics",
+                       "command":  "tl1-installation-space-envelope",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:03.0565282Z",
+                       "completedUtc":  "2026-08-13T13:43:03.4160743Z",
+                       "elapsedSeconds":  0.354719,
+                       "outputPath":  "out/checkpoint-98/tl1-installation-space-envelope",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "tl1-sensor-ew-foundation",
+                       "name":  "TL1 deterministic sensor reach, emissions, discrimination resistance, burn-through, and EW sweep",
+                       "command":  "tl1-sensor-ew-foundation",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:03.4281566Z",
+                       "completedUtc":  "2026-08-13T13:43:03.7793471Z",
+                       "elapsedSeconds":  0.3475225,
+                       "outputPath":  "out/checkpoint-98/tl1-sensor-ew-foundation",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-build-permutation-preflight",
+                       "name":  "Accepted CP96 cross-TL foundation v0.6 preflight regression",
+                       "command":  "cross-tl-build-permutation-preflight",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:03.7852174Z",
+                       "completedUtc":  "2026-08-13T13:43:04.4266715Z",
+                       "elapsedSeconds":  0.6385835,
+                       "outputPath":  "out/checkpoint-98/cross-tl-build-permutation-preflight",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-build-permutation-generation",
+                       "name":  "Accepted CP96 22,592-build / 1,440-variant generation regression",
+                       "command":  "cross-tl-build-permutation",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:04.4306932Z",
+                       "completedUtc":  "2026-08-13T13:43:05.1998502Z",
+                       "elapsedSeconds":  0.7666238,
+                       "outputPath":  "out/checkpoint-98/cross-tl-build-permutation",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-generated-study-preflight",
+                       "name":  "Generated CP96 actual-consumer preflight regression",
+                       "command":  "tl1-integrated-tactical-combat-preflight",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:05.2079552Z",
+                       "completedUtc":  "2026-08-13T13:43:05.6479564Z",
+                       "elapsedSeconds":  0.4373819,
+                       "outputPath":  "out/checkpoint-98/cross-tl-generated-study-preflight",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-generated-study-smoke",
+                       "name":  "Generated CP96 1,440-variant one-trial regression smoke",
+                       "command":  "tl1-integrated-tactical-combat",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:05.6559985Z",
+                       "completedUtc":  "2026-08-13T13:43:06.7149964Z",
+                       "elapsedSeconds":  1.0546005999999999,
+                       "outputPath":  "out/checkpoint-98/cross-tl-generated-study-smoke",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "adaptive-engage-preflight",
+                       "name":  "CP97 36-variant Adaptive Engage actual-consumer preflight",
+                       "command":  "tl1-integrated-tactical-combat-preflight",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:07.3178264Z",
+                       "completedUtc":  "2026-08-13T13:43:07.7337623Z",
+                       "elapsedSeconds":  0.4111515,
+                       "outputPath":  "out/checkpoint-98/adaptive-engage-preflight",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "adaptive-engage-smoke",
+                       "name":  "CP97 36-variant one-trial Adaptive Engage full-pipeline smoke",
+                       "command":  "tl1-integrated-tactical-combat",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:07.7382337Z",
+                       "completedUtc":  "2026-08-13T13:43:08.2547847Z",
+                       "elapsedSeconds":  0.5106049,
+                       "outputPath":  "out/checkpoint-98/adaptive-engage-smoke",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp98-progression-preflight",
+                       "name":  "CP98 cross-progression foundation v0.7 deterministic preflight",
+                       "command":  "cross-tl-build-permutation-preflight",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:08.2718424Z",
+                       "completedUtc":  "2026-08-13T13:43:09.0685851Z",
+                       "elapsedSeconds":  0.7934078,
+                       "outputPath":  "out/checkpoint-98/cross-tl-cp98-progression-preflight",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp98-progression-generation",
+                       "name":  "CP98 22,592-build / 65,648-edge / 960-variant Adaptive Engage generation",
+                       "command":  "cross-tl-build-permutation",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:09.0757205Z",
+                       "completedUtc":  "2026-08-13T13:43:10.1152566Z",
+                       "elapsedSeconds":  1.0382865,
+                       "outputPath":  "out/checkpoint-98/cross-tl-cp98-progression",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp98-generated-study-preflight",
+                       "name":  "CP98 960-variant Adaptive Engage actual-consumer preflight",
+                       "command":  "tl1-integrated-tactical-combat-preflight",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:10.1233853Z",
+                       "completedUtc":  "2026-08-13T13:43:10.5458572Z",
+                       "elapsedSeconds":  0.42043729999999996,
+                       "outputPath":  "out/checkpoint-98/cross-tl-cp98-generated-study-preflight",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp98-generated-study-smoke",
+                       "name":  "CP98 960-variant one-trial Adaptive Engage full-pipeline smoke",
+                       "command":  "tl1-integrated-tactical-combat",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:10.5905730Z",
+                       "completedUtc":  "2026-08-13T13:43:11.4035549Z",
+                       "elapsedSeconds":  0.80874669999999993,
+                       "outputPath":  "out/checkpoint-98/cross-tl-cp98-generated-study-smoke",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "cross-tl-cp98-progression-study",
+                       "name":  "CP98 cross-progression Adaptive Engage integration screening",
+                       "command":  "tl1-integrated-tactical-combat",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:11.7868822Z",
+                       "completedUtc":  "2026-08-13T13:43:23.0030476Z",
+                       "elapsedSeconds":  11.2152589,
+                       "outputPath":  "out/checkpoint-98/cross-tl-cp98-progression-study",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "auxiliary-resource-endurance",
+                       "name":  "Deterministic finite-resource and recharge endurance stress study",
+                       "command":  "auxiliary-resource-endurance",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:23.4797004Z",
+                       "completedUtc":  "2026-08-13T13:43:23.8854137Z",
+                       "elapsedSeconds":  0.4009192,
+                       "outputPath":  "out/checkpoint-98/auxiliary-resource-endurance",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "checkpoint-53-resource-semantics-lock",
+                       "name":  "Checkpoint 53 deterministic Battery, Capacitor, AMM, and magazine resource-semantics lock",
+                       "command":  "auxiliary-resource-endurance",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:23.8924141Z",
+                       "completedUtc":  "2026-08-13T13:43:24.2561571Z",
+                       "elapsedSeconds":  0.3596379,
+                       "outputPath":  "out/checkpoint-98/checkpoint-53-resource-semantics-lock",
+                       "failedGates":  0
+                   },
+                   {
+                       "id":  "runner-self-tests",
+                       "name":  "ScenarioRunner self-tests",
+                       "command":  "self-test",
+                       "status":  "Passed",
+                       "startedUtc":  "2026-08-13T13:43:24.2602189Z",
+                       "completedUtc":  "2026-08-13T13:43:25.0289865Z",
+                       "elapsedSeconds":  0.7647233,
+                       "outputPath":  null,
+                       "failedGates":  0
+                   }
+               ],
+    "outputPaths":  {
+                        "root":  "out/checkpoint-98",
+                        "acceptanceJson":  "out/checkpoint-98/acceptance-summary.json",
+                        "acceptanceText":  "out/checkpoint-98/acceptance-summary.txt"
+                    },
+    "firstFailure":  null
+}

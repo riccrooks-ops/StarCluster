@@ -1,0 +1,118 @@
+{
+  "checkpoint": 85,
+  "suiteTier": "must_always_run",
+  "acceptedBaseline": "84",
+  "blockingBalanceTargets": false,
+  "normal": {
+    "stageCount": 11,
+    "monteCarloVariantCount": 288,
+    "substantiveTrials": 2880000,
+    "smokeVariants": 288,
+    "smokeTrials": 288,
+    "totalTrialExecutions": 2880288
+  },
+  "deepCalibration": {
+    "stageCount": 36,
+    "monteCarloVariantCount": 1982,
+    "substantiveTrials": 19820000,
+    "smokeVariants": 438,
+    "smokeTrials": 438,
+    "totalTrialExecutions": 19820438
+  },
+  "acceptedTl2WorkingPackage": {
+    "tacticalComputerTargetingPp": 12,
+    "degradedFirePenaltyPp": 25,
+    "evasiveCompensationPp": 0,
+    "sensorDiscriminationResistance": 1,
+    "ecmNormalCeiling": 2,
+    "eccmNormalCeiling": 2,
+    "ewTpPerRating": 1,
+    "earlyPracticalFusionOperationalTp": 6,
+    "earlyPracticalFusionSpace": 6,
+    "shieldCapacity": 3,
+    "shieldGeneratorSpace": 3
+  },
+  "armorControls": {
+    "tl1ReferenceArmorProtection": 0,
+    "tl1ReferenceArmorIntegrity": 4,
+    "primaryArmorSpaceHeld": 0,
+    "integrityCandidate": {
+      "armorProtection": 0,
+      "armorIntegrity": 5
+    },
+    "protectionCandidate": {
+      "armorProtection": 1,
+      "armorIntegrity": 4
+    },
+    "combinedUpperIntegrationSensitivity": {
+      "armorProtection": 1,
+      "armorIntegrity": 5
+    },
+    "sideBArmorHeld": {
+      "armorProtection": 0,
+      "armorIntegrity": 4
+    },
+    "weaponApenHeld": {
+      "Kinetic": 0,
+      "Energy": 1,
+      "Missile": 2
+    },
+    "productionArmorPromoted": false
+  },
+  "shieldIntegrationControls": {
+    "sideAShieldCapacities": [
+      2,
+      3
+    ],
+    "sideBShieldCapacity": 2,
+    "shield3Status": "validated TL2 working candidate",
+    "shieldGeneratorSpaceHeld": 3,
+    "rechargeChanged": false,
+    "hardeningChanged": false,
+    "conditionMappingChanged": false
+  },
+  "permutationSuiteControls": {
+    "suiteId": "technology-integration-permutation-suite-v0_5",
+    "studyId": "tl2-itc11-armor-ap-ai-shield-integration-permutations",
+    "sideAWeaponFamilies": [
+      "Kinetic",
+      "Energy"
+    ],
+    "opponentFamilies": [
+      "Kinetic",
+      "Energy",
+      "Missile"
+    ],
+    "geometryCount": 3,
+    "informationControlEnvironments": [
+      "firm-reference",
+      "tall-dr1-eccm1"
+    ],
+    "sideAShieldCapacities": [
+      2,
+      3
+    ],
+    "sideAArmorPackages": [
+      "ap0-ai4",
+      "ap0-ai5",
+      "ap1-ai4",
+      "ap1-ai5"
+    ],
+    "sideAReactorOutput": 6,
+    "sideBReactorOutput": 5,
+    "comparisonGroupCount": 18,
+    "variantsPerComparisonGroup": 16,
+    "pairedCommonRandomStreams": true,
+    "statefulTurnPowerPlanning": true,
+    "automaticFullCartesianRerun": false
+  },
+  "promotionBoundary": {
+    "automaticPromotion": false,
+    "ap0Ai5MayAdvanceAfterHumanReview": true,
+    "ap1Ai4MayAdvanceAfterHumanReview": true,
+    "ap1Ai5IsUpperIntegrationSensitivityByDefault": true,
+    "cp83ReactorWorkingCandidateCarriedForward": true,
+    "cp84Shield3WorkingCandidateCarriedForward": true,
+    "otherArmorPropertiesRemainDeferred": true
+  }
+}

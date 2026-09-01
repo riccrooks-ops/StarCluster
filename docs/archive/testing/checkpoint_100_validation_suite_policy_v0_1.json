@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-100-validation-suite-policy-v0_1",
+  "checkpoint": "100",
+  "status": "tl3_core_technology_table_foundation_release_policy",
+  "mustAlwaysRun": {
+    "nativeDependencyPrecheck": true,
+    "repositoryContract": true,
+    "manifestAndPowerShellSyntax": true,
+    "pinnedSdk": true,
+    "warningsAsErrorsBuild": true,
+    "unitTests": true,
+    "deterministicAndMechanicsGates": true,
+    "acceptedCp99ExactEdgePreflightRegression": true,
+    "acceptedCp99ExactEdgeGenerationRegression": true,
+    "runnerSelfTests": true,
+    "cp99SubstantiveReplay": false,
+    "newMonteCarloStudy": false
+  },
+  "acceptedBaseline": {
+    "checkpoint": 99,
+    "checkpointDefinitionSha256": "e5bf5312ab520a425df0fbf63d796e98f35b51d5110260edab1856f54af7d508",
+    "checkpointManifestSha256": "f04186733fa1631bc0ee8384fe4e49f18e65dc07aba04e877773e402d4d56894",
+    "substantiveSummarySha256": "dd05e92896a273f55ea486e3ba8cbe340556fde75a018e19aea1e1877f9849a0"
+  },
+  "acceptedExecutableCrossProgression": {
+    "foundation": "v0.8",
+    "legalBuilds": 11776,
+    "progressionLegalEdges": 37184,
+    "exactEdgeStrata": 181,
+    "logicalPairings": 362,
+    "generatedVariants": 724,
+    "mandatorySensor": true
+  },
+  "tl3CoreRegistration": {
+    "profile": "docs/design/player_technology/tl3_core_technology_candidates_v0_1.json",
+    "standingSuite": "v0.15",
+    "registeredTransitionCount": 7,
+    "combatConsumerEnabled": false,
+    "reactorSpaceDelta": -1,
+    "shieldHardenerTransitionType": "optional_component_unlock",
+    "heldWeaponPenetration": true,
+    "deferredStreams": ["weapon-family progression", "PDS", "STL", "FTL", "broader Auxiliaries"]
+  },
+  "authorityBoundary": {
+    "technologyPromotionAutomatic": false,
+    "productionCombatDataChanged": false,
+    "initiativeRuleChange": false,
+    "tl3CombatMechanicsImplemented": false
+  },
+  "preflight": {
+    "acceptedCp99ProvenanceAndFreeze": true,
+    "tl3CrossAuthorityValueConsistency": true,
+    "transitionTypeAndSpaceSemantics": true,
+    "noAccidentalTl3RuntimeActivation": true,
+    "noSymmetricPlaceholderProgression": true,
+    "checkpointExecutionArithmetic": true,
+    "powerShell51TypeTokenAudit": true
+  },
+  "expected": {
+    "xunitTests": 876,
+    "runnerStages": 10,
+    "scenarioRunnerSelfTests": 63,
+    "totalTrialExecutions": 0
+  },
+  "deepCalibration": {
+    "applicable": false,
+    "aliasUsesSameBoundedWorkload": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "star-cluster-cp131-accepted-baseline-provenance-v0.1",
+  "checkpoint": 131,
+  "acceptedDate": "2026-08-18",
+  "fullRepositoryArchiveSha256": "d02b6a5e1b0b32cd30a0e8f25c45cca1e8b6e4d5083431d9a67ec2062513037d",
+  "nativeResultsArchiveSha256": "29078acbdf8f270b77d66b6c4a469e4730388db5aae01d5eebbc2a4d6551641b",
+  "nativeResultsArchive": "docs/validation/evidence/checkpoint-132/accepted-cp131/CP131_NATIVE_RESULTS_ORIGINAL.zip",
+  "nativeAcceptanceSummary": "docs/validation/evidence/checkpoint-132/accepted-cp131/CP131_NATIVE_ACCEPTANCE_SUMMARY.json",
+  "note": "CP132 starts from the user-uploaded, native-accepted CP131 full repository and native results. The CP131 full repository archive is referenced by hash rather than nested inside CP132."
+}

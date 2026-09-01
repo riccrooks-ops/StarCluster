@@ -1,0 +1,820 @@
+{
+  "schemaVersion": "star-cluster-tl2-defensive-micro-refinement-catalog-v1",
+  "id": "tl2-defensive-micro-refinement-and-choice-viability-v0_1",
+  "checkpoint": 45,
+  "status": "diagnostic_candidate_only",
+  "baselineSha256": "cff1b6caca7eb4d32d08a140fba3c645d98c1275ef13b4185f830dccfbd49d19",
+  "sourceCandidateCatalog": "src/StarCluster.ScenarioRunner/Scenarios/TL2Scaling/tl2-package-attribution-and-refinement-v0_1.json",
+  "sourceCheckpointResults": "out/checkpoint-44/tl2-package-attribution-and-refinement",
+  "designPrinciple": "Preserve family identity first; tune characteristics and TL placement to prevent compulsory choices rather than force equal results.",
+  "balanceInterpretation": "Numerical bands are diagnostics. Era-specific strength is acceptable; universal dominance, irrelevance, or role convergence is not.",
+  "promotionPolicy": "No profile is promoted automatically. Select only after fixed, movement, pacing, decisive-coverage, family-progression, and choice-viability evidence are reviewed together.",
+  "profileIds": [
+    "tl2-r45-null-control",
+    "tl2-r45-identity-control",
+    "tl2-r45-shield-tempered-control",
+    "tl2-r45-structure-tempered-control",
+    "tl2-r45-defense-neutral",
+    "tl2-r45-hull-step",
+    "tl2-r45-armor-integrity-step",
+    "tl2-r45-hull-step-conservative-direct-fire",
+    "tl2-r45-armor-step-conservative-direct-fire"
+  ],
+  "sameTlProfileIds": [
+    "tl2-r45-identity-control",
+    "tl2-r45-defense-neutral",
+    "tl2-r45-hull-step",
+    "tl2-r45-armor-integrity-step",
+    "tl2-r45-hull-step-conservative-direct-fire",
+    "tl2-r45-armor-step-conservative-direct-fire"
+  ],
+  "ranges": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "movementLanes": {
+    "preferredRange": "both orientations; ordinary combat review",
+    "pursuitCombat": "TL2 profile is Side A pursuer; disengagement disabled",
+    "escapeControl": "TL2 profile is Side B withdrawing ship; disengagement enabled and reported separately"
+  },
+  "reportingPolicy": {
+    "headlineCrossTlMetric": "pooled conditional win share across decisive trials",
+    "requiredCoverageMetric": "decisive trial coverage",
+    "lowCoverageThresholdPercent": 50,
+    "combatCoverageReviewThresholdPercent": 80,
+    "equalWeightedVariantAverage": "secondary diagnostic only",
+    "escapeLanesExcludedFromCombatAggregate": true
+  },
+  "dominanceSignals": {
+    "sameFamilyExcessiveProgressionPercent": 80,
+    "mutualEnvelopeCrossFamilyDominancePercent": 75,
+    "mutualEnvelopeCrossFamilyIrrelevancePercent": 25,
+    "minimumMeaningfulFamilyDifferences": 2,
+    "blocking": false
+  },
+  "candidateLogic": {
+    "defenseNeutralAnchor": [
+      "Hull 12",
+      "Armor Integrity 4",
+      "Shield Capacity 2",
+      "Targeting +12",
+      "Effective PDS 46"
+    ],
+    "structuralMicroSteps": [
+      "Hull +1 only",
+      "Armor Integrity +1 only"
+    ],
+    "conservativeDirectFire": [
+      "Kinetic accuracy +3 over TL1",
+      "Energy accuracy +3 over TL1"
+    ],
+    "retainedIdentity": [
+      "Ship Move 2",
+      "Missile Move 3",
+      "Reactor 6",
+      "Standard commitment 3",
+      "Missile guidance 60",
+      "Missile range 7"
+    ]
+  },
+  "identityGuardrails": {
+    "coreAttributes": [
+      "damage",
+      "accuracy-or-guidance",
+      "maximum-range"
+    ],
+    "supportAttributes": [
+      "shield-penetration",
+      "armor-penetration",
+      "power-cost",
+      "ammunition-model"
+    ],
+    "minimumMeaningfulDifferencesPerPair": 2,
+    "noEqualResultRequirement": true,
+    "tlEraTrendsAllowed": true
+  },
+  "candidates": [
+    {
+      "id": "tl2-r45-null-control",
+      "label": "TL2 Null-Vector Control",
+      "status": "diagnostic-candidate-not-promoted",
+      "analysisRole": "null_control",
+      "designThesis": "Exact TL1 combat vector under a TL2 diagnostic identifier; verifies that routing and labels create no hidden advantage.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 5,
+        "targetingBonus": 10,
+        "effectivePdsChance": 45,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 2
+      },
+      "movement": {
+        "shipMove": 1,
+        "missileMove": 2
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 1,
+          "armorPenetration": 0,
+          "accuracyBonus": 20,
+          "guidanceChance": 0,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 25,
+          "guidanceChance": 0,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "accuracyBonus": 0,
+          "guidanceChance": 55,
+          "maximumRange": 6,
+          "powerCost": 0,
+          "ammunition": 25
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names and values do not imply promotion.",
+        "Weapon-family characteristics remain distinct; this profile changes strength without converging family roles."
+      ]
+    },
+    {
+      "id": "tl2-r45-identity-control",
+      "label": "Checkpoint 42 Identity Control",
+      "status": "diagnostic-candidate-not-promoted",
+      "designThesis": "Retains the original identity-preserving package as an upper comparison control without promoting any value.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 15,
+        "effectivePdsChance": 48,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names and values do not imply promotion.",
+        "Weapon-family characteristics remain distinct; this profile changes strength without converging family roles."
+      ],
+      "analysisRole": "retained_control"
+    },
+    {
+      "id": "tl2-r45-shield-tempered-control",
+      "label": "Checkpoint 44 Shield-Tempered Control",
+      "status": "diagnostic-candidate-not-promoted",
+      "analysisRole": "retained_control",
+      "designThesis": "Retains the best prior no-shield-increment probe so new micro-refinements can be compared to accepted attribution evidence.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names and values do not imply promotion.",
+        "Weapon-family characteristics remain distinct; this profile changes strength without converging family roles."
+      ]
+    },
+    {
+      "id": "tl2-r45-structure-tempered-control",
+      "label": "Checkpoint 44 Structure-Tempered Control",
+      "status": "diagnostic-candidate-not-promoted",
+      "analysisRole": "retained_control",
+      "designThesis": "Retains the prior no-structure-increment probe so the cost of the TL2 shield step remains visible.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 3,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names and values do not imply promotion.",
+        "Weapon-family characteristics remain distinct; this profile changes strength without converging family roles."
+      ]
+    },
+    {
+      "id": "tl2-r45-defense-neutral",
+      "label": "Defense-Neutral Anchor",
+      "status": "diagnostic-candidate-not-promoted",
+      "analysisRole": "micro_refinement_probe",
+      "designThesis": "Uses moderated fire control, full propulsion, power, weapons, and missile guidance while retaining TL1 Hull, Armor Integrity, and Shield Capacity.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names and values do not imply promotion.",
+        "Weapon-family characteristics remain distinct; this profile changes strength without converging family roles."
+      ]
+    },
+    {
+      "id": "tl2-r45-hull-step",
+      "label": "Hull-Step Candidate",
+      "status": "diagnostic-candidate-not-promoted",
+      "analysisRole": "micro_refinement_probe",
+      "designThesis": "Adds one Hull point to the defense-neutral anchor while retaining TL1 Armor Integrity and Shield Capacity.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names and values do not imply promotion.",
+        "Weapon-family characteristics remain distinct; this profile changes strength without converging family roles."
+      ]
+    },
+    {
+      "id": "tl2-r45-armor-integrity-step",
+      "label": "Armor-Integrity-Step Candidate",
+      "status": "diagnostic-candidate-not-promoted",
+      "analysisRole": "micro_refinement_probe",
+      "designThesis": "Adds one Armor Integrity point to the defense-neutral anchor while retaining TL1 Hull and Shield Capacity.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 25,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 30,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names and values do not imply promotion.",
+        "Weapon-family characteristics remain distinct; this profile changes strength without converging family roles."
+      ]
+    },
+    {
+      "id": "tl2-r45-hull-step-conservative-direct-fire",
+      "label": "Hull Step + Conservative Direct Fire",
+      "status": "diagnostic-candidate-not-promoted",
+      "analysisRole": "micro_refinement_probe",
+      "designThesis": "Retains the one-Hull structural step but reduces the direct-fire accuracy increment from five to three percentage points for both direct-fire families.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 13,
+        "armorIntegrity": 4,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 23,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 28,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names and values do not imply promotion.",
+        "Weapon-family characteristics remain distinct; this profile changes strength without converging family roles."
+      ]
+    },
+    {
+      "id": "tl2-r45-armor-step-conservative-direct-fire",
+      "label": "Armor Step + Conservative Direct Fire",
+      "status": "diagnostic-candidate-not-promoted",
+      "analysisRole": "micro_refinement_probe",
+      "designThesis": "Retains the one-Armor-Integrity structural step but reduces the direct-fire accuracy increment from five to three percentage points for both direct-fire families.",
+      "componentNames": {
+        "hull": "Reinforced Spaceframe",
+        "armor": "Ceramic Composite Plating",
+        "shield": "Magnetoplasma Screen",
+        "reactor": "Fusion Reactor",
+        "stl": "Fusion Torch Drive",
+        "sensors": "Multispectral Sensor Suite",
+        "computer": "Photonic Tactical Computer",
+        "kinetic": "Coil Cannon",
+        "energy": "Pulsed Laser Cannon",
+        "missile": "Fusion Missile Flight"
+      },
+      "defense": {
+        "hull": 12,
+        "armorIntegrity": 5,
+        "armorProtection": 0,
+        "shieldCapacity": 2,
+        "shieldBaseRecharge": 1,
+        "shieldArmor": 0
+      },
+      "powerAndControl": {
+        "reactorOutput": 6,
+        "targetingBonus": 12,
+        "effectivePdsChance": 46,
+        "pdsPower": 1,
+        "standardCombatPowerCommitment": 3
+      },
+      "movement": {
+        "shipMove": 2,
+        "missileMove": 3
+      },
+      "weapons": {
+        "kinetic": {
+          "damage": 4,
+          "shieldPenetration": 0,
+          "armorPenetration": 0,
+          "accuracyBonus": 23,
+          "maximumRange": 4,
+          "powerCost": 1,
+          "ammunition": 100,
+          "guidanceChance": 0
+        },
+        "energy": {
+          "damage": 3,
+          "shieldPenetration": 1,
+          "armorPenetration": 1,
+          "accuracyBonus": 28,
+          "maximumRange": 5,
+          "powerCost": 2,
+          "ammunition": null,
+          "guidanceChance": 0
+        },
+        "missile": {
+          "damage": 5,
+          "shieldPenetration": 1,
+          "armorPenetration": 2,
+          "guidanceChance": 60,
+          "maximumRange": 7,
+          "powerCost": 0,
+          "ammunition": 25,
+          "accuracyBonus": 0
+        }
+      },
+      "referenceInfluences": [
+        "MOO2_MANUAL",
+        "T4_STARSHIPS",
+        "GURPS_SPACE",
+        "STARFIRE_ULTRA_COMPLETE"
+      ],
+      "namingReview": [
+        "Diagnostic profile only; component names and values do not imply promotion.",
+        "Weapon-family characteristics remain distinct; this profile changes strength without converging family roles."
+      ]
+    }
+  ]
+}

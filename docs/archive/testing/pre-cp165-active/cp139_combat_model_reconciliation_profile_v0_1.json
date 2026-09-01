@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "star-cluster-cp139-combat-model-reconciliation-profile-v0.1",
+  "checkpoint": 139,
+  "baseCheckpoint": 138,
+  "productionDamageModel": "penetration-hardening-v1",
+  "researchDamageModel": "def-res-v1",
+  "productionAuthorityUnmodified": true,
+  "shieldDef": {
+    "byTl": {
+      "1": 20,
+      "2": 22,
+      "3": 24,
+      "4": 26,
+      "5": 28,
+      "6": 30,
+      "7": 32,
+      "8": 34,
+      "9": 36
+    },
+    "effectiveCapPp": 45,
+    "hardenerBonusPp": 10,
+    "semantics": "whole-packet stochastic deflection; SPEN reduces DEF"
+  },
+  "armorRes": {
+    "byTl": {
+      "1": 20,
+      "2": 22,
+      "3": 24,
+      "4": 26,
+      "5": 28,
+      "6": 30,
+      "7": 32,
+      "8": 34,
+      "9": 36
+    },
+    "effectiveCapPp": 95,
+    "semantics": "fractional mitigation; APEN reduces RES; overflow after collapse is unmitigated"
+  },
+  "swarmer": {
+    "magazineFlightsConsumed": 1,
+    "subFlights": 2,
+    "totalYieldFractionVsGp": 0.9,
+    "independentGuidance": true,
+    "pdsVisibleSubFlights": 2,
+    "sharedPdsReactionCapacity": true,
+    "bespokePdsPenaltyPp": 0
+  },
+  "stageABlockers": [
+    "reactor/TP resource environments",
+    "dynamic TP conflict telemetry",
+    "ten Stage A combat strata"
+  ],
+  "promotionAllowed": false
+}

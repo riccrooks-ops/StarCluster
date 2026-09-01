@@ -1,0 +1,89 @@
+{
+  "content_sha256": "964dc2ed71c596181e7deac971833c0855c610a61d30bb4002e7362dbca3eda3",
+  "design_rule": "Broad low-precision counter/tactical strata are part of Stage A so family viability is not inferred from one balanced reference fight.",
+  "promotion_allowed": false,
+  "records": [
+    {
+      "binding_rule": "Resolve through accepted current-authority legal builds/policies only. No hidden stat bonuses and no invented TBD mechanics.",
+      "build_policy": "Reference contemporary legal cruiser; current Shield and Armor; no specialist defensive AUX; PDS off.",
+      "geometry": "OppositeEdgeEncounter",
+      "purpose": "Neutral current-authority core-defense reference with PDS off; establishes the no-specialist-counter baseline.",
+      "stratum_id": "BALANCED_CORE_NO_PDS",
+      "tactical_emphasis": "Current EngageAdaptive; ordinary legal power allocation."
+    },
+    {
+      "binding_rule": "Resolve through accepted current-authority legal builds/policies only. No hidden stat bonuses and no invented TBD mechanics.",
+      "build_policy": "Reference cruiser plus contemporary legal Kinetic PDS where available.",
+      "geometry": "OppositeEdgeEncounter",
+      "purpose": "Expose Missile variants to the contemporary Kinetic PDS response while leaving K/E as control attackers.",
+      "stratum_id": "KINETIC_PDS_PRESSURE",
+      "tactical_emphasis": "PDS operated by current policy; no hidden bonuses."
+    },
+    {
+      "binding_rule": "Resolve through accepted current-authority legal builds/policies only. No hidden stat bonuses and no invented TBD mechanics.",
+      "build_policy": "Reference cruiser plus contemporary legal Energy PDS where available.",
+      "geometry": "OppositeEdgeEncounter",
+      "purpose": "Expose Missile variants to the contemporary Energy PDS response while leaving K/E as control attackers.",
+      "stratum_id": "ENERGY_PDS_PRESSURE",
+      "tactical_emphasis": "PDS operated by current policy; no hidden bonuses."
+    },
+    {
+      "binding_rule": "Resolve through accepted current-authority legal builds/policies only. No hidden stat bonuses and no invented TBD mechanics.",
+      "build_policy": "Reference cruiser plus contemporary legal AMM PDS where available.",
+      "geometry": "OppositeEdgeEncounter",
+      "purpose": "Expose Missile variants to the contemporary AMM response while leaving K/E as control attackers.",
+      "stratum_id": "AMM_PDS_PRESSURE",
+      "tactical_emphasis": "PDS operated by current policy; no hidden bonuses."
+    },
+    {
+      "binding_rule": "Resolve through accepted current-authority legal builds/policies only. No hidden stat bonuses and no invented TBD mechanics.",
+      "build_policy": "Legal current-authority shield-centered reference; use only executable/current shield support, never invented TBD bonuses.",
+      "geometry": "OppositeEdgeEncounter",
+      "purpose": "Stress family response to a shield-centered defense and its TP-recovery opportunity cost.",
+      "stratum_id": "SHIELD_PRESSURE",
+      "tactical_emphasis": "Prioritize legal Shield recovery/support when tactically desirable."
+    },
+    {
+      "binding_rule": "Resolve through accepted current-authority legal builds/policies only. No hidden stat bonuses and no invented TBD mechanics.",
+      "build_policy": "Legal current-authority armor-centered reference; use contemporary mainline Armor and executable regeneration only.",
+      "geometry": "OppositeEdgeEncounter",
+      "purpose": "Stress family response to armor integrity/resistance/regeneration and its TP/endurance tradeoffs.",
+      "stratum_id": "ARMOR_PRESSURE",
+      "tactical_emphasis": "Prioritize legal Armor recovery when tactically desirable."
+    },
+    {
+      "binding_rule": "Resolve through accepted current-authority legal builds/policies only. No hidden stat bonuses and no invented TBD mechanics.",
+      "build_policy": "Both sides carry legal contemporary Sensor plus matched ECM/ECCM contest equipment where the accepted runner permits.",
+      "geometry": "OppositeEdgeEncounter",
+      "purpose": "Exercise Sensor/ECM/ECCM track quality, burn-through, degraded-fire, and TP competition.",
+      "stratum_id": "EW_CONTEST",
+      "tactical_emphasis": "Current information-parity EngageAdaptive EW policy."
+    },
+    {
+      "binding_rule": "Resolve through accepted current-authority legal builds/policies only. No hidden stat bonuses and no invented TBD mechanics.",
+      "build_policy": "Reference legal ships; no artificial combat-stat bonus.",
+      "geometry": "StandoffEncounter",
+      "purpose": "Expose range, closing, standoff, missile path/endurance, and propulsion opportunity costs.",
+      "stratum_id": "MOBILITY_STANDOFF",
+      "tactical_emphasis": "Use current movement/engagement policy with a standoff-favoring legal geometry seed."
+    },
+    {
+      "binding_rule": "Resolve through accepted current-authority legal builds/policies only. No hidden stat bonuses and no invented TBD mechanics.",
+      "build_policy": "Reference legal recovery-capable ships using only current executable mechanics.",
+      "geometry": "OppositeEdgeEncounter",
+      "purpose": "Expose sustained Shield/Armor/Damage-Control recovery and ammunition/endurance effects.",
+      "stratum_id": "RECOVERY_ATTRITION",
+      "tactical_emphasis": "Long-horizon attrition posture; current legal recovery decisions."
+    },
+    {
+      "binding_rule": "Resolve through accepted current-authority legal builds/policies only. No hidden stat bonuses and no invented TBD mechanics.",
+      "build_policy": "Reference legal ships with contemporary powered systems; no fake TP demand.",
+      "geometry": "OppositeEdgeEncounter",
+      "purpose": "Force simultaneous desirable demands so dynamic TP opportunity cost becomes observable.",
+      "stratum_id": "POWER_CRISIS",
+      "tactical_emphasis": "Scenario conditions should make multiple existing legal systems tactically desirable in the same turns."
+    }
+  ],
+  "registry_id": "SC-V22C-STAGE-A-SCENARIO-STRATA",
+  "schema_version": "22C.0"
+}
