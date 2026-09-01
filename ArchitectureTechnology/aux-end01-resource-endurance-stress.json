@@ -1,0 +1,120 @@
+{
+  "schemaVersion": "star-cluster-auxiliary-resource-endurance-v1",
+  "id": "aux-end01-resource-endurance-stress",
+  "checkpoint": 52,
+  "status": "diagnostic_resource_timescale_study",
+  "policy": "This stage measures finite-resource and recharge behavior only. It does not promote combat balance values or require every endurance component to equal tactical duel value.",
+  "combatBattery": {
+    "powerPerCharge": 1,
+    "candidateCharges": [
+      2,
+      3
+    ],
+    "surgeDemandPerEncounter": [
+      1,
+      2,
+      3
+    ],
+    "encounterCounts": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "powerCapacitor": {
+    "capacity": 1,
+    "chargeRate": 1,
+    "dischargeRate": 1,
+    "turnPatterns": [
+      {
+        "id": "alternating-demand",
+        "operations": [
+          "discharge",
+          "charge",
+          "discharge",
+          "charge",
+          "discharge"
+        ]
+      },
+      {
+        "id": "back-to-back-demand",
+        "operations": [
+          "discharge",
+          "discharge",
+          "charge",
+          "discharge"
+        ]
+      },
+      {
+        "id": "recharge-first",
+        "operations": [
+          "hold",
+          "discharge",
+          "charge",
+          "hold",
+          "discharge"
+        ]
+      }
+    ]
+  },
+  "amm": {
+    "roundCandidates": [
+      15,
+      20,
+      25,
+      30
+    ],
+    "pdsAttemptsPerEncounter": [
+      6,
+      8,
+      10,
+      12
+    ],
+    "encounterCounts": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "weaponMagazines": {
+    "kinetic": {
+      "baseReserve": 100,
+      "expansionBonusByTl": {
+        "1": 50,
+        "2": 50
+      },
+      "packagesPerEncounter": [
+        12,
+        20,
+        30
+      ],
+      "encounterCounts": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "missile": {
+      "baseReserve": 25,
+      "expansionBonusByTl": {
+        "1": 12,
+        "2": 15
+      },
+      "packagesPerEncounter": [
+        4,
+        6,
+        8,
+        10
+      ],
+      "encounterCounts": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  }
+}

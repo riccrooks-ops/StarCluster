@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "star-cluster-cross-tl-build-permutation-v1",
+  "id": "cross-tl-build-permutation-foundation-v0_1",
+  "checkpoint": "87",
+  "status": "cross_tl_legal_build_enumeration_foundation",
+  "purpose": "Enumerate the current legal 35-Space TL1/TL2 technology-combination envelope, retain mixed-generation builds, and generate a bounded actual-consumer combat screen from named representative recipes.",
+  "totalInstallationSpace": 35,
+  "fixedShellSpace": 12,
+  "fixedShell": {
+    "description": "Cruiser shell held constant for the first cross-TL technology screen.",
+    "stlDriveSpace": 5,
+    "ftlDriveSpace": 5,
+    "kineticPdsSpace": 2,
+    "kineticPdsCount": 1
+  },
+  "baselineProfileId": "tl1-production",
+  "auxiliaryProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/ArchitectureTechnology/tl1-tl2-auxiliary-runtime-profiles-v0_3.json",
+  "auxiliaryProfileId": "aux-r53-none-tl1",
+  "sensorEwProfileCatalog": "src/StarCluster.ScenarioRunner/Scenarios/SensorEw/tl2-sew01-sensor-discrimination-isolation.json",
+  "generatedStudyId": "tl2-itc13-cross-tl-build-permutation-screening",
+  "masterSeed": 870100,
+  "trialsPerVariant": 10000,
+  "expectedLegalBuildCount": 512,
+  "expectedNamedRecipeCount": 13,
+  "expectedLogicalPairingCount": 64,
+  "expectedGeometryCount": 3,
+  "expectedGeneratedVariantCount": 192,
+  "axes": [
+    {
+      "id": "weapon",
+      "code": "w",
+      "options": [
+        { "id": "k1", "technologyLevel": 1, "status": "current_working_reference", "space": 6, "family": "Kinetic", "shieldPenetration": 1, "armorPenetration": 0, "note": "TL1 Kinetic reference." },
+        { "id": "k2", "technologyLevel": 2, "status": "locally_validated_working_candidate", "space": 6, "family": "Kinetic", "shieldPenetration": 1, "armorPenetration": 1, "note": "CP86a Kinetic APEN1 working candidate; no SPEN increase." },
+        { "id": "e1", "technologyLevel": 1, "status": "current_working_reference", "space": 6, "family": "Energy", "shieldPenetration": 1, "armorPenetration": 1, "note": "Current Energy penetration profile; CP86a promoted no TL2 penetration change." },
+        { "id": "m1", "technologyLevel": 1, "status": "current_working_reference", "space": 6, "family": "Missile", "shieldPenetration": 1, "armorPenetration": 2, "note": "Current Missile penetration profile; CP86a promoted no TL2 penetration change." }
+      ]
+    },
+    {
+      "id": "reactor",
+      "code": "r",
+      "options": [
+        { "id": "r1", "technologyLevel": 1, "status": "current_working_reference", "space": 6, "reactorOutput": 5, "note": "Peak Fission." },
+        { "id": "r2", "technologyLevel": 2, "status": "locally_validated_working_candidate", "space": 6, "reactorOutput": 6, "note": "Early Practical Fusion." }
+      ]
+    },
+    {
+      "id": "computer",
+      "code": "c",
+      "options": [
+        { "id": "c1", "technologyLevel": 1, "status": "current_working_reference", "space": 3, "targetingBonus": 10 },
+        { "id": "c2", "technologyLevel": 2, "status": "locally_validated_working_candidate", "space": 3, "targetingBonus": 12 }
+      ]
+    },
+    {
+      "id": "sensor",
+      "code": "s",
+      "options": [
+        { "id": "s1", "technologyLevel": 1, "status": "current_working_reference", "space": 3, "sensorEwProfileId": "tl1-balanced-0-control" },
+        { "id": "s2", "technologyLevel": 2, "status": "locally_validated_working_candidate", "space": 3, "sensorEwProfileId": "tl2-discrimination-1-candidate" }
+      ]
+    },
+    {
+      "id": "shield",
+      "code": "h",
+      "options": [
+        { "id": "sh1", "technologyLevel": 1, "status": "current_working_reference", "space": 3, "shieldCapacity": 2 },
+        { "id": "sh2", "technologyLevel": 2, "status": "locally_validated_working_candidate", "space": 3, "shieldCapacity": 3 }
+      ]
+    },
+    {
+      "id": "armor",
+      "code": "a",
+      "options": [
+        { "id": "a1", "technologyLevel": 1, "status": "current_working_reference", "space": 0, "armorProtection": 0, "armorIntegrity": 4 },
+        { "id": "a2", "technologyLevel": 2, "status": "locally_validated_working_candidate", "space": 0, "armorProtection": 0, "armorIntegrity": 5 }
+      ]
+    },
+    {
+      "id": "ecm",
+      "code": "e",
+      "options": [
+        { "id": "ecm1", "technologyLevel": 1, "status": "current_working_reference", "space": 1, "ewRating": 1 },
+        { "id": "ecm2", "technologyLevel": 2, "status": "locally_validated_working_candidate", "space": 1, "ewRating": 2 }
+      ]
+    },
+    {
+      "id": "eccm",
+      "code": "x",
+      "options": [
+        { "id": "eccm1", "technologyLevel": 1, "status": "current_working_reference", "space": 1, "ewRating": 1 },
+        { "id": "eccm2", "technologyLevel": 2, "status": "locally_validated_working_candidate", "space": 1, "ewRating": 2 }
+      ]
+    }
+  ],
+  "namedRecipes": [
+    { "id": "tl1-k", "selections": { "weapon": "k1", "reactor": "r1", "computer": "c1", "sensor": "s1", "shield": "sh1", "armor": "a1", "ecm": "ecm1", "eccm": "eccm1" } },
+    { "id": "tl1-e", "selections": { "weapon": "e1", "reactor": "r1", "computer": "c1", "sensor": "s1", "shield": "sh1", "armor": "a1", "ecm": "ecm1", "eccm": "eccm1" } },
+    { "id": "tl1-m", "selections": { "weapon": "m1", "reactor": "r1", "computer": "c1", "sensor": "s1", "shield": "sh1", "armor": "a1", "ecm": "ecm1", "eccm": "eccm1" } },
+    { "id": "tl2-k-working", "selections": { "weapon": "k2", "reactor": "r2", "computer": "c2", "sensor": "s2", "shield": "sh2", "armor": "a2", "ecm": "ecm2", "eccm": "eccm2" } },
+    { "id": "tl2-e-working", "selections": { "weapon": "e1", "reactor": "r2", "computer": "c2", "sensor": "s2", "shield": "sh2", "armor": "a2", "ecm": "ecm2", "eccm": "eccm2" } },
+    { "id": "tl2-m-working", "selections": { "weapon": "m1", "reactor": "r2", "computer": "c2", "sensor": "s2", "shield": "sh2", "armor": "a2", "ecm": "ecm2", "eccm": "eccm2" } },
+    { "id": "mixed-k-weapon-only", "selections": { "weapon": "k2", "reactor": "r1", "computer": "c1", "sensor": "s1", "shield": "sh1", "armor": "a1", "ecm": "ecm1", "eccm": "eccm1" } },
+    { "id": "mixed-k-reactor-only", "selections": { "weapon": "k1", "reactor": "r2", "computer": "c1", "sensor": "s1", "shield": "sh1", "armor": "a1", "ecm": "ecm1", "eccm": "eccm1" } },
+    { "id": "mixed-k-shield-only", "selections": { "weapon": "k1", "reactor": "r1", "computer": "c1", "sensor": "s1", "shield": "sh2", "armor": "a1", "ecm": "ecm1", "eccm": "eccm1" } },
+    { "id": "mixed-k-armor-only", "selections": { "weapon": "k1", "reactor": "r1", "computer": "c1", "sensor": "s1", "shield": "sh1", "armor": "a2", "ecm": "ecm1", "eccm": "eccm1" } },
+    { "id": "mixed-k-info-only", "selections": { "weapon": "k1", "reactor": "r1", "computer": "c2", "sensor": "s2", "shield": "sh1", "armor": "a1", "ecm": "ecm2", "eccm": "eccm2" } },
+    { "id": "mixed-k-power-defense", "selections": { "weapon": "k1", "reactor": "r2", "computer": "c1", "sensor": "s1", "shield": "sh2", "armor": "a2", "ecm": "ecm1", "eccm": "eccm1" } },
+    { "id": "mixed-k-modern-nonweapon", "selections": { "weapon": "k1", "reactor": "r2", "computer": "c2", "sensor": "s2", "shield": "sh2", "armor": "a2", "ecm": "ecm2", "eccm": "eccm2" } }
+  ],
+  "pairingGroups": [
+    { "id": "tl1-vs-tl1", "sideARecipes": ["tl1-k", "tl1-e", "tl1-m"], "sideBRecipes": ["tl1-k", "tl1-e", "tl1-m"] },
+    { "id": "tl2-vs-tl1", "sideARecipes": ["tl2-k-working", "tl2-e-working", "tl2-m-working"], "sideBRecipes": ["tl1-k", "tl1-e", "tl1-m"] },
+    { "id": "tl1-vs-tl2", "sideARecipes": ["tl1-k", "tl1-e", "tl1-m"], "sideBRecipes": ["tl2-k-working", "tl2-e-working", "tl2-m-working"] },
+    { "id": "tl2-vs-tl2", "sideARecipes": ["tl2-k-working", "tl2-e-working", "tl2-m-working"], "sideBRecipes": ["tl2-k-working", "tl2-e-working", "tl2-m-working"] },
+    { "id": "mixed-vs-kinetic-anchors", "sideARecipes": ["mixed-k-weapon-only", "mixed-k-reactor-only", "mixed-k-shield-only", "mixed-k-armor-only", "mixed-k-info-only", "mixed-k-power-defense", "mixed-k-modern-nonweapon"], "sideBRecipes": ["tl1-k", "tl2-k-working"] },
+    { "id": "mixed-vs-modern-other-family", "sideARecipes": ["mixed-k-weapon-only", "mixed-k-reactor-only", "mixed-k-shield-only", "mixed-k-armor-only", "mixed-k-info-only", "mixed-k-power-defense", "mixed-k-modern-nonweapon"], "sideBRecipes": ["tl2-e-working", "tl2-m-working"] }
+  ],
+  "geometries": [
+    { "id": "r3", "movementMode": "HoldRange3", "movementOrder": "Simultaneous", "initialRangeHexes": 3 },
+    { "id": "dyn-a", "movementMode": "TrackAwareOpponentRange", "movementOrder": "SideAFirst", "initialRangeHexes": 3 },
+    { "id": "dyn-b", "movementMode": "TrackAwareOpponentRange", "movementOrder": "SideBFirst", "initialRangeHexes": 3 }
+  ]
+}

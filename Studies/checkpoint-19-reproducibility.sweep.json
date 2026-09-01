@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-19-reproducibility",
+  "name": "Checkpoint 19 worker-independent reproducibility",
+  "baseScenario": "../Scenarios/terminal-two-window-hit.json",
+  "trialsPerVariant": 2000,
+  "masterSeed": 190100,
+  "variants": [
+    {
+      "id": "pds-40",
+      "name": "Forty-percent terminal PDS",
+      "overrides": [
+        {
+          "path": "defenses[0].interceptionChancePercent",
+          "value": 40
+        }
+      ],
+      "expectedProbabilities": {
+        "stage.TerminalEntryIntercepted": 0.4,
+        "stage.PreTerminalAttackIntercepted": 0.24,
+        "outcome.Hit": 0.2844,
+        "outcome.Miss": 0.0684,
+        "outcome.Dud": 0.0036,
+        "outcome.CriticalHit": 0.0036
+      },
+      "maximumAbsoluteError": 0.035
+    }
+  ]
+}

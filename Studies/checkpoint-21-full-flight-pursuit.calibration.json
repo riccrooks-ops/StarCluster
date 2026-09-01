@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 2,
+  "id": "checkpoint-21c-full-flight-pursuit-calibration",
+  "name": "Checkpoint 21c full-flight diagnostics, semantic contracts, and dedicated scheduler calibration",
+  "profileCatalog": "checkpoint-20-representative-profiles.json",
+  "trialsPerVariant": 1000,
+  "masterSeed": 210100,
+  "minimumSafetyTurns": 8,
+  "safetyTurnBuffer": 4,
+  "fixedPdsTechnologyLevel": 4,
+  "fixedTargetEcmTechnologyLevel": 4,
+  "minimumPracticalMarginalDelta": 0.01,
+  "marginalFamilywiseAlpha": 0.05,
+  "missileProfiles": [
+    "command-guided",
+    "seeker-only",
+    "sensor-only",
+    "sensor-plus-seeker"
+  ],
+  "missileTechnologyLevels": [
+    2,
+    4,
+    6
+  ],
+  "targetPropulsionTechnologyLevels": [
+    2,
+    4,
+    6
+  ],
+  "targetMovementPolicies": [
+    "stationary",
+    "straight-retreat",
+    "crossing-weave",
+    "turnback"
+  ],
+  "datalinkConditions": [
+    "live",
+    "occluded"
+  ]
+}

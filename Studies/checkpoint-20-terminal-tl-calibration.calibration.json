@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-20-terminal-tl-calibration",
+  "name": "Checkpoint 20 representative missile and terminal-defense TL calibration",
+  "baseScenario": "../Scenarios/terminal-two-window-hit.json",
+  "profileCatalog": "checkpoint-20-representative-profiles.json",
+  "trialsPerVariant": 2000,
+  "masterSeed": 200100,
+  "maximumAbsoluteError": 0.04,
+  "minimumPracticalMarginalDelta": 0.01,
+  "marginalFamilywiseAlpha": 0.05,
+  "missileProfiles": [
+    "command-guided",
+    "seeker-only",
+    "sensor-only",
+    "sensor-plus-seeker"
+  ],
+  "missileTechnologyLevels": [
+    2,
+    4,
+    6
+  ],
+  "pdsTechnologyLevels": [
+    2,
+    4,
+    6
+  ],
+  "targetEcmTechnologyLevels": [
+    2,
+    4,
+    6
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "checkpoint-19-terminal-probability-validation",
+  "name": "Checkpoint 19 terminal probability validation",
+  "baseScenario": "../Scenarios/terminal-two-window-hit.json",
+  "trialsPerVariant": 5000,
+  "masterSeed": 190200,
+  "variants": [
+    {
+      "id": "pds-0",
+      "name": "Zero-percent terminal PDS",
+      "overrides": [
+        {
+          "path": "defenses[0].interceptionChancePercent",
+          "value": 0
+        }
+      ],
+      "expectedProbabilities": {
+        "stage.TerminalEntryIntercepted": 0.0,
+        "stage.PreTerminalAttackIntercepted": 0.0,
+        "outcome.Hit": 0.79,
+        "outcome.Miss": 0.19,
+        "outcome.Dud": 0.01,
+        "outcome.CriticalHit": 0.01
+      },
+      "maximumAbsoluteError": 0.025
+    },
+    {
+      "id": "pds-40",
+      "name": "Forty-percent terminal PDS",
+      "overrides": [
+        {
+          "path": "defenses[0].interceptionChancePercent",
+          "value": 40
+        }
+      ],
+      "expectedProbabilities": {
+        "stage.TerminalEntryIntercepted": 0.4,
+        "stage.PreTerminalAttackIntercepted": 0.24,
+        "outcome.Hit": 0.2844,
+        "outcome.Miss": 0.0684,
+        "outcome.Dud": 0.0036,
+        "outcome.CriticalHit": 0.0036
+      },
+      "maximumAbsoluteError": 0.025
+    },
+    {
+      "id": "pds-100",
+      "name": "Hundred-percent terminal PDS",
+      "overrides": [
+        {
+          "path": "defenses[0].interceptionChancePercent",
+          "value": 100
+        }
+      ],
+      "expectedProbabilities": {
+        "stage.TerminalEntryIntercepted": 1.0,
+        "stage.PreTerminalAttackIntercepted": 0.0,
+        "outcome.Intercepted": 1.0,
+        "process.attackResolved": 0.0
+      },
+      "maximumAbsoluteError": 0.0
+    }
+  ]
+}

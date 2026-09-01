@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "star-cluster-tl1-sensor-ew-foundation-v1",
+  "id": "cp97-adaptive-engage-sensor-ew-fixtures-v0_1",
+  "checkpoint": 97,
+  "status": "engage_ai_harness_controls_not_technology_promotion",
+  "policy": "CP97 reuses the accepted TL1 Balanced-0 and TL2 DR1 envelopes for evidence lanes. The two cp97-diagnostic profiles exist only to force deterministic Engage-AI escalation paths and are not technology-tree candidates.",
+  "maxTacticalSeparationHexes": 10,
+  "candidates": [
+    {
+      "id": "cp97-tl1-balanced-0-control",
+      "isHistoricalControl": true,
+      "passiveFirmRange": 1,
+      "passiveApproximateRange": 3,
+      "activeFirmRange": 3,
+      "activeApproximateRange": 4,
+      "activePowerCost": 1,
+      "activeOverloadAdditionalPowerCost": 1,
+      "activeOverloadFirmBonus": 1,
+      "activeOverloadApproximateBonus": 1,
+      "rationale": "Byte-for-value copy of the accepted TL1 Balanced-0 working envelope for CP97 encounter lanes.",
+      "discriminationResistance": 0,
+      "pointBlankBurnThroughResistance": 1
+    },
+    {
+      "id": "cp97-tl2-dr1-control",
+      "isHistoricalControl": true,
+      "passiveFirmRange": 1,
+      "passiveApproximateRange": 3,
+      "activeFirmRange": 3,
+      "activeApproximateRange": 4,
+      "activePowerCost": 1,
+      "activeOverloadAdditionalPowerCost": 1,
+      "activeOverloadFirmBonus": 1,
+      "activeOverloadApproximateBonus": 1,
+      "rationale": "Byte-for-value copy of the accepted TL2 DR1 candidate envelope for CP97 encounter lanes.",
+      "discriminationResistance": 1,
+      "pointBlankBurnThroughResistance": 1
+    },
+    {
+      "id": "cp97-active-overload-probe",
+      "isHistoricalControl": false,
+      "passiveFirmRange": 1,
+      "passiveApproximateRange": 4,
+      "activeFirmRange": 3,
+      "activeApproximateRange": 4,
+      "activePowerCost": 1,
+      "activeOverloadAdditionalPowerCost": 1,
+      "activeOverloadFirmBonus": 1,
+      "activeOverloadApproximateBonus": 1,
+      "rationale": "Harness-only probe: contact is possible at range 4 but Firm requires Active Sensor overload if closure is denied. Not a production sensor candidate.",
+      "discriminationResistance": 0,
+      "pointBlankBurnThroughResistance": 1
+    },
+    {
+      "id": "cp97-standoff-passive-firm4-control",
+      "isHistoricalControl": false,
+      "passiveFirmRange": 4,
+      "passiveApproximateRange": 4,
+      "activeFirmRange": 4,
+      "activeApproximateRange": 5,
+      "activePowerCost": 1,
+      "activeOverloadAdditionalPowerCost": 1,
+      "activeOverloadFirmBonus": 1,
+      "activeOverloadApproximateBonus": 1,
+      "rationale": "Harness-only standoff control that can demonstrate a range-4 attack before the overload-probe ship can reply. Not a production sensor candidate.",
+      "discriminationResistance": 0,
+      "pointBlankBurnThroughResistance": 1
+    }
+  ]
+}
